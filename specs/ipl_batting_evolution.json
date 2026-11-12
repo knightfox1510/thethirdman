@@ -1268,5 +1268,6 @@
   }
  ],
  "captions": "lab",
- "series": "lab"
+ "series": "lab",
+ "captions_long": false
 }

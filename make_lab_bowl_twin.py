@@ -31,7 +31,8 @@ assert JB["p_Dot %"] == 100 and JB["p_Balls per six"] == 100
 model = S("Then, every IPL bowling season since twenty thirteen with a hundred and eighty balls or more. Five hundred and thirteen of them. Each measured against its own season.",
           dict(type="lab_big", kicker="STEP 2 · THE MODEL", title="Every season.", value=513, unit="seasons", label="IPL bowling seasons with 180+ balls, 2013 to 2026", **sp(1)))
 cloud = [round(float(x), 2) for x in near.dist.values]
-items = [dict(label=f"#{k + 1} {r.bowler.split()[-1]}", sub=f"{r.season} · {r.dist:.2f}", d=round(float(r.dist), 2), t=ini(r.bowler), kit=TEAM.get(r.team, "ink"),
+LBL = {"Mohsin Khan": "Mohsin Khan", "Bhuvneshwar Kumar": "Bhuvneshwar", "Sunil Narine": "Narine", "Anrich Nortje": "Nortje", "Dale Steyn": "Steyn"}
+items = [dict(label=f"#{k + 1} {LBL.get(r.bowler, r.bowler.split()[-1])}", sub=f"{r.season} · {r.dist:.2f}", d=round(float(r.dist), 2), t=ini(r.bowler), kit=TEAM.get(r.team, "ink"),
               ang=[180, 300, 25, 125, 240][k], word=["steyn", "second", "third", "fourth", "fifth"][k]) for k, (_, r) in enumerate(top5.iterrows())]
 names = [r.bowler for _, r in top5.iterrows()]; print(names, [round(x, 2) for x in top5.dist])
 HI = {"Bhuvneshwar Kumar": "भुवनेश्वर", "Sunil Narine": "Sunil Narine"}

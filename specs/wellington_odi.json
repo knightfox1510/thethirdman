@@ -698,5 +698,6 @@
   }
  ],
  "captions": "serif",
- "series": "tactics"
+ "series": "tactics",
+ "captions_long": false
 }
