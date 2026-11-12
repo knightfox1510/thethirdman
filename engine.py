@@ -795,7 +795,11 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     t0 = STING if sting else 0
     a = min(clamp((lt - t0) / .25) if i > 0 else 1, clamp((D - lt) / .25) if not last else 1)
     c.saveLayerAlpha(None, int(255 * a))
+    drift = s["type"] in CLASSIC_DRIFT and not s.get("no_drift")
+    if drift:                                   # slow camera push on classic chart scenes
+        z = 1 + .035 * eio(clamp(lt / max(D, .1))); c.save(); c.translate(g.W / 2, g.H * .55); c.scale(z, z); c.translate(-g.W / 2, -g.H * .55)
     SCENES[s["type"]](c, g, lt, D, s)
+    if drift: c.restore()
     c.restore()
     if i > 0:
         ca = clamp((lt - t0) / .5) if i == 1 else 1
@@ -1965,7 +1969,11 @@ def sfx_events(spec, fmt, meta, lead, durs, starts):
                 tm = next((lead[i] + w["s"] for w in words if _norm(w["w"]) == _norm(e["word"])), tm)
             ev.append([T0 + tm, e["kind"], e.get("gain", 1)])
         if s.get("type") != "stage":
-            _looks.resolve_words(s, words, lead[i]); ev += _looks.extra_sfx(s, D, T0); continue
+            _looks.resolve_words(s, words, lead[i]); ev += _looks.extra_sfx(s, D, T0)
+            if s.get("type") in CLASSIC_DRIFT:             # classic scenes: a soft whoosh in, a tick when a big number lands
+                if i > 0: ev.append([T0 + .02, "whoosh", .45])
+                if s.get("type") == "bignum": ev.append([T0 + D * s.get("count_at", 0) + s.get("count_dur", 1.4), "tick", 1.2])
+            continue
         stage_events(s, D, words, lead[i])
         p = s.get("panel", {}); pat = D * p.get("at", .05)
         if p.get("kind") == "verdict": ev.append([T0 + pat + .35, "stamp", 1])
@@ -2025,6 +2033,7 @@ NUMWORDS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eigh
 
 import looks as _looks
 _looks.install(sys.modules[__name__])
+CLASSIC_DRIFT = {"statement", "bignum", "bars", "compare", "list", "timeline", "stats", "scorecard", "line", "gauge", "over", "swap", "field", "fieldplan", "trajectory", "matchup"}
 CAPW = {"v2": 34, "lab": 60, "serif": 50}
 
 if __name__ == "__main__":
