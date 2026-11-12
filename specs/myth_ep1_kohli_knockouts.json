@@ -48,7 +48,9 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "walk"
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5
      }
     ]
    }
@@ -79,7 +81,7 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "stand"
+      "pose": "stance"
      }
     ]
    }
@@ -147,7 +149,7 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "walk"
+      "pose": "dejected"
      }
     ]
    }
@@ -167,7 +169,7 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "celebrate"
+      "pose": "raise"
      }
     ]
    }
@@ -193,7 +195,7 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "stand"
+      "pose": "stance"
      }
     ]
    }
@@ -237,7 +239,8 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "stand"
+      "pose": "drive",
+      "x": 0.64
      }
     ]
    }

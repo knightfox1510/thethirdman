@@ -1494,53 +1494,213 @@ gfx.background = _bg
 SKIN = (176, 120, 84)
 
 
-def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None):
-    """Original flat illustrated cricketer, front view. (x, y) = between the feet, h = height in px."""
-    u = h / 100.0; bob = math.sin(t * 2.4) * .6 * u
+PAD = (242, 242, 237)
+
+
+def _sh(col, f): return tuple(max(0, min(255, int(v * f))) for v in col)
+
+
+def _lift(col, f): return tuple(int(v + (255 - v) * f) for v in col)
+
+
+def _pose(pose, t):
+    """Joint positions in units of 1/100 of the figure's height; origin between the feet, y up = negative."""
+    S = math.sin
+    if pose in ("stand", "walk", "celebrate", "raise", "dejected"):
+        j = dict(view="front", hipL=(-7, -48), hipR=(7, -48), kneeL=(-8, -26), kneeR=(8, -26), ankL=(-9, -5), ankR=(9, -5),
+                 shL=(-15, -77), shR=(15, -77), head=(0, -90), bob=S(t * 2.1) * .35)
+        if pose == "stand":
+            j.update(elL=(-16, -61), elR=(16, -61), hL=(-2, -47), hR=(2, -47), bat=((0, -47), (.03, 1)))
+        elif pose == "walk":
+            p = t * 5.2; s = S(p)
+            j.update(ankL=(-8, -5 - 3.5 * max(0, s)), ankR=(8, -5 - 3.5 * max(0, -s)), kneeL=(-8, -26 - 2 * max(0, s)),
+                     kneeR=(8, -26 - 2 * max(0, -s)), elL=(-18, -62), elR=(18, -62), hL=(-19, -49 - 3 * s), hR=(18, -50 + 3 * s),
+                     bat=((18, -50 + 3 * s), (.28, 1)), bob=-abs(s) * 1.2)
+        elif pose == "celebrate":
+            k = S(t * 6) * 2
+            j.update(ankL=(-12, -5), ankR=(12, -5), kneeL=(-10, -26), kneeR=(10, -26), elL=(-25, -89 + k), elR=(25, -89 + k),
+                     hL=(-29, -106 + k), hR=(29, -106 + k), bat=((29, -106 + k), (.35, -1)))
+        elif pose == "raise":
+            k = S(t * 1.6) * 1.5
+            j.update(elL=(-18, -62), hL=(-21, -48), elR=(23, -90), hR=(26, -108 + k), bat=((26, -108 + k), (.12, -1)))
+        else:  # dejected: head down, bat dragging
+            j.update(head=(0, -86.5), shL=(-14, -74), shR=(14, -74), elL=(-16, -60), elR=(16, -60), hL=(-15, -47), hR=(15, -47),
+                     bat=((15, -47), (.5, 1)))
+        return j
+    # side-on views, facing +x (to the bowler)
+    j = dict(view="side", bob=0.0)
+    if pose == "stance":
+        k = S(t * 3.2)
+        j.update(ab=(-11, -5), af=(10, -5), kb=(-8, -26), kf=(9, -27), hb=(-2, -46), hf=(1, -46), sb=(2, -74), sf=(6, -75),
+                 head=(9, -87), eb=(-1, -60), ef=(12, -62), wb=(4, -52), wf=(4, -55), bat=((4, -52), (-.32 + .06 * k, 1)),
+                 bob=S(t * 2.1) * .3)
+    elif pose == "drive":
+        j.update(ab=(-16, -4), af=(18, -5), kb=(-8, -24), kf=(16, -26), hb=(0, -44), hf=(3, -44), sb=(5, -71), sf=(9, -72),
+                 head=(15, -84), eb=(5, -80), ef=(21, -83), wb=(12, -93), wf=(14, -95), bat=((14, -95), (-.65, -1)))
+    elif pose == "pull":
+        j.update(ab=(-6, -5), kb=(-4, -26), hb=(-1, -48), af=(17, -8), kf=(12, -28), hf=(2, -48), sb=(-2, -77), sf=(3, -77),
+                 head=(3, -90), eb=(6, -68), ef=(9, -70), wb=(13, -73), wf=(15, -75), bat=((15, -75), (1, -.22)))
+    elif pose == "run":
+        p = t * 8.5; hip = (3, -47 - abs(S(p)) * 1.5)
+        legs = []
+        for i in (0, 1):
+            q = p + math.pi * i; a1 = S(q) * .75; a2 = a1 - (1.0 * max(0, math.cos(q)) + .25)
+            kn = (hip[0] + 22 * S(a1), hip[1] + 22 * math.cos(a1)); an = (kn[0] + 21 * S(a2), kn[1] + 21 * math.cos(a2))
+            legs.append((kn, an))
+        sh = (9, -74 + hip[1] + 47)
+        arms = []
+        for i in (1, 0):
+            q = p + math.pi * i; a = -S(q) * .8
+            el = (sh[0] + 13 * S(a), sh[1] + 13 * math.cos(a)); hd = (el[0] + 12 * S(a + 1.4), el[1] + 12 * math.cos(a + 1.4))
+            arms.append((el, hd))
+        j.update(hb=hip, hf=(hip[0] + 2, hip[1]), kb=legs[1][0], ab=legs[1][1], kf=legs[0][0], af=legs[0][1],
+                 sb=(sh[0] - 2, sh[1]), sf=(sh[0] + 2, sh[1]), head=(sh[0] + 6, sh[1] - 12),
+                 eb=arms[1][0], wb=arms[1][1], ef=arms[0][0], wf=arms[0][1], bat=(arms[0][1], (1, .55)))
+    elif pose == "bowl":
+        k = S(t * 2) * 1.5
+        j.update(ab=(-15, -6), kb=(-9, -25), hb=(-1, -47), af=(16, -5), kf=(8, -26), hf=(1, -47), sb=(-1, -76), sf=(2, -76),
+                 head=(4, -89), eb=(-2, -93), wb=(-1 + k, -110), ef=(11, -65), wf=(7, -52), ball=True)
+    else:
+        raise ValueError(f"unknown pose {pose}")
+    return j
+
+
+def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None, dir=1):
+    """Original illustrated cricketer (no likeness). (x, y) = between the feet, h = height in px.
+    Front poses: stand, walk, celebrate, raise, dejected. Side-on: stance, drive, pull, run, bowl (dir=-1 mirrors = left-hander)."""
+    u = h / 100.0
     kitc = kit if isinstance(kit, tuple) else (team_col(kit) if kit in TEAMS else C(kit))
-    dark = tuple(int(v * .6) for v in kitc); helm = helmet or (22, 34, 66); pad = (240, 240, 236)
+    trou = _sh(kitc, .62); trim = _lift(kitc, .55); helm = helmet or (22, 34, 66)
     P = lambda col, al=1.0: gfx.paint(col, a * al)
-    c.save(); c.translate(x, y + bob)
-    c.drawOval(skia.Rect.MakeXYWH(-26 * u, -3 * u, 52 * u, 7 * u), P((0, 0, 0), .35))                       # shadow
-    for sx in (-1, 1):                                                                                     # legs: pads + shoes
-        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(sx * 9 * u - 7 * u, -42 * u, 14 * u, 38 * u), 5 * u, 5 * u), P(pad))
-        for k in range(3): c.drawRect(skia.Rect.MakeXYWH(sx * 9 * u - 7 * u, (-38 + k * 11) * u, 14 * u, 1.6 * u), P((200, 200, 196)))
-        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(sx * 9 * u - 8 * u, -6 * u, 16 * u, 6 * u), 3 * u, 3 * u), P((235, 235, 235)))
-    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(-17 * u, -50 * u, 34 * u, 12 * u), 4 * u, 4 * u), P(dark))   # trousers top
-    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(-19 * u, -80 * u, 38 * u, 34 * u), 9 * u, 9 * u), P(kitc))   # shirt
-    if number is not None:
-        gfx.text(c, str(number), 0, -55 * u, 16 * u, "bebas", (255, 255, 255) if _lum(kitc) < .6 else (16, 20, 30), a, "c")
-    # arms (pose)
-    def arm(x0, y0, x1, y1):
-        p = P(kitc); p.setStrokeWidth(9 * u); p.setStyle(skia.Paint.kStroke_Style); p.setStrokeCap(skia.Paint.kRound_Cap)
-        c.drawLine(x0, y0, x1, y1, p)
-        c.drawCircle(x1, y1, 4.6 * u, P((250, 250, 250)))                                                       # glove
-    if pose == "celebrate":
-        arm(-17 * u, -74 * u, -30 * u, -104 * u); arm(17 * u, -74 * u, 30 * u, -104 * u)
-        bat = [(30 * u, -104 * u), (44 * u, -150 * u)]
-    elif pose == "walk":
-        arm(-17 * u, -74 * u, -22 * u, -48 * u); arm(17 * u, -74 * u, 20 * u, -48 * u)
-        bat = [(20 * u, -48 * u), (30 * u, -6 * u)]
-    else:  # stand: leaning on the bat
-        arm(-17 * u, -74 * u, -12 * u, -50 * u); arm(17 * u, -74 * u, 10 * u, -50 * u)
-        bat = [(0, -50 * u), (2 * u, -6 * u)]
-    (bx0, by0), (bx1, by1) = bat
-    ang = math.degrees(math.atan2(by1 - by0, bx1 - bx0)); L = math.hypot(bx1 - bx0, by1 - by0)
-    c.save(); c.translate(bx0, by0); c.rotate(ang)
-    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(0, -1.6 * u, L * .35, 3.2 * u), 1.5 * u, 1.5 * u), P((40, 40, 40)))
-    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(L * .33, -4.5 * u, L * .67, 9 * u), 3 * u, 3 * u), P((222, 196, 146)))
-    c.restore()
-    # head + helmet with grille (generic face)
-    hy = -92 * u
-    c.drawRect(skia.Rect.MakeXYWH(-5 * u, -84 * u, 10 * u, 6 * u), P(SKIN))
-    c.drawCircle(0, hy, 12 * u, P(SKIN))
-    c.drawCircle(-4 * u, hy + 1 * u, 1.4 * u, P((30, 30, 30))); c.drawCircle(4 * u, hy + 1 * u, 1.4 * u, P((30, 30, 30)))
-    hp = skia.Path(); hp.addArc(skia.Rect.MakeXYWH(-14 * u, hy - 15 * u, 28 * u, 26 * u), 180, 180); hp.close()
-    c.drawPath(hp, P(helm))
-    c.drawRect(skia.Rect.MakeXYWH(-16 * u, hy - 3 * u, 32 * u, 3 * u), P(helm))                                  # peak
-    gp = P((200, 205, 215), .9); gp.setStyle(skia.Paint.kStroke_Style); gp.setStrokeWidth(1.4 * u)
-    for k in range(3): c.drawLine(-11 * u, hy + (2 + k * 4) * u, 11 * u, hy + (2 + k * 4) * u, gp)               # grille
-    for xx in (-11, 11): c.drawLine(xx * u, hy, xx * u, hy + 11 * u, gp)
+    J = _pose(pose, t); side = J["view"] == "side"
+    pt = lambda k: (J[k][0] * u, J[k][1] * u)
+
+    def seg(p0, p1, w, col, al=1.0):
+        p = P(col, al); p.setStyle(skia.Paint.kStroke_Style); p.setStrokeWidth(w * u); p.setStrokeCap(skia.Paint.kRound_Cap)
+        c.drawLine(p0[0], p0[1], p1[0], p1[1], p)
+
+    def lerp(p0, p1, f): return (p0[0] + (p1[0] - p0[0]) * f, p0[1] + (p1[1] - p0[1]) * f)
+
+    def pad(K, A, shade):
+        pc = _sh(PAD, shade); seg(K, A, 10.5, pc)
+        dx, dy = A[0] - K[0], A[1] - K[1]; L = math.hypot(dx, dy) or 1; nx, ny = -dy / L, dx / L
+        for o in (-2.6, 2.6):
+            seg((K[0] + dx * .18 + nx * o * u, K[1] + dy * .18 + ny * o * u), (K[0] + dx * .86 + nx * o * u, K[1] + dy * .86 + ny * o * u), 1.1, _sh(pc, .84))
+        c.drawCircle(K[0], K[1], 6 * u, P(_sh(pc, .93)))                                       # knee roll
+
+    def shoe(A, shade):
+        if side: r = skia.Rect.MakeLTRB(A[0] - 4 * u, A[1] - 1.5 * u, A[0] + 9 * u, A[1] + 4.5 * u)
+        else: r = skia.Rect.MakeLTRB(A[0] - 5.5 * u, A[1] - 1.5 * u, A[0] + 5.5 * u, A[1] + 4.5 * u)
+        c.drawRRect(skia.RRect.MakeRectXY(r, 2.6 * u, 2.6 * u), P(_sh((236, 236, 236), shade)))
+        c.drawRect(skia.Rect.MakeLTRB(r.left() + u, r.bottom() - 1.3 * u, r.right() - u, r.bottom()), P((60, 64, 72)))
+
+    def leg(H, K, A, shade):
+        seg(H, K, 11.5, _sh(trou, shade))
+        if J.get("ball"): seg(K, A, 9.5, _sh(trou, shade))                 # bowlers: no pads
+        else: pad(K, A, shade)
+        shoe(A, shade)
+
+    def glove(Hd, shade=1.0):
+        c.drawCircle(Hd[0], Hd[1], 4.8 * u, P(_sh((248, 248, 248), shade)))
+        seg((Hd[0] - 2.4 * u, Hd[1] - 1 * u), (Hd[0] + 2.4 * u, Hd[1] - 1 * u), .8, _sh((200, 200, 200), shade))
+        seg((Hd[0] - 2.4 * u, Hd[1] + 1.4 * u), (Hd[0] + 2.4 * u, Hd[1] + 1.4 * u), .8, _sh((200, 200, 200), shade))
+
+    def arm(S_, E, Hd, shade, gl=True):
+        seg(E, Hd, 5.8, _sh(SKIN, shade))                                                   # forearm
+        seg(S_, E, 6.6, _sh(SKIN, shade))
+        seg(S_, lerp(S_, E, .62), 8.6, _sh(kitc, shade))                                       # sleeve
+        if gl: glove(Hd, shade)
+
+    def bat():
+        if not J.get("bat"): return
+        (hx, hy), (dx, dy) = J["bat"]; L0 = math.hypot(dx, dy); dx, dy = dx / L0, dy / L0
+        L = 46 * u; ax, ay = hx * u - dx * .08 * L, hy * u - dy * .08 * L
+        c.save(); c.translate(ax, ay); c.rotate(math.degrees(math.atan2(dy, dx)))
+        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(0, -1.8 * u, L * .32, 3.6 * u), 1.6 * u, 1.6 * u), P((34, 36, 42)))
+        for f in (.06, .14, .22): c.drawRect(skia.Rect.MakeXYWH(L * f, -1.8 * u, .7 * u, 3.6 * u), P((80, 84, 92)))
+        blade = skia.Rect.MakeXYWH(L * .3, -4.6 * u, L * .7, 9.2 * u)
+        c.drawRRect(skia.RRect.MakeRectXY(blade, 2.8 * u, 2.8 * u), P((226, 198, 148)))
+        c.drawRect(skia.Rect.MakeXYWH(L * .33, 2.6 * u, L * .64, 1.6 * u), P((196, 164, 112)))   # edge
+        c.drawRect(skia.Rect.MakeXYWH(L * .37, -4.6 * u, L * .06, 9.2 * u), P(kitc))             # sticker band
+        c.restore()
+
+    def head(Hc):
+        hx, hy = Hc
+        if J.get("ball"):                                                   # bowler: bare face + team cap
+            c.drawCircle(hx + 1 * u, hy + 1.5 * u, 9.5 * u, P(SKIN))
+            c.drawCircle(hx - 3 * u, hy + 2 * u, 2.4 * u, P(_sh(SKIN, .85)))                                          # ear
+            c.drawRect(skia.Rect.MakeLTRB(hx - 9 * u, hy - 2 * u, hx - 3.5 * u, hy + 5 * u), P((34, 28, 26)))         # hair
+            cp = skia.Path(); cp.addArc(skia.Rect.MakeXYWH(hx - 9.5 * u, hy - 10 * u, 20 * u, 18 * u), 180, 180); cp.close()
+            c.drawPath(cp, P(kitc))
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx + 4 * u, hy - 2.4 * u, hx + 16 * u, hy + .2 * u), 1.2 * u, 1.2 * u), P(_sh(kitc, .7)))
+            c.drawCircle(hx + 9 * u, hy + 3 * u, 1 * u, P((30, 30, 30)))                                              # eye
+            return
+        if side:
+            c.drawCircle(hx - 1.5 * u, hy - 1 * u, 11.2 * u, P(helm))
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx + .5 * u, hy - 1 * u, hx + 10 * u, hy + 9.5 * u), 3 * u, 3 * u), P(SKIN))
+            c.drawRect(skia.Rect.MakeLTRB(hx - 12 * u, hy + 3 * u, hx - 4 * u, hy + 8 * u), P(_sh(helm, .8)))       # neck guard
+            c.drawCircle(hx - 1 * u, hy + 2.5 * u, 3.2 * u, P(_sh(helm, 1.25)))                                     # ear piece
+            gp = (205, 210, 220)
+            for xx in (5.5, 8.5, 11): seg((hx + xx * u, hy - .5 * u), (hx + (xx - .8) * u, hy + 9.5 * u), 1.1, gp)
+            seg((hx + 2 * u, hy + 4.5 * u), (hx + 11.5 * u, hy + 4.5 * u), 1.1, gp)
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx + 1 * u, hy - 3.4 * u, hx + 15 * u, hy - .4 * u), 1.4 * u, 1.4 * u), P(_sh(helm, .75)))
+        else:
+            c.drawCircle(hx, hy - 1 * u, 11.2 * u, P(helm))
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx - 7.5 * u, hy - 1 * u, hx + 7.5 * u, hy + 10 * u), 3.5 * u, 3.5 * u), P(SKIN))
+            c.drawRect(skia.Rect.MakeLTRB(hx - 7.5 * u, hy - 1 * u, hx + 7.5 * u, hy + 2 * u), P(_sh(SKIN, .7)))      # peak shadow
+            for sx in (-1, 1): c.drawCircle(hx + sx * 10.5 * u, hy + 2.5 * u, 3 * u, P(_sh(helm, 1.25)))
+            gp = (205, 210, 220)
+            for yy in (2.5, 5.8, 9): seg((hx - 9 * u, hy + yy * u), (hx + 9 * u, hy + yy * u), 1.1, gp)
+            seg((hx, hy + 1 * u), (hx, hy + 10 * u), 1.1, gp)
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx - 12.5 * u, hy - 3.4 * u, hx + 12.5 * u, hy - .4 * u), 1.6 * u, 1.6 * u), P(_sh(helm, .75)))
+            c.drawRect(skia.Rect.MakeLTRB(hx - 1 * u, hy - 12 * u, hx + 1 * u, hy - 3.4 * u), P(_sh(helm, 1.35)))       # helmet ridge
+
+    c.save(); c.translate(x, y + J["bob"] * u)
+    if side: c.scale(dir, 1)
+    xs = [J[k][0] for k in ("ankL", "ankR", "ab", "af") if k in J]
+    w = (max(xs) - min(xs) + 22) * u; cxs = (max(xs) + min(xs)) / 2 * u
+    c.drawOval(skia.Rect.MakeXYWH(cxs - w / 2, -2.5 * u - J["bob"] * u, w, 7 * u), P((0, 0, 0), .32))           # shadow
+    if not side:
+        leg(pt("hipL"), pt("kneeL"), pt("ankL"), .94); leg(pt("hipR"), pt("kneeR"), pt("ankR"), 1.0)
+        L, R, hl, hr = pt("shL"), pt("shR"), pt("hipL"), pt("hipR")
+        tp = skia.Path(); tp.moveTo(L[0] - 2.5 * u, L[1] + 1 * u)
+        tp.quadTo((L[0] + R[0]) / 2, L[1] - 3 * u, R[0] + 2.5 * u, R[1] + 1 * u)
+        tp.lineTo(hr[0] + 5 * u, hr[1] + 3 * u); tp.lineTo(hl[0] - 5 * u, hl[1] + 3 * u); tp.close()
+        c.drawPath(tp, P(kitc))
+        c.save(); c.clipPath(tp, doAntiAlias=True)
+        c.drawRect(skia.Rect.MakeLTRB(R[0] - 7 * u, R[1] - 5 * u, R[0] + 5 * u, hr[1] + 5 * u), P(_sh(kitc, .82)))    # side shade
+        c.drawRect(skia.Rect.MakeLTRB(L[0] - 3 * u, L[1] - 5 * u, L[0] - .5 * u, hl[1] + 5 * u), P(trim))           # side panel
+        c.drawRect(skia.Rect.MakeLTRB(hl[0] - 6 * u, hl[1] - 1 * u, hr[0] + 6 * u, hl[1] + 4 * u), P(trou))         # waistband
+        c.restore()
+        nk = ((L[0] + R[0]) / 2, L[1] - 1.5 * u)
+        cp = skia.Path(); cp.moveTo(nk[0] - 5 * u, nk[1]); cp.lineTo(nk[0], nk[1] + 6 * u); cp.lineTo(nk[0] + 5 * u, nk[1]); cp.close()
+        c.drawPath(cp, P(_sh(kitc, .6)))                                                                             # V collar
+        if number is not None:
+            gfx.text(c, str(number), nk[0] + 6 * u, nk[1] + 17 * u, 11 * u, "bebas", (255, 255, 255) if _lum(kitc) < .6 else (16, 20, 30), a, "c")
+        seg((nk[0], nk[1] - 2 * u), (pt("head")[0], pt("head")[1] + 6 * u), 6.5, _sh(SKIN, .85))                   # neck
+        up = J["hR"][1] < J["shR"][1]          # arms raised above the shoulders: draw them after the head
+        if not up:
+            bat(); arm(pt("shL"), pt("elL"), pt("hL"), .94); arm(pt("shR"), pt("elR"), pt("hR"), 1.0)
+        head(pt("head"))
+        if up:
+            if J["hL"][1] < J["shL"][1]: arm(pt("shL"), pt("elL"), pt("hL"), .94)
+            else: arm(pt("shL"), pt("elL"), pt("hL"), .94)
+            bat(); arm(pt("shR"), pt("elR"), pt("hR"), 1.0)
+    else:
+        leg(pt("hb"), pt("kb"), pt("ab"), .8)
+        if not J.get("ball"): arm(pt("sb"), pt("eb"), pt("wb"), .8)
+        hm = lerp(pt("hb"), pt("hf"), .5); sm = lerp(pt("sb"), pt("sf"), .5)
+        seg(hm, sm, 18.5, kitc); seg((hm[0] + 3 * u, hm[1] - 2 * u), (sm[0] + 3.5 * u, sm[1] + 2 * u), 5, _lift(kitc, .18))     # torso + chest light
+        seg((hm[0] - 6 * u, hm[1] + 1 * u), (hm[0] + 6 * u, hm[1] + 1 * u), 5, trou)                                        # waistband
+        leg(pt("hf"), pt("kf"), pt("af"), 1.0)
+        H = pt("head"); seg((sm[0] + 1 * u, sm[1] - 3 * u), (H[0] - 1 * u, H[1] + 6 * u), 6.5, _sh(SKIN, .85))
+        head(H)
+        bat()
+        arm(pt("sf"), pt("ef"), pt("wf"), 1.0, gl=not J.get("ball"))
+        if J.get("ball"):                                                   # bowling arm over the top, ball in hand
+            arm(pt("sb"), pt("eb"), pt("wb"), .95, gl=False)
+            wb = pt("wb"); c.drawCircle(wb[0], wb[1] - 2 * u, 3.4 * u, P((196, 32, 42)))
+            c.drawCircle(wb[0], wb[1], 2.6 * u, P(SKIN))
     c.restore()
 
 
@@ -1604,10 +1764,10 @@ def sc_stage(c, g, t, D, s):
         st = D * A.get("at", .0); q = eo(prog(t, st, st + .5))
         if q <= 0: continue
         W, H = g.W, g.H
-        ax = W * A.get("x", .5); ay = H * (.715 if g.fmt == "short" else .9)
+        ax = W * (A.get("x", .5) + (A.get("x2", A.get("x", .5)) - A.get("x", .5)) * eio(prog(t, st, D * A.get("move_end", .8)))); ay = H * (.715 if g.fmt == "short" else .9)
         hh = (470 if g.fmt == "short" else 520) * A.get("scale", 1.0) * zoom
         avatar(c, ax + (1 - q) * (60 if A.get("x", .5) > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"),
-               A.get("pose", "stand"), t + k, q)
+               A.get("pose", "stand"), t + k, q, dir=A.get("dir", 1))
     stage_panel(c, g, t, D, s)
 
 
