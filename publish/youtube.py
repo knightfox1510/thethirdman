@@ -42,7 +42,18 @@ def main():
     ap.add_argument("slug"); ap.add_argument("fmt", choices=["long", "short"])
     ap.add_argument("--privacy", default="private", choices=["private", "unlisted", "public"])
     ap.add_argument("--publish-at", help="ISO time; schedules the video (implies private until then)")
+    ap.add_argument("--thumb-only", action="store_true", help="only (re)set the thumbnail of the already-uploaded video")
     a = ap.parse_args()
+    if a.thumb_only:
+        log = json.load(open(LOG))
+        rec = next(r for r in reversed(log) if r["slug"] == a.slug and r["fmt"] == a.fmt)
+        spec = json.load(open(os.path.join(ROOT, "specs", f"{a.slug}.json")))
+        thumb = os.path.join(ROOT, "deliver", a.slug, spec["files"][a.fmt] + "_thumbnail.jpg")
+        req = urllib.request.Request(f"{UP}/thumbnails/set?videoId={rec['video_id']}&uploadType=media", data=open(thumb, "rb").read(),
+                                     method="POST", headers={"Authorization": "Bearer " + token("youtube"), "Content-Type": "image/jpeg"})
+        urllib.request.urlopen(req, timeout=120); rec["thumbnail"] = True
+        json.dump(log, open(LOG, "w"), indent=1, ensure_ascii=False)
+        print(f"thumbnail set on https://youtu.be/{rec['video_id']}"); return
     spec = json.load(open(os.path.join(ROOT, "specs", f"{a.slug}.json")))
     out = os.path.join(ROOT, "deliver", a.slug)
     base = spec["files"][a.fmt]
