@@ -65,6 +65,8 @@
   "herosize": 300
  },
  "sources": [
+  "https://www.deccanchronicle.com/sports/anvay-dravid-aaryavir-sehwag-impress-as-india-u19-win-against-australia-u19-1988522",
+  "https://www.wisden.com/cricket-news/aaryavir-sehwag-powers-india-to-thumping-win-in-u19-asia-cup-opener",
   "https://wisden.com/cricket-news/son-of-india-legend-aaryavir-sehwag-smashes-160-in-168-balls-for-india-u19",
   "https://www.outlookindia.com/sports/cricket/india-vs-uae-u19-asia-cup-2026-match-report",
   "https://gulfnews.com/sport/cricket/virender-sehwags-son-smashes-160-as-india-beat-uae-by-70-runs-in-asia-cup-1.500742656",
@@ -76,7 +78,7 @@
  "long": [],
  "short": [
   {
-   "vo": "One run. That's what वीरेंद्र सहवाग made on his India debut. Now, his son made one hundred and sixty.",
+   "vo": "On his India debut, वीरेंद्र सहवाग made one run. His son made twenty-eight on his U19 debut. Now, he's made one hundred and sixty.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -89,9 +91,9 @@
       "c": "ink"
      },
      "right": {
-      "v": "160",
-      "l": "Son · U19 Asia Cup",
-      "c": "gold"
+      "v": "28",
+      "l": "Son · U19 debut",
+      "c": "ink"
      }
     },
     "avatars": [
@@ -106,7 +108,7 @@
    }
   },
   {
-   "vo": "Against the UAE, in Oman, आर्यवीर सहवाग faced one sixty-eight balls. Seventeen fours, and seven sixes.",
+   "vo": "Against the UAE, in Oman, आर्यवीर सहवाग made one hundred and sixty, off one sixty-eight balls. Seventeen fours, and seven sixes.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -344,8 +346,8 @@
  ],
  "yt": {
   "short": {
-   "title": "Sehwag's son just made 160. His dad made 1 on debut 🏏 #Shorts",
-   "description": "Aaryavir Sehwag's 160 off 168 balls against the UAE at the U19 Asia Cup, his 297 in the Cooch Behar Trophy and 173 in the Vinoo Mankad Trophy, set against Virender Sehwag's India debut.",
+   "title": "Sehwag's son: 28 on debut, now 160. His dad made 1 🏏 #Shorts",
+   "description": "Aaryavir Sehwag made 28 on his India U19 debut against Australia in September. At the U19 Asia Cup he made 160 off 168 balls against the UAE. Plus his 297 in the Cooch Behar Trophy and 173 in the Vinoo Mankad Trophy, set against Virender Sehwag's India debut.",
    "tags": [
     "Aaryavir Sehwag",
     "Virender Sehwag",
