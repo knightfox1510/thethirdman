@@ -1,7 +1,8 @@
 """Sync finished videos to Google Drive, archiving the previous version.
     python3 publish/drive.py <slug> [<slug> ...]      # or: all
 Layout in Drive:
-    The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover)
+    The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover), not yet posted
+    The Third Man/Published_YT/<slug>/      the same, once anything from it has been uploaded to YouTube
     The Third Man/Archive/<slug>/<YYYY-MM-DD HHMM>/   the version that was there before
 A file is only re-uploaded (and the old one archived) when its contents changed (MD5 compare)."""
 import datetime, hashlib, mimetypes, os, sys
@@ -74,11 +75,34 @@ def sync_dir(src, cur, arch_parent, stamp, label=""):
         if f.get("mimeType") != FOLDER: archive(f, "removed")
 
 
+def find_child(name, parent):
+    r = api("GET", D, "drive", params={"q": f"name='{q(name)}' and mimeType='{FOLDER}' and trashed=false and '{parent}' in parents",
+                                       "fields": "files(id)"})
+    return r["files"][0]["id"] if r.get("files") else None
+
+
+def video_folder(slug, root_id):
+    """A video's folder lives in Videos/ until it is posted, then in Published_YT/."""
+    pub = find_child("Published_YT", root_id)
+    return (pub and find_child(slug, pub)) or folder(slug, folder("Videos", root_id))
+
+
 def sync(slug, root_id, stamp):
     src = os.path.join(DELIVER, slug)
     if not os.path.isdir(src): print(f"  skip {slug}: nothing in deliver/"); return
-    vids = folder("Videos", root_id); arch_root = folder("Archive", root_id)
-    sync_dir(src, folder(slug, vids), folder(slug, arch_root), stamp)
+    arch_root = folder("Archive", root_id)
+    sync_dir(src, video_folder(slug, root_id), folder(slug, arch_root), stamp)
+
+
+def mark_published(slug):
+    """Move Videos/<slug> to Published_YT/<slug> (called after a YouTube upload)."""
+    root_id = folder("The Third Man")
+    pub = folder("Published_YT", root_id)
+    if find_child(slug, pub): return "already in Published_YT"
+    vids = folder("Videos", root_id); cur = find_child(slug, vids)
+    if not cur: return "no Videos folder to move"
+    api("PATCH", f"{D}/{cur}", "drive", body={}, params={"addParents": pub, "removeParents": vids, "fields": "id"})
+    return "moved to Published_YT"
 
 
 if __name__ == "__main__":

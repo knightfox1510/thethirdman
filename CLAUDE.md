@@ -18,6 +18,9 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - The Sportmonks plan covers IPL 2013-2026 plus T20Is/T20 World Cups. It has NO men's ODIs or Tests, so take those numbers from the web.
 
 ## Workflow
+- Content schedule (what's posted, what's next, library, ideas): the Sheets artifact https://claude.ai/artifact/W2S945TTf7fCL2htKDMfLy. Read it through the Claude Docs connector, and update Status/Link there after every upload.
+- Drive: The Third Man/Videos/<slug> = not yet posted; Published_YT/<slug> = posted (youtube.py moves it); Archive/ = replaced versions.
+- Instagram is posted by hand: Reels = the Short files; carousels in deliver/<slug>/carousel with caption.txt.
 - Adjust one video: edit its spec, then `./batch.sh <slug>` (narration is cached per paragraph, so only changed lines hit the API).
 - Global look changes: edit engine.py/gfx.py/intros.py, then re-render with batch.sh.
 - Before a full build, check `python3 engine.py stills specs/<slug>.json long|short`.

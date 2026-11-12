@@ -92,6 +92,11 @@ def main():
         print(f"  captions uploaded ({c.get('id')})"); rec["captions"] = True
     log = json.load(open(LOG)) if os.path.exists(LOG) else []
     log.append(rec); json.dump(log, open(LOG, "w"), indent=1, ensure_ascii=False)
+    try:
+        from drive import mark_published
+        print("  drive:", mark_published(a.slug))
+    except SystemExit as e:
+        print("  drive: could not move folder:", e)
     print("done")
 
 
