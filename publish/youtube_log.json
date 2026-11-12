@@ -19,7 +19,8 @@
   "privacy": "private",
   "publish_at": null,
   "thumbnail": true,
-  "captions": true
+  "captions": true,
+  "deleted": "2026-11-12T12:09:43+00:00"
  },
  {
   "slug": "kohli_2000_nz",
@@ -29,6 +30,17 @@
   "uploaded": "2026-11-12T11:17:25+00:00",
   "privacy": "private",
   "publish_at": null,
+  "captions": true
+ },
+ {
+  "slug": "hardik_arshdeep",
+  "fmt": "long",
+  "video_id": "zaPe7_3Wbd4",
+  "title": "Hardik Pandya for Arshdeep Singh: Who Won the IPL Trade? | MI vs PBKS",
+  "uploaded": "2026-11-12T12:09:31+00:00",
+  "privacy": "private",
+  "publish_at": null,
+  "thumbnail": true,
   "captions": true
  }
 ]

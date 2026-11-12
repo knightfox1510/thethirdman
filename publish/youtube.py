@@ -43,7 +43,16 @@ def main():
     ap.add_argument("--privacy", default="private", choices=["private", "unlisted", "public"])
     ap.add_argument("--publish-at", help="ISO time; schedules the video (implies private until then)")
     ap.add_argument("--thumb-only", action="store_true", help="only (re)set the thumbnail of the already-uploaded video")
+    ap.add_argument("--delete", metavar="VIDEO_ID", help="delete one of our own earlier uploads (must be in youtube_log.json)")
     a = ap.parse_args()
+    if a.delete:
+        log = json.load(open(LOG))
+        rec = next((r for r in log if r["video_id"] == a.delete and r["slug"] == a.slug), None)
+        if not rec: raise SystemExit(f"{a.delete} is not one of our logged uploads for {a.slug}")
+        api("DELETE", f"{YT}/videos", "youtube", params={"id": a.delete})
+        rec["deleted"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+        json.dump(log, open(LOG, "w"), indent=1, ensure_ascii=False)
+        print(f"deleted https://youtu.be/{a.delete}"); return
     if a.thumb_only:
         log = json.load(open(LOG))
         rec = next(r for r in reversed(log) if r["slug"] == a.slug and r["fmt"] == a.fmt)
