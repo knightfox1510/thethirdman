@@ -60,3 +60,13 @@ Run it after a data refresh and update the spec if anything moved.
 - Long videos: hook scene → rotating 3.2s intro → content → logo outro. Shorts: no intro.
 - Intro rotation: least-recently-used, never twice in a row, Scoreboard prefers flip; assignments in intro_log.json.
 - No broadcast footage, no player photos, no team/league logos – original graphics only.
+
+## Publishing (Google Drive + YouTube)
+Credentials only via env vars (never commit them): `G_CLIENT_ID`, `G_CLIENT_SECRET`, `G_DRIVE_TOKEN`, `G_YT_TOKEN`
+(refresh tokens from the one-time sign-in; Drive and YouTube need separate sign-ins because Google won't combine those scopes).
+- `python3 publish/drive.py <slug>|all`: syncs `deliver/<slug>/` to Drive `The Third Man/Videos/<slug>/`. Changed files
+  replace the old ones and the old ones move to `The Third Man/Archive/<slug>/<date time>/`. Unchanged files are skipped (MD5).
+- `python3 publish/youtube.py <slug> long|short [--publish-at ISO]`: uploads with title/description/tags from the spec's
+  `yt` block (`{"yt": {"long": {"title","description","tags"}, "short": {...}}}`), sets the thumbnail and captions for
+  long-form, and logs the video ID in `publish/youtube_log.json`. Until the API audit passes, YouTube forces uploads to
+  private, so publish them in YouTube Studio. Quota: about 6 uploads a day.
