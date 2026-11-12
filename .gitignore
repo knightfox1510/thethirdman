@@ -1,0 +1,16 @@
+# renders and caches: rebuildable, too large for git
+out/
+deliver/
+vo/
+*.mp4
+*.m4a
+*.wav
+*.jpg
+!fonts/**
+__pycache__/
+# Sportmonks feed data: re-fetch with fetch_ipl.py (not redistributable)
+data/*
+!data/abhishek_t20i_ids.json
+# secrets
+.env
+*.key

@@ -1,0 +1,321 @@
+{
+ "slug": "rcb_back_to_back",
+ "theme": "whites",
+ "tag": "DATA STORY",
+ "tagsub": "HOW RCB WON BACK-TO-BACK",
+ "files": {
+  "long": "How_RCB_Won_Back_to_Back_IPL_Titles",
+  "short": "RCB_Back_to_Back_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "IT WASN'T THE BATTING",
+  "lines": [
+   {
+    "t": "HOW RCB WON"
+   },
+   {
+    "t": "BACK-TO-BACK",
+    "c": "gold"
+   }
+  ],
+  "hero": "7TH → 2ND",
+  "herosize": 300
+ },
+ "sources": [
+  "Sportmonks ball-by-ball, IPL 2024-2026 (data/ipl), super overs excluded; economy = runs conceded per over (byes and leg byes included)",
+  "https://www.tribuneindia.com/news/sports/season-went-well-for-me-bhuvneshwar-kumar-after-rcb-clinch-back-to-back-ipl-titles/",
+  "https://www.outlookindia.com/sports/cricket/rcb-vs-gt-ipl-2026-final-back-to-back-titles-royal-challengers-bengaluru-virat-kohli",
+  "https://www.thenewsminute.com/news/ipl-2026-rcb-defend-title-with-five-wicket-victory-over-gt"
+ ],
+ "long": [
+  {
+   "vo": "For seventeen seasons, Royal Challengers Bengaluru had the stars and no trophy. Then they won in twenty twenty-five. And again in twenty twenty-six. Everyone credits the batting. The data says something else.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "17 YEARS. NOTHING."
+     },
+     {
+      "t": "THEN TWO",
+      "c": "gold"
+     },
+     {
+      "t": "IN A ROW.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Start with the bowling. In twenty twenty-four, RCB had the seventh-best economy of ten teams, at nearly ten an over. In twenty twenty-five, they jumped to second. And in twenty twenty-six, second again.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE BOWLING JUMP",
+     "sub": "RCB ECONOMY · RANK OUT OF 10 TEAMS"
+    },
+    "max": 11,
+    "dec": 2,
+    "items": [
+     {
+      "label": "2024 · 7TH",
+      "value": 9.9,
+      "color": "red"
+     },
+     {
+      "label": "2025 · 2ND",
+      "value": 9.24,
+      "color": "gold"
+     },
+     {
+      "label": "2026 · 2ND",
+      "value": 9.51,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The biggest change came in the powerplay. In twenty twenty-four, RCB leaked more runs in the first six overs than the league average. In twenty twenty-five, they had the best powerplay bowling in the IPL, almost a full run an over better than average.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "THE FIRST SIX OVERS",
+     "sub": "POWERPLAY ECONOMY, RCB BOWLING VS LEAGUE"
+    },
+    "a": {
+     "name": "RCB",
+     "color": "gold"
+    },
+    "b": {
+     "name": "LEAGUE",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "2024",
+      "9.77",
+      "9.47",
+      "b"
+     ],
+     [
+      "2025 · BEST IN IPL",
+      "8.73",
+      "9.64",
+      "a"
+     ],
+     [
+      "2026",
+      "9.31",
+      "10.12",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Who did it? In twenty twenty-five, Josh Hazlewood took twenty-two wickets and Krunal Pandya went at just over eight an over. And in twenty twenty-six, Bhuvneshwar Kumar took twenty-eight wickets at seven point nine five, the best economy of any of the top five wicket-takers.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE BOWLERS",
+     "sub": "IPL 2025-2026"
+    },
+    "tiles": [
+     {
+      "v": "22",
+      "l": "HAZLEWOOD WICKETS · 2025",
+      "c": "ink"
+     },
+     {
+      "v": "8.24",
+      "l": "KRUNAL ECONOMY · 2025",
+      "c": "ink"
+     },
+     {
+      "v": "28",
+      "l": "BHUVNESHWAR WICKETS · 2026",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The batting didn't need to be spectacular. It needed to be reliable. विराट कोहली made six fifty-seven in twenty twenty-five, and six seventy-five in twenty twenty-six, at a strike rate near one sixty-six.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE CONSTANT",
+     "sub": "VIRAT KOHLI · IPL RUNS"
+    },
+    "max": 800,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2024",
+      "value": 741,
+      "color": "ink"
+     },
+     {
+      "label": "2025",
+      "value": 657,
+      "color": "gold"
+     },
+     {
+      "label": "2026 · SR 165.8",
+      "value": 675,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And in the twenty twenty-six final, it all came together. The bowlers held Gujarat to one fifty-five for eight. कोहली finished it with seventy-five not out off forty-two balls, with two overs to spare.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "THE 2026 FINAL",
+     "sub": "AHMEDABAD · KOHLI 75* OFF 42"
+    },
+    "a": {
+     "name": "GUJARAT TITANS",
+     "color": "ink"
+    },
+    "b": {
+     "name": "RCB",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "SCORE",
+      "155/8",
+      "WON BY 5 WKTS",
+      "b"
+     ],
+     [
+      "OVERS",
+      "20",
+      "18",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? RCB's titles were built by the bowlers. The batting just had to finish the job.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "BUILT BY"
+     },
+     {
+      "t": "THE BOWLERS.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Can RCB make it three in a row? Tell us in the comments, and subscribe for more data stories.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THREE"
+     },
+     {
+      "t": "IN A ROW?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Everyone says RCB won back-to-back titles with batting. The data says bowling.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "IT WASN'T"
+     },
+     {
+      "t": "THE",
+      "c": "gold"
+     },
+     {
+      "t": "BATTING.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In twenty twenty-four, their bowling ranked seventh of ten. In twenty twenty-five and twenty twenty-six, second.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "BOWLING RANK"
+    },
+    "a": {
+     "name": "2024",
+     "color": "red"
+    },
+    "b": {
+     "name": "2025-26",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "RANK",
+      "7TH",
+      "2ND",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "In twenty twenty-five, they had the best powerplay bowling in the league.",
+   "scene": {
+    "type": "bignum",
+    "value": 8.73,
+    "dec": 2,
+    "label": "RCB POWERPLAY ECONOMY · 2025",
+    "color": "gold",
+    "note": "Best in the IPL",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "And in twenty twenty-six, Bhuvneshwar Kumar took twenty-eight wickets.",
+   "scene": {
+    "type": "bignum",
+    "value": 28,
+    "label": "BHUVNESHWAR WICKETS · 2026",
+    "color": "gold",
+    "note": "Economy 7.95",
+    "count_dur": 0.7
+   }
+  },
+  {
+   "vo": "Can RCB make it three? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THREE"
+     },
+     {
+      "t": "IN A ROW?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ]
+}

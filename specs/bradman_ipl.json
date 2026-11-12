@@ -1,0 +1,363 @@
+{
+ "slug": "bradman_ipl",
+ "tag": "WHAT IF?",
+ "tagsub": "BRADMAN IN THE IPL",
+ "files": {
+  "long": "What_If_Bradman_Played_in_the_IPL",
+  "short": "Bradman_IPL_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "WHAT IF?",
+  "lines": [
+   {
+    "t": "BRADMAN"
+   },
+   {
+    "t": "IN THE IPL?",
+    "c": "gold"
+   }
+  ],
+  "hero": "99.94",
+  "herosize": 420
+ },
+ "long": [
+  {
+   "vo": "Ninety-nine point nine four. Don Bradman's Test batting average is the most famous number in cricket. Fifty-two Tests. Almost seven thousand runs. Twenty-nine hundreds. But what would that number look like in today's IPL?",
+   "scene": {
+    "type": "bignum",
+    "value": 99.94,
+    "dec": 2,
+    "label": "TEST BATTING AVERAGE",
+    "note": "52 Tests · 6,996 runs · 29 hundreds"
+   }
+  },
+  {
+   "vo": "Start with how far ahead of everyone he was. The modern greats average in the fifties. सचिन तेंदुलकर, fifty-three point seven eight. Jacques Kallis, fifty-five. Kumar Sangakkara, fifty-seven. Bradman? Almost a hundred.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "HOW FAR AHEAD?",
+     "sub": "CAREER TEST BATTING AVERAGES"
+    },
+    "max": 105,
+    "dec": 2,
+    "items": [
+     {
+      "label": "SACHIN TENDULKAR",
+      "value": 53.78,
+      "color": "ink",
+      "at": 0.25
+     },
+     {
+      "label": "JACQUES KALLIS",
+      "value": 55.37,
+      "color": "ink",
+      "at": 0.42
+     },
+     {
+      "label": "KUMAR SANGAKKARA",
+      "value": 57.4,
+      "color": "ink",
+      "at": 0.6
+     },
+     {
+      "label": "DON BRADMAN",
+      "value": 99.94,
+      "color": "gold",
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Statisticians have measured just how strange that is. Bradman's average sits about six point six standard deviations above the typical Test batter. The next best players in history? Below two point five.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "A STATISTICAL FREAK",
+     "sub": "STANDARD DEVIATIONS ABOVE THE MEAN · TEST AVERAGE"
+    },
+    "tiles": [
+     {
+      "v": "6.6",
+      "l": "DON BRADMAN",
+      "c": "gold",
+      "at": 0.3
+     },
+     {
+      "v": "< 2.5",
+      "l": "EVERYONE ELSE IN HISTORY",
+      "c": "ink",
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But T20 isn't just about runs. It's about speed. Balls faced weren't fully recorded in his era, but analysts estimate Bradman scored at around sixty-one runs per hundred balls in Tests, and roughly seventy across all first-class cricket. Quick for the nineteen-thirties.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "BUT HOW FAST?"
+    },
+    "value": 61,
+    "prefix": "~",
+    "label": "ESTIMATED TEST STRIKE RATE",
+    "color": "ink",
+    "note": "Balls faced weren't fully recorded in his era · about 70 across all first-class cricket"
+   }
+  },
+  {
+   "vo": "Here's the problem. In IPL twenty twenty-five, top-order batters struck at more than one hundred and fifty-eight. A batter going at sixty-one wouldn't survive a single powerplay.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE IPL PROBLEM",
+     "sub": "RUNS PER 100 BALLS"
+    },
+    "max": 170,
+    "dec": 0,
+    "items": [
+     {
+      "label": "BRADMAN · TESTS (EST.)",
+      "value": 61,
+      "color": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "BRADMAN · FIRST-CLASS (EST.)",
+      "value": 70,
+      "color": "ink",
+      "at": 0.25
+     },
+     {
+      "label": "IPL TOP ORDER · 2025",
+      "value": 158.5,
+      "dec": 1,
+      "color": "gold",
+      "at": 0.45,
+      "text": "158.5"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And then there are sixes. Bradman hit just six in his entire Test career. He didn't need to. But when he wanted to score fast, he could: at Headingley in nineteen-thirty, he made three hundred and nine runs in a single day.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE SIX PROBLEM"
+    },
+    "tiles": [
+     {
+      "v": "6",
+      "l": "SIXES IN HIS WHOLE TEST CAREER",
+      "c": "red",
+      "at": 0.12
+     },
+     {
+      "v": "309",
+      "l": "RUNS IN ONE DAY · HEADINGLEY 1930",
+      "c": "gold",
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So how would T20 Bradman play? Not as a slogger. Think of a gap-finder who almost never wastes a ball. Give him a modern bat, where a mistimed shot still clears the rope. Give him an Impact Player batting behind him, and he'd have licence to attack from ball one.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE T20 BRADMAN"
+    },
+    "items": [
+     {
+      "h": "THE GAP-FINDER",
+      "d": "Scores along the ground, all around the wicket",
+      "at": 0.12
+     },
+     {
+      "h": "NO WASTED BALLS",
+      "d": "Rotates the strike and kills dot balls",
+      "at": 0.3
+     },
+     {
+      "h": "THE MODERN BAT",
+      "d": "Today's mis-hits clear the rope",
+      "at": 0.52
+     },
+     {
+      "h": "IMPACT PLAYER",
+      "d": "An extra batter behind him: licence to attack",
+      "at": 0.72
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now the thought experiment. Bradman's average was roughly one point eight five times that of the next greats. If he were that far ahead of today's best T20 batters, even at a normal IPL strike rate, he'd be the most valuable player in the league by a distance.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE THOUGHT EXPERIMENT"
+    },
+    "value": 1.85,
+    "dec": 2,
+    "suffix": "×",
+    "label": "HIS AVERAGE VS THE NEXT GREATS",
+    "note": "Keep that gap in T20, and even a normal IPL strike rate makes him the league's most valuable batter"
+   }
+  },
+  {
+   "vo": "Our verdict? He'd need a season to adapt to the speed. And then he'd own the league.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "ONE SEASON"
+     },
+     {
+      "t": "TO ADAPT.",
+      "at": 0.1
+     },
+     {
+      "t": "THEN HE OWNS IT.",
+      "c": "gold",
+      "at": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Could Bradman rule the IPL? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "COULD BRADMAN"
+     },
+     {
+      "t": "RULE THE IPL?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Don Bradman averaged ninety-nine point nine four in Tests.",
+   "scene": {
+    "type": "bignum",
+    "value": 99.94,
+    "dec": 2,
+    "label": "TEST BATTING AVERAGE",
+    "count_dur": 1.0
+   }
+  },
+  {
+   "vo": "That's nearly double सचिन तेंदुलकर.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "NEARLY DOUBLE"
+    },
+    "max": 105,
+    "dec": 2,
+    "items": [
+     {
+      "label": "SACHIN",
+      "value": 53.78,
+      "color": "ink"
+     },
+     {
+      "label": "BRADMAN",
+      "value": 99.94,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But he scored at about sixty-one per hundred balls. Today's IPL top order goes at one fifty-eight.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE CATCH",
+     "sub": "RUNS PER 100 BALLS"
+    },
+    "max": 170,
+    "dec": 0,
+    "items": [
+     {
+      "label": "BRADMAN (EST.)",
+      "value": 61,
+      "color": "ink"
+     },
+     {
+      "label": "IPL TOP ORDER",
+      "value": 158.5,
+      "color": "gold",
+      "text": "158.5",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And he hit just six sixes in his whole Test career.",
+   "scene": {
+    "type": "bignum",
+    "value": 6,
+    "label": "TEST CAREER SIXES",
+    "color": "red",
+    "count_dur": 0.6
+   }
+  },
+  {
+   "vo": "But give him a modern bat and one season to adapt, and he'd own the league.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "ONE SEASON"
+     },
+     {
+      "t": "TO ADAPT."
+     },
+     {
+      "t": "THEN HE",
+      "c": "gold"
+     },
+     {
+      "t": "OWNS IT.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Could Bradman rule the IPL? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "COULD BRADMAN"
+     },
+     {
+      "t": "RULE THE IPL?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "scoreboard",
+ "sources": [
+  "https://www.espn.com/cricket/story/_/id/40123053/the-gap-bradman-next-best-using-z-scores-anantha-narayanan",
+  "https://www.theroar.com.au/2020/09/05/bradman-era-to-era/",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ]
+}

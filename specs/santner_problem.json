@@ -1,0 +1,448 @@
+{
+ "slug": "santner_problem",
+ "tag": "TACTICAL BREAKDOWN",
+ "tagsub": "NZ VS INDIA · T20I SERIES",
+ "files": {
+  "long": "The_Santner_Problem_India_T20_Breakdown",
+  "short": "Santner_Problem_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THE ONE THEY COULDN'T HIT",
+  "lines": [
+   {
+    "t": "INDIA'S"
+   },
+   {
+    "t": "SANTNER PROBLEM",
+    "c": "gold"
+   }
+  ],
+  "hero": "7.37",
+  "herosize": 420
+ },
+ "long": [
+  {
+   "vo": "In the T20 series in New Zealand, India's batters went after almost everyone. New Zealand's seamers went for nearly eleven an over. But one bowler, New Zealand's own captain, India simply couldn't hit.",
+   "scene": {
+    "type": "statement",
+    "kicker": "NZ VS INDIA · T20I SERIES",
+    "lines": [
+     {
+      "t": "ONE BOWLER"
+     },
+     {
+      "t": "INDIA COULDN'T",
+      "c": "gold",
+      "at": 0.6
+     },
+     {
+      "t": "HIT.",
+      "c": "gold",
+      "at": 0.65
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Look at the economy rates. New Zealand's seamers, ten point six five an over. Michael Bracewell's off-spin, over twelve. Mitchell Santner? Seven point three seven.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER VS INDIA",
+     "sub": "5 T20Is · LOWER IS BETTER"
+    },
+    "max": 13,
+    "dec": 2,
+    "items": [
+     {
+      "label": "NZ SEAMERS",
+      "value": 10.65,
+      "color": "red",
+      "at": 0.12
+     },
+     {
+      "label": "MICHAEL BRACEWELL · OFF-SPIN",
+      "value": 12.17,
+      "color": "red",
+      "at": 0.4
+     },
+     {
+      "label": "MITCHELL SANTNER · LEFT-ARM SPIN",
+      "value": 7.37,
+      "color": "gold",
+      "at": 0.72
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Across the series, Santner bowled nineteen overs and took nine wickets, including four for twenty-one in the second match. No other New Zealand bowler came close.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "SANTNER'S SERIES"
+    },
+    "tiles": [
+     {
+      "v": "19",
+      "l": "OVERS",
+      "c": "ink",
+      "at": 0.12
+     },
+     {
+      "v": "9",
+      "l": "WICKETS",
+      "c": "gold",
+      "at": 0.3
+     },
+     {
+      "v": "7.37",
+      "l": "ECONOMY",
+      "c": "gold",
+      "at": 0.45
+     },
+     {
+      "v": "4/21",
+      "l": "BEST · GAME 2",
+      "c": "ink",
+      "at": 0.62
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And this wasn't a timid Indian batting line-up. Against pace, अभिषेक शर्मा struck at two hundred and fifty-six. Naman Dhir, over two hundred. Vaibhav Sooryavanshi, one eighty-five. As a team, India scored at one seventy-eight against the seamers.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "INDIA VS PACE",
+     "sub": "STRIKE RATE · 5 T20Is"
+    },
+    "max": 280,
+    "dec": 0,
+    "items": [
+     {
+      "label": "ABHISHEK SHARMA",
+      "value": 256,
+      "color": "blue",
+      "at": 0.15
+     },
+     {
+      "label": "NAMAN DHIR",
+      "value": 214,
+      "color": "blue",
+      "at": 0.35
+     },
+     {
+      "label": "VAIBHAV SOORYAVANSHI",
+      "value": 185,
+      "color": "blue",
+      "at": 0.5
+     },
+     {
+      "label": "INDIA AS A TEAM",
+      "value": 177.5,
+      "color": "ink",
+      "dec": 1,
+      "text": "178",
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now compare that with Santner. Against the seamers, India scored at one seventy-eight and lost a wicket every seventeen balls. Against Santner, they scored at just one twenty-three, and lost a wicket every thirteen balls.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "SEAMERS VS SANTNER",
+     "sub": "INDIA'S BATTING"
+    },
+    "a": {
+     "name": "NZ SEAMERS",
+     "color": "red"
+    },
+    "b": {
+     "name": "SANTNER",
+     "color": "gold"
+    },
+    "spread": 0.7,
+    "rows": [
+     [
+      "INDIA'S STRIKE RATE",
+      "178",
+      "123",
+      "b"
+     ],
+     [
+      "RUNS PER OVER",
+      "10.65",
+      "7.37",
+      "b"
+     ],
+     [
+      "BALLS PER WICKET",
+      "17",
+      "13",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "So who struggled most? तिलक वर्मा made just nineteen off twenty-one balls against him. श्रेयस अय्यर scored at a run a ball and fell to him twice. Sanju Samson struck at one-fourteen. Only Naman Dhir really took him on.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "INDIA VS SANTNER",
+     "sub": "STRIKE RATE · BALLS FACED IN BRACKETS"
+    },
+    "max": 200,
+    "dec": 0,
+    "items": [
+     {
+      "label": "TILAK VARMA (21)",
+      "value": 90,
+      "color": "red",
+      "at": 0.08
+     },
+     {
+      "label": "SHREYAS IYER (17) · OUT TWICE",
+      "value": 106,
+      "color": "red",
+      "at": 0.3
+     },
+     {
+      "label": "SANJU SAMSON (14)",
+      "value": 114,
+      "color": "red",
+      "at": 0.55
+     },
+     {
+      "label": "NAMAN DHIR (25)",
+      "value": 184,
+      "color": "blue",
+      "at": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Why did it work? First, he owned the middle overs: almost all his deliveries came between overs seven and fifteen, when India wanted to accelerate. Second, it didn't matter which hand you batted with. Left-handers struck at one sixteen against him, right-handers at one twenty-eight. And third, this wasn't about spin in general. Bracewell's off-spin went for twelve an over.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHY HE WORKED"
+    },
+    "items": [
+     {
+      "h": "HE OWNED THE MIDDLE OVERS",
+      "d": "108 of his 114 balls came in overs 7–15",
+      "at": 0.06
+     },
+     {
+      "h": "BOTH HANDS, SAME RESULT",
+      "d": "Left-handers SR 116 · right-handers SR 128",
+      "at": 0.38
+     },
+     {
+      "h": "NOT 'SPIN' IN GENERAL",
+      "d": "Bracewell's off-spin went at 12.17 an over",
+      "c": "red",
+      "at": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Game by game, he was a constant threat: two for thirty-nine, then four for twenty-one, one for seventeen, and two for twenty-four. Only in the final match did India finally get after him, nought for thirty-nine. But by then, New Zealand had found their rhythm and won the last two games.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "SANTNER, GAME BY GAME"
+    },
+    "events": [
+     {
+      "y": "2/39",
+      "t": "Game 1 · India win",
+      "at": 0.1
+     },
+     {
+      "y": "4/21",
+      "t": "Game 2 · India win",
+      "hl": true,
+      "at": 0.2
+     },
+     {
+      "y": "1/17",
+      "t": "Game 3 · 3 overs · India win",
+      "at": 0.3
+     },
+     {
+      "y": "2/24",
+      "t": "Game 4 · NZ win by 87",
+      "at": 0.4
+     },
+     {
+      "y": "0/39",
+      "t": "Game 5 · NZ win",
+      "c": "blue",
+      "at": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? India won the series three-two. But Santner won his battle. And with the next T20 World Cup cycle starting, left-arm spin in the middle overs is the weakness every opponent will now target.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "INDIA WON"
+     },
+     {
+      "t": "THE SERIES.",
+      "at": 0.05
+     },
+     {
+      "t": "SANTNER WON",
+      "c": "gold",
+      "at": 0.15
+     },
+     {
+      "t": "HIS BATTLE.",
+      "c": "gold",
+      "at": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "vo": "How should India play Santner next time? Tell us in the comments, and subscribe for more tactical breakdowns.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "HOW SHOULD INDIA"
+     },
+     {
+      "t": "PLAY SANTNER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "India smashed New Zealand's seamers. But one bowler, they couldn't hit.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "ONE BOWLER"
+     },
+     {
+      "t": "INDIA",
+      "c": "gold"
+     },
+     {
+      "t": "COULDN'T HIT",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The seamers went at ten point six five an over. Mitchell Santner, seven point three seven.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER"
+    },
+    "max": 12,
+    "dec": 2,
+    "items": [
+     {
+      "label": "NZ SEAMERS",
+      "value": 10.65,
+      "color": "red"
+     },
+     {
+      "label": "SANTNER",
+      "value": 7.37,
+      "color": "gold",
+      "at": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Nine wickets in nineteen overs, including four for twenty-one.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "SANTNER"
+    },
+    "tiles": [
+     {
+      "v": "9",
+      "l": "WICKETS",
+      "c": "gold"
+     },
+     {
+      "v": "4/21",
+      "l": "BEST",
+      "c": "ink",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "तिलक वर्मा made nineteen off twenty-one against him. श्रेयस अय्यर fell to him twice.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "VS SANTNER",
+     "sub": "STRIKE RATE"
+    },
+    "max": 150,
+    "dec": 0,
+    "items": [
+     {
+      "label": "TILAK VARMA",
+      "value": 90,
+      "color": "red"
+     },
+     {
+      "label": "SHREYAS IYER · OUT TWICE",
+      "value": 106,
+      "color": "red",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "How should India play him? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "HOW TO PLAY"
+     },
+     {
+      "t": "SANTNER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "blue",
+ "sources": [
+  "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)"
+ ]
+}

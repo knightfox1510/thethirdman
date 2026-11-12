@@ -1,0 +1,303 @@
+{
+ "slug": "anchor",
+ "tag": "BY THE NUMBERS",
+ "tagsub": "IS THE ANCHOR DEAD?",
+ "files": {
+  "long": "Is_the_T20_Anchor_Dead",
+  "short": "Anchor_Dead_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THE IPL HAS CHANGED",
+  "lines": [
+   {
+    "t": "IS THE ANCHOR"
+   },
+   {
+    "t": "DEAD?",
+    "c": "red"
+   }
+  ],
+  "hero": "165.85",
+  "herosize": 380
+ },
+ "long": [
+  {
+   "vo": "For years, every T20 team had one. The anchor. The batter who stays till the end at a run a ball while everyone else swings. But in today's IPL, is the anchor dead?",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE T20 ANCHOR",
+    "lines": [
+     {
+      "t": "IS THE ANCHOR"
+     },
+     {
+      "t": "DEAD?",
+      "c": "red",
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The numbers say it should be. In twenty oh-eight, IPL top-order batters struck at one-thirty. By twenty twenty-five, it was over one fifty-eight.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "TOP-ORDER STRIKE RATE",
+     "sub": "IPL · RUNS PER 100 BALLS"
+    },
+    "max": 170,
+    "dec": 1,
+    "items": [
+     {
+      "label": "IPL 2008",
+      "value": 130.1,
+      "color": "ink",
+      "at": 0.15
+     },
+     {
+      "label": "IPL 2025",
+      "value": 158.5,
+      "color": "gold",
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So do the maths. Face forty balls at a strike rate of one-twenty, and you've cost your team fifteen runs compared with a typical top-order batter today. In a game decided by a few runs, that's the difference.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE COST OF A SLOW INNINGS"
+    },
+    "value": 15,
+    "suffix": " RUNS",
+    "color": "red",
+    "label": "40 BALLS AT 120 VS 40 BALLS AT 158",
+    "count_at": 0.3
+   }
+  },
+  {
+   "vo": "Now look at the ultimate anchor, विराट कोहली. In twenty twenty-five, he struck at about one forty-five. Then in twenty twenty-six, at thirty-seven years old, he struck at nearly one sixty-six, averaged over fifty-six, and RCB won back-to-back titles.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "KOHLI REINVENTED",
+     "sub": "IPL, RCB"
+    },
+    "a": {
+     "name": "2025",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2026",
+     "color": "gold"
+    },
+    "spread": 0.75,
+    "rows": [
+     [
+      "RUNS",
+      "657",
+      "675",
+      "b"
+     ],
+     [
+      "AVERAGE",
+      "54.75",
+      "56.25",
+      "b"
+     ],
+     [
+      "STRIKE RATE",
+      "144.71",
+      "165.85",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And in the final, chasing one fifty-six against Gujarat, he made seventy-five not out off just forty-two balls.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE 2026 FINAL"
+    },
+    "value": 75,
+    "suffix": "*",
+    "label": "OFF 42 BALLS · PLAYER OF THE MATCH",
+    "note": "RCB chase down 156 against Gujarat Titans",
+    "count_at": 0.2
+   }
+  },
+  {
+   "vo": "So the role hasn't disappeared. It's evolved. The new anchor still bats deep, but at one fifty or more. He attacks the powerplay instead of waiting. He hunts matchups, picking the weakest bowler to target. And he doesn't leave the finish to someone else.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE NEW ANCHOR"
+    },
+    "items": [
+     {
+      "h": "BATS DEEP, AT 150+",
+      "d": "Time at the crease, without the cost",
+      "at": 0.08
+     },
+     {
+      "h": "ATTACKS THE POWERPLAY",
+      "d": "No more 'get your eye in'",
+      "at": 0.35
+     },
+     {
+      "h": "HUNTS MATCHUPS",
+      "d": "Picks the weakest bowler and goes after him",
+      "at": 0.52
+     },
+     {
+      "h": "FINISHES IT",
+      "d": "Doesn't leave the end to someone else",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? The anchor isn't dead. The slow anchor is.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "THE ANCHOR"
+     },
+     {
+      "t": "ISN'T DEAD.",
+      "at": 0.1
+     },
+     {
+      "t": "THE SLOW",
+      "c": "red",
+      "at": 0.45
+     },
+     {
+      "t": "ANCHOR IS.",
+      "c": "red",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Can a strike rate of one-thirty still work in the IPL? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "CAN 130"
+     },
+     {
+      "t": "STILL WORK?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "In today's IPL, is the anchor dead?",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "IS THE"
+     },
+     {
+      "t": "ANCHOR"
+     },
+     {
+      "t": "DEAD?",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Forty balls at a strike rate of one-twenty costs you fifteen runs against today's top order.",
+   "scene": {
+    "type": "bignum",
+    "value": 15,
+    "suffix": " RUNS",
+    "color": "red",
+    "label": "THE COST OF 40 BALLS AT 120",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "But विराट कोहली went from one forty-five to nearly one sixty-six, and RCB won back-to-back titles.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "KOHLI'S STRIKE RATE"
+    },
+    "max": 180,
+    "dec": 1,
+    "items": [
+     {
+      "label": "2025",
+      "value": 144.71,
+      "color": "ink",
+      "text": "144.7"
+     },
+     {
+      "label": "2026",
+      "value": 165.85,
+      "color": "gold",
+      "text": "165.9",
+      "at": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The anchor isn't dead. The slow anchor is.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "THE SLOW"
+     },
+     {
+      "t": "ANCHOR",
+      "c": "red"
+     },
+     {
+      "t": "IS DEAD.",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Can one-thirty still work? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "CAN 130"
+     },
+     {
+      "t": "STILL WORK?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "whites",
+ "sources": [
+  "https://www.mykhel.com/cricket/virat-kohli-ipl-2026-reinvention-rcb-back-to-back-titles-436895.html",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ]
+}

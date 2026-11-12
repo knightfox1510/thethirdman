@@ -1,0 +1,331 @@
+{
+ "slug": "channel_trailer",
+ "theme": "whites",
+ "intro": "fieldmap",
+ "tag": "WELCOME",
+ "tagsub": "THE THIRD MAN",
+ "files": {
+  "long": "The_Third_Man_Channel_Trailer",
+  "short": "The_Third_Man_Trailer_9x16"
+ },
+ "thumb": {
+  "kicker": "WELCOME TO",
+  "lines": [
+   {
+    "t": "THE THIRD MAN"
+   },
+   {
+    "t": "CRICKET, DECODED",
+    "c": "gold"
+   }
+  ],
+  "hero": "",
+  "herosize": 400
+ },
+ "long": [
+  {
+   "vo": "Every cricket match is decided by things the scorecard never shows.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "EVERY MATCH"
+     },
+     {
+      "t": "THE SCORECARD",
+      "c": "gold"
+     },
+     {
+      "t": "NEVER SHOWS."
+     }
+    ]
+   }
+  },
+  {
+   "vo": "On The Third Man, we look at the game from a different angle.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "THE GAME,"
+     },
+     {
+      "t": "FROM A DIFFERENT",
+      "c": "gold"
+     },
+     {
+      "t": "ANGLE.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "We break down the plans behind the big moments. The field that set the trap. The length that broke a batting line-up.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "TACTICAL BREAKDOWNS"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "THE LENGTH"
+    },
+    "shots": [
+     {
+      "to": "2nd slip",
+      "label": "THE TRAP",
+      "lift": 0.05
+     }
+    ],
+    "lines": [
+     {
+      "t": "THE FIELD."
+     },
+     {
+      "t": "THE LENGTH.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "We dig into the numbers nobody else is quoting. Like the one bowler India simply couldn't hit.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE NUMBERS",
+     "sub": "RUNS PER OVER VS INDIA · NZ T20Is"
+    },
+    "max": 13,
+    "dec": 2,
+    "items": [
+     {
+      "label": "NZ SEAMERS",
+      "value": 10.65,
+      "color": "red"
+     },
+     {
+      "label": "OFF-SPIN",
+      "value": 12.17,
+      "color": "red"
+     },
+     {
+      "label": "ONE BOWLER",
+      "value": 7.37,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "We ask the big what-ifs. What if Don Bradman played in the IPL?",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE WHAT-IFS"
+    },
+    "value": 99.94,
+    "dec": 2,
+    "label": "BRADMAN, IN THE IPL?",
+    "count_dur": 1.2
+   }
+  },
+  {
+   "vo": "And we settle the debates fans argue about. Bumrah against nineties Sachin and Lara, ball by ball.",
+   "scene": {
+    "type": "over",
+    "head": {
+     "t": "THE DEBATES",
+     "sub": "BUMRAH VS 90s SACHIN & LARA"
+    },
+    "balls": [
+     {
+      "r": "•",
+      "n": "Left alone"
+     },
+     {
+      "r": "4",
+      "n": "Straight drive",
+      "c": "blue"
+     },
+     {
+      "r": "•",
+      "n": "Yorker"
+     },
+     {
+      "r": "1",
+      "n": "Single"
+     },
+     {
+      "r": "4",
+      "n": "Cut",
+      "c": "red"
+     },
+     {
+      "r": "W",
+      "n": "Caught",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "New breakdowns every week, and Shorts in between.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "WHAT TO EXPECT"
+    },
+    "tiles": [
+     {
+      "v": "WEEKLY",
+      "l": "LONG-FORM BREAKDOWNS",
+      "c": "ink"
+     },
+     {
+      "v": "SHORTS",
+      "l": "THE ONE STAT THAT MATTERS",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe to The Third Man. Cricket, from a different angle.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "CRICKET, FROM A"
+     },
+     {
+      "t": "DIFFERENT ANGLE.",
+      "c": "gold"
+     }
+    ],
+    "ask": "NEW VIDEOS EVERY WEEK"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Every cricket match is decided by things the scorecard never shows.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "EVERY MATCH"
+     },
+     {
+      "t": "THE SCORECARD",
+      "c": "gold"
+     },
+     {
+      "t": "NEVER SHOWS."
+     }
+    ]
+   }
+  },
+  {
+   "vo": "We break down the plans behind the big moments.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "THE PLANS"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "THE LENGTH",
+     "at": 0.1
+    },
+    "shots": [
+     {
+      "to": "2nd slip",
+      "label": "EDGE",
+      "at": 0.5,
+      "lift": 0.05
+     }
+    ]
+   }
+  },
+  {
+   "vo": "We find the numbers nobody else is quoting.",
+   "scene": {
+    "type": "bignum",
+    "value": 7.37,
+    "dec": 2,
+    "label": "THE ONE BOWLER INDIA COULDN'T HIT",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "And we ask the big what-ifs.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "BRADMAN"
+     },
+     {
+      "t": "IN THE IPL?",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The Third Man. Cricket, from a different angle. Follow for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THE"
+     },
+     {
+      "t": "THIRD MAN",
+      "c": "gold"
+     }
+    ],
+    "pill": "FOLLOW FOR MORE"
+   }
+  }
+ ],
+ "sources": [
+  "Uses figures from santner_problem and bradman_ipl"
+ ]
+}

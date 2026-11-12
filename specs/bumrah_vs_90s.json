@@ -1,0 +1,316 @@
+{
+ "slug": "bumrah_vs_90s",
+ "tag": "DREAM MATCHUP",
+ "tagsub": "BUMRAH VS 90s SACHIN & LARA",
+ "files": {
+  "long": "Bumrah_vs_90s_Sachin_and_Lara",
+  "short": "Bumrah_vs_Sachin_Lara_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "DREAM MATCHUP",
+  "lines": [
+   {
+    "t": "BUMRAH VS"
+   },
+   {
+    "t": "SACHIN & LARA",
+    "c": "gold"
+   }
+  ],
+  "hero": "VS",
+  "herosize": 560
+ },
+ "long": [
+  {
+   "vo": "The best fast bowler of this era, against the two greatest batters of the nineties. जसप्रीत बुमराह versus सचिन तेंदुलकर and Brian Lara. Who wins?",
+   "scene": {
+    "type": "statement",
+    "kicker": "DREAM MATCHUP",
+    "lines": [
+     {
+      "t": "BUMRAH"
+     },
+     {
+      "t": "VS",
+      "c": "gold",
+      "at": 0.3
+     },
+     {
+      "t": "SACHIN & LARA",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "First, the batters. सचिन, the most complete batter of his generation, with fifty-one Test hundreds. Lara, the most explosive, and still the only man to score four hundred in a Test innings.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "THE BATTERS"
+    },
+    "a": {
+     "name": "SACHIN",
+     "color": "blue",
+     "sub": "INDIA"
+    },
+    "b": {
+     "name": "LARA",
+     "color": "red",
+     "sub": "WEST INDIES"
+    },
+    "rows": [
+     [
+      "TEST RUNS",
+      "15,921",
+      "11,953"
+     ],
+     [
+      "TEST HUNDREDS",
+      "51",
+      "34"
+     ],
+     [
+      "HIGHEST TEST SCORE",
+      "248*",
+      "400*",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And the bowler. A short, stuttering run-up, and a whippy arm that releases the ball later than batters expect. A yorker on demand. A slower ball from the same action. And in March twenty twenty-six, four for fifteen in a World Cup final.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "BUMRAH'S WEAPONS"
+    },
+    "items": [
+     {
+      "h": "THE LATE RELEASE",
+      "d": "The ball arrives sooner than batters expect",
+      "at": 0.08
+     },
+     {
+      "h": "THE YORKER",
+      "d": "Landed on demand",
+      "at": 0.4
+     },
+     {
+      "h": "THE SLOWER BALL",
+      "d": "Same action, much less pace",
+      "at": 0.52
+     },
+     {
+      "h": "BIG-GAME PROOF",
+      "d": "4/15 in the 2026 T20 World Cup final",
+      "c": "gold",
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now the matchups. सचिन against the yorker: his compact, straight bat is the best answer there is to a full ball. Lara against the late release: that famous high backlift needs time, and बुमराह takes time away. And both of them against a slower ball this well disguised, something few bowlers in the nineties could offer.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE KEY MATCHUPS"
+    },
+    "items": [
+     {
+      "h": "SACHIN VS THE YORKER",
+      "d": "A compact, straight bat: the best answer to full balls",
+      "c": "blue",
+      "at": 0.1
+     },
+     {
+      "h": "LARA VS THE LATE RELEASE",
+      "d": "A high backlift needs time. Bumrah takes it away",
+      "c": "red",
+      "at": 0.4
+     },
+     {
+      "h": "BOTH VS THE SLOWER BALL",
+      "d": "A disguise few 90s bowlers could match",
+      "c": "gold",
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So here's our imagined over. Ball one, to सचिन: a late outswinger, left alone. Ball two: fuller, and driven straight back past the bowler for four. Ball three: the yorker, dug out just in time. Ball four: worked off the hips for one. Lara on strike. Ball five: a hint of width, and he cuts it for four. Ball six: the slower ball. Lara's through the shot early. Caught at mid-off.",
+   "scene": {
+    "type": "over",
+    "head": {
+     "t": "OUR IMAGINED OVER",
+     "sub": "BUMRAH TO SACHIN, THEN LARA"
+    },
+    "balls": [
+     {
+      "r": "•",
+      "n": "Late outswinger, left alone",
+      "at": 0.1
+     },
+     {
+      "r": "4",
+      "n": "Straight drive",
+      "c": "blue",
+      "at": 0.22
+     },
+     {
+      "r": "•",
+      "n": "Yorker, dug out",
+      "at": 0.38
+     },
+     {
+      "r": "1",
+      "n": "Off the hips",
+      "at": 0.5
+     },
+     {
+      "r": "4",
+      "n": "Lara cuts",
+      "c": "red",
+      "at": 0.66
+     },
+     {
+      "r": "W",
+      "n": "Slower ball, caught at mid-off",
+      "c": "gold",
+      "at": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? Over a single spell, बुमराह wins. But over a whole series, these two would adjust. That's what made them great.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "BUMRAH WINS"
+     },
+     {
+      "t": "THE SPELL.",
+      "c": "gold",
+      "at": 0.08
+     },
+     {
+      "t": "THEY WIN",
+      "at": 0.4
+     },
+     {
+      "t": "THE SERIES.",
+      "c": "gold",
+      "at": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who wins this battle? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO WINS"
+     },
+     {
+      "t": "THIS BATTLE?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "जसप्रीत बुमराह bowls one over to nineties सचिन and Lara.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "BUMRAH"
+     },
+     {
+      "t": "VS",
+      "c": "gold"
+     },
+     {
+      "t": "SACHIN"
+     },
+     {
+      "t": "& LARA"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Ball one, left alone. Ball two, driven straight for four. Ball three, the yorker, dug out. Ball four, a single. Ball five, Lara cuts for four. Ball six, the slower ball. Caught.",
+   "scene": {
+    "type": "over",
+    "head": {
+     "t": "THE OVER"
+    },
+    "balls": [
+     {
+      "r": "•",
+      "n": "Left alone",
+      "at": 0.02
+     },
+     {
+      "r": "4",
+      "n": "Straight drive",
+      "c": "blue",
+      "at": 0.14
+     },
+     {
+      "r": "•",
+      "n": "Yorker, dug out",
+      "at": 0.32
+     },
+     {
+      "r": "1",
+      "n": "Single",
+      "at": 0.48
+     },
+     {
+      "r": "4",
+      "n": "Lara cuts",
+      "c": "red",
+      "at": 0.6
+     },
+     {
+      "r": "W",
+      "n": "Slower ball, caught",
+      "c": "gold",
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who wins? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO"
+     },
+     {
+      "t": "WINS?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "scoreboard",
+ "sources": [
+  "Career records (Tendulkar, Lara); https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/"
+ ]
+}

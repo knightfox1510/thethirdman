@@ -1,0 +1,379 @@
+{
+ "slug": "abhishek_plan",
+ "theme": "blue",
+ "tag": "MATCHUP DATA",
+ "tagsub": "HOW TO BOWL TO ABHISHEK SHARMA",
+ "files": {
+  "long": "Who_Should_Bowl_to_Abhishek_Sharma",
+  "short": "Abhishek_Sharma_Plan_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "OUT INSIDE 6 BALLS",
+  "lines": [
+   {
+    "t": "HOW TO GET"
+   },
+   {
+    "t": "ABHISHEK OUT",
+    "c": "gold"
+   }
+  ],
+  "hero": "1 IN 4",
+  "herosize": 300
+ },
+ "sources": [
+  "Sportmonks ball-by-ball: all IPL matches 2013-2026 and India T20Is/T20 World Cup 2024-2026 (cached in data/)",
+  "https://www.outlookindia.com/sports/cricket/sunrisers-hyderabad-vs-rajasthan-royals-indian-premier-league-2026-abhishek-sharma-golden-duck-jofra-archer-first-ball-wicket",
+  "https://www.onmanorama.com/sports/cricket/2026/04/21/ipl-2026-srh-vs-dc-abhishek-sharma-century.html"
+ ],
+ "long": [
+  {
+   "vo": "अभिषेक शर्मा owns two of the five highest scores in IPL history. And in twenty twenty-six, he also set an Indian record for ducks in a calendar year.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "141. 135 NOT OUT."
+     },
+     {
+      "t": "AND A RECORD",
+      "c": "red"
+     },
+     {
+      "t": "FOR DUCKS.",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "First, how dangerous he is. In the IPL, his strike rate jumped from one thirty-three in twenty twenty-two to over two hundred in twenty twenty-four, and he has stayed around two hundred ever since.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE RISE",
+     "sub": "IPL STRIKE RATE BY SEASON"
+    },
+    "max": 230,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2022",
+      "value": 133.1,
+      "color": "ink"
+     },
+     {
+      "label": "2023",
+      "value": 143.9,
+      "color": "ink"
+     },
+     {
+      "label": "2024",
+      "value": 204.2,
+      "color": "gold"
+     },
+     {
+      "label": "2025",
+      "value": 193.4,
+      "color": "gold"
+     },
+     {
+      "label": "2026",
+      "value": 204.7,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But he's boom or bust. In eighty-nine IPL innings, he has fifteen scores of fifty or more. Yet twenty-five times, he was out within his first six balls. That's more than one innings in four over almost before it starts.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "BOOM OR BUST",
+     "sub": "89 IPL INNINGS"
+    },
+    "tiles": [
+     {
+      "v": "15",
+      "l": "SCORES OF FIFTY OR MORE",
+      "c": "gold"
+     },
+     {
+      "v": "25",
+      "l": "TIMES OUT WITHIN SIX BALLS",
+      "c": "red"
+     },
+     {
+      "v": "28%",
+      "l": "OF INNINGS OVER IN SIX BALLS",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So when is he vulnerable? Right at the start, against right-arm pace. In his first six balls in the IPL, right-armers have held him to a strike rate of one-eleven, and taken a wicket every sixteen balls. Left-armers in the same spot go for one fifty-seven.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "HIS FIRST SIX BALLS",
+     "sub": "IPL, BY BOWLER TYPE"
+    },
+    "a": {
+     "name": "RIGHT-ARM PACE",
+     "color": "gold"
+    },
+    "b": {
+     "name": "LEFT-ARM PACE",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "STRIKE RATE",
+      "111",
+      "157",
+      "a"
+     ],
+     [
+      "BALLS PER WICKET",
+      "16",
+      "26",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And the plan is obvious once you see it. A right-arm quick, hitting a hard length, with a gully and a third man waiting for the slice. In April, Jofra Archer had him caught at third man, first ball.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "PLAN A: THE FIRST OVER",
+     "sub": "ILLUSTRATIVE FIELD · LEFT-HANDED BATTER"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "square leg",
+     "fine leg",
+     "deep third"
+    ],
+    "hl": [
+     "gully",
+     "deep third"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "HARD LENGTH"
+    },
+    "shots": [
+     {
+      "to": "deep third",
+      "label": "THE SLICE",
+      "lift": 0.25,
+      "bend": 0.12
+     }
+    ],
+    "lines": [
+     {
+      "t": "RIGHT-ARM"
+     },
+     {
+      "t": "PACE, EARLY",
+      "c": "gold"
+     }
+    ],
+    "sub": "Archer, April 2026: caught at third man, first ball.",
+    "lefty": true
+   }
+  },
+  {
+   "vo": "Once he's set, the danger changes. Across the IPL and T20 internationals, left-arm spin gets him out every eleven balls, more often than any other type. Leg-spin takes wickets too, but he strikes at over two thirty against it, so it's a gamble.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "ONCE HE'S SET",
+     "sub": "BALLS PER DISMISSAL · IPL + T20I · LOWER = MORE DANGEROUS"
+    },
+    "max": 22,
+    "dec": 1,
+    "items": [
+     {
+      "label": "LEFT-ARM SPIN",
+      "value": 11.3,
+      "color": "gold"
+     },
+     {
+      "label": "LEG-SPIN (BUT SR 231)",
+      "value": 13.9,
+      "color": "red"
+     },
+     {
+      "label": "OFF-SPIN",
+      "value": 17.4,
+      "color": "ink"
+     },
+     {
+      "label": "RIGHT-ARM PACE",
+      "value": 17.5,
+      "color": "ink"
+     },
+     {
+      "label": "LEFT-ARM PACE",
+      "value": 19.6,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So here's the plan. Open with right-arm pace on a hard length. Put a gully and a third man in place. Bring on left-arm spin as soon as he's set. And keep leg-spin away from him early.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE PLAN"
+    },
+    "items": [
+     {
+      "h": "RIGHT-ARM PACE, FIRST OVER",
+      "d": "Hard length: strike rate 111 in his first six balls"
+     },
+     {
+      "h": "GULLY AND THIRD MAN",
+      "d": "Wait for the slice"
+     },
+     {
+      "h": "LEFT-ARM SPIN ONCE HE'S SET",
+      "d": "A wicket every 11 balls"
+     },
+     {
+      "h": "KEEP LEG-SPIN AWAY EARLY",
+      "d": "He strikes at 231 against it",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? Get him early, with pace. Because if you don't, you might not get him at all.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "GET HIM EARLY."
+     },
+     {
+      "t": "OR YOU MIGHT",
+      "c": "gold"
+     },
+     {
+      "t": "NOT GET HIM AT ALL.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "How would you bowl to अभिषेक शर्मा? Tell us in the comments, and subscribe for more matchup data.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "HOW WOULD YOU"
+     },
+     {
+      "t": "BOWL TO ABHISHEK?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "अभिषेक शर्मा is the most dangerous opener in India. Here's how to get him out.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "HOW TO GET"
+     },
+     {
+      "t": "ABHISHEK",
+      "c": "gold"
+     },
+     {
+      "t": "OUT",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Twenty-five times in the IPL, he's been out within his first six balls.",
+   "scene": {
+    "type": "bignum",
+    "value": 25,
+    "label": "OUT WITHIN SIX BALLS",
+    "color": "red",
+    "note": "In 89 IPL innings",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "In those first six balls, right-arm pace holds him to a strike rate of one-eleven.",
+   "scene": {
+    "type": "bignum",
+    "value": 111,
+    "label": "SR VS RIGHT-ARM PACE, FIRST 6 BALLS",
+    "color": "gold",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "Once he's set, left-arm spin gets him every eleven balls.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "BALLS PER WICKET"
+    },
+    "max": 22,
+    "dec": 1,
+    "items": [
+     {
+      "label": "LEFT-ARM SPIN",
+      "value": 11.3,
+      "color": "gold"
+     },
+     {
+      "label": "RIGHT-ARM PACE",
+      "value": 17.5,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Get him early, or you might not get him at all. Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "GET HIM"
+     },
+     {
+      "t": "EARLY.",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "order": [
+  "flip",
+  "fieldmap",
+  "stumps",
+  "flip",
+  "kinetic",
+  "fieldmap",
+  "flip",
+  "stumps",
+  "kinetic",
+  "flip",
+  "fieldmap",
+  "stumps",
+  "kinetic",
+  "flip",
+  "fieldmap"
+ ],
+ "assigned": {
+  "sachin_t20": "flip",
+  "hardik_arshdeep": "fieldmap",
+  "two_hundred": "stumps",
+  "bradman_ipl": "flip",
+  "santner_problem": "kinetic",
+  "anchor": "fieldmap",
+  "dhoni_captain": "flip",
+  "wellington_odi": "stumps",
+  "bumrah_economy": "kinetic",
+  "bumrah_vs_90s": "flip",
+  "india_160": "fieldmap",
+  "abhishek_plan": "stumps",
+  "powerplay_revolution": "kinetic",
+  "death_kings": "flip",
+  "rcb_back_to_back": "fieldmap"
+ }
+}

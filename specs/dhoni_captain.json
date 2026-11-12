@@ -1,0 +1,274 @@
+{
+ "slug": "dhoni_captain",
+ "tag": "WHAT IF?",
+ "tagsub": "DHONI NEVER BECAME CAPTAIN",
+ "files": {
+  "long": "What_If_Dhoni_Never_Became_Captain",
+  "short": "Dhoni_Captain_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "WHAT IF?",
+  "lines": [
+   {
+    "t": "DHONI WAS"
+   },
+   {
+    "t": "NEVER CAPTAIN?",
+    "c": "gold"
+   }
+  ],
+  "hero": "3",
+  "herosize": 640
+ },
+ "long": [
+  {
+   "vo": "September, two thousand seven. India's biggest names skip the first-ever T20 World Cup, and the selectors hand the captaincy to a twenty-six-year-old from Ranchi. महेंद्र सिंह धोनी. What if they hadn't?",
+   "scene": {
+    "type": "statement",
+    "kicker": "SEPTEMBER 2007",
+    "lines": [
+     {
+      "t": "A 26-YEAR-OLD"
+     },
+     {
+      "t": "FROM RANCHI",
+      "c": "gold",
+      "at": 0.35
+     }
+    ],
+    "sub": "Handed India's captaincy for the first-ever T20 World Cup",
+    "subat": 0.5
+   }
+  },
+  {
+   "vo": "Here's what followed. The twenty oh-seven T20 World Cup. The twenty eleven World Cup. The twenty thirteen Champions Trophy. He's the only captain to win all three ICC white-ball trophies. Add five IPL titles with Chennai, and India's first climb to number one in Test cricket.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE TROPHY CABINET"
+    },
+    "tiles": [
+     {
+      "v": "3",
+      "l": "ICC WHITE-BALL TROPHIES: THE ONLY CAPTAIN WITH ALL THREE",
+      "c": "gold",
+      "at": 0.1
+     },
+     {
+      "v": "5",
+      "l": "IPL TITLES WITH CHENNAI",
+      "c": "ink",
+      "at": 0.6
+     },
+     {
+      "v": "NO. 1",
+      "l": "INDIA'S FIRST TEST RANKING TOP SPOT",
+      "c": "ink",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Every great captaincy has sliding-door moments. The first came in the twenty oh-seven final. Pakistan need thirteen off the last over. धोनी hands the ball not to the senior spinner, but to Joginder Sharma. Misbah scoops, Sreesanth takes the catch, and India are world champions. Would anyone else have made that call?",
+   "scene": {
+    "type": "statement",
+    "kicker": "SLIDING DOOR 1 · 2007 FINAL",
+    "lines": [
+     {
+      "t": "13 OFF 6."
+     },
+     {
+      "t": "JOGINDER SHARMA.",
+      "c": "gold",
+      "at": 0.3
+     }
+    ],
+    "sub": "Dhoni's gamble wins India the first T20 World Cup",
+    "subat": 0.62
+   }
+  },
+  {
+   "vo": "The second came in twenty eleven. The World Cup final at the Wankhede. India are chasing two hundred and seventy-five. धोनी promotes himself above an in-form युवराज सिंह, makes ninety-one not out, and finishes it with a six.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "SLIDING DOOR 2 · 2011 FINAL"
+    },
+    "value": 91,
+    "suffix": "*",
+    "label": "PROMOTED HIMSELF ABOVE YUVRAJ",
+    "note": "Chasing 275 at the Wankhede · finished with a six",
+    "count_at": 0.3
+   }
+  },
+  {
+   "vo": "And the third came in twenty thirteen. धोनी moves a middle-order batter called रोहित शर्मा up to open. रोहित becomes one of the great openers, and later India's captain for two ICC titles.",
+   "scene": {
+    "type": "statement",
+    "kicker": "SLIDING DOOR 3 · 2013",
+    "lines": [
+     {
+      "t": "ROHIT SHARMA,"
+     },
+     {
+      "t": "OPENER.",
+      "c": "gold",
+      "at": 0.3
+     }
+    ],
+    "sub": "Later India's captain for two ICC titles: the 2024 T20 World Cup and 2025 Champions Trophy",
+    "subat": 0.6
+   }
+  },
+  {
+   "vo": "Now imagine the alternate timeline. Without the twenty oh-seven title, T20 might never have exploded in India, and the IPL launched just seven months later. रोहित might have stayed in the middle order. Chennai might never have built a dynasty. And twenty eleven might have gone very differently.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE ALTERNATE TIMELINE"
+    },
+    "items": [
+     {
+      "h": "NO 2007 TITLE?",
+      "d": "India's T20 boom, and an IPL launched 7 months later",
+      "c": "red",
+      "at": 0.1
+     },
+     {
+      "h": "ROHIT IN THE MIDDLE ORDER",
+      "d": "One of India's great openers, never unlocked",
+      "c": "red",
+      "at": 0.45
+     },
+     {
+      "h": "NO CHENNAI DYNASTY",
+      "d": "Five titles that might not exist",
+      "c": "red",
+      "at": 0.6
+     },
+     {
+      "h": "A DIFFERENT 2011",
+      "d": "No promotion, no 91 not out",
+      "c": "red",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? India would still have won things. They had the talent. But धोनी's calm, and his gambles, turned talent into trophies. No other captain in the world owns the full set.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "TALENT WINS GAMES."
+     },
+     {
+      "t": "DHONI WON",
+      "c": "gold",
+      "at": 0.3
+     },
+     {
+      "t": "TROPHIES.",
+      "c": "gold",
+      "at": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who is India's greatest captain? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "INDIA'S GREATEST"
+     },
+     {
+      "t": "CAPTAIN?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from Ranchi.",
+   "scene": {
+    "type": "statement",
+    "kicker": "2007",
+    "lines": [
+     {
+      "t": "A 26-YEAR-OLD"
+     },
+     {
+      "t": "CAPTAIN",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "He became the only captain to win all three ICC white-ball trophies.",
+   "scene": {
+    "type": "bignum",
+    "value": 3,
+    "label": "ICC WHITE-BALL TROPHIES",
+    "note": "The only captain with all three",
+    "count_dur": 0.6
+   }
+  },
+  {
+   "vo": "He gave the last over of a World Cup final to Joginder Sharma.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "13 OFF 6."
+     },
+     {
+      "t": "JOGINDER.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "He moved रोहित शर्मा up to open.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "ROHIT,"
+     },
+     {
+      "t": "OPENER.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "What if धोनी had never been captain? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHAT IF DHONI"
+     },
+     {
+      "t": "NEVER LED?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "scoreboard",
+ "sources": [
+  "Settled history (2007 WT20, 2011 WC, 2013 CT, CSK titles); RCB won IPL 2025 and 2026 (mykhel)"
+ ]
+}

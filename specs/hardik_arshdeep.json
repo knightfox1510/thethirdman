@@ -1,0 +1,470 @@
+{
+ "slug": "hardik_arshdeep",
+ "tag": "TRADE ANALYSIS",
+ "tagsub": "HARDIK ↔ ARSHDEEP",
+ "files": {
+  "long": "Hardik_Arshdeep_Trade_Who_Won",
+  "short": "Hardik_Arshdeep_Trade_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "WHO WON THE TRADE?",
+  "lines": [
+   {
+    "t": "HARDIK"
+   },
+   {
+    "t": "OR ARSHDEEP",
+    "c": "gold"
+   }
+  ],
+  "hero": "?",
+  "herosize": 620
+ },
+ "long": [
+  {
+   "vo": "Mumbai Indians have traded away their captain. Not for a superstar batter. Not for a cash windfall. For a bowler.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "MUMBAI TRADED"
+     },
+     {
+      "t": "THEIR CAPTAIN"
+     },
+     {
+      "t": "FOR A BOWLER.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "हार्दिक पंड्या is now a Punjab Kings player, and अर्शदीप सिंह is heading to मुंबई. So who actually won this trade?",
+   "scene": {
+    "type": "swap",
+    "left": {
+     "name": "HARDIK PANDYA",
+     "role": "ALL-ROUNDER · MI CAPTAIN",
+     "from": "MI",
+     "to": "PBKS",
+     "color": "red"
+    },
+    "right": {
+     "name": "ARSHDEEP SINGH",
+     "role": "LEFT-ARM PACER",
+     "from": "PBKS",
+     "to": "MI",
+     "color": "blue"
+    }
+   }
+  },
+  {
+   "vo": "It's official. On the eleventh of November, both franchises announced a straight one-for-one swap. हार्दिक joins Punjab at a fee of eighteen crore rupees, and अर्शदीप moves to Mumbai at the same price.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE DEAL",
+     "sub": "ANNOUNCED 11 NOVEMBER 2026"
+    },
+    "tiles": [
+     {
+      "v": "1-FOR-1",
+      "l": "STRAIGHT SWAP, NO THIRD PLAYER",
+      "c": "ink"
+     },
+     {
+      "v": "₹18 CR",
+      "l": "HARDIK'S FEE AT PUNJAB",
+      "c": "red"
+     },
+     {
+      "v": "₹18 CR",
+      "l": "ARSHDEEP'S FEE AT MUMBAI",
+      "c": "blue"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "To understand why, rewind to twenty twenty-four. हार्दिक came back to Mumbai from Gujarat, where he'd won the title in his very first season as captain. Mumbai handed him the captaincy, replacing रोहित शर्मा, the man who'd led them to five titles. It never quite clicked. Mumbai finished last in twenty twenty-four. They bounced back to reach Qualifier Two in twenty twenty-five. Then twenty twenty-six fell apart: ninth place.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "HOW WE GOT HERE"
+    },
+    "events": [
+     {
+      "y": "2022",
+      "t": "Wins the IPL in Gujarat's first season, as captain",
+      "hl": true,
+      "at": 0.08
+     },
+     {
+      "y": "2024",
+      "t": "Returns to MI, replaces Rohit as captain. MI finish last",
+      "at": 0.36,
+      "c": "red"
+     },
+     {
+      "y": "2025",
+      "t": "MI reach Qualifier 2",
+      "at": 0.72
+     },
+     {
+      "y": "2026",
+      "t": "MI finish ninth",
+      "at": 0.86,
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "His own numbers dipped too. Last season he made 172 runs in nine matches, at a strike rate of just 128. With the ball, he went at nearly twelve an over. Back spasms, a leg strain and a shin injury all cost him games. And late in the season, Mumbai had lost twenty-four of thirty-nine matches under his captaincy.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "HARDIK'S 2026",
+     "sub": "IPL 2026 · MUMBAI INDIANS"
+    },
+    "tiles": [
+     {
+      "v": "172",
+      "l": "RUNS IN 9 MATCHES",
+      "c": "ink",
+      "at": 0.05
+     },
+     {
+      "v": "128",
+      "l": "STRIKE RATE",
+      "c": "ink",
+      "at": 0.22
+     },
+     {
+      "v": "~12",
+      "l": "RUNS PER OVER CONCEDED",
+      "c": "red",
+      "at": 0.36
+     },
+     {
+      "v": "24/39",
+      "l": "MI DEFEATS UNDER HIS CAPTAINCY",
+      "c": "red",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now look at what Mumbai get. अर्शदीप सिंह has taken one hundred and eleven IPL wickets for Punjab, in ninety-six matches. He was the first Punjab bowler ever to reach a hundred. He's India's leading wicket-taker in T20 internationals. And at twenty-seven, he's in his prime.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "WHAT MUMBAI GET"
+    },
+    "value": 111,
+    "label": "IPL WICKETS FOR PUNJAB",
+    "color": "blue",
+    "note": "96 matches · first Punjab bowler to 100 IPL wickets · India's leading T20I wicket-taker · age 27"
+   }
+  },
+  {
+   "vo": "Now picture the Mumbai attack, if they keep Trent Boult. Boult swinging the new ball. बुमराह, the best death bowler in the world. And अर्शदीप, who can do both. Last season, बुमराह took just four wickets in thirteen games. He needed help. Now he has it.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE NEW MUMBAI ATTACK",
+     "sub": "IF BOULT IS RETAINED"
+    },
+    "items": [
+     {
+      "h": "TRENT BOULT",
+      "d": "Left-arm swing with the new ball",
+      "at": 0.12
+     },
+     {
+      "h": "JASPRIT BUMRAH",
+      "d": "The death-overs specialist. Just 4 wickets in 13 games in 2026",
+      "at": 0.3
+     },
+     {
+      "h": "ARSHDEEP SINGH",
+      "d": "New-ball swing and death-overs yorkers",
+      "c": "blue",
+      "at": 0.48
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So why would Punjab give up their all-time leading wicket-taker? Balance. Punjab reached the final in twenty twenty-five under श्रेयस अय्यर. What they've lacked is a genuine pace-bowling all-rounder at number six, someone who can finish a chase and bowl four overs. On his day, that's exactly हार्दिक. And he's already won an IPL title as captain.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHY PUNJAB WANT HARDIK"
+    },
+    "items": [
+     {
+      "h": "FINALISTS IN 2025",
+      "d": "A contender under Shreyas Iyer, looking for the last piece",
+      "c": "red",
+      "at": 0.25
+     },
+     {
+      "h": "THE NO. 6 GAP",
+      "d": "A pace-bowling all-rounder who finishes chases",
+      "c": "red",
+      "at": 0.45
+     },
+     {
+      "h": "FOUR OVERS + FINISHER",
+      "d": "Two roles from one player on his day",
+      "c": "red",
+      "at": 0.68
+     },
+     {
+      "h": "A TITLE-WINNING CAPTAIN",
+      "d": "Led Gujarat to the 2022 IPL title",
+      "c": "red",
+      "at": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But that's the big if. हार्दिक is thirty-three, and his body has been the problem. Punjab are paying eighteen crore, and giving up their best bowler, to bet that the title-winning version of हार्दिक is still in there.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE RISK"
+    },
+    "tiles": [
+     {
+      "v": "33",
+      "l": "HARDIK'S AGE",
+      "c": "ink",
+      "at": 0.12
+     },
+     {
+      "v": "3",
+      "l": "INJURIES THAT COST HIM GAMES IN 2026",
+      "c": "red",
+      "at": 0.3
+     },
+     {
+      "v": "₹18 CR",
+      "l": "PUNJAB'S BET",
+      "c": "red",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So here's the scorecard. Mumbai gain a world-class bowler in his prime, and a fresh start. But they lose an all-rounder they can't easily replace, and they still have to name a new captain. Punjab gain balance, experience and a match-winner. But they lose their best bowler, and certainty.",
+   "scene": {
+    "type": "scorecard",
+    "head": {
+     "t": "THE SCORECARD"
+    },
+    "teams": [
+     {
+      "name": "MUMBAI INDIANS",
+      "color": "blue",
+      "gain": [
+       "A world-class bowler in his prime",
+       "A fresh start"
+      ],
+      "lose": [
+       "An all-rounder they can't easily replace",
+       "Their captain: no successor named yet"
+      ]
+     },
+     {
+      "name": "PUNJAB KINGS",
+      "color": "red",
+      "gain": [
+       "Balance at No. 6",
+       "Experience and a match-winner"
+      ],
+      "lose": [
+       "Their all-time leading wicket-taker",
+       "Certainty: Hardik's fitness"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? For twenty twenty-seven, Mumbai win this trade. They filled their biggest gap with a fit, proven bowler. Punjab made the bolder bet, and if हार्दिक stays fit, it could still win them a title.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "FOR 2027,"
+     },
+     {
+      "t": "MUMBAI WIN",
+      "c": "blue",
+      "at": 0.15
+     },
+     {
+      "t": "THE TRADE.",
+      "at": 0.25
+     }
+    ],
+    "sub": "Punjab made the bolder bet. If Hardik stays fit, it could still win them a title.",
+    "subat": 0.5
+   }
+  },
+  {
+   "vo": "Who do you think won this trade? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO WON"
+     },
+     {
+      "t": "THIS TRADE?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Mumbai Indians just traded away their captain. For a bowler.",
+   "scene": {
+    "type": "swap",
+    "left": {
+     "name": "HARDIK PANDYA",
+     "role": "MI CAPTAIN",
+     "from": "MI",
+     "to": "PBKS",
+     "color": "red"
+    },
+    "right": {
+     "name": "ARSHDEEP SINGH",
+     "role": "LEFT-ARM PACER",
+     "from": "PBKS",
+     "to": "MI",
+     "color": "blue"
+    }
+   }
+  },
+  {
+   "vo": "हार्दिक पंड्या goes to Punjab. अर्शदीप सिंह comes to मुंबई. Eighteen crore each.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "IT'S OFFICIAL"
+    },
+    "tiles": [
+     {
+      "v": "₹18 CR",
+      "l": "HARDIK AT PUNJAB",
+      "c": "red"
+     },
+     {
+      "v": "₹18 CR",
+      "l": "ARSHDEEP AT MUMBAI",
+      "c": "blue"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Why? Under हार्दिक, Mumbai lost twenty-four of thirty-nine games.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "WHY MUMBAI MOVED"
+    },
+    "tiles": [
+     {
+      "v": "24/39",
+      "l": "MI DEFEATS UNDER HARDIK",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "अर्शदीप has one hundred and eleven IPL wickets, and he's India's leading T20I wicket-taker.",
+   "scene": {
+    "type": "bignum",
+    "value": 111,
+    "label": "IPL WICKETS",
+    "color": "blue",
+    "note": "India's leading T20I wicket-taker"
+   }
+  },
+  {
+   "vo": "Keep Boult, and it's Boult, बुमराह and अर्शदीप. That's a scary attack.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "MUMBAI'S ATTACK"
+    },
+    "items": [
+     {
+      "h": "BOULT",
+      "at": 0.15
+     },
+     {
+      "h": "BUMRAH",
+      "at": 0.3
+     },
+     {
+      "h": "ARSHDEEP",
+      "c": "blue",
+      "at": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But if हार्दिक stays fit, Punjab might have the bigger match-winner.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "IF HARDIK"
+     },
+     {
+      "t": "STAYS FIT…",
+      "c": "red"
+     }
+    ],
+    "sub": "Punjab might have the bigger match-winner.",
+    "subat": 0.45
+   }
+  },
+  {
+   "vo": "Who won the trade? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO WON"
+     },
+     {
+      "t": "THE TRADE?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "blue",
+ "sources": [
+  "https://www.mumbaiindians.com/news/mumbai-indians-trade-hardik-pandya-to-punjab-kings-arshdeep-singh-joins-mumbai-indians",
+  "https://www.outlookindia.com/sports/cricket/hardik-pandya-joins-punjab-kings-arshdeep-singh-mumbai-indians-ipl-2027-trade",
+  "https://www.newsbytesapp.com/news/sports/hardik-pandya-s-woeful-numbers-in-ipl-2026/story",
+  "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
+ ]
+}

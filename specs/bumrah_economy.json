@@ -1,0 +1,327 @@
+{
+ "slug": "bumrah_economy",
+ "tag": "BY THE NUMBERS",
+ "tagsub": "THE BUMRAH PARADOX",
+ "files": {
+  "long": "Bumrah_Economy_Makes_No_Sense",
+  "short": "Bumrah_Economy_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THIS SHOULDN'T BE POSSIBLE",
+  "lines": [
+   {
+    "t": "BUMRAH'S"
+   },
+   {
+    "t": "ECONOMY",
+    "c": "gold"
+   }
+  ],
+  "hero": "5.66",
+  "herosize": 440
+ },
+ "long": [
+  {
+   "vo": "In a format built to destroy bowlers, जसप्रीत बुमराह concedes less than six runs an over at T20 World Cups. Five point six six, across forty wickets. That number shouldn't be possible.",
+   "scene": {
+    "type": "bignum",
+    "value": 5.66,
+    "dec": 2,
+    "label": "ECONOMY AT T20 WORLD CUPS",
+    "note": "40 wickets in 26 matches · average 13.65"
+   }
+  },
+  {
+   "vo": "Put it in context. In IPL twenty twenty-five, batting teams scored at more than nine an over. Through twenty twenty-five, बुमराह's IPL career economy was seven point two seven. And on the World Cup stage, five point six six.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER",
+     "sub": "LOWER IS BETTER"
+    },
+    "max": 10,
+    "dec": 2,
+    "items": [
+     {
+      "label": "IPL 2025 · ALL TEAMS (APPROX.)",
+      "value": 9.1,
+      "color": "red",
+      "at": 0.1,
+      "text": "~9.1"
+     },
+     {
+      "label": "BUMRAH · IPL CAREER TO 2025",
+      "value": 7.27,
+      "color": "ink",
+      "at": 0.45
+     },
+     {
+      "label": "BUMRAH · T20 WORLD CUPS",
+      "value": 5.66,
+      "color": "gold",
+      "at": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And he saves his best for the biggest stage. He was player of the tournament when India won the twenty twenty-four World Cup. Then in twenty twenty-six, he took fourteen wickets, including four for fifteen in the final, as India defended their title on home soil.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "BIG-STAGE BUMRAH"
+    },
+    "tiles": [
+     {
+      "v": "15",
+      "l": "WICKETS · 2024 WORLD CUP · PLAYER OF THE TOURNAMENT",
+      "c": "ink",
+      "at": 0.1
+     },
+     {
+      "v": "14",
+      "l": "WICKETS · 2026 WORLD CUP",
+      "c": "ink",
+      "at": 0.5
+     },
+     {
+      "v": "4/15",
+      "l": "IN THE 2026 FINAL",
+      "c": "gold",
+      "at": 0.68
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So how does he do it? It starts with the action. A short, stuttering run-up and a whippy, hyper-extended arm that releases the ball closer to the batter than almost anyone else. Batters get less time to pick it. Then add a yorker he can land on demand, a slower ball that comes out of the same action, and nerves that don't change at the death.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "HOW HE DOES IT"
+    },
+    "items": [
+     {
+      "h": "THE ACTION",
+      "d": "Short run-up, whippy arm, late release: less time to pick it",
+      "at": 0.08
+     },
+     {
+      "h": "LATE RELEASE",
+      "d": "The ball arrives sooner than batters expect",
+      "at": 0.3
+     },
+     {
+      "h": "YORKER ON DEMAND",
+      "d": "Lands it at the death, ball after ball",
+      "at": 0.6
+     },
+     {
+      "h": "THE HIDDEN SLOWER BALL",
+      "d": "Same action, much less pace",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Which makes twenty twenty-six so strange. In the IPL, बुमराह took just four wickets in thirteen matches, at an average of over a hundred. Early in the season, he went a hundred and twenty-two balls without a wicket, the longest drought of his IPL career.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THEN IPL 2026 HAPPENED"
+    },
+    "tiles": [
+     {
+      "v": "4",
+      "l": "WICKETS IN 13 MATCHES",
+      "c": "red",
+      "at": 0.15
+     },
+     {
+      "v": "102.5",
+      "l": "BOWLING AVERAGE",
+      "c": "red",
+      "at": 0.35
+     },
+     {
+      "v": "122",
+      "l": "BALLS WITHOUT A WICKET: HIS LONGEST DROUGHT",
+      "c": "ink",
+      "at": 0.65
+     }
+    ]
+   }
+  },
+  {
+   "vo": "What went wrong? Part of it is workload. He'd just carried India through a World Cup. Part of it is the batting revolution, with run rates at record highs. And part of it was Mumbai. With little support at the other end, batters simply waited him out and attacked everyone else. Even so, early in the season, he was the only Mumbai bowler conceding under nine an over.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHAT WENT WRONG?"
+    },
+    "items": [
+     {
+      "h": "WORKLOAD",
+      "d": "Straight from carrying India through a World Cup",
+      "at": 0.08
+     },
+     {
+      "h": "THE BATTING REVOLUTION",
+      "d": "Record run rates across the IPL",
+      "at": 0.3
+     },
+     {
+      "h": "NO SUPPORT",
+      "d": "Batters waited him out and attacked the rest",
+      "at": 0.5
+     },
+     {
+      "h": "STILL THE TIGHTEST",
+      "d": "Early on, Mumbai's only bowler under 9 an over",
+      "c": "gold",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? A bad IPL season, not a decline. In March, he was the best bowler at a World Cup. And now, with अर्शदीप सिंह joining him at Mumbai, he finally has help at the other end.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "A BAD SEASON."
+     },
+     {
+      "t": "NOT A DECLINE.",
+      "c": "gold",
+      "at": 0.12
+     }
+    ],
+    "sub": "With Arshdeep joining him at Mumbai, he finally has help at the other end.",
+    "subat": 0.5
+   }
+  },
+  {
+   "vo": "Is बुमराह the greatest T20 bowler ever? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THE GREATEST"
+     },
+     {
+      "t": "T20 BOWLER EVER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "जसप्रीत बुमराह concedes five point six six an over at T20 World Cups.",
+   "scene": {
+    "type": "bignum",
+    "value": 5.66,
+    "dec": 2,
+    "label": "T20 WORLD CUP ECONOMY",
+    "count_dur": 1.0
+   }
+  },
+  {
+   "vo": "In the IPL, teams now score at more than nine an over.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER"
+    },
+    "max": 10,
+    "dec": 2,
+    "items": [
+     {
+      "label": "IPL 2025 · ALL TEAMS",
+      "value": 9.1,
+      "color": "red",
+      "text": "~9.1"
+     },
+     {
+      "label": "BUMRAH · WORLD CUPS",
+      "value": 5.66,
+      "color": "gold",
+      "at": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In the twenty twenty-six final, he took four for fifteen.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "2026 WORLD CUP FINAL"
+    },
+    "tiles": [
+     {
+      "v": "4/15",
+      "l": "INDIA DEFEND THEIR TITLE",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then his IPL went quiet: four wickets in thirteen games.",
+   "scene": {
+    "type": "bignum",
+    "value": 4,
+    "label": "WICKETS IN IPL 2026",
+    "color": "red",
+    "note": "13 matches",
+    "count_dur": 0.6
+   }
+  },
+  {
+   "vo": "A bad season. Not a decline.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "A BAD SEASON."
+     },
+     {
+      "t": "NOT A",
+      "c": "gold"
+     },
+     {
+      "t": "DECLINE.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Is he the greatest T20 bowler ever? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "GREATEST"
+     },
+     {
+      "t": "T20 BOWLER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "whites",
+ "sources": [
+  "https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/",
+  "https://www.newsbytesapp.com/news/sports/decoding-jasprit-bumrah-s-woes-in-ipl-2026/story",
+  "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
+ ]
+}

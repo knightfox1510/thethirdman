@@ -1,0 +1,273 @@
+{
+ "slug": "india_160",
+ "tag": "THE SCIENCE OF PACE",
+ "tagsub": "INDIA'S MISSING 160",
+ "files": {
+  "long": "Why_No_Indian_Has_Bowled_160",
+  "short": "India_160_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "NO INDIAN HAS EVER DONE IT",
+  "lines": [
+   {
+    "t": "INDIA'S"
+   },
+   {
+    "t": "MISSING 160",
+    "c": "gold"
+   }
+  ],
+  "hero": "160",
+  "herosize": 520
+ },
+ "long": [
+  {
+   "vo": "One hundred and sixty kilometres an hour. Shoaib Akhtar has done it. Brett Lee has done it. No Indian bowler ever has.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE 160 KM/H CLUB",
+    "lines": [
+     {
+      "t": "NO INDIAN"
+     },
+     {
+      "t": "HAS EVER",
+      "at": 0.5
+     },
+     {
+      "t": "BOWLED 160",
+      "c": "gold",
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The closest? उमरान मलिक, at one fifty-seven in the IPL in twenty twenty-two. मयंक यादव, one fifty-six point seven in twenty twenty-four. And in twenty twenty-six, Ashok Sharma hit one fifty-four. Shoaib's record still stands at over one sixty-one.",
+   "scene": {
+    "type": "gauge",
+    "head": {
+     "t": "THE FASTEST INDIANS",
+     "sub": "KM/H · IPL"
+    },
+    "min": 140,
+    "max": 165,
+    "value": 157,
+    "needle_at": 0.05,
+    "marks": [
+     {
+      "v": 157,
+      "l": "UMRAN 157 (2022)",
+      "c": "gold",
+      "at": 0.08
+     },
+     {
+      "v": 156.7,
+      "l": "",
+      "c": "gold",
+      "at": 0.3
+     },
+     {
+      "v": 154.2,
+      "l": "ASHOK SHARMA 154.2 (2026)",
+      "c": "blue",
+      "at": 0.55
+     },
+     {
+      "v": 161.3,
+      "l": "SHOAIB 161.3",
+      "c": "red",
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Why do a few kilometres matter? At one sixty, the ball reaches the batter in about four-tenths of a second. Every extra kilometre takes reaction time away.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE 0.4-SECOND PROBLEM"
+    },
+    "value": 0.4,
+    "dec": 1,
+    "suffix": " SEC",
+    "label": "RELEASE TO BATTER AT 160 KM/H",
+    "count_at": 0.25
+   }
+  },
+  {
+   "vo": "So why hasn't India produced a one-sixty bowler? For decades, Indian pitches rewarded spin and control, not raw speed. Coaching has valued line and length over chaos. And speed breaks bodies: both उमरान and मयंक have had their careers interrupted. The few express bowlers India finds are hard to protect.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHY NOT YET?"
+    },
+    "items": [
+     {
+      "h": "PITCHES BUILT FOR SPIN",
+      "d": "Decades of surfaces that rewarded control, not speed",
+      "at": 0.12
+     },
+     {
+      "h": "CONTROL OVER CHAOS",
+      "d": "Line and length valued over raw pace",
+      "at": 0.35
+     },
+     {
+      "h": "SPEED BREAKS BODIES",
+      "d": "Umran's and Mayank's careers both interrupted",
+      "c": "red",
+      "at": 0.5
+     },
+     {
+      "h": "HARD TO PROTECT",
+      "d": "Few express bowlers, and fewer kept fit",
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But maybe India doesn't need it. जसप्रीत बुमराह rarely gets near one-fifty, and he's the best fast bowler in the world, with four for fifteen in a World Cup final this year. Skill beats speed.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE COUNTER-ARGUMENT",
+    "lines": [
+     {
+      "t": "SKILL"
+     },
+     {
+      "t": "BEATS SPEED.",
+      "c": "gold",
+      "at": 0.4
+     }
+    ],
+    "sub": "Exhibit A: Jasprit Bumrah, 4/15 in the 2026 T20 World Cup final",
+    "subat": 0.55
+   }
+  },
+  {
+   "vo": "Our verdict? India's one-sixty is coming. Three Indian bowlers have now gone past one fifty-four in the IPL, and the pipeline has never been faster. The real question is whether the body can survive it.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "INDIA'S 160"
+     },
+     {
+      "t": "IS COMING.",
+      "c": "gold",
+      "at": 0.08
+     }
+    ],
+    "sub": "Three Indians have now passed 154 km/h in the IPL. Can the body survive it?",
+    "subat": 0.45
+   }
+  },
+  {
+   "vo": "Who will be India's first one-sixty bowler? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "INDIA'S FIRST"
+     },
+     {
+      "t": "160 BOWLER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "No Indian bowler has ever bowled one hundred and sixty kilometres an hour.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NO INDIAN"
+     },
+     {
+      "t": "HAS BOWLED"
+     },
+     {
+      "t": "160",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The closest: उमरान मलिक, one fifty-seven.",
+   "scene": {
+    "type": "gauge",
+    "min": 140,
+    "max": 165,
+    "value": 157,
+    "needle_at": 0.0,
+    "marks": [
+     {
+      "v": 161.3,
+      "l": "SHOAIB 161.3",
+      "c": "red",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "At one sixty, the batter gets about four-tenths of a second.",
+   "scene": {
+    "type": "bignum",
+    "value": 0.4,
+    "dec": 1,
+    "suffix": " SEC",
+    "label": "TO REACT",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "But बुमराह proves skill beats speed.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "SKILL"
+     },
+     {
+      "t": "BEATS",
+      "c": "gold"
+     },
+     {
+      "t": "SPEED.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who will be India's first one-sixty bowler? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "INDIA'S"
+     },
+     {
+      "t": "FIRST 160?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "whites",
+ "sources": [
+  "https://www.newsbytesapp.com/news/sports/indian-pace-bowlers-who-can-clock-160-kph/story",
+  "https://www.freepressjournal.in/sports/umran-malik-breaks-own-record-for-fastest-delivery-by-an-indian-in-international-cricket-with-156-kmph-thunderbolt"
+ ]
+}

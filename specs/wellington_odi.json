@@ -1,0 +1,581 @@
+{
+ "slug": "wellington_odi",
+ "tag": "TACTICAL BREAKDOWN",
+ "tagsub": "NZ VS INDIA · 2ND ODI · WELLINGTON",
+ "files": {
+  "long": "How_India_Won_Wellington_ODI_Tactical_Breakdown",
+  "short": "Wellington_ODI_Breakdown_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "TACTICAL BREAKDOWN",
+  "lines": [
+   {
+    "t": "SAVED BY"
+   },
+   {
+    "t": "THE RAIN?",
+    "c": "gold"
+   }
+  ],
+  "hero": "+4",
+  "herosize": 560
+ },
+ "long": [
+  {
+   "vo": "New Zealand were bowled out for one hundred and thirty-four. India then slumped to one hundred and thirteen for seven in the chase, and still won by four runs, without finishing it. Here's how the second ODI in Wellington really played out.",
+   "scene": {
+    "type": "statement",
+    "kicker": "NZ VS INDIA · 2ND ODI · WELLINGTON",
+    "lines": [
+     {
+      "t": "134 ALL OUT."
+     },
+     {
+      "t": "113 FOR 7.",
+      "c": "red",
+      "at": 0.3
+     },
+     {
+      "t": "WON BY 4.",
+      "c": "gold",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Rain threatened all day, so the match was cut to forty-seven overs a side. शुभमन गिल won the toss and bowled first. The pitch had pace, bounce and moisture. Mitchell Santner later called it a tricky surface, with nowhere to hide.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE CONDITIONS"
+    },
+    "tiles": [
+     {
+      "v": "47",
+      "l": "OVERS A SIDE, RAIN-REDUCED",
+      "c": "ink",
+      "at": 0.08
+     },
+     {
+      "v": "BOWL",
+      "l": "INDIA WIN THE TOSS",
+      "c": "blue",
+      "at": 0.3
+     },
+     {
+      "v": "SEAM",
+      "l": "PACE, BOUNCE AND MOISTURE",
+      "c": "gold",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India's plan came straight from Gurnoor Brar. In India, he said, the pitches are flat and you live on the hard length. In New Zealand, the extra bounce rewards a bowler who attacks. So India stacked the slip cordon and hit that length, again and again.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "INDIA'S PLAN",
+     "sub": "BRAR'S HARD LENGTH"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "HARD LENGTH",
+     "at": 0.3
+    },
+    "shots": [
+     {
+      "to": "2nd slip",
+      "label": "EDGE",
+      "at": 0.72,
+      "lift": 0.05
+     }
+    ],
+    "lines": [
+     {
+      "t": "THE HARD",
+      "at": 0.05
+     },
+     {
+      "t": "LENGTH",
+      "c": "gold",
+      "at": 0.12
+     }
+    ],
+    "sub": "Four catchers behind the bat. Hit the same length. Let the bounce do the rest.",
+    "subat": 0.55
+   }
+  },
+  {
+   "vo": "It worked. Auqib Nabi removed Will Young and Tim Seifert early. Then, in the twentieth over, Brar struck twice, Tom Latham and Glenn Phillips, and New Zealand were fifty-three for five. Daryl Mitchell fought back with fifty-five, and Santner added thirty-one. But New Zealand were all out for one thirty-four in forty-one overs, their lowest all-out total against India in a home ODI.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "NEW ZEALAND'S COLLAPSE"
+    },
+    "events": [
+     {
+      "y": "EARLY",
+      "t": "Nabi removes Young and Seifert",
+      "at": 0.08
+     },
+     {
+      "y": "53/5",
+      "t": "Brar's 20th over: Latham and Phillips",
+      "hl": true,
+      "c": "red",
+      "at": 0.25
+     },
+     {
+      "y": "55",
+      "t": "Mitchell fights back, with Santner 31",
+      "at": 0.5
+     },
+     {
+      "y": "134",
+      "t": "All out in 41 overs: NZ's lowest at home vs India",
+      "c": "red",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Brar finished with four for thirty and the player of the match award. Anshul Kamboj took two for twenty-five, and Nabi two for thirty-one.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "INDIA'S SEAMERS"
+    },
+    "tiles": [
+     {
+      "v": "4/30",
+      "l": "GURNOOR BRAR · PLAYER OF THE MATCH",
+      "c": "gold",
+      "at": 0.05
+     },
+     {
+      "v": "2/25",
+      "l": "ANSHUL KAMBOJ",
+      "c": "ink",
+      "at": 0.45
+     },
+     {
+      "v": "2/31",
+      "l": "AUQIB NABI",
+      "c": "ink",
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "vo": "A target of one thirty-five should have been easy. But New Zealand had the same weapon. Jacob Duffy pitched it up with a full slip cordon, bowled शुभमन गिल first ball, and removed विराट कोहली for seven. India were seventeen for two.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "NEW ZEALAND HIT BACK",
+     "sub": "DUFFY WITH THE NEW BALL"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "cover",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip"
+    ],
+    "length": {
+     "from": 3,
+     "to": 6,
+     "label": "FULL, SWINGING",
+     "at": 0.2
+    },
+    "lines": [
+     {
+      "t": "17 FOR 2",
+      "c": "red",
+      "at": 0.6
+     }
+    ],
+    "sub": "Gill bowled first ball. Kohli gone for 7.",
+    "subat": 0.7
+   }
+  },
+  {
+   "vo": "Then Kyle Jamieson took over. At six foot eight, he's built for a pitch like this. He worked over रोहित शर्मा before getting him caught for twenty-three. He got श्रेयस अय्यर with a short ball that seamed in and took the edge through to the keeper. And later, Kamboj top-edged him to deep third.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "JAMIESON'S PLAN",
+     "sub": "THE BOUNCER FROM SIX FOOT EIGHT"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "gully",
+     "square leg",
+     "midwicket",
+     "mid-off",
+     "fine leg",
+     "deep third"
+    ],
+    "hl": [
+     "keeper",
+     "deep third"
+    ],
+    "length": {
+     "from": 10,
+     "to": 13,
+     "label": "SHORT",
+     "c": "red",
+     "at": 0.15
+    },
+    "shots": [
+     {
+      "to": "keeper",
+      "label": "IYER",
+      "at": 0.55,
+      "lift": 0.0,
+      "bend": 0.02
+     },
+     {
+      "to": "deep third",
+      "label": "KAMBOJ",
+      "at": 0.82,
+      "lift": 0.25,
+      "bend": 0.15
+     }
+    ],
+    "lines": [
+     {
+      "t": "3 FOR 35",
+      "c": "gold",
+      "at": 0.1
+     }
+    ],
+    "sub": "Rohit, Iyer and Kamboj: all to Jamieson.",
+    "subat": 0.3
+   }
+  },
+  {
+   "vo": "From there, India kept losing wickets. Four for one. Seventeen for two. Thirty-nine for three. Forty-seven for four. Then Iyer at eighty-six, Naman Dhir at one hundred and eight, and Kamboj at one hundred and eleven.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "INDIA'S FALL OF WICKETS"
+    },
+    "events": [
+     {
+      "y": "4/1",
+      "t": "Gill b Duffy",
+      "at": 0.12
+     },
+     {
+      "y": "17/2",
+      "t": "Kohli, Duffy",
+      "at": 0.22
+     },
+     {
+      "y": "39/3",
+      "t": "Rohit, Jamieson",
+      "at": 0.33
+     },
+     {
+      "y": "47/4",
+      "t": "Axar",
+      "at": 0.44
+     },
+     {
+      "y": "86/5",
+      "t": "Iyer, Jamieson",
+      "c": "red",
+      "hl": true,
+      "at": 0.58
+     },
+     {
+      "y": "108/6",
+      "t": "Dhir",
+      "at": 0.72
+     },
+     {
+      "y": "111/7",
+      "t": "Kamboj, Jamieson",
+      "c": "red",
+      "at": 0.84
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And then the rain came. After twenty-six overs, India were one thirteen for seven. The Duckworth-Lewis-Stern par score at that moment was one hundred and nine. India were four runs ahead, and play never resumed.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE RAIN ARRIVES"
+    },
+    "value": 4,
+    "prefix": "+",
+    "suffix": " RUNS",
+    "label": "AHEAD OF DLS PAR",
+    "note": "113/7 after 26 overs · par score 109",
+    "count_at": 0.5
+   }
+  },
+  {
+   "vo": "So how does that par work? DLS treats a chase as two resources: overs left, and wickets in hand. Lose wickets, and your par score rises fast. That's why seven down was so dangerous. One more wicket before the rain, and India would almost certainly have been behind par.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "DLS IN 30 SECONDS"
+    },
+    "items": [
+     {
+      "h": "TWO RESOURCES",
+      "d": "Overs remaining AND wickets in hand",
+      "at": 0.1
+     },
+     {
+      "h": "WICKETS ARE EXPENSIVE",
+      "d": "Each one pushes the par score up",
+      "c": "red",
+      "at": 0.35
+     },
+     {
+      "h": "SEVEN DOWN = DANGER",
+      "d": "India were 4 ahead, with almost no cushion",
+      "c": "red",
+      "at": 0.6
+     },
+     {
+      "h": "ONE MORE WICKET...",
+      "d": "...and they'd likely have been behind par",
+      "c": "red",
+      "at": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The man who stood still in the chaos was KL Rahul: twenty-six not out off thirty-eight balls. Not glamorous, but without him there was no par to beat.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE MAN WHO STAYED"
+    },
+    "value": 26,
+    "suffix": "*",
+    "label": "KL RAHUL · OFF 38 BALLS",
+    "color": "blue",
+    "count_at": 0.2
+   }
+  },
+  {
+   "vo": "Our verdict? India's bowlers won this match. Their batters nearly gave it away. Even शुभमन गिल admitted they lost a couple more wickets than they'd have liked. And the lesson for the rest of this tour: in New Zealand, the hard length rules.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "THE BOWLERS"
+     },
+     {
+      "t": "WON IT.",
+      "c": "gold",
+      "at": 0.08
+     },
+     {
+      "t": "THE BATTERS",
+      "at": 0.3
+     },
+     {
+      "t": "NEARLY LOST IT.",
+      "c": "red",
+      "at": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Would India have chased it without the rain? Tell us in the comments, and subscribe for more tactical breakdowns.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD INDIA"
+     },
+     {
+      "t": "HAVE CHASED IT?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "New Zealand made one thirty-four. India slumped to one thirteen for seven, and still won.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "134 ALL OUT."
+     },
+     {
+      "t": "113 FOR 7.",
+      "c": "red"
+     },
+     {
+      "t": "WON.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India's plan: Gurnoor Brar's hard length, with a packed slip cordon. Four for thirty.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "THE HARD LENGTH"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "HARD LENGTH",
+     "at": 0.2
+    },
+    "shots": [
+     {
+      "to": "2nd slip",
+      "label": "EDGE",
+      "at": 0.55,
+      "lift": 0.05
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But Kyle Jamieson bounced India out: three for thirty-five.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "JAMIESON'S BOUNCER"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "gully",
+     "square leg",
+     "fine leg",
+     "deep third"
+    ],
+    "hl": [
+     "keeper",
+     "deep third"
+    ],
+    "length": {
+     "from": 10,
+     "to": 13,
+     "label": "SHORT",
+     "c": "red",
+     "at": 0.1
+    },
+    "shots": [
+     {
+      "to": "keeper",
+      "label": "EDGE",
+      "at": 0.3,
+      "lift": 0.0,
+      "bend": 0.02
+     },
+     {
+      "to": "deep third",
+      "label": "TOP EDGE",
+      "at": 0.55,
+      "lift": 0.25,
+      "bend": 0.15
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the rain came. India were four runs ahead of the DLS par. One more wicket, and they'd likely have lost.",
+   "scene": {
+    "type": "bignum",
+    "value": 4,
+    "prefix": "+",
+    "suffix": " RUNS",
+    "label": "AHEAD OF DLS PAR",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "Would India have chased it? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD INDIA"
+     },
+     {
+      "t": "HAVE CHASED IT?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "blue",
+ "sources": [
+  "https://www.espn.com/cricket/series/24469/game/1539438/new-zealand-vs-india-2nd-odi-24469",
+  "https://www.aljazeera.com/sports/2026/11/7/india-new-zealand-second-odi-rain-dls-method-win-four-runs",
+  "https://www.crictracker.com/cricket-news/nz-vs-ind-2026-new-zealand-vs-india-highlights-review-2nd-odi-0583/"
+ ]
+}

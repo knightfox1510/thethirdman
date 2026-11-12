@@ -1,0 +1,334 @@
+{
+ "slug": "two_hundred",
+ "tag": "BY THE NUMBERS",
+ "tagsub": "WHY 200 IS THE NEW 160",
+ "files": {
+  "long": "Why_200_Is_the_New_160_IPL",
+  "short": "200_Is_the_New_160_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THE IPL HAS CHANGED",
+  "lines": [
+   {
+    "t": "200 IS THE"
+   },
+   {
+    "t": "NEW 160",
+    "c": "gold"
+   }
+  ],
+  "hero": "200",
+  "herosize": 520
+ },
+ "long": [
+  {
+   "vo": "There was a time when a score of one-sixty won you an IPL game. Now, two hundred isn't safe. In twenty twenty-six, teams crossed two hundred more than sixty times. So what happened?",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE IPL HAS CHANGED",
+    "lines": [
+     {
+      "t": "200 IS"
+     },
+     {
+      "t": "THE NEW 160",
+      "c": "gold",
+      "at": 0.3
+     }
+    ],
+    "sub": "60+ totals of 200 or more in IPL 2026",
+    "subat": 0.55
+   }
+  },
+  {
+   "vo": "Between twenty oh-eight and twenty twenty-two, only about seven percent of IPL innings crossed two hundred. Since the Impact Player rule arrived in twenty twenty-three, it's nearly thirty percent. That's four times as often.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "HOW OFTEN TEAMS MAKE 200+",
+     "sub": "SHARE OF IPL INNINGS"
+    },
+    "tiles": [
+     {
+      "v": "7%",
+      "l": "2008 – 2022",
+      "c": "ink",
+      "at": 0.15
+     },
+     {
+      "v": "30%",
+      "l": "IMPACT PLAYER ERA · 2023 ONWARDS",
+      "c": "gold",
+      "at": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Twenty twenty-five set a record, with fifty-two totals of two hundred or more. Twenty twenty-six smashed it, with more than sixty, and that was before the playoffs had even finished.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "200+ TOTALS IN A SEASON"
+    },
+    "max": 70,
+    "dec": 0,
+    "items": [
+     {
+      "label": "IPL 2025",
+      "value": 52,
+      "color": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "IPL 2026 · LEAGUE STAGE",
+      "value": 61,
+      "color": "gold",
+      "at": 0.45,
+      "text": "61+"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now compare the very first IPL season with twenty twenty-five. The average innings went from about one forty-five to one seventy-two. The powerplay jumped from seven runs an over to more than nine. Top-order batters went from a strike rate of one-thirty to over one fifty-eight. But here's the surprising part. Batters still got out every nineteen balls, exactly like in twenty oh-eight. They're not batting longer. They're hitting harder.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "2008 VS 2025"
+    },
+    "a": {
+     "name": "IPL 2008",
+     "color": "blue"
+    },
+    "b": {
+     "name": "IPL 2025",
+     "color": "gold"
+    },
+    "spread": 0.7,
+    "rows": [
+     [
+      "RUNS PER INNINGS",
+      "~145",
+      "172",
+      "b"
+     ],
+     [
+      "POWERPLAY RUN RATE",
+      "7.12",
+      "9.12",
+      "b"
+     ],
+     [
+      "TOP-ORDER STRIKE RATE",
+      "130.1",
+      "158.5",
+      "b"
+     ],
+     [
+      "BALLS PER DISMISSAL",
+      "~19",
+      "~19"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "So why is this happening? First, the Impact Player rule. Teams get an extra batter, so nobody needs to play safe. Second, power. Modern bats and range-hitting training mean mis-hits now clear the rope. Third, the pitches, built for runs. And fourth, a fearless generation. Teenagers are hitting thirty-five-ball hundreds.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHY IT'S HAPPENING"
+    },
+    "items": [
+     {
+      "h": "THE IMPACT PLAYER",
+      "d": "An extra batter means nobody plays safe",
+      "at": 0.1
+     },
+     {
+      "h": "POWER",
+      "d": "Modern bats and range-hitting: mis-hits clear the rope",
+      "at": 0.33
+     },
+     {
+      "h": "THE PITCHES",
+      "d": "Surfaces built for runs",
+      "at": 0.6
+     },
+     {
+      "h": "A FEARLESS GENERATION",
+      "d": "Teenagers hitting 35-ball hundreds",
+      "at": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And the sixes keep coming. Twenty twenty-five had one thousand two hundred and ninety-four sixes, a record. Twenty twenty-six beat it before the playoffs even started.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "SIXES IN A SEASON"
+    },
+    "max": 1500,
+    "dec": 0,
+    "items": [
+     {
+      "label": "IPL 2025 · FULL SEASON",
+      "value": 1294,
+      "color": "ink",
+      "at": 0.15
+     },
+     {
+      "label": "IPL 2026 · LEAGUE STAGE ONLY",
+      "value": 1349,
+      "color": "gold",
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Which means par has moved. Two hundred is the new one-sixty. And spinners are vanishing: in twenty twenty-six, they bowled one of the smallest shares of overs in IPL history. Captains are hiding them.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "PAR IS NOW"
+     },
+     {
+      "t": "200.",
+      "c": "gold",
+      "at": 0.15
+     }
+    ],
+    "sub": "In 2026, spinners bowled one of their smallest shares of overs in IPL history.",
+    "subat": 0.45
+   }
+  },
+  {
+   "vo": "But is it good for the game? Fans love the sixes. Yet in twenty twenty-five, only about one in five matches was close, the second-lowest share ever. More runs, but fewer thrillers.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE CATCH",
+    "lines": [
+     {
+      "t": "MORE SIXES."
+     },
+     {
+      "t": "FEWER THRILLERS?",
+      "c": "red",
+      "at": 0.35
+     }
+    ],
+    "sub": "In 2025, only about 1 in 5 IPL games was close: the second-lowest share ever.",
+    "subat": 0.5
+   }
+  },
+  {
+   "vo": "Is two hundred too easy now? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "IS 200"
+     },
+     {
+      "t": "TOO EASY NOW?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "In the IPL, two hundred is the new one-sixty.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "200 IS"
+     },
+     {
+      "t": "THE NEW",
+      "c": "gold"
+     },
+     {
+      "t": "160",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Before twenty twenty-three, only seven percent of innings crossed two hundred. Now it's nearly thirty.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "200+ INNINGS"
+    },
+    "tiles": [
+     {
+      "v": "7%",
+      "l": "2008 – 2022",
+      "c": "ink"
+     },
+     {
+      "v": "30%",
+      "l": "2023 ONWARDS",
+      "c": "gold",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Twenty twenty-six had more than sixty two-hundred-plus totals. A record.",
+   "scene": {
+    "type": "bignum",
+    "value": 61,
+    "suffix": "+",
+    "label": "200+ TOTALS IN IPL 2026",
+    "count_dur": 1.2
+   }
+  },
+  {
+   "vo": "And batters aren't batting longer. They're hitting harder.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NOT LONGER."
+     },
+     {
+      "t": "HARDER.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Is two hundred too easy now? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "IS 200"
+     },
+     {
+      "t": "TOO EASY?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "whites",
+ "sources": [
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008",
+  "https://www.tribuneindia.com/news/sports/ipl-2026-a-run-fest-for-the-ages-registers-52nd-200-plus-score-of-the-season-during-kkr-gt-clash/",
+  "https://www.espncricinfo.com/story/ipl-2025-trends-too-many-200-plus-scores-but-not-many-thrillers-1489188"
+ ]
+}

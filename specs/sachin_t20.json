@@ -1,0 +1,386 @@
+{
+ "slug": "sachin_t20",
+ "theme": "scoreboard",
+ "tag": "WHAT IF?",
+ "tagsub": "SACHIN IN THE T20 ERA",
+ "files": {
+  "long": "What_If_Sachin_Played_in_the_T20_Era",
+  "short": "Sachin_T20_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "WHAT IF?",
+  "lines": [
+   {
+    "t": "SACHIN IN"
+   },
+   {
+    "t": "THE T20 ERA?",
+    "c": "gold"
+   }
+  ],
+  "hero": "146",
+  "herosize": 520
+ },
+ "long": [
+  {
+   "vo": "He scored one hundred international centuries. Thirty-four thousand runs. But in a career spanning twenty-four years, सचिन तेंदुलकर played exactly one T20 international.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "100 CENTURIES."
+     },
+     {
+      "t": "34,000 RUNS.",
+      "at": 0.25
+     },
+     {
+      "t": "EXACTLY ONE T20I.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Johannesburg, December, two thousand six. India's first-ever T20 match. सचिन made ten off twelve balls, picked up a wicket, and India won. He never played the format for India again.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "JOHANNESBURG, 2006",
+     "sub": "INDIA'S FIRST-EVER T20 INTERNATIONAL"
+    },
+    "tiles": [
+     {
+      "v": "10",
+      "l": "RUNS OFF 12 BALLS",
+      "c": "gold"
+     },
+     {
+      "v": "1",
+      "l": "WICKET",
+      "c": "ink"
+     },
+     {
+      "v": "WON",
+      "l": "INDIA BEAT SOUTH AFRICA",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "He did get a taste in the IPL. Six seasons with मुंबई. Two thousand three hundred runs. And in twenty ten, at thirty-six years old, he won the Orange Cap with six hundred and eighteen runs.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE IPL YEARS",
+     "sub": "MUMBAI · 2,334 RUNS"
+    },
+    "events": [
+     {
+      "y": "2008",
+      "t": "IPL begins"
+     },
+     {
+      "y": "2009",
+      "t": ""
+     },
+     {
+      "y": "2010",
+      "t": "Orange Cap: 618 runs at age 36",
+      "hl": true,
+      "at": 0.62
+     },
+     {
+      "y": "2011",
+      "t": ""
+     },
+     {
+      "y": "2012",
+      "t": ""
+     },
+     {
+      "y": "2013",
+      "t": "Final season"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But here's the problem. His IPL strike rate was just under one-twenty. And the game has changed. In two thousand eight, top-order batters struck at one-thirty. By twenty twenty-five, that number had jumped past one-fifty-eight. The powerplay went from seven runs an over to more than nine.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE PROBLEM",
+     "sub": "STRIKE RATE · RUNS PER 100 BALLS"
+    },
+    "max": 170,
+    "dec": 1,
+    "items": [
+     {
+      "label": "SACHIN · IPL CAREER",
+      "value": 119.8,
+      "color": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "TOP ORDER · IPL 2008",
+      "value": 130.1,
+      "color": "blue",
+      "at": 0.38
+     },
+     {
+      "label": "TOP ORDER · IPL 2025",
+      "value": 158.5,
+      "color": "gold",
+      "at": 0.58
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So would सचिन have survived? Look closer. In one-day cricket, he struck at eighty-six, far quicker than most of his era. शारजाह. Nineteen ninety-eight. He took apart Australia in a desert storm.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE CASE FOR SACHIN"
+    },
+    "items": [
+     {
+      "h": "ODI STRIKE RATE: 86",
+      "d": "Far quicker than most of his era",
+      "at": 0.3
+     },
+     {
+      "h": "SHARJAH, 1998",
+      "d": "The Desert Storm against Australia"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In two thousand three, he upper-cut शोएब अख़्तर over third man for six. A shot that today is a T20 staple. He invented it before the format existed.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "THE UPPER CUT",
+     "sub": "VS SHOAIB AKHTAR · 2003"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "gully",
+     "point",
+     "cover",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [],
+    "length": {
+     "from": 10,
+     "to": 13,
+     "label": "SHORT",
+     "c": "red",
+     "at": 0.05
+    },
+    "shots": [
+     {
+      "to": "deep third",
+      "label": "SIX",
+      "c": "gold",
+      "at": 0.3,
+      "lift": 0.3,
+      "bend": 0.1
+     }
+    ],
+    "lines": [
+     {
+      "t": "NOW A",
+      "at": 0.5
+     },
+     {
+      "t": "T20 STAPLE",
+      "c": "gold",
+      "at": 0.55
+     }
+    ],
+    "sub": "He played it before the format existed.",
+    "subat": 0.75
+   }
+  },
+  {
+   "vo": "Now give him flat pitches, bigger bats, and an Impact Player batting behind him. Scale his IPL numbers to today's game, and his strike rate climbs to around one-forty-six. That's an opener who wins you the powerplay without giving away his wicket.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "ADJUST FOR THE ERA"
+    },
+    "from": 119.8,
+    "value": 146,
+    "label": "ERA-ADJUSTED STRIKE RATE",
+    "count_at": 0.45,
+    "note": "Rough estimate: his IPL strike rate scaled by the rise in top-order strike rates, 2008 to 2025"
+   }
+  },
+  {
+   "vo": "The verdict? Modern T20 सचिन isn't a slogger. He's the anchor who scores at a run a ball, and then explodes. And with a technique like that, he might just be the most complete T20 batter we never got to see.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "NOT A SLOGGER."
+     },
+     {
+      "t": "THE ANCHOR"
+     },
+     {
+      "t": "WHO EXPLODES.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Would सचिन have dominated the T20 era? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD SACHIN"
+     },
+     {
+      "t": "DOMINATE T20?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "सचिन तेंदुलकर scored one hundred international hundreds. But he played exactly one T20 international.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "100 HUNDREDS."
+     },
+     {
+      "t": "EXACTLY"
+     },
+     {
+      "t": "ONE T20I.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So would he survive today's T20 game? His IPL strike rate was just under one-twenty. Today's top-order batters strike at one-fifty-eight.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "STRIKE RATE"
+    },
+    "max": 170,
+    "dec": 1,
+    "items": [
+     {
+      "label": "SACHIN · IPL CAREER",
+      "value": 119.8,
+      "color": "ink"
+     },
+     {
+      "label": "TOP ORDER · TODAY",
+      "value": 158.5,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Looks bad. But scale his numbers to today's game, and he climbs to around one-forty-six.",
+   "scene": {
+    "type": "bignum",
+    "from": 119.8,
+    "value": 146,
+    "label": "ERA-ADJUSTED STRIKE RATE",
+    "count_at": 0.35
+   }
+  },
+  {
+   "vo": "And remember, he was upper-cutting शोएब अख़्तर over third man before T20 cricket even existed.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "THE UPPER CUT"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "gully",
+     "point",
+     "fine leg"
+    ],
+    "hl": [],
+    "length": {
+     "from": 10,
+     "to": 13,
+     "label": "SHORT",
+     "c": "red",
+     "at": 0.05
+    },
+    "shots": [
+     {
+      "to": "deep third",
+      "label": "SIX",
+      "c": "gold",
+      "lift": 0.3,
+      "bend": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Not a slogger. The anchor who explodes.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NOT A SLOGGER."
+     },
+     {
+      "t": "THE ANCHOR"
+     },
+     {
+      "t": "WHO EXPLODES.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Would सचिन have dominated the T20 era? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD SACHIN"
+     },
+     {
+      "t": "DOMINATE T20?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.sportskeeda.com/cricket/shubman-gill-vs-sachin-tendulkar-comparing-stats-78-ipl-matches",
+  "https://www.espncricinfo.com/ci/engine/match/255954.html",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ]
+}
