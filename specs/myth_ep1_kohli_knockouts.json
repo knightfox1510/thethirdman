@@ -28,21 +28,23 @@
  "long": [],
  "short": [
   {
-   "vo": "People say विराट कोहली fails in knockouts. So we went through every ICC knockout innings he has ever played. All twenty of them.",
+   "vo": "Ninety-three, in T20 World Cup knockouts. Twenty-seven, in ODI finals. So which is the real विराट कोहली? Does he fail in knockouts? We checked all twenty innings.",
    "scene": {
     "type": "stage",
     "panel": {
-     "kind": "headline",
-     "kicker": "MYTH OR DATA? · EPISODE 1",
-     "lines": [
-      {
-       "t": "DOES KOHLI FAIL"
-      },
-      {
-       "t": "IN KNOCKOUTS?",
-       "c": "gold"
-      }
-     ]
+     "kind": "versus",
+     "at": 0.0,
+     "kicker": "DOES KOHLI FAIL IN KNOCKOUTS?",
+     "left": {
+      "v": "93.25",
+      "l": "T20 World Cup knockouts",
+      "c": "gold"
+     },
+     "right": {
+      "v": "27.6",
+      "l": "ODI finals",
+      "c": "red"
+     }
     },
     "avatars": [
      {
@@ -52,7 +54,8 @@
       "x": 0.3,
       "x2": 0.5
      }
-    ]
+    ],
+    "cam": "push"
    }
   },
   {
@@ -81,8 +84,15 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "stance"
+      "pose": "stance",
+      "x": 0.42
      }
+    ],
+    "view": "side",
+    "cam": "wide",
+    "stumps": [
+     0.22,
+     0.92
     ]
    }
   },
@@ -110,7 +120,8 @@
       "number": 18,
       "pose": "stand"
      }
-    ]
+    ],
+    "cam": "push"
    }
   },
   {
@@ -151,7 +162,8 @@
       "number": 18,
       "pose": "dejected"
      }
-    ]
+    ],
+    "cam": "close"
    }
   },
   {
@@ -169,9 +181,17 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "raise"
+      "pose": "raise",
+      "x": 0.62
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.28,
+      "scale": 0.85
      }
-    ]
+    ],
+    "cam": "pull"
    }
   },
   {
@@ -195,9 +215,22 @@
      {
       "kit": "IND",
       "number": 18,
-      "pose": "stance"
+      "pose": "stance",
+      "hit": "pull",
+      "x": 0.36
      }
-    ]
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.18,
+     0.95
+    ],
+    "ball": {
+     "word": "owns",
+     "shot": "six",
+     "side": -1
+    }
    }
   },
   {
@@ -241,8 +274,15 @@
       "number": 18,
       "pose": "drive",
       "x": 0.64
+     },
+     {
+      "kit": "SA",
+      "pose": "dejected",
+      "x": 0.24,
+      "scale": 0.85
      }
-    ]
+    ],
+    "cam": "drift"
    }
   },
   {
@@ -264,25 +304,18 @@
       "number": 18,
       "pose": "celebrate"
      }
-    ]
+    ],
+    "cam": "push"
    }
   },
   {
-   "vo": "So, does he fail in knockouts? In ODI finals, the numbers do drop. But in T20 World Cups, nobody has been better. Myth: half busted.",
+   "vo": "So, does he fail in knockouts? In ODI finals, the numbers do drop. But in T20 World Cups, nobody has been better. Our verdict: half busted.",
    "scene": {
     "type": "stage",
     "panel": {
-     "kind": "headline",
-     "kicker": "THE VERDICT",
-     "lines": [
-      {
-       "t": "HALF"
-      },
-      {
-       "t": "BUSTED.",
-       "c": "gold"
-      }
-     ]
+     "kind": "verdict",
+     "verdict": "half",
+     "at": 0.72
     },
     "avatars": [
      {
@@ -290,7 +323,8 @@
       "number": 18,
       "pose": "stand"
      }
-    ]
+    ],
+    "cam": "wide"
    }
   },
   {
@@ -326,5 +360,52 @@
     "The Third Man"
    ]
   }
+ },
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    30,
+    60,
+    140
+   ],
+   [
+    60,
+    120,
+    220
+   ],
+   [
+    255,
+    120,
+    30
+   ]
+  ],
+  "boards": [
+   [
+    40,
+    70,
+    140
+   ],
+   [
+    245,
+    184,
+    0
+   ]
+  ]
  }
 }

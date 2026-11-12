@@ -760,7 +760,10 @@ def pick_intro(spec):
 
 def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     s = scenes[i]["scene"]
+    global VENUE
+    VENUE = spec.get("venue") or {}
     if words is not None: autocue(s, words, lead)
+    if s.get("type") == "stage": stage_events(s, D, words, lead)
     sting = g.fmt == "long" and i == 1
     if sting and lt < STING:
         import intros
@@ -851,13 +854,16 @@ def mix(spec, fmt, base, total, lead, starts, n):
     trim = "atrim=start=9,asetpts=PTS-STARTPTS," if fmt == "short" else ""
     flt.append(f"[{n}:a]{trim}volume=0.13[mus]")
     flt.append("[mus][vosc]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=550[duck]")
+    extra, mixin = [], ["[vo1]", "[duck]"]
     if sfx:
         ms = int(starts[1] * 1000)
         flt.append(f"[{n + 1}:a]aresample=44100,aformat=channel_layouts=stereo,volume=0.55,adelay={ms}|{ms}[fx]")
-        flt.append(f"[vo1][duck][fx]amix=inputs=3:normalize=0,atrim=0:{total},afade=t=out:st={total - 1.2}:d=1.2,loudnorm=I=-14:TP=-1.5:LRA=11[out]")
-    else:
-        flt.append(f"[vo1][duck]amix=inputs=2:normalize=0,atrim=0:{total},afade=t=out:st={total - 1.2}:d=1.2,loudnorm=I=-14:TP=-1.5:LRA=11[out]")
-    extra = ["-i", sfx] if sfx else []
+        extra += ["-i", sfx]; mixin.append("[fx]")
+    if os.path.exists(f"{base}/sfx.wav"):          # scene sound effects (sfx.py)
+        k = n + 1 + (1 if sfx else 0)
+        flt.append(f"[{k}:a]aresample=44100,aformat=channel_layouts=stereo[fx2]")
+        extra += ["-i", f"{base}/sfx.wav"]; mixin.append("[fx2]")
+    flt.append("".join(mixin) + f"amix=inputs={len(mixin)}:normalize=0,atrim=0:{total},afade=t=out:st={total - 1.2}:d=1.2,loudnorm=I=-14:TP=-1.5:LRA=11[out]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *ins, "-i", f"{base}/music.wav", *extra, "-filter_complex", ";".join(flt),
                     "-map", "[out]", "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", f"{base}/mix.m4a"], check=True)
 
@@ -898,6 +904,10 @@ def build(spec_path, fmt):
     scenes = spec[fmt]
     tts([s["vo"] for s in scenes], f"{base}/vo", fmt)
     meta, lead, durs, starts, total = plan(spec, fmt, base)
+    import sfx as _sfx
+    ev = sfx_events(json.load(open(spec_path)), fmt, meta, lead, durs, starts)
+    if os.path.exists(f"{base}/sfx.wav"): os.remove(f"{base}/sfx.wav")
+    if ev: _sfx.render(ev, total, f"{base}/sfx.wav")
     mix(spec, fmt, base, total, lead, starts, len(scenes))
     order = sorted(range(len(scenes)), key=lambda i: -durs[i])
     procs = []
@@ -1443,44 +1453,69 @@ _CROWD_COLS = [(70, 90, 140), (150, 60, 70), (200, 190, 170), (40, 60, 110), (21
 _bg_prev = gfx.background
 
 
-def stadium(c, T, zoom=1.0):
+VENUE = {}          # per-spec look: {"time": night|day|dusk, "crowd": [colours], "boards": [c1, c2]}
+SKIES = {"night": ((6, 10, 24), (20, 30, 62)), "day": ((96, 150, 214), (182, 212, 236)), "dusk": ((40, 34, 82), (236, 140, 92))}
+
+
+def _stumps(c, x, yb, h, a=1.0):
+    for k in (-1, 0, 1):
+        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x + k * h * .09 - h * .025, yb - h, h * .05, h), h * .02, h * .02), gfx.paint((245, 240, 225), a))
+    c.drawRect(skia.Rect.MakeXYWH(x - h * .14, yb - h - h * .03, h * .28, h * .03), gfx.paint((245, 240, 225), a))
+
+
+def stadium(c, T, zoom=1.0, view="end", fy=None, stumps=(.2, .9)):
     W, H = gfx.W, gfx.H
+    tod = VENUE.get("time", "night"); day = tod == "day"
     horizon = H * (.47 if H > W else .52)
+    fy = fy or H * (.715 if H > W else .9)
     c.save(); c.translate(W / 2, horizon); c.scale(zoom, zoom); c.translate(-W / 2, -horizon)
-    sky = skia.GradientShader.MakeLinear([skia.Point(0, 0), skia.Point(0, horizon)], [gfx.ci((6, 10, 24)), gfx.ci((20, 30, 62))])
+    s0, s1 = SKIES.get(tod, SKIES["night"])
+    sky = skia.GradientShader.MakeLinear([skia.Point(0, 0), skia.Point(0, horizon)], [gfx.ci(s0), gfx.ci(s1)])
     c.drawRect(skia.Rect.MakeLTRB(-W, -H, 2 * W, horizon), skia.Paint(Shader=sky))
-    # floodlight towers' glow
-    for fx in (.12, .88):
-        sh = skia.GradientShader.MakeRadial(skia.Point(W * fx, H * .06), W * .55, [gfx.ci((210, 225, 255), .35), gfx.ci((210, 225, 255), 0)])
-        c.drawPaint(skia.Paint(Shader=sh))
+    for fx in (.12, .88):                         # floodlight towers (lit at night and dusk)
+        c.drawRect(skia.Rect.MakeXYWH(W * fx - 4, H * .06, 8, horizon - H * .26 - H * .06), gfx.paint((30, 36, 56) if not day else (120, 130, 150), .8))
+        if not day:
+            sh = skia.GradientShader.MakeRadial(skia.Point(W * fx, H * .06), W * .55, [gfx.ci((210, 225, 255), .35 if tod == "night" else .2), gfx.ci((210, 225, 255), 0)])
+            c.drawPaint(skia.Paint(Shader=sh))
+        c.drawRect(skia.Rect.MakeXYWH(W * fx - 50, H * .06 - 16, 100, 32), gfx.paint((40, 46, 66) if not day else (150, 155, 170)))
         for k in range(4):
-            c.drawCircle(W * fx + (k - 1.5) * 22, H * .06, 7, gfx.paint((255, 255, 240), .9))
-    # crowd band: tiers of tiny figures, gently flickering
+            c.drawCircle(W * fx + (k - 1.5) * 22, H * .06, 7, gfx.paint((255, 255, 240) if not day else (220, 225, 230), .9))
     top, bot = horizon - H * .2, horizon
+    c.drawRect(skia.Rect.MakeLTRB(-W, top - 6, 2 * W, bot), gfx.paint((14, 20, 40) if not day else (120, 126, 140)))     # stand
+    cols = [tuple(x) for x in VENUE.get("crowd", [])] or _CROWD_COLS
     for x, y, cp, ph in _CROWD:
-        yy = top + y * (bot - top); s = 2.2 + 3.2 * y
-        col = _CROWD_COLS[int(cp * len(_CROWD_COLS))]
-        a = .55 + .35 * math.sin(T * 2.2 + ph * 40)
-        c.drawRect(skia.Rect.MakeXYWH(x * W * 1.2 - W * .1, yy, s, s * 1.4), gfx.paint(col, a * (.5 + .5 * y)))
-    for yy in (top, top + (bot - top) * .45):     # tier rails
-        c.drawRect(skia.Rect.MakeXYWH(-W, yy, 3 * W, 4), gfx.paint((30, 40, 70), .9))
-    c.drawRect(skia.Rect.MakeXYWH(-W, bot - 18, 3 * W, 18), gfx.paint((18, 26, 52)))           # boundary boards
+        yy = top + y * (bot - top); sz = 2.2 + 3.2 * y
+        col = cols[int(cp * len(cols))]
+        al = .55 + .35 * math.sin(T * 2.2 + ph * 40)
+        c.drawRect(skia.Rect.MakeXYWH(x * W * 1.2 - W * .1, yy, sz, sz * 1.4), gfx.paint(col, al * (.5 + .5 * y) * (1.25 if day else 1)))
+    for yy in (top, top + (bot - top) * .45):
+        c.drawRect(skia.Rect.MakeXYWH(-W, yy, 3 * W, 4), gfx.paint((30, 40, 70) if not day else (90, 96, 110), .9))
+    bc = [tuple(x) for x in VENUE.get("boards", [])] or [(40, 70, 140), gfx.GOLD]
+    c.drawRect(skia.Rect.MakeXYWH(-W, bot - 18, 3 * W, 18), gfx.paint((18, 26, 52)))
     for k in range(12):
-        c.drawRect(skia.Rect.MakeXYWH(-W + k * W * .3, bot - 16, W * .28, 14), gfx.paint(gfx.GOLD if k % 2 else (40, 70, 140), .35))
-    # field: mowing stripes in perspective
+        c.drawRect(skia.Rect.MakeXYWH(-W + k * W * .3, bot - 16, W * .28, 14), gfx.paint(bc[k % len(bc)], .55))
+    g0, g1 = ((34, 112, 54), (40, 128, 62)) if not day else ((60, 150, 70), (72, 166, 80))
     for k in range(14):
         y0 = horizon + (H - horizon) * (k / 14) ** 1.6; y1 = horizon + (H - horizon) * ((k + 1) / 14) ** 1.6
-        c.drawRect(skia.Rect.MakeLTRB(-W, y0, 2 * W, y1 + 1), gfx.paint((34, 112, 54) if k % 2 else (40, 128, 62)))
-    # the pitch strip, in perspective
-    pw0, pw1 = W * .07, W * .34
-    path = skia.Path(); path.moveTo(W / 2 - pw0, horizon + 10); path.lineTo(W / 2 + pw0, horizon + 10)
-    path.lineTo(W / 2 + pw1, H); path.lineTo(W / 2 - pw1, H); path.close()
-    c.drawPath(path, gfx.paint((196, 172, 120)))
-    for f in (.22, .78):                       # creases
-        y = horizon + 10 + (H - horizon) * f; w = pw0 + (pw1 - pw0) * f
-        c.drawRect(skia.Rect.MakeXYWH(W / 2 - w * 1.05, y, 2.1 * w, 4), gfx.paint((255, 255, 255), .8))
+        c.drawRect(skia.Rect.MakeLTRB(-W, y0, 2 * W, y1 + 1), gfx.paint(g1 if k % 2 else g0))
+    pc = (196, 172, 120) if not day else (212, 188, 136)
+    if view == "side":                            # side-on: the pitch runs across the screen
+        path = skia.Path(); path.moveTo(W * .0, fy - 30); path.lineTo(W * 1.0, fy - 30); path.lineTo(W * 1.12, fy + 26); path.lineTo(-W * .12, fy + 26); path.close()
+        c.drawPath(path, gfx.paint(pc))
+        for sx in stumps:
+            c.drawRect(skia.Rect.MakeXYWH(W * sx + 30, fy - 30, 5, 56), gfx.paint((255, 255, 255), .8))       # popping crease
+            _stumps(c, W * sx, fy - 6, H * (.085 if H > W else .14))
+    else:
+        pw0, pw1 = W * .07, W * .34
+        path = skia.Path(); path.moveTo(W / 2 - pw0, horizon + 10); path.lineTo(W / 2 + pw0, horizon + 10)
+        path.lineTo(W / 2 + pw1, H); path.lineTo(W / 2 - pw1, H); path.close()
+        c.drawPath(path, gfx.paint(pc))
+        for f in (.22, .78):
+            y = horizon + 10 + (H - horizon) * f; w = pw0 + (pw1 - pw0) * f
+            c.drawRect(skia.Rect.MakeXYWH(W / 2 - w * 1.05, y, 2.1 * w, 4), gfx.paint((255, 255, 255), .8))
+        _stumps(c, W / 2, horizon + 10 + (H - horizon) * .2, H * .035)      # far end
     c.restore()
-    vg = skia.GradientShader.MakeRadial(skia.Point(W / 2, H * .55), max(W, H) * .75, [gfx.ci((0, 0, 0), 0), gfx.ci((0, 0, 0), .55)], [.5, 1])
+    vg = skia.GradientShader.MakeRadial(skia.Point(W / 2, H * .55), max(W, H) * .75, [gfx.ci((0, 0, 0), 0), gfx.ci((0, 0, 0), .55 if not day else .3)], [.5, 1])
     c.drawPaint(skia.Paint(Shader=vg))
 
 
@@ -1569,8 +1604,9 @@ def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None
     """Original illustrated cricketer (no likeness). (x, y) = between the feet, h = height in px.
     Front poses: stand, walk, celebrate, raise, dejected. Side-on: stance, drive, pull, run, bowl (dir=-1 mirrors = left-hander)."""
     u = h / 100.0
-    kitc = kit if isinstance(kit, tuple) else (team_col(kit) if kit in TEAMS else C(kit))
-    trou = _sh(kitc, .62); trim = _lift(kitc, .55); helm = helmet or (22, 34, 66)
+    kitc = kit if isinstance(kit, tuple) else (TEAMS[kit][0] if kit in TEAMS else C(kit))      # the real kit colour
+    if _lum(kitc) < .08: kitc = _lift(kitc, .1)                                                   # black kits stay readable
+    trou = _sh(kitc, .62) if _lum(kitc) > .08 else kitc; trim = _lift(kitc, .55); helm = helmet or (22, 34, 66)
     P = lambda col, al=1.0: gfx.paint(col, a * al)
     J = _pose(pose, t); side = J["view"] == "side"
     pt = lambda k: (J[k][0] * u, J[k][1] * u)
@@ -1745,6 +1781,24 @@ def stage_panel(c, g, t, D, s, a=1.0):
         vs = p["score"]; z = fit(vs, cw - 80, 170, "bebas"); cc = C(p.get("color", "gold"))
         text(c, vs, g.cx, y + 210, z, "bebas", cc, pa, "c", glow=14)
         if p.get("note"): text(c, p["note"], g.cx, y + 268, 28, "interSB", INK, pa * .9, "c")
+    elif kind == "verdict":        # the series stamp: BUSTED / HALF BUSTED / CONFIRMED
+        v = p.get("verdict", "half"); col = {"busted": (226, 72, 72), "half": GOLD, "confirmed": (70, 200, 120)}[v]
+        word = {"busted": ["MYTH", "BUSTED"], "half": ["HALF", "BUSTED"], "confirmed": ["MYTH", "CONFIRMED"]}[v]
+        tl = st + .35; q = prog(t, st, tl); land = t >= tl
+        sc_ = 2.4 - 1.4 * eo(q) if not land else 1 + .06 * math.exp(-(t - tl) * 9) * math.cos((t - tl) * 40)
+        al = min(1, q * 2.5) * a
+        cy = y + 190; bw, bh = cw * .78, 300
+        c.save(); c.translate(g.cx, cy); c.rotate(-7); c.scale(sc_, sc_)
+        for k_, (ins, sw) in enumerate(((0, 9), (18, 3))):
+            pp = gfx.paint(col, al * (.95 if k_ == 0 else .7)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(sw)
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(-bw / 2 + ins, -bh / 2 + ins, bw - 2 * ins, bh - 2 * ins), 18, 18), pp)
+        text(c, "MYTH OR DATA? · VERDICT", 0, -bh / 2 + 62, 26, "interB", col, al * .9, "c", track=6)
+        text(c, word[0], 0, 10, fit(word[0], bw - 80, 110, "bebas", 4), "bebas", (255, 255, 255), al, "c", track=4)
+        text(c, word[1], 0, 112, fit(word[1], bw - 80, 120, "bebas", 4), "bebas", col, al, "c", track=4, glow=14)
+        for k_ in range(26):          # ink speckle on the stamp
+            rx = (math.sin(k_ * 12.9898) * 43758.5453) % 1; ry = (math.sin(k_ * 78.233) * 12543.1) % 1
+            c.drawCircle(-bw / 2 + rx * bw, -bh / 2 + ry * bh, 2 + 3 * rx, gfx.paint((8, 14, 32), al * .5))
+        c.restore()
     elif kind == "table":          # rows of [label, value, colour?], revealed in turn
         rows = p["rows"]; rh = 64; _panel_card(c, x0, y, cw, rh * len(rows) + 40, pa)
         for k, r in enumerate(rows):
@@ -1755,20 +1809,120 @@ def stage_panel(c, g, t, D, s, a=1.0):
             text(c, r[1], x1 - 36, yy + 46, 46, "bebas", cc, q, "r")
 
 
+CAMS = {"wide": (1.0, 1.0), "push": (1.0, 1.18), "pull": (1.28, 1.0), "close": (1.22, 1.3), "drift": (1.04, 1.1)}
+
+
+def _feet(g): return g.H * (.715 if g.fmt == "short" else .9)
+
+
+def _fig_h(g, A): return (470 if g.fmt == "short" else 520) * A.get("scale", 1.0)
+
+
+def _ball_path(g, s, A, ax, ay, hh, tc, t):
+    """Ball position (x, y, radius) at time t, or None; plus the contact point."""
+    b = s["ball"]; side = s.get("view") == "side"; d = A.get("dir", 1); u = hh / 100
+    J = _pose(A.get("hit", "drive"), 0) if A.get("hit") in ("pull",) else None
+    if J and J.get("bat"):                            # meet the ball at the sweet spot of the shot's bat
+        (hx, hy), (dx, dy) = J["bat"]; L0 = math.hypot(dx, dy); dx, dy = dx / L0, dy / L0
+        kx, ky = hx - dx * 3.7 + dx * 33, hy - dy * 3.7 + dy * 33
+    else:
+        kx, ky = 26, -22
+    if side:
+        K = (ax + d * kx * u, ay + ky * u); R = (ax + d * g.W * .75, ay - 62 * u); B = (ax + d * 26 * u * 4, ay - 4 * u)
+        r0 = r1 = r2 = 2.3 * u
+    else:
+        K = (ax + 16 * u, ay - 34 * u); R = (g.W * .55, g.H * 1.04); B = (ax + 8 * u, ay + 34 * u)
+        r0, r1, r2 = 4.2 * u, 2.2 * u, 1.7 * u
+    ex = b.get("side", -d)
+    if b.get("shot", "six") == "six":
+        E = (ax + ex * g.W * .95, g.H * (.2 if g.fmt == "short" else .1)); apex = -g.H * .28
+    else:
+        E = (ax + ex * g.W * .95, ay + 10); apex = 0
+    td, th = .7, 1.15
+    if tc - td <= t < tc:
+        f = (t - (tc - td)) / td
+        if f < .62: q = f / .62; x = R[0] + (B[0] - R[0]) * q; y = R[1] + (B[1] - R[1]) * q * q; r = r0 + (r1 - r0) * q
+        else: q = (f - .62) / .38; x = B[0] + (K[0] - B[0]) * q; y = B[1] + (K[1] - B[1]) * (1 - (1 - q) ** 2); r = r1 + (r2 - r1) * q
+        return (x, y, r), K
+    if tc <= t < tc + th:
+        q = (t - tc) / th; x = K[0] + (E[0] - K[0]) * q; y = K[1] + (E[1] - K[1]) * q + apex * 4 * q * (1 - q)
+        r = r2 * (1 - .55 * q) if not side else r2
+        return (x, y, r), K
+    return None, K
+
+
 def sc_stage(c, g, t, D, s):
-    zoom = 1 + .04 * (t / max(D, .1))                                         # slow push-in
-    if gfx.THEME == "stadium":
-        stadium(c, t + 3, zoom)
+    view = s.get("view", "end")
+    cam = s.get("cam", "drift"); z0, z1 = CAMS[cam] if isinstance(cam, str) else cam[:2]
+    z = z0 + (z1 - z0) * eio(prog(t, 0, D))
     av = s.get("avatars", [])
+    A0 = av[0] if av else {}
+    fx = g.W * A0.get("x2", A0.get("x", .5)); fy = _feet(g) - _fig_h(g, A0) * .55
+    c.save(); c.translate(fx, fy); c.scale(z, z); c.translate(-fx, -fy)          # camera
+    if gfx.THEME == "stadium":
+        stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))))
+    tc = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
+    ballk = s.get("ball", {}).get("batter", 0)
     for k, A in enumerate(av):
         st = D * A.get("at", .0); q = eo(prog(t, st, st + .5))
         if q <= 0: continue
-        W, H = g.W, g.H
-        ax = W * (A.get("x", .5) + (A.get("x2", A.get("x", .5)) - A.get("x", .5)) * eio(prog(t, st, D * A.get("move_end", .8)))); ay = H * (.715 if g.fmt == "short" else .9)
-        hh = (470 if g.fmt == "short" else 520) * A.get("scale", 1.0) * zoom
-        avatar(c, ax + (1 - q) * (60 if A.get("x", .5) > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"),
-               A.get("pose", "stand"), t + k, q, dir=A.get("dir", 1))
+        x0_ = A.get("x", .5)
+        ax = g.W * (x0_ + (A.get("x2", x0_) - x0_) * eio(prog(t, st, D * A.get("move_end", .8)))); ay = _feet(g)
+        hh = _fig_h(g, A)
+        pose = A.get("pose", "stand")
+        if tc is not None and k == ballk and A.get("hit") and t >= tc - .08: pose = A["hit"]
+        avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"), pose, t + k, q,
+               dir=A.get("dir", 1))
+        if tc is not None and k == ballk:
+            bp, K = _ball_path(g, s, A, ax, ay, hh, tc, t)
+            col = (250, 248, 240) if s["ball"].get("color", "white") == "white" else (190, 30, 40)
+            if bp:
+                for j in range(1, 7):                                   # trail
+                    pb, _ = _ball_path(g, s, A, ax, ay, hh, tc, t - j * .022)
+                    if pb: c.drawCircle(pb[0], pb[1], pb[2] * (1 - j * .1), gfx.paint(col, .32 * (1 - j / 7)))
+                c.drawCircle(bp[0], bp[1], bp[2], gfx.paint(col))
+            if tc <= t < tc + .3:                                       # contact flash
+                f = (t - tc) / .3; pp = gfx.paint((255, 255, 255), .9 * (1 - f)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(6)
+                c.drawCircle(K[0], K[1], 20 + 120 * f, pp)
+    c.restore()
     stage_panel(c, g, t, D, s)
+
+
+def stage_events(s, D, words, lead):
+    """Resolve word-cued times (ball contact) before drawing or mixing."""
+    b = s.get("ball")
+    if b and "_t" not in b:
+        b["_t"] = D * b.get("at", .5)
+        if b.get("word") and words:
+            key = _norm(b["word"])
+            for w in words:
+                if _norm(w["w"]) == key: b["_t"] = lead + w["s"]; break
+
+
+def sfx_events(spec, fmt, meta, lead, durs, starts):
+    """Sound effects for stage scenes, plus any explicit "sfx": [{"kind", "at"|"word"}] on a scene."""
+    ev = []
+    for i, sc in enumerate(spec[fmt]):
+        s = sc["scene"]; D = durs[i]; T0 = starts[i]; words = meta[i]["words"]
+        for e in s.get("sfx", []):
+            tm = D * e.get("at", 0)
+            if e.get("word"):
+                tm = next((lead[i] + w["s"] for w in words if _norm(w["w"]) == _norm(e["word"])), tm)
+            ev.append([T0 + tm, e["kind"], e.get("gain", 1)])
+        if s.get("type") != "stage": continue
+        stage_events(s, D, words, lead[i])
+        p = s.get("panel", {}); pat = D * p.get("at", .05)
+        if p.get("kind") == "verdict": ev.append([T0 + pat + .35, "stamp", 1])
+        elif p: ev.append([T0 + max(0, pat - .1), "whoosh", 1])
+        if p.get("kind") == "bignum": ev.append([T0 + pat + p.get("count_dur", .9), "crowd", .8])
+        if s.get("ball"):
+            tc = s["ball"]["_t"]
+            if s.get("view") != "side": ev.append([T0 + tc - .7 * .38, "bounce", 1])
+            else: ev.append([T0 + tc - .7 * .38, "bounce", .8])
+            ev.append([T0 + tc, "crack", 1]); ev.append([T0 + tc + .12, "crowd", 1])
+        elif any(A.get("pose") in ("celebrate", "raise") for A in s.get("avatars", [])) and p.get("kind") != "bignum":
+            ev.append([T0 + .3, "crowd", .7])
+    return ev
 
 
 SCENES["stage"] = sc_stage

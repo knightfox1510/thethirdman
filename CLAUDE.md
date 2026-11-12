@@ -27,3 +27,14 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - Run builds in the background with XI_KEY set; batch.sh prints OK/FAIL per slug.
 - After adding videos, run `python3 catalog.py` and commit the spec, CATALOG.md and intro_log.json.
 - Data: `SM_KEY=... python3 fetch_ipl.py` downloads the IPL ball-by-ball cache into data/. stats.py builds the ball table (super overs are innings S3/S4; exclude them).
+
+## Production defaults (every new video; use each where it fits the story)
+- Hook: a number or the key claim on screen within 2 seconds. No slow title card first.
+- Shorts use the stadium-stage look: theme "stadium", captions "v2", "stage" scenes with the illustrated player (no likeness of anyone real).
+- Pick a pose for each beat: walk (entrance), stance, drive, pull, run, bowl, celebrate, raise (milestone), dejected (failure), stand.
+- Put the opponent in the frame on "versus" beats: a second avatar in their kit (e.g. NZ for a semi against New Zealand).
+- Show the ball when a moment is about a shot: "ball": {"word": ..., "shot": six|four}, with "hit" on the batter. Use a side view ("view": "side") for shots.
+- Vary the camera from scene to scene: "cam" wide / push / pull / close / drift, and switch between end-on and side-on views.
+- Vary the venue for each video: "venue" {"time": night|day|dusk, "crowd": fan colours, "boards": [c1, c2]}; match it to the real ground and time where known.
+- Sound effects come from sfx.py (synthesised): whoosh on panels, crack + crowd on shots, crowd on big numbers and celebrations, stamp on verdicts. Add extra cues with "sfx": [{"kind", "at"|"word"}].
+- Series verdicts use the "verdict" panel stamp (busted / half / confirmed), so the series has a recognisable sign-off.
