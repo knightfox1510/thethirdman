@@ -195,14 +195,6 @@ def sc_bignum(c, g, t, D, s):
     size = fit(final, g.cw, 330 if g.fmt == "long" else 300, "bebas")
     y = g.cy + size * .3 + (20 if s.get("head") else 0)
     cc = C(s.get("color", "gold"))
-    if gfx.THEME == "scoreboard" and p > 0:
-        x = g.cx - twidth(sv, size, "bebas") / 2
-        for ch in sv:
-            w_ = twidth(ch, size, "bebas")
-            if ch not in ".,*+ ":
-                rrect(c, x - size * .04, y - size * .80, w_ + size * .08, size * .92, 6, PANEL, p)
-                c.drawRect(skia.Rect.MakeXYWH(x - size * .04, y - size * .35, w_ + size * .08, 3), paint(BG, p))
-            x += w_
     text(c, sv, g.cx, y, size, "bebas", cc, p, "c", glow=22)
     if s.get("label"):
         ls = fit(s["label"], g.cw, 40, "interB", 8)
