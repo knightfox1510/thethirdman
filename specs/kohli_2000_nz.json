@@ -1,0 +1,101 @@
+{
+ "slug": "kohli_2000_nz",
+ "theme": "blue",
+ "tag": "MILESTONE WATCH",
+ "tagsub": "KOHLI VS NEW ZEALAND",
+ "files": {
+  "long": "Kohli_2000_vs_NZ",
+  "short": "Kohli_2000_vs_NZ_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "MILESTONE WATCH",
+  "lines": [
+   {
+    "t": "22 RUNS"
+   },
+   {
+    "t": "FROM HISTORY",
+    "c": "gold"
+   }
+  ],
+  "hero": "1,978",
+  "herosize": 300
+ },
+ "sources": [
+  "https://www.newsbytesapp.com/news/sports/nz-vs-ind-hamilton-odi-preview/story (1,978 ODI runs vs NZ; first to 2,000 would be a record)",
+  "https://www.espn.com.au/cricket/scores/series/24469 (3rd ODI abandoned; 4th and 5th ODIs at Mount Maunganui)"
+ ],
+ "long": [],
+ "short": [
+  {
+   "vo": "Twenty-two runs. That's all विराट कोहली needs to make history against New Zealand.",
+   "scene": {
+    "type": "bignum",
+    "value": 22,
+    "label": "RUNS TO GO",
+    "color": "gold",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "He has one thousand, nine hundred and seventy-eight ODI runs against them.",
+   "scene": {
+    "type": "bignum",
+    "value": 1978,
+    "comma": true,
+    "label": "KOHLI · ODI RUNS VS NEW ZEALAND",
+    "color": "ink",
+    "count_dur": 1.2
+   }
+  },
+  {
+   "vo": "Nobody has ever made two thousand ODI runs against New Zealand.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NOBODY HAS"
+     },
+     {
+      "t": "2,000",
+      "c": "gold"
+     },
+     {
+      "t": "VS NZ."
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India lead the series two-nil, with two games left at Mount Maunganui. Will he get there? Tell us in the comments.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WILL HE"
+     },
+     {
+      "t": "GET THERE?",
+      "c": "gold"
+     }
+    ],
+    "pill": "FOLLOW FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Kohli is 22 runs from history vs New Zealand 🏏 #Shorts",
+   "description": "Virat Kohli has 1,978 ODI runs against New Zealand. Nobody has ever reached 2,000 against them. India lead the series 2-0 with two ODIs left at Mount Maunganui.",
+   "tags": [
+    "Virat Kohli",
+    "India vs New Zealand",
+    "IND vs NZ",
+    "ODI",
+    "cricket",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

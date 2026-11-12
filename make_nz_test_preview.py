@@ -1,0 +1,122 @@
+"""Writes specs/nz_test_preview.json. Figures: analysis/nz_tests.py (Cricsheet) + sources listed in the spec."""
+import json
+
+long = [
+    {"vo": "India have won two Test series in New Zealand. In fifty-eight years. The last one was in two thousand and nine. "
+           "Next week, a new-look India try again. Here's why it's so hard, and why this time might be different.",
+     "chapter": "Intro",
+     "scene": {"type": "statement", "kicker": "INDIA IN NEW ZEALAND · TEST SERIES", "lines": [{"t": "2 SERIES WINS."}, {"t": "IN 58 YEARS.", "c": "gold"}]}},
+    {"vo": "Start with the history. India's first ever overseas series win came here, in nineteen sixty-eight. Then nothing for forty-one years, "
+           "until MS Dhoni's side won in two thousand and nine. Since then: beaten in twenty fourteen, and beaten two-nil on the last tour, in twenty twenty.",
+     "chapter": "The History",
+     "scene": {"type": "timeline", "head": {"t": "INDIA'S TEST SERIES IN NEW ZEALAND"},
+               "events": [{"y": "1968", "t": "Won 3-1", "hl": True}, {"y": "2002", "t": "Lost 0-2", "c": "red"}, {"y": "2009", "t": "Won 1-0", "hl": True},
+                          {"y": "2014", "t": "Lost 0-1", "c": "red"}, {"y": "2020", "t": "Lost 0-2", "c": "red"}]}},
+    {"vo": "In twenty-six Tests in New Zealand, India have won just five. And it isn't only away from home. New Zealand beat India in the first World Test Championship final, "
+           "and in twenty twenty-four, they did something no touring side had managed in twelve years. They beat India, in India. Three-nil.",
+     "scene": {"type": "stats", "head": {"t": "THE NEW ZEALAND PROBLEM"},
+               "tiles": [{"v": "5 / 26", "l": "TESTS WON IN NEW ZEALAND", "c": "red"}, {"v": "2021", "l": "LOST THE WTC FINAL TO NZ", "c": "ink"},
+                         {"v": "0-3", "l": "WHITEWASHED AT HOME, 2024", "c": "red"}]}},
+    {"vo": "So why is New Zealand so hard? The answer is in who takes the wickets. Since twenty ten, eighty-six per cent of all wickets in Tests in New Zealand have gone to fast bowlers. "
+           "In India, it's forty-three per cent. It's a different game.",
+     "chapter": "Why It's So Hard",
+     "scene": {"type": "compare", "head": {"t": "WHO TAKES THE WICKETS", "sub": "SHARE OF TEST WICKETS TAKEN BY PACE · 2010-2025"},
+               "a": {"name": "IN NEW ZEALAND", "color": "gold"}, "b": {"name": "IN INDIA", "color": "ink"},
+               "rows": [["PACE BOWLERS", "86%", "43%", "a"], ["SPINNERS", "14%", "57%", "b"]]}},
+    {"vo": "And India's batters feel it. Since two thousand and nine, they've averaged thirty-five and a half runs per wicket in New Zealand, against nearly forty-one at home. "
+           "The ball does more, for longer, and the wind at the Basin Reserve can make one end feel like a different pitch.",
+     "scene": {"type": "compare", "head": {"t": "INDIA'S BATTING", "sub": "RUNS PER WICKET IN TESTS · 2009-2025"},
+               "a": {"name": "IN NEW ZEALAND", "color": "red"}, "b": {"name": "AT HOME", "color": "ink"},
+               "rows": [["RUNS PER WICKET", "35.5", "40.7", "b"]]}},
+    {"vo": "The New Zealand plan is simple. Full, swinging and seaming with the new ball, a packed slip cordon, and patience. "
+           "At the Basin Reserve, the first-innings average since twenty ten is three hundred and thirty-nine. Batting first is no advantage: of twenty Tests, the side batting first won seven, the side batting second won eight.",
+     "scene": {"type": "fieldplan", "head": {"t": "THE NEW ZEALAND PLAN", "sub": "ILLUSTRATIVE FIELD · NEW BALL"},
+               "fielders": ["keeper", "slip", "2nd slip", "3rd slip", "gully", "point", "mid-off", "mid-on", "fine leg"],
+               "hl": ["slip", "2nd slip", "3rd slip", "gully"], "length": {"from": 4, "to": 6.5, "label": "FULL, SEAMING"},
+               "shots": [{"to": "2nd slip", "label": "THE EDGE", "lift": 0.05}],
+               "lines": [{"t": "FULL."}, {"t": "PATIENT.", "c": "gold"}], "sub": "Basin Reserve since 2010: first-innings average 339"}},
+
+    {"vo": "But this is not the New Zealand that beat India last time. The three bowlers with the most Test wickets against India, Tim Southee, Trent Boult and Ajaz Patel, "
+           "are not in this squad. Southee and Neil Wagner have retired, and Kane Williamson retired in June.",
+     "chapter": "A New New Zealand",
+     "scene": {"type": "bars", "head": {"t": "WHO'S MISSING", "sub": "NZ BOWLERS' TEST WICKETS AGAINST INDIA · 2003-2024"}, "max": 60, "dec": 0,
+               "items": [{"label": "TIM SOUTHEE · RETIRED", "value": 55, "color": "muted"}, {"label": "TRENT BOULT · NO TEST SINCE 2022", "value": 41, "color": "muted"},
+                         {"label": "AJAZ PATEL · NOT SELECTED", "value": 32, "color": "muted"}, {"label": "MITCHELL SANTNER · IN THE SQUAD", "value": 23, "color": "gold"},
+                         {"label": "KYLE JAMIESON · IN THE SQUAD", "value": 22, "color": "gold"}]}},
+    {"vo": "The man India need to watch is Kyle Jamieson. At six foot eight, he gets bounce from a length that other bowlers can't. He has twenty-two Test wickets against India, "
+           "and he was player of the match in that World Test Championship final.",
+     "scene": {"type": "trajectory", "head": {"t": "THE JAMIESON BALL", "sub": "ILLUSTRATIVE · SIDE-ON"}, "hl": ["GOOD"], "bowler_c": "ink",
+               "balls": [{"length": 6.5, "end": 1.7, "label": "GOOD LENGTH, CHEST HIGH", "c": "gold", "at": 0.3}],
+               "note": "6 ft 8 in: extra bounce from a good length"}},
+    {"vo": "Alongside him: Matt Henry, Jacob Duffy, Nathan Smith and Blair Tickner. With Mitchell Santner as the spinner. "
+           "And don't write them off. New Zealand are third in the World Test Championship, and they won two-one in England this summer.",
+     "scene": {"type": "list", "head": {"t": "NEW ZEALAND'S ATTACK", "sub": "SQUAD FOR THE INDIA SERIES"},
+               "items": [{"h": "KYLE JAMIESON", "d": "22 Test wickets against India", "c": "gold"}, {"h": "MATT HENRY", "d": "The leader of the attack"},
+                         {"h": "JACOB DUFFY · NATHAN SMITH · BLAIR TICKNER", "d": "Seam, swing and hard lengths"},
+                         {"h": "MITCHELL SANTNER", "d": "The only specialist spinner"}]}},
+
+    {"vo": "Now India. Only three of their sixteen players have ever played a Test in New Zealand: जसप्रीत बुमराह, रवींद्र जडेजा, and Rishabh Pant, who is still waiting on fitness.",
+     "chapter": "India's New Team",
+     "scene": {"type": "bignum", "head": {"t": "BEEN THERE BEFORE"}, "value": 3, "suffix": " OF 16", "label": "INDIA'S SQUAD WHO HAVE PLAYED A TEST IN NEW ZEALAND",
+               "color": "red", "note": "Bumrah, Jadeja, Pant (subject to fitness)"}},
+    {"vo": "But the squad is built for these conditions. Five fast bowlers, led by बुमराह, who averages under twenty in fifty-two Tests. "
+           "A young top order under captain शुभमन गिल. And कुलदीप यादव as the only specialist spinner.",
+     "scene": {"type": "list", "head": {"t": "BUILT FOR SEAM", "sub": "INDIA'S SQUAD"},
+               "items": [{"h": "JASPRIT BUMRAH", "d": "Average under 20 in 52 Tests", "c": "gold"}, {"h": "FIVE FAST BOWLERS", "d": "Siraj, Akash Deep, Prasidh, Kamboj"},
+                         {"h": "SHUBMAN GILL", "d": "Captain, leading a young top order"}, {"h": "KULDEEP YADAV", "d": "The only specialist spinner"}]}},
+    {"vo": "The battle that decides the series? बुमराह against Tom Latham. The left-handed captain against the best fast bowler in the world, with a new ball, in New Zealand.",
+     "scene": {"type": "matchup", "head": {"t": "THE KEY BATTLE", "sub": "ILLUSTRATIVE"},
+               "left": {"name": "BUMRAH", "team": "IND", "pose": "release"}, "right": {"name": "LATHAM", "team": "NZ", "pose": "stance", "sub": "NZ CAPTAIN"}}},
+
+    {"vo": "There's a lot riding on it. New Zealand sit third in the World Test Championship, India fifth. Two wins here, and India are right back in the race for next year's final.",
+     "chapter": "The Stakes",
+     "scene": {"type": "bars", "head": {"t": "WORLD TEST CHAMPIONSHIP", "sub": "POINTS PERCENTAGE · 2025-27 CYCLE · BEFORE THE SERIES"}, "max": 85, "dec": 2,
+               "items": [{"label": "AUSTRALIA", "value": 80.0, "team": "AUS"}, {"label": "SOUTH AFRICA", "value": 75.0, "team": "SA"},
+                         {"label": "NEW ZEALAND", "value": 72.22, "team": "NZ"}, {"label": "BANGLADESH", "value": 55.56, "team": "BAN"},
+                         {"label": "INDIA", "value": 51.52, "team": "IND"}]}},
+    {"vo": "Our verdict? New Zealand at home are still favourites. But their attack has far less experience than the one India faced in twenty twenty, and India have the best bowler on either side. "
+           "We're calling it one-all.",
+     "chapter": "Verdict",
+     "scene": {"type": "statement", "kicker": "OUR CALL", "lines": [{"t": "ONE-ALL."}],
+               "sub": "New Zealand are favourites at home. Bumrah is India's equaliser."}},
+    {"vo": "What's your prediction for the series? Tell us in the comments, and subscribe for a breakdown after every Test.",
+     "scene": {"type": "cta", "lines": [{"t": "YOUR"}, {"t": "PREDICTION?", "c": "gold"}]}},
+]
+
+short = [
+    {"vo": "India have won just two Test series in New Zealand. Ever.",
+     "scene": {"type": "statement", "lines": [{"t": "2 SERIES WINS"}, {"t": "IN NEW", "c": "gold"}, {"t": "ZEALAND.", "c": "gold"}]}},
+    {"vo": "Eighty-six per cent of wickets there go to fast bowlers. In India, it's forty-three.",
+     "scene": {"type": "compare", "head": {"t": "PACE WICKETS"}, "a": {"name": "NZ", "color": "gold"}, "b": {"name": "INDIA", "color": "ink"},
+               "rows": [["SHARE OF WICKETS", "86%", "43%", "a"]]}},
+    {"vo": "And only three of India's sixteen players have ever played a Test there.",
+     "scene": {"type": "bignum", "value": 3, "suffix": " OF 16", "label": "HAVE PLAYED A TEST IN NZ", "color": "red", "count_dur": 0.5}},
+    {"vo": "But Southee, Wagner and Williamson have retired. Full preview on the channel.",
+     "scene": {"type": "cta", "lines": [{"t": "CAN INDIA"}, {"t": "DO IT?", "c": "gold"}]}},
+]
+
+spec = {
+    "slug": "nz_test_preview", "theme": "whites", "tag": "SERIES PREVIEW", "tagsub": "INDIA IN NEW ZEALAND · TESTS",
+    "files": {"long": "Can_India_Win_a_Test_Series_in_New_Zealand", "short": "India_NZ_Tests_Preview_Short_9x16"},
+    "thumb": {"kicker": "TEST SERIES PREVIEW", "lines": [{"t": "INDIA'S"}, {"t": "NZ PROBLEM", "c": "gold"}], "hero": "2 IN 58", "herosize": 300},
+    "sources": [
+        "Cricsheet men's Test ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/nz_tests.py",
+        "https://scroll.in/field/953699/data-check-a-look-at-key-numbers-from-indias-previous-test-tours-of-new-zealand",
+        "https://www.icc-cricket.com/news/key-takeaways-from-india-s-squad-for-new-zealand-test-series",
+        "https://www.crictracker.com/cricket-news/new-zealand-announce-14-member-squad-for-test-series-against-india-duffy-ravindra-returns-6609/",
+        "https://en.wikipedia.org/wiki/2025%E2%80%932027_World_Test_Championship",
+        "https://www.espn.com.au/cricket/scores/series/24469",
+    ],
+    "long": long, "short": short,
+    "yt": {
+        "long": {"title": "Can India Win a Test Series in New Zealand? | NZ vs IND Preview",
+                 "description": "India have won two Test series in New Zealand in 58 years. Ahead of the Wellington and Christchurch Tests, we break down why New Zealand is so hard "
+                                "(86% of wickets there go to pace), how New Zealand's attack has changed, India's new-look squad, and what's at stake in the World Test Championship.",
+                 "tags": ["India vs New Zealand", "IND vs NZ", "NZ vs IND Test", "Test cricket", "World Test Championship", "WTC", "Jasprit Bumrah", "Kyle Jamieson",
+                          "Shubman Gill", "Basin Reserve", "cricket analysis", "The Third Man"]},
+        "short": {"title": "India have won 2 Test series in New Zealand. Ever. #Shorts",
+                  "description": "Why New Zealand is so hard for India, in 30 seconds. Full preview on the channel.",
+                  "tags": ["India vs New Zealand", "Test cricket", "cricket", "cricket shorts", "The Third Man"]}},
+}
+json.dump(spec, open("specs/nz_test_preview.json", "w"), ensure_ascii=False, indent=1)
+print("long words", sum(len(s["vo"].split()) for s in long), "| short words", sum(len(s["vo"].split()) for s in short))
