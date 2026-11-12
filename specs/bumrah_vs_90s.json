@@ -24,22 +24,22 @@
   {
    "vo": "The best fast bowler of this era, against the two greatest batters of the nineties. जसप्रीत बुमराह versus सचिन तेंदुलकर and Brian Lara. Who wins?",
    "scene": {
-    "type": "statement",
-    "kicker": "DREAM MATCHUP",
-    "lines": [
-     {
-      "t": "BUMRAH"
-     },
-     {
-      "t": "VS",
-      "c": "gold",
-      "at": 0.3
-     },
-     {
-      "t": "SACHIN & LARA",
-      "at": 0.5
-     }
-    ]
+    "type": "matchup",
+    "head": {
+     "t": "DREAM MATCHUP",
+     "sub": "ILLUSTRATIVE"
+    },
+    "left": {
+     "name": "BUMRAH",
+     "team": "IND",
+     "pose": "release"
+    },
+    "right": {
+     "name": "SACHIN & LARA",
+     "color": "ink",
+     "pose": "stance",
+     "sub": "THE 1990s"
+    }
    }
   },
   {
@@ -82,33 +82,36 @@
   {
    "vo": "And the bowler. A short, stuttering run-up, and a whippy arm that releases the ball later than batters expect. A yorker on demand. A slower ball from the same action. And in March twenty twenty-six, four for fifteen in a World Cup final.",
    "scene": {
-    "type": "list",
+    "type": "trajectory",
     "head": {
-     "t": "BUMRAH'S WEAPONS"
+     "t": "BUMRAH'S WEAPONS",
+     "sub": "ILLUSTRATIVE · SIDE-ON"
     },
-    "items": [
+    "hl": [
+     "YORKER"
+    ],
+    "balls": [
      {
-      "h": "THE LATE RELEASE",
-      "d": "The ball arrives sooner than batters expect",
+      "length": 6.5,
+      "label": "LATE RELEASE",
+      "c": "ink",
       "at": 0.08
      },
      {
-      "h": "THE YORKER",
-      "d": "Landed on demand",
-      "at": 0.4
+      "length": 0.8,
+      "label": "YORKER",
+      "c": "gold"
      },
      {
-      "h": "THE SLOWER BALL",
-      "d": "Same action, much less pace",
-      "at": 0.52
-     },
-     {
-      "h": "BIG-GAME PROOF",
-      "d": "4/15 in the 2026 T20 World Cup final",
-      "c": "gold",
-      "at": 0.7
+      "length": 4.2,
+      "loop": 0.45,
+      "label": "SLOWER BALL",
+      "c": "blue"
      }
-    ]
+    ],
+    "bowler_c": "gold",
+    "note": "4/15 in the 2026 T20 World Cup final",
+    "noteat": 0.7
    }
   },
   {
@@ -231,22 +234,18 @@
   {
    "vo": "जसप्रीत बुमराह bowls one over to nineties सचिन and Lara.",
    "scene": {
-    "type": "statement",
-    "lines": [
-     {
-      "t": "BUMRAH"
-     },
-     {
-      "t": "VS",
-      "c": "gold"
-     },
-     {
-      "t": "SACHIN"
-     },
-     {
-      "t": "& LARA"
-     }
-    ]
+    "type": "matchup",
+    "left": {
+     "name": "BUMRAH",
+     "team": "IND",
+     "pose": "release"
+    },
+    "right": {
+     "name": "SACHIN & LARA",
+     "color": "ink",
+     "pose": "stance",
+     "sub": "THE 1990s"
+    }
    }
   },
   {

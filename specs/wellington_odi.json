@@ -504,43 +504,22 @@
   {
    "vo": "But Kyle Jamieson bounced India out: three for thirty-five.",
    "scene": {
-    "type": "fieldplan",
+    "type": "trajectory",
     "head": {
-     "t": "JAMIESON'S BOUNCER"
+     "t": "JAMIESON'S BOUNCER",
+     "sub": "ILLUSTRATIVE"
     },
-    "fielders": [
-     "keeper",
-     "slip",
-     "gully",
-     "square leg",
-     "fine leg",
-     "deep third"
-    ],
     "hl": [
-     "keeper",
-     "deep third"
+     "SHORT"
     ],
-    "length": {
-     "from": 10,
-     "to": 13,
-     "label": "SHORT",
-     "c": "red",
-     "at": 0.1
-    },
-    "shots": [
+    "bowler_c": "ink",
+    "balls": [
      {
-      "to": "keeper",
-      "label": "EDGE",
-      "at": 0.3,
-      "lift": 0.0,
-      "bend": 0.02
-     },
-     {
-      "to": "deep third",
-      "label": "TOP EDGE",
-      "at": 0.55,
-      "lift": 0.25,
-      "bend": 0.15
+      "length": 10.5,
+      "end": 1.9,
+      "label": "BOUNCER",
+      "c": "red",
+      "at": 0.15
      }
     ]
    }

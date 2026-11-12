@@ -25,7 +25,8 @@
   "Sportmonks ball-by-ball, IPL 2024-2026 (data/ipl), super overs excluded; economy = runs conceded per over (byes and leg byes included)",
   "https://www.tribuneindia.com/news/sports/season-went-well-for-me-bhuvneshwar-kumar-after-rcb-clinch-back-to-back-ipl-titles/",
   "https://www.outlookindia.com/sports/cricket/rcb-vs-gt-ipl-2026-final-back-to-back-titles-royal-challengers-bengaluru-virat-kohli",
-  "https://www.thenewsminute.com/news/ipl-2026-rcb-defend-title-with-five-wicket-victory-over-gt"
+  "https://www.thenewsminute.com/news/ipl-2026-rcb-defend-title-with-five-wicket-victory-over-gt",
+  "Figures: analysis/rcb_back_to_back.py"
  ],
  "long": [
   {
@@ -180,11 +181,11 @@
     },
     "a": {
      "name": "GUJARAT TITANS",
-     "color": "ink"
+     "team": "GT"
     },
     "b": {
      "name": "RCB",
-     "color": "gold"
+     "team": "RCB"
     },
     "rows": [
      [

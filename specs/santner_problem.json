@@ -44,7 +44,7 @@
    }
   },
   {
-   "vo": "Look at the economy rates. New Zealand's seamers, ten point six five an over. Michael Bracewell's off-spin, over twelve. Mitchell Santner? Seven point three seven.",
+   "vo": "Look at the economy rates. New Zealand's seamers, almost eleven an over. Michael Bracewell's off-spin, over twelve. Mitchell Santner? Seven point three seven.",
    "scene": {
     "type": "bars",
     "head": {
@@ -56,21 +56,24 @@
     "items": [
      {
       "label": "NZ SEAMERS",
-      "value": 10.65,
+      "value": 10.98,
       "color": "red",
-      "at": 0.12
+      "at": 0.12,
+      "team": "NZ"
      },
      {
       "label": "MICHAEL BRACEWELL · OFF-SPIN",
       "value": 12.17,
       "color": "red",
-      "at": 0.4
+      "at": 0.4,
+      "team": "NZ"
      },
      {
       "label": "MITCHELL SANTNER · LEFT-ARM SPIN",
       "value": 7.37,
       "color": "gold",
-      "at": 0.72
+      "at": 0.72,
+      "team": "NZ"
      }
     ]
    }
@@ -111,7 +114,7 @@
    }
   },
   {
-   "vo": "And this wasn't a timid Indian batting line-up. Against pace, अभिषेक शर्मा struck at two hundred and fifty-six. Naman Dhir, over two hundred. Vaibhav Sooryavanshi, one eighty-five. As a team, India scored at one seventy-eight against the seamers.",
+   "vo": "And this wasn't a timid Indian batting line-up. Against pace, अभिषेक शर्मा struck at two hundred and forty-two. Naman Dhir, two hundred. Vaibhav Sooryavanshi, one ninety-five. As a team, India scored at one seventy against the seamers.",
    "scene": {
     "type": "bars",
     "head": {
@@ -123,35 +126,36 @@
     "items": [
      {
       "label": "ABHISHEK SHARMA",
-      "value": 256,
-      "color": "blue",
-      "at": 0.15
+      "value": 242,
+      "at": 0.15,
+      "team": "IND"
      },
      {
       "label": "NAMAN DHIR",
-      "value": 214,
-      "color": "blue",
-      "at": 0.35
+      "value": 200,
+      "at": 0.35,
+      "team": "IND"
      },
      {
       "label": "VAIBHAV SOORYAVANSHI",
-      "value": 185,
-      "color": "blue",
-      "at": 0.5
+      "value": 195,
+      "at": 0.5,
+      "team": "IND"
      },
      {
       "label": "INDIA AS A TEAM",
-      "value": 177.5,
-      "color": "ink",
+      "value": 169.6,
       "dec": 1,
-      "text": "178",
-      "at": 0.7
+      "text": "170",
+      "at": 0.7,
+      "team": "IND",
+      "color": "ink"
      }
     ]
    }
   },
   {
-   "vo": "Now compare that with Santner. Against the seamers, India scored at one seventy-eight and lost a wicket every seventeen balls. Against Santner, they scored at just one twenty-three, and lost a wicket every thirteen balls.",
+   "vo": "Now compare that with Santner. Against the seamers, India scored at one seventy and lost a wicket every seventeen balls. Against Santner, they scored at just one nineteen, and lost a wicket every thirteen balls.",
    "scene": {
     "type": "compare",
     "head": {
@@ -160,7 +164,8 @@
     },
     "a": {
      "name": "NZ SEAMERS",
-     "color": "red"
+     "color": "red",
+     "team": "NZ"
     },
     "b": {
      "name": "SANTNER",
@@ -170,13 +175,13 @@
     "rows": [
      [
       "INDIA'S STRIKE RATE",
-      "178",
-      "123",
+      "170",
+      "119",
       "b"
      ],
      [
       "RUNS PER OVER",
-      "10.65",
+      "10.98",
       "7.37",
       "b"
      ],
@@ -190,7 +195,7 @@
    }
   },
   {
-   "vo": "So who struggled most? तिलक वर्मा made just nineteen off twenty-one balls against him. श्रेयस अय्यर scored at a run a ball and fell to him twice. Sanju Samson struck at one-fourteen. Only Naman Dhir really took him on.",
+   "vo": "So who struggled most? तिलक वर्मा made just eighteen off twenty-one balls against him. श्रेयस अय्यर scored at a run a ball and fell to him twice. Sanju Samson struck at one-fourteen. Only Naman Dhir really took him on.",
    "scene": {
     "type": "bars",
     "head": {
@@ -202,33 +207,37 @@
     "items": [
      {
       "label": "TILAK VARMA (21)",
-      "value": 90,
+      "value": 86,
       "color": "red",
-      "at": 0.08
+      "at": 0.08,
+      "team": "IND"
      },
      {
       "label": "SHREYAS IYER (17) · OUT TWICE",
       "value": 106,
       "color": "red",
-      "at": 0.3
+      "at": 0.3,
+      "team": "IND"
      },
      {
       "label": "SANJU SAMSON (14)",
       "value": 114,
       "color": "red",
-      "at": 0.55
+      "at": 0.55,
+      "team": "IND"
      },
      {
       "label": "NAMAN DHIR (25)",
-      "value": 184,
+      "value": 180,
       "color": "blue",
-      "at": 0.75
+      "at": 0.75,
+      "team": "IND"
      }
     ]
    }
   },
   {
-   "vo": "Why did it work? First, he owned the middle overs: almost all his deliveries came between overs seven and fifteen, when India wanted to accelerate. Second, it didn't matter which hand you batted with. Left-handers struck at one sixteen against him, right-handers at one twenty-eight. And third, this wasn't about spin in general. Bracewell's off-spin went for twelve an over.",
+   "vo": "Why did it work? First, he owned the middle overs: almost all his deliveries came between overs seven and fifteen, when India wanted to accelerate. Second, it didn't matter which hand you batted with. Left-handers struck at one oh nine against him, right-handers at one twenty-six. And third, this wasn't about spin in general. Bracewell's off-spin went for twelve an over.",
    "scene": {
     "type": "list",
     "head": {
@@ -242,7 +251,7 @@
      },
      {
       "h": "BOTH HANDS, SAME RESULT",
-      "d": "Left-handers SR 116 · right-handers SR 128",
+      "d": "Left-handers SR 109 · right-handers SR 126",
       "at": 0.38
      },
      {
@@ -355,7 +364,7 @@
    }
   },
   {
-   "vo": "The seamers went at ten point six five an over. Mitchell Santner, seven point three seven.",
+   "vo": "The seamers went at almost eleven an over. Mitchell Santner, seven point three seven.",
    "scene": {
     "type": "bars",
     "head": {
@@ -366,7 +375,7 @@
     "items": [
      {
       "label": "NZ SEAMERS",
-      "value": 10.65,
+      "value": 10.98,
       "color": "red"
      },
      {
@@ -401,7 +410,7 @@
    }
   },
   {
-   "vo": "तिलक वर्मा made nineteen off twenty-one against him. श्रेयस अय्यर fell to him twice.",
+   "vo": "तिलक वर्मा made eighteen off twenty-one against him. श्रेयस अय्यर fell to him twice.",
    "scene": {
     "type": "bars",
     "head": {
@@ -413,7 +422,7 @@
     "items": [
      {
       "label": "TILAK VARMA",
-      "value": 90,
+      "value": 86,
       "color": "red"
      },
      {
@@ -443,6 +452,7 @@
  ],
  "theme": "blue",
  "sources": [
-  "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)"
+  "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)",
+  "Figures: analysis/santner_problem.py"
  ]
 }

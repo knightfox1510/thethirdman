@@ -24,7 +24,8 @@
  "sources": [
   "Sportmonks ball-by-ball: all IPL matches 2013-2026 and India T20Is/T20 World Cup 2024-2026 (cached in data/)",
   "https://www.outlookindia.com/sports/cricket/sunrisers-hyderabad-vs-rajasthan-royals-indian-premier-league-2026-abhishek-sharma-golden-duck-jofra-archer-first-ball-wicket",
-  "https://www.onmanorama.com/sports/cricket/2026/04/21/ipl-2026-srh-vs-dc-abhishek-sharma-century.html"
+  "https://www.onmanorama.com/sports/cricket/2026/04/21/ipl-2026-srh-vs-dc-abhishek-sharma-century.html",
+  "Figures: analysis/abhishek_plan.py (first six balls = first six legal balls faced in each innings)"
  ],
  "long": [
   {
@@ -113,7 +114,7 @@
    }
   },
   {
-   "vo": "So when is he vulnerable? Right at the start, against right-arm pace. In his first six balls in the IPL, right-armers have held him to a strike rate of one-eleven, and taken a wicket every sixteen balls. Left-armers in the same spot go for one fifty-seven.",
+   "vo": "So when is he vulnerable? Right at the start, against right-arm pace. In his first six balls in the IPL, right-armers have held him to a strike rate of one-twenty, and taken a wicket every seventeen balls. Left-armers in the same spot go for one fifty-three, and need twenty-two balls per wicket.",
    "scene": {
     "type": "compare",
     "head": {
@@ -131,14 +132,14 @@
     "rows": [
      [
       "STRIKE RATE",
-      "111",
-      "157",
+      "120",
+      "153",
       "a"
      ],
      [
       "BALLS PER WICKET",
-      "16",
-      "26",
+      "17",
+      "22",
       "a"
      ]
     ]
@@ -242,7 +243,7 @@
     "items": [
      {
       "h": "RIGHT-ARM PACE, FIRST OVER",
-      "d": "Hard length: strike rate 111 in his first six balls"
+      "d": "Hard length: strike rate 120 in his first six balls"
      },
      {
       "h": "GULLY AND THIRD MAN",
@@ -319,19 +320,34 @@
   {
    "vo": "Twenty-five times in the IPL, he's been out within his first six balls.",
    "scene": {
-    "type": "bignum",
-    "value": 25,
-    "label": "OUT WITHIN SIX BALLS",
-    "color": "red",
-    "note": "In 89 IPL innings",
-    "count_dur": 0.8
+    "type": "matchup",
+    "head": {
+     "t": "OUT WITHIN SIX BALLS"
+    },
+    "left": {
+     "name": "RIGHT-ARM PACE",
+     "pose": "release",
+     "color": "gold"
+    },
+    "right": {
+     "name": "ABHISHEK",
+     "team": "SRH",
+     "pose": "stance"
+    },
+    "rows": [
+     [
+      "OUT WITHIN SIX BALLS",
+      "25",
+      "OF 89 INNINGS"
+     ]
+    ]
    }
   },
   {
-   "vo": "In those first six balls, right-arm pace holds him to a strike rate of one-eleven.",
+   "vo": "In those first six balls, right-arm pace holds him to a strike rate of one-twenty.",
    "scene": {
     "type": "bignum",
-    "value": 111,
+    "value": 120,
     "label": "SR VS RIGHT-ARM PACE, FIRST 6 BALLS",
     "color": "gold",
     "count_dur": 0.8

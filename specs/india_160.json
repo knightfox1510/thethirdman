@@ -85,15 +85,23 @@
   {
    "vo": "Why do a few kilometres matter? At one sixty, the ball reaches the batter in about four-tenths of a second. Every extra kilometre takes reaction time away.",
    "scene": {
-    "type": "bignum",
+    "type": "trajectory",
     "head": {
-     "t": "THE 0.4-SECOND PROBLEM"
+     "t": "THE 0.4-SECOND PROBLEM",
+     "sub": "ILLUSTRATIVE · SIDE-ON"
     },
-    "value": 0.4,
-    "dec": 1,
-    "suffix": " SEC",
-    "label": "RELEASE TO BATTER AT 160 KM/H",
-    "count_at": 0.25
+    "speed": "160 KM/H",
+    "balls": [
+     {
+      "length": 6.0,
+      "label": "0.4 SECONDS",
+      "c": "red",
+      "at": 0.15,
+      "dur": 0.5
+     }
+    ],
+    "note": "Release to batter at 160 km/h: about four-tenths of a second",
+    "noteat": 0.4
    }
   },
   {

@@ -103,7 +103,7 @@ import re
 STOP = {"THE", "AND", "FOR", "WITH", "OFF", "FROM", "THAT", "THIS", "WAS", "ARE", "HIS", "HER", "ITS", "OUT", "NOT", "BUT",
         "HAS", "HAD", "YOU", "ALL", "CAN", "OUR", "BALL", "BALLS", "OVER", "OVERS", "RUNS", "RATE", "IPL", "INDIA", "TEAM"}
 CUE_FIELDS = {"lines": ("t",), "items": ("label", "h"), "tiles": ("l", "v"), "events": ("t", "y"),
-              "balls": ("n",), "marks": ("l",), "shots": ("label",)}
+              "balls": ("n", "label"), "marks": ("l",), "shots": ("label",)}
 
 
 def _norm(w):
@@ -225,9 +225,12 @@ def sc_bars(c, g, t, D, s):
         st = at(it, i, n, D, .06, s.get("spread", .6))
         p = eo(prog(t, st, st + 1.0)); a = prog(t, st, st + .3)
         y = top + i * slot
-        text(c, it["label"], g.x0, y + lab, fit(it["label"], g.cw, lab, "interB", 4), "interB", MUTED, a, track=4)
+        lx = g.x0
+        if it.get("team"): lx += team_chip(c, it["team"], g.x0, y + lab - lab * 1.05, lab * 1.3, a) + 14
+        text(c, it["label"], lx, y + lab, fit(it["label"], g.cw - (lx - g.x0), lab, "interB", 4), "interB", MUTED, a, track=4)
         c.drawRect(skia.Rect.MakeXYWH(g.x0, y + lab + 14, bw, bh), paint(LINE, .35 * a))
         w = bw * clamp(it["value"] / mx) * p
+        if it.get("team") and not it.get("color"): it["color"] = "team:" + it["team"]
         rrect(c, g.x0, y + lab + 14, w, bh, 8, C(it.get("color")), a)
         vs = it.get("text") or f"{it['value'] * p:,.{dec}f}{unit}"
         if it.get("text") and p < 1: vs = f"{it['value'] * p:,.{dec}f}{unit}"
@@ -241,7 +244,8 @@ def sc_bars(c, g, t, D, s):
 def sc_compare(c, g, t, D, s):
     head(c, g, t, s)
     A, B, rows = s["a"], s["b"], s["rows"]; n = len(rows)
-    ca, cb = C(A.get("color", "blue")), C(B.get("color", "gold"))
+    ca = C(A.get("color") or ("team:" + A["team"] if A.get("team") else "blue"))
+    cb = C(B.get("color") or ("team:" + B["team"] if B.get("team") else "gold"))
     top = g.top + 10
     p0 = eo(prog(t, 0, .6))
     xa, xb = g.x0 + g.cw * .17, g.x1 - g.cw * .17
@@ -1123,6 +1127,236 @@ def sc_fieldplan(c, g, t, D, s):
 
 
 SCENES["fieldplan"] = sc_fieldplan
+
+
+# ------------------------------------------------------------------ team colours
+# Team identity through colour and short codes only: no logos. Each team has a main colour and a
+# light/dark alternate; team_col() picks whichever reads against the current theme background.
+TEAMS = {
+    # IPL
+    "CSK": ((250, 200, 20), (190, 140, 0), "Chennai Super Kings"),
+    "MI": ((0, 92, 185), (90, 160, 240), "Mumbai Indians"),
+    "RCB": ((214, 30, 40), (240, 90, 90), "Royal Challengers Bengaluru"),
+    "KKR": ((70, 40, 130), (160, 120, 230), "Kolkata Knight Riders"),
+    "SRH": ((245, 120, 30), (200, 90, 10), "Sunrisers Hyderabad"),
+    "DC": ((0, 90, 190), (230, 60, 60), "Delhi Capitals"),
+    "PBKS": ((220, 30, 45), (245, 100, 100), "Punjab Kings"),
+    "RR": ((235, 30, 140), (250, 120, 190), "Rajasthan Royals"),
+    "GT": ((25, 45, 90), (140, 175, 220), "Gujarat Titans"),
+    "LSG": ((0, 160, 220), (0, 110, 160), "Lucknow Super Giants"),
+    # internationals
+    "IND": ((25, 100, 200), (110, 170, 245), "India"),
+    "NZ": ((25, 25, 25), (205, 205, 205), "New Zealand"),
+    "AUS": ((250, 200, 20), (180, 130, 0), "Australia"),
+    "ENG": ((20, 50, 120), (120, 160, 230), "England"),
+    "PAK": ((0, 110, 60), (80, 190, 120), "Pakistan"),
+    "SA": ((0, 120, 75), (80, 195, 130), "South Africa"),
+    "SL": ((20, 50, 120), (240, 180, 40), "Sri Lanka"),
+    "WI": ((125, 20, 30), (220, 90, 100), "West Indies"),
+    "AFG": ((0, 70, 160), (90, 150, 240), "Afghanistan"),
+    "BAN": ((0, 105, 60), (220, 40, 50), "Bangladesh"),
+}
+TEAM_BY_NAME = {v[2]: k for k, v in TEAMS.items()}
+
+
+def _lum(c):
+    return (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]) / 255
+
+
+def team_col(code):
+    code = TEAM_BY_NAME.get(code, code)
+    if code not in TEAMS: return INK
+    main, alt, _ = TEAMS[code]
+    return main if abs(_lum(main) - _lum(BG)) >= .28 else alt
+
+
+def team_chip(c, code, x, y, h, a=1.0, align="l"):
+    """Rounded tag with the team's short code in its colour (no logo). Returns its width."""
+    code = TEAM_BY_NAME.get(code, code)
+    col = team_col(code)
+    fs = h * .62
+    w = twidth(code, fs, "interB", 2) + h * .7
+    x0 = x if align == "l" else (x - w if align == "r" else x - w / 2)
+    rrect(c, x0, y, w, h, h * .22, col, a)
+    tc = (255, 255, 255) if _lum(col) < .6 else (16, 20, 30)
+    text(c, code, x0 + w / 2, y + h * .5 + fs * .36, fs, "interB", tc, a, "c", track=2)
+    return w
+
+
+_C0 = C
+
+
+def C(x):  # noqa: F811  (extends the colour lookup with "team:RCB" / bare team codes)
+    if isinstance(x, str):
+        if x.startswith("team:"): return team_col(x[5:])
+        if x in TEAMS: return team_col(x)
+    return _C0(x)
+
+
+# ------------------------------------------------------------------ silhouettes
+# Original flat figures built from rounded limbs. Coordinates are in body heights (feet at 0, head ~0.92),
+# facing +x. Joints: hd head, nk neck, pv pelvis, fk/ff front knee/foot, bk/bf back knee/foot,
+# fe/fh front elbow/hand, be/bh back elbow/hand, bat = bat tip (from the hands).
+POSES = {
+    "stance": dict(hd=(.03, .90), nk=(.0, .79), pv=(-.03, .50), fk=(.07, .27), ff=(.12, .0), bk=(-.10, .26), bf=(-.15, .0),
+                   fe=(.07, .62), fh=(.0, .52), be=(-.05, .63), bh=(-.01, .53), bat=(-.13, .10)),
+    "drive": dict(hd=(.20, .82), nk=(.13, .73), pv=(.0, .45), fk=(.20, .25), ff=(.30, .0), bk=(-.14, .20), bf=(-.27, .0),
+                  fe=(.27, .62), fh=(.30, .78), be=(.20, .70), bh=(.29, .80), bat=(.10, 1.10)),
+    "pull": dict(hd=(-.02, .89), nk=(-.03, .78), pv=(-.04, .48), fk=(.10, .26), ff=(.16, .0), bk=(-.13, .25), bf=(-.18, .0),
+                 fe=(.10, .74), fh=(.04, .80), be=(-.06, .70), bh=(.02, .80), bat=(-.42, .92)),
+    "defend": dict(hd=(.14, .86), nk=(.09, .76), pv=(.0, .47), fk=(.18, .26), ff=(.24, .0), bk=(-.10, .23), bf=(-.20, .0),
+                   fe=(.18, .58), fh=(.20, .48), be=(.10, .62), bh=(.20, .52), bat=(.24, .06)),
+    "release": dict(hd=(.12, .89), nk=(.08, .79), pv=(.0, .52), fk=(.15, .28), ff=(.24, .0), bk=(-.17, .32), bf=(-.31, .12),
+                    fe=(.12, 1.0), fh=(.15, 1.18), be=(.02, .62), bh=(-.07, .55)),
+    "spin": dict(hd=(.07, .91), nk=(.04, .80), pv=(.0, .52), fk=(.10, .27), ff=(.16, .0), bk=(-.11, .28), bf=(-.20, .06),
+                 fe=(.11, .98), fh=(.13, 1.12), be=(.08, .64), bh=(.03, .58)),
+    "keeper": dict(hd=(.10, .62), nk=(.06, .54), pv=(-.06, .36), fk=(.10, .22), ff=(.10, .0), bk=(-.02, .20), bf=(-.10, .0),
+                   fe=(.16, .40), fh=(.20, .30), be=(.12, .38), bh=(.20, .31)),
+}
+
+
+def figure(c, pose, x, y, h, col=None, a=1.0, mirror=False, ball=False):
+    """Draw an original flat cricketer silhouette. (x, y) = point between the feet; h = height in px."""
+    P = POSES[pose]; col = col or INK; sx = -1 if mirror else 1
+    J = lambda k: (x + sx * P[k][0] * h, y - P[k][1] * h)
+    back = tuple(int(v * .62 + b * .38) for v, b in zip(col, BG))   # far-side limbs, slightly receded
+    lw, tw = h * .105, h * .16
+
+    def limb(pts, w, cc):
+        pa = skia.Path(); pa.moveTo(*pts[0])
+        for q in pts[1:]: pa.lineTo(*q)
+        p = paint(cc, a, stroke=w); p.setStrokeCap(skia.Paint.kRound_Cap); p.setStrokeJoin(skia.Paint.kRound_Join)
+        c.drawPath(pa, p)
+
+    limb([J("pv"), J("bk"), J("bf")], lw, back)
+    limb([J("nk"), J("be"), J("bh")], lw * .8, back)
+    if "bat" in P:
+        hx, hy = J("bh"); bx, by = J("bat")
+        ang = math.atan2(by - hy, bx - hx); L = math.hypot(bx - hx, by - hy)
+        c.save(); c.translate(hx, hy); c.rotate(math.degrees(ang))
+        rrect(c, 0, -h * .018, L * .32, h * .036, h * .018, col, a)                # handle
+        rrect(c, L * .30, -h * .042, L * .70, h * .084, h * .03, (215, 190, 140) if _lum(BG) < .5 else (170, 135, 80), a)  # blade
+        c.restore()
+    limb([J("pv"), J("fk"), J("ff")], lw, col)
+    limb([J("nk"), J("pv")], tw, col)
+    limb([J("nk"), J("fe"), J("fh")], lw * .8, col)
+    hx, hy = J("hd")
+    c.drawCircle(hx, hy, h * .075, paint(col, a))
+    if "bat" in P or pose == "keeper":   # helmet peak
+        limb([(hx + sx * h * .02, hy - h * .015), (hx + sx * h * .095, hy - h * .005)], h * .025, col)
+    if ball:
+        bx, by = J("fh")
+        c.drawCircle(bx + sx * h * .02, by - h * .03, h * .03, paint(RED, a))
+
+
+def sc_matchup(c, g, t, D, s):
+    """Bowler vs batter, face to face, with optional stat rows between them."""
+    head(c, g, t, s)
+    L, R = s["left"], s["right"]
+    long = g.fmt == "long"
+    fh = 430 if long else 470
+    fy = g.bot - 60 if long else g.top + 500
+    xl, xr = (g.x0 + 170, g.x1 - 170) if long else (g.x0 + 150, g.x1 - 150)
+    for k, (side, x, mir) in enumerate([(L, xl, False), (R, xr, True)]):
+        p = eo(prog(t, .1 + k * .25, .7 + k * .25))
+        cc = C(side.get("color") or (("team:" + side["team"]) if side.get("team") else ("gold" if k == 0 else "ink")))
+        c.drawOval(skia.Rect.MakeXYWH(x - fh * .3, fy - fh * .03, fh * .6, fh * .06), paint(cc, .18 * p, blur=6))
+        figure(c, side.get("pose", "release" if k == 0 else "stance"), x + (1 - p) * (-60 if k == 0 else 60), fy, fh, cc, p,
+               mirror=mir, ball=side.get("ball", k == 0))
+        ny = fy + 56 if long else fy + 60
+        text(c, side["name"], x, ny, fit(side["name"], 400, 48, "bebas", 2), "bebas", cc, p, "c", track=2)
+        if side.get("team"): team_chip(c, side["team"], x, ny + 18, 34, p, "c")
+        elif side.get("sub"): text(c, side["sub"], x, ny + 40, 22, "interB", MUTED, p, "c", track=3)
+    rows = s.get("rows", [])
+    if rows:
+        if long:
+            cx0, cw, top = g.cx - 360, 720, g.top + 40
+        else:
+            cx0, cw, top = g.x0, g.cw, fy + 150
+        slot = 120 if long else 110
+        for i, r in enumerate(rows):
+            st = r[3] if len(r) > 3 and isinstance(r[3], (int, float)) else None
+            st = D * st if st is not None else rv(i, len(rows), D, .3, .75)
+            p = eo(prog(t, st, st + .5)); y = top + i * slot
+            rrect(c, cx0, y, cw, slot - 18, 14, PANEL, .75 * p)
+            text(c, r[0], cx0 + cw / 2, y + (slot - 18) / 2 + 9, fit(r[0], cw * .42, 22, "interB", 3), "interB", MUTED, p, "c", track=3)
+            for val, x, k in [(r[1], cx0 + cw * .14, 0), (r[2], cx0 + cw * .86, 1)]:
+                sd = L if k == 0 else R
+                cc = C(sd.get("color") or (("team:" + sd["team"]) if sd.get("team") else ("gold" if k == 0 else "ink")))
+                text(c, val, x, y + (slot - 18) / 2 + 26, fit(val, cw * .26, 72, "bebas"), "bebas", cc, p, "c")
+
+
+# ------------------------------------------------------------------ ball trajectory (side-on)
+LENGTH_ZONES = [("YORKER", 0, 2), ("FULL", 2, 5), ("GOOD", 5, 8), ("SHORT", 8, 11.5)]
+
+
+def sc_trajectory(c, g, t, D, s):
+    """Side-on view of the pitch: bowler at left, batter at right, deliveries drawn on cue.
+    balls: [{length (m from batter's stumps), label, c, release (m), end (m height at batter), loop, at}]"""
+    head(c, g, t, s)
+    long = g.fmt == "long"
+    gx0, gx1 = (g.x0 + 60, g.x1 - 60) if long else (g.x0 + 10, g.x1 - 10)
+    gy = g.bot - 150 if long else g.top + 640
+    ppm = (gx1 - gx0) / 20.12               # px per metre along the pitch
+    vs = ppm * (2.3 if long else 3.4)       # vertical exaggeration so heights read clearly
+    X = lambda m: gx1 - m * ppm             # m = metres from the batter's stumps
+    Y = lambda hm: gy - hm * vs
+    pa = eo(prog(t, 0, .6))
+    # pitch strip, length zones, creases, stumps
+    rrect(c, gx0 - 20, gy, gx1 - gx0 + 40, 14, 4, (190, 165, 110), .8 * pa)
+    for k, (nm, a_, b_) in enumerate(s.get("zones", LENGTH_ZONES)):
+        x_a, x_b = X(b_), X(a_)
+        hl = nm in s.get("hl", [])
+        c.drawRect(skia.Rect.MakeLTRB(x_a, gy + 20, x_b, gy + 64), paint(GOLD if hl else LINE, (.5 if hl else .22) * pa))
+        text(c, nm, (x_a + x_b) / 2, gy + 50, fit(nm, x_b - x_a - 10, 20 if long else 18, "interB", 2), "interB",
+             INK if hl else MUTED, pa, "c", track=2)
+    for m in (0, 20.12):
+        x = X(m)
+        for dx in (-.11, 0, .11):
+            c.drawLine(x + dx * ppm, gy, x + dx * ppm, Y(.71), paint(INK, .85 * pa, stroke=4))
+    # figures (bowler at release, batter in stance) at true scale on the same vertical exaggeration
+    fh = 1.8 * vs * .92
+    bpose = s.get("bowler_pose", "release"); bfx = X(19.4)
+    figure(c, bpose, bfx, gy, fh, C(s.get("bowler_c", "muted")), .9 * pa)
+    hand = (bfx + POSES[bpose]["fh"][0] * fh, gy - POSES[bpose]["fh"][1] * fh)   # ball leaves the bowling hand
+    figure(c, s.get("batter_pose", "stance"), X(-.5), gy, fh, C(s.get("batter_c", "ink")), .9 * pa, mirror=True)
+    if s.get("speed"):
+        text(c, s["speed"], hand[0] + 30, hand[1] - 40, 44 if long else 38, "bebas", GOLD, pa, "l", track=2)
+    # deliveries
+    balls = s.get("balls", [])
+    for k, b in enumerate(balls):
+        st = b.get("_ts", D * b.get("at", .15 + .6 * k / max(1, len(balls))))
+        p = prog(t, st, st + b.get("dur", .9))
+        if p <= 0: continue
+        Lm = b["length"]; end = b.get("end", clamp(.15 + .16 * Lm, .1, 2.0))
+        x0, y0 = hand; xb, yb = X(Lm), Y(0); x1, y1 = X(-.3), Y(end)
+        loop = b.get("loop", 0)
+        path = skia.Path(); path.moveTo(x0, y0)
+        path.quadTo((x0 + xb) / 2, (y0 + yb) / 2 - loop * vs, xb, yb)
+        path.quadTo((xb + x1) / 2, (yb + y1) / 2 - .12 * vs, x1, y1)
+        meas = skia.PathMeasure(path, False); L1 = meas.getLength()
+        seg = skia.Path(); meas.getSegment(0, L1 * eio(p), seg, True)
+        cc = C(b.get("c", "gold"))
+        c.drawPath(seg, paint(cc, .3, stroke=10, blur=6)); c.drawPath(seg, paint(cc, 1, stroke=3.5))
+        pos, _ = meas.getPosTan(L1 * eio(p))
+        c.drawCircle(pos.x(), pos.y(), 9 if long else 10, paint(RED if cc != RED else (255, 255, 255)))
+        # bounce marker + label once the ball has pitched
+        pb = clamp((p - .55) / .25)
+        if pb > 0:
+            c.drawCircle(xb, yb, 16 * eback(pb), paint(cc, pb, stroke=3))
+            if b.get("label"):
+                ly = gy + 112 + k * 42
+                c.drawLine(xb, gy + 66, xb, ly - 30, paint(cc, .6 * pb, stroke=2))
+                text(c, b["label"], xb, ly, 30 if long else 30, "bebas", cc, pb, "c", track=2)
+    if s.get("note"):
+        pn = eo(prog(t, D * s.get("noteat", .5), D * s.get("noteat", .5) + .6))
+        nx, ny = (g.x0, g.top + 30) if long else (g.x0, g.top + 30)
+        for j, l in enumerate(wrap(s["note"], 1300 if long else g.cw, 30, "interSB")):
+            text(c, l, nx, ny + j * 40, 30, "interSB", MUTED, pn)
+
+
+SCENES["matchup"] = sc_matchup
+SCENES["trajectory"] = sc_trajectory
 
 
 if __name__ == "__main__":

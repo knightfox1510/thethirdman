@@ -3,54 +3,414 @@
  "theme": "whites",
  "tag": "DATA STORY",
  "tagsub": "THE POWERPLAY REVOLUTION",
- "files": {"long": "The_IPL_Powerplay_Revolution", "short": "Powerplay_Revolution_Short_9x16"},
- "thumb": {"kicker": "IPL 2013 → 2026", "lines": [{"t": "THE POWERPLAY"}, {"t": "REVOLUTION", "c": "gold"}], "hero": "10.1", "herosize": 460},
+ "files": {
+  "long": "The_IPL_Powerplay_Revolution",
+  "short": "Powerplay_Revolution_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "IPL 2013 → 2026",
+  "lines": [
+   {
+    "t": "THE POWERPLAY"
+   },
+   {
+    "t": "REVOLUTION",
+    "c": "gold"
+   }
+  ],
+  "hero": "10.1",
+  "herosize": 460
+ },
  "sources": [
   "Sportmonks ball-by-ball, every IPL match 2013-2026 (data/ipl), super overs excluded; powerplay = overs 1-6",
-  "SRH 125/0 v DC, 20 Apr 2024: IPL record powerplay score"
+  "SRH 125/0 v DC, 20 Apr 2024: IPL record powerplay score",
+  "Figures: analysis/powerplay_revolution.py"
  ],
  "long": [
-  {"vo": "In twenty thirteen, IPL teams scored under seven an over in the powerplay. In twenty twenty-six, they scored over ten. The first six overs have become a different sport.",
-   "scene": {"type": "statement", "lines": [{"t": "UNDER 7 AN OVER."}, {"t": "NOW OVER 10.", "c": "gold"}], "sub": "IPL powerplay run rate, 2013 vs 2026"}},
-  {"vo": "We went through every ball of the IPL since twenty thirteen. For almost a decade, the powerplay barely moved, hovering around seven and a half to eight an over. Then, in twenty twenty-three, it took off. Eight point seven. Then nine and a half. And in twenty twenty-six, ten point one.",
-   "scene": {"type": "line", "head": {"t": "THE TAKE-OFF", "sub": "IPL POWERPLAY RUN RATE · OVERS 1-6"}, "ymin": 6, "ymax": 11, "yticks": [6, 7, 8, 9, 10, 11], "ylabel": "RUNS PER OVER",
-             "xticks": [[2013, "2013"], [2016, "2016"], [2019, "2019"], [2022, "2022"], [2026, "2026"]],
-             "series": [{"name": "10.1", "color": "gold", "at": 0.1, "dur": 0.75,
-                         "points": [[2013, 6.93], [2014, 7.55], [2015, 7.76], [2016, 7.7], [2017, 8.33], [2018, 8.42], [2019, 8.06], [2020, 7.71], [2021, 7.72], [2022, 7.82], [2023, 8.74], [2024, 9.47], [2025, 9.64], [2026, 10.12]]}]}},
-  {"vo": "Look at sixty-run powerplays. In twenty thirteen, barely one innings in twenty got there. By twenty twenty-two, one in seven. In twenty twenty-six, more than half of all innings did.",
-   "scene": {"type": "bars", "head": {"t": "60+ IN THE POWERPLAY", "sub": "SHARE OF ALL INNINGS"}, "max": 60, "dec": 0, "suffix": "%",
-             "items": [{"label": "2013", "value": 5.3, "text": "5%", "color": "ink"}, {"label": "2018", "value": 18.3, "text": "18%", "color": "ink"},
-                       {"label": "2022", "value": 14.2, "text": "14%", "color": "ink"}, {"label": "2024", "value": 36.6, "text": "37%", "color": "gold"},
-                       {"label": "2026", "value": 50.7, "text": "51%", "color": "gold"}]}},
-  {"vo": "Eighty or more in the powerplay used to be a freak event. Zero times in twenty thirteen. In twenty twenty-six, it happened seventeen times.",
-   "scene": {"type": "compare", "head": {"t": "80+ POWERPLAYS", "sub": "INNINGS PER SEASON"}, "a": {"name": "2013", "color": "ink"}, "b": {"name": "2026", "color": "gold"},
-             "rows": [["80+ POWERPLAYS", "0", "17", "b"], ["SIXES PER MATCH, OVERS 1-6", "1.5", "6.2", "b"]]}},
-  {"vo": "And the record belongs to Sunrisers Hyderabad: one hundred and twenty-five without loss in six overs, against Delhi, in April twenty twenty-four.",
-   "scene": {"type": "bignum", "head": {"t": "THE RECORD"}, "value": 125, "suffix": "/0", "label": "SRH V DC · 20 APRIL 2024", "color": "gold", "note": "The highest powerplay score in IPL history"}},
-  {"vo": "So what changed? Here's the twist. Teams aren't losing many more wickets. In twenty thirteen, the powerplay cost two point eight wickets per match. In twenty twenty-six, three point two. Almost the same risk, for three extra runs an over.",
-   "scene": {"type": "stats", "head": {"t": "THE TWIST", "sub": "POWERPLAY WICKETS PER MATCH (BOTH TEAMS)"},
-             "tiles": [{"v": "2.8", "l": "2013", "c": "ink"}, {"v": "3.2", "l": "2026", "c": "gold"}, {"v": "+3.2", "l": "EXTRA RUNS PER OVER", "c": "gold"}]}},
-  {"vo": "Three things drove it. First, the Impact Player rule in twenty twenty-three gave every team an extra batter, so a wicket costs less. Second, a new generation of openers who attack from ball one, like अभिषेक शर्मा and Travis Head. And third, sixes became the plan, not the risk.",
-   "scene": {"type": "list", "head": {"t": "WHAT CHANGED"},
-             "items": [{"h": "THE IMPACT PLAYER", "d": "From 2023: an extra batter, so wickets cost less", "c": "gold"},
-                       {"h": "A NEW KIND OF OPENER", "d": "Abhishek Sharma, Travis Head: attack from ball one"},
-                       {"h": "SIXES AS THE PLAN", "d": "Powerplay sixes per match: 1.5 in 2013, 6.2 in 2026"}]}},
-  {"vo": "Our verdict? The powerplay is no longer about survival. It's where T20 matches are won.",
-   "scene": {"type": "statement", "kicker": "OUR VERDICT", "lines": [{"t": "NOT SURVIVAL."}, {"t": "IT'S WHERE", "c": "gold"}, {"t": "MATCHES ARE WON.", "c": "gold"}]}},
-  {"vo": "Will we see a one-fifty powerplay? Tell us in the comments, and subscribe for more data stories.",
-   "scene": {"type": "cta", "lines": [{"t": "A 150"}, {"t": "POWERPLAY NEXT?", "c": "gold"}]}}
+  {
+   "vo": "In twenty thirteen, IPL teams scored under seven an over in the powerplay. In twenty twenty-six, they scored over ten. The first six overs have become a different sport.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "UNDER 7 AN OVER."
+     },
+     {
+      "t": "NOW OVER 10.",
+      "c": "gold"
+     }
+    ],
+    "sub": "IPL powerplay run rate, 2013 vs 2026"
+   }
+  },
+  {
+   "vo": "We went through every ball of the IPL since twenty thirteen. For almost a decade, the powerplay barely moved, hovering around seven and a half to eight an over. Then, in twenty twenty-three, it took off. Eight point seven. Then nine and a half. And in twenty twenty-six, ten point one.",
+   "scene": {
+    "type": "line",
+    "head": {
+     "t": "THE TAKE-OFF",
+     "sub": "IPL POWERPLAY RUN RATE · OVERS 1-6"
+    },
+    "ymin": 6,
+    "ymax": 11,
+    "yticks": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "ylabel": "RUNS PER OVER",
+    "xticks": [
+     [
+      2013,
+      "2013"
+     ],
+     [
+      2016,
+      "2016"
+     ],
+     [
+      2019,
+      "2019"
+     ],
+     [
+      2022,
+      "2022"
+     ],
+     [
+      2026,
+      "2026"
+     ]
+    ],
+    "series": [
+     {
+      "name": "10.1",
+      "color": "gold",
+      "at": 0.1,
+      "dur": 0.75,
+      "points": [
+       [
+        2013,
+        6.93
+       ],
+       [
+        2014,
+        7.55
+       ],
+       [
+        2015,
+        7.76
+       ],
+       [
+        2016,
+        7.7
+       ],
+       [
+        2017,
+        8.33
+       ],
+       [
+        2018,
+        8.42
+       ],
+       [
+        2019,
+        8.06
+       ],
+       [
+        2020,
+        7.71
+       ],
+       [
+        2021,
+        7.72
+       ],
+       [
+        2022,
+        7.82
+       ],
+       [
+        2023,
+        8.74
+       ],
+       [
+        2024,
+        9.47
+       ],
+       [
+        2025,
+        9.64
+       ],
+       [
+        2026,
+        10.12
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Look at sixty-run powerplays. In twenty thirteen, barely one innings in twenty got there. By twenty twenty-two, one in seven. In twenty twenty-six, more than half of all innings did.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "60+ IN THE POWERPLAY",
+     "sub": "SHARE OF ALL INNINGS"
+    },
+    "max": 60,
+    "dec": 0,
+    "suffix": "%",
+    "items": [
+     {
+      "label": "2013",
+      "value": 5.3,
+      "text": "5%",
+      "color": "ink"
+     },
+     {
+      "label": "2018",
+      "value": 18.3,
+      "text": "18%",
+      "color": "ink"
+     },
+     {
+      "label": "2022",
+      "value": 14.2,
+      "text": "14%",
+      "color": "ink"
+     },
+     {
+      "label": "2024",
+      "value": 36.6,
+      "text": "37%",
+      "color": "gold"
+     },
+     {
+      "label": "2026",
+      "value": 50.7,
+      "text": "51%",
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Eighty or more in the powerplay used to be a freak event. Zero times in twenty thirteen. In twenty twenty-six, it happened seventeen times.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "80+ POWERPLAYS",
+     "sub": "INNINGS PER SEASON"
+    },
+    "a": {
+     "name": "2013",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2026",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "80+ POWERPLAYS",
+      "0",
+      "17",
+      "b"
+     ],
+     [
+      "SIXES PER MATCH, OVERS 1-6",
+      "1.5",
+      "6.2",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And the record belongs to Sunrisers Hyderabad: one hundred and twenty-five without loss in six overs, against Delhi, in April twenty twenty-four.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE RECORD"
+    },
+    "value": 125,
+    "suffix": "/0",
+    "label": "SRH V DC · 20 APRIL 2024",
+    "color": "gold",
+    "note": "The highest powerplay score in IPL history"
+   }
+  },
+  {
+   "vo": "So what changed? Here's the twist. Teams aren't losing many more wickets. In twenty thirteen, the powerplay cost two point eight wickets per match. In twenty twenty-six, three point two. Almost the same risk, for three extra runs an over.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE TWIST",
+     "sub": "POWERPLAY WICKETS PER MATCH (BOTH TEAMS)"
+    },
+    "tiles": [
+     {
+      "v": "2.8",
+      "l": "2013",
+      "c": "ink"
+     },
+     {
+      "v": "3.2",
+      "l": "2026",
+      "c": "gold"
+     },
+     {
+      "v": "+3.2",
+      "l": "EXTRA RUNS PER OVER",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Three things drove it. First, the Impact Player rule in twenty twenty-three gave every team an extra batter, so a wicket costs less. Second, a new generation of openers who attack from ball one, like अभिषेक शर्मा and Travis Head. And third, sixes became the plan, not the risk.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHAT CHANGED"
+    },
+    "items": [
+     {
+      "h": "THE IMPACT PLAYER",
+      "d": "From 2023: an extra batter, so wickets cost less",
+      "c": "gold"
+     },
+     {
+      "h": "A NEW KIND OF OPENER",
+      "d": "Abhishek Sharma, Travis Head: attack from ball one"
+     },
+     {
+      "h": "SIXES AS THE PLAN",
+      "d": "Powerplay sixes per match: 1.5 in 2013, 6.2 in 2026"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? The powerplay is no longer about survival. It's where T20 matches are won.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "NOT SURVIVAL."
+     },
+     {
+      "t": "IT'S WHERE",
+      "c": "gold"
+     },
+     {
+      "t": "MATCHES ARE WON.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Will we see a one-fifty powerplay? Tell us in the comments, and subscribe for more data stories.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "A 150"
+     },
+     {
+      "t": "POWERPLAY NEXT?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
  ],
  "short": [
-  {"vo": "IPL teams now score over ten an over in the powerplay.",
-   "scene": {"type": "bignum", "value": 10.1, "dec": 1, "label": "POWERPLAY RUN RATE · IPL 2026", "color": "gold", "count_dur": 0.8}},
-  {"vo": "In twenty thirteen, it was under seven.",
-   "scene": {"type": "bars", "head": {"t": "RUNS PER OVER, OVERS 1-6"}, "max": 11, "dec": 1,
-             "items": [{"label": "2013", "value": 6.93, "text": "6.9", "color": "ink"}, {"label": "2026", "value": 10.12, "text": "10.1", "color": "gold"}]}},
-  {"vo": "Eighty-run powerplays went from zero to seventeen in a season.",
-   "scene": {"type": "bignum", "value": 17, "label": "80+ POWERPLAYS IN 2026", "color": "gold", "note": "Zero in 2013", "count_dur": 0.7}},
-  {"vo": "But teams lose almost the same number of wickets. The risk didn't change. The mindset did.",
-   "scene": {"type": "statement", "lines": [{"t": "SAME RISK."}, {"t": "NEW", "c": "gold"}, {"t": "MINDSET.", "c": "gold"}]}},
-  {"vo": "Will we see a one-fifty powerplay? Full breakdown on the channel.",
-   "scene": {"type": "cta", "lines": [{"t": "A 150"}, {"t": "POWERPLAY?", "c": "gold"}]}}
+  {
+   "vo": "IPL teams now score over ten an over in the powerplay.",
+   "scene": {
+    "type": "bignum",
+    "value": 10.1,
+    "dec": 1,
+    "label": "POWERPLAY RUN RATE · IPL 2026",
+    "color": "gold",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "In twenty thirteen, it was under seven.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER, OVERS 1-6"
+    },
+    "max": 11,
+    "dec": 1,
+    "items": [
+     {
+      "label": "2013",
+      "value": 6.93,
+      "text": "6.9",
+      "color": "ink"
+     },
+     {
+      "label": "2026",
+      "value": 10.12,
+      "text": "10.1",
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Eighty-run powerplays went from zero to seventeen in a season.",
+   "scene": {
+    "type": "bignum",
+    "value": 17,
+    "label": "80+ POWERPLAYS IN 2026",
+    "color": "gold",
+    "note": "Zero in 2013",
+    "count_dur": 0.7
+   }
+  },
+  {
+   "vo": "But teams lose almost the same number of wickets. The risk didn't change. The mindset did.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "SAME RISK."
+     },
+     {
+      "t": "NEW",
+      "c": "gold"
+     },
+     {
+      "t": "MINDSET.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Will we see a one-fifty powerplay? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "A 150"
+     },
+     {
+      "t": "POWERPLAY?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
  ]
 }

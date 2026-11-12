@@ -40,9 +40,19 @@ Scene types (colors: ink, gold, blue, red, orange, muted – mapped per theme):
 - `gauge`: value, min, max, marks[{v,l,c}]
 - `over`: balls[{r,n,c}]  (an imagined over)
 - `swap`: left/right {name, role, from, to, color}  (trades)
-- `fieldplan`: fielders[], hl[], length{from,to,label,c}, shots[{to,label,c,lift,bend}], lines, sub
+- `fieldplan`: fielders[], hl[], length{from,to,label,c}, shots[{to,label,c,lift,bend}], lines, sub, lefty (mirror for a left-handed batter)
+- `trajectory`: side-on pitch view. balls[{length (m from batter's stumps), label, c, loop, end, at, dur}], hl[] (length zones),
+  speed, note, bowler_pose, bowler_c, batter_c
+- `matchup`: two original figures face to face. left/right {name, pose, team|color, sub}, rows[[label, left, right]]
 - `cta`: lines, pill, ask
+Team colours: any color can be "team:RCB" (or a bare team code); bars items and compare/matchup sides accept "team": "MI"
+for a coloured code chip. Codes: CSK MI RCB KKR SRH DC PBKS RR GT LSG IND NZ AUS ENG PAK SA SL WI AFG BAN (no logos).
+Figure poses: stance, drive, pull, defend, release (pace), spin, keeper.
 Any item may carry "at" (0–1 of the scene) but items auto-sync to the narration word that matches their label.
+
+## Analysis
+`analysis/<slug>.py` prints every Sportmonks-derived figure used in that video's spec (conventions in analysis/common.py).
+Run it after a data refresh and update the spec if anything moved.
 
 ## Rules baked in
 - Indian names in Devanagari inside "vo" (correct pronunciation); captions map them back (SHOW dict in engine.py).
