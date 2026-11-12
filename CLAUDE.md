@@ -3,7 +3,8 @@
 A faceless cricket channel ("Cricket from a different angle"). Every video is a JSON spec in `specs/`; `engine.py` renders it. See README.md for setup, commands and the spec schema, and CATALOG.md for the index of every video.
 
 ## Secrets
-- API keys come ONLY from env vars: `XI_KEY` (ElevenLabs) and `SM_KEY` (Sportmonks). Never write them into any file, spec, commit or log.
+- API keys come ONLY from env vars: `XI_KEY` (ElevenLabs), `SM_KEY` (Sportmonks), and for publishing `G_CLIENT_ID`, `G_CLIENT_SECRET`, `G_DRIVE_TOKEN`, `G_YT_TOKEN`. Never write them into any file, spec, commit or log (publish/gauth.py also reads a RAM-only /dev/shm file during a session).
+- Upload to YouTube only when the user asks. Drive sync (publish/drive.py) runs after every build.
 
 ## Voice (ElevenLabs "Ruhaan", eleven_multilingual_v2)
 - Write Indian player names in Devanagari in `vo` (e.g. अभिषेक शर्मा). Add each new name to `SHOW` in engine.py so captions show English.
