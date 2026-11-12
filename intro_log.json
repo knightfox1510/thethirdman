@@ -14,7 +14,9 @@
   "stumps",
   "kinetic",
   "flip",
-  "fieldmap"
+  "fieldmap",
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -31,6 +33,8 @@
   "abhishek_plan": "stumps",
   "powerplay_revolution": "kinetic",
   "death_kings": "flip",
-  "rcb_back_to_back": "fieldmap"
+  "rcb_back_to_back": "fieldmap",
+  "powerplay_revolution__ig": "stumps",
+  "ipl_batting_evolution": "flip"
  }
 }
