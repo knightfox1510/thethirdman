@@ -22,7 +22,7 @@
  },
  "long": [
   {
-   "vo": "For years, every T20 team had one. The anchor. The batter who stays till the end at a run a ball while everyone else swings. But in today's IPL, is the anchor dead?",
+   "vo": "For years, every T20 team had one. The anchor. The batter who stays till the end, at a run a ball, while everyone else swings. But in today's IPL, is the anchor dead?",
    "scene": {
     "type": "statement",
     "kicker": "THE T20 ANCHOR",
@@ -224,7 +224,7 @@
    }
   },
   {
-   "vo": "Forty balls at a strike rate of one-twenty costs you fifteen runs against today's top order.",
+   "vo": "Forty balls, at a strike rate of one-twenty, costs you fifteen runs against today's top order.",
    "scene": {
     "type": "bignum",
     "value": 15,

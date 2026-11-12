@@ -8,6 +8,7 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 
 ## Voice (ElevenLabs "Ruhaan", eleven_multilingual_v2)
 - Write Indian player names in Devanagari in `vo` (e.g. अभिषेक शर्मा). Add each new name to `SHOW` in engine.py so captions show English.
+- Write for the ear: short sentences, and a comma wherever a narrator would breathe. The build warns about 15+ words without punctuation. Pauses come from punctuation: breathe() in engine.py guarantees a pause at every . ? ! : ; , and scene gaps follow how the paragraph ends.
 - Spell years and most numbers out in words ("twenty twenty-six", "one fifty-seven"). Digits are misread, especially after Devanagari.
 
 ## Content

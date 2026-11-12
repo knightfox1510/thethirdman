@@ -663,15 +663,62 @@ def tts(paras, outdir, fmt):
         dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f"{outdir}/p{i}.mp3"]))
         meta.append({"hash": h, "dur": dur, "words": disp})
         json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False)
+    meta = [breathe(outdir, i, m, fmt) for i, m in enumerate(meta)]
     json.dump(meta, open(mpath, "w"), ensure_ascii=False)
     return meta
+
+
+# ------------------------------------------------------------------ natural pauses
+# ElevenLabs often runs sentences together (and atempo shortens pauses further), while every clip carries its own
+# leading/trailing silence. breathe() rebuilds each paragraph's audio from the word timings: it trims the edges and
+# makes sure every punctuation mark gets at least a natural pause, never touching pauses that are already long enough.
+BREATH_V = 2
+MIN_PAUSE = {"long": {".": .34, "!": .34, "?": .42, ":": .26, ";": .24, "—": .22, ",": .13},
+             "short": {".": .26, "!": .26, "?": .32, ":": .2, ";": .18, "—": .16, ",": .1}}
+EDGE = (.04, .10)   # silence kept before the first word / after the last word
+
+
+def breathe(outdir, i, m, fmt):
+    out = f"{outdir}/b{i}.wav"
+    if m.get("bv") == BREATH_V and os.path.exists(out): return m
+    raw_words = m.get("words_raw", m["words"]); raw_dur = m.get("dur_raw", m["dur"])
+    pcm = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", f"{outdir}/p{i}.mp3", "-f", "f32le", "-ac", "1", "-ar", "44100", "-"])
+    a = np.frombuffer(pcm, np.float32); SR = 44100
+    t0 = max(0.0, raw_words[0]["s"] - EDGE[0]); t1 = min(len(a) / SR, raw_words[-1]["e"] + EDGE[1])
+    pieces, words, cur, shift = [], [], int(t0 * SR), -t0
+    for k, w in enumerate(raw_words):
+        words.append({"w": w["w"], "s": w["s"] + shift, "e": w["e"] + shift})
+        if k + 1 < len(raw_words):
+            nxt = raw_words[k + 1]; gap = nxt["s"] - w["e"]
+            mark = w["w"].rstrip("\"'”’")[-1:] if w["w"] else ""
+            need = MIN_PAUSE[fmt].get(mark, 0) - gap
+            if need > .015:   # insert silence in the middle of the existing gap
+                cut = int((w["e"] + gap / 2) * SR)
+                pieces.append(a[cur:cut]); pieces.append(np.zeros(int(need * SR), np.float32)); cur = cut; shift += need
+    pieces.append(a[cur:int(t1 * SR)])
+    y = np.concatenate(pieces)
+    import wave
+    with wave.open(out, "wb") as wf:
+        wf.setnchannels(1); wf.setsampwidth(2); wf.setframerate(SR)
+        wf.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes())
+    return dict(m, words=words, dur=len(y) / SR, words_raw=raw_words, dur_raw=raw_dur, bv=BREATH_V)
+
+
+# scene-to-scene silence, chosen by how the previous paragraph ends (a sentence end breathes, a continuation flows)
+SCENE_GAP = {"long": {".": .55, "!": .55, "?": .75, "default": .3}, "short": {".": .36, "!": .36, "?": .5, "default": .2}}
 
 
 def plan(spec, fmt, base):
     meta = json.load(open(f"{base}/vo/meta.json"))
     n = len(meta)
-    lead = [(.5 if fmt == "long" else .12)] + [(.3 if fmt == "long" else .18)] * (n - 1)
-    tail = [(.55 if fmt == "long" else .25)] * (n - 1) + [2.4 if fmt == "long" else 1.8]
+    lead = [(.5 if fmt == "long" else .12)] + [(.12 if fmt == "long" else .08)] * (n - 1)
+    tail = []
+    for i in range(n - 1):
+        last = meta[i]["words"][-1]["w"].rstrip("\"'”’")[-1:]
+        want = SCENE_GAP[fmt].get(last, SCENE_GAP[fmt]["default"])
+        edges = (meta[i]["dur"] - meta[i]["words"][-1]["e"]) + meta[i + 1]["words"][0]["s"]
+        tail.append(max(.03, want - edges - lead[i + 1]))
+    tail.append(2.4 if fmt == "long" else 1.8)
     if fmt == "long" and n > 1: lead[1] += STING
     durs = [round((l + m["dur"] + tl) * FPS) / FPS for l, m, tl in zip(lead, meta, tail)]
     starts = list(np.concatenate([[0], np.cumsum(durs)]))
@@ -789,7 +836,7 @@ def mix(spec, fmt, base, total, lead, starts, n):
         sfx = f"{base}/intro_sfx.wav"
         intros.audio(sfx, impact, [.15 + k * .09 + .14 for k in range(12)] if nm == "flip" else ())
     for i in range(n):
-        ins += ["-i", f"{base}/vo/p{i}.mp3"]; ms = int((starts[i] + lead[i]) * 1000)
+        ins += ["-i", f"{base}/vo/b{i}.wav"]; ms = int((starts[i] + lead[i]) * 1000)
         flt.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,adelay={ms}|{ms}[v{i}]")
     flt.append("".join(f"[v{i}]" for i in range(n)) + f"amix=inputs={n}:normalize=0,apad=whole_dur={total}[vo]")
     flt.append("[vo]asplit=2[vo1][vosc]")
@@ -825,8 +872,19 @@ def srt(meta, lead, starts, path):
             f.write(f"{k}\n{ts(a)} --> {ts(max(b, a + .8))}\n{tx}\n\n")
 
 
+def lint_vo(spec):
+    """Warn about narration a person couldn't say in one breath (no punctuation for 15+ words)."""
+    import re
+    for fmt in ("long", "short"):
+        for i, sc in enumerate(spec.get(fmt, [])):
+            for chunk in re.split(r"[.,?!:;—]", sc["vo"]):
+                if len(chunk.split()) >= 15:
+                    print(f"  ! {fmt} p{i}: {len(chunk.split())} words without a pause: \"{chunk.strip()[:80]}…\"", file=sys.stderr)
+
+
 def build(spec_path, fmt):
     spec = json.load(open(spec_path)); slug = spec["slug"]
+    lint_vo(spec)
     apply_theme(spec.get("theme", "whites"))
     base = f"{ROOT}/out/{slug}/{fmt}"; os.makedirs(base, exist_ok=True)
     scenes = spec[fmt]
