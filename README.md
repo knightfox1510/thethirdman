@@ -56,6 +56,12 @@ Any item may carry "at" (0–1 of the scene) but items auto-sync to the narratio
 - `python3 variants.py carousel specs/<slug>.json`: 4:5 carousel slides (cover, scenes listed in `carousel.slides`, CTA)
   plus `caption.txt`, written to `deliver/<slug>/carousel/`.
 
+## Flip Shorts (no narration)
+`python3 flips.py specs/flip_<slug>.json`: a benchmark vs challengers at the same point in their careers, hard cuts on a
+synthesised beat (100 bpm, a panel every two beats), team colours, silhouettes, one giant number per panel.
+Specs are generated from data by `make_flips.py` (figures in `analysis/flips.py`). IPL captains come from Sportmonks line-ups
+(`fetch_lineups.py` caches them); Tests and T20Is come from Cricsheet (data/cricsheet/{test,t20i}).
+
 ## Analysis
 `analysis/<slug>.py` prints every Sportmonks-derived figure used in that video's spec (conventions in analysis/common.py).
 Run it after a data refresh and update the spec if anything moved.

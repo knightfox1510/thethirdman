@@ -1,0 +1,118 @@
+{
+ "slug": "flip_root_same_point",
+ "files": {
+  "short": "Joe_Root_vs_Everyone_Same_Point_Flip_9x16"
+ },
+ "title": {
+  "kicker": "TEST RUNS AT THE SAME POINT",
+  "lines": [
+   "JOE ROOT VS",
+   "EVERYONE ELSE"
+  ],
+  "sub": "Test runs after the same number of Tests"
+ },
+ "metric": "TEST RUNS",
+ "better": "higher",
+ "dec": 0,
+ "bench": {
+  "name": "Joe Root",
+  "team": "ENG",
+  "pose": "drive",
+  "color": "#14306B"
+ },
+ "pairs": [
+  {
+   "name": "Babar Azam",
+   "team": "PAK",
+   "pose": "drive",
+   "n": "66 TESTS",
+   "value": 4771,
+   "bench": 5752
+  },
+  {
+   "name": "Marnus Labuschagne",
+   "team": "AUS",
+   "pose": "drive",
+   "n": "68 TESTS",
+   "value": 4861,
+   "bench": 5915
+  },
+  {
+   "name": "Virat Kohli",
+   "team": "IND",
+   "pose": "drive",
+   "n": "123 TESTS",
+   "value": 9230,
+   "bench": 10481
+  },
+  {
+   "name": "Shubman Gill",
+   "team": "IND",
+   "pose": "drive",
+   "n": "42 TESTS",
+   "value": 2917,
+   "bench": 3493
+  },
+  {
+   "name": "Kane Williamson",
+   "team": "NZ",
+   "pose": "drive",
+   "n": "110 TESTS",
+   "value": 9515,
+   "bench": 9367
+  },
+  {
+   "name": "Steve Smith",
+   "team": "AUS",
+   "pose": "drive",
+   "n": "127 TESTS",
+   "value": 11003,
+   "bench": 10629
+  },
+  {
+   "name": "Harry Brook",
+   "team": "ENG",
+   "pose": "drive",
+   "n": "41 TESTS",
+   "value": 3610,
+   "bench": 3486,
+   "color": "#C8102E"
+  },
+  {
+   "name": "Yashasvi Jaiswal",
+   "team": "IND",
+   "pose": "drive",
+   "n": "30 TESTS",
+   "value": 2588,
+   "bench": 2586
+  }
+ ],
+ "end": {
+  "lines": [
+   "ROOT: 14,278 RUNS",
+   "IN 169 TESTS"
+  ],
+  "ask": "WHO CATCHES HIM?"
+ },
+ "sources": [
+  "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+  "Batters whose whole Test careers are in the data (debut 2010 or later); data to October 2026"
+ ],
+ "yt": {
+  "short": {
+   "title": "Joe Root vs everyone at the same point 🏏 #Shorts",
+   "description": "Test runs after the same number of Tests: Joe Root against Smith, Williamson, Kohli, Brook, Jaiswal, Gill, Babar and Labuschagne.",
+   "tags": [
+    "Joe Root",
+    "Steve Smith",
+    "Virat Kohli",
+    "Kane Williamson",
+    "Harry Brook",
+    "Yashasvi Jaiswal",
+    "Test cricket",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

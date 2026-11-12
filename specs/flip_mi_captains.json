@@ -1,0 +1,96 @@
+{
+ "slug": "flip_mi_captains",
+ "files": {
+  "short": "Every_MI_Captain_vs_Rohit_Sharma_Flip_9x16"
+ },
+ "title": {
+  "kicker": "MUMBAI INDIANS CAPTAINS",
+  "lines": [
+   "EVERY MI CAPTAIN",
+   "VS ROHIT SHARMA"
+  ],
+  "sub": "Win % in decided IPL matches, at the same number of games as captain"
+ },
+ "metric": "WIN %",
+ "better": "higher",
+ "dec": 1,
+ "bench": {
+  "name": "Rohit Sharma",
+  "team": "MI",
+  "pose": "pull",
+  "color": "#004BA0"
+ },
+ "pairs": [
+  {
+   "name": "Ricky Ponting",
+   "team": "MI",
+   "pose": "drive",
+   "n": "6 GAMES AS CAPTAIN",
+   "value": 50.0,
+   "bench": 83.3,
+   "color": "#D4A82E"
+  },
+  {
+   "name": "Kieron Pollard",
+   "team": "MI",
+   "pose": "pull",
+   "n": "6 GAMES AS CAPTAIN",
+   "value": 66.7,
+   "bench": 83.3,
+   "color": "#D4A82E"
+  },
+  {
+   "name": "Suryakumar Yadav",
+   "team": "MI",
+   "pose": "drive",
+   "n": "5 GAMES AS CAPTAIN",
+   "value": 40.0,
+   "bench": 80.0,
+   "color": "#D4A82E"
+  },
+  {
+   "name": "Jasprit Bumrah",
+   "team": "MI",
+   "pose": "release",
+   "n": "1 GAME AS CAPTAIN",
+   "value": 100.0,
+   "bench": 100.0,
+   "color": "#D4A82E"
+  },
+  {
+   "name": "Hardik Pandya",
+   "team": "MI",
+   "pose": "defend",
+   "n": "39 GAMES AS CAPTAIN",
+   "value": 38.5,
+   "bench": 59.0,
+   "color": "#D4A82E"
+  }
+ ],
+ "end": {
+  "lines": [
+   "ROHIT AFTER 158 GAMES:",
+   "56.3%"
+  ],
+  "ask": "WHO COMES CLOSEST?"
+ },
+ "sources": [
+  "Sportmonks IPL fixtures and line-ups (captain flag), IPL 2013-2026. Win % of decided matches (no-results left out). Figures: analysis/flips.py"
+ ],
+ "yt": {
+  "short": {
+   "title": "Every MI captain vs Rohit Sharma 📊 #Shorts",
+   "description": "Win % of every Mumbai Indians captain since 2013, against Rohit Sharma at the same number of games. Data: every IPL match since 2013.",
+   "tags": [
+    "Rohit Sharma",
+    "Hardik Pandya",
+    "Mumbai Indians",
+    "IPL",
+    "IPL captain",
+    "cricket stats",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

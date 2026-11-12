@@ -1,0 +1,112 @@
+{
+ "slug": "flip_abhishek_openers",
+ "files": {
+  "short": "Abhishek_vs_World_T20I_Openers_Flip_9x16"
+ },
+ "title": {
+  "kicker": "T20I OPENERS AT THE SAME POINT",
+  "lines": [
+   "ABHISHEK SHARMA VS",
+   "THE WORLD'S OPENERS"
+  ],
+  "sub": "T20I strike rate as an opener, after the same number of innings"
+ },
+ "metric": "STRIKE RATE",
+ "better": "higher",
+ "dec": 1,
+ "bench": {
+  "name": "Abhishek Sharma",
+  "team": "IND",
+  "pose": "pull",
+  "color": "#1F5FB8",
+  "mirror": true
+ },
+ "pairs": [
+  {
+   "name": "Babar Azam",
+   "team": "PAK",
+   "pose": "drive",
+   "n": "66 INNINGS AS OPENER",
+   "value": 132.6,
+   "bench": 191.9
+  },
+  {
+   "name": "Rohit Sharma",
+   "team": "IND",
+   "pose": "drive",
+   "n": "66 INNINGS AS OPENER",
+   "value": 138.2,
+   "bench": 191.9,
+   "color": "#F28C28"
+  },
+  {
+   "name": "David Warner",
+   "team": "AUS",
+   "pose": "drive",
+   "n": "66 INNINGS AS OPENER",
+   "value": 140.9,
+   "bench": 191.9
+  },
+  {
+   "name": "Finn Allen",
+   "team": "NZ",
+   "pose": "drive",
+   "n": "64 INNINGS AS OPENER",
+   "value": 170.4,
+   "bench": 192.4
+  },
+  {
+   "name": "Travis Head",
+   "team": "AUS",
+   "pose": "drive",
+   "n": "35 INNINGS AS OPENER",
+   "value": 168.2,
+   "bench": 197.1
+  },
+  {
+   "name": "Jos Buttler",
+   "team": "ENG",
+   "pose": "drive",
+   "n": "66 INNINGS AS OPENER",
+   "value": 156.3,
+   "bench": 191.9
+  },
+  {
+   "name": "Phil Salt",
+   "team": "ENG",
+   "pose": "drive",
+   "n": "55 INNINGS AS OPENER",
+   "value": 163.5,
+   "bench": 188.8,
+   "color": "#C8102E"
+  }
+ ],
+ "end": {
+  "lines": [
+   "ABHISHEK: 191.9",
+   "AFTER 66 INNINGS"
+  ],
+  "ask": "WHO'S THE BEST OPENER?"
+ },
+ "sources": [
+  "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+  "T20 internationals; innings in which the batter was one of the first two to bat; strike rate = runs off the bat per 100 balls faced (wides excluded)"
+ ],
+ "yt": {
+  "short": {
+   "title": "Abhishek Sharma vs the world's T20I openers ⚡ #Shorts",
+   "description": "T20I strike rate as an opener after the same number of innings: Abhishek Sharma against Salt, Head, Buttler, Allen, Warner, Rohit and Babar.",
+   "tags": [
+    "Abhishek Sharma",
+    "Phil Salt",
+    "Travis Head",
+    "Jos Buttler",
+    "T20I",
+    "T20 cricket",
+    "cricket stats",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

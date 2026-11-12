@@ -1,0 +1,110 @@
+{
+ "slug": "flip_bumrah_52_tests",
+ "files": {
+  "short": "Bumrah_vs_Best_Fast_Bowlers_After_52_Tests_Flip_9x16"
+ },
+ "title": {
+  "kicker": "FAST BOWLERS AFTER 52 TESTS",
+  "lines": [
+   "BUMRAH VS",
+   "THE BEST OF THE CENTURY"
+  ],
+  "sub": "Test bowling average after 52 Tests. Lower is better"
+ },
+ "metric": "BOWLING AVERAGE",
+ "better": "lower",
+ "dec": 2,
+ "bench": {
+  "name": "Jasprit Bumrah",
+  "team": "IND",
+  "pose": "release",
+  "color": "#1F5FB8"
+ },
+ "pairs": [
+  {
+   "name": "Stuart Broad",
+   "team": "ENG",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 31.94,
+   "bench": 19.79,
+   "color": "#C8102E"
+  },
+  {
+   "name": "Trent Boult",
+   "team": "NZ",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 28.56,
+   "bench": 19.79
+  },
+  {
+   "name": "Mitchell Starc",
+   "team": "AUS",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 28.27,
+   "bench": 19.79
+  },
+  {
+   "name": "Mohammed Shami",
+   "team": "IND",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 27.52,
+   "bench": 19.79,
+   "color": "#F28C28"
+  },
+  {
+   "name": "Josh Hazlewood",
+   "team": "AUS",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 25.69,
+   "bench": 19.79
+  },
+  {
+   "name": "Kagiso Rabada",
+   "team": "SA",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 22.41,
+   "bench": 19.79
+  },
+  {
+   "name": "Pat Cummins",
+   "team": "AUS",
+   "pose": "release",
+   "n": "52 TESTS",
+   "value": 22.02,
+   "bench": 19.79
+  }
+ ],
+ "end": {
+  "lines": [
+   "BUMRAH: 19.79",
+   "NOBODY ELSE UNDER 22"
+  ],
+  "ask": "WHO'S THE GREATEST?"
+ },
+ "sources": [
+  "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+  "Fast bowlers whose whole Test careers are in the data (debut 2007 or later), compared after the same number of Tests"
+ ],
+ "yt": {
+  "short": {
+   "title": "Bumrah vs the best fast bowlers after 52 Tests 🔥 #Shorts",
+   "description": "Test bowling average after 52 Tests: Jasprit Bumrah against Cummins, Rabada, Hazlewood, Starc, Boult, Broad and Shami.",
+   "tags": [
+    "Jasprit Bumrah",
+    "Pat Cummins",
+    "Kagiso Rabada",
+    "Test cricket",
+    "fast bowling",
+    "cricket stats",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}
