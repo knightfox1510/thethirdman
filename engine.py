@@ -33,7 +33,7 @@ SHOW = {"सचिन": "Sachin", "तेंदुलकर": "Tendulkar", "श�
         "गंभीर": "Gambhir", "गौतम": "Gautam", "सेहवाग": "Sehwag", "इरफ़ान": "Irfan", "पठान": "Pathan",
         "रैना": "Raina", "जडेजा": "Jadeja", "अश्विन": "Ashwin", "शमी": "Shami", "सिराज": "Siraj", "पंजाब": "Punjab",
         "अभिषेक": "Abhishek", "वैभव": "Vaibhav", "सूर्यवंशी": "Sooryavanshi", "ईशांत": "Ishant", "वरुण": "Varun",
-        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal"}
+        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "बेंगलुरु": "Bengaluru", "हैदराबाद": "Hyderabad", "दिल्ली": "Delhi", "वानखेड़े": "Wankhede", "चेन्नई": "Chennai", "रांची": "Ranchi", "गुजरात": "Gujarat", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal"}
 
 
 THEME_KEYS = ("INK", "MUTED", "GOLD", "BLUE", "RED", "PANEL", "LINE", "BG", "ORANGE")
@@ -666,29 +666,41 @@ def tts(paras, outdir, fmt):
 # ElevenLabs often runs sentences together (and atempo shortens pauses further), while every clip carries its own
 # leading/trailing silence. breathe() rebuilds each paragraph's audio from the word timings: it trims the edges and
 # makes sure every punctuation mark gets at least a natural pause, never touching pauses that are already long enough.
-BREATH_V = 2
+BREATH_V = 3
 MIN_PAUSE = {"long": {".": .34, "!": .34, "?": .42, ":": .26, ";": .24, "—": .22, ",": .13},
              "short": {".": .26, "!": .26, "?": .32, ":": .2, ";": .18, "—": .16, ",": .1}}
 EDGE = (.04, .10)   # silence kept before the first word / after the last word
+MID_MAX, MID_KEEP = .18, .07   # a hesitation inside a phrase (no punctuation) longer than MID_MAX is cut down to MID_KEEP
 
 
 def breathe(outdir, i, m, fmt):
+    """Rebuild a paragraph's audio from its word timings: trim the edges, make sure every punctuation mark gets at
+    least a natural pause, and cut hesitations inside phrases (e.g. after a Devanagari name) down to a normal gap.
+    Silence is only removed where the audio really is quiet, so no part of a word is ever cut."""
     out = f"{outdir}/b{i}.wav"
     if m.get("bv") == BREATH_V and os.path.exists(out): return m
     raw_words = m.get("words_raw", m["words"]); raw_dur = m.get("dur_raw", m["dur"])
     pcm = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", f"{outdir}/p{i}.mp3", "-f", "f32le", "-ac", "1", "-ar", "44100", "-"])
     a = np.frombuffer(pcm, np.float32); SR = 44100
+    peak = float(np.percentile(np.abs(a), 99.5)) or 1.0
     t0 = max(0.0, raw_words[0]["s"] - EDGE[0]); t1 = min(len(a) / SR, raw_words[-1]["e"] + EDGE[1])
     pieces, words, cur, shift = [], [], int(t0 * SR), -t0
     for k, w in enumerate(raw_words):
         words.append({"w": w["w"], "s": w["s"] + shift, "e": w["e"] + shift})
-        if k + 1 < len(raw_words):
-            nxt = raw_words[k + 1]; gap = nxt["s"] - w["e"]
-            mark = w["w"].rstrip("\"'”’")[-1:] if w["w"] else ""
-            need = MIN_PAUSE[fmt].get(mark, 0) - gap
+        if k + 1 == len(raw_words): continue
+        nxt = raw_words[k + 1]; gap = nxt["s"] - w["e"]
+        mark = w["w"].rstrip("\"'”’")[-1:] if w["w"] else ""
+        mid = int((w["e"] + gap / 2) * SR)
+        if mark in MIN_PAUSE[fmt]:
+            need = MIN_PAUSE[fmt][mark] - gap
             if need > .015:   # insert silence in the middle of the existing gap
-                cut = int((w["e"] + gap / 2) * SR)
-                pieces.append(a[cur:cut]); pieces.append(np.zeros(int(need * SR), np.float32)); cur = cut; shift += need
+                pieces.append(a[cur:mid]); pieces.append(np.zeros(int(need * SR), np.float32)); cur = mid; shift += need
+        elif gap > MID_MAX:
+            cut = gap - MID_KEEP
+            lo, hi = mid - int(cut / 2 * SR), mid + int(cut / 2 * SR)
+            seg = a[max(lo, 0):hi]
+            if len(seg) and float(np.sqrt(np.mean(seg ** 2))) < .02 * peak:   # only true silence
+                pieces.append(a[cur:lo]); cur = hi; shift -= (hi - lo) / SR
     pieces.append(a[cur:int(t1 * SR)])
     y = np.concatenate(pieces)
     import wave

@@ -22,7 +22,7 @@
  },
  "long": [
   {
-   "vo": "Mumbai Indians have traded away their captain. Not for a superstar batter. Not for a cash windfall. For a bowler.",
+   "vo": "मुंबई Indians have traded away their captain. Not for a superstar batter. Not for a cash windfall. For a bowler.",
    "scene": {
     "type": "statement",
     "lines": [
@@ -40,7 +40,7 @@
    }
   },
   {
-   "vo": "हार्दिक पंड्या is now a Punjab Kings player, and अर्शदीप सिंह is heading to मुंबई. So who actually won this trade?",
+   "vo": "हार्दिक पंड्या is now a पंजाब Kings player, and अर्शदीप सिंह is heading to मुंबई. So who actually won this trade?",
    "scene": {
     "type": "swap",
     "left": {
@@ -60,7 +60,7 @@
    }
   },
   {
-   "vo": "It's official. On the eleventh of November, both franchises announced a straight one-for-one swap. हार्दिक joins Punjab at a fee of eighteen crore rupees, and अर्शदीप moves to Mumbai at the same price.",
+   "vo": "It's official. On the eleventh of November, both franchises announced a straight one-for-one swap. हार्दिक joins पंजाब at a fee of eighteen crore rupees, and अर्शदीप moves to मुंबई at the same price.",
    "scene": {
     "type": "stats",
     "head": {
@@ -87,7 +87,7 @@
    }
   },
   {
-   "vo": "To understand why, rewind to twenty twenty-four. हार्दिक came back to Mumbai from Gujarat, where he'd won the title in his very first season as captain. Mumbai handed him the captaincy, replacing रोहित शर्मा, the man who'd led them to five titles. It never quite clicked. Mumbai finished last in twenty twenty-four. They bounced back to reach Qualifier Two in twenty twenty-five. Then twenty twenty-six fell apart: ninth place.",
+   "vo": "To understand why, rewind to twenty twenty-four. हार्दिक came back to मुंबई from गुजरात, where he'd won the title in his very first season as captain. मुंबई handed him the captaincy, replacing रोहित शर्मा, the man who'd led them to five titles. It never quite clicked. मुंबई finished last in twenty twenty-four. They bounced back to reach Qualifier Two in twenty twenty-five. Then twenty twenty-six fell apart: ninth place.",
    "scene": {
     "type": "timeline",
     "head": {
@@ -121,7 +121,7 @@
    }
   },
   {
-   "vo": "His own numbers dipped too. Last season he made 172 runs in nine matches, at a strike rate of just 128. With the ball, he went at nearly twelve an over. Back spasms, a leg strain and a shin injury all cost him games. And late in the season, Mumbai had lost twenty-four of thirty-nine matches under his captaincy.",
+   "vo": "His own numbers dipped too. Last season he made one hundred and seventy-two runs in nine matches, at a strike rate of just one twenty-eight. With the ball, he went at nearly twelve an over. He missed games with back spasms, a leg strain and a shin injury. And late in the season, मुंबई had lost twenty-four of thirty-nine matches under his captaincy.",
    "scene": {
     "type": "stats",
     "head": {
@@ -157,7 +157,7 @@
    }
   },
   {
-   "vo": "Now look at what Mumbai get. अर्शदीप सिंह has taken one hundred and eleven IPL wickets for Punjab, in ninety-six matches. He was the first Punjab bowler ever to reach a hundred. He's India's leading wicket-taker in T20 internationals. And at twenty-seven, he's in his prime.",
+   "vo": "Now look at what मुंबई get. अर्शदीप सिंह has taken one hundred and eleven IPL wickets for पंजाब, in ninety-six matches. He was the first पंजाब bowler ever to reach a hundred. He's India's leading wicket-taker in T20 internationals. And at twenty-seven, he's in his prime.",
    "scene": {
     "type": "bignum",
     "head": {
@@ -170,7 +170,7 @@
    }
   },
   {
-   "vo": "Now picture the Mumbai attack, if they keep Trent Boult. Boult swinging the new ball. बुमराह, the best death bowler in the world. And अर्शदीप, who can do both. Last season, बुमराह took just four wickets in thirteen games. He needed help. Now he has it.",
+   "vo": "Now picture the मुंबई attack, if they keep Trent Boult. Boult swinging the new ball. बुमराह, the best death bowler in the world. And अर्शदीप, who can do both. Last season, बुमराह took just four wickets in thirteen games. He needed help. Now he has it.",
    "scene": {
     "type": "list",
     "head": {
@@ -198,7 +198,7 @@
    }
   },
   {
-   "vo": "So why would Punjab give up their all-time leading wicket-taker? Balance. Punjab reached the final in twenty twenty-five under श्रेयस अय्यर. What they've lacked is a genuine pace-bowling all-rounder at number six, someone who can finish a chase and bowl four overs. On his day, that's exactly हार्दिक. And he's already won an IPL title as captain.",
+   "vo": "So why would पंजाब give up their leading wicket-taker of all time? Balance. पंजाब reached the final in twenty twenty-five under श्रेयस अय्यर. What they've lacked is a genuine pace-bowling all-rounder at number six, someone who can finish a chase and bowl four overs. On his day, that's exactly हार्दिक. And he's already won an IPL title as captain.",
    "scene": {
     "type": "list",
     "head": {
@@ -233,7 +233,7 @@
    }
   },
   {
-   "vo": "But that's the big if. हार्दिक is thirty-three, and his body has been the problem. Punjab are paying eighteen crore, and giving up their best bowler, to bet that the title-winning version of हार्दिक is still in there.",
+   "vo": "But that's the big if. हार्दिक is thirty-three, and his body has been the problem. पंजाब are paying eighteen crore, and giving up their best bowler, to bet that the title-winning version of हार्दिक is still in there.",
    "scene": {
     "type": "stats",
     "head": {
@@ -262,7 +262,7 @@
    }
   },
   {
-   "vo": "So here's the scorecard. Mumbai gain a world-class bowler in his prime, and a fresh start. But they lose an all-rounder they can't easily replace, and they still have to name a new captain. Punjab gain balance, experience and a match-winner. But they lose their best bowler, and certainty.",
+   "vo": "So here's the scorecard. मुंबई gain a world-class bowler in his prime, and a fresh start. But they lose an all-rounder they can't easily replace, and they still have to name a new captain. पंजाब gain balance, experience and a match-winner. But they lose their best bowler, and certainty.",
    "scene": {
     "type": "scorecard",
     "head": {
@@ -297,7 +297,7 @@
    }
   },
   {
-   "vo": "Our verdict? For twenty twenty-seven, Mumbai win this trade. They filled their biggest gap with a fit, proven bowler. Punjab made the bolder bet, and if हार्दिक stays fit, it could still win them a title.",
+   "vo": "Our verdict? For twenty twenty-seven, मुंबई win this trade. They filled their biggest gap with a fit, proven bowler. पंजाब made the bolder bet, and if हार्दिक stays fit, it could still win them a title.",
    "scene": {
     "type": "statement",
     "kicker": "OUR VERDICT",
@@ -337,7 +337,7 @@
  ],
  "short": [
   {
-   "vo": "Mumbai Indians just traded away their captain. For a bowler.",
+   "vo": "मुंबई Indians just traded away their captain. For a bowler.",
    "scene": {
     "type": "swap",
     "left": {
@@ -357,7 +357,7 @@
    }
   },
   {
-   "vo": "हार्दिक पंड्या goes to Punjab. अर्शदीप सिंह comes to मुंबई. Eighteen crore each.",
+   "vo": "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंह comes to मुंबई. Eighteen crore each.",
    "scene": {
     "type": "stats",
     "head": {
@@ -378,7 +378,7 @@
    }
   },
   {
-   "vo": "Why? Under हार्दिक, Mumbai lost twenty-four of thirty-nine games.",
+   "vo": "Why? Under हार्दिक, मुंबई lost twenty-four of thirty-nine games.",
    "scene": {
     "type": "stats",
     "head": {
@@ -428,7 +428,7 @@
    }
   },
   {
-   "vo": "But if हार्दिक stays fit, Punjab might have the bigger match-winner.",
+   "vo": "But if हार्दिक stays fit, पंजाब might have the bigger match-winner.",
    "scene": {
     "type": "statement",
     "lines": [

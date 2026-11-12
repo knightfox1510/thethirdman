@@ -22,7 +22,7 @@
  },
  "long": [
   {
-   "vo": "September, two thousand seven. India's biggest names skip the first-ever T20 World Cup, and the selectors hand the captaincy to a twenty-six-year-old from Ranchi. महेंद्र सिंह धोनी. What if they hadn't?",
+   "vo": "September, two thousand seven. India's biggest names skip the first-ever T20 World Cup, and the selectors hand the captaincy to a twenty-six-year-old from रांची. महेंद्र सिंह धोनी. What if they hadn't?",
    "scene": {
     "type": "statement",
     "kicker": "SEPTEMBER 2007",
@@ -41,7 +41,7 @@
    }
   },
   {
-   "vo": "Here's what followed. The twenty oh-seven T20 World Cup. The twenty eleven World Cup. The twenty thirteen Champions Trophy. He's the only captain to win all three ICC white-ball trophies. Add five IPL titles with Chennai, and India's first climb to number one in Test cricket.",
+   "vo": "Here's what followed. The twenty oh-seven T20 World Cup. The twenty eleven World Cup. The twenty thirteen Champions Trophy. He's the only captain to win all three ICC white-ball trophies. Add five IPL titles with चेन्नई, and India's first climb to number one in Test cricket.",
    "scene": {
     "type": "stats",
     "head": {
@@ -89,7 +89,7 @@
    }
   },
   {
-   "vo": "The second came in twenty eleven. The World Cup final at the Wankhede. India are chasing two hundred and seventy-five. धोनी promotes himself above an in-form युवराज सिंह, makes ninety-one not out, and finishes it with a six.",
+   "vo": "The second came in twenty eleven. The World Cup final at the वानखेड़े. India are chasing two hundred and seventy-five. धोनी promotes himself above an in-form युवराज सिंह, makes ninety-one not out, and finishes it with a six.",
    "scene": {
     "type": "bignum",
     "head": {
@@ -122,7 +122,7 @@
    }
   },
   {
-   "vo": "Now imagine the alternate timeline. Without the twenty oh-seven title, T20 might never have exploded in India, and the IPL launched just seven months later. रोहित might have stayed in the middle order. Chennai might never have built a dynasty. And twenty eleven might have gone very differently.",
+   "vo": "Now imagine the alternate timeline. Without the twenty oh-seven title, T20 might never have exploded in India, and the IPL launched just seven months later. रोहित might have stayed in the middle order. चेन्नई might never have built a dynasty. And twenty eleven might have gone very differently.",
    "scene": {
     "type": "list",
     "head": {
@@ -196,7 +196,7 @@
  ],
  "short": [
   {
-   "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from Ranchi.",
+   "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from रांची.",
    "scene": {
     "type": "statement",
     "kicker": "2007",

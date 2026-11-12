@@ -30,7 +30,7 @@
  ],
  "long": [
   {
-   "vo": "For seventeen seasons, Royal Challengers Bengaluru had the stars and no trophy. Then they won in twenty twenty-five. And again in twenty twenty-six. Everyone credits the batting. The data says something else.",
+   "vo": "For seventeen seasons, Royal Challengers बेंगलुरु had the stars and no trophy. Then they won in twenty twenty-five. And again in twenty twenty-six. Everyone credits the batting. The data says something else.",
    "scene": {
     "type": "statement",
     "lines": [
@@ -172,7 +172,7 @@
    }
   },
   {
-   "vo": "And in the twenty twenty-six final, it all came together. The bowlers held Gujarat to one fifty-five for eight. कोहली finished it with seventy-five not out off forty-two balls, with two overs to spare.",
+   "vo": "And in the twenty twenty-six final, it all came together. The bowlers held गुजरात to one fifty-five for eight. कोहली finished it with seventy-five not out off forty-two balls, with two overs to spare.",
    "scene": {
     "type": "compare",
     "head": {
