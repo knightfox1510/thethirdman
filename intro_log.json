@@ -16,7 +16,9 @@
   "flip",
   "fieldmap",
   "stumps",
-  "flip"
+  "flip",
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -35,6 +37,8 @@
   "death_kings": "flip",
   "rcb_back_to_back": "fieldmap",
   "powerplay_revolution__ig": "stumps",
-  "ipl_batting_evolution": "flip"
+  "ipl_batting_evolution": "flip",
+  "kohli_2000_nz": "kinetic",
+  "nz_test_preview": "fieldmap"
  }
 }
