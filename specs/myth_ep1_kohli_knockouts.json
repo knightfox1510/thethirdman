@@ -1,0 +1,327 @@
+{
+ "slug": "myth_ep1_kohli_knockouts",
+ "theme": "stadium",
+ "captions": "v2",
+ "tag": "MYTH OR DATA?",
+ "tagsub": "EP. 1 · KOHLI IN KNOCKOUTS",
+ "files": {
+  "long": "_unused",
+  "short": "Myth_or_Data_Ep1_Kohli_Knockouts_9x16"
+ },
+ "thumb": {
+  "kicker": "MYTH OR DATA? · EP. 1",
+  "lines": [
+   {
+    "t": "DOES KOHLI FAIL"
+   },
+   {
+    "t": "IN KNOCKOUTS?",
+    "c": "gold"
+   }
+  ],
+  "hero": "93.25",
+  "herosize": 300
+ },
+ "sources": [
+  "Cricsheet men's ODI and T20I ball-by-ball data (cricsheet.org, ODC-BY). ICC knockouts = semi-finals, quarter-finals and finals of the ODI World Cup, Champions Trophy and T20 World Cup. Figures: analysis/myth_kohli_knockouts.py"
+ ],
+ "long": [],
+ "short": [
+  {
+   "vo": "People say विराट कोहली fails in knockouts. So we went through every ICC knockout innings he has ever played. All twenty of them.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "MYTH OR DATA? · EPISODE 1",
+     "lines": [
+      {
+       "t": "DOES KOHLI FAIL"
+      },
+      {
+       "t": "IN KNOCKOUTS?",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "walk"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "First, what counts? Semi-finals, quarter-finals and finals of the ODI World Cup, the Champions Trophy, and the T20 World Cup.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "WHAT COUNTS AS A KNOCKOUT",
+     "rows": [
+      [
+       "ODI WORLD CUP",
+       "2011-2023"
+      ],
+      [
+       "CHAMPIONS TROPHY",
+       "2013-2025"
+      ],
+      [
+       "T20 WORLD CUP",
+       "2014-2024"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Start with one-day cricket. In all his other ODIs, कोहली averages fifty-nine. In ICC knockouts, it's forty-four.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "ODI BATTING AVERAGE",
+     "left": {
+      "v": "59.2",
+      "l": "All other ODIs",
+      "c": "ink"
+     },
+     "right": {
+      "v": "44.3",
+      "l": "ICC knockouts",
+      "c": "red"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Finals are worse. One hundred and thirty-eight runs in five innings. Five, in twenty seventeen. And one, in twenty twenty-five.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "ICC ODI FINALS",
+     "rows": [
+      [
+       "2011 WORLD CUP",
+       "35"
+      ],
+      [
+       "2013 CHAMPIONS TROPHY",
+       "43"
+      ],
+      [
+       "2017 CHAMPIONS TROPHY",
+       "5",
+       "red"
+      ],
+      [
+       "2023 WORLD CUP",
+       "54"
+      ],
+      [
+       "2025 CHAMPIONS TROPHY",
+       "1",
+       "red"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "walk"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But in semi-finals and quarter-finals, he averages fifty-six. Including a hundred against New Zealand, in the twenty twenty-three World Cup semi-final.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "score",
+     "kicker": "SEMIS AND QUARTERS: AVERAGE 56",
+     "event": "2023 World Cup semi-final · v New Zealand",
+     "score": "117",
+     "note": "Off 113 balls"
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "celebrate"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now, the T20 World Cup. Here, कोहली doesn't just survive knockouts. He owns them.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "PART TWO",
+     "lines": [
+      {
+       "t": "T20 WORLD CUP"
+      },
+      {
+       "t": "KNOCKOUTS",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Seventy-two not out. Seventy-seven, in a final. Eighty-nine not out. Fifty. And seventy-six, to win the twenty twenty-four final.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "T20 WORLD CUP KNOCKOUTS",
+     "rows": [
+      [
+       "2014 SEMI-FINAL",
+       "72*"
+      ],
+      [
+       "2014 FINAL",
+       "77"
+      ],
+      [
+       "2016 SEMI-FINAL",
+       "89*"
+      ],
+      [
+       "2022 SEMI-FINAL",
+       "50"
+      ],
+      [
+       "2024 SEMI-FINAL",
+       "9"
+      ],
+      [
+       "2024 FINAL",
+       "76",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "That's an average of ninety-three. The best of any batter, with four or more T20 World Cup knockout innings.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "BEST EVER · MIN. 4 INNINGS",
+     "value": 93.25,
+     "dec": 2,
+     "label": "Average in T20 World Cup knockouts",
+     "color": "gold",
+     "count_dur": 1.0
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "celebrate"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So, does he fail in knockouts? In ODI finals, the numbers do drop. But in T20 World Cups, nobody has been better. Myth: half busted.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE VERDICT",
+     "lines": [
+      {
+       "t": "HALF"
+      },
+      {
+       "t": "BUSTED.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "number": 18,
+      "pose": "stand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Which Kohli knockout innings do you remember? Tell us in the comments, and follow for episode two.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "MYTH OR DATA?"
+     },
+     {
+      "t": "EPISODE 2 NEXT",
+      "c": "gold"
+     }
+    ],
+    "pill": "FOLLOW FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Does Kohli fail in knockouts? We checked all 20 innings 📊 #Shorts",
+   "description": "Myth or Data? Episode 1. Every ICC knockout innings Virat Kohli has played: ODI World Cups, Champions Trophies and T20 World Cups.",
+   "tags": [
+    "Virat Kohli",
+    "Kohli knockouts",
+    "T20 World Cup",
+    "ODI World Cup",
+    "Champions Trophy",
+    "cricket stats",
+    "Myth or Data",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

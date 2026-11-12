@@ -780,7 +780,9 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
         c.saveLayerAlpha(None, int(255 * ca)); chrome(c, g, spec, T, total, last); c.restore()
     # burned-in captions are off by default (on-screen graphics carry the key text; .srt ships alongside);
     # a spec can opt back in with "burn_captions": true
-    if g.fmt == "short" and grps is not None and s["type"] != "cta" and spec.get("burn_captions"):
+    if g.fmt == "short" and grps is not None and spec.get("captions") == "v2":
+        if s["type"] not in NO_CAPTION and not s.get("no_captions"): captions_v2(c, g, lt - lead, grps)
+    elif g.fmt == "short" and grps is not None and s["type"] != "cta" and spec.get("burn_captions"):
         captions(c, g, lt - lead, grps)
     gfx.grain(c, frame)
     if g.fmt == "long" and T < .5:
@@ -792,7 +794,7 @@ def render_scene(spec_path, fmt, i):
     apply_theme(spec.get("theme", "whites")); spec["_intro"] = pick_intro(spec)
     g = setup(fmt); scenes = spec[fmt]
     meta, lead, durs, starts, total = plan(spec, fmt, base)
-    grps = cap_groups(meta[i]["words"]) if fmt == "short" else None
+    grps = cap_groups(meta[i]["words"], 34 if spec.get("captions") == "v2" else 16) if fmt == "short" else None
     D = durs[i]; n = int(round(D * FPS))
     tmp, out = f"{base}/s{i}.tmp.mp4", f"{base}/s{i}.mp4"
     p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{g.W}x{g.H}",
@@ -819,7 +821,7 @@ def stills(spec_path, fmt, frac=.92):
     for i in range(len(scenes)):
         arr = np.zeros((g.H, g.W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
         lt = durs[i] * (frac if i < len(scenes) - 1 else .6)
-        grps = cap_groups(meta[i]["words"]) if fmt == "short" else None
+        grps = cap_groups(meta[i]["words"], 34 if spec.get("captions") == "v2" else 16) if fmt == "short" else None
         draw(c, g, spec, scenes, i, lt, durs[i], starts[i] + lt, total, 0, lead[i], grps, meta[i]["words"]); sf.flushAndSubmit()
         ims.append(Image.fromarray(arr[..., :3].copy()))
     tw, th = (480, 270) if fmt == "long" else (216, 384)
@@ -1429,14 +1431,239 @@ SCENES["matchup"] = sc_matchup
 SCENES["trajectory"] = sc_trajectory
 
 
+# ------------------------------------------------------------------ stadium stage (Myth or Data? look)
+# A night stadium (crowd, floodlights, pitch in perspective), an original illustrated cricketer in team colours
+# (generic, not a likeness of anyone), data panels in the top band and v2 captions in the lower band.
+gfx.THEMES["stadium"] = dict(BG=(8, 13, 28), INK=(255, 255, 255), MUTED=(178, 188, 210), GOLD=(255, 196, 61), BLUE=(110, 180, 255),
+                             RED=(255, 90, 80), ORANGE=(255, 150, 50), PANEL=(12, 20, 42), LINE=(46, 62, 100),
+                             display="Bebas.ttf", heading="OswaldBold.ttf", glow=0.6, light=False)
+_RNG = np.random.default_rng(11)
+_CROWD = _RNG.random((2600, 4))            # x, y, colour pick, flicker phase
+_CROWD_COLS = [(70, 90, 140), (150, 60, 70), (200, 190, 170), (40, 60, 110), (210, 150, 60), (90, 120, 90), (230, 230, 240)]
+_bg_prev = gfx.background
+
+
+def stadium(c, T, zoom=1.0):
+    W, H = gfx.W, gfx.H
+    horizon = H * (.47 if H > W else .52)
+    c.save(); c.translate(W / 2, horizon); c.scale(zoom, zoom); c.translate(-W / 2, -horizon)
+    sky = skia.GradientShader.MakeLinear([skia.Point(0, 0), skia.Point(0, horizon)], [gfx.ci((6, 10, 24)), gfx.ci((20, 30, 62))])
+    c.drawRect(skia.Rect.MakeLTRB(-W, -H, 2 * W, horizon), skia.Paint(Shader=sky))
+    # floodlight towers' glow
+    for fx in (.12, .88):
+        sh = skia.GradientShader.MakeRadial(skia.Point(W * fx, H * .06), W * .55, [gfx.ci((210, 225, 255), .35), gfx.ci((210, 225, 255), 0)])
+        c.drawPaint(skia.Paint(Shader=sh))
+        for k in range(4):
+            c.drawCircle(W * fx + (k - 1.5) * 22, H * .06, 7, gfx.paint((255, 255, 240), .9))
+    # crowd band: tiers of tiny figures, gently flickering
+    top, bot = horizon - H * .2, horizon
+    for x, y, cp, ph in _CROWD:
+        yy = top + y * (bot - top); s = 2.2 + 3.2 * y
+        col = _CROWD_COLS[int(cp * len(_CROWD_COLS))]
+        a = .55 + .35 * math.sin(T * 2.2 + ph * 40)
+        c.drawRect(skia.Rect.MakeXYWH(x * W * 1.2 - W * .1, yy, s, s * 1.4), gfx.paint(col, a * (.5 + .5 * y)))
+    for yy in (top, top + (bot - top) * .45):     # tier rails
+        c.drawRect(skia.Rect.MakeXYWH(-W, yy, 3 * W, 4), gfx.paint((30, 40, 70), .9))
+    c.drawRect(skia.Rect.MakeXYWH(-W, bot - 18, 3 * W, 18), gfx.paint((18, 26, 52)))           # boundary boards
+    for k in range(12):
+        c.drawRect(skia.Rect.MakeXYWH(-W + k * W * .3, bot - 16, W * .28, 14), gfx.paint(gfx.GOLD if k % 2 else (40, 70, 140), .35))
+    # field: mowing stripes in perspective
+    for k in range(14):
+        y0 = horizon + (H - horizon) * (k / 14) ** 1.6; y1 = horizon + (H - horizon) * ((k + 1) / 14) ** 1.6
+        c.drawRect(skia.Rect.MakeLTRB(-W, y0, 2 * W, y1 + 1), gfx.paint((34, 112, 54) if k % 2 else (40, 128, 62)))
+    # the pitch strip, in perspective
+    pw0, pw1 = W * .07, W * .34
+    path = skia.Path(); path.moveTo(W / 2 - pw0, horizon + 10); path.lineTo(W / 2 + pw0, horizon + 10)
+    path.lineTo(W / 2 + pw1, H); path.lineTo(W / 2 - pw1, H); path.close()
+    c.drawPath(path, gfx.paint((196, 172, 120)))
+    for f in (.22, .78):                       # creases
+        y = horizon + 10 + (H - horizon) * f; w = pw0 + (pw1 - pw0) * f
+        c.drawRect(skia.Rect.MakeXYWH(W / 2 - w * 1.05, y, 2.1 * w, 4), gfx.paint((255, 255, 255), .8))
+    c.restore()
+    vg = skia.GradientShader.MakeRadial(skia.Point(W / 2, H * .55), max(W, H) * .75, [gfx.ci((0, 0, 0), 0), gfx.ci((0, 0, 0), .55)], [.5, 1])
+    c.drawPaint(skia.Paint(Shader=vg))
+
+
+def _bg(c, T):
+    if gfx.THEME == "stadium": return stadium(c, T)
+    return _bg_prev(c, T)
+
+
+gfx.background = _bg
+
+SKIN = (176, 120, 84)
+
+
+def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None):
+    """Original flat illustrated cricketer, front view. (x, y) = between the feet, h = height in px."""
+    u = h / 100.0; bob = math.sin(t * 2.4) * .6 * u
+    kitc = kit if isinstance(kit, tuple) else (team_col(kit) if kit in TEAMS else C(kit))
+    dark = tuple(int(v * .6) for v in kitc); helm = helmet or (22, 34, 66); pad = (240, 240, 236)
+    P = lambda col, al=1.0: gfx.paint(col, a * al)
+    c.save(); c.translate(x, y + bob)
+    c.drawOval(skia.Rect.MakeXYWH(-26 * u, -3 * u, 52 * u, 7 * u), P((0, 0, 0), .35))                       # shadow
+    for sx in (-1, 1):                                                                                     # legs: pads + shoes
+        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(sx * 9 * u - 7 * u, -42 * u, 14 * u, 38 * u), 5 * u, 5 * u), P(pad))
+        for k in range(3): c.drawRect(skia.Rect.MakeXYWH(sx * 9 * u - 7 * u, (-38 + k * 11) * u, 14 * u, 1.6 * u), P((200, 200, 196)))
+        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(sx * 9 * u - 8 * u, -6 * u, 16 * u, 6 * u), 3 * u, 3 * u), P((235, 235, 235)))
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(-17 * u, -50 * u, 34 * u, 12 * u), 4 * u, 4 * u), P(dark))   # trousers top
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(-19 * u, -80 * u, 38 * u, 34 * u), 9 * u, 9 * u), P(kitc))   # shirt
+    if number is not None:
+        gfx.text(c, str(number), 0, -55 * u, 16 * u, "bebas", (255, 255, 255) if _lum(kitc) < .6 else (16, 20, 30), a, "c")
+    # arms (pose)
+    def arm(x0, y0, x1, y1):
+        p = P(kitc); p.setStrokeWidth(9 * u); p.setStyle(skia.Paint.kStroke_Style); p.setStrokeCap(skia.Paint.kRound_Cap)
+        c.drawLine(x0, y0, x1, y1, p)
+        c.drawCircle(x1, y1, 4.6 * u, P((250, 250, 250)))                                                       # glove
+    if pose == "celebrate":
+        arm(-17 * u, -74 * u, -30 * u, -104 * u); arm(17 * u, -74 * u, 30 * u, -104 * u)
+        bat = [(30 * u, -104 * u), (44 * u, -150 * u)]
+    elif pose == "walk":
+        arm(-17 * u, -74 * u, -22 * u, -48 * u); arm(17 * u, -74 * u, 20 * u, -48 * u)
+        bat = [(20 * u, -48 * u), (30 * u, -6 * u)]
+    else:  # stand: leaning on the bat
+        arm(-17 * u, -74 * u, -12 * u, -50 * u); arm(17 * u, -74 * u, 10 * u, -50 * u)
+        bat = [(0, -50 * u), (2 * u, -6 * u)]
+    (bx0, by0), (bx1, by1) = bat
+    ang = math.degrees(math.atan2(by1 - by0, bx1 - bx0)); L = math.hypot(bx1 - bx0, by1 - by0)
+    c.save(); c.translate(bx0, by0); c.rotate(ang)
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(0, -1.6 * u, L * .35, 3.2 * u), 1.5 * u, 1.5 * u), P((40, 40, 40)))
+    c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(L * .33, -4.5 * u, L * .67, 9 * u), 3 * u, 3 * u), P((222, 196, 146)))
+    c.restore()
+    # head + helmet with grille (generic face)
+    hy = -92 * u
+    c.drawRect(skia.Rect.MakeXYWH(-5 * u, -84 * u, 10 * u, 6 * u), P(SKIN))
+    c.drawCircle(0, hy, 12 * u, P(SKIN))
+    c.drawCircle(-4 * u, hy + 1 * u, 1.4 * u, P((30, 30, 30))); c.drawCircle(4 * u, hy + 1 * u, 1.4 * u, P((30, 30, 30)))
+    hp = skia.Path(); hp.addArc(skia.Rect.MakeXYWH(-14 * u, hy - 15 * u, 28 * u, 26 * u), 180, 180); hp.close()
+    c.drawPath(hp, P(helm))
+    c.drawRect(skia.Rect.MakeXYWH(-16 * u, hy - 3 * u, 32 * u, 3 * u), P(helm))                                  # peak
+    gp = P((200, 205, 215), .9); gp.setStyle(skia.Paint.kStroke_Style); gp.setStrokeWidth(1.4 * u)
+    for k in range(3): c.drawLine(-11 * u, hy + (2 + k * 4) * u, 11 * u, hy + (2 + k * 4) * u, gp)               # grille
+    for xx in (-11, 11): c.drawLine(xx * u, hy, xx * u, hy + 11 * u, gp)
+    c.restore()
+
+
+def _panel_card(c, x, y, w, h, a):
+    gfx.rrect(c, x, y, w, h, 22, (8, 14, 32), .82 * a, stroke=2, scol=(255, 255, 255), sa=.12 * a)
+
+
+def stage_panel(c, g, t, D, s, a=1.0):
+    """The data band at the top of a stage scene."""
+    p = s.get("panel", {}); kind = p.get("kind", "headline"); x0, x1 = g.x0, g.x1; cw = x1 - x0; top = g.top - 260 if g.fmt == "short" else 130
+    st = D * p.get("at", .05); pa = eo(prog(t, st, st + .5)) * a
+    if pa <= 0: return
+    if p.get("kicker"):
+        text(c, p["kicker"].upper(), g.cx, top + 10, 30, "interB", GOLD, pa, "c", track=6)
+    y = top + 40
+    if kind == "headline":
+        for k, ln in enumerate(p["lines"]):
+            tt = ln["t"] if isinstance(ln, dict) else ln; cc = C(ln.get("c")) if isinstance(ln, dict) else INK
+            z = fit(tt, cw, 120, "bebas", 2); y += z * .92
+            q = eo(prog(t, st + .12 * k, st + .12 * k + .45)) * a
+            text(c, tt, g.cx, y, z, "bebas", cc, q, "c", track=2, glow=10 if cc == GOLD else 0)
+    elif kind == "bignum":
+        v = p["value"]; dec = p.get("dec", 0); fr = p.get("from", 0)
+        cd = eo(prog(t, st, st + p.get("count_dur", .9))); cur = fr + (v - fr) * cd
+        vs = p.get("prefix", "") + f"{cur:,.{dec}f}" + p.get("suffix", "")
+        _panel_card(c, x0, y, cw, 300, pa)
+        z = fit(vs, cw - 80, 210, "bebas"); cc = C(p.get("color", "gold"))
+        text(c, vs, g.cx, y + 205, z, "bebas", cc, pa, "c", glow=18)
+        text(c, p["label"].upper(), g.cx, y + 262, fit(p["label"].upper(), cw - 60, 30, "interB", 4), "interB", INK, pa, "c", track=4)
+    elif kind == "versus":
+        L, R = p["left"], p["right"]; _panel_card(c, x0, y, cw, 320, pa)
+        for k, (side, cx) in enumerate([(L, x0 + cw * .27), (R, x0 + cw * .73)]):
+            q = eo(prog(t, st + .35 * k, st + .35 * k + .5)) * a
+            vs = side["v"]; cc = C(side.get("c", "ink"))
+            text(c, vs, cx, y + 190, fit(vs, cw * .42, 170, "bebas"), "bebas", cc, q, "c", glow=12 if side.get("c") == "gold" else 0)
+            for j, l in enumerate(wrap(side["l"].upper(), cw * .4, 26, "interB")):
+                text(c, l, cx, y + 245 + j * 32, 26, "interB", MUTED, q, "c", track=3)
+        text(c, "VS", g.cx, y + 175, 44, "bebas", MUTED, pa, "c")
+    elif kind == "score":          # a match card: event, then the innings
+        _panel_card(c, x0, y, cw, 300, pa)
+        text(c, p["event"].upper(), g.cx, y + 58, fit(p["event"].upper(), cw - 60, 30, "interB", 4), "interB", MUTED, pa, "c", track=4)
+        vs = p["score"]; z = fit(vs, cw - 80, 170, "bebas"); cc = C(p.get("color", "gold"))
+        text(c, vs, g.cx, y + 210, z, "bebas", cc, pa, "c", glow=14)
+        if p.get("note"): text(c, p["note"], g.cx, y + 268, 28, "interSB", INK, pa * .9, "c")
+    elif kind == "table":          # rows of [label, value, colour?], revealed in turn
+        rows = p["rows"]; rh = 64; _panel_card(c, x0, y, cw, rh * len(rows) + 40, pa)
+        for k, r in enumerate(rows):
+            q = eo(prog(t, st + D * .6 * k / max(1, len(rows)), st + D * .6 * k / max(1, len(rows)) + .35)) * a
+            yy = y + 30 + k * rh
+            text(c, r[0], x0 + 36, yy + 42, 30, "interB", MUTED, q, track=2)
+            cc = C(r[2]) if len(r) > 2 else INK
+            text(c, r[1], x1 - 36, yy + 46, 46, "bebas", cc, q, "r")
+
+
+def sc_stage(c, g, t, D, s):
+    zoom = 1 + .04 * (t / max(D, .1))                                         # slow push-in
+    if gfx.THEME == "stadium":
+        stadium(c, t + 3, zoom)
+    av = s.get("avatars", [])
+    for k, A in enumerate(av):
+        st = D * A.get("at", .0); q = eo(prog(t, st, st + .5))
+        if q <= 0: continue
+        W, H = g.W, g.H
+        ax = W * A.get("x", .5); ay = H * (.715 if g.fmt == "short" else .9)
+        hh = (470 if g.fmt == "short" else 520) * A.get("scale", 1.0) * zoom
+        avatar(c, ax + (1 - q) * (60 if A.get("x", .5) > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"),
+               A.get("pose", "stand"), t + k, q)
+    stage_panel(c, g, t, D, s)
+
+
+SCENES["stage"] = sc_stage
+NO_CAPTION = {"statement", "title", "cta"}
+
+
+def captions_v2(c, g, t, grps):
+    """Two-line captions in the lower band; numbers and long words light up in gold as they're spoken."""
+    gi = None
+    for i, gr in enumerate(grps):
+        end = grps[i + 1][0]["s"] if i + 1 < len(grps) else gr[-1]["e"] + .4
+        if gr[0]["s"] - .05 <= t < end: gi = i; break
+    if gi is None: return
+    gr = grps[gi]
+    ws = [x["w"].upper() for x in gr]
+    size = 66
+    lines, cur = [], []
+    for w, wo in zip(ws, gr):
+        trial = " ".join([x for x, _ in cur] + [w])
+        if cur and twidth(trial, size, "bebas", 2) > g.W - 160: lines.append(cur); cur = []
+        cur.append((w, wo))
+    if cur: lines.append(cur)
+    lines = lines[:2]
+    y0 = g.H * (.775 if g.fmt == "short" else .88)
+    pop = eback(prog(t, gr[0]["s"] - .05, gr[0]["s"] + .12))
+    f = skia.Font(gfx.TF["bebas"], size)
+    for li, ln in enumerate(lines):
+        widths = [twidth(w, size, "bebas", 2) for w, _ in ln]; total = sum(widths) + 18 * (len(ln) - 1)
+        x = g.W / 2 - total / 2; y = y0 + li * size * 1.02
+        for (w, wo), wd in zip(ln, widths):
+            key = any(ch.isdigit() for ch in w) or w.strip(".,?!").lower() in NUMWORDS or len(w.strip(".,?!")) >= 8
+            spoken = wo["s"] <= t
+            col = GOLD if key and spoken else (255, 255, 255)
+            sp = gfx.paint((0, 0, 0), .85 * min(1, pop + .2), stroke=12); sp.setStrokeJoin(skia.Paint.kRound_Join)
+            c.drawString(w, x, y, f, sp); c.drawString(w, x, y, f, gfx.paint(col, min(1, pop + .2)))
+            x += wd + 18
+
+
+NUMWORDS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+            "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty",
+            "seventy", "eighty", "ninety", "hundred", "thousand", "half", "double", "first", "never", "best", "worst"}
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "scene":
         render_scene(sys.argv[2], sys.argv[3], int(sys.argv[4]))
     elif cmd == "build":
         fmts = ["long", "short"] if len(sys.argv) < 4 or sys.argv[3] == "both" else [sys.argv[3]]
+        sp = json.load(open(sys.argv[2])); fmts = [f for f in fmts if sp.get(f)]     # skip a format with no scenes
         for f in fmts: print(build(sys.argv[2], f), flush=True)
-        print(*thumb(sys.argv[2]))
+        out = thumb(sys.argv[2])
+        for o in out:
+            if os.path.basename(o).startswith("_unused") and os.path.exists(o): os.remove(o)
+        print(*[o for o in out if os.path.exists(o)])
     elif cmd == "voice":
         spec = json.load(open(sys.argv[2]))
         for f in (["long", "short"] if len(sys.argv) < 4 else [sys.argv[3]]):
