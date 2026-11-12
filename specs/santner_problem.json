@@ -347,6 +347,172 @@
   {
    "vo": "India smashed New Zealand's seamers. But one bowler, they couldn't hit.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "ONE BOWLER"
+      },
+      {
+       "t": "INDIA",
+       "c": "gold"
+      },
+      {
+       "t": "COULDN'T HIT",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.62,
+      "number": 74,
+      "dir": -1,
+      "cap": true
+     }
+    ],
+    "cam": "push",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "The seamers went at almost eleven an over. Mitchell Santner, seven point three seven.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "RUNS PER OVER",
+     "rows": [
+      [
+       "NZ SEAMERS",
+       "10.98",
+       "red"
+      ],
+      [
+       "SANTNER",
+       "7.37",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "stand",
+      "x": 0.5,
+      "number": 74,
+      "cap": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Nine wickets in nineteen overs, including four for twenty-one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.05,
+     "kicker": "SANTNER",
+     "left": {
+      "v": "9",
+      "l": "WICKETS",
+      "c": "gold"
+     },
+     "right": {
+      "v": "4/21",
+      "l": "BEST",
+      "c": "ink"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "celebrate",
+      "x": 0.5,
+      "number": 74,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "तिलक वर्मा made eighteen off twenty-one against him. श्रेयस अय्यर fell to him twice.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "VS SANTNER · STRIKE RATE",
+     "rows": [
+      [
+       "TILAK VARMA",
+       "86",
+       "red"
+      ],
+      [
+       "SHREYAS IYER · OUT TWICE",
+       "106",
+       "red"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "number": 74,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "cam": "pull",
+    "view": "side",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "How should India play him? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "HOW TO PLAY"
+     },
+     {
+      "t": "SANTNER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)",
+  "Figures: analysis/santner_problem.py"
+ ],
+ "theme_long": "blue",
+ "short_classic": [
+  {
+   "vo": "India smashed New Zealand's seamers. But one bowler, they couldn't hit.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -450,9 +616,25 @@
    }
   }
  ],
- "theme": "blue",
- "sources": [
-  "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)",
-  "Figures: analysis/santner_problem.py"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ]
+  ]
+ }
 }

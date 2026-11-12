@@ -1,6 +1,6 @@
 {
  "slug": "nz_test_preview",
- "theme": "whites",
+ "theme": "stadium",
  "tag": "SERIES PREVIEW",
  "tagsub": "INDIA IN NEW ZEALAND · TESTS",
  "files": {
@@ -450,6 +450,158 @@
   {
    "vo": "India have won just two Test series in New Zealand. Ever.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "2 SERIES WINS"
+      },
+      {
+       "t": "IN NEW",
+       "c": "gold"
+      },
+      {
+       "t": "ZEALAND.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.32,
+      "x2": 0.5
+     },
+     {
+      "kit": "NZ",
+      "pose": "stand",
+      "x": 0.78,
+      "scale": 0.85,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Eighty-six per cent of wickets there go to fast bowlers. In India, it's forty-three.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.05,
+     "kicker": "PACE WICKETS",
+     "left": {
+      "v": "86%",
+      "l": "NZ",
+      "c": "gold"
+     },
+     "right": {
+      "v": "43%",
+      "l": "INDIA",
+      "c": "ink"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.3
+     },
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.78,
+      "dir": -1
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "And only three of India's sixteen players have ever played a Test there.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "HAVE PLAYED A TEST IN NZ",
+     "value": 3,
+     "suffix": " OF 16",
+     "color": "red",
+     "count_dur": 0.5
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "close"
+   }
+  },
+  {
+   "vo": "But Southee, Wagner and Williamson have retired. Full preview on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "CAN INDIA"
+     },
+     {
+      "t": "DO IT?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "Can India Win a Test Series in New Zealand? | NZ vs IND Preview",
+   "description": "India have won two Test series in New Zealand in 58 years. Ahead of the Wellington and Christchurch Tests, we break down why New Zealand is so hard (86% of wickets there go to pace), how New Zealand's attack has changed, India's new-look squad, and what's at stake in the World Test Championship.",
+   "tags": [
+    "India vs New Zealand",
+    "IND vs NZ",
+    "NZ vs IND Test",
+    "Test cricket",
+    "World Test Championship",
+    "WTC",
+    "Jasprit Bumrah",
+    "Kyle Jamieson",
+    "Shubman Gill",
+    "Basin Reserve",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "India have won 2 Test series in New Zealand. Ever. #Shorts",
+   "description": "Why New Zealand is so hard for India, in 30 seconds. Full preview on the channel.",
+   "tags": [
+    "India vs New Zealand",
+    "Test cricket",
+    "cricket",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ },
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "India have won just two Test series in New Zealand. Ever.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -518,35 +670,42 @@
    }
   }
  ],
- "yt": {
-  "long": {
-   "title": "Can India Win a Test Series in New Zealand? | NZ vs IND Preview",
-   "description": "India have won two Test series in New Zealand in 58 years. Ahead of the Wellington and Christchurch Tests, we break down why New Zealand is so hard (86% of wickets there go to pace), how New Zealand's attack has changed, India's new-look squad, and what's at stake in the World Test Championship.",
-   "tags": [
-    "India vs New Zealand",
-    "IND vs NZ",
-    "NZ vs IND Test",
-    "Test cricket",
-    "World Test Championship",
-    "WTC",
-    "Jasprit Bumrah",
-    "Kyle Jamieson",
-    "Shubman Gill",
-    "Basin Reserve",
-    "cricket analysis",
-    "The Third Man"
+ "captions": "v2",
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    25,
+    25,
+    25
+   ],
+   [
+    235,
+    235,
+    235
+   ],
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    60,
+    60,
+    60
    ]
-  },
-  "short": {
-   "title": "India have won 2 Test series in New Zealand. Ever. #Shorts",
-   "description": "Why New Zealand is so hard for India, in 30 seconds. Full preview on the channel.",
-   "tags": [
-    "India vs New Zealand",
-    "Test cricket",
-    "cricket",
-    "cricket shorts",
-    "The Third Man"
+  ],
+  "boards": [
+   [
+    25,
+    25,
+    25
+   ],
+   [
+    235,
+    235,
+    235
    ]
-  }
+  ]
  }
 }

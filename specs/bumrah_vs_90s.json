@@ -234,6 +234,118 @@
   {
    "vo": "जसप्रीत बुमराह bowls one over to nineties सचिन and Lara.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.0,
+     "kicker": "ONE OVER · ILLUSTRATIVE",
+     "left": {
+      "v": "BUMRAH",
+      "l": "Today",
+      "c": "gold"
+     },
+     "right": {
+      "v": "90s",
+      "l": "Sachin & Lara",
+      "c": "ink"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.7,
+      "number": 93,
+      "dir": -1,
+      "cap": true
+     },
+     {
+      "kit": [
+       238,
+       234,
+       220
+      ],
+      "pose": "stance",
+      "x": 0.28
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "stumps": [
+     0.18,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Ball one, left alone. Ball two, driven straight for four. Ball three, the yorker, dug out. Ball four, a single. Ball five, Lara cuts for four. Ball six, the slower ball. Caught.",
+   "scene": {
+    "type": "over",
+    "head": {
+     "t": "THE OVER"
+    },
+    "balls": [
+     {
+      "r": "•",
+      "n": "Left alone",
+      "at": 0.02
+     },
+     {
+      "r": "4",
+      "n": "Straight drive",
+      "c": "blue",
+      "at": 0.14
+     },
+     {
+      "r": "•",
+      "n": "Yorker, dug out",
+      "at": 0.32
+     },
+     {
+      "r": "1",
+      "n": "Single",
+      "at": 0.48
+     },
+     {
+      "r": "4",
+      "n": "Lara cuts",
+      "c": "red",
+      "at": 0.6
+     },
+     {
+      "r": "W",
+      "n": "Slower ball, caught",
+      "c": "gold",
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who wins? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO"
+     },
+     {
+      "t": "WINS?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "Career records (Tendulkar, Lara); https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/"
+ ],
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "जसप्रीत बुमराह bowls one over to nineties सचिन and Lara.",
+   "scene": {
     "type": "matchup",
     "left": {
      "name": "BUMRAH",
@@ -308,8 +420,25 @@
    }
   }
  ],
- "theme": "scoreboard",
- "sources": [
-  "Career records (Tendulkar, Lara); https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    120,
+    120,
+    130
+   ]
+  ]
+ }
 }

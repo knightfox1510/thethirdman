@@ -1,6 +1,6 @@
 {
  "slug": "ipl_batting_evolution",
- "theme": "scoreboard",
+ "theme": "stadium",
  "tag": "DATA STORY",
  "tagsub": "HOW THE IPL CHANGED T20 BATTING",
  "files": {
@@ -1085,6 +1085,165 @@
   {
    "vo": "In twenty thirteen, IPL teams made two hundred just four times all season.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.0,
+     "label": "200+ TOTALS IN IPL 2013",
+     "value": 4,
+     "color": "ink",
+     "count_dur": 0.5
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "In twenty twenty-six? Sixty-five.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "200+ TOTALS IN IPL 2026",
+     "value": 65,
+     "color": "gold",
+     "count_dur": 0.9
+    },
+    "avatars": [
+     {
+      "kit": "SRH",
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "pull"
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.35,
+     "shot": "six"
+    }
+   }
+  },
+  {
+   "vo": "The top three now strike at one sixty-six. In twenty thirteen, it was one-twenty.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.05,
+     "kicker": "TOP-3 STRIKE RATE",
+     "left": {
+      "v": "120",
+      "l": "2013",
+      "c": "ink"
+     },
+     "right": {
+      "v": "166",
+      "l": "2026",
+      "c": "gold"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "And teams now chase two hundred almost half the time.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "200 IS"
+      },
+      {
+       "t": "PAR.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Full ten-minute breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "FULL"
+     },
+     {
+      "t": "BREAKDOWN",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "How the IPL Changed T20 Batting Forever (2013–2026) | Data Story",
+   "description": "In 2013, IPL teams made 200 just four times all season. In 2026, they did it 65 times.\n\nWe went through every ball bowled in the IPL since 2013 to find out what really changed: where the runs come from, who's scoring them, what the Impact Player rule actually did, why 200 is no longer safe, and how bowlers are fighting back.",
+   "tags": [
+    "IPL",
+    "IPL stats",
+    "IPL 2026",
+    "IPL 2027",
+    "T20 cricket",
+    "cricket analysis",
+    "cricket data",
+    "Impact Player rule",
+    "IPL 200 totals",
+    "powerplay",
+    "Vaibhav Sooryavanshi",
+    "Abhishek Sharma",
+    "Jasprit Bumrah",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "IPL teams made 200 four times in 2013. In 2026? 🤯 #Shorts",
+   "description": "How T20 batting changed forever, in numbers. Full 10-minute breakdown on the channel.",
+   "tags": [
+    "IPL",
+    "cricket",
+    "IPL stats",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ },
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "In twenty thirteen, IPL teams made two hundred just four times all season.",
+   "scene": {
     "type": "bignum",
     "value": 4,
     "label": "200+ TOTALS IN IPL 2013",
@@ -1158,37 +1317,30 @@
    }
   }
  ],
- "yt": {
-  "long": {
-   "title": "How the IPL Changed T20 Batting Forever (2013–2026) | Data Story",
-   "description": "In 2013, IPL teams made 200 just four times all season. In 2026, they did it 65 times.\n\nWe went through every ball bowled in the IPL since 2013 to find out what really changed: where the runs come from, who's scoring them, what the Impact Player rule actually did, why 200 is no longer safe, and how bowlers are fighting back.",
-   "tags": [
-    "IPL",
-    "IPL stats",
-    "IPL 2026",
-    "IPL 2027",
-    "T20 cricket",
-    "cricket analysis",
-    "cricket data",
-    "Impact Player rule",
-    "IPL 200 totals",
-    "powerplay",
-    "Vaibhav Sooryavanshi",
-    "Abhishek Sharma",
-    "Jasprit Bumrah",
-    "The Third Man"
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    255,
+    205,
+    0
+   ],
+   [
+    0,
+    75,
+    160
+   ],
+   [
+    200,
+    30,
+    40
+   ],
+   [
+    240,
+    240,
+    240
    ]
-  },
-  "short": {
-   "title": "IPL teams made 200 four times in 2013. In 2026? 🤯 #Shorts",
-   "description": "How T20 batting changed forever, in numbers. Full 10-minute breakdown on the channel.",
-   "tags": [
-    "IPL",
-    "cricket",
-    "IPL stats",
-    "cricket shorts",
-    "The Third Man"
-   ]
-  }
+  ]
  }
 }

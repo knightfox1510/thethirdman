@@ -194,6 +194,149 @@
   {
    "vo": "No Indian bowler has ever bowled one hundred and sixty kilometres an hour.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "NO INDIAN"
+      },
+      {
+       "t": "HAS BOWLED"
+      },
+      {
+       "t": "160",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1,
+      "cap": true
+     }
+    ],
+    "cam": "push",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "The closest: उमरान मलिक, one fifty-seven.",
+   "scene": {
+    "type": "gauge",
+    "min": 140,
+    "max": 165,
+    "value": 157,
+    "needle_at": 0.0,
+    "marks": [
+     {
+      "v": 161.3,
+      "l": "SHOAIB 161.3",
+      "c": "red",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "vo": "At one sixty, the batter gets about four-tenths of a second.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "TO REACT",
+     "value": 0.4,
+     "dec": 1,
+     "suffix": " SEC",
+     "count_dur": 0.8
+    },
+    "avatars": [
+     {
+      "kit": "AUS",
+      "pose": "stance",
+      "x": 0.3,
+      "hit": "drive",
+      "cap": false
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "ball": {
+     "at": 0.4,
+     "shot": "bowled"
+    },
+    "stumps": [
+     0.18,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "But बुमराह proves skill beats speed.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "SKILL"
+      },
+      {
+       "t": "BEATS",
+       "c": "gold"
+      },
+      {
+       "t": "SPEED.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Who will be India's first one-sixty bowler? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "INDIA'S"
+     },
+     {
+      "t": "FIRST 160?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.newsbytesapp.com/news/sports/indian-pace-bowlers-who-can-clock-160-kph/story",
+  "https://www.freepressjournal.in/sports/umran-malik-breaks-own-record-for-fastest-delivery-by-an-indian-in-international-cricket-with-156-kmph-thunderbolt"
+ ],
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "No Indian bowler has ever bowled one hundred and sixty kilometres an hour.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -273,9 +416,25 @@
    }
   }
  ],
- "theme": "whites",
- "sources": [
-  "https://www.newsbytesapp.com/news/sports/indian-pace-bowlers-who-can-clock-160-kph/story",
-  "https://www.freepressjournal.in/sports/umran-malik-breaks-own-record-for-fastest-delivery-by-an-indian-in-international-cricket-with-156-kmph-thunderbolt"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ]
+  ]
+ }
 }

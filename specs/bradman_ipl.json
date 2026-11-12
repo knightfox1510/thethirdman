@@ -250,6 +250,216 @@
   {
    "vo": "Don Bradman averaged ninety-nine point nine four in Tests.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.0,
+     "label": "TEST BATTING AVERAGE",
+     "value": 99.94,
+     "dec": 2,
+     "count_dur": 1.0
+    },
+    "avatars": [
+     {
+      "kit": [
+       238,
+       234,
+       220
+      ],
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5,
+      "bat": true,
+      "cap": true,
+      "pads": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "That's nearly double सचिन तेंदुलकर.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "NEARLY DOUBLE",
+     "rows": [
+      [
+       "SACHIN",
+       "53.78",
+       "ink"
+      ],
+      [
+       "BRADMAN",
+       "99.94",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": [
+       238,
+       234,
+       220
+      ],
+      "pose": "stand",
+      "x": 0.5,
+      "bat": true,
+      "cap": true,
+      "pads": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "But he scored at about sixty-one per hundred balls. Today's IPL top order goes at one fifty-eight.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "THE CATCH · RUNS PER 100 BALLS",
+     "rows": [
+      [
+       "BRADMAN (EST.)",
+       "61",
+       "ink"
+      ],
+      [
+       "IPL TOP ORDER",
+       "158.5",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": [
+       238,
+       234,
+       220
+      ],
+      "pose": "stance",
+      "x": 0.38,
+      "cap": true,
+      "pads": true
+     }
+    ],
+    "cam": "wide",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "And he hit just six sixes in his whole Test career.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "TEST CAREER SIXES",
+     "value": 6,
+     "color": "red",
+     "count_dur": 0.6
+    },
+    "avatars": [
+     {
+      "kit": [
+       238,
+       234,
+       220
+      ],
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "drive",
+      "cap": true,
+      "pads": true
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.45,
+     "shot": "four"
+    }
+   }
+  },
+  {
+   "vo": "But give him a modern bat and one season to adapt, and he'd own the league.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "ONE SEASON"
+      },
+      {
+       "t": "TO ADAPT."
+      },
+      {
+       "t": "THEN HE",
+       "c": "gold"
+      },
+      {
+       "t": "OWNS IT.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": [
+       212,
+       175,
+       55
+      ],
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "pull",
+      "cap": false
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "word": "owns",
+     "shot": "six"
+    }
+   }
+  },
+  {
+   "vo": "Could Bradman rule the IPL? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "COULD BRADMAN"
+     },
+     {
+      "t": "RULE THE IPL?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.espn.com/cricket/story/_/id/40123053/the-gap-bradman-next-best-using-z-scores-anantha-narayanan",
+  "https://www.theroar.com.au/2020/09/05/bradman-era-to-era/",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ],
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "Don Bradman averaged ninety-nine point nine four in Tests.",
+   "scene": {
     "type": "bignum",
     "value": 99.94,
     "dec": 2,
@@ -354,10 +564,30 @@
    }
   }
  ],
- "theme": "scoreboard",
- "sources": [
-  "https://www.espn.com/cricket/story/_/id/40123053/the-gap-bradman-next-best-using-z-scores-anantha-narayanan",
-  "https://www.theroar.com.au/2020/09/05/bradman-era-to-era/",
-  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    0,
+    90,
+    50
+   ],
+   [
+    212,
+    175,
+    55
+   ],
+   [
+    120,
+    120,
+    130
+   ]
+  ]
+ }
 }

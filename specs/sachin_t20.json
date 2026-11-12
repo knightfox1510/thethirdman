@@ -1,6 +1,6 @@
 {
  "slug": "sachin_t20",
- "theme": "scoreboard",
+ "theme": "stadium",
  "tag": "WHAT IF?",
  "tagsub": "SACHIN IN THE T20 ERA",
  "files": {
@@ -263,6 +263,194 @@
   {
    "vo": "सचिन तेंदुलकर scored one hundred international hundreds. But he played exactly one T20 international.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "100 HUNDREDS."
+      },
+      {
+       "t": "EXACTLY"
+      },
+      {
+       "t": "ONE T20I.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.3,
+      "number": 10,
+      "x2": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "So would he survive today's T20 game? His IPL strike rate was just under one-twenty. Today's top-order batters strike at one-fifty-eight.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "STRIKE RATE",
+     "rows": [
+      [
+       "SACHIN · IPL CAREER",
+       "119.8",
+       "ink"
+      ],
+      [
+       "TOP ORDER · TODAY",
+       "158.5",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.5,
+      "number": 10
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Looks bad. But scale his numbers to today's game, and he climbs to around one-forty-six.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "ERA-ADJUSTED STRIKE RATE",
+     "value": 146,
+     "from": 119.8
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5,
+      "number": 10
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "And remember, he was upper-cutting शोएब अख़्तर over third man before T20 cricket even existed.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "ILLUSTRATIVE",
+     "lines": [
+      {
+       "t": "THE UPPER CUT"
+      },
+      {
+       "t": "OVER THIRD MAN",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.34,
+      "number": 10,
+      "hit": "pull"
+     },
+     {
+      "kit": "PAK",
+      "pose": "bowl",
+      "x": 0.84,
+      "dir": -1
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "ball": {
+     "word": "upper",
+     "shot": "six",
+     "side": -1
+    },
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Not a slogger. The anchor who explodes.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "NOT A SLOGGER."
+      },
+      {
+       "t": "THE ANCHOR"
+      },
+      {
+       "t": "WHO EXPLODES.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5,
+      "number": 10
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Would सचिन have dominated the T20 era? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD SACHIN"
+     },
+     {
+      "t": "DOMINATE T20?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "sources": [
+  "https://www.sportskeeda.com/cricket/shubman-gill-vs-sachin-tendulkar-comparing-stats-78-ipl-matches",
+  "https://www.espncricinfo.com/ci/engine/match/255954.html",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ],
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "सचिन तेंदुलकर scored one hundred international hundreds. But he played exactly one T20 international.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -378,9 +566,25 @@
    }
   }
  ],
- "sources": [
-  "https://www.sportskeeda.com/cricket/shubman-gill-vs-sachin-tendulkar-comparing-stats-78-ipl-matches",
-  "https://www.espncricinfo.com/ci/engine/match/255954.html",
-  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ]
+  ]
+ }
 }

@@ -1,6 +1,6 @@
 {
  "slug": "death_kings",
- "theme": "scoreboard",
+ "theme": "stadium",
  "tag": "DATA STORY",
  "tagsub": "THE DEATH-OVERS KINGS",
  "files": {
@@ -361,6 +361,145 @@
   {
    "vo": "At the death in the IPL, bowlers go for over ten and a half an over.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.0,
+     "label": "LEAGUE ECONOMY · OVERS 16-20",
+     "value": 10.62,
+     "dec": 2,
+     "color": "red",
+     "count_dur": 0.8,
+     "kicker": "IPL 2022-2026"
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "pull",
+      "cap": false
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    }
+   }
+  },
+  {
+   "vo": "जसप्रीत बुमराह goes for seven point two eight.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "BUMRAH · OVERS 16-20",
+     "value": 7.28,
+     "dec": 2,
+     "color": "gold",
+     "count_dur": 0.8
+    },
+    "avatars": [
+     {
+      "kit": "MI",
+      "pose": "bowl",
+      "x": 0.64,
+      "number": 93,
+      "dir": -1,
+      "cap": true
+     }
+    ],
+    "cam": "wide",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "The next best is over nine.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "DEATH ECONOMY",
+     "rows": [
+      [
+       "BUMRAH",
+       "7.28",
+       "gold"
+      ],
+      [
+       "PATHIRANA",
+       "9.23",
+       "ink"
+      ],
+      [
+       "LEAGUE",
+       "10.62",
+       "red"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "MI",
+      "pose": "stand",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "The average bowler gets hit for six every nine balls. बुमराह, every thirty.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "BALLS PER SIX AGAINST BUMRAH",
+     "value": 30,
+     "color": "gold",
+     "count_dur": 0.7,
+     "kicker": "League average: 9"
+    },
+    "avatars": [
+     {
+      "kit": "MI",
+      "pose": "celebrate",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Who's your best death bowler? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "ONE"
+     },
+     {
+      "t": "KING.",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "At the death in the IPL, bowlers go for over ten and a half an over.",
+   "scene": {
     "type": "bignum",
     "value": 10.62,
     "dec": 2,
@@ -435,5 +574,38 @@
     ]
    }
   }
- ]
+ ],
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    0,
+    75,
+    160
+   ],
+   [
+    212,
+    175,
+    55
+   ],
+   [
+    235,
+    235,
+    245
+   ]
+  ],
+  "boards": [
+   [
+    0,
+    75,
+    160
+   ],
+   [
+    212,
+    175,
+    55
+   ]
+  ]
+ }
 }

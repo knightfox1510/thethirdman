@@ -39,6 +39,11 @@ SHOW = {"सचिन": "Sachin", "तेंदुलकर": "Tendulkar", "श�
 THEME_KEYS = ("INK", "MUTED", "GOLD", "BLUE", "RED", "PANEL", "LINE", "BG", "ORANGE")
 
 
+def theme_for(spec, fmt):
+    """Long-form can keep its own look (theme_long) while the Short uses the stadium stage."""
+    return spec.get("theme_long", spec.get("theme", "whites")) if fmt == "long" else spec.get("theme", "whites")
+
+
 def apply_theme(name):
     gfx.apply_theme(name)
     g = globals()
@@ -794,7 +799,7 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
 
 def render_scene(spec_path, fmt, i):
     spec = json.load(open(spec_path)); base = f"{ROOT}/out/{spec['slug']}/{fmt}"
-    apply_theme(spec.get("theme", "whites")); spec["_intro"] = pick_intro(spec)
+    apply_theme(theme_for(spec, fmt)); spec["_intro"] = pick_intro(spec)
     g = setup(fmt); scenes = spec[fmt]
     meta, lead, durs, starts, total = plan(spec, fmt, base)
     grps = cap_groups(meta[i]["words"], 34 if spec.get("captions") == "v2" else 16) if fmt == "short" else None
@@ -816,7 +821,7 @@ def render_scene(spec_path, fmt, i):
 
 def stills(spec_path, fmt, frac=.92):
     spec = json.load(open(spec_path)); base = f"{ROOT}/out/{spec['slug']}/{fmt}"
-    apply_theme(spec.get("theme", "whites")); spec["_intro"] = pick_intro(spec)
+    apply_theme(theme_for(spec, fmt)); spec["_intro"] = pick_intro(spec)
     g = setup(fmt); scenes = spec[fmt]
     meta, lead, durs, starts, total = plan(spec, fmt, base)
     from PIL import Image
@@ -899,7 +904,7 @@ def lint_vo(spec):
 def build(spec_path, fmt):
     spec = json.load(open(spec_path)); slug = spec["slug"]
     lint_vo(spec)
-    apply_theme(spec.get("theme", "whites"))
+    apply_theme(theme_for(spec, fmt))
     base = f"{ROOT}/out/{slug}/{fmt}"; os.makedirs(base, exist_ok=True)
     scenes = spec[fmt]
     tts([s["vo"] for s in scenes], f"{base}/vo", fmt)
@@ -1056,7 +1061,7 @@ def thumb(spec_path):
     outdir = f"{ROOT}/deliver/{slug}"; os.makedirs(outdir, exist_ok=True)
     res = []
     for fmt, (OW, OH) in [("long", (1280, 720)), ("short", (1080, 1920))]:
-        g = setup(fmt)
+        apply_theme(theme_for(spec, fmt)); g = setup(fmt)
         arr = np.zeros((OH, OW, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
         c.save(); c.scale(OW / g.W, OH / g.H)
         gfx.background(c, 3.0)
@@ -1454,7 +1459,7 @@ _bg_prev = gfx.background
 
 
 VENUE = {}          # per-spec look: {"time": night|day|dusk, "crowd": [colours], "boards": [c1, c2]}
-SKIES = {"night": ((6, 10, 24), (20, 30, 62)), "day": ((96, 150, 214), (182, 212, 236)), "dusk": ((40, 34, 82), (236, 140, 92))}
+SKIES = {"night": ((6, 10, 24), (20, 30, 62)), "day": ((52, 98, 168), (132, 176, 220)), "dusk": ((40, 34, 82), (236, 140, 92))}
 
 
 def _stumps(c, x, yb, h, a=1.0):
@@ -1463,7 +1468,7 @@ def _stumps(c, x, yb, h, a=1.0):
     c.drawRect(skia.Rect.MakeXYWH(x - h * .14, yb - h - h * .03, h * .28, h * .03), gfx.paint((245, 240, 225), a))
 
 
-def stadium(c, T, zoom=1.0, view="end", fy=None, stumps=(.2, .9)):
+def stadium(c, T, zoom=1.0, view="end", fy=None, stumps=(.2, .9), far=False):
     W, H = gfx.W, gfx.H
     tod = VENUE.get("time", "night"); day = tod == "day"
     horizon = H * (.47 if H > W else .52)
@@ -1513,7 +1518,7 @@ def stadium(c, T, zoom=1.0, view="end", fy=None, stumps=(.2, .9)):
         for f in (.22, .78):
             y = horizon + 10 + (H - horizon) * f; w = pw0 + (pw1 - pw0) * f
             c.drawRect(skia.Rect.MakeXYWH(W / 2 - w * 1.05, y, 2.1 * w, 4), gfx.paint((255, 255, 255), .8))
-        _stumps(c, W / 2, horizon + 10 + (H - horizon) * .2, H * .035)      # far end
+        if far: _stumps(c, W / 2, horizon + 10 + (H - horizon) * .2, H * .035)      # far end
     c.restore()
     vg = skia.GradientShader.MakeRadial(skia.Point(W / 2, H * .55), max(W, H) * .75, [gfx.ci((0, 0, 0), 0), gfx.ci((0, 0, 0), .55 if not day else .3)], [.5, 1])
     c.drawPaint(skia.Paint(Shader=vg))
@@ -1600,15 +1605,18 @@ def _pose(pose, t):
     return j
 
 
-def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None, dir=1):
+def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None, dir=1, cap=None, pads=None, bat=None):
     """Original illustrated cricketer (no likeness). (x, y) = between the feet, h = height in px.
     Front poses: stand, walk, celebrate, raise, dejected. Side-on: stance, drive, pull, run, bowl (dir=-1 mirrors = left-hander)."""
     u = h / 100.0
+    if isinstance(kit, list): kit = tuple(kit)
     kitc = kit if isinstance(kit, tuple) else (TEAMS[kit][0] if kit in TEAMS else C(kit))      # the real kit colour
     if _lum(kitc) < .08: kitc = _lift(kitc, .1)                                                   # black kits stay readable
     trou = _sh(kitc, .62) if _lum(kitc) > .08 else kitc; trim = _lift(kitc, .55); helm = helmet or (22, 34, 66)
     P = lambda col, al=1.0: gfx.paint(col, a * al)
     J = _pose(pose, t); side = J["view"] == "side"
+    CAP = cap if cap is not None else bool(J.get("ball")); PADS = pads if pads is not None else not CAP
+    if bat is False or (cap and bat is None and pose not in ("stance", "drive", "pull", "run", "walk")): J["bat"] = None
     pt = lambda k: (J[k][0] * u, J[k][1] * u)
 
     def seg(p0, p1, w, col, al=1.0):
@@ -1632,7 +1640,7 @@ def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None
 
     def leg(H, K, A, shade):
         seg(H, K, 11.5, _sh(trou, shade))
-        if J.get("ball"): seg(K, A, 9.5, _sh(trou, shade))                 # bowlers: no pads
+        if not PADS: seg(K, A, 9.5, _sh(trou, shade))                     # bowlers/fielders: no pads
         else: pad(K, A, shade)
         shoe(A, shade)
 
@@ -1662,7 +1670,15 @@ def avatar(c, x, y, h, kit, number=None, pose="stand", t=0.0, a=1.0, helmet=None
 
     def head(Hc):
         hx, hy = Hc
-        if J.get("ball"):                                                   # bowler: bare face + team cap
+        if CAP and not side:                                                # front view, cap
+            c.drawCircle(hx, hy + 1.5 * u, 10 * u, P(SKIN))
+            for sx in (-1, 1): c.drawCircle(hx + sx * 9.6 * u, hy + 2.5 * u, 2.4 * u, P(_sh(SKIN, .85)))
+            cp = skia.Path(); cp.addArc(skia.Rect.MakeXYWH(hx - 10.5 * u, hy - 10.5 * u, 21 * u, 19 * u), 180, 180); cp.close()
+            c.drawPath(cp, P(kitc))
+            c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeLTRB(hx - 9 * u, hy - 2.2 * u, hx + 9 * u, hy + 1.6 * u), 1.6 * u, 1.6 * u), P(_sh(kitc, .7)))
+            for sx in (-1, 1): c.drawCircle(hx + sx * 3.6 * u, hy + 4 * u, 1 * u, P((30, 30, 30)))
+            return
+        if CAP:                                                             # side view: bare face + team cap
             c.drawCircle(hx + 1 * u, hy + 1.5 * u, 9.5 * u, P(SKIN))
             c.drawCircle(hx - 3 * u, hy + 2 * u, 2.4 * u, P(_sh(SKIN, .85)))                                          # ear
             c.drawRect(skia.Rect.MakeLTRB(hx - 9 * u, hy - 2 * u, hx - 3.5 * u, hy + 5 * u), P((34, 28, 26)))         # hair
@@ -1749,7 +1765,14 @@ def stage_panel(c, g, t, D, s, a=1.0):
     p = s.get("panel", {}); kind = p.get("kind", "headline"); x0, x1 = g.x0, g.x1; cw = x1 - x0; top = g.top - 260 if g.fmt == "short" else 130
     st = D * p.get("at", .05); pa = eo(prog(t, st, st + .5)) * a
     if pa <= 0: return
+    day = gfx.THEME == "stadium" and VENUE.get("time") == "day"
+    if kind == "headline" and day:            # light sky: put the headline on a card
+        nl = len(p["lines"]); hgt = 70 + sum(fit(ln["t"] if isinstance(ln, dict) else ln, cw, 120, "bebas", 2) * .92 for ln in p["lines"]) + 30
+        _panel_card(c, x0, top - 30, cw, hgt + (40 if p.get("kicker") else 0), pa)
     if p.get("kicker"):
+        if day and kind != "headline":
+            kw = twidth(p["kicker"].upper(), 30, "interB", 6) + 50
+            rrect(c, g.cx - kw / 2, top - 22, kw, 46, 23, (8, 14, 32), .8 * pa)
         text(c, p["kicker"].upper(), g.cx, top + 10, 30, "interB", GOLD, pa, "c", track=6)
     y = top + 40
     if kind == "headline":
@@ -1834,7 +1857,10 @@ def _ball_path(g, s, A, ax, ay, hh, tc, t):
         K = (ax + 16 * u, ay - 34 * u); R = (g.W * .55, g.H * 1.04); B = (ax + 8 * u, ay + 34 * u)
         r0, r1, r2 = 4.2 * u, 2.2 * u, 1.7 * u
     ex = b.get("side", -d)
-    if b.get("shot", "six") == "six":
+    if b.get("shot") == "bowled":
+        sx_ = min(s.get("stumps", (.2, .9)), key=lambda v: abs(g.W * v - (ax - d * 60 * u))) * g.W if side else ax
+        E = (sx_, ay - 14 * u) if side else (ax, ay - 20 * u); apex = 0
+    elif b.get("shot", "six") == "six":
         E = (ax + ex * g.W * .95, g.H * (.2 if g.fmt == "short" else .1)); apex = -g.H * .28
     else:
         E = (ax + ex * g.W * .95, ay + 10); apex = 0
@@ -1844,6 +1870,9 @@ def _ball_path(g, s, A, ax, ay, hh, tc, t):
         if f < .62: q = f / .62; x = R[0] + (B[0] - R[0]) * q; y = R[1] + (B[1] - R[1]) * q * q; r = r0 + (r1 - r0) * q
         else: q = (f - .62) / .38; x = B[0] + (K[0] - B[0]) * q; y = B[1] + (K[1] - B[1]) * (1 - (1 - q) ** 2); r = r1 + (r2 - r1) * q
         return (x, y, r), K
+    if b.get("shot") == "bowled":
+        if tc <= t < tc + .16: q = (t - tc) / .16; return (K[0] + (E[0] - K[0]) * q, K[1] + (E[1] - K[1]) * q, r2), K
+        return None, E
     if tc <= t < tc + th:
         q = (t - tc) / th; x = K[0] + (E[0] - K[0]) * q; y = K[1] + (E[1] - K[1]) * q + apex * 4 * q * (1 - q)
         r = r2 * (1 - .55 * q) if not side else r2
@@ -1860,7 +1889,7 @@ def sc_stage(c, g, t, D, s):
     fx = g.W * A0.get("x2", A0.get("x", .5)); fy = _feet(g) - _fig_h(g, A0) * .55
     c.save(); c.translate(fx, fy); c.scale(z, z); c.translate(-fx, -fy)          # camera
     if gfx.THEME == "stadium":
-        stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))))
+        stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))), far=True)
     tc = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
     ballk = s.get("ball", {}).get("batter", 0)
     for k, A in enumerate(av):
@@ -1872,7 +1901,7 @@ def sc_stage(c, g, t, D, s):
         pose = A.get("pose", "stand")
         if tc is not None and k == ballk and A.get("hit") and t >= tc - .08: pose = A["hit"]
         avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"), pose, t + k, q,
-               dir=A.get("dir", 1))
+               dir=A.get("dir", 1), cap=A.get("cap"), pads=A.get("pads"), bat=A.get("bat"))
         if tc is not None and k == ballk:
             bp, K = _ball_path(g, s, A, ax, ay, hh, tc, t)
             col = (250, 248, 240) if s["ball"].get("color", "white") == "white" else (190, 30, 40)
@@ -1881,8 +1910,17 @@ def sc_stage(c, g, t, D, s):
                     pb, _ = _ball_path(g, s, A, ax, ay, hh, tc, t - j * .022)
                     if pb: c.drawCircle(pb[0], pb[1], pb[2] * (1 - j * .1), gfx.paint(col, .32 * (1 - j / 7)))
                 c.drawCircle(bp[0], bp[1], bp[2], gfx.paint(col))
-            if tc <= t < tc + .3:                                       # contact flash
-                f = (t - tc) / .3; pp = gfx.paint((255, 255, 255), .9 * (1 - f)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(6)
+            if s["ball"].get("shot") == "bowled" and t >= tc + .16:     # bails fly
+                f = min(1, (t - tc - .16) / .9); u_ = hh / 100
+                for sg in (-1, 1):
+                    bx = K[0] + sg * 8 * u_ * f * 3; by = K[1] - 22 * u_ - 40 * u_ * f + 60 * u_ * f * f
+                    c.save(); c.translate(bx, by); c.rotate(sg * 400 * f)
+                    c.drawRect(skia.Rect.MakeXYWH(-5 * u_, -1 * u_, 10 * u_, 2 * u_), gfx.paint((245, 240, 225), 1 - f * .3)); c.restore()
+                K = (K[0], K[1] - 14 * u_)
+                tc_f = tc + .16
+            else: tc_f = tc
+            if tc_f <= t < tc_f + .3:                                   # contact flash
+                f = (t - tc_f) / .3; pp = gfx.paint((255, 255, 255), .9 * (1 - f)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(6)
                 c.drawCircle(K[0], K[1], 20 + 120 * f, pp)
     c.restore()
     stage_panel(c, g, t, D, s)
@@ -1919,7 +1957,8 @@ def sfx_events(spec, fmt, meta, lead, durs, starts):
             tc = s["ball"]["_t"]
             if s.get("view") != "side": ev.append([T0 + tc - .7 * .38, "bounce", 1])
             else: ev.append([T0 + tc - .7 * .38, "bounce", .8])
-            ev.append([T0 + tc, "crack", 1]); ev.append([T0 + tc + .12, "crowd", 1])
+            if s["ball"].get("shot") == "bowled": ev.append([T0 + tc + .16, "crack", .7]); ev.append([T0 + tc + .3, "crowd", 1])
+            else: ev.append([T0 + tc, "crack", 1]); ev.append([T0 + tc + .12, "crowd", 1])
         elif any(A.get("pose") in ("celebrate", "raise") for A in s.get("avatars", [])) and p.get("kind") != "bignum":
             ev.append([T0 + .3, "crowd", .7])
     return ev

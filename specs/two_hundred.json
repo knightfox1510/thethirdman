@@ -246,6 +246,154 @@
   {
    "vo": "In the IPL, two hundred is the new one-sixty.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "200 IS"
+      },
+      {
+       "t": "THE NEW",
+       "c": "gold"
+      },
+      {
+       "t": "160",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "KKR",
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "pull"
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.55,
+     "shot": "six"
+    }
+   }
+  },
+  {
+   "vo": "Before twenty twenty-three, only seven percent of innings crossed two hundred. Now it's nearly thirty.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.05,
+     "kicker": "200+ INNINGS",
+     "left": {
+      "v": "7%",
+      "l": "2008 – 2022",
+      "c": "ink"
+     },
+     "right": {
+      "v": "30%",
+      "l": "2023 ONWARDS",
+      "c": "gold"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "KKR",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Twenty twenty-six had more than sixty two-hundred-plus totals. A record.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "200+ TOTALS IN IPL 2026",
+     "value": 61,
+     "suffix": "+",
+     "count_dur": 1.2
+    },
+    "avatars": [
+     {
+      "kit": "KKR",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "And batters aren't batting longer. They're hitting harder.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "NOT LONGER."
+      },
+      {
+       "t": "HARDER.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "KKR",
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "drive"
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "ball": {
+     "word": "harder",
+     "shot": "six",
+     "side": 1
+    }
+   }
+  },
+  {
+   "vo": "Is two hundred too easy now? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "IS 200"
+     },
+     {
+      "t": "TOO EASY?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008",
+  "https://www.tribuneindia.com/news/sports/ipl-2026-a-run-fest-for-the-ages-registers-52nd-200-plus-score-of-the-season-during-kkr-gt-clash/",
+  "https://www.espncricinfo.com/story/ipl-2025-trends-too-many-200-plus-scores-but-not-many-thrillers-1489188"
+ ],
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "In the IPL, two hundred is the new one-sixty.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -325,10 +473,30 @@
    }
   }
  ],
- "theme": "whites",
- "sources": [
-  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008",
-  "https://www.tribuneindia.com/news/sports/ipl-2026-a-run-fest-for-the-ages-registers-52nd-200-plus-score-of-the-season-during-kkr-gt-clash/",
-  "https://www.espncricinfo.com/story/ipl-2025-trends-too-many-200-plus-scores-but-not-many-thrillers-1489188"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    58,
+    34,
+    95
+   ],
+   [
+    212,
+    175,
+    55
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    255,
+    120,
+    20
+   ]
+  ]
+ }
 }

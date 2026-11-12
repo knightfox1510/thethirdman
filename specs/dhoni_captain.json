@@ -198,6 +198,150 @@
   {
    "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from रांची.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "2007",
+     "lines": [
+      {
+       "t": "A 26-YEAR-OLD"
+      },
+      {
+       "t": "CAPTAIN",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.3,
+      "number": 7,
+      "x2": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "He became the only captain to win all three ICC white-ball trophies.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "ICC WHITE-BALL TROPHIES",
+     "value": 3,
+     "count_dur": 0.6,
+     "kicker": "The only captain with all three"
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5,
+      "number": 7
+     }
+    ],
+    "cam": "pull"
+   }
+  },
+  {
+   "vo": "He gave the last over of a World Cup final to Joginder Sharma.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "13 OFF 6."
+      },
+      {
+       "t": "JOGINDER.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1,
+      "cap": true
+     },
+     {
+      "kit": "PAK",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "He moved रोहित शर्मा up to open.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "ROHIT,"
+      },
+      {
+       "t": "OPENER.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "What if धोनी had never been captain? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHAT IF DHONI"
+     },
+     {
+      "t": "NEVER LED?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "Settled history (2007 WT20, 2011 WC, 2013 CT, CSK titles); RCB won IPL 2025 and 2026 (mykhel)"
+ ],
+ "theme_long": "scoreboard",
+ "short_classic": [
+  {
+   "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from रांची.",
+   "scene": {
     "type": "statement",
     "kicker": "2007",
     "lines": [
@@ -267,8 +411,30 @@
    }
   }
  ],
- "theme": "scoreboard",
- "sources": [
-  "Settled history (2007 WT20, 2011 WC, 2013 CT, CSK titles); RCB won IPL 2025 and 2026 (mykhel)"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "dusk",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    0,
+    120,
+    75
+   ]
+  ]
+ }
 }

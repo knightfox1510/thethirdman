@@ -1,6 +1,6 @@
 {
  "slug": "rcb_back_to_back",
- "theme": "whites",
+ "theme": "stadium",
  "tag": "DATA STORY",
  "tagsub": "HOW RCB WON BACK-TO-BACK",
  "files": {
@@ -239,6 +239,148 @@
   {
    "vo": "Everyone says RCB won back-to-back titles with batting. The data says bowling.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "IT WASN'T"
+      },
+      {
+       "t": "THE",
+       "c": "gold"
+      },
+      {
+       "t": "BATTING.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "RCB",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1,
+      "cap": true
+     }
+    ],
+    "cam": "push",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "In twenty twenty-four, their bowling ranked seventh of ten. In twenty twenty-five and twenty twenty-six, second.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.05,
+     "kicker": "BOWLING RANK",
+     "left": {
+      "v": "7TH",
+      "l": "2024",
+      "c": "red"
+     },
+     "right": {
+      "v": "2ND",
+      "l": "2025-26",
+      "c": "gold"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "RCB",
+      "pose": "stand",
+      "x": 0.5,
+      "cap": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "In twenty twenty-five, they had the best powerplay bowling in the league.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "RCB POWERPLAY ECONOMY · 2025",
+     "value": 8.73,
+     "dec": 2,
+     "color": "gold",
+     "count_dur": 0.8,
+     "kicker": "Best in the IPL"
+    },
+    "avatars": [
+     {
+      "kit": "SRH",
+      "pose": "stance",
+      "x": 0.32,
+      "hit": "drive",
+      "cap": false
+     }
+    ],
+    "cam": "wide",
+    "view": "side",
+    "ball": {
+     "at": 0.55,
+     "shot": "bowled"
+    },
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "And in twenty twenty-six, भुवनेश्वर कुमार took twenty-eight wickets.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "BHUVNESHWAR WICKETS · 2026",
+     "value": 28,
+     "color": "gold",
+     "count_dur": 0.7,
+     "kicker": "Economy 7.95"
+    },
+    "avatars": [
+     {
+      "kit": "RCB",
+      "pose": "celebrate",
+      "x": 0.5,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Can RCB make it three? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THREE"
+     },
+     {
+      "t": "IN A ROW?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "Everyone says RCB won back-to-back titles with batting. The data says bowling.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -318,5 +460,38 @@
     ]
    }
   }
- ]
+ ],
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    200,
+    30,
+    40
+   ],
+   [
+    212,
+    175,
+    55
+   ],
+   [
+    30,
+    30,
+    30
+   ]
+  ],
+  "boards": [
+   [
+    200,
+    30,
+    40
+   ],
+   [
+    212,
+    175,
+    55
+   ]
+  ]
+ }
 }

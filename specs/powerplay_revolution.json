@@ -1,6 +1,6 @@
 {
  "slug": "powerplay_revolution",
- "theme": "whites",
+ "theme": "stadium",
  "tag": "DATA STORY",
  "tagsub": "THE POWERPLAY REVOLUTION",
  "files": {
@@ -335,67 +335,117 @@
   {
    "vo": "IPL teams now score over ten an over in the powerplay.",
    "scene": {
-    "type": "bignum",
-    "value": 10.1,
-    "dec": 1,
-    "label": "POWERPLAY RUN RATE · IPL 2026",
-    "color": "gold",
-    "count_dur": 0.8
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.0,
+     "label": "POWERPLAY RUN RATE · IPL 2026",
+     "value": 10.1,
+     "dec": 1,
+     "color": "gold",
+     "count_dur": 0.8
+    },
+    "avatars": [
+     {
+      "kit": "SRH",
+      "pose": "stance",
+      "x": 0.36,
+      "hit": "pull"
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.45,
+     "shot": "six"
+    }
    }
   },
   {
    "vo": "In twenty thirteen, it was under seven.",
    "scene": {
-    "type": "bars",
-    "head": {
-     "t": "RUNS PER OVER, OVERS 1-6"
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "RUNS PER OVER, OVERS 1-6",
+     "rows": [
+      [
+       "2013",
+       "6.9",
+       "ink"
+      ],
+      [
+       "2026",
+       "10.1",
+       "gold"
+      ]
+     ]
     },
-    "max": 11,
-    "dec": 1,
-    "items": [
+    "avatars": [
      {
-      "label": "2013",
-      "value": 6.93,
-      "text": "6.9",
-      "color": "ink"
-     },
-     {
-      "label": "2026",
-      "value": 10.12,
-      "text": "10.1",
-      "color": "gold"
+      "kit": "SRH",
+      "pose": "walk",
+      "x": 0.35,
+      "x2": 0.5
      }
-    ]
+    ],
+    "cam": "drift"
    }
   },
   {
    "vo": "Eighty-run powerplays went from zero to seventeen in a season.",
    "scene": {
-    "type": "bignum",
-    "value": 17,
-    "label": "80+ POWERPLAYS IN 2026",
-    "color": "gold",
-    "note": "Zero in 2013",
-    "count_dur": 0.7
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "80+ POWERPLAYS IN 2026",
+     "value": 17,
+     "color": "gold",
+     "count_dur": 0.7,
+     "kicker": "Zero in 2013"
+    },
+    "avatars": [
+     {
+      "kit": "SRH",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push"
    }
   },
   {
    "vo": "But teams lose almost the same number of wickets. The risk didn't change. The mindset did.",
    "scene": {
-    "type": "statement",
-    "lines": [
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "SAME RISK."
+      },
+      {
+       "t": "NEW",
+       "c": "gold"
+      },
+      {
+       "t": "MINDSET.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
      {
-      "t": "SAME RISK."
-     },
-     {
-      "t": "NEW",
-      "c": "gold"
-     },
-     {
-      "t": "MINDSET.",
-      "c": "gold"
+      "kit": "SRH",
+      "pose": "stand",
+      "x": 0.5
      }
-    ]
+    ],
+    "cam": "close"
    }
   },
   {
@@ -726,5 +776,115 @@
    "pill": "FULL BREAKDOWN ON YOUTUBE · LINK IN BIO"
   },
   "caption": "The IPL powerplay has become a different sport. 📈\n\nIn 2013, teams scored under 7 an over in the first six overs. In 2026: over 10. More than half of all innings now reach 60 in the powerplay, yet teams lose almost the same number of wickets as before.\n\nSwipe through the numbers ➡️ Full breakdown on YouTube (link in bio).\n\nData: every IPL ball since 2013 (Sportmonks).\n\n#IPL #Cricket #IPL2026 #CricketStats #T20 #CricketAnalysis #Powerplay #TheThirdMan"
+ },
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "IPL teams now score over ten an over in the powerplay.",
+   "scene": {
+    "type": "bignum",
+    "value": 10.1,
+    "dec": 1,
+    "label": "POWERPLAY RUN RATE · IPL 2026",
+    "color": "gold",
+    "count_dur": 0.8
+   }
+  },
+  {
+   "vo": "In twenty thirteen, it was under seven.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS PER OVER, OVERS 1-6"
+    },
+    "max": 11,
+    "dec": 1,
+    "items": [
+     {
+      "label": "2013",
+      "value": 6.93,
+      "text": "6.9",
+      "color": "ink"
+     },
+     {
+      "label": "2026",
+      "value": 10.12,
+      "text": "10.1",
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Eighty-run powerplays went from zero to seventeen in a season.",
+   "scene": {
+    "type": "bignum",
+    "value": 17,
+    "label": "80+ POWERPLAYS IN 2026",
+    "color": "gold",
+    "note": "Zero in 2013",
+    "count_dur": 0.7
+   }
+  },
+  {
+   "vo": "But teams lose almost the same number of wickets. The risk didn't change. The mindset did.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "SAME RISK."
+     },
+     {
+      "t": "NEW",
+      "c": "gold"
+     },
+     {
+      "t": "MINDSET.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Will we see a one-fifty powerplay? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "A 150"
+     },
+     {
+      "t": "POWERPLAY?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    255,
+    120,
+    20
+   ],
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    200,
+    30,
+    40
+   ]
+  ]
  }
 }

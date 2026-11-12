@@ -445,6 +445,156 @@
   {
    "vo": "New Zealand made one thirty-four. India slumped to one thirteen for seven, and still won.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "134 ALL OUT."
+      },
+      {
+       "t": "113 FOR 7.",
+       "c": "red"
+      },
+      {
+       "t": "WON.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.8,
+      "scale": 0.85,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "India's plan: Gurnoor Brar's hard length, with a packed slip cordon. Four for thirty.",
+   "scene": {
+    "type": "fieldplan",
+    "head": {
+     "t": "THE HARD LENGTH"
+    },
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "length": {
+     "from": 6,
+     "to": 8.5,
+     "label": "HARD LENGTH",
+     "at": 0.2
+    },
+    "shots": [
+     {
+      "to": "2nd slip",
+      "label": "EDGE",
+      "at": 0.55,
+      "lift": 0.05
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But Kyle Jamieson bounced India out: three for thirty-five.",
+   "scene": {
+    "type": "trajectory",
+    "head": {
+     "t": "JAMIESON'S BOUNCER",
+     "sub": "ILLUSTRATIVE"
+    },
+    "hl": [
+     "SHORT"
+    ],
+    "bowler_c": "ink",
+    "balls": [
+     {
+      "length": 10.5,
+      "end": 1.9,
+      "label": "BOUNCER",
+      "c": "red",
+      "at": 0.15
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the rain came. India were four runs ahead of the DLS par. One more wicket, and they'd likely have lost.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "AHEAD OF DLS PAR",
+     "value": 4,
+     "prefix": "+",
+     "suffix": " RUNS",
+     "count_dur": 0.8
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Would India have chased it? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WOULD INDIA"
+     },
+     {
+      "t": "HAVE CHASED IT?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.espn.com/cricket/series/24469/game/1539438/new-zealand-vs-india-2nd-odi-24469",
+  "https://www.aljazeera.com/sports/2026/11/7/india-new-zealand-second-odi-rain-dls-method-win-four-runs",
+  "https://www.crictracker.com/cricket-news/nz-vs-ind-2026-new-zealand-vs-india-highlights-review-2nd-odi-0583/"
+ ],
+ "theme_long": "blue",
+ "short_classic": [
+  {
+   "vo": "New Zealand made one thirty-four. India slumped to one thirteen for seven, and still won.",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -551,10 +701,37 @@
    }
   }
  ],
- "theme": "blue",
- "sources": [
-  "https://www.espn.com/cricket/series/24469/game/1539438/new-zealand-vs-india-2nd-odi-24469",
-  "https://www.aljazeera.com/sports/2026/11/7/india-new-zealand-second-odi-rain-dls-method-win-four-runs",
-  "https://www.crictracker.com/cricket-news/nz-vs-ind-2026-new-zealand-vs-india-highlights-review-2nd-odi-0583/"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "dusk",
+  "crowd": [
+   [
+    25,
+    25,
+    25
+   ],
+   [
+    235,
+    235,
+    235
+   ],
+   [
+    40,
+    90,
+    200
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    25,
+    25
+   ],
+   [
+    235,
+    235,
+    235
+   ]
+  ]
+ }
 }

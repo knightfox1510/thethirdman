@@ -224,6 +224,172 @@
   {
    "vo": "जसप्रीत बुमराह concedes five point six six an over at T20 World Cups.",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.0,
+     "label": "T20 WORLD CUP ECONOMY",
+     "value": 5.66,
+     "dec": 2,
+     "count_dur": 1.0
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.64,
+      "number": 93,
+      "dir": -1,
+      "cap": true
+     }
+    ],
+    "cam": "push",
+    "view": "side"
+   }
+  },
+  {
+   "vo": "In the IPL, teams now score at more than nine an over.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "RUNS PER OVER",
+     "rows": [
+      [
+       "IPL 2025 · ALL TEAMS",
+       "~9.1",
+       "red"
+      ],
+      [
+       "BUMRAH · WORLD CUPS",
+       "5.66",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "In the twenty twenty-six final, he took four for fifteen.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "score",
+     "at": 0.05,
+     "kicker": "2026 WORLD CUP FINAL",
+     "event": "INDIA DEFEND THEIR TITLE",
+     "score": "4/15",
+     "color": "gold"
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Then his IPL went quiet: four wickets in thirteen games.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "WICKETS IN IPL 2026",
+     "value": 4,
+     "color": "red",
+     "count_dur": 0.6,
+     "kicker": "13 matches"
+    },
+    "avatars": [
+     {
+      "kit": "MI",
+      "pose": "dejected",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "close"
+   }
+  },
+  {
+   "vo": "A bad season. Not a decline.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "A BAD SEASON."
+      },
+      {
+       "t": "NOT A",
+       "c": "gold"
+      },
+      {
+       "t": "DECLINE.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.5,
+      "number": 93,
+      "cap": true
+     }
+    ],
+    "cam": "wide"
+   }
+  },
+  {
+   "vo": "Is he the greatest T20 bowler ever? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "GREATEST"
+     },
+     {
+      "t": "T20 BOWLER?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/",
+  "https://www.newsbytesapp.com/news/sports/decoding-jasprit-bumrah-s-woes-in-ipl-2026/story",
+  "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
+ ],
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "जसप्रीत बुमराह concedes five point six six an over at T20 World Cups.",
+   "scene": {
     "type": "bignum",
     "value": 5.66,
     "dec": 2,
@@ -318,10 +484,25 @@
    }
   }
  ],
- "theme": "whites",
- "sources": [
-  "https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/",
-  "https://www.newsbytesapp.com/news/sports/decoding-jasprit-bumrah-s-woes-in-ipl-2026/story",
-  "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ]
+  ]
+ }
 }

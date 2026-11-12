@@ -208,6 +208,155 @@
   {
    "vo": "In today's IPL, is the anchor dead?",
    "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.0,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "IS THE"
+      },
+      {
+       "t": "ANCHOR"
+      },
+      {
+       "t": "DEAD?",
+       "c": "red"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "LSG",
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Forty balls, at a strike rate of one-twenty, costs you fifteen runs against today's top order.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "at": 0.05,
+     "label": "THE COST OF 40 BALLS AT 120",
+     "value": 15,
+     "suffix": " RUNS",
+     "color": "red",
+     "count_dur": 0.8
+    },
+    "avatars": [
+     {
+      "kit": "LSG",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "close"
+   }
+  },
+  {
+   "vo": "But विराट कोहली went from one forty-five to nearly one sixty-six, and RCB won back-to-back titles.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "at": 0.05,
+     "kicker": "KOHLI'S STRIKE RATE",
+     "rows": [
+      [
+       "2025",
+       "144.7",
+       "ink"
+      ],
+      [
+       "2026",
+       "165.9",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "RCB",
+      "pose": "stance",
+      "x": 0.36,
+      "number": 18,
+      "hit": "drive"
+     }
+    ],
+    "cam": "push",
+    "view": "side",
+    "ball": {
+     "at": 0.6,
+     "shot": "six",
+     "side": 1
+    }
+   }
+  },
+  {
+   "vo": "The anchor isn't dead. The slow anchor is.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "",
+     "lines": [
+      {
+       "t": "THE SLOW"
+      },
+      {
+       "t": "ANCHOR",
+       "c": "red"
+      },
+      {
+       "t": "IS DEAD.",
+       "c": "red"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "LSG",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide"
+   }
+  },
+  {
+   "vo": "Can one-thirty still work? Full breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "CAN 130"
+     },
+     {
+      "t": "STILL WORK?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "theme": "stadium",
+ "sources": [
+  "https://www.mykhel.com/cricket/virat-kohli-ipl-2026-reinvention-rcb-back-to-back-titles-436895.html",
+  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+ ],
+ "theme_long": "whites",
+ "short_classic": [
+  {
+   "vo": "In today's IPL, is the anchor dead?",
+   "scene": {
     "type": "statement",
     "lines": [
      {
@@ -295,9 +444,25 @@
    }
   }
  ],
- "theme": "whites",
- "sources": [
-  "https://www.mykhel.com/cricket/virat-kohli-ipl-2026-reinvention-rcb-back-to-back-titles-436895.html",
-  "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
- ]
+ "captions": "v2",
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    0,
+    160,
+    220
+   ],
+   [
+    200,
+    30,
+    40
+   ],
+   [
+    240,
+    240,
+    240
+   ]
+  ]
+ }
 }
