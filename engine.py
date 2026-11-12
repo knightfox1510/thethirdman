@@ -915,6 +915,11 @@ def build(spec_path, fmt):
     final = f"{ROOT}/deliver/{slug}/{name}.mp4"; os.makedirs(os.path.dirname(final), exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{base}/final.txt", "-c", "copy", "-movflags", "+faststart", final], check=True)
     srt(meta, lead, starts, f"{ROOT}/deliver/{slug}/{name}.srt")
+    chap = [(0.0 if k == 0 else starts[k], sc["chapter"]) for k, sc in enumerate(scenes) if sc.get("chapter")]
+    if fmt == "long" and len(chap) >= 3:     # YouTube chapters: first at 0:00, at least 3, each 10 s or longer
+        chap[0] = (0.0, chap[0][1])
+        with open(f"{ROOT}/deliver/{slug}/{name}.chapters.txt", "w") as f:
+            for t, title in chap: f.write(f"{int(t // 60)}:{int(t % 60):02d} {title}\n")
     return final
 
 

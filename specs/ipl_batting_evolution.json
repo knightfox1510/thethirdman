@@ -1,0 +1,1194 @@
+{
+ "slug": "ipl_batting_evolution",
+ "theme": "scoreboard",
+ "tag": "DATA STORY",
+ "tagsub": "HOW THE IPL CHANGED T20 BATTING",
+ "files": {
+  "long": "How_the_IPL_Changed_T20_Batting_Forever",
+  "short": "IPL_Batting_Changed_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "EVERY IPL BALL SINCE 2013",
+  "lines": [
+   {
+    "t": "HOW THE IPL"
+   },
+   {
+    "t": "CHANGED BATTING",
+    "c": "gold"
+   }
+  ],
+  "hero": "4 → 65",
+  "herosize": 300
+ },
+ "sources": [
+  "Sportmonks ball-by-ball, every IPL match 2013-2026 (data/ipl), super overs excluded. Figures: analysis/ipl_batting_evolution.py",
+  "https://africa.espn.com/cricket/story/_/id/39140937/ipl-2024-allow-two-bouncers-per-over",
+  "https://www.wisden.com/series/ipl-2025/cricket-news/ipl-2025-rule-changes-saliva-ban-lifted-two-balls-to-be-used-for-second-innings",
+  "https://www.tribuneindia.com/news/sports/ipl-2025-saliva-ban-removed-slow-over-rate-rule-tweaked-impact-player-rule-to-stay"
+ ],
+ "long": [
+  {
+   "vo": "In twenty thirteen, IPL teams made two hundred just four times, all season. In twenty twenty-six, they did it sixty-five times. This is the story of how T20 batting changed forever, told through every ball bowled in the IPL since twenty thirteen.",
+   "chapter": "Intro",
+   "scene": {
+    "type": "statement",
+    "kicker": "200+ TOTALS IN THE IPL",
+    "lines": [
+     {
+      "t": "4 IN 2013."
+     },
+     {
+      "t": "65 IN 2026.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Look at how it happened. For a decade, two hundred was rare: somewhere between four and eighteen times a season. Then, in twenty twenty-three, it more than doubled, to thirty-seven. Forty-one the year after. Fifty in twenty twenty-five. And sixty-five in twenty twenty-six.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE 200 EXPLOSION",
+     "sub": "TOTALS OF 200 OR MORE, PER SEASON"
+    },
+    "max": 72,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2013",
+      "value": 4,
+      "color": "ink"
+     },
+     {
+      "label": "2016",
+      "value": 6,
+      "color": "ink"
+     },
+     {
+      "label": "2019",
+      "value": 11,
+      "color": "ink"
+     },
+     {
+      "label": "2022",
+      "value": 18,
+      "color": "ink"
+     },
+     {
+      "label": "2023",
+      "value": 37,
+      "color": "gold"
+     },
+     {
+      "label": "2024",
+      "value": 41,
+      "color": "gold"
+     },
+     {
+      "label": "2025",
+      "value": 50,
+      "color": "gold"
+     },
+     {
+      "label": "2026",
+      "value": 65,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So what changed? We'll take it in five parts. Where the runs come from. Who's scoring them. The rule that changed everything. What it did to chasing. And how the bowlers are fighting back.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "FIVE CHAPTERS"
+    },
+    "items": [
+     {
+      "h": "WHERE THE RUNS COME FROM",
+      "d": "Powerplay, middle overs, death"
+     },
+     {
+      "h": "WHO'S SCORING THEM",
+      "d": "The top order takes off"
+     },
+     {
+      "h": "THE RULE THAT CHANGED EVERYTHING",
+      "d": "The Impact Player"
+     },
+     {
+      "h": "CHASING",
+      "d": "200 is no longer safe"
+     },
+     {
+      "h": "THE BOWLERS",
+      "d": "A different sport"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Chapter one. Where the runs come from.",
+   "chapter": "Where The Runs Come From",
+   "scene": {
+    "type": "statement",
+    "kicker": "CHAPTER 1",
+    "lines": [
+     {
+      "t": "WHERE THE RUNS"
+     },
+     {
+      "t": "COME FROM",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Split an innings into three phases. The powerplay, overs one to six. The middle overs, seven to fifteen. And the death, sixteen to twenty. In twenty thirteen, teams scored under seven an over in the powerplay, just over seven in the middle, and nine and a half at the death. Now watch all three.",
+   "scene": {
+    "type": "line",
+    "head": {
+     "t": "THREE PHASES, 14 SEASONS",
+     "sub": "IPL RUN RATE BY PHASE"
+    },
+    "ymin": 6,
+    "ymax": 12,
+    "yticks": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "ylabel": "RUNS PER OVER",
+    "xticks": [
+     [
+      2013,
+      "2013"
+     ],
+     [
+      2016,
+      "2016"
+     ],
+     [
+      2019,
+      "2019"
+     ],
+     [
+      2022,
+      "2022"
+     ],
+     [
+      2026,
+      "2026"
+     ]
+    ],
+    "series": [
+     {
+      "name": "DEATH",
+      "color": "red",
+      "points": [
+       [
+        2013,
+        9.57
+       ],
+       [
+        2014,
+        10.04
+       ],
+       [
+        2015,
+        10.31
+       ],
+       [
+        2016,
+        10.17
+       ],
+       [
+        2017,
+        9.64
+       ],
+       [
+        2018,
+        10.14
+       ],
+       [
+        2019,
+        10.16
+       ],
+       [
+        2020,
+        10.2
+       ],
+       [
+        2021,
+        9.41
+       ],
+       [
+        2022,
+        10.45
+       ],
+       [
+        2023,
+        10.48
+       ],
+       [
+        2024,
+        11.21
+       ],
+       [
+        2025,
+        11.0
+       ],
+       [
+        2026,
+        10.79
+       ]
+      ],
+      "at": 0.42,
+      "dur": 0.25
+     },
+     {
+      "name": "POWERPLAY",
+      "color": "gold",
+      "points": [
+       [
+        2013,
+        6.93
+       ],
+       [
+        2014,
+        7.55
+       ],
+       [
+        2015,
+        7.76
+       ],
+       [
+        2016,
+        7.7
+       ],
+       [
+        2017,
+        8.33
+       ],
+       [
+        2018,
+        8.42
+       ],
+       [
+        2019,
+        8.06
+       ],
+       [
+        2020,
+        7.71
+       ],
+       [
+        2021,
+        7.72
+       ],
+       [
+        2022,
+        7.82
+       ],
+       [
+        2023,
+        8.74
+       ],
+       [
+        2024,
+        9.47
+       ],
+       [
+        2025,
+        9.64
+       ],
+       [
+        2026,
+        10.12
+       ]
+      ],
+      "at": 0.55,
+      "dur": 0.25
+     },
+     {
+      "name": "MIDDLE",
+      "color": "blue",
+      "points": [
+       [
+        2013,
+        7.24
+       ],
+       [
+        2014,
+        7.74
+       ],
+       [
+        2015,
+        7.84
+       ],
+       [
+        2016,
+        7.86
+       ],
+       [
+        2017,
+        7.88
+       ],
+       [
+        2018,
+        8.06
+       ],
+       [
+        2019,
+        7.74
+       ],
+       [
+        2020,
+        7.72
+       ],
+       [
+        2021,
+        7.6
+       ],
+       [
+        2022,
+        8.08
+       ],
+       [
+        2023,
+        8.46
+       ],
+       [
+        2024,
+        8.83
+       ],
+       [
+        2025,
+        9.02
+       ],
+       [
+        2026,
+        9.31
+       ]
+      ],
+      "at": 0.68,
+      "dur": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "vo": "By twenty twenty-six, the powerplay had jumped by more than three runs an over, to ten point one. The middle overs rose by two, to nine point three. And the death overs? Up just one point two. In fact, death-over scoring peaked in twenty twenty-four, and it has fallen since.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "2013 → 2026",
+     "sub": "CHANGE IN RUNS PER OVER"
+    },
+    "tiles": [
+     {
+      "v": "+3.2",
+      "l": "POWERPLAY",
+      "c": "gold"
+     },
+     {
+      "v": "+2.1",
+      "l": "MIDDLE OVERS",
+      "c": "ink"
+     },
+     {
+      "v": "+1.2",
+      "l": "DEATH OVERS",
+      "c": "muted"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "That's the first surprise. The death overs were always explosive. The real revolution happened at the start of the innings, and in the overs nobody used to care about.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "THE REVOLUTION"
+     },
+     {
+      "t": "HAPPENED"
+     },
+     {
+      "t": "AT THE START.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And it's a revolution of sixes. Fours per match barely moved for a decade: between twenty-six and twenty-eight a game, every season until twenty twenty-two. Sixes went from under nine a match in twenty thirteen, to nearly twenty in twenty twenty-six.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "FOURS VS SIXES",
+     "sub": "PER MATCH"
+    },
+    "a": {
+     "name": "2013",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2026",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "FOURS PER MATCH",
+      "27.0",
+      "31.9"
+     ],
+     [
+      "SIXES PER MATCH",
+      "8.9",
+      "19.5",
+      "b"
+     ],
+     [
+      "BALLS HIT FOR A BOUNDARY",
+      "15%",
+      "23%",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Dot balls fell too, but less than you'd think: from thirty-eight per cent of deliveries, to thirty-three. Batters aren't hitting every ball. They're hitting the bad ones much, much harder.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "DOT BALLS"
+    },
+    "value": 33,
+    "suffix": "%",
+    "from": 38,
+    "label": "OF DELIVERIES IN 2026",
+    "color": "ink",
+    "note": "38% in 2013: batters still leave plenty of balls alone"
+   }
+  },
+  {
+   "vo": "Chapter two. Who's scoring them.",
+   "chapter": "Who's Scoring Them",
+   "scene": {
+    "type": "statement",
+    "kicker": "CHAPTER 2",
+    "lines": [
+     {
+      "t": "WHO'S"
+     },
+     {
+      "t": "SCORING THEM",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Here's the strike rate of the top three in the batting order, against the middle order, numbers four to seven. For ten years, they moved together. The top order was often the slower of the two, playing the anchor role. Then, from twenty twenty-three, the top three took off. One forty-three. Then one fifty-four, one fifty-nine, and one sixty-six in twenty twenty-six. The middle order stalled at around one fifty.",
+   "scene": {
+    "type": "line",
+    "head": {
+     "t": "THE TOP ORDER TAKES OFF",
+     "sub": "STRIKE RATE BY BATTING POSITION"
+    },
+    "ymin": 110,
+    "ymax": 175,
+    "yticks": [
+     110,
+     125,
+     140,
+     155,
+     170
+    ],
+    "ylabel": "STRIKE RATE",
+    "xticks": [
+     [
+      2013,
+      "2013"
+     ],
+     [
+      2016,
+      "2016"
+     ],
+     [
+      2019,
+      "2019"
+     ],
+     [
+      2022,
+      "2022"
+     ],
+     [
+      2026,
+      "2026"
+     ]
+    ],
+    "series": [
+     {
+      "name": "NO. 4-7",
+      "color": "blue",
+      "points": [
+       [
+        2013,
+        125.2
+       ],
+       [
+        2014,
+        134.5
+       ],
+       [
+        2015,
+        134.1
+       ],
+       [
+        2016,
+        130.9
+       ],
+       [
+        2017,
+        133.0
+       ],
+       [
+        2018,
+        140.0
+       ],
+       [
+        2019,
+        133.2
+       ],
+       [
+        2020,
+        133.8
+       ],
+       [
+        2021,
+        124.2
+       ],
+       [
+        2022,
+        139.2
+       ],
+       [
+        2023,
+        144.6
+       ],
+       [
+        2024,
+        149.3
+       ],
+       [
+        2025,
+        151.1
+       ],
+       [
+        2026,
+        149.9
+       ]
+      ],
+      "at": 0.08,
+      "dur": 0.35
+     },
+     {
+      "name": "TOP 3",
+      "color": "gold",
+      "points": [
+       [
+        2013,
+        119.9
+       ],
+       [
+        2014,
+        127.2
+       ],
+       [
+        2015,
+        131.2
+       ],
+       [
+        2016,
+        132.8
+       ],
+       [
+        2017,
+        137.1
+       ],
+       [
+        2018,
+        139.6
+       ],
+       [
+        2019,
+        135.3
+       ],
+       [
+        2020,
+        131.8
+       ],
+       [
+        2021,
+        129.8
+       ],
+       [
+        2022,
+        132.1
+       ],
+       [
+        2023,
+        142.9
+       ],
+       [
+        2024,
+        154.2
+       ],
+       [
+        2025,
+        158.6
+       ],
+       [
+        2026,
+        166.4
+       ]
+      ],
+      "at": 0.18,
+      "dur": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Count the batters who faced at least two hundred balls in a season, and still struck at one fifty or more. In twenty twenty-one, there was one. In twenty twenty-six, there were twenty-one. More than two in every three regular batters.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE 150 CLUB",
+     "sub": "BATTERS WITH 200+ BALLS AND A STRIKE RATE OF 150+"
+    },
+    "max": 24,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2013",
+      "value": 5,
+      "color": "ink"
+     },
+     {
+      "label": "2017",
+      "value": 2,
+      "color": "ink"
+     },
+     {
+      "label": "2021",
+      "value": 1,
+      "color": "ink"
+     },
+     {
+      "label": "2022",
+      "value": 6,
+      "color": "ink"
+     },
+     {
+      "label": "2023",
+      "value": 12,
+      "color": "gold"
+     },
+     {
+      "label": "2024",
+      "value": 19,
+      "color": "gold"
+     },
+     {
+      "label": "2025",
+      "value": 20,
+      "color": "gold"
+     },
+     {
+      "label": "2026",
+      "value": 21,
+      "color": "gold",
+      "text": "21 OF 30"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And the fastest of them all in twenty twenty-six? वैभव सूर्यवंशी, still a teenager, scored seven hundred and seventy-six runs at a strike rate of two thirty-seven. अभिषेक शर्मा struck at two oh five. Rajat Patidar, at one ninety-three. These aren't tail-end hitters. They're openers and top-order batters.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE FASTEST OF 2026",
+     "sub": "STRIKE RATE · MIN. 200 BALLS"
+    },
+    "max": 260,
+    "dec": 0,
+    "items": [
+     {
+      "label": "VAIBHAV SOORYAVANSHI · 776 RUNS",
+      "value": 237.3,
+      "team": "RR",
+      "text": "237"
+     },
+     {
+      "label": "ABHISHEK SHARMA · 563 RUNS",
+      "value": 204.7,
+      "team": "SRH",
+      "text": "205"
+     },
+     {
+      "label": "RAJAT PATIDAR · 501 RUNS",
+      "value": 192.7,
+      "team": "RCB",
+      "text": "193"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Chapter three. The rule that changed everything.",
+   "chapter": "The Rule That Changed Everything",
+   "scene": {
+    "type": "statement",
+    "kicker": "CHAPTER 3",
+    "lines": [
+     {
+      "t": "THE RULE THAT"
+     },
+     {
+      "t": "CHANGED EVERYTHING",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In twenty twenty-three, the IPL introduced the Impact Player. Each team can bring in a substitute during the match, which in practice means an extra batter, or an extra bowler. The jump in every chart we've seen starts that very season. Since then, the IPL has tried to help the bowlers: two bouncers an over from twenty twenty-four, and in twenty twenty-five, saliva back on the ball, and a second ball for dewy evenings.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE RULE BOOK",
+     "sub": "IPL PLAYING CONDITIONS"
+    },
+    "events": [
+     {
+      "y": "2023",
+      "t": "Impact Player introduced",
+      "hl": true
+     },
+     {
+      "y": "2024",
+      "t": "Two bouncers per over"
+     },
+     {
+      "y": "2025",
+      "t": "Saliva back, second ball for dew"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Compare the three seasons before it, with the four since. The run rate jumped from eight point three, to nine point five. Totals of two hundred went from one every five matches, to two in every three. And sixes rose from thirteen a match, to almost eighteen.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "BEFORE AND AFTER",
+     "sub": "IPL 2020-22 VS 2023-26"
+    },
+    "a": {
+     "name": "2020-22",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2023-26",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "RUN RATE",
+      "8.31",
+      "9.52",
+      "b"
+     ],
+     [
+      "200+ TOTALS PER MATCH",
+      "0.21",
+      "0.67",
+      "b"
+     ],
+     [
+      "SIXES PER MATCH",
+      "12.8",
+      "17.6",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "But here's the twist. Teams don't actually use that extra batter much more. In twenty twenty-two, a number eight faced a ball in fifty-five per cent of innings. In twenty twenty-six, it was fifty-one per cent. And teams still lose about six wickets an innings, exactly as they did in twenty thirteen.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE TWIST",
+     "sub": "HOW DEEP TEAMS ACTUALLY BAT"
+    },
+    "tiles": [
+     {
+      "v": "55%",
+      "l": "INNINGS WHERE NO. 8 FACED A BALL · 2022",
+      "c": "ink"
+     },
+     {
+      "v": "51%",
+      "l": "SAME, 2026",
+      "c": "gold"
+     },
+     {
+      "v": "6.0",
+      "l": "WICKETS PER INNINGS · SAME AS 2013",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So the Impact Player isn't extra batting. It's insurance. Knowing there's another batter waiting is what frees the top three to swing from ball one.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NOT EXTRA BATTING."
+     },
+     {
+      "t": "INSURANCE.",
+      "c": "gold"
+     }
+    ],
+    "sub": "The extra batter rarely bats. Knowing he's there changes how everyone else plays."
+   }
+  },
+  {
+   "vo": "Chapter four. Two hundred is no longer safe.",
+   "chapter": "200 Is No Longer Safe",
+   "scene": {
+    "type": "statement",
+    "kicker": "CHAPTER 4",
+    "lines": [
+     {
+      "t": "200 IS"
+     },
+     {
+      "t": "NO LONGER SAFE",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Two hundred used to be a match-winning total. From twenty thirteen to twenty twenty-two, teams chasing two hundred or more won just ten times out of seventy-five. From twenty twenty-three to twenty twenty-five, about one in four. And in twenty twenty-six, seventeen out of thirty-eight. Almost half.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "CHASING 200+",
+     "sub": "SHARE OF 200+ TARGETS SUCCESSFULLY CHASED"
+    },
+    "max": 50,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2013-2022 · 10 OF 75",
+      "value": 13.3,
+      "color": "ink",
+      "text": "13%"
+     },
+     {
+      "label": "2023-2025 · 19 OF 82",
+      "value": 23.2,
+      "color": "ink",
+      "text": "23%"
+     },
+     {
+      "label": "2026 · 17 OF 38",
+      "value": 44.7,
+      "color": "gold",
+      "text": "45%"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The average first-innings score went from one fifty-six in twenty thirteen, to one ninety-five in twenty twenty-six. A score that used to win you the match, is now simply par.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "THE NEW PAR"
+    },
+    "value": 195,
+    "from": 156,
+    "label": "AVERAGE FIRST-INNINGS SCORE · 2026",
+    "color": "gold",
+    "note": "156 in 2013"
+   }
+  },
+  {
+   "vo": "Chapter five. The bowlers fight back.",
+   "chapter": "The Bowlers Fight Back",
+   "scene": {
+    "type": "statement",
+    "kicker": "CHAPTER 5",
+    "lines": [
+     {
+      "t": "THE BOWLERS"
+     },
+     {
+      "t": "FIGHT BACK",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "For bowlers, it's a different sport. In twenty thirteen, about one over in thirteen went for fifteen runs or more. In twenty twenty-six, it was more than one in six. Tidy overs, six runs or fewer, went from nearly half of all overs, to under a third.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "A DIFFERENT SPORT",
+     "sub": "SHARE OF ALL OVERS"
+    },
+    "a": {
+     "name": "2013",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2026",
+     "color": "red"
+    },
+    "rows": [
+     [
+      "OVERS COSTING 15+",
+      "7.6%",
+      "17.7%",
+      "b"
+     ],
+     [
+      "OVERS COSTING 6 OR FEWER",
+      "45.8%",
+      "29.4%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Spin used to be the safe option. In twenty thirteen, spinners went for under seven an over, almost a run cheaper than pace. By twenty twenty-six, spinners were going at nine point three, and the gap had shrunk to under seven-tenths of a run.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "NO HIDING PLACE",
+     "sub": "ECONOMY RATE"
+    },
+    "a": {
+     "name": "SPIN",
+     "color": "blue"
+    },
+    "b": {
+     "name": "PACE",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "2013",
+      "6.91",
+      "7.78"
+     ],
+     [
+      "2026",
+      "9.29",
+      "9.97"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And yet, the best bowlers still find a way. Since twenty twenty-two, जसप्रीत बुमराह has gone at seven point two eight an over at the death, while the league went for ten point six. We broke down exactly how, in a separate video.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE EXCEPTION",
+     "sub": "DEATH-OVER ECONOMY · IPL 2022-2026"
+    },
+    "max": 11,
+    "dec": 2,
+    "items": [
+     {
+      "label": "JASPRIT BUMRAH",
+      "value": 7.28,
+      "team": "MI"
+     },
+     {
+      "label": "LEAGUE AVERAGE",
+      "value": 10.62,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? The IPL hasn't just added runs. It has changed what a good innings looks like. The anchor at the top is gone. Two hundred is par. And the next frontier is the powerplay, where scoring is still climbing every season.",
+   "chapter": "Verdict",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "THE ANCHOR IS GONE."
+     },
+     {
+      "t": "200 IS PAR.",
+      "c": "gold"
+     }
+    ],
+    "sub": "Next frontier: the powerplay, still climbing every season"
+   }
+  },
+  {
+   "vo": "What's the biggest change you've noticed in the IPL? Tell us in the comments, and subscribe for more data stories.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "BIGGEST CHANGE"
+     },
+     {
+      "t": "YOU'VE NOTICED?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "In twenty thirteen, IPL teams made two hundred just four times all season.",
+   "scene": {
+    "type": "bignum",
+    "value": 4,
+    "label": "200+ TOTALS IN IPL 2013",
+    "color": "ink",
+    "count_dur": 0.5
+   }
+  },
+  {
+   "vo": "In twenty twenty-six? Sixty-five.",
+   "scene": {
+    "type": "bignum",
+    "value": 65,
+    "label": "200+ TOTALS IN IPL 2026",
+    "color": "gold",
+    "count_dur": 0.9
+   }
+  },
+  {
+   "vo": "The top three now strike at one sixty-six. In twenty thirteen, it was one-twenty.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "TOP-3 STRIKE RATE"
+    },
+    "a": {
+     "name": "2013",
+     "color": "ink"
+    },
+    "b": {
+     "name": "2026",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "STRIKE RATE",
+      "120",
+      "166",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And teams now chase two hundred almost half the time.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "200 IS"
+     },
+     {
+      "t": "PAR.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Full ten-minute breakdown on the channel.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "FULL"
+     },
+     {
+      "t": "BREAKDOWN",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "How the IPL Changed T20 Batting Forever (2013–2026) | Data Story",
+   "description": "In 2013, IPL teams made 200 just four times all season. In 2026, they did it 65 times.\n\nWe went through every ball bowled in the IPL since 2013 to find out what really changed: where the runs come from, who's scoring them, what the Impact Player rule actually did, why 200 is no longer safe, and how bowlers are fighting back.",
+   "tags": [
+    "IPL",
+    "IPL stats",
+    "IPL 2026",
+    "IPL 2027",
+    "T20 cricket",
+    "cricket analysis",
+    "cricket data",
+    "Impact Player rule",
+    "IPL 200 totals",
+    "powerplay",
+    "Vaibhav Sooryavanshi",
+    "Abhishek Sharma",
+    "Jasprit Bumrah",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "IPL teams made 200 four times in 2013. In 2026? 🤯 #Shorts",
+   "description": "How T20 batting changed forever, in numbers. Full 10-minute breakdown on the channel.",
+   "tags": [
+    "IPL",
+    "cricket",
+    "IPL stats",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}

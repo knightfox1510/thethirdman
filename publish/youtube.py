@@ -49,6 +49,10 @@ def main():
     video = os.path.join(out, base + ".mp4")
     if not os.path.exists(video): raise SystemExit(f"missing {video}: build it first")
     title, desc, tags = meta_for(spec, a.fmt)
+    chap = os.path.join(out, base + ".chapters.txt")
+    if a.fmt == "long" and os.path.exists(chap):      # YouTube turns timestamps in the description into chapters
+        head, sep, rest = desc.partition("\n\n")
+        desc = head + "\n\nChapters:\n" + open(chap).read().strip() + "\n\n" + rest
     status = {"privacyStatus": "private" if a.publish_at else a.privacy, "selfDeclaredMadeForKids": False,
               "embeddable": True}
     if a.publish_at: status["publishAt"] = a.publish_at
