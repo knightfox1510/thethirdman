@@ -50,6 +50,12 @@ for a coloured code chip. Codes: CSK MI RCB KKR SRH DC PBKS RR GT LSG IND NZ AUS
 Figure poses: stance, drive, pull, defend, release (pace), spin, keeper.
 Any item may carry "at" (0–1 of the scene) but items auto-sync to the narration word that matches their label.
 
+## Instagram extras
+- `python3 variants.py deepcut specs/<slug>.json`: a 90-150 s vertical "deep cut" Reel from the spec's `ig` scenes
+  (file name from `files.ig`), ending with a "full breakdown on YouTube" CTA.
+- `python3 variants.py carousel specs/<slug>.json`: 4:5 carousel slides (cover, scenes listed in `carousel.slides`, CTA)
+  plus `caption.txt`, written to `deliver/<slug>/carousel/`.
+
 ## Analysis
 `analysis/<slug>.py` prints every Sportmonks-derived figure used in that video's spec (conventions in analysis/common.py).
 Run it after a data refresh and update the spec if anything moved.

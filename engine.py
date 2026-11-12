@@ -62,8 +62,10 @@ class G:
             self.hx, self.hy, self.hs = 120, 230, 96
         else:
             self.W, self.H = 1080, 1920
-            self.x0, self.x1, self.top, self.bot = 80, 1000, 520, 1260
-            self.hx, self.hy, self.hs = 80, 430, 100
+            # no burned-in captions any more: the content block sits in the middle of the screen,
+            # clear of the Shorts/Reels UI at the bottom (~350 px)
+            self.x0, self.x1, self.top, self.bot = 80, 1000, 660, 1520
+            self.hx, self.hy, self.hs = 80, 560, 100
         self.cx = (self.x0 + self.x1) / 2
         self.cw = self.x1 - self.x0
         self.cy = (self.top + self.bot) / 2
@@ -1103,7 +1105,7 @@ def sc_fieldplan(c, g, t, D, s):
     if long:
         cx, cy, R = 1280, 640, 330
     else:
-        cx, cy, R = g.cx, 820, 300
+        cx, cy, R = g.cx, g.top + 340, 330
     a = eo(prog(t, 0, .6))
     mir = -1 if s.get("lefty") else 1   # left-handed batter: off side flips
     P = lambda nm: (cx + mir * POS[nm][0] * 1.15 * R, cy + POS[nm][1] * R)

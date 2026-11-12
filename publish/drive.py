@@ -45,31 +45,40 @@ def md5(path):
     return h.hexdigest()
 
 
+def sync_dir(src, cur, arch_parent, stamp, label=""):
+    """Mirror one local folder into Drive folder `cur`; replaced/removed files go to arch_parent/<stamp>/."""
+    existing = {f["name"]: f for f in children(cur)}
+    arch = None
+
+    def archive(f, why):
+        nonlocal arch
+        arch = arch or folder(stamp, arch_parent)
+        api("PATCH", f"{D}/{f['id']}", "drive", body={}, params={"addParents": arch, "removeParents": cur, "fields": "id"})
+        print(f"  ↳ archived {why} {label}{f['name']}")
+
+    for name in sorted(os.listdir(src)):
+        path = os.path.join(src, name)
+        old = existing.pop(name, None)
+        if os.path.isdir(path):   # e.g. carousel/
+            sub = old["id"] if old and old.get("mimeType") == FOLDER else folder(name, cur)
+            sync_dir(path, sub, folder(name, arch_parent), stamp, label + name + "/")
+            continue
+        if old and old.get("md5Checksum") == md5(path):
+            print(f"  = {label}{name} (unchanged)"); continue
+        if old: archive(old, "old")
+        mime = mimetypes.guess_type(name)[0] or ("application/x-subrip" if name.endswith(".srt") else "application/octet-stream")
+        resumable("https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable", "drive",
+                  {"name": name, "parents": [cur]}, path, mime, params={"fields": "id"})
+        print(f"  ↑ {label}{name} ({os.path.getsize(path) / 1e6:.1f} MB)")
+    for name, f in existing.items():
+        if f.get("mimeType") != FOLDER: archive(f, "removed")
+
+
 def sync(slug, root_id, stamp):
     src = os.path.join(DELIVER, slug)
     if not os.path.isdir(src): print(f"  skip {slug}: nothing in deliver/"); return
     vids = folder("Videos", root_id); arch_root = folder("Archive", root_id)
-    cur = folder(slug, vids)
-    existing = {f["name"]: f for f in children(cur)}
-    arch = None
-    for name in sorted(os.listdir(src)):
-        path = os.path.join(src, name)
-        if not os.path.isfile(path): continue
-        old = existing.pop(name, None)
-        if old and old.get("md5Checksum") == md5(path):
-            print(f"  = {name} (unchanged)"); continue
-        if old:   # move the previous version into the archive (no re-upload)
-            arch = arch or folder(stamp, folder(slug, arch_root))
-            api("PATCH", f"{D}/{old['id']}", "drive", body={}, params={"addParents": arch, "removeParents": cur, "fields": "id"})
-            print(f"  ↳ archived old {name}")
-        mime = mimetypes.guess_type(name)[0] or ("application/x-subrip" if name.endswith(".srt") else "application/octet-stream")
-        resumable("https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable", "drive",
-                  {"name": name, "parents": [cur]}, path, mime, params={"fields": "id"})
-        print(f"  ↑ {name} ({os.path.getsize(path) / 1e6:.1f} MB)")
-    for name, f in existing.items():   # files no longer produced: archive them too
-        arch = arch or folder(stamp, folder(slug, arch_root))
-        api("PATCH", f"{D}/{f['id']}", "drive", body={}, params={"addParents": arch, "removeParents": cur, "fields": "id"})
-        print(f"  ↳ archived removed {name}")
+    sync_dir(src, folder(slug, vids), folder(slug, arch_root), stamp)
 
 
 if __name__ == "__main__":
