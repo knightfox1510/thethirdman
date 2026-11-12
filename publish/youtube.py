@@ -1,7 +1,7 @@
 """Upload a finished video to The Third Man YouTube channel.
     python3 publish/youtube.py <slug> long|short [--privacy private|unlisted|public] [--publish-at 2026-11-20T18:00:00+05:30]
 Reads title/description/tags from the spec's "yt" block (see README), uploads the video, then for long-form
-also sets the custom thumbnail and uploads the .srt as English captions. Every upload is recorded in
+also sets the custom thumbnail; both formats get the .srt uploaded as English captions. Every upload is recorded in
 publish/youtube_log.json (video IDs only, no credentials).
 
 Note: until the Google Cloud project passes YouTube's API audit, uploads are forced to PRIVATE by YouTube
@@ -69,12 +69,12 @@ def main():
                 urllib.request.urlopen(req, timeout=120); print("  thumbnail set"); rec["thumbnail"] = True
             except urllib.error.HTTPError as e:
                 print(f"  thumbnail NOT set ({e.code}): {e.read().decode()[:300]}\n  (custom thumbnails need a phone-verified channel)")
-        srt = os.path.join(out, base + ".srt")
-        if os.path.exists(srt):
-            c = resumable(f"{UP}/captions?uploadType=resumable", "youtube",
-                          {"snippet": {"videoId": vid, "language": "en", "name": "English", "isDraft": False}},
-                          srt, "application/octet-stream", params={"part": "snippet"})
-            print(f"  captions uploaded ({c.get('id')})"); rec["captions"] = True
+    srt = os.path.join(out, base + ".srt")      # captions for long-form and Shorts
+    if os.path.exists(srt):
+        c = resumable(f"{UP}/captions?uploadType=resumable", "youtube",
+                      {"snippet": {"videoId": vid, "language": "en", "name": "English", "isDraft": False}},
+                      srt, "application/octet-stream", params={"part": "snippet"})
+        print(f"  captions uploaded ({c.get('id')})"); rec["captions"] = True
     log = json.load(open(LOG)) if os.path.exists(LOG) else []
     log.append(rec); json.dump(log, open(LOG, "w"), indent=1, ensure_ascii=False)
     print("done")

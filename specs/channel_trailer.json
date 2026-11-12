@@ -335,5 +335,36 @@
  ],
  "sources": [
   "Uses figures from santner_problem and bradman_ipl"
- ]
+ ],
+ "yt": {
+  "long": {
+   "title": "The Third Man | Cricket From a Different Angle",
+   "description": "Every cricket match is decided by things the scorecard never shows.\n\nThe Third Man breaks down the game the way a captain or analyst sees it:\n• Tactical breakdowns – the plans, fields and lengths behind the big moments\n• Data stories – what ball-by-ball data really says about the IPL, India and T20 cricket\n• What Ifs – Bradman in the IPL, Sachin in the T20 era, and more\n• The debates – Bumrah vs 90s Sachin and Lara, ball by ball\n\nNew long-form breakdowns every week, and Shorts in between. Subscribe so you don't miss one.",
+   "tags": [
+    "cricket",
+    "cricket analysis",
+    "IPL",
+    "IPL 2027",
+    "Indian cricket",
+    "T20 cricket",
+    "cricket tactics",
+    "cricket stats",
+    "cricket data",
+    "Jasprit Bumrah",
+    "Sachin Tendulkar",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "Cricket, from a different angle 🏏 #Shorts",
+   "description": "Data stories, tactics and What Ifs on the IPL, India and T20 cricket. Follow The Third Man for more.",
+   "tags": [
+    "cricket",
+    "IPL",
+    "cricket analysis",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
 }

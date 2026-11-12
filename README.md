@@ -1,7 +1,7 @@
 # The Third Man – video engine
 
 Spec-driven renderer for The Third Man cricket channel: long-form 16:9 videos, 9:16 Shorts/Reels,
-word-synced captions, .srt subtitles, rotating animated intros, a logo outro, YouTube thumbnails and Short covers.
+on-screen text graphics, .srt subtitles for both formats (burned-in Short captions are opt-in: "burn_captions": true), rotating animated intros, a logo outro, YouTube thumbnails and Short covers.
 
 ## Setup (once per session)
 ```
@@ -67,6 +67,6 @@ Credentials only via env vars (never commit them): `G_CLIENT_ID`, `G_CLIENT_SECR
 - `python3 publish/drive.py <slug>|all`: syncs `deliver/<slug>/` to Drive `The Third Man/Videos/<slug>/`. Changed files
   replace the old ones and the old ones move to `The Third Man/Archive/<slug>/<date time>/`. Unchanged files are skipped (MD5).
 - `python3 publish/youtube.py <slug> long|short [--publish-at ISO]`: uploads with title/description/tags from the spec's
-  `yt` block (`{"yt": {"long": {"title","description","tags"}, "short": {...}}}`), sets the thumbnail and captions for
-  long-form, and logs the video ID in `publish/youtube_log.json`. Until the API audit passes, YouTube forces uploads to
+  `yt` block (`{"yt": {"long": {"title","description","tags"}, "short": {...}}}`), sets the thumbnail for long-form and uploads
+  captions for both formats, and logs the video ID in `publish/youtube_log.json`. Until the API audit passes, YouTube forces uploads to
   private, so publish them in YouTube Studio. Quota: about 6 uploads a day.

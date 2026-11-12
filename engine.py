@@ -725,7 +725,9 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     if i > 0:
         ca = clamp((lt - t0) / .5) if i == 1 else 1
         c.saveLayerAlpha(None, int(255 * ca)); chrome(c, g, spec, T, total, last); c.restore()
-    if g.fmt == "short" and grps is not None and s["type"] != "cta":
+    # burned-in captions are off by default (on-screen graphics carry the key text; .srt ships alongside);
+    # a spec can opt back in with "burn_captions": true
+    if g.fmt == "short" and grps is not None and s["type"] != "cta" and spec.get("burn_captions"):
         captions(c, g, lt - lead, grps)
     gfx.grain(c, frame)
     if g.fmt == "long" and T < .5:
@@ -852,8 +854,7 @@ def build(spec_path, fmt):
     name = spec["files"][fmt]
     final = f"{ROOT}/deliver/{slug}/{name}.mp4"; os.makedirs(os.path.dirname(final), exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{base}/final.txt", "-c", "copy", "-movflags", "+faststart", final], check=True)
-    if fmt == "long":
-        srt(meta, lead, starts, f"{ROOT}/deliver/{slug}/{name}.srt")
+    srt(meta, lead, starts, f"{ROOT}/deliver/{slug}/{name}.srt")
     return final
 
 
