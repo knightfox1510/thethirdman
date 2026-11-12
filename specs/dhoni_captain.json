@@ -198,31 +198,14 @@
   {
    "vo": "In two thousand seven, India handed the captaincy to a twenty-six-year-old from रांची.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.0,
-     "kicker": "2007",
-     "lines": [
-      {
-       "t": "A 26-YEAR-OLD"
-      },
-      {
-       "t": "CAPTAIN",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "IND",
-      "pose": "walk",
-      "x": 0.3,
-      "number": 7,
-      "x2": 0.5
-     }
+    "type": "clipping",
+    "dateline": "2007",
+    "headline": [
+     "A 26-YEAR-OLD",
+     "CAPTAIN"
     ],
-    "cam": "push"
+    "seed": 4,
+    "film": true
    }
   },
   {
@@ -245,7 +228,8 @@
       "number": 7
      }
     ],
-    "cam": "pull"
+    "cam": "pull",
+    "film": true
    }
   },
   {
@@ -285,7 +269,8 @@
     "stumps": [
      0.17,
      0.93
-    ]
+    ],
+    "film": true
    }
   },
   {
@@ -314,7 +299,8 @@
      }
     ],
     "cam": "drift",
-    "view": "side"
+    "view": "side",
+    "film": false
    }
   },
   {
@@ -411,7 +397,8 @@
    }
   }
  ],
- "captions": "v2",
+ "captions": "serif",
+ "series": "whatif",
  "venue": {
   "time": "dusk",
   "crowd": [

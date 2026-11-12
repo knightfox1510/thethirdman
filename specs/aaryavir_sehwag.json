@@ -1,6 +1,6 @@
 {
  "slug": "aaryavir_sehwag",
- "theme": "stadium",
+ "theme": "card",
  "captions": "v2",
  "tag": "RISING STAR",
  "tagsub": "AARYAVIR SEHWAG",
@@ -80,31 +80,34 @@
   {
    "vo": "On his India debut, वीरेंद्र सहवाग made one run. His son made twenty-eight on his U19 debut. Now, he's made one hundred and sixty.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "versus",
-     "at": 0.0,
-     "kicker": "FATHER VS SON",
-     "left": {
-      "v": "1",
-      "l": "Dad · India debut",
-      "c": "ink"
-     },
-     "right": {
-      "v": "28",
-      "l": "Son · U19 debut",
-      "c": "ink"
-     }
-    },
-    "avatars": [
-     {
-      "kit": "IND",
-      "pose": "walk",
-      "x": 0.3,
-      "x2": 0.5
-     }
-    ],
-    "cam": "push"
+    "type": "card",
+    "name": "Aaryavir Sehwag",
+    "role": "Opener · leg-spin",
+    "team": "India U19 · Delhi",
+    "kit": "IND",
+    "pose": "raise",
+    "flip_at": 0.22,
+    "back_title": "The numbers",
+    "stats": [
+     [
+      "India U19 debut v Australia, Sept 2026",
+      "28"
+     ],
+     [
+      "Dad's India debut, 1999",
+      "1",
+      "red"
+     ],
+     [
+      "v UAE, U19 Asia Cup, Nov 2026",
+      "160",
+      "gold"
+     ],
+     [
+      "Cooch Behar Trophy v Meghalaya",
+      "297"
+     ]
+    ]
    }
   },
   {
@@ -358,5 +361,6 @@
     "The Third Man"
    ]
   }
- }
+ },
+ "series": "rising"
 }

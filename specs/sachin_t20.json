@@ -263,34 +263,15 @@
   {
    "vo": "सचिन तेंदुलकर scored one hundred international hundreds. But he played exactly one T20 international.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.0,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "100 HUNDREDS."
-      },
-      {
-       "t": "EXACTLY"
-      },
-      {
-       "t": "ONE T20I.",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "IND",
-      "pose": "walk",
-      "x": 0.3,
-      "number": 10,
-      "x2": 0.5
-     }
+    "type": "clipping",
+    "dateline": "A WHAT IF? STORY",
+    "headline": [
+     "100 HUNDREDS.",
+     "EXACTLY",
+     "ONE T20I."
     ],
-    "cam": "push"
+    "seed": 4,
+    "film": true
    }
   },
   {
@@ -322,7 +303,8 @@
       "number": 10
      }
     ],
-    "cam": "drift"
+    "cam": "drift",
+    "film": true
    }
   },
   {
@@ -344,7 +326,8 @@
       "number": 10
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "film": true
    }
   },
   {
@@ -390,7 +373,8 @@
     "stumps": [
      0.2,
      0.93
-    ]
+    ],
+    "film": true
    }
   },
   {
@@ -422,7 +406,8 @@
       "number": 10
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "film": false
    }
   },
   {
@@ -566,7 +551,8 @@
    }
   }
  ],
- "captions": "v2",
+ "captions": "serif",
+ "series": "whatif",
  "venue": {
   "time": "night",
   "crowd": [

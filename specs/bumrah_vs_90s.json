@@ -274,7 +274,8 @@
     "stumps": [
      0.18,
      0.93
-    ]
+    ],
+    "film": true
    }
   },
   {
@@ -318,7 +319,8 @@
       "c": "gold",
       "at": 0.8
      }
-    ]
+    ],
+    "film": false
    }
   },
   {
@@ -420,7 +422,8 @@
    }
   }
  ],
- "captions": "v2",
+ "captions": "serif",
+ "series": "whatif",
  "venue": {
   "time": "day",
   "crowd": [

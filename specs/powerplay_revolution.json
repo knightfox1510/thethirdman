@@ -1,6 +1,6 @@
 {
  "slug": "powerplay_revolution",
- "theme": "stadium",
+ "theme": "lab",
  "tag": "DATA STORY",
  "tagsub": "THE POWERPLAY REVOLUTION",
  "files": {
@@ -335,117 +335,62 @@
   {
    "vo": "IPL teams now score over ten an over in the powerplay.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.0,
-     "label": "POWERPLAY RUN RATE · IPL 2026",
-     "value": 10.1,
-     "dec": 1,
-     "color": "gold",
-     "count_dur": 0.8
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "stance",
-      "x": 0.36,
-      "hit": "pull"
-     }
-    ],
-    "cam": "push",
-    "view": "side",
-    "ball": {
-     "at": 0.45,
-     "shot": "six"
-    }
+    "type": "lab_big",
+    "title": "",
+    "value": 10.1,
+    "dec": 1,
+    "label": "Powerplay run rate · IPL 2026",
+    "color": "red",
+    "count_dur": 0.8
    }
   },
   {
    "vo": "In twenty thirteen, it was under seven.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "table",
-     "at": 0.05,
-     "kicker": "RUNS PER OVER, OVERS 1-6",
-     "rows": [
-      [
-       "2013",
-       "6.9",
-       "ink"
-      ],
-      [
-       "2026",
-       "10.1",
-       "gold"
-      ]
-     ]
-    },
-    "avatars": [
+    "type": "lab_vs",
+    "kicker": "THE NUMBERS",
+    "title": "Runs per over, overs 1-6.",
+    "items": [
      {
-      "kit": "SRH",
-      "pose": "walk",
-      "x": 0.35,
-      "x2": 0.5
+      "label": "2013",
+      "v": 6.93,
+      "text": "6.9",
+      "c": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "2026",
+      "v": 10.12,
+      "text": "10.1",
+      "c": "red",
+      "at": 0.4
      }
     ],
-    "cam": "drift"
+    "max": 11
    }
   },
   {
    "vo": "Eighty-run powerplays went from zero to seventeen in a season.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.05,
-     "label": "80+ POWERPLAYS IN 2026",
-     "value": 17,
-     "color": "gold",
-     "count_dur": 0.7,
-     "kicker": "Zero in 2013"
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "celebrate",
-      "x": 0.5
-     }
-    ],
-    "cam": "push"
+    "type": "lab_big",
+    "title": "",
+    "value": 17,
+    "dec": 0,
+    "label": "80+ powerplays in 2026",
+    "color": "red",
+    "count_dur": 0.7,
+    "kicker": "Zero in 2013"
    }
   },
   {
    "vo": "But teams lose almost the same number of wickets. The risk didn't change. The mindset did.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.05,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "SAME RISK."
-      },
-      {
-       "t": "NEW",
-       "c": "gold"
-      },
-      {
-       "t": "MINDSET.",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "stand",
-      "x": 0.5
-     }
-    ],
-    "cam": "close"
+    "type": "lab_big_text",
+    "lines": [
+     "SAME RISK.",
+     "[NEW]",
+     "[MINDSET.]"
+    ]
    }
   },
   {
@@ -861,30 +806,6 @@
    }
   }
  ],
- "captions": "v2",
- "venue": {
-  "time": "night",
-  "crowd": [
-   [
-    255,
-    120,
-    20
-   ],
-   [
-    40,
-    90,
-    200
-   ],
-   [
-    240,
-    240,
-    240
-   ],
-   [
-    200,
-    30,
-    40
-   ]
-  ]
- }
+ "captions": "lab",
+ "series": "lab"
 }

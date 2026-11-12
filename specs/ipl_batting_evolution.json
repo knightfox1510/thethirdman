@@ -1,6 +1,6 @@
 {
  "slug": "ipl_batting_evolution",
- "theme": "stadium",
+ "theme": "lab",
  "tag": "DATA STORY",
  "tagsub": "HOW THE IPL CHANGED T20 BATTING",
  "files": {
@@ -1085,109 +1085,59 @@
   {
    "vo": "In twenty thirteen, IPL teams made two hundred just four times all season.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.0,
-     "label": "200+ TOTALS IN IPL 2013",
-     "value": 4,
-     "color": "ink",
-     "count_dur": 0.5
-    },
-    "avatars": [
-     {
-      "kit": "CSK",
-      "pose": "walk",
-      "x": 0.3,
-      "x2": 0.5
-     }
-    ],
-    "cam": "push"
+    "type": "lab_big",
+    "title": "",
+    "value": 4,
+    "dec": 0,
+    "label": "200+ totals in IPL 2013",
+    "color": "ink",
+    "count_dur": 0.5
    }
   },
   {
    "vo": "In twenty twenty-six? Sixty-five.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.05,
-     "label": "200+ TOTALS IN IPL 2026",
-     "value": 65,
-     "color": "gold",
-     "count_dur": 0.9
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "stance",
-      "x": 0.36,
-      "hit": "pull"
-     }
-    ],
-    "cam": "push",
-    "view": "side",
-    "ball": {
-     "at": 0.35,
-     "shot": "six"
-    }
+    "type": "lab_big",
+    "title": "",
+    "value": 65,
+    "dec": 0,
+    "label": "200+ totals in IPL 2026",
+    "color": "red",
+    "count_dur": 0.9
    }
   },
   {
    "vo": "The top three now strike at one sixty-six. In twenty thirteen, it was one-twenty.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "versus",
-     "at": 0.05,
-     "kicker": "TOP-3 STRIKE RATE",
-     "left": {
-      "v": "120",
-      "l": "2013",
-      "c": "ink"
-     },
-     "right": {
-      "v": "166",
-      "l": "2026",
-      "c": "gold"
-     }
-    },
-    "avatars": [
+    "type": "lab_vs",
+    "kicker": "STRIKE RATE",
+    "title": "Top-3 strike rate.",
+    "items": [
      {
-      "kit": "CSK",
-      "pose": "stand",
-      "x": 0.5
+      "label": "2013",
+      "v": 120.0,
+      "text": "120",
+      "c": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "2026",
+      "v": 166.0,
+      "text": "166",
+      "c": "red",
+      "at": 0.4
      }
-    ],
-    "cam": "drift"
+    ]
    }
   },
   {
    "vo": "And teams now chase two hundred almost half the time.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.05,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "200 IS"
-      },
-      {
-       "t": "PAR.",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "CSK",
-      "pose": "celebrate",
-      "x": 0.5
-     }
-    ],
-    "cam": "push"
+    "type": "lab_big_text",
+    "lines": [
+     "200 IS",
+     "[PAR.]"
+    ]
    }
   },
   {
@@ -1317,30 +1267,6 @@
    }
   }
  ],
- "captions": "v2",
- "venue": {
-  "time": "night",
-  "crowd": [
-   [
-    255,
-    205,
-    0
-   ],
-   [
-    0,
-    75,
-    160
-   ],
-   [
-    200,
-    30,
-    40
-   ],
-   [
-    240,
-    240,
-    240
-   ]
-  ]
- }
+ "captions": "lab",
+ "series": "lab"
 }

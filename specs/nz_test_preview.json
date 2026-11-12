@@ -1,6 +1,6 @@
 {
  "slug": "nz_test_preview",
- "theme": "stadium",
+ "theme": "lab",
  "tag": "SERIES PREVIEW",
  "tagsub": "INDIA IN NEW ZEALAND · TESTS",
  "files": {
@@ -450,104 +450,79 @@
   {
    "vo": "India have won just two Test series in New Zealand. Ever.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.0,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "2 SERIES WINS"
-      },
-      {
-       "t": "IN NEW",
-       "c": "gold"
-      },
-      {
-       "t": "ZEALAND.",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "IND",
-      "pose": "walk",
-      "x": 0.32,
-      "x2": 0.5
-     },
-     {
-      "kit": "NZ",
-      "pose": "stand",
-      "x": 0.78,
-      "scale": 0.85,
-      "cap": true
-     }
-    ],
-    "cam": "push"
+    "type": "lab_title",
+    "kicker": "STAT CHECK",
+    "lines": [
+     "2 SERIES WINS",
+     "[IN NEW]",
+     "[ZEALAND.]"
+    ]
    }
   },
   {
    "vo": "Eighty-six per cent of wickets there go to fast bowlers. In India, it's forty-three.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "versus",
-     "at": 0.05,
-     "kicker": "PACE WICKETS",
-     "left": {
-      "v": "86%",
-      "l": "NZ",
-      "c": "gold"
-     },
-     "right": {
-      "v": "43%",
-      "l": "INDIA",
-      "c": "ink"
-     }
-    },
-    "avatars": [
+    "type": "board",
+    "tone": "cream",
+    "tag": "TESTS IN NZ",
+    "head": [
+     "Pace takes",
+     "[86%] of wickets"
+    ],
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully",
+     "point",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "labels": true,
+    "zones": [
      {
-      "kit": "IND",
-      "pose": "stance",
-      "x": 0.3
-     },
-     {
-      "kit": "NZ",
-      "pose": "bowl",
-      "x": 0.78,
-      "dir": -1
+      "pos": [
+       "slip",
+       "2nd slip",
+       "3rd slip",
+       "gully"
+      ],
+      "at": 0.35
      }
     ],
-    "cam": "wide",
-    "view": "side",
-    "stumps": [
-     0.2,
-     0.93
-    ]
+    "paths": [
+     {
+      "from": [
+       0.06,
+       -0.42
+      ],
+      "to": "2nd slip",
+      "at": 0.55,
+      "bend": 0.08
+     }
+    ],
+    "foot": "Illustrative field · share of wickets: data on screen next"
    }
   },
   {
    "vo": "And only three of India's sixteen players have ever played a Test there.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.05,
-     "label": "HAVE PLAYED A TEST IN NZ",
-     "value": 3,
-     "suffix": " OF 16",
-     "color": "red",
-     "count_dur": 0.5
-    },
-    "avatars": [
-     {
-      "kit": "IND",
-      "pose": "dejected",
-      "x": 0.5
-     }
-    ],
-    "cam": "close"
+    "type": "lab_big",
+    "title": "",
+    "value": 3,
+    "dec": 0,
+    "label": "Have played a Test in NZ",
+    "color": "red",
+    "count_dur": 0.5,
+    "unit": "of 16"
    }
   },
   {
@@ -670,42 +645,6 @@
    }
   }
  ],
- "captions": "v2",
- "venue": {
-  "time": "day",
-  "crowd": [
-   [
-    25,
-    25,
-    25
-   ],
-   [
-    235,
-    235,
-    235
-   ],
-   [
-    40,
-    90,
-    200
-   ],
-   [
-    60,
-    60,
-    60
-   ]
-  ],
-  "boards": [
-   [
-    25,
-    25,
-    25
-   ],
-   [
-    235,
-    235,
-    235
-   ]
-  ]
- }
+ "captions": "serif",
+ "series": "tactics"
 }

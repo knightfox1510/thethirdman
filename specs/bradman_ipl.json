@@ -274,7 +274,8 @@
       "pads": true
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "film": true
    }
   },
   {
@@ -312,7 +313,8 @@
       "pads": true
      }
     ],
-    "cam": "drift"
+    "cam": "drift",
+    "film": true
    }
   },
   {
@@ -350,7 +352,8 @@
      }
     ],
     "cam": "wide",
-    "view": "side"
+    "view": "side",
+    "film": true
    }
   },
   {
@@ -384,7 +387,8 @@
     "ball": {
      "at": 0.45,
      "shot": "four"
-    }
+    },
+    "film": true
    }
   },
   {
@@ -430,7 +434,8 @@
     "ball": {
      "word": "owns",
      "shot": "six"
-    }
+    },
+    "film": false
    }
   },
   {
@@ -564,7 +569,8 @@
    }
   }
  ],
- "captions": "v2",
+ "captions": "serif",
+ "series": "whatif",
  "venue": {
   "time": "day",
   "crowd": [

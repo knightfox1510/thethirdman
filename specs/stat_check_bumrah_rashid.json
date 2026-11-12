@@ -1,0 +1,1001 @@
+{
+ "slug": "stat_check_bumrah_rashid",
+ "theme": "lab",
+ "captions": "lab",
+ "series": "lab",
+ "tag": "STAT CHECK",
+ "tagsub": "BUMRAH OR RASHID?",
+ "files": {
+  "long": "Stat_Check_Bumrah_or_Rashid_Every_IPL_Ball",
+  "short": "Stat_Check_Bumrah_or_Rashid_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "STAT CHECK",
+  "lines": [
+   {
+    "t": "BUMRAH"
+   },
+   {
+    "t": "OR RASHID?",
+    "c": "gold"
+   }
+  ],
+  "hero": "4-1",
+  "herosize": 300
+ },
+ "sources": [
+  "Sportmonks IPL ball-by-ball cache 2013-2026 (both careers began in 2013 or later, so every IPL ball they've bowled is included). Economy = runs off the bat + wides + no-balls per 6 legal balls; byes and leg byes excluded; super overs excluded. analysis/bumrah_rashid.py, make_bumrah_rashid.py"
+ ],
+ "long": [
+  {
+   "vo": "Two of the best T20 bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "STAT CHECK",
+    "lines": [
+     "Bumrah",
+     "or [Rashid?]"
+    ],
+    "tokens": [
+     {
+      "t": "JB",
+      "kit": "MI",
+      "name": "Bumrah"
+     },
+     {
+      "t": "RK",
+      "kit": "GT",
+      "name": "Rashid"
+     }
+    ]
+   },
+   "chapter": "The question"
+  },
+  {
+   "vo": "First, the workload. बुमराह has bowled three thousand six hundred and thirty-one balls in the IPL. Rashid, three thousand five hundred and twenty-seven. Almost exactly the same.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE METHOD",
+    "title": "Same workload.",
+    "a": {
+     "t": "JB",
+     "kit": "MI",
+     "name": "Bumrah"
+    },
+    "b": {
+     "t": "RK",
+     "kit": "GT",
+     "name": "Rashid"
+    },
+    "rows": [
+     [
+      "Balls bowled",
+      "3,631",
+      "3,527",
+      "level"
+     ],
+     [
+      "IPL seasons",
+      "13",
+      "10",
+      "level"
+     ],
+     [
+      "First season",
+      "2013",
+      "2017",
+      "level"
+     ]
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. Rashid: seven point two six. Almost nothing in it. Round one: level.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 1 · ECONOMY",
+    "title": "Almost nothing in it.",
+    "items": [
+     {
+      "label": "Bumrah · 3,631 balls",
+      "v": 7.34,
+      "text": "7.34",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 3,527 balls",
+      "v": 7.26,
+      "text": "7.26",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 8.53,
+      "text": "8.53",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 0,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 1: Economy"
+  },
+  {
+   "vo": "Round two: the powerplay. More than a third of बुमराह's balls come here, at six point nine five. Rashid bowls far fewer, at seven point four seven. बुमराह takes it.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 2 · OVERS 1-6",
+    "title": "The new ball.",
+    "items": [
+     {
+      "label": "Bumrah · 1,266 balls",
+      "v": 6.95,
+      "text": "6.95",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 342 balls",
+      "v": 7.47,
+      "text": "7.47",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 8.15,
+      "text": "8.15",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 1,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 2: Powerplay"
+  },
+  {
+   "vo": "Round three: the middle overs. This is Rashid's home. Seventy-two percent of his balls, at six point eight six. बुमराह is cheaper still, but bowls far fewer of them. We'll call it level.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 3 · OVERS 7-15",
+    "title": "Rashid's home.",
+    "items": [
+     {
+      "label": "Bumrah · 942 balls",
+      "v": 6.58,
+      "text": "6.58",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 2,555 balls",
+      "v": 6.86,
+      "text": "6.86",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 8.02,
+      "text": "8.02",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 2,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 3: Middle overs"
+  },
+  {
+   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. Rashid, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 4 · OVERS 16-20",
+    "title": "The death.",
+    "items": [
+     {
+      "label": "Bumrah · 1,423 balls",
+      "v": 8.19,
+      "text": "8.19",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 630 balls",
+      "v": 8.75,
+      "text": "8.75",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 10.1,
+      "text": "10.10",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 3,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 4: Death"
+  },
+  {
+   "vo": "Round five: dot balls. Four in every ten of बुमराह's balls are dots. Rashid, about three and a half. बुमराह again.",
+   "scene": {
+    "type": "lab_rings",
+    "kicker": "ROUND 5 · DOT BALLS",
+    "title": "Nothing to hit.",
+    "items": [
+     {
+      "v": 39.96,
+      "dec": 1,
+      "label": "Bumrah",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI"
+     },
+     {
+      "v": 35.61,
+      "dec": 1,
+      "label": "Rashid",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     }
+    ],
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 4,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 5: Dot balls"
+  },
+  {
+   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off Rashid, every eighteen. बुमराह.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 6 · SIXES",
+    "title": "Balls per six conceded.",
+    "items": [
+     {
+      "label": "Bumrah",
+      "v": 26.9,
+      "text": "26.9",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI"
+     },
+     {
+      "label": "Rashid",
+      "v": 18.27,
+      "text": "18.3",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     }
+    ],
+    "max": 30,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 5,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 6: Sixes"
+  },
+  {
+   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, Rashid went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. Rashid takes it.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "ROUND 7 · THE PEAK",
+    "title": "Six years under 6.8.",
+    "sub": "economy by season · further right = cheaper",
+    "rows": [
+     {
+      "label": "Rashid 2017",
+      "v": 67,
+      "text": "6.63",
+      "hl": true,
+      "at": 0.1
+     },
+     {
+      "label": "Rashid 2018",
+      "v": 65,
+      "text": "6.74",
+      "hl": true,
+      "at": 0.15000000000000002
+     },
+     {
+      "label": "Rashid 2019",
+      "v": 78,
+      "text": "6.08",
+      "hl": true,
+      "at": 0.2
+     },
+     {
+      "label": "Rashid 2020",
+      "v": 92,
+      "text": "5.38",
+      "hl": true,
+      "at": 0.25
+     },
+     {
+      "label": "Rashid 2021",
+      "v": 66,
+      "text": "6.70",
+      "hl": true,
+      "at": 0.30000000000000004
+     },
+     {
+      "label": "Rashid 2022",
+      "v": 68,
+      "text": "6.60",
+      "hl": true,
+      "at": 0.35
+     }
+    ],
+    "domain": [
+     0,
+     100
+    ],
+    "tick_labels": false,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 6,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Round 7: The peak"
+  },
+  {
+   "vo": "How good was that peak? From twenty seventeen to twenty twenty-two, of every bowler with fifteen hundred balls, Rashid had the best economy in the IPL. Six point three four. Nobody else was under seven.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "2017-2022 · MIN. 1,500 BALLS",
+    "title": "Nobody close.",
+    "items": [
+     {
+      "label": "Rashid · 2,192 balls",
+      "v": 6.34,
+      "text": "6.34",
+      "c": "GT",
+      "at": 0.1
+     },
+     {
+      "label": "Narine · 1,886 balls",
+      "v": 7.01,
+      "text": "7.01",
+      "c": "ink",
+      "at": 0.22
+     },
+     {
+      "label": "Bumrah · 2,060 balls",
+      "v": 7.05,
+      "text": "7.05",
+      "c": "MI",
+      "at": 0.33999999999999997
+     }
+    ],
+    "max": 8,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "But since then, Rashid has gone at over eight an over, every season. बुमराह was at his best in twenty twenty-four and twenty twenty-five, before a quiet twenty twenty-six.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "SINCE 2023",
+    "title": "Then the lines crossed.",
+    "a": {
+     "t": "JB",
+     "kit": "MI",
+     "name": "Bumrah"
+    },
+    "b": {
+     "t": "RK",
+     "kit": "GT",
+     "name": "Rashid"
+    },
+    "rows": [
+     [
+      "2023",
+      "did not play",
+      "8.24",
+      "b"
+     ],
+     [
+      "2024",
+      "6.48",
+      "8.40",
+      "a"
+     ],
+     [
+      "2025",
+      "6.68",
+      "9.35",
+      "a"
+     ],
+     [
+      "2026",
+      "8.35",
+      "9.08",
+      "a"
+     ]
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "Both are tougher on left-handers. बुमराह goes at six point six two against them, and seven point six six against right-handers. Rashid's gap is smaller. But he takes a left-hander's wicket every seventeen balls.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "LEFT V RIGHT",
+    "title": "Lefties, beware.",
+    "a": {
+     "t": "JB",
+     "kit": "MI",
+     "name": "Bumrah"
+    },
+    "b": {
+     "t": "RK",
+     "kit": "GT",
+     "name": "Rashid"
+    },
+    "rows": [
+     [
+      "Economy v left-handers",
+      "6.62",
+      "7.13",
+      "a"
+     ],
+     [
+      "Economy v right-handers",
+      "7.66",
+      "7.33",
+      "b"
+     ],
+     [
+      "Balls per wicket v left-handers",
+      "17.3",
+      "16.6",
+      "b"
+     ]
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "Left v right, and Kohli"
+  },
+  {
+   "vo": "And the biggest name they've both bowled to? विराट कोहली has taken one sixty-one off बुमराह's hundred and eight balls. But बुमराह has dismissed him five times. Against Rashid, कोहली has a hundred and seventeen off ninety balls, and been out twice.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE KOHLI TEST",
+    "title": "Both v Kohli.",
+    "a": {
+     "t": "JB",
+     "kit": "MI",
+     "name": "Bumrah"
+    },
+    "b": {
+     "t": "RK",
+     "kit": "GT",
+     "name": "Rashid"
+    },
+    "rows": [
+     [
+      "Balls to Kohli",
+      "108",
+      "90",
+      "level"
+     ],
+     [
+      "Runs conceded",
+      "161",
+      "117",
+      "level"
+     ],
+     [
+      "Times dismissed him",
+      "5",
+      "2",
+      "a"
+     ],
+     [
+      "Economy",
+      "8.94",
+      "7.80",
+      "b"
+     ]
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "So, the scorecard. बुमराह wins four rounds. Rashid wins one. Two are level.",
+   "scene": {
+    "type": "lab_score",
+    "kicker": "THE SCORE",
+    "title": "That sounds like Bumrah.",
+    "rows": [
+     {
+      "label": "Economy",
+      "win": "Level",
+      "c": "grey"
+     },
+     {
+      "label": "Powerplay",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Middle overs",
+      "win": "Level",
+      "c": "grey"
+     },
+     {
+      "label": "Death",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Dot balls",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Sixes",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "The peak",
+      "win": "Rashid",
+      "c": "GT"
+     }
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   },
+   "chapter": "The verdict"
+  },
+  {
+   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than Rashid Khan.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Bumrah, [4-1].",
+     "Rashid's peak:",
+     "untouchable."
+    ]
+   }
+  },
+  {
+   "vo": "Who should we put head to head next? Tell us in the comments.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO'S NEXT?"
+     },
+     {
+      "t": "STAT CHECK",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Two of the best T20 bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "STAT CHECK",
+    "lines": [
+     "Bumrah",
+     "or [Rashid?]"
+    ],
+    "tokens": [
+     {
+      "t": "JB",
+      "kit": "MI",
+      "name": "Bumrah"
+     },
+     {
+      "t": "RK",
+      "kit": "GT",
+      "name": "Rashid"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. Rashid: seven point two six. Almost nothing in it. Round one: level.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 1 · ECONOMY",
+    "title": "Almost nothing in it.",
+    "items": [
+     {
+      "label": "Bumrah · 3,631 balls",
+      "v": 7.34,
+      "text": "7.34",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 3,527 balls",
+      "v": 7.26,
+      "text": "7.26",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 8.53,
+      "text": "8.53",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 0,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. Rashid, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 4 · OVERS 16-20",
+    "title": "The death.",
+    "items": [
+     {
+      "label": "Bumrah · 1,423 balls",
+      "v": 8.19,
+      "text": "8.19",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI",
+      "word": "bumrah"
+     },
+     {
+      "label": "Rashid · 630 balls",
+      "v": 8.75,
+      "text": "8.75",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     },
+     {
+      "label": "IPL average",
+      "v": 10.1,
+      "text": "10.10",
+      "c": "grey",
+      "at": 0.05
+     }
+    ],
+    "max": 11,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 3,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off Rashid, every eighteen. बुमराह.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "ROUND 6 · SIXES",
+    "title": "Balls per six conceded.",
+    "items": [
+     {
+      "label": "Bumrah",
+      "v": 26.9,
+      "text": "26.9",
+      "c": "MI",
+      "t": "JB",
+      "kit": "MI"
+     },
+     {
+      "label": "Rashid",
+      "v": 18.27,
+      "text": "18.3",
+      "c": "GT",
+      "t": "RK",
+      "kit": "GT",
+      "word": "rashid"
+     }
+    ],
+    "max": 30,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 5,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, Rashid went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. Rashid takes it.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "ROUND 7 · THE PEAK",
+    "title": "Six years under 6.8.",
+    "sub": "economy by season · further right = cheaper",
+    "rows": [
+     {
+      "label": "Rashid 2017",
+      "v": 67,
+      "text": "6.63",
+      "hl": true,
+      "at": 0.1
+     },
+     {
+      "label": "Rashid 2018",
+      "v": 65,
+      "text": "6.74",
+      "hl": true,
+      "at": 0.15000000000000002
+     },
+     {
+      "label": "Rashid 2019",
+      "v": 78,
+      "text": "6.08",
+      "hl": true,
+      "at": 0.2
+     },
+     {
+      "label": "Rashid 2020",
+      "v": 92,
+      "text": "5.38",
+      "hl": true,
+      "at": 0.25
+     },
+     {
+      "label": "Rashid 2021",
+      "v": 66,
+      "text": "6.70",
+      "hl": true,
+      "at": 0.30000000000000004
+     },
+     {
+      "label": "Rashid 2022",
+      "v": 68,
+      "text": "6.60",
+      "hl": true,
+      "at": 0.35
+     }
+    ],
+    "domain": [
+     0,
+     100
+    ],
+    "tick_labels": false,
+    "tabs": [
+     "ECONOMY",
+     "POWERPLAY",
+     "MIDDLE",
+     "DEATH",
+     "DOTS",
+     "SIXES",
+     "PEAK"
+    ],
+    "tab": 6,
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "So, the scorecard. बुमराह wins four rounds. Rashid wins one. Two are level.",
+   "scene": {
+    "type": "lab_score",
+    "kicker": "THE SCORE",
+    "title": "That sounds like Bumrah.",
+    "rows": [
+     {
+      "label": "Economy",
+      "win": "Level",
+      "c": "grey"
+     },
+     {
+      "label": "Powerplay",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Middle overs",
+      "win": "Level",
+      "c": "grey"
+     },
+     {
+      "label": "Death",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Dot balls",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "Sixes",
+      "win": "Bumrah",
+      "c": "MI"
+     },
+     {
+      "label": "The peak",
+      "win": "Rashid",
+      "c": "GT"
+     }
+    ],
+    "foot": "IPL ball-by-ball, Sportmonks, 2013-2026 · economy = runs off the bat + wides + no-balls per over · super overs excluded · analysis/bumrah_rashid.py"
+   }
+  },
+  {
+   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than Rashid Khan.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Bumrah, [4-1].",
+     "Rashid's peak:",
+     "untouchable."
+    ]
+   }
+  },
+  {
+   "vo": "Who should we put head to head next? Tell us in the comments.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO'S NEXT?"
+     },
+     {
+      "t": "STAT CHECK",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "Bumrah or Rashid? We checked every IPL ball they've bowled",
+   "description": "Stat Check: Jasprit Bumrah vs Rashid Khan across every IPL ball since 2013. Seven rounds: economy, powerplay, middle overs, death, dot balls, sixes and peak seasons.",
+   "tags": [
+    "Jasprit Bumrah",
+    "Rashid Khan",
+    "Bumrah vs Rashid",
+    "IPL stats",
+    "best T20 bowler",
+    "Stat Check",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "Bumrah or Rashid? Every IPL ball, 7 rounds 📊 #Shorts",
+   "description": "Stat Check: Bumrah vs Rashid, every IPL ball since 2013.",
+   "tags": [
+    "Bumrah",
+    "Rashid Khan",
+    "IPL",
+    "cricket stats",
+    "Stat Check",
+    "The Third Man"
+   ]
+  }
+ }
+}

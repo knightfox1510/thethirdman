@@ -20,7 +20,9 @@
   "kinetic",
   "fieldmap",
   "stumps",
-  "flip"
+  "flip",
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -43,6 +45,8 @@
   "kohli_2000_nz": "kinetic",
   "nz_test_preview": "fieldmap",
   "myth_ep1_kohli_knockouts": "stumps",
-  "aaryavir_sehwag": "flip"
+  "aaryavir_sehwag": "flip",
+  "lab_ep1_abhishek_twin": "kinetic",
+  "stat_check_bumrah_rashid": "fieldmap"
  }
 }

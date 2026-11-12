@@ -1,6 +1,6 @@
 {
  "slug": "abhishek_plan",
- "theme": "stadium",
+ "theme": "lab",
  "tag": "MATCHUP DATA",
  "tagsub": "HOW TO BOWL TO ABHISHEK SHARMA",
  "files": {
@@ -301,137 +301,93 @@
   {
    "vo": "अभिषेक शर्मा is the most dangerous opener in India. Here's how to get him out.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.0,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "HOW TO GET"
-      },
-      {
-       "t": "ABHISHEK",
-       "c": "gold"
-      },
-      {
-       "t": "OUT",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "walk",
-      "x": 0.3,
-      "x2": 0.5
-     }
+    "type": "board",
+    "tone": "navy",
+    "tag": "MATCHUP DATA · IPL",
+    "head": [
+     "How to get",
+     "[Abhishek] out"
     ],
-    "cam": "push"
+    "fielders": [
+     "keeper",
+     "slip",
+     "point",
+     "cover",
+     "mid-off",
+     "mid-on",
+     "midwicket",
+     "fine leg",
+     "deep square leg"
+    ],
+    "hl": [
+     "slip"
+    ],
+    "labels": false,
+    "batter_label": "Abhishek",
+    "foot": "Illustrative field"
    }
   },
   {
    "vo": "Twenty-five times in the IPL, he's been out within his first six balls.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "versus",
-     "at": 0.05,
-     "kicker": "OUT WITHIN HIS FIRST SIX BALLS · IPL",
-     "left": {
-      "v": "25",
-      "l": "Times",
-      "c": "red"
-     },
-     "right": {
-      "v": "89",
-      "l": "Innings",
-      "c": "ink"
-     }
+    "type": "lab_compare",
+    "kicker": "OUT WITHIN SIX BALLS",
+    "title": "The matchup.",
+    "a": {
+     "t": "RP",
+     "kit": "ink",
+     "name": "Right-arm Pace"
     },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "stance",
-      "x": 0.32,
-      "hit": "drive"
-     }
-    ],
-    "cam": "wide",
-    "view": "side",
-    "ball": {
-     "at": 0.55,
-     "shot": "bowled"
+    "b": {
+     "t": "A",
+     "kit": "SRH",
+     "name": "Abhishek"
     },
-    "stumps": [
-     0.2,
-     0.93
+    "rows": [
+     [
+      "Out within six balls",
+      "25",
+      "OF 89 INNINGS",
+      "level"
+     ]
     ]
    }
   },
   {
    "vo": "In those first six balls, right-arm pace holds him to a strike rate of one-twenty.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "bignum",
-     "at": 0.05,
-     "label": "SR VS RIGHT-ARM PACE, FIRST 6 BALLS",
-     "value": 120,
-     "color": "gold",
-     "count_dur": 0.8
-    },
-    "avatars": [
-     {
-      "kit": "SRH",
-      "pose": "stand",
-      "x": 0.5
-     }
-    ],
-    "cam": "close"
+    "type": "lab_big",
+    "title": "",
+    "value": 120,
+    "dec": 0,
+    "label": "SR vs right-arm pace, first 6 balls",
+    "color": "red",
+    "count_dur": 0.8
    }
   },
   {
    "vo": "Once he's set, left-arm spin gets him every eleven balls.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "table",
-     "at": 0.05,
-     "kicker": "BALLS PER WICKET",
-     "rows": [
-      [
-       "LEFT-ARM SPIN",
-       "11.3",
-       "gold"
-      ],
-      [
-       "RIGHT-ARM PACE",
-       "17.5",
-       "ink"
-      ]
-     ]
-    },
-    "avatars": [
+    "type": "lab_vs",
+    "kicker": "THE NUMBERS",
+    "title": "Balls per wicket.",
+    "items": [
      {
-      "kit": "SRH",
-      "pose": "stance",
-      "x": 0.3
+      "label": "Left-arm Spin",
+      "v": 11.3,
+      "text": "11.3",
+      "c": "red",
+      "at": 0.1
      },
      {
-      "kit": "ink",
-      "pose": "bowl",
-      "x": 0.76,
-      "dir": -1
+      "label": "Right-arm Pace",
+      "v": 17.5,
+      "text": "17.5",
+      "c": "ink",
+      "at": 0.4
      }
     ],
-    "cam": "push",
-    "view": "side",
-    "stumps": [
-     0.2,
-     0.93
-    ]
+    "max": 22
    }
   },
   {
@@ -546,37 +502,6 @@
    }
   }
  ],
- "captions": "v2",
- "venue": {
-  "time": "night",
-  "crowd": [
-   [
-    255,
-    120,
-    20
-   ],
-   [
-    30,
-    30,
-    30
-   ],
-   [
-    240,
-    240,
-    240
-   ]
-  ],
-  "boards": [
-   [
-    255,
-    120,
-    20
-   ],
-   [
-    30,
-    30,
-    30
-   ]
-  ]
- }
+ "captions": "serif",
+ "series": "tactics"
 }

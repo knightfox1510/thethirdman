@@ -61,8 +61,14 @@ def stamp(n=int(SR * .5)):
     return x / np.abs(x).max()
 
 
-KINDS = {"crack": crack, "bounce": bounce, "whoosh": whoosh, "crowd": crowd, "stamp": stamp}
-GAIN = {"crack": .55, "bounce": .25, "whoosh": .16, "crowd": .22, "stamp": .5}
+def tick(n=int(SR * .08)):
+    t = np.arange(n) / SR
+    x = np.sin(2 * np.pi * 1850 * t) * _env(n, .0005, .012) + .4 * np.sin(2 * np.pi * 3700 * t) * _env(n, .0005, .006)
+    return x / np.abs(x).max()
+
+
+KINDS = {"crack": crack, "bounce": bounce, "whoosh": whoosh, "crowd": crowd, "stamp": stamp, "tick": tick}
+GAIN = {"crack": .55, "bounce": .25, "whoosh": .16, "crowd": .22, "stamp": .5, "tick": .12}
 
 
 def render(events, total, out):

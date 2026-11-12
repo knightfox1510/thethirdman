@@ -38,3 +38,18 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - Vary the venue for each video: "venue" {"time": night|day|dusk, "crowd": fan colours, "boards": [c1, c2]}; match it to the real ground and time where known.
 - Sound effects come from sfx.py (synthesised): whoosh on panels, crack + crowd on shots, crowd on big numbers and celebrations, stamp on verdicts. Add extra cues with "sfx": [{"kind", "at"|"word"}].
 - Series verdicts use the "verdict" panel stamp (busted / half / confirmed), so the series has a recognisable sign-off.
+
+## Series looks (pick one per video; variety comes from rotating series, the brand stays constant)
+- Myth or Data? - theme "stadium", captions "v2", stage scenes, verdict stamp.
+- The Lab / Stat Check - theme "lab", captions "lab": editorial paper, round tabs, lab_dots / lab_swarm / lab_units / lab_vs / lab_big / lab_big_text / lab_radial / lab_rings / lab_score / lab_compare. Model-driven stories (nearest-neighbour twins, head-to-heads in rounds with a scorecard). Generate the spec from the analysis (make_lab_twin.py, make_bumrah_rashid.py) and assert every claim in code.
+- Tactics Board - "board" scenes (tilted field, pucks, zones, ball paths; tone navy|cream) mixed with Lab charts; captions "serif". Label fields "Illustrative".
+- What If? - stadium-stage scenes with "film": true (sepia film), opening "clipping" (illustrative newspaper-style cutting, no real masthead); the last content scene is back in colour. Captions "serif".
+- Rising Star - theme "card": a trading card that flips (front: illustrated player, back: verified numbers), then stage scenes.
+- Flip - the benchmark flip format (flips.py).
+make_series.py re-homes classic Shorts into a series (originals stay in short_classic).
+
+## Accuracy lessons
+- Sportmonks bowled dismissals have no out_id, and non-striker run-outs are not striker_out: count a batter's dismissals as (out_id == batter) or (out_id missing and striker_out). See analysis/lab_twin.py.
+- Cricsheet T20Is are incomplete for some players (e.g. Kohli: 112 of 117 innings, missing his 122*). Never present Cricsheet sums as career totals; check against the official record first.
+- Cross-check headline numbers with an official source (IPL Orange Cap table, team sites) before building, and note any you can't reconcile (e.g. one Rashid wicket) by avoiding that figure.
+- Monetization: YPP entry doubles for new applicants from 1 Feb 2027 (8,000 watch hours or 20M Shorts views in 90 days); current partners are grandfathered. Prioritise long-form watch time before then; Shorts feed subscribers.

@@ -347,144 +347,99 @@
   {
    "vo": "India smashed New Zealand's seamers. But one bowler, they couldn't hit.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "at": 0.0,
-     "kicker": "",
-     "lines": [
-      {
-       "t": "ONE BOWLER"
-      },
-      {
-       "t": "INDIA",
-       "c": "gold"
-      },
-      {
-       "t": "COULDN'T HIT",
-       "c": "gold"
-      }
-     ]
-    },
-    "avatars": [
+    "type": "board",
+    "tone": "navy",
+    "tag": "NZ v INDIA · T20Is",
+    "head": [
+     "One bowler India",
+     "[couldn't hit.]"
+    ],
+    "fielders": [
+     "keeper",
+     "point",
+     "cover",
+     "mid-off",
+     "mid-on",
+     "midwicket",
+     "deep square leg",
+     "long-on",
+     "deep cover"
+    ],
+    "labels": false,
+    "pucks": [
      {
-      "kit": "NZ",
-      "pose": "bowl",
-      "x": 0.62,
-      "number": 74,
-      "dir": -1,
-      "cap": true
+      "p": "bowler",
+      "xy": [
+       0.06,
+       -0.42
+      ],
+      "c": "hl",
+      "label": "Santner",
+      "at": 0.3
      }
     ],
-    "cam": "push",
-    "view": "side"
+    "foot": "Illustrative field"
    }
   },
   {
    "vo": "The seamers went at almost eleven an over. Mitchell Santner, seven point three seven.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "table",
-     "at": 0.05,
-     "kicker": "RUNS PER OVER",
-     "rows": [
-      [
-       "NZ SEAMERS",
-       "10.98",
-       "red"
-      ],
-      [
-       "SANTNER",
-       "7.37",
-       "gold"
-      ]
-     ]
-    },
-    "avatars": [
+    "type": "lab_vs",
+    "kicker": "THE NUMBERS",
+    "title": "Runs per over.",
+    "items": [
      {
-      "kit": "NZ",
-      "pose": "stand",
-      "x": 0.5,
-      "number": 74,
-      "cap": true
+      "label": "NZ Seamers",
+      "v": 10.98,
+      "text": "10.98",
+      "c": "red",
+      "at": 0.1
+     },
+     {
+      "label": "Santner",
+      "v": 7.37,
+      "text": "7.37",
+      "c": "red",
+      "at": 0.4
      }
     ],
-    "cam": "drift"
+    "max": 12
    }
   },
   {
    "vo": "Nine wickets in nineteen overs, including four for twenty-one.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "versus",
-     "at": 0.05,
-     "kicker": "SANTNER",
-     "left": {
-      "v": "9",
-      "l": "WICKETS",
-      "c": "gold"
-     },
-     "right": {
-      "v": "4/21",
-      "l": "BEST",
-      "c": "ink"
-     }
-    },
-    "avatars": [
-     {
-      "kit": "NZ",
-      "pose": "celebrate",
-      "x": 0.5,
-      "number": 74,
-      "cap": true
-     }
-    ],
-    "cam": "push"
+    "type": "lab_big_text",
+    "kicker": "SANTNER",
+    "lines": [
+     "[9] wickets.",
+     "[4/21] best."
+    ]
    }
   },
   {
    "vo": "तिलक वर्मा made eighteen off twenty-one against him. श्रेयस अय्यर fell to him twice.",
    "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "table",
-     "at": 0.05,
-     "kicker": "VS SANTNER · STRIKE RATE",
-     "rows": [
-      [
-       "TILAK VARMA",
-       "86",
-       "red"
-      ],
-      [
-       "SHREYAS IYER · OUT TWICE",
-       "106",
-       "red"
-      ]
-     ]
-    },
-    "avatars": [
+    "type": "lab_vs",
+    "kicker": "STRIKE RATE",
+    "title": "Vs Santner.",
+    "items": [
      {
-      "kit": "NZ",
-      "pose": "bowl",
-      "x": 0.66,
-      "number": 74,
-      "dir": -1
+      "label": "Tilak Varma",
+      "v": 86,
+      "text": "86",
+      "c": "red",
+      "at": 0.1
      },
      {
-      "kit": "IND",
-      "pose": "stance",
-      "x": 0.26
+      "label": "Shreyas Iyer · Out Twice",
+      "v": 106,
+      "text": "106",
+      "c": "red",
+      "at": 0.4
      }
     ],
-    "cam": "pull",
-    "view": "side",
-    "stumps": [
-     0.17,
-     0.93
-    ]
+    "max": 150
    }
   },
   {
@@ -503,7 +458,7 @@
    }
   }
  ],
- "theme": "stadium",
+ "theme": "lab",
  "sources": [
   "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)",
   "Figures: analysis/santner_problem.py"
@@ -616,25 +571,6 @@
    }
   }
  ],
- "captions": "v2",
- "venue": {
-  "time": "night",
-  "crowd": [
-   [
-    40,
-    90,
-    200
-   ],
-   [
-    250,
-    150,
-    40
-   ],
-   [
-    230,
-    230,
-    240
-   ]
-  ]
- }
+ "captions": "serif",
+ "series": "tactics"
 }

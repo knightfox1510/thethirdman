@@ -33,7 +33,7 @@ SHOW = {"सचिन": "Sachin", "तेंदुलकर": "Tendulkar", "श�
         "गंभीर": "Gambhir", "गौतम": "Gautam", "सेहवाग": "Sehwag", "इरफ़ान": "Irfan", "पठान": "Pathan",
         "रैना": "Raina", "जडेजा": "Jadeja", "अश्विन": "Ashwin", "शमी": "Shami", "सिराज": "Siraj", "पंजाब": "Punjab",
         "अभिषेक": "Abhishek", "वैभव": "Vaibhav", "सूर्यवंशी": "Sooryavanshi", "ईशांत": "Ishant", "वरुण": "Varun",
-        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "बेंगलुरु": "Bengaluru", "हैदराबाद": "Hyderabad", "दिल्ली": "Delhi", "वानखेड़े": "Wankhede", "चेन्नई": "Chennai", "रांची": "Ranchi", "गुजरात": "Gujarat", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal", "वीरेंद्र": "Virender", "सहवाग": "Sehwag", "आर्यवीर": "Aaryavir"}
+        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "बेंगलुरु": "Bengaluru", "हैदराबाद": "Hyderabad", "दिल्ली": "Delhi", "वानखेड़े": "Wankhede", "चेन्नई": "Chennai", "रांची": "Ranchi", "गुजरात": "Gujarat", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal", "वीरेंद्र": "Virender", "सहवाग": "Sehwag", "आर्यवीर": "Aaryavir", "साई": "Sai", "सुदर्शन": "Sudharsan", "संजू": "Sanju", "सैमसन": "Samson", "इशान": "Ishan", "किशन": "Kishan", "ऋषभ": "Rishabh", "पंत": "Pant"}
 
 
 THEME_KEYS = ("INK", "MUTED", "GOLD", "BLUE", "RED", "PANEL", "LINE", "BG", "ORANGE")
@@ -664,7 +664,16 @@ def tts(paras, outdir, fmt):
         json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False)
     meta = [breathe(outdir, i, m, fmt) for i, m in enumerate(meta)]
     json.dump(meta, open(mpath, "w"), ensure_ascii=False)
+    for m in meta:                      # names added to SHOW after a line was voiced still display in English
+        for w in m["words"]: w["w"] = show_word(w["w"])
     return meta
+
+
+def show_word(w):
+    core = w.strip(".,?!:;\"'"); lead = w[:len(w) - len(w.lstrip(".,?!:;\"'"))]; tail = w[len(w.rstrip(".,?!:;\"'")):]
+    poss = ""
+    if core.endswith("'s") and core[:-2] in SHOW: core, poss = core[:-2], "'s"
+    return lead + SHOW.get(core, core) + poss + tail
 
 
 # ------------------------------------------------------------------ natural pauses
@@ -769,13 +778,18 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     VENUE = spec.get("venue") or {}
     if words is not None: autocue(s, words, lead)
     if s.get("type") == "stage": stage_events(s, D, words, lead)
+    _looks.resolve_words(s, words, lead)
+    film = _looks.film_on(spec, s)
+    if film: _looks.film_begin(c)
     sting = g.fmt == "long" and i == 1
     if sting and lt < STING:
         import intros
         gfx.background(c, T)
         c.saveLayerAlpha(None, int(255 * clamp((STING - lt) / .3)))
         intros.INTROS[spec.get("_intro", "fieldmap")][0](c, g, lt)
-        c.restore(); return
+        c.restore()
+        if film: _looks.film_end(c, g, T, frame)
+        return
     gfx.background(c, T)
     last = i == len(scenes) - 1
     t0 = STING if sting else 0
@@ -786,6 +800,9 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     if i > 0:
         ca = clamp((lt - t0) / .5) if i == 1 else 1
         c.saveLayerAlpha(None, int(255 * ca)); chrome(c, g, spec, T, total, last); c.restore()
+    if film: _looks.film_end(c, g, T, frame)
+    if spec.get("captions") in ("lab", "serif") and grps is not None and (g.fmt == "short" or spec.get("captions_long", True)):
+        if s["type"] not in NO_CAPTION and not s.get("no_captions"): _looks.captions(c, g, lt - lead, grps, spec["captions"], s)
     # burned-in captions are off by default (on-screen graphics carry the key text; .srt ships alongside);
     # a spec can opt back in with "burn_captions": true
     if g.fmt == "short" and grps is not None and spec.get("captions") == "v2":
@@ -802,7 +819,7 @@ def render_scene(spec_path, fmt, i):
     apply_theme(theme_for(spec, fmt)); spec["_intro"] = pick_intro(spec)
     g = setup(fmt); scenes = spec[fmt]
     meta, lead, durs, starts, total = plan(spec, fmt, base)
-    grps = cap_groups(meta[i]["words"], 34 if spec.get("captions") == "v2" else 16) if fmt == "short" else None
+    grps = cap_groups(meta[i]["words"], CAPW.get(spec.get("captions"), 16)) if (fmt == "short" or spec.get("captions") in ("lab", "serif")) else None
     D = durs[i]; n = int(round(D * FPS))
     tmp, out = f"{base}/s{i}.tmp.mp4", f"{base}/s{i}.mp4"
     p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{g.W}x{g.H}",
@@ -829,7 +846,7 @@ def stills(spec_path, fmt, frac=.92):
     for i in range(len(scenes)):
         arr = np.zeros((g.H, g.W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
         lt = durs[i] * (frac if i < len(scenes) - 1 else .6)
-        grps = cap_groups(meta[i]["words"], 34 if spec.get("captions") == "v2" else 16) if fmt == "short" else None
+        grps = cap_groups(meta[i]["words"], CAPW.get(spec.get("captions"), 16)) if (fmt == "short" or spec.get("captions") in ("lab", "serif")) else None
         draw(c, g, spec, scenes, i, lt, durs[i], starts[i] + lt, total, 0, lead[i], grps, meta[i]["words"]); sf.flushAndSubmit()
         ims.append(Image.fromarray(arr[..., :3].copy()))
     tw, th = (480, 270) if fmt == "long" else (216, 384)
@@ -1888,7 +1905,7 @@ def sc_stage(c, g, t, D, s):
     A0 = av[0] if av else {}
     fx = g.W * A0.get("x2", A0.get("x", .5)); fy = _feet(g) - _fig_h(g, A0) * .55
     c.save(); c.translate(fx, fy); c.scale(z, z); c.translate(-fx, -fy)          # camera
-    if gfx.THEME == "stadium":
+    if gfx.THEME in ("stadium", "retro", "card", "lab"):
         stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))), far=True)
     tc = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
     ballk = s.get("ball", {}).get("batter", 0)
@@ -1947,7 +1964,8 @@ def sfx_events(spec, fmt, meta, lead, durs, starts):
             if e.get("word"):
                 tm = next((lead[i] + w["s"] for w in words if _norm(w["w"]) == _norm(e["word"])), tm)
             ev.append([T0 + tm, e["kind"], e.get("gain", 1)])
-        if s.get("type") != "stage": continue
+        if s.get("type") != "stage":
+            _looks.resolve_words(s, words, lead[i]); ev += _looks.extra_sfx(s, D, T0); continue
         stage_events(s, D, words, lead[i])
         p = s.get("panel", {}); pat = D * p.get("at", .05)
         if p.get("kind") == "verdict": ev.append([T0 + pat + .35, "stamp", 1])
@@ -2004,6 +2022,10 @@ NUMWORDS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eigh
             "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty",
             "seventy", "eighty", "ninety", "hundred", "thousand", "half", "double", "first", "never", "best", "worst"}
 
+
+import looks as _looks
+_looks.install(sys.modules[__name__])
+CAPW = {"v2": 34, "lab": 60, "serif": 50}
 
 if __name__ == "__main__":
     cmd = sys.argv[1]
