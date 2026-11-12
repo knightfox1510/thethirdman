@@ -33,7 +33,7 @@ SHOW = {"सचिन": "Sachin", "तेंदुलकर": "Tendulkar", "श�
         "गंभीर": "Gambhir", "गौतम": "Gautam", "सेहवाग": "Sehwag", "इरफ़ान": "Irfan", "पठान": "Pathan",
         "रैना": "Raina", "जडेजा": "Jadeja", "अश्विन": "Ashwin", "शमी": "Shami", "सिराज": "Siraj", "पंजाब": "Punjab",
         "अभिषेक": "Abhishek", "वैभव": "Vaibhav", "सूर्यवंशी": "Sooryavanshi", "ईशांत": "Ishant", "वरुण": "Varun",
-        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "बेंगलुरु": "Bengaluru", "हैदराबाद": "Hyderabad", "दिल्ली": "Delhi", "वानखेड़े": "Wankhede", "चेन्नई": "Chennai", "रांची": "Ranchi", "गुजरात": "Gujarat", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal"}
+        "आरोन": "Aaron", "नवदीप": "Navdeep", "सैनी": "Saini", "जहीर": "Zaheer", "ख़ान": "Khan", "कपिल": "Kapil", "देव": "Dev", "शुभमन": "Shubman", "गिल": "Gill", "तिलक": "Tilak", "वर्मा": "Varma", "बेंगलुरु": "Bengaluru", "हैदराबाद": "Hyderabad", "दिल्ली": "Delhi", "वानखेड़े": "Wankhede", "चेन्नई": "Chennai", "रांची": "Ranchi", "गुजरात": "Gujarat", "कुलदीप": "Kuldeep", "रवींद्र": "Ravindra", "भुवनेश्वर": "Bhuvneshwar", "कुमार": "Kumar", "क्रुणाल": "Krunal", "वीरेंद्र": "Virender", "सहवाग": "Sehwag", "आर्यवीर": "Aaryavir"}
 
 
 THEME_KEYS = ("INK", "MUTED", "GOLD", "BLUE", "RED", "PANEL", "LINE", "BG", "ORANGE")

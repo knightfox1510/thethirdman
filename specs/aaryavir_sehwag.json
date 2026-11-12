@@ -1,0 +1,360 @@
+{
+ "slug": "aaryavir_sehwag",
+ "theme": "stadium",
+ "captions": "v2",
+ "tag": "RISING STAR",
+ "tagsub": "AARYAVIR SEHWAG",
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    250,
+    150,
+    40
+   ],
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    200,
+    16,
+    46
+   ],
+   [
+    0,
+    120,
+    60
+   ]
+  ],
+  "boards": [
+   [
+    40,
+    90,
+    200
+   ],
+   [
+    245,
+    184,
+    0
+   ]
+  ]
+ },
+ "files": {
+  "long": "_unused",
+  "short": "Aaryavir_Sehwag_160_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "FATHER VS SON",
+  "lines": [
+   {
+    "t": "SEHWAG"
+   },
+   {
+    "t": "2.0?",
+    "c": "gold"
+   }
+  ],
+  "hero": "160",
+  "herosize": 300
+ },
+ "sources": [
+  "https://wisden.com/cricket-news/son-of-india-legend-aaryavir-sehwag-smashes-160-in-168-balls-for-india-u19",
+  "https://www.outlookindia.com/sports/cricket/india-vs-uae-u19-asia-cup-2026-match-report",
+  "https://gulfnews.com/sport/cricket/virender-sehwags-son-smashes-160-as-india-beat-uae-by-70-runs-in-asia-cup-1.500742656",
+  "https://cricket.com/news/virender-sehwags-son-aaryavir-smashes-297-in-cooch-behar-trophy-11222024-1732257974695",
+  "https://www.bjsports.live/latest-news-en/aaryavir-sehwag-smashes-173-off-143-to-lead-delhi-u19-in-vinoo-mankad-trophy",
+  "https://i.imgci.com/db/ARCHIVE/1998-99/OD_TOURNEYS/PC-IND/SCORECARDS/IND_PAK_PC-IND_ODI6_01APR1999.html",
+  "Margin: India 309/7, UAE 239 all out = 70 runs (Outlook's headline says 60; its own totals give 70). The UAE match is not an official Youth ODI (UAE are an Associate), so no Youth ODI record claims."
+ ],
+ "long": [],
+ "short": [
+  {
+   "vo": "One run. That's what वीरेंद्र सहवाग made on his India debut. Now, his son made one hundred and sixty.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "at": 0.0,
+     "kicker": "FATHER VS SON",
+     "left": {
+      "v": "1",
+      "l": "Dad · India debut",
+      "c": "ink"
+     },
+     "right": {
+      "v": "160",
+      "l": "Son · U19 Asia Cup",
+      "c": "gold"
+     }
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.3,
+      "x2": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "Against the UAE, in Oman, आर्यवीर सहवाग faced one sixty-eight balls. Seventeen fours, and seven sixes.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "score",
+     "kicker": "U19 ASIA CUP · V UAE",
+     "event": "India U19 · Al Amerat, Oman",
+     "score": "160",
+     "note": "168 balls · 17 fours · 7 sixes"
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.62
+     },
+     {
+      "kit": [
+       200,
+       16,
+       46
+      ],
+      "pose": "dejected",
+      "x": 0.26,
+      "scale": 0.85,
+      "cap": true
+     }
+    ],
+    "cam": "pull"
+   }
+  },
+  {
+   "vo": "He took sixty-nine balls to reach fifty. Then he hit his last sixty runs, off just thirty-seven.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "HOW THE 160 WAS BUILT",
+     "rows": [
+      [
+       "FIRST 50",
+       "69 balls"
+      ],
+      [
+       "50 TO 100",
+       "62 balls"
+      ],
+      [
+       "LAST 60 RUNS",
+       "37 balls",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "hit": "pull",
+      "x": 0.36
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "ball": {
+     "word": "thirty-seven",
+     "shot": "six",
+     "side": -1
+    },
+    "stumps": [
+     0.18,
+     0.94
+    ]
+   }
+  },
+  {
+   "vo": "India won by seventy runs, and reached the semi-finals.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "INDIA 309/7 · UAE 239",
+     "value": 70,
+     "suffix": " RUNS",
+     "label": "Winning margin",
+     "color": "gold",
+     "count_dur": 0.7
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate"
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "And it isn't a one-off. In the Cooch Behar Trophy, he made two hundred and ninety-seven, with fifty-one fours.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "COOCH BEHAR TROPHY · V MEGHALAYA",
+     "value": 297,
+     "label": "309 balls · 51 fours",
+     "color": "gold",
+     "count_dur": 1.0
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "hit": "drive",
+      "x": 0.36
+     }
+    ],
+    "view": "side",
+    "cam": "wide",
+    "ball": {
+     "word": "fifty-one",
+     "shot": "four",
+     "side": -1
+    },
+    "stumps": [
+     0.18,
+     0.94
+    ]
+   }
+  },
+  {
+   "vo": "Last month, it was one seventy-three, off one forty-three, in the Vinoo Mankad Trophy.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "score",
+     "kicker": "VINOO MANKAD TROPHY · OCTOBER",
+     "event": "Delhi U19 v Chandigarh",
+     "score": "173",
+     "note": "143 balls · 19 fours · 8 sixes"
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise"
+     }
+    ],
+    "cam": "close"
+   }
+  },
+  {
+   "vo": "His father's India debut was one run, and thirty-five conceded in three overs. He went on to make two Test triple hundreds.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "VIRENDER SEHWAG",
+     "rows": [
+      [
+       "ODI DEBUT, 1999",
+       "1 RUN",
+       "red"
+      ],
+      [
+       "BOWLING ON DEBUT",
+       "3-0-35-0",
+       "red"
+      ],
+      [
+       "TEST TRIPLE HUNDREDS",
+       "2",
+       "gold"
+      ]
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.62
+     },
+     {
+      "kit": "PAK",
+      "pose": "celebrate",
+      "x": 0.26,
+      "scale": 0.85,
+      "cap": true
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "The son? He's only just getting started.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "lines": [
+      {
+       "t": "ONLY JUST"
+      },
+      {
+       "t": "GETTING STARTED.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "walk",
+      "x": 0.5,
+      "x2": 0.62
+     }
+    ],
+    "cam": "wide"
+   }
+  },
+  {
+   "vo": "Is he the next Sehwag? Tell us in the comments, and follow for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THE NEXT"
+     },
+     {
+      "t": "SEHWAG?",
+      "c": "gold"
+     }
+    ],
+    "pill": "FOLLOW FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Sehwag's son just made 160. His dad made 1 on debut 🏏 #Shorts",
+   "description": "Aaryavir Sehwag's 160 off 168 balls against the UAE at the U19 Asia Cup, his 297 in the Cooch Behar Trophy and 173 in the Vinoo Mankad Trophy, set against Virender Sehwag's India debut.",
+   "tags": [
+    "Aaryavir Sehwag",
+    "Virender Sehwag",
+    "U19 Asia Cup",
+    "India U19",
+    "Cooch Behar Trophy",
+    "cricket shorts",
+    "The Third Man"
+   ]
+  }
+ }
+}
