@@ -116,7 +116,7 @@
    }
   },
   {
-   "vo": "Who did it? In twenty twenty-five, Josh Hazlewood took twenty-two wickets and Krunal Pandya went at just over eight an over. And in twenty twenty-six, Bhuvneshwar Kumar took twenty-eight wickets at seven point nine five, the best economy of any of the top five wicket-takers.",
+   "vo": "Who did it? In twenty twenty-five, Josh Hazlewood took twenty-two wickets and क्रुणाल पंड्या went at just over eight an over. And in twenty twenty-six, भुवनेश्वर कुमार took twenty-eight wickets at seven point nine five, the best economy of any of the top five wicket-takers.",
    "scene": {
     "type": "stats",
     "head": {
@@ -293,7 +293,7 @@
    }
   },
   {
-   "vo": "And in twenty twenty-six, Bhuvneshwar Kumar took twenty-eight wickets.",
+   "vo": "And in twenty twenty-six, भुवनेश्वर कुमार took twenty-eight wickets.",
    "scene": {
     "type": "bignum",
     "value": 28,

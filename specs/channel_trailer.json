@@ -32,11 +32,15 @@
       "t": "EVERY MATCH"
      },
      {
+      "t": "IS DECIDED BY THINGS"
+     },
+     {
       "t": "THE SCORECARD",
       "c": "gold"
      },
      {
-      "t": "NEVER SHOWS."
+      "t": "NEVER SHOWS.",
+      "c": "gold"
      }
     ]
    }
@@ -120,7 +124,7 @@
     "items": [
      {
       "label": "NZ SEAMERS",
-      "value": 10.65,
+      "value": 10.98,
       "color": "red"
      },
      {
@@ -150,7 +154,7 @@
    }
   },
   {
-   "vo": "And we settle the debates fans argue about. Bumrah against nineties Sachin and Lara, ball by ball.",
+   "vo": "And we settle the debates fans argue about. बुमराह against nineties सचिन and Lara, ball by ball.",
    "scene": {
     "type": "over",
     "head": {
@@ -236,11 +240,15 @@
       "t": "EVERY MATCH"
      },
      {
+      "t": "IS DECIDED BY THINGS"
+     },
+     {
       "t": "THE SCORECARD",
       "c": "gold"
      },
      {
-      "t": "NEVER SHOWS."
+      "t": "NEVER SHOWS.",
+      "c": "gold"
      }
     ]
    }
