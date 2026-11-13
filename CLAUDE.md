@@ -8,6 +8,7 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 
 ## Always log new work (owner rule)
 - Everything new that is generated (video, Short, carousel, or any deliverable) goes to Drive AND the tracker in the same session, even if it is not uploaded: `python3 publish/drive.py <slug>` right after the build, then add a Tracker row with `python3 site_sync.py add date=<YYYY-MM-DD> platform="<YouTube Short|YouTube long|...>" content="<title>" status=Ready notes="Built <date>; on Drive"` and mirror it in site/data/schedule.json. After an upload, set Status=Posted and the link as below.
+- `publish/drive.py <slug>` mirrors deliver/<slug> exactly: any Drive file missing locally is archived. For an existing slug, run `python3 publish/drive.py pull <slug>` first (or rebuild both formats) so a Short-only rebuild doesn't archive the long video.
 - Test or prototype renders (e.g. camera tests) are the exception: keep them out of Drive and the tracker unless the owner asks.
 
 ## Hard rules (the owner has flagged these repeatedly)
