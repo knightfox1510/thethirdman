@@ -1,0 +1,103 @@
+{
+ "date": "2026-11-13",
+ "by": "Initial backlog (schedule sheet Ideas tab + Replay Room pilot)",
+ "news": [],
+ "ideas": [
+  {
+   "title": "Replay Room pilot: How Will Young made 125 at Bay Oval",
+   "format": "replay",
+   "why": "First episode of the new format; captures ready for NZ's innings, India's chase to come",
+   "timing": "14 Nov, day after the 4th ODI",
+   "data": "Cricinfo + Cricbuzz captures",
+   "priority": "High"
+  },
+  {
+   "title": "The unluckiest bowler at Bay Oval: Arshdeep beat the bat 1 ball in 3 and took 1 wicket",
+   "format": "replay",
+   "why": "A scorecard-defying Short from the pilot data",
+   "timing": "14 Nov",
+   "data": "Captures (shot control)",
+   "priority": "High"
+  },
+  {
+   "title": "Bay Oval ground guide (5th ODI)",
+   "format": "tactics",
+   "why": "Second ODI at the same ground in three days",
+   "timing": "Before 15 Nov",
+   "data": "Cricsheet ODIs + today's capture",
+   "priority": "High"
+  },
+  {
+   "title": "Day-after Test breakdowns",
+   "format": "replay",
+   "why": "Each Test gives two innings of tracking data per side",
+   "timing": "24 Nov, 2 Dec",
+   "data": "Captures",
+   "priority": "High"
+  },
+  {
+   "title": "IPL ground guides (Chinnaswamy, Wankhede, Chepauk, Eden)",
+   "format": "tactics",
+   "why": "Evergreen and very searchable",
+   "timing": "Before IPL 2027",
+   "data": "Sportmonks IPL",
+   "priority": "Medium"
+  },
+  {
+   "title": "Jasprit Bumrah: the complete breakdown",
+   "format": "lab",
+   "why": "Flagship 10-minute long",
+   "timing": "Any time",
+   "data": "Sportmonks + Cricsheet",
+   "priority": "Medium"
+  },
+  {
+   "title": "Virat Kohli's reinvention",
+   "format": "myth",
+   "why": "Anchor at a 165 strike rate",
+   "timing": "Any time",
+   "data": "Sportmonks IPL",
+   "priority": "Medium"
+  },
+  {
+   "title": "India's road to the 2027 ODI World Cup",
+   "format": "lab",
+   "why": "Long-running search interest",
+   "timing": "2027",
+   "data": "Cricsheet ODIs + captures",
+   "priority": "Medium"
+  },
+  {
+   "title": "The Impact Player, four seasons on",
+   "format": "lab",
+   "why": "Rule debate before the IPL",
+   "timing": "Before IPL 2027",
+   "data": "Sportmonks IPL",
+   "priority": "Medium"
+  },
+  {
+   "title": "Sri Lanka T20Is preview",
+   "format": "tactics",
+   "why": "22, 24, 27 Dec",
+   "timing": "Mid-Dec",
+   "data": "Sportmonks T20I",
+   "priority": "Medium"
+  },
+  {
+   "title": "Spin vs pace in the middle overs",
+   "format": "lab",
+   "why": "",
+   "timing": "Any time",
+   "data": "Sportmonks",
+   "priority": "Low"
+  },
+  {
+   "title": "What if India picked its T20 XI purely on data?",
+   "format": "whatif",
+   "why": "",
+   "timing": "Any time",
+   "data": "Sportmonks",
+   "priority": "Low"
+  }
+ ]
+}

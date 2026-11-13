@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Third Man Control Room</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b3e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23e63946'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --panel:#fffdf9; --ink:#14182a; --muted:#5d6273; --line:#e3ddd2; --navy:#0d1b3e; --red:#d7263d; --yellow:#ffcf33;
+  --chip:#efe9df; --good:#1f8a4c; --warn:#c46a00; --info:#2357c6; --purple:#7a3fc2; --shadow:0 1px 2px rgba(20,24,42,.06),0 6px 24px rgba(20,24,42,.06);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1020; --panel:#121a30; --ink:#eef0f7; --muted:#9aa3bd; --line:#232c47; --navy:#e9ecf6; --chip:#1b2440; --shadow:none;
+  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --red:#ff5a6e;
+}}
+:root[data-theme="dark"]{
+  --bg:#0b1020; --panel:#121a30; --ink:#eef0f7; --muted:#9aa3bd; --line:#232c47; --navy:#e9ecf6; --chip:#1b2440; --shadow:none;
+  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --red:#ff5a6e;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
+.dot{width:26px;height:26px;border-radius:50%;background:var(--red);position:relative;flex:none}
+.dot:after{content:"";position:absolute;inset:9px;border-radius:50%;background:#fff}
+.brand small{display:block;font:400 11px "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav::-webkit-scrollbar{display:none}
+nav a{padding:7px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap}
+nav a.on{background:var(--ink);color:var(--bg)}
+#theme{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;width:34px;height:34px;cursor:pointer;flex:none;font-size:17px;line-height:1}
+main{max-width:1180px;margin:0 auto;padding:28px 16px 80px}
+h1{font:800 clamp(28px,4vw,44px)/1.08 "Playfair Display",serif;margin:0 0 6px;letter-spacing:-.01em}
+h2{font:700 24px/1.2 "Playfair Display",serif;margin:34px 0 12px}
+h3{font-size:16px;margin:0 0 8px}
+.lede{color:var(--muted);max-width:720px;margin:0 0 22px}
+.kicker{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);min-width:0}
+.stat b{display:block;font:800 34px/1 "Playfair Display",serif;margin:6px 0 4px}
+.stat span{color:var(--muted);font-size:13px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:2px 9px;border-radius:999px;background:var(--chip);font-size:12px;font-weight:500;white-space:nowrap}
+.chip.fmt{background:transparent;border:1px solid var(--line)}
+.s-Posted{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
+.s-Ready{background:color-mix(in srgb,var(--info) 16%,transparent);color:var(--info)}
+.s-To-build,.s-To-do{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.s-Uploaded-private,.s-Uploading{background:color-mix(in srgb,var(--purple) 18%,transparent);color:var(--purple)}
+.s-Hold{background:color-mix(in srgb,var(--red) 16%,transparent);color:var(--red)}
+.p-High{color:var(--red)} .p-Medium{color:var(--warn)} .p-Low{color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.tablewrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.muted{color:var(--muted)} .small{font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.filters button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer;font:500 13px "IBM Plex Sans",sans-serif}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fmtcard{cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:transform .15s}
+.fmtcard:hover{transform:translateY(-2px)}
+.fmtcard .thumbs{display:flex;gap:6px;height:150px;overflow:hidden;border-radius:10px}
+.fmtcard .thumbs img{height:100%;border-radius:8px;object-fit:cover}
+.badge-new{background:var(--yellow);color:#14182a;font-weight:700}
+.detail{display:none}
+.detail.on{display:block}
+.back{border:0;background:none;color:var(--muted);cursor:pointer;padding:0;font:500 14px "IBM Plex Sans",sans-serif;margin-bottom:12px}
+.gallery{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
+.gallery img{height:300px;border-radius:10px;border:1px solid var(--line);flex:none}
+.gallery img.long{height:200px;align-self:center}
+ol.beats{margin:0;padding-left:20px} ol.beats li{margin:4px 0}
+ul.clean{margin:0;padding-left:18px} ul.clean li{margin:4px 0}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:14px}
+.kv dt{color:var(--muted);font:600 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.kv dd{margin:0}
+.timeline{display:flex;flex-direction:column;gap:8px}
+.tl{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start}
+.tl .d{font:600 12px "IBM Plex Mono",monospace;color:var(--muted);padding-top:3px}
+.bars .b{display:grid;grid-template-columns:120px 1fr 54px;gap:10px;align-items:center;font-size:13px;margin:6px 0}
+.bars .track{height:10px;background:var(--chip);border-radius:6px;overflow:hidden}
+.bars .fill{height:100%;background:var(--red);border-radius:6px}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+.note{border-left:3px solid var(--yellow);padding:8px 12px;background:var(--panel);border-radius:0 10px 10px 0;font-size:14px}
+.ytbar{height:12px;background:var(--chip);border-radius:8px;overflow:hidden;margin:8px 0}
+.ytbar i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--yellow))}
+details summary{cursor:pointer;color:var(--muted);font-size:13px}
+@media (max-width:640px){
+  .brand small{display:none} .kv{grid-template-columns:1fr} .gallery img{height:240px}
+  .bars .b{grid-template-columns:90px 1fr 44px}
+  .hide-sm{display:none}
+}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <div class="brand"><span class="dot"></span><div>The Third Man<small>Control room</small></div></div>
+  <nav id="nav">
+    <a href="#today">Today</a><a href="#tracker">Tracker</a><a href="#formats">Formats</a><a href="#playbook">Playbook</a>
+    <a href="#ideas">Ideas</a><a href="#library">Library</a><a href="#data">Data &amp; rules</a>
+  </nav>
+  <button id="theme" title="Toggle theme" aria-label="Toggle theme">◐</button>
+</div></header>
+<main id="app"><div class="empty">Loading…</div></main>
+
+<script>
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOW = new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata"}));
+const iso = d => d.toISOString().slice(0,10);
+const TODAY = `${NOW.getFullYear()}-${String(NOW.getMonth()+1).padStart(2,"0")}-${String(NOW.getDate()).padStart(2,"0")}`;
+const fmtDate = s => s ? new Date(s+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"}) : "—";
+const dow = s => s ? new Date(s+"T00:00:00").toLocaleDateString("en-GB",{weekday:"short"}) : "";
+const statusChip = s => s ? `<span class="chip s-${esc(s).replace(/[()]/g,"").replace(/ /g,"-")}">${esc(s)}</span>` : "";
+const D = {};
+const FMT = id => (D.formats.formats.find(f => f.id === id) || {name:id});
+const fmtChip = id => `<a class="chip fmt" href="#formats/${id}">${esc(FMT(id).name)}</a>`;
+
+try { const t = localStorage.getItem("ttm-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e){}
+$("#theme").onclick = () => {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("ttm-theme", document.documentElement.dataset.theme); } catch(e){}
+};
+
+async function load(){
+  const get = p => fetch(p, {cache:"no-cache"}).then(r => r.ok ? r.json() : null).catch(() => null);
+  const [formats, schedule, library, fixtures, stills, replay, idx] = await Promise.all(
+    ["data/formats.json","data/schedule.json","data/library.json","data/fixtures.json","data/stills.json","data/replay_sample.json","data/ideas/index.json"].map(get));
+  Object.assign(D, {formats, schedule, library, fixtures, stills: stills || {}, replay, idx: idx || {days:[]}});
+  D.ideas = {};
+  const days = (D.idx.days || []).slice().sort().reverse();
+  D.days = days;
+  if (days[0]) D.ideas[days[0]] = await get(`data/ideas/${days[0]}.json`);
+  route();
+}
+window.addEventListener("hashchange", route);
+
+function route(){
+  const [page, sub] = (location.hash.slice(1) || "today").split("/");
+  document.querySelectorAll("#nav a").forEach(a => { const on = a.getAttribute("href") === "#"+page; a.classList.toggle("on", on); if (on) a.scrollIntoView({inline:"center", block:"nearest"}); });
+  const app = $("#app");
+  const views = {today, tracker, formats, playbook, ideas, library, data};
+  app.innerHTML = (views[page] || today)(sub);
+  window.scrollTo(0,0);
+  (afterRender[page] || (()=>{}))(sub);
+}
+const afterRender = {};
+
+/* ---------------- Today ---------------- */
+function today(){
+  const rows = D.schedule.rows;
+  const upcoming = rows.filter(r => r.date && r.date >= TODAY && r.status !== "Posted").sort((a,b)=>a.date.localeCompare(b.date));
+  const week = upcoming.filter(r => r.date <= iso(new Date(NOW.getTime()+7*864e5)));
+  const overdue = rows.filter(r => r.date && r.date < TODAY && !["Posted","Hold"].includes(r.status));
+  const count = s => rows.filter(r => r.status === s).length;
+  const lib = D.library.items;
+  const ypp = Math.ceil((new Date("2027-02-01") - NOW)/864e5);
+  const fx = D.fixtures.items.filter(f => f.date >= TODAY).slice(0,5);
+  const latest = D.days[0] ? D.ideas[D.days[0]] : null;
+  const top = latest ? latest.ideas.filter(i => i.priority === "High").slice(0,4) : [];
+  const recheck = lib.filter(i => i.recheck && i.status !== "Posted");
+  return `
+  <div class="kicker">${new Date(TODAY+"T00:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}</div>
+  <h1>Today in the control room</h1>
+  <p class="lede">What goes out this week, what cricket is coming, and what to make next.</p>
+  <div class="grid g4">
+    <div class="card stat"><span class="kicker">Posted</span><b>${count("Posted")}</b><span>on the schedule</span></div>
+    <div class="card stat"><span class="kicker">Ready</span><b>${count("Ready")}</b><span>built, waiting to post</span></div>
+    <div class="card stat"><span class="kicker">To build</span><b>${count("To build")+count("To do")}</b><span>on the schedule</span></div>
+    <div class="card stat"><span class="kicker">YPP bar doubles in</span><b>${ypp} days</b><span>1 Feb 2027: 8,000 watch hours for new applicants</span></div>
+  </div>
+  ${overdue.length ? `<h2>Overdue</h2><div class="card timeline">${overdue.map(r=>`<div class="tl"><div class="d">${fmtDate(r.date)}</div><div><b>${esc(r.content)}</b> <span class="muted small">· ${esc(r.platform)}</span> ${statusChip(r.status)}${r.notes?`<div class="muted small">${esc(r.notes)}</div>`:""}</div></div>`).join("")}</div>`:""}
+  <div class="grid g2" style="margin-top:8px">
+    <div><h2>Next 7 days</h2><div class="card timeline">${week.length ? week.map(r=>`<div class="tl"><div class="d">${dow(r.date)} ${fmtDate(r.date)}</div><div><b>${esc(r.content)}</b> ${statusChip(r.status)}<div class="muted small">${esc(r.platform)}${r.notes?` · ${esc(r.notes)}`:""}</div></div></div>`).join("") : `<div class="empty">Nothing scheduled.</div>`}</div></div>
+    <div><h2>Cricket coming up</h2><div class="card timeline">${fx.map(f=>`<div class="tl"><div class="d">${dow(f.date)} ${fmtDate(f.date)}</div><div><b>${esc(f.event)}</b> <span class="muted small">· ${esc(f.teams)}, ${esc(f.venue)}</span><div class="row small" style="margin-top:4px"><span class="muted">${esc(f.status)}</span> → ${fmtChip(f.format)}</div></div></div>`).join("")}</div></div>
+  </div>
+  <div class="grid g2">
+    <div><h2>Top ideas ${latest?`<span class="muted small mono">${fmtDate(latest.date)}</span>`:""}</h2><div class="card timeline">${top.length?top.map(ideaRow).join(""):`<div class="empty">No ideas yet.</div>`}<a class="small" href="#ideas">All ideas →</a></div></div>
+    <div><h2>Re-check before posting</h2><div class="card timeline">${recheck.map(i=>`<div class="tl"><div class="d">${fmtDate(i.planned)}</div><div><b>${esc(i.title)}</b><div class="muted small">${esc(i.recheck)}</div></div></div>`).join("") || `<div class="empty">Nothing to re-check.</div>`}</div></div>
+  </div>`;
+}
+
+/* ---------------- Tracker ---------------- */
+let trackerFilter = "All";
+function tracker(){
+  const rows = D.schedule.rows.slice().sort((a,b)=>(a.date||"9999").localeCompare(b.date||"9999"));
+  const statuses = ["All", ...new Set(rows.map(r=>r.status))];
+  const shown = rows.filter(r => trackerFilter === "All" || r.status === trackerFilter);
+  return `<div class="kicker">Content schedule</div><h1>Tracker</h1>
+  <p class="lede">Synced from the schedule sheet on ${fmtDate(D.schedule.synced)}. Edit it in <a href="${D.schedule.sheet_url}" target="_blank" rel="noopener">the sheet</a>; this page refreshes after each upload or daily run.</p>
+  <div class="filters">${statuses.map(s=>`<button class="${s===trackerFilter?"on":""}" onclick="trackerFilter='${esc(s)}';route()">${esc(s)} <span class="muted">${s==="All"?rows.length:rows.filter(r=>r.status===s).length}</span></button>`).join("")}</div>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Content</th><th class="hide-sm">Platform</th><th>Status</th><th class="hide-sm">Notes</th></tr></thead><tbody>
+  ${shown.map(r=>`<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--yellow) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
+  <td><b>${esc(r.content)}</b>${r.link?` <a class="small" href="${esc(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small" style="display:none" data-sm>${esc(r.platform)}</div></td>
+  <td class="hide-sm small">${esc(r.platform)}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("")}
+  </tbody></table></div>`;
+}
+
+/* ---------------- Formats ---------------- */
+function formats(sub){
+  const F = D.formats.formats;
+  if (sub) return formatDetail(F.find(f=>f.id===sub) || F[0]);
+  return `<div class="kicker">${F.length} formats</div><h1>Video formats</h1>
+  <p class="lede">Each format has its own look, structure and trigger. Variety comes from rotating formats; the brand stays constant. Open one for its rules, beats and sample frames.</p>
+  <div class="grid g3">${F.map(f=>{
+    const st = (D.stills[f.sample]||[]).filter(s=>s.kind==="short").slice(0,3);
+    return `<div class="card fmtcard" onclick="location.hash='formats/${f.id}'">
+      <div class="thumbs">${st.length?st.map(s=>`<img loading="lazy" src="${s.src}" alt="">`).join(""):(f.id==="replay"?`<svg viewBox="0 0 360 150" width="100%" height="150">${miniWagon()}</svg>`:"")}</div>
+      <div class="row">${f.status==="new"?`<span class="chip badge-new">New</span>`:""}<span class="kicker">${esc(f.tag)}</span></div>
+      <h3 style="font:700 21px/1.2 'Playfair Display',serif;margin:0">${esc(f.name)}</h3>
+      <div class="small muted">${esc(f.pitch)}</div>
+      <div class="small"><b>When:</b> ${esc(f.trigger)}</div>
+      <div class="small mono muted">${esc(f.length)}</div>
+    </div>`}).join("")}</div>`;
+}
+function formatDetail(f){
+  const st = D.stills[f.sample] || [];
+  const ex = D.library.items.filter(i => f.examples.includes(i.slug));
+  return `<button class="back" onclick="location.hash='formats'">← All formats</button>
+  <div class="row">${f.status==="new"?`<span class="chip badge-new">New</span>`:""}<span class="kicker">${esc(f.tag)}</span></div>
+  <h1>${esc(f.name)}</h1><p class="lede">${esc(f.pitch)}</p>
+  ${st.length?`<div class="gallery">${st.map(s=>`<img loading="lazy" class="${s.kind}" src="${s.src}" alt="Frame from ${esc(s.slug)}" title="${esc(s.slug)}">`).join("")}</div>`:""}
+  ${f.id==="replay"?replaySample():""}
+  <div class="grid g2" style="margin-top:18px">
+    <div class="card"><h3>At a glance</h3><dl class="kv">
+      <dt>When</dt><dd>${esc(f.trigger)}</dd><dt>Length</dt><dd>${esc(f.length)}</dd>
+      <dt>Data</dt><dd>${esc(f.data)}</dd><dt>Look</dt><dd>${esc(f.look)}</dd></dl></div>
+    <div class="card"><h3>Structure</h3><ol class="beats">${f.beats.map(b=>`<li>${esc(b)}</li>`).join("")}</ol></div>
+    <div class="card"><h3>Format rules</h3><ul class="clean">${f.rules.map(b=>`<li>${esc(b)}</li>`).join("")}</ul>
+      <p class="small muted" style="margin-bottom:0">Plus the <a href="#data">channel-wide rules</a>: no burned captions, Devanagari names, no digits in narration, hook in two seconds.</p></div>
+    <div class="card"><h3>Signature visuals</h3><div class="row">${f.visuals.map(v=>`<span class="chip">${esc(v)}</span>`).join("")}</div></div>
+  </div>
+  <h2>Videos in this format</h2>
+  ${ex.length?libTable(ex):`<div class="card empty">None yet. The pilot is built from the 4th ODI captures.</div>`}`;
+}
+
+/* Replay Room sample from real capture data */
+function wagonSVG(shots, size){
+  const c = size/2, R = size/2-8, sx = v => 8 + v/360*(size-16);
+  const col = s => s.r>=6?"var(--red)":s.r===4?"var(--info)":"var(--muted)";
+  return `<circle cx="${c}" cy="${c}" r="${R}" fill="color-mix(in srgb,var(--good) 10%,transparent)" stroke="var(--line)"/>
+    <circle cx="${c}" cy="${c}" r="${R*0.45}" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/>
+    <rect x="${c-4}" y="${c-14}" width="8" height="28" rx="2" fill="var(--chip)" stroke="var(--line)"/>
+    ${shots.map(s=>`<line x1="${c}" y1="${c}" x2="${sx(s.x)}" y2="${sx(s.y)}" stroke="${col(s)}" stroke-width="${s.r>=4?2:1.2}" stroke-opacity="${s.r>=4?.95:.55}"/>`).join("")}`;
+}
+function miniWagon(){
+  if(!D.replay) return "";
+  const s = D.replay.young.shots;
+  return `<g transform="translate(105,0)">${wagonSVG(s,150)}</g>`;
+}
+function replaySample(){
+  const r = D.replay; if(!r) return "";
+  const y = r.young, maxR = Math.max(...y.blocks.map(b=>b.runs));
+  const maxF = Math.max(...r.bowlers.map(b=>b.false_pct));
+  return `<h2>What it can show: real data from the 4th ODI</h2>
+  <p class="small muted">${esc(r.match)}. ${esc(r.source)}. Drawn here as an early sample of the format's graphics; field orientation not yet calibrated.</p>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">Will Young · ${y.runs} off ${y.balls}</div><h3>Every scoring shot</h3>
+      <svg viewBox="0 0 300 300" width="100%" style="max-width:300px;display:block;margin:auto">${wagonSVG(y.shots,300)}</svg>
+      <div class="row small muted" style="justify-content:center"><span style="color:var(--red)">● six</span><span style="color:var(--info)">● four</span><span>● ones, twos, threes</span></div></div>
+    <div class="card"><div class="kicker">Two innings in one</div><h3>Runs and false shots, every 25 balls</h3>
+      <div class="bars">${y.blocks.map(b=>`<div class="b"><span class="mono small">Balls ${b.balls}</span><div class="track"><div class="fill" style="width:${b.runs/maxR*100}%"></div></div><span class="mono">${b.runs}</span></div>
+      <div class="b" style="margin-top:-4px"><span></span><div class="small muted">${b.false_shots} false shot${b.false_shots===1?"":"s"}</div><span></span></div>`).join("")}</div>
+      <p class="small">15 false shots in his first 50 balls, 2 in the next 25: he survived, then took over.</p></div>
+    <div class="card"><div class="kicker">The luck meter</div><h3>False shots drawn vs wickets</h3>
+      <div class="bars">${r.bowlers.map(b=>`<div class="b"><span class="small">${esc(b.bowler)}</span><div class="track"><div class="fill" style="width:${b.false_pct/maxF*100}%;background:var(--info)"></div></div><span class="mono small">${b.false_pct}%</span></div>
+      <div class="b" style="margin-top:-4px"><span></span><div class="small muted">${b.wkts} wkt · econ ${b.econ}</div><span></span></div>`).join("")}</div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Where the match went: NZ innings by phase</h3>
+    <div class="tablewrap" style="box-shadow:none;border:0"><table><thead><tr><th>Overs</th><th>Runs</th><th>Wickets</th><th>Balls not in control</th></tr></thead><tbody>
+    ${r.phases.map(p=>`<tr${p.overs==="21-30"?' style="background:color-mix(in srgb,var(--red) 10%,transparent)"':""}><td class="mono">${p.overs}</td><td><b>${p.runs}</b></td><td>${p.wkts}</td><td>${p.false_pct}%</td></tr>`).join("")}</tbody></table></div>
+    <p class="small muted" style="margin:6px 0 0">Overs 21–30: 89 runs with batters out of control on only 7% of balls. The stretch where India lost the grip.</p></div>`;
+}
+
+/* ---------------- Playbook ---------------- */
+function playbook(){
+  const P = D.formats.playbook;
+  return `<div class="kicker">When to trigger what</div><h1>Playbook</h1>
+  <p class="lede">Match the moment to the format. ${esc(D.formats.cadence)}</p>
+  <div class="tablewrap"><table><thead><tr><th>When this happens</th><th>Make</th><th>Timing</th><th class="hide-sm">Output</th><th class="hide-sm">Prep</th></tr></thead><tbody>
+  ${P.map(p=>`<tr><td><b>${esc(p.event)}</b></td><td><div class="row">${p.formats.map(fmtChip).join("")}</div></td><td class="small">${esc(p.when)}</td><td class="hide-sm small">${esc(p.output)}</td><td class="hide-sm small muted">${esc(p.prep)}</td></tr>`).join("")}
+  </tbody></table></div>
+  <h2>Weekly rhythm</h2>
+  <div class="grid g4">
+    <div class="card"><div class="kicker">Match days</div><p class="small">Capture both sites after the final ball. Replay Room long next day, Shorts the same day.</p></div>
+    <div class="card"><div class="kicker">Before a series</div><p class="small">Tactics Board preview 1–2 days out; ground-guide Short and IG carousel.</p></div>
+    <div class="card"><div class="kicker">Quiet days</div><p class="small">Lab episodes and What If? from the library; evergreen and searchable.</p></div>
+    <div class="card"><div class="kicker">Every day</div><p class="small">One Short (or Flip). Check the ideas feed each morning.</p></div>
+  </div>`;
+}
+
+/* ---------------- Ideas ---------------- */
+function ideaRow(i){
+  return `<div class="tl"><div class="d p-${esc(i.priority)}">${esc(i.priority||"")}</div><div><b>${esc(i.title)}</b><div class="row small" style="margin-top:3px">${fmtChip(i.format)}<span class="muted">${esc(i.timing||"")}</span></div>${i.why?`<div class="small muted">${esc(i.why)}</div>`:""}${i.data?`<div class="small mono muted">Data: ${esc(i.data)}</div>`:""}</div></div>`;
+}
+let ideaFmt = "All";
+function ideas(day){
+  day = day || D.days[0];
+  const d = D.ideas[day];
+  if (!d && day) { fetch(`data/ideas/${day}.json`,{cache:"no-cache"}).then(r=>r.json()).then(j=>{D.ideas[day]=j;route();}); return `<div class="empty">Loading…</div>`; }
+  if (!d) return `<h1>Ideas</h1><div class="card empty">No ideas yet.</div>`;
+  const list = d.ideas.filter(i => ideaFmt==="All" || i.format===ideaFmt);
+  const fmts = ["All", ...new Set(d.ideas.map(i=>i.format))];
+  return `<div class="kicker">Daily ideas feed</div><h1>Ideas for ${fmtDate(d.date)}</h1>
+  <p class="lede">${esc(d.by||"")}. A scheduled task reads the cricket news each morning and suggests videos for each format.</p>
+  <div class="row" style="margin-bottom:12px"><label class="small muted" for="day">Day</label>
+    <select id="day" onchange="location.hash='ideas/'+this.value" style="font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)">${D.days.map(x=>`<option ${x===day?"selected":""}>${x}</option>`).join("")}</select></div>
+  <div class="filters">${fmts.map(f=>`<button class="${f===ideaFmt?"on":""}" onclick="ideaFmt='${f}';route()">${f==="All"?"All":esc(FMT(f).name)}</button>`).join("")}</div>
+  <div class="grid g2">
+    <div class="card timeline">${list.map(ideaRow).join("") || `<div class="empty">No ideas for this format.</div>`}</div>
+    <div class="card"><h3>News it read</h3>${(d.news||[]).length?`<ul class="clean small">${d.news.map(n=>`<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>${n.note?` <span class="muted">· ${esc(n.note)}</span>`:""}</li>`).join("")}</ul>`:`<div class="muted small">The first automated run adds the news it used here.</div>`}</div>
+  </div>`;
+}
+
+/* ---------------- Library ---------------- */
+let libFmt = "All";
+function libTable(items){
+  return `<div class="tablewrap"><table><thead><tr><th>Video</th><th>Format</th><th class="hide-sm">Long</th><th class="hide-sm">Short</th><th>Status</th><th class="hide-sm">Planned</th></tr></thead><tbody>
+  ${items.map(i=>`<tr><td><b>${esc(i.title)}</b>${i.link?` <a class="small" href="${esc(i.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}
+    ${i.recheck?`<div class="small" style="color:var(--warn)">Re-check: ${esc(i.recheck)}</div>`:""}
+    ${i.sources.length?`<details><summary>${i.sources.length} source${i.sources.length>1?"s":""}</summary><ul class="clean small muted">${i.sources.map(s=>`<li style="word-break:break-word">${/^https?:/.test(s)?`<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>`:esc(s)}</li>`).join("")}</ul></details>`:""}</td>
+    <td>${fmtChip(i.format)}</td><td class="hide-sm mono small">${i.long||"—"}</td><td class="hide-sm mono small">${i.short||"—"}</td><td>${statusChip(i.status)}</td><td class="hide-sm mono small">${fmtDate(i.planned)}</td></tr>`).join("")}
+  </tbody></table></div>`;
+}
+function library(){
+  const it = D.library.items;
+  const fmts = ["All", ...D.formats.formats.map(f=>f.id).filter(id => it.some(i=>i.format===id))];
+  const shown = it.filter(i => libFmt==="All" || i.format===libFmt);
+  const unsched = it.filter(i => i.status==="Not scheduled").length;
+  return `<div class="kicker">${it.length} videos built</div><h1>Library</h1>
+  <p class="lede">Everything built, with durations, status and sources. ${unsched?`<b>${unsched}</b> finished videos aren't on the schedule yet.`:""}</p>
+  <div class="filters">${fmts.map(f=>`<button class="${f===libFmt?"on":""}" onclick="libFmt='${f}';route()">${f==="All"?"All":esc(FMT(f).name)} <span class="muted">${f==="All"?it.length:it.filter(i=>i.format===f).length}</span></button>`).join("")}</div>
+  ${libTable(shown)}`;
+}
+
+/* ---------------- Data & rules ---------------- */
+function data(){
+  const G = D.formats.global_rules;
+  return `<div class="kicker">How we work</div><h1>Data &amp; rules</h1>
+  <p class="lede">The channel-wide rules every video follows, where the numbers come from, and the checklist before anything goes out.</p>
+  <h2>Channel-wide rules</h2>
+  <div class="grid g2">${G.map(g=>`<div class="card"><b>${esc(g.rule)}</b><div class="small muted" style="margin-top:4px">${esc(g.why)}</div></div>`).join("")}</div>
+  <h2>Where the numbers come from</h2>
+  <div class="tablewrap"><table><thead><tr><th>Source</th><th>Covers</th><th class="hide-sm">Detail</th><th>Use for</th></tr></thead><tbody>
+    <tr><td><b>Sportmonks</b> <span class="muted small">(paid plan)</span></td><td>IPL 2013–2026, T20Is, T20 World Cups</td><td class="hide-sm small">Ball-by-ball, live</td><td class="small">IPL, T20I analysis, Lab models</td></tr>
+    <tr><td><b>Match capture</b> <span class="muted small">(our extension)</span></td><td>Any match you open on Cricinfo / Cricbuzz</td><td class="hide-sm small">Ball-by-ball with line, length, shot, control, direction; Cricbuzz notes and field changes</td><td class="small">ODIs, Tests, the Replay Room</td></tr>
+    <tr><td><b>Cricsheet</b> <span class="muted small">(free)</span></td><td>Tests, ODIs, T20Is (history)</td><td class="hide-sm small">Ball-by-ball, days after a match; some gaps</td><td class="small">Evergreen history; never as career totals unchecked</td></tr>
+    <tr><td><b>Official records</b></td><td>BCCI, NZC, ICC, IPL</td><td class="hide-sm small">Scorecards, career totals, squads</td><td class="small">Checking every headline number</td></tr>
+  </tbody></table></div>
+  <h2>Before anything goes out</h2>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">Facts</div><ul class="clean small"><li>Headline numbers match an official source</li><li>Anything that can change re-checked today (squads, fitness, records)</li><li>sources[] complete, including filters used</li></ul></div>
+    <div class="card"><div class="kicker">Build</div><ul class="clean small"><li>voice_lint passes (names, Under nineteen, no digits)</li><li>Stills checked before the full build</li><li>No burned captions; .srt ready</li><li>Shorts cover and long thumbnail made</li></ul></div>
+    <div class="card"><div class="kicker">Publish</div><ul class="clean small"><li>Title, description with sources and chapters</li><li>Upload only on the owner's go-ahead</li><li>Drive folder moved to Published_YT</li><li>Tracker status and link updated</li><li>Reel and carousel posted by hand</li></ul></div>
+  </div>
+  <h2>Capturing a match</h2>
+  <div class="note">After the final ball: open the match on Cricinfo → Commentary → <b>Load all commentary</b> for each innings → open Scorecard and Statistics → <b>Save JSON</b>. Repeat on Cricbuzz's Full Commentary page. Send both files. They're checked against each other over by over before any number is used.</div>`;
+}
+
+load();
+</script>
+</body>
+</html>

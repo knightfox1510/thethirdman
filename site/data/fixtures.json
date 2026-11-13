@@ -1,0 +1,78 @@
+{
+ "synced": "2026-11-13",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24469); IPL dates from team/league news",
+ "items": [
+  {
+   "date": "2026-11-13",
+   "event": "4th ODI",
+   "teams": "NZ v India",
+   "venue": "Mount Maunganui",
+   "status": "Live: NZ 333 all out",
+   "format": "replay"
+  },
+  {
+   "date": "2026-11-15",
+   "event": "5th ODI",
+   "teams": "NZ v India",
+   "venue": "Mount Maunganui",
+   "status": "Upcoming",
+   "format": "replay"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "IPL 2027 retention deadline",
+   "teams": "IPL",
+   "venue": "\u2014",
+   "status": "Upcoming",
+   "format": "statcheck"
+  },
+  {
+   "date": "2026-11-19",
+   "event": "1st Test (19\u201323 Nov)",
+   "teams": "NZ v India",
+   "venue": "Wellington",
+   "status": "Upcoming",
+   "format": "tactics"
+  },
+  {
+   "date": "2026-11-27",
+   "event": "2nd Test (27 Nov\u20131 Dec)",
+   "teams": "NZ v India",
+   "venue": "Christchurch",
+   "status": "Upcoming",
+   "format": "tactics"
+  },
+  {
+   "date": "2026-12-16",
+   "event": "IPL 2027 auction",
+   "teams": "IPL",
+   "venue": "Goa",
+   "status": "Upcoming",
+   "format": "statcheck"
+  },
+  {
+   "date": "2026-12-22",
+   "event": "1st T20I",
+   "teams": "India v Sri Lanka",
+   "venue": "\u2014",
+   "status": "Upcoming (verify)",
+   "format": "replay"
+  },
+  {
+   "date": "2026-12-24",
+   "event": "2nd T20I",
+   "teams": "India v Sri Lanka",
+   "venue": "\u2014",
+   "status": "Upcoming (verify)",
+   "format": "replay"
+  },
+  {
+   "date": "2026-12-27",
+   "event": "3rd T20I",
+   "teams": "India v Sri Lanka",
+   "venue": "\u2014",
+   "status": "Upcoming (verify)",
+   "format": "replay"
+  }
+ ]
+}

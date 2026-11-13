@@ -1,0 +1,595 @@
+{
+ "match": "NZ v India, 4th ODI, Mount Maunganui, 13 Nov 2026: New Zealand innings (333 all out)",
+ "source": "Captured from ESPNcricinfo ball-by-ball (tools/ttm-capture), cross-checked with Cricbuzz over by over",
+ "young": {
+  "runs": 125,
+  "balls": 108,
+  "shots": [
+   {
+    "x": 228,
+    "y": 210,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "PUSH"
+   },
+   {
+    "x": 2,
+    "y": 146,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 7,
+    "y": 225,
+    "r": 4,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 97,
+    "y": 67,
+    "r": 1,
+    "fs": true,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 320,
+    "y": 122,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "LEG_GLANCE"
+   },
+   {
+    "x": 16,
+    "y": 254,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 123,
+    "y": 200,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 297,
+    "y": 216,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 19,
+    "y": 100,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 77,
+    "y": 84,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "STEERED"
+   },
+   {
+    "x": 246,
+    "y": 305,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "ON_DRIVE"
+   },
+   {
+    "x": 322,
+    "y": 38,
+    "r": 6,
+    "fs": true,
+    "len": "SHORT",
+    "shot": "PULL"
+   },
+   {
+    "x": 246,
+    "y": 17,
+    "r": 4,
+    "fs": true,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "DEFENDED"
+   },
+   {
+    "x": 266,
+    "y": 290,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "ON_DRIVE"
+   },
+   {
+    "x": 87,
+    "y": 247,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 79,
+    "y": 92,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "STEERED"
+   },
+   {
+    "x": 321,
+    "y": 106,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "FLICK"
+   },
+   {
+    "x": 353,
+    "y": 232,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "PULL"
+   },
+   {
+    "x": 113,
+    "y": 348,
+    "r": 6,
+    "fs": false,
+    "len": "FULL",
+    "shot": "STRAIGHT_DRIVE"
+   },
+   {
+    "x": 260,
+    "y": 293,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "ON_DRIVE"
+   },
+   {
+    "x": 69,
+    "y": 250,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 76,
+    "y": 189,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "PUSH"
+   },
+   {
+    "x": 245,
+    "y": 117,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "DEFENDED"
+   },
+   {
+    "x": 237,
+    "y": 282,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "ON_DRIVE"
+   },
+   {
+    "x": 311,
+    "y": 113,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "PULL"
+   },
+   {
+    "x": 302,
+    "y": 123,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT",
+    "shot": "PULL"
+   },
+   {
+    "x": 283,
+    "y": 30,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "SWEEP_SHOT"
+   },
+   {
+    "x": 51,
+    "y": 219,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 297,
+    "y": 86,
+    "r": 2,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 229,
+    "y": 207,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "FLICK"
+   },
+   {
+    "x": 293,
+    "y": 129,
+    "r": 2,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 361,
+    "y": 117,
+    "r": 4,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "SWEEP_SHOT"
+   },
+   {
+    "x": 219,
+    "y": 31,
+    "r": 3,
+    "fs": true,
+    "len": "GOOD_LENGTH",
+    "shot": "PADDLE_SWEEP"
+   },
+   {
+    "x": 109,
+    "y": 79,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "STEERED"
+   },
+   {
+    "x": 56,
+    "y": 270,
+    "r": 2,
+    "fs": false,
+    "len": "FULL",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 322,
+    "y": 329,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT",
+    "shot": "HOOK"
+   },
+   {
+    "x": 42,
+    "y": 203,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 25,
+    "y": 60,
+    "r": 6,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 10,
+    "y": 97,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 358,
+    "y": 238,
+    "r": 4,
+    "fs": false,
+    "len": "SHORT",
+    "shot": "PULL"
+   },
+   {
+    "x": 39,
+    "y": 126,
+    "r": 2,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 245,
+    "y": 146,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "LEG_GLANCE"
+   },
+   {
+    "x": 248,
+    "y": 183,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 125,
+    "y": 202,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 132,
+    "y": 204,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 251,
+    "y": 146,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 109,
+    "y": 207,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 42,
+    "y": 146,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 205,
+    "y": 3,
+    "r": 4,
+    "fs": true,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 25,
+    "y": 88,
+    "r": 4,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "REVERSE_SWEEP"
+   },
+   {
+    "x": 312,
+    "y": 124,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 257,
+    "y": 304,
+    "r": 1,
+    "fs": false,
+    "len": "FULL",
+    "shot": "ON_DRIVE"
+   },
+   {
+    "x": 28,
+    "y": 132,
+    "r": 1,
+    "fs": false,
+    "len": "SHORT_OF_A_GOOD_LENGTH",
+    "shot": "CUT_SHOT"
+   },
+   {
+    "x": 308,
+    "y": 182,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   },
+   {
+    "x": 41,
+    "y": 326,
+    "r": 6,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "COVER_DRIVE"
+   },
+   {
+    "x": 348,
+    "y": 98,
+    "r": 4,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "SWEEP_SHOT"
+   },
+   {
+    "x": 261,
+    "y": 116,
+    "r": 1,
+    "fs": false,
+    "len": "GOOD_LENGTH",
+    "shot": "FLICK"
+   }
+  ],
+  "blocks": [
+   {
+    "balls": "1-25",
+    "runs": 22,
+    "false_shots": 8
+   },
+   {
+    "balls": "26-50",
+    "runs": 28,
+    "false_shots": 7
+   },
+   {
+    "balls": "51-75",
+    "runs": 35,
+    "false_shots": 2
+   },
+   {
+    "balls": "76-100",
+    "runs": 27,
+    "false_shots": 5
+   },
+   {
+    "balls": "101-108",
+    "runs": 13,
+    "false_shots": 2
+   }
+  ],
+  "lengths": [
+   {
+    "length": "Full",
+    "balls": 23,
+    "runs": 18,
+    "false_shots": 3
+   },
+   {
+    "length": "Good Length",
+    "balls": 44,
+    "runs": 45,
+    "false_shots": 8
+   },
+   {
+    "length": "Short",
+    "balls": 8,
+    "runs": 15,
+    "false_shots": 4
+   },
+   {
+    "length": "Short Of A Good Length",
+    "balls": 33,
+    "runs": 47,
+    "false_shots": 9
+   }
+  ]
+ },
+ "bowlers": [
+  {
+   "bowler": "Arshdeep Singh",
+   "balls": 60,
+   "econ": 5.9,
+   "wkts": 1,
+   "false_pct": 33.3
+  },
+  {
+   "bowler": "Naman Dhir",
+   "balls": 24,
+   "econ": 8.25,
+   "wkts": 1,
+   "false_pct": 29.2
+  },
+  {
+   "bowler": "Auqib Nabi",
+   "balls": 49,
+   "econ": 7.1,
+   "wkts": 4,
+   "false_pct": 24.5
+  },
+  {
+   "bowler": "Gurnoor Brar",
+   "balls": 60,
+   "econ": 6.8,
+   "wkts": 2,
+   "false_pct": 20.0
+  },
+  {
+   "bowler": "Kuldeep Yadav",
+   "balls": 49,
+   "econ": 8.94,
+   "wkts": 0,
+   "false_pct": 18.4
+  },
+  {
+   "bowler": "Axar Patel",
+   "balls": 60,
+   "econ": 3.9,
+   "wkts": 2,
+   "false_pct": 11.7
+  }
+ ],
+ "phases": [
+  {
+   "overs": "1-10",
+   "runs": 72,
+   "wkts": 0,
+   "false_pct": 31.1
+  },
+  {
+   "overs": "11-20",
+   "runs": 53,
+   "wkts": 3,
+   "false_pct": 20.0
+  },
+  {
+   "overs": "21-30",
+   "runs": 89,
+   "wkts": 0,
+   "false_pct": 6.6
+  },
+  {
+   "overs": "31-40",
+   "runs": 51,
+   "wkts": 3,
+   "false_pct": 20.0
+  },
+  {
+   "overs": "41-50",
+   "runs": 65,
+   "wkts": 4,
+   "false_pct": 33.3
+  }
+ ]
+}

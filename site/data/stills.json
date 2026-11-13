@@ -1,0 +1,283 @@
+{
+ "flip": [
+  {
+   "src": "img/flip_flip_bumrah_52_tests_short_0.webp",
+   "kind": "short",
+   "slug": "flip_bumrah_52_tests"
+  },
+  {
+   "src": "img/flip_flip_bumrah_52_tests_short_1.webp",
+   "kind": "short",
+   "slug": "flip_bumrah_52_tests"
+  },
+  {
+   "src": "img/flip_flip_mi_captains_short_0.webp",
+   "kind": "short",
+   "slug": "flip_mi_captains"
+  },
+  {
+   "src": "img/flip_flip_mi_captains_short_1.webp",
+   "kind": "short",
+   "slug": "flip_mi_captains"
+  },
+  {
+   "src": "img/flip_flip_mi_captains_short_2.webp",
+   "kind": "short",
+   "slug": "flip_mi_captains"
+  }
+ ],
+ "lab": [
+  {
+   "src": "img/lab_ipl_batting_evolution_long_0.webp",
+   "kind": "long",
+   "slug": "ipl_batting_evolution"
+  },
+  {
+   "src": "img/lab_ipl_batting_evolution_long_1.webp",
+   "kind": "long",
+   "slug": "ipl_batting_evolution"
+  },
+  {
+   "src": "img/lab_ipl_batting_evolution_short_1.webp",
+   "kind": "short",
+   "slug": "ipl_batting_evolution"
+  },
+  {
+   "src": "img/lab_lab_ep1_abhishek_twin_long_0.webp",
+   "kind": "long",
+   "slug": "lab_ep1_abhishek_twin"
+  },
+  {
+   "src": "img/lab_lab_ep1_abhishek_twin_long_1.webp",
+   "kind": "long",
+   "slug": "lab_ep1_abhishek_twin"
+  },
+  {
+   "src": "img/lab_lab_ep1_abhishek_twin_short_0.webp",
+   "kind": "short",
+   "slug": "lab_ep1_abhishek_twin"
+  },
+  {
+   "src": "img/lab_lab_ep1_abhishek_twin_short_1.webp",
+   "kind": "short",
+   "slug": "lab_ep1_abhishek_twin"
+  },
+  {
+   "src": "img/lab_lab_ep1_abhishek_twin_short_2.webp",
+   "kind": "short",
+   "slug": "lab_ep1_abhishek_twin"
+  }
+ ],
+ "myth": [
+  {
+   "src": "img/myth_myth_ep1_kohli_knockouts_short_0.webp",
+   "kind": "short",
+   "slug": "myth_ep1_kohli_knockouts"
+  },
+  {
+   "src": "img/myth_myth_ep1_kohli_knockouts_short_1.webp",
+   "kind": "short",
+   "slug": "myth_ep1_kohli_knockouts"
+  },
+  {
+   "src": "img/myth_myth_ep1_kohli_knockouts_short_2.webp",
+   "kind": "short",
+   "slug": "myth_ep1_kohli_knockouts"
+  },
+  {
+   "src": "img/myth_rcb_back_to_back_long_0.webp",
+   "kind": "long",
+   "slug": "rcb_back_to_back"
+  },
+  {
+   "src": "img/myth_rcb_back_to_back_long_1.webp",
+   "kind": "long",
+   "slug": "rcb_back_to_back"
+  },
+  {
+   "src": "img/myth_rcb_back_to_back_short_0.webp",
+   "kind": "short",
+   "slug": "rcb_back_to_back"
+  },
+  {
+   "src": "img/myth_rcb_back_to_back_short_1.webp",
+   "kind": "short",
+   "slug": "rcb_back_to_back"
+  }
+ ],
+ "news": [
+  {
+   "src": "img/news_hardik_arshdeep_long_0.webp",
+   "kind": "long",
+   "slug": "hardik_arshdeep"
+  },
+  {
+   "src": "img/news_hardik_arshdeep_long_1.webp",
+   "kind": "long",
+   "slug": "hardik_arshdeep"
+  },
+  {
+   "src": "img/news_hardik_arshdeep_short_0.webp",
+   "kind": "short",
+   "slug": "hardik_arshdeep"
+  },
+  {
+   "src": "img/news_hardik_arshdeep_short_1.webp",
+   "kind": "short",
+   "slug": "hardik_arshdeep"
+  },
+  {
+   "src": "img/news_kohli_2000_nz_short_0.webp",
+   "kind": "short",
+   "slug": "kohli_2000_nz"
+  },
+  {
+   "src": "img/news_kohli_2000_nz_short_1.webp",
+   "kind": "short",
+   "slug": "kohli_2000_nz"
+  },
+  {
+   "src": "img/news_kohli_2000_nz_short_2.webp",
+   "kind": "short",
+   "slug": "kohli_2000_nz"
+  }
+ ],
+ "rising": [
+  {
+   "src": "img/rising_aaryavir_sehwag_short_0.webp",
+   "kind": "short",
+   "slug": "aaryavir_sehwag"
+  },
+  {
+   "src": "img/rising_aaryavir_sehwag_short_1.webp",
+   "kind": "short",
+   "slug": "aaryavir_sehwag"
+  },
+  {
+   "src": "img/rising_aaryavir_sehwag_short_2.webp",
+   "kind": "short",
+   "slug": "aaryavir_sehwag"
+  }
+ ],
+ "statcheck": [
+  {
+   "src": "img/statcheck_stat_check_bumrah_rashid_long_0.webp",
+   "kind": "long",
+   "slug": "stat_check_bumrah_rashid"
+  },
+  {
+   "src": "img/statcheck_stat_check_bumrah_rashid_long_1.webp",
+   "kind": "long",
+   "slug": "stat_check_bumrah_rashid"
+  },
+  {
+   "src": "img/statcheck_stat_check_bumrah_rashid_short_0.webp",
+   "kind": "short",
+   "slug": "stat_check_bumrah_rashid"
+  },
+  {
+   "src": "img/statcheck_stat_check_bumrah_rashid_short_1.webp",
+   "kind": "short",
+   "slug": "stat_check_bumrah_rashid"
+  },
+  {
+   "src": "img/statcheck_stat_check_bumrah_rashid_short_2.webp",
+   "kind": "short",
+   "slug": "stat_check_bumrah_rashid"
+  }
+ ],
+ "tactics": [
+  {
+   "src": "img/tactics_santner_problem_long_0.webp",
+   "kind": "long",
+   "slug": "santner_problem"
+  },
+  {
+   "src": "img/tactics_santner_problem_long_1.webp",
+   "kind": "long",
+   "slug": "santner_problem"
+  },
+  {
+   "src": "img/tactics_santner_problem_short_0.webp",
+   "kind": "short",
+   "slug": "santner_problem"
+  },
+  {
+   "src": "img/tactics_santner_problem_short_1.webp",
+   "kind": "short",
+   "slug": "santner_problem"
+  },
+  {
+   "src": "img/tactics_wellington_odi_long_0.webp",
+   "kind": "long",
+   "slug": "wellington_odi"
+  },
+  {
+   "src": "img/tactics_wellington_odi_long_1.webp",
+   "kind": "long",
+   "slug": "wellington_odi"
+  },
+  {
+   "src": "img/tactics_wellington_odi_short_0.webp",
+   "kind": "short",
+   "slug": "wellington_odi"
+  },
+  {
+   "src": "img/tactics_wellington_odi_short_1.webp",
+   "kind": "short",
+   "slug": "wellington_odi"
+  },
+  {
+   "src": "img/tactics_wellington_odi_short_2.webp",
+   "kind": "short",
+   "slug": "wellington_odi"
+  }
+ ],
+ "whatif": [
+  {
+   "src": "img/whatif_bradman_ipl_long_0.webp",
+   "kind": "long",
+   "slug": "bradman_ipl"
+  },
+  {
+   "src": "img/whatif_bradman_ipl_long_1.webp",
+   "kind": "long",
+   "slug": "bradman_ipl"
+  },
+  {
+   "src": "img/whatif_bradman_ipl_short_0.webp",
+   "kind": "short",
+   "slug": "bradman_ipl"
+  },
+  {
+   "src": "img/whatif_bradman_ipl_short_1.webp",
+   "kind": "short",
+   "slug": "bradman_ipl"
+  },
+  {
+   "src": "img/whatif_bradman_ipl_short_2.webp",
+   "kind": "short",
+   "slug": "bradman_ipl"
+  },
+  {
+   "src": "img/whatif_dhoni_captain_long_0.webp",
+   "kind": "long",
+   "slug": "dhoni_captain"
+  },
+  {
+   "src": "img/whatif_dhoni_captain_long_1.webp",
+   "kind": "long",
+   "slug": "dhoni_captain"
+  },
+  {
+   "src": "img/whatif_dhoni_captain_short_0.webp",
+   "kind": "short",
+   "slug": "dhoni_captain"
+  },
+  {
+   "src": "img/whatif_dhoni_captain_short_1.webp",
+   "kind": "short",
+   "slug": "dhoni_captain"
+  }
+ ]
+}

@@ -1,0 +1,150 @@
+{
+  "global_rules": [
+    {"rule": "No burned-in captions or subtitles, in any video, long or Short. Ship the .srt file instead.", "why": "Owner rule, flagged repeatedly. The engine only draws captions if a spec sets burn_captions, and none may."},
+    {"rule": "Every subcontinent name (first and last) and Indian place name is written in Devanagari in the narration.", "why": "The voice (ElevenLabs Ruhaan) mispronounces Latin spellings. voice_lint.py fails the build otherwise."},
+    {"rule": "Say \"Under nineteen\", write \"T-twenty\", and spell every number out. No digits in the narration.", "why": "Digits and short forms are misread, especially next to Devanagari."},
+    {"rule": "Hook in two seconds: the key number or claim is on screen before anything else.", "why": "Retention drops fastest in the first seconds, especially on Shorts."},
+    {"rule": "No broadcast footage, player photos, team or league logos, or likeness of a real person.", "why": "Copyright and monetisation safety. Players are our illustrated avatars in team colours."},
+    {"rule": "Every fact that can change is checked on the web; every headline number against an official source.", "why": "Accuracy is the brand. Lessons: the Aaryavir debut figure, the Cricsheet gaps, one Rashid wicket."},
+    {"rule": "Every spec carries sources[], including how the data was filtered.", "why": "Goes into the description, and lets us defend any number."},
+    {"rule": "Label illustrative visuals (field plans, replays) as illustrative.", "why": "Honesty about what is drawn from data and what is a reconstruction."},
+    {"rule": "Write for the ear: short sentences, a comma wherever a narrator would breathe.", "why": "Pauses come from punctuation; long runs sound rushed."},
+    {"rule": "Vary the venue, the camera and the poses from scene to scene; use synthesised sound effects.", "why": "Keeps a faceless channel from looking the same every time."}
+  ],
+  "formats": [
+    {
+      "id": "replay", "name": "The Replay Room", "status": "new", "tag": "Day-after match breakdown",
+      "pitch": "What really happened in the match, who decided it and why: from every ball's line, length, shot, control and direction.",
+      "length": "Long 8–10 min + 2–3 Shorts (one insight each)",
+      "trigger": "An India international finishes. Post the long video within 24 hours, Shorts the same day.",
+      "data": "Cricinfo + Cricbuzz match captures (tools/ttm-capture) for ODIs and Tests; Sportmonks for T20Is and the IPL. Cross-checked over by over and against the official scorecard.",
+      "look": "Lab charts for the numbers, Tactics Board for field plans, stadium-stage replays with the illustrated players for key shots.",
+      "beats": [
+        "Cold open: the number that explains the match (0–2 s)",
+        "The turning point: control and run rate across all 50 overs, the phase where it was won",
+        "The innings that decided it: told ball by ball, with false shots and dropped catches marked",
+        "The hidden hero: the player the scorecard undersells (the luck meter: false shots drawn vs wickets)",
+        "The plan: where the field was, where the runs went",
+        "What if: the runs scored after each drop",
+        "Verdict and what it means for the next match"
+      ],
+      "visuals": ["Wagon wheel that builds shot by shot", "Pitch map of line and length", "Innings timeline with false shots and drops", "Luck meter (false shots vs wickets)", "Illustrated replays: real shot direction and length", "Phase control graph"],
+      "rules": [
+        "Only our own graphics. Never copy Cricinfo or Cricbuzz charts, images or commentary text.",
+        "Cricbuzz notes are leads: verify each one against the ball data before it is said.",
+        "Credit \"ball-by-ball data: ESPNcricinfo, Cricbuzz\" in the description sources.",
+        "Label replays \"Illustrated from ball-tracking data\".",
+        "Use \"in control\" / \"not in control\" for the shot-control field; don't invent new metrics without explaining them on screen."
+      ],
+      "examples": [], "sample": "replay"
+    },
+    {
+      "id": "myth", "name": "Myth or Data?", "status": "live", "tag": "A popular claim, tested",
+      "pitch": "Take something everyone says (\"Kohli fails in knockouts\") and settle it with the numbers, ending on a verdict stamp.",
+      "length": "Short 1–1.5 min; long 4–6 min when the evidence is rich",
+      "trigger": "A claim is trending: a commentator's line, a social-media debate, a milestone that revives an old argument. Post within 2–3 days.",
+      "data": "Sportmonks (IPL, T20Is), Cricsheet (Tests, ODIs; check completeness), official records.",
+      "look": "Theme \"stadium\": stage scenes with the illustrated player, poses per beat, the ball on shot moments, opponent avatar on versus beats.",
+      "beats": ["The claim, on screen in two seconds", "Why people believe it", "The evidence, two or three numbers", "The twist or caveat", "Verdict stamp: busted / half true / confirmed"],
+      "visuals": ["Stadium stage with venue matched to the real ground", "Poses: walk, stance, drive, pull, celebrate, dejected", "Ball animation on shot beats", "Verdict stamp"],
+      "rules": ["Always end on the verdict stamp, so the series has a recognisable sign-off.", "State the definition used (e.g. which matches count as knockouts).", "Never present Cricsheet sums as career totals without checking the official record."],
+      "examples": ["myth_ep1_kohli_knockouts", "anchor", "bumrah_economy", "india_160", "rcb_back_to_back"], "sample": "myth"
+    },
+    {
+      "id": "lab", "name": "The Lab", "status": "live", "tag": "Model-driven deep dives",
+      "pitch": "A question only a model can answer: statistical twins, clusters, eras compared. Editorial-paper look, numbered episodes.",
+      "length": "Long 4–7 min + Short",
+      "trigger": "Evergreen. Quiet weeks with no India cricket, end of a season, or when a player's season begs comparison.",
+      "data": "Sportmonks IPL 2013–2026 ball-by-ball (and captured internationals as they accumulate).",
+      "look": "Theme \"lab\": editorial paper, round tabs, lab_dots / lab_swarm / lab_radial / lab_rings / lab_units / lab_big. Title card with the player in a yellow disc and stat chips.",
+      "beats": ["Title card with the question and two stat chips", "The inputs (measures)", "The model in one sentence", "The map / result", "The checks (drop one measure, raise the bar, reverse search)", "Lightning round", "What it means"],
+      "visuals": ["Percentile dot strips", "Radial nearest-neighbour map", "Swarm plots", "Robustness check list"],
+      "rules": ["Generate the spec from the analysis script and assert every claim in code.", "Show the robustness checks on screen.", "Count dismissals correctly (bowled rows carry no out_id)."],
+      "examples": ["lab_ep1_abhishek_twin", "lab_ep2_bumrah_twin", "ipl_batting_evolution", "powerplay_revolution", "two_hundred"], "sample": "lab"
+    },
+    {
+      "id": "statcheck", "name": "Stat Check", "status": "live", "tag": "Head-to-head in rounds",
+      "pitch": "\"X or Y?\" settled in rounds with a running scorecard and a final verdict.",
+      "length": "Long 3–4 min + Short",
+      "trigger": "A debate between two players: trades, awards, selection, auction buzz, a rivalry in a live series.",
+      "data": "Sportmonks ball-by-ball; official records for career totals.",
+      "look": "Theme \"lab\" with the split-colour VS title card (both players in their kits, VS stamp), lab_vs and lab_score.",
+      "beats": ["VS title card", "Round 1…N: one measure each, league average for context", "Scorecard after each round", "Peak / tiebreak", "Verdict"],
+      "visuals": ["Split team-colour title with VS stamp", "Bars against league average", "Running scorecard"],
+      "rules": ["Every round compares like with like (same phases, minimum balls).", "Avoid any figure you can't reconcile with the official record (e.g. one Rashid wicket)."],
+      "examples": ["stat_check_bumrah_rashid"], "sample": "statcheck"
+    },
+    {
+      "id": "tactics", "name": "Tactics Board", "status": "live", "tag": "Previews and plans",
+      "pitch": "How a match will be or was won: field plans, lengths, matchups, drawn on a tilted field.",
+      "length": "Long 3–5 min + Short",
+      "trigger": "1–3 days before a series or Test (preview), or after a match decided by a plan.",
+      "data": "Sportmonks for T20Is/IPL; captures and Cricsheet for ODIs/Tests; squad news from the web.",
+      "look": "\"board\" scenes (navy or cream), pucks, zones, ball paths, length band, mixed with Lab charts.",
+      "beats": ["The problem in one line", "The numbers behind it", "The plan on the board", "The matchup to watch", "What to look for"],
+      "visuals": ["Tilted field with pucks and zones", "Ball paths and length band", "Matchup bars"],
+      "rules": ["Label every field \"Illustrative\".", "One label per zone (no stacked fielder labels).", "Re-check squads and fitness the day before posting."],
+      "examples": ["wellington_odi", "santner_problem", "abhishek_plan", "death_kings", "nz_test_preview"], "sample": "tactics"
+    },
+    {
+      "id": "whatif", "name": "What If?", "status": "live", "tag": "Counterfactual history",
+      "pitch": "History rewritten with numbers: Bradman in the IPL, Sachin in the T20 era. Sepia film, back to colour at the end.",
+      "length": "Long 2–3 min + Short",
+      "trigger": "Anniversaries, a legend in the news, or evergreen weekend slots.",
+      "data": "Career records, era-adjusted comparisons (z-scores), Sportmonks for the modern side.",
+      "look": "Stadium stage with \"film\": true (sepia), opening newspaper-style clipping (illustrative, no real masthead); last content scene in colour.",
+      "beats": ["The clipping: the moment history turned", "Then vs now in numbers", "The adjusted projection", "Back to colour: what it would have meant"],
+      "visuals": ["Illustrative newspaper clipping", "Sepia film stage", "Era comparison bars"],
+      "rules": ["Make the assumptions explicit on screen.", "No real newspaper masthead or logo."],
+      "examples": ["bradman_ipl", "sachin_t20", "dhoni_captain", "bumrah_vs_90s"], "sample": "whatif"
+    },
+    {
+      "id": "rising", "name": "Rising Star", "status": "live", "tag": "Young players to watch",
+      "pitch": "A trading card flips: the illustrated player on the front, verified numbers on the back.",
+      "length": "Short about 1 min (long when the story is big enough)",
+      "trigger": "A breakout performance by an Under nineteen, domestic or debut player; auction buzz. Within 48 hours.",
+      "data": "Official scorecards and reputable reports; youth data is thin, so verify each figure twice.",
+      "look": "Theme \"card\": flipping trading card, then stage scenes.",
+      "beats": ["The card flips: the headline number", "Where he came from", "The numbers that matter", "What's next"],
+      "visuals": ["Flipping trading card", "Stage scenes"],
+      "rules": ["Triple-check \"debut\" and \"record\" claims (Aaryavir lesson).", "Associate-team matches are not official Youth ODIs: no record claims from them."],
+      "examples": ["aaryavir_sehwag"], "sample": "rising"
+    },
+    {
+      "id": "flip", "name": "Flip", "status": "live", "tag": "Benchmark at the same point",
+      "pitch": "No narration: one player against the best at the same point in their careers, card by card.",
+      "length": "Short 20–30 s",
+      "trigger": "A milestone, a player passing a legend, or a news hook (trade, captaincy).",
+      "data": "Cricsheet / Sportmonks; only players whose whole careers are in the data.",
+      "look": "flips.py: bold colour cards, one number each, flip transitions.",
+      "beats": ["The question card", "Benchmarks flip one by one", "The subject last"],
+      "visuals": ["Full-bleed colour cards", "One big number per card"],
+      "rules": ["State the cut-off (\"after 52 Tests\") on the first card.", "Re-check totals after any new match."],
+      "examples": ["flip_mi_captains", "flip_bumrah_52_tests", "flip_root_same_point", "flip_abhishek_openers"], "sample": "flip"
+    },
+    {
+      "id": "news", "name": "Milestone & News Shorts", "status": "live", "tag": "Fast, reactive",
+      "pitch": "One number, one story, out before the moment: \"22 runs from 2,000\", a trade in one stat.",
+      "length": "Short 20–40 s (long only for big news like a trade)",
+      "trigger": "A milestone within reach before a match, a trade or announcement. Must post before the event; it expires.",
+      "data": "Official records, team announcements.",
+      "look": "Blue \"Men in Blue\" theme, big number, kinetic text.",
+      "beats": ["The number", "Why it matters", "When it could happen", "Follow for more"],
+      "visuals": ["Big number", "Kinetic text"],
+      "rules": ["Post before the match it refers to, or don't post it.", "Mark the expiry in the tracker."],
+      "examples": ["kohli_2000_nz", "hardik_arshdeep"], "sample": "news"
+    }
+  ],
+  "playbook": [
+    {"event": "An India match finishes", "formats": ["replay"], "when": "Next day by noon IST", "output": "Long + 2–3 Shorts; IG carousel of the top 3 insights", "prep": "Capture Cricinfo + Cricbuzz after the match (both innings)"},
+    {"event": "A series or Test starts in 1–3 days", "formats": ["tactics"], "when": "1–2 days before", "output": "Preview long + ground-guide Short / IG carousel", "prep": "Squads, fitness, venue history"},
+    {"event": "A milestone is within reach", "formats": ["news", "flip"], "when": "Before the match", "output": "Short + Reel", "prep": "Official record check; note the expiry"},
+    {"event": "Trade, retention or auction news", "formats": ["statcheck", "flip"], "when": "Within 24–48 h", "output": "Stat Check long + Flip Short", "prep": "Official team announcements"},
+    {"event": "A young player breaks out", "formats": ["rising"], "when": "Within 48 h", "output": "Short (+ long if big)", "prep": "Verify debut / record claims twice"},
+    {"event": "A claim or debate is trending", "formats": ["myth"], "when": "Within 2–3 days", "output": "Short (+ long if rich)", "prep": "Define terms before computing"},
+    {"event": "A quiet week, no India cricket", "formats": ["lab", "whatif"], "when": "Any time", "output": "Lab episode or What If? long", "prep": "Analysis script with asserted claims"},
+    {"event": "A season ends", "formats": ["lab", "statcheck"], "when": "Within a week", "output": "Season review long", "prep": "Final season data"},
+    {"event": "Anniversary of a famous match", "formats": ["whatif"], "when": "On the day", "output": "Long + Short", "prep": "Era adjustment"}
+  ],
+  "cadence": "About 3 long videos a week plus a daily Short. Long-form watch time comes first until monetisation: from 1 Feb 2027 new applicants need 8,000 watch hours (or 20M Shorts views in 90 days)."
+}

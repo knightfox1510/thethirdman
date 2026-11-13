@@ -1,0 +1,446 @@
+{
+ "items": [
+  {
+   "slug": "aaryavir_sehwag",
+   "title": "Rising Star: Aaryavir Sehwag",
+   "format": "rising",
+   "long": null,
+   "short": "1:09",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "https://www.deccanchronicle.com/sports/anvay-dravid-aaryavir-sehwag-impress-as-india-u19-win-against-australia-u19-1988522",
+    "https://www.wisden.com/cricket-news/aaryavir-sehwag-powers-india-to-thumping-win-in-u19-asia-cup-opener",
+    "https://wisden.com/cricket-news/son-of-india-legend-aaryavir-sehwag-smashes-160-in-168-balls-for-india-u19",
+    "https://www.outlookindia.com/sports/cricket/india-vs-uae-u19-asia-cup-2026-match-report",
+    "https://gulfnews.com/sport/cricket/virender-sehwags-son-smashes-160-as-india-beat-uae-by-70-runs-in-asia-cup-1.500742656",
+    "https://cricket.com/news/virender-sehwags-son-aaryavir-smashes-297-in-cooch-behar-trophy-11222024-1732257974695",
+    "https://www.bjsports.live/latest-news-en/aaryavir-sehwag-smashes-173-off-143-to-lead-delhi-u19-in-vinoo-mankad-trophy",
+    "https://i.imgci.com/db/ARCHIVE/1998-99/OD_TOURNEYS/PC-IND/SCORECARDS/IND_PAK_PC-IND_ODI6_01APR1999.html",
+    "Margin: India 309/7, UAE 239 all out = 70 runs (Outlook's headline says 60; its own totals give 70). The UAE match is not an official Youth ODI (UAE are an Associate), so no Youth ODI record claims."
+   ]
+  },
+  {
+   "slug": "abhishek_plan",
+   "title": "Who Should Bowl to Abhishek Sharma?",
+   "format": "tactics",
+   "long": "2:05",
+   "short": "0:29",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-21",
+   "recheck": "Any new IPL/T20I data",
+   "sources": [
+    "Sportmonks ball-by-ball: all IPL matches 2013-2026 and India T20Is/T20 World Cup 2024-2026 (cached in data/)",
+    "https://www.outlookindia.com/sports/cricket/sunrisers-hyderabad-vs-rajasthan-royals-indian-premier-league-2026-abhishek-sharma-golden-duck-jofra-archer-first-ball-wicket",
+    "https://www.onmanorama.com/sports/cricket/2026/04/21/ipl-2026-srh-vs-dc-abhishek-sharma-century.html",
+    "Figures: analysis/abhishek_plan.py (first six balls = first six legal balls faced in each innings)"
+   ]
+  },
+  {
+   "slug": "anchor",
+   "title": "Is the T20 Anchor Dead?",
+   "format": "myth",
+   "long": "1:45",
+   "short": "0:32",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-26",
+   "recheck": null,
+   "sources": [
+    "https://www.mykhel.com/cricket/virat-kohli-ipl-2026-reinvention-rcb-back-to-back-titles-436895.html",
+    "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+   ]
+  },
+  {
+   "slug": "bradman_ipl",
+   "title": "What If Bradman Played in the IPL",
+   "format": "whatif",
+   "long": "2:30",
+   "short": "0:32",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-16",
+   "recheck": null,
+   "sources": [
+    "https://www.espn.com/cricket/story/_/id/40123053/the-gap-bradman-next-best-using-z-scores-anantha-narayanan",
+    "https://www.theroar.com.au/2020/09/05/bradman-era-to-era/",
+    "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+   ]
+  },
+  {
+   "slug": "bumrah_economy",
+   "title": "Bumrah's Economy Makes No Sense",
+   "format": "myth",
+   "long": "2:24",
+   "short": "0:32",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-30",
+   "recheck": null,
+   "sources": [
+    "https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/",
+    "https://www.newsbytesapp.com/news/sports/decoding-jasprit-bumrah-s-woes-in-ipl-2026/story",
+    "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
+   ]
+  },
+  {
+   "slug": "bumrah_vs_90s",
+   "title": "Bumrah vs 90s Sachin & Lara",
+   "format": "whatif",
+   "long": "1:59",
+   "short": "0:29",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-05",
+   "recheck": null,
+   "sources": [
+    "Career records (Tendulkar, Lara); https://www.tribuneindia.com/news/sports/jasprit-bumrah-the-greatest-t20-world-cup-bowler-ever/"
+   ]
+  },
+  {
+   "slug": "channel_trailer",
+   "title": "Channel trailer",
+   "format": "news",
+   "long": "0:51",
+   "short": "0:22",
+   "status": "Posted",
+   "link": "https://youtu.be/c54t8HvXwMU",
+   "planned": "2026-11-12",
+   "recheck": null,
+   "sources": [
+    "Uses figures from santner_problem and bradman_ipl"
+   ]
+  },
+  {
+   "slug": "death_kings",
+   "title": "Who Rules the Death Overs (IPL)",
+   "format": "tactics",
+   "long": "1:48",
+   "short": "0:24",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-25",
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball, every IPL match 2013-2026 (data/ipl), super overs excluded; death = overs 16-20; bowler runs exclude byes and leg byes",
+    "Ranking since 2022: minimum 300 legal death-over balls",
+    "Figures: analysis/death_kings.py"
+   ]
+  },
+  {
+   "slug": "dhoni_captain",
+   "title": "What If Dhoni Never Became Captain",
+   "format": "whatif",
+   "long": "2:20",
+   "short": "0:27",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-19",
+   "recheck": null,
+   "sources": [
+    "Settled history (2007 WT20, 2011 WC, 2013 CT, CSK titles); RCB won IPL 2025 and 2026 (mykhel)"
+   ]
+  },
+  {
+   "slug": "flip_abhishek_openers",
+   "title": "Flip: Abhishek vs the world's T20I openers",
+   "format": "flip",
+   "long": null,
+   "short": "0:26",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+    "T20 internationals; innings in which the batter was one of the first two to bat; strike rate = runs off the bat per 100 balls faced (wides excluded)"
+   ]
+  },
+  {
+   "slug": "flip_bumrah_52_tests",
+   "title": "Flip: Bumrah vs the best fast bowlers after 52 Tests",
+   "format": "flip",
+   "long": null,
+   "short": "0:26",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-20",
+   "recheck": "Bumrah's Test count changes after the NZ series",
+   "sources": [
+    "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+    "Fast bowlers whose whole Test careers are in the data (debut 2007 or later), compared after the same number of Tests"
+   ]
+  },
+  {
+   "slug": "flip_mi_captains",
+   "title": "Flip: Every MI captain vs Rohit",
+   "format": "flip",
+   "long": null,
+   "short": "0:21",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-13",
+   "recheck": "New MI captain named?",
+   "sources": [
+    "Sportmonks IPL fixtures and line-ups (captain flag), IPL 2013-2026. Win % of decided matches (no-results left out). Figures: analysis/flips.py"
+   ]
+  },
+  {
+   "slug": "flip_root_same_point",
+   "title": "Flip: Joe Root vs everyone at the same point",
+   "format": "flip",
+   "long": null,
+   "short": "0:28",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-23",
+   "recheck": "Root/Brook/Jaiswal totals after new Tests",
+   "sources": [
+    "Cricsheet ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/flips.py",
+    "Batters whose whole Test careers are in the data (debut 2010 or later); data to October 2026"
+   ]
+  },
+  {
+   "slug": "hardik_arshdeep",
+   "title": "Hardik–Arshdeep trade: who won?",
+   "format": "news",
+   "long": "3:31",
+   "short": "0:40",
+   "status": "Posted",
+   "link": "https://youtu.be/zaPe7_3Wbd4",
+   "planned": "2026-11-12",
+   "recheck": "MI captaincy news",
+   "sources": [
+    "https://www.mumbaiindians.com/news/mumbai-indians-trade-hardik-pandya-to-punjab-kings-arshdeep-singh-joins-mumbai-indians",
+    "https://www.outlookindia.com/sports/cricket/hardik-pandya-joins-punjab-kings-arshdeep-singh-mumbai-indians-ipl-2027-trade",
+    "https://www.newsbytesapp.com/news/sports/hardik-pandya-s-woeful-numbers-in-ipl-2026/story",
+    "https://www.outlookindia.com/sports/cricket/mi-at-ipl-2026-season-review-what-went-wrong-for-mumbai-indians-and-hardik-pandya"
+   ]
+  },
+  {
+   "slug": "india_160",
+   "title": "Why No Indian Has Bowled 160",
+   "format": "myth",
+   "long": "1:48",
+   "short": "0:27",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-23",
+   "recheck": "Fastest-Indian speeds",
+   "sources": [
+    "https://www.newsbytesapp.com/news/sports/indian-pace-bowlers-who-can-clock-160-kph/story",
+    "https://www.freepressjournal.in/sports/umran-malik-breaks-own-record-for-fastest-delivery-by-an-indian-in-international-cricket-with-156-kmph-thunderbolt"
+   ]
+  },
+  {
+   "slug": "ipl_batting_evolution",
+   "title": "How the IPL Changed T20 Batting Forever",
+   "format": "lab",
+   "long": "7:03",
+   "short": "0:26",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-16",
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball, every IPL match 2013-2026 (data/ipl), super overs excluded. Figures: analysis/ipl_batting_evolution.py",
+    "https://africa.espn.com/cricket/story/_/id/39140937/ipl-2024-allow-two-bouncers-per-over",
+    "https://www.wisden.com/series/ipl-2025/cricket-news/ipl-2025-rule-changes-saliva-ban-lifted-two-balls-to-be-used-for-second-innings",
+    "https://www.tribuneindia.com/news/sports/ipl-2025-saliva-ban-removed-slow-over-rate-rule-tweaked-impact-player-rule-to-stay"
+   ]
+  },
+  {
+   "slug": "kohli_2000_nz",
+   "title": "Kohli: 22 runs from 2,000 vs NZ",
+   "format": "news",
+   "long": null,
+   "short": "0:27",
+   "status": "Uploaded (private)",
+   "link": null,
+   "planned": "2026-11-12",
+   "recheck": "Expires once he bats in the 4th ODI",
+   "sources": [
+    "https://www.newsbytesapp.com/news/sports/nz-vs-ind-hamilton-odi-preview/story (1,978 ODI runs vs NZ; first to 2,000 would be a record)",
+    "https://www.espn.com.au/cricket/scores/series/24469 (3rd ODI abandoned; 4th and 5th ODIs at Mount Maunganui)"
+   ]
+  },
+  {
+   "slug": "lab_ep1_abhishek_twin",
+   "title": "The Lab Ep. 1: Abhishek Sharma's statistical twin",
+   "format": "lab",
+   "long": "4:10",
+   "short": "2:06",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Sportmonks IPL ball-by-ball cache, 2013-2026 (data/ipl). Seasons with 200+ balls faced (405). 11 measures, z-scored within each season; distance = Euclidean across the 11. Dismissals counted for the player out (bowled rows carry no out_id; non-striker run-outs included). analysis/lab_twin.py, make_lab_twin.py",
+    "https://www.crictracker.com/cricket-appeal/ipl-2026-top-10-batters-of-the-season/6/ (Abhishek 2026: 563 runs, SR 204.72)",
+    "https://royalchallengers.com/rcb-cricket-news/news/faf-du-plessis-to-glenn-maxwell-top-3-batsmen-for-rcb-in-ipl-2023 (Maxwell 2023: 400 runs, SR 183.48)"
+   ]
+  },
+  {
+   "slug": "lab_ep2_bumrah_twin",
+   "title": "The Lab Ep. 2: Bumrah's twin",
+   "format": "lab",
+   "long": null,
+   "short": "1:38",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Sportmonks IPL ball-by-ball 2013-2026; bowling seasons with 180+ legal balls (513); 10 measures z-scored within season; Euclidean distance. analysis/lab_bowl_twin.py, make_lab_bowl_twin.py",
+    "https://crictracker.com/t20/ipl-indian-premier-league/archives-ipl-2013/stats/bowling-best-economy-rates/ (Steyn 2013: 67.5 overs, 19 wickets, economy 5.66)"
+   ]
+  },
+  {
+   "slug": "myth_ep1_kohli_knockouts",
+   "title": "Myth or Data? Ep. 1: Kohli in knockouts",
+   "format": "myth",
+   "long": null,
+   "short": "1:37",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Cricsheet men's ODI and T20I ball-by-ball data (cricsheet.org, ODC-BY). ICC knockouts = semi-finals, quarter-finals and finals of the ODI World Cup, Champions Trophy and T20 World Cup. Figures: analysis/myth_kohli_knockouts.py"
+   ]
+  },
+  {
+   "slug": "nz_test_preview",
+   "title": "Can India Win a Test Series in New Zealand?",
+   "format": "tactics",
+   "long": "4:10",
+   "short": "0:25",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-18",
+   "recheck": "Pant fitness, WTC table",
+   "sources": [
+    "Cricsheet men's Test ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/nz_tests.py",
+    "https://scroll.in/field/953699/data-check-a-look-at-key-numbers-from-indias-previous-test-tours-of-new-zealand",
+    "https://www.icc-cricket.com/news/key-takeaways-from-india-s-squad-for-new-zealand-test-series",
+    "https://www.crictracker.com/cricket-news/new-zealand-announce-14-member-squad-for-test-series-against-india-duffy-ravindra-returns-6609/",
+    "https://en.wikipedia.org/wiki/2025%E2%80%932027_World_Test_Championship",
+    "https://www.espn.com.au/cricket/scores/series/24469"
+   ]
+  },
+  {
+   "slug": "powerplay_revolution",
+   "title": "The IPL Powerplay Revolution",
+   "format": "lab",
+   "long": "2:09",
+   "short": "0:27",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-16",
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball, every IPL match 2013-2026 (data/ipl), super overs excluded; powerplay = overs 1-6",
+    "SRH 125/0 v DC, 20 Apr 2024: IPL record powerplay score",
+    "Figures: analysis/powerplay_revolution.py"
+   ]
+  },
+  {
+   "slug": "rcb_back_to_back",
+   "title": "How RCB Won Back-to-Back",
+   "format": "myth",
+   "long": "1:59",
+   "short": "0:31",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-28",
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball, IPL 2024-2026 (data/ipl), super overs excluded; economy = runs conceded per over (byes and leg byes included)",
+    "https://www.tribuneindia.com/news/sports/season-went-well-for-me-bhuvneshwar-kumar-after-rcb-clinch-back-to-back-ipl-titles/",
+    "https://www.outlookindia.com/sports/cricket/rcb-vs-gt-ipl-2026-final-back-to-back-titles-royal-challengers-bengaluru-virat-kohli",
+    "https://www.thenewsminute.com/news/ipl-2026-rcb-defend-title-with-five-wicket-victory-over-gt",
+    "Figures: analysis/rcb_back_to_back.py"
+   ]
+  },
+  {
+   "slug": "sachin_t20",
+   "title": "What If Sachin Played in the T20 Era",
+   "format": "whatif",
+   "long": "2:16",
+   "short": "0:45",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-12-09",
+   "recheck": null,
+   "sources": [
+    "https://www.sportskeeda.com/cricket/shubman-gill-vs-sachin-tendulkar-comparing-stats-78-ipl-matches",
+    "https://www.espncricinfo.com/ci/engine/match/255954.html",
+    "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008"
+   ]
+  },
+  {
+   "slug": "santner_problem",
+   "title": "The Santner Problem",
+   "format": "tactics",
+   "long": "2:43",
+   "short": "0:31",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-15",
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball: NZ v India T20Is, fixtures 71014-71018 (Oct-Nov 2026); Bracewell bowling style filled manually (off-spin)",
+    "Figures: analysis/santner_problem.py"
+   ]
+  },
+  {
+   "slug": "stat_check_bumrah_rashid",
+   "title": "Stat Check: Bumrah or Rashid?",
+   "format": "statcheck",
+   "long": "3:35",
+   "short": "1:29",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Sportmonks IPL ball-by-ball cache 2013-2026 (both careers began in 2013 or later, so every IPL ball they've bowled is included). Economy = runs off the bat + wides + no-balls per 6 legal balls; byes and leg byes excluded; super overs excluded. analysis/bumrah_rashid.py, make_bumrah_rashid.py"
+   ]
+  },
+  {
+   "slug": "two_hundred",
+   "title": "Why 200 Is the New 160",
+   "format": "lab",
+   "long": "2:31",
+   "short": "0:28",
+   "status": "Hold",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "https://www.wisden.com/series/ipl-2026/cricket-news/crash-bang-wallop-how-ipl-batting-has-changed-since-2008",
+    "https://www.tribuneindia.com/news/sports/ipl-2026-a-run-fest-for-the-ages-registers-52nd-200-plus-score-of-the-season-during-kkr-gt-clash/",
+    "https://www.espncricinfo.com/story/ipl-2025-trends-too-many-200-plus-scores-but-not-many-thrillers-1489188"
+   ]
+  },
+  {
+   "slug": "wellington_odi",
+   "title": "How India won the Wellington ODI",
+   "format": "tactics",
+   "long": "3:39",
+   "short": "0:35",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-13",
+   "recheck": null,
+   "sources": [
+    "https://www.espn.com/cricket/series/24469/game/1539438/new-zealand-vs-india-2nd-odi-24469",
+    "https://www.aljazeera.com/sports/2026/11/7/india-new-zealand-second-odi-rain-dls-method-win-four-runs",
+    "https://www.crictracker.com/cricket-news/nz-vs-ind-2026-new-zealand-vs-india-highlights-review-2nd-odi-0583/"
+   ]
+  }
+ ]
+}
