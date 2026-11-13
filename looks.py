@@ -169,30 +169,93 @@ def header(c, g, t, D, s, ink=None, tf="interB"):
 
 
 # ---------------------------------------------------------------- The Lab scenes
+def _chip(c, x, y, txt, sub, a, rot=-4, colr=None):
+    """A sticker-style stat chip."""
+    colr = colr or (20, 20, 22)
+    w = max(twidth(txt, 46, "interB", -1), twidth(sub, 18, "monoSB", 2)) + 44
+    c.save(); c.translate(x, y); c.rotate(rot); c.scale(.6 + .4 * a, .6 + .4 * a)
+    rrect(c, -w / 2 + 6, -38 + 8, w, 92, 12, (0, 0, 0), .18 * a)
+    rrect(c, -w / 2, -38, w, 92, 12, (255, 255, 255), a, stroke=3, scol=colr, sa=a)
+    text(c, txt, 0, 14, 46, "interB", colr, a, "c", track=-1)
+    text(c, sub.upper(), 0, 42, 18, "monoSB", gfx.MUTED, a, "c", track=2)
+    c.restore()
+
+
+def _plate(c, x, y, name, sub, kit, a):
+    k = col(kit); w = max(twidth(name.upper(), 40, "interB", 1), twidth(sub.upper(), 18, "monoSB", 2)) + 56
+    rrect(c, x - w / 2, y - 44, w, 84, 10, (20, 20, 22), a)
+    c.drawRect(skia.Rect.MakeXYWH(x - w / 2, y - 44, 10, 84), paint(k, a))
+    text(c, name.upper(), x + 4, y - 4, 40, "interB", (255, 255, 255), a, "c", track=1)
+    text(c, sub.upper(), x + 4, y + 26, 18, "monoSB", HL, a, "c", track=2)
+
+
+def _portrait(c, cx, cy, R, P, t, a, dirn=1):
+    """An illustrated player inside a disc (team kit, no likeness)."""
+    k = col(P.get("kit", "ink"))
+    c.drawCircle(cx, cy + 10, R, paint((0, 0, 0), .15 * a, blur=24))
+    c.drawCircle(cx, cy, R, paint(P.get("disc", HL), a))
+    c.save(); p = skia.Path(); p.addCircle(cx, cy, R); c.clipPath(p, doAntiAlias=True)
+    for kk in range(7):                                   # halftone rays
+        ang = math.radians(kk * 26 - 80 + 4 * math.sin(t * .6)); pp = paint((255, 255, 255), .16 * a); pp.setStrokeWidth(R * .12)
+        c.drawLine(cx, cy + R, cx + math.cos(ang) * R * 2, cy + R - math.sin(ang) * R * 2, pp)
+    E.avatar(c, cx, cy + R * .98, R * 1.55, P.get("kit", "IND"), P.get("number"), P.get("pose", "raise"), t, a,
+             dir=dirn, cap=P.get("cap"), pads=P.get("pads"))
+    c.restore()
+    c.drawCircle(cx, cy, R, paint(E._sh(k, .8), a, stroke=10))
+
+
 def sc_lab_title(c, g, t, D, s):
+    """Opening card. One player: portrait disc + name plate + stat chips. Two players: split halves, VS stamp."""
     l = L(g); short = g.fmt == "short"
-    a = eo(prog(t, 0, .4))
-    ky = 330 if short else 200
-    text(c, s.get("kicker", "STAT CHECK"), g.W / 2 if short else l["x0"], ky, 34, "serifBI", RED, a, "c" if short else "l")
-    y = ky + 110; size = 108 if short else 96
-    for k, ln in enumerate(s["lines"]):
-        ln = ln["t"] if isinstance(ln, dict) else ln
-        q = eo(prog(t, .1 + .15 * k, .55 + .15 * k))
-        z = E.fit(ln.replace("[", "").replace("]", ""), (l["x1"] - l["x0"]) * (1 if short else .55), size, "interB", -2)
+    lines = [ln["t"] if isinstance(ln, dict) else ln for ln in s.get("lines", [])]
+    ps = s.get("players") or [{"t": tk.get("t"), "kit": tk.get("kit"), "name": tk.get("name", "")} for tk in s.get("tokens", [])]
+    a = eo(prog(t, 0, .35))
+    two = len(ps) == 2
+    if two:                                               # split background in the two kits
+        for i, P in enumerate(ps):
+            q = eo(prog(t, 0, .45)); k = col(P.get("kit", "ink"))
+            x0 = 0 if i == 0 else g.W / 2
+            off = (-1 if i == 0 else 1) * (1 - q) * g.W * .5
+            c.drawRect(skia.Rect.MakeXYWH(x0 + off, 0, g.W / 2, g.H), paint(k, .14 * q))
+    ky = 250 if short else 120
+    text(c, s.get("kicker", "STAT CHECK"), g.W / 2 if short or two else l["x0"], ky, 34, "serifBI", RED, a, "c" if short or two else "l")
+    y = ky + 105; size = 104 if short else (92 if two else 96)
+    for k, ln in enumerate(lines):
+        q = eo(prog(t, .05 + .12 * k, .45 + .12 * k))
+        wmax = (l["x1"] - l["x0"]) * (1 if short or two else .5)
+        z = E.fit(ln.replace("[", "").replace("]", ""), wmax, size, "interB", -2)
         c.save(); c.translate(0, (1 - q) * 30)
-        rich(c, ln, g.W / 2 if short else l["x0"], y, z, "interB", gfx.INK, q, "c" if short else "l", box=RED, boxtext=(255, 255, 255), track=-2)
-        c.restore(); y += z * 1.08
-    tk = s.get("tokens", [])
-    if tk:
-        cx, cy, R = (g.W / 2, 1050, 300) if short else (1400, 560, 300)
-        q = eback(prog(t, .3, .9))
-        c.drawCircle(cx, cy, R * q, paint(HL, .95))
-        n = len(tk)
-        for k, tkn in enumerate(tk):
-            off = (k - (n - 1) / 2) * R * .78
-            qq = eback(prog(t, .5 + .15 * k, 1.0 + .15 * k))
-            token(c, cx + off, cy + R * .05, R * (.5 if n > 1 else .62) * qq, tkn["t"], tkn.get("kit", "ink"), a)
-            if tkn.get("name"): text(c, tkn["name"], cx + off, cy + R * .78, 40, "interB", gfx.INK, qq, "c")
+        rich(c, ln, g.W / 2 if short or two else l["x0"], y, z, "interB", gfx.INK, q, "c" if short or two else "l", box=RED, boxtext=(255, 255, 255), track=-2)
+        c.restore(); y += z * 1.06
+    if not ps: return
+    if two:
+        R = 265 if short else 200
+        cy = (y + 400) if short else 640
+        for i, P in enumerate(ps):
+            q = eback(prog(t, .2 + .1 * i, .75 + .1 * i))
+            cx = g.W / 2 + (-1 if i == 0 else 1) * ((250 if short else 420) + (1 - q) * 400)
+            _portrait(c, cx, cy, R * (.7 + .3 * q), P, t, q, dirn=1 if i == 0 else -1)
+            _plate(c, cx, cy + R + 70, P.get("name", ""), P.get("sub", ""), P.get("kit", "ink"), eo(prog(t, .6, .95)))
+            if P.get("chip"):
+                ch = P["chip"]; _chip(c, cx + (-1 if i == 0 else 1) * R * .55, cy - R * .95, ch[0], ch[1], eback(prog(t, .5 + .15 * i, .9 + .15 * i)),
+                                      rot=-6 if i == 0 else 6, colr=E._sh(col(P.get("kit", "ink")), .85))
+        if s.get("teaser"):
+            text(c, s["teaser"].upper(), g.W / 2, cy + R + 200 if short else cy + R + 150, 26, "monoSB", gfx.MUTED, eo(prog(t, .9, 1.3)), "c", track=4)
+        qs = eback(prog(t, .7, 1.05)); sc = 2.2 - 1.2 * qs
+        c.save(); c.translate(g.W / 2, cy); c.rotate(-8); c.scale(sc, sc)
+        c.drawCircle(0, 0, 70, paint(RED, min(1, qs * 1.5)))
+        c.drawCircle(0, 0, 70, paint((255, 255, 255), min(1, qs * 1.5), stroke=6))
+        text(c, "VS", 0, 22, 64, "interB", (255, 255, 255), min(1, qs * 1.5), "c", track=-1)
+        c.restore()
+    else:
+        P = ps[0]; R = 300 if short else 290
+        cx, cy = (g.W / 2, y + 360) if short else (g.W * .72, g.H * .52)
+        q = eback(prog(t, .15, .7))
+        _portrait(c, cx, cy, R * (.75 + .25 * q), P, t, q)
+        _plate(c, cx, cy + R + 60, P.get("name", ""), P.get("sub", ""), P.get("kit", "ink"), eo(prog(t, .45, .8)))
+        for j, ch in enumerate(P.get("chips", [])):
+            pos = [(-R * .85, -R * .75, -7), (R * .9, -R * .35, 6), (-R * .95, R * .35, 5)][j % 3]
+            _chip(c, cx + pos[0], cy + pos[1], ch[0], ch[1], eback(prog(t, .35 + .15 * j, .75 + .15 * j)), rot=pos[2])
 
 
 def sc_lab_big_text(c, g, t, D, s):
@@ -505,10 +568,11 @@ def sc_board(c, g, t, D, s):
     c.restore()
     # pucks (drawn upright, projected)
     pucks = [dict(p="batter", xy=(0, .27), c="red", label=s.get("batter_label", ""))] if s.get("batter", True) else []
-    hl = set(s.get("hl", []))
+    hl = set(s.get("hl", [])); zoned = {p for z in s.get("zones", []) for p in z["pos"]}
     for k, f in enumerate(s.get("fielders", [])):
         nm = f if isinstance(f, str) else f["p"]
-        pucks.append(dict(p=nm, xy=E.POS[nm], c="hl" if nm in hl else ("white" if navy else "navy"), label=nm if s.get("labels", True) else "",
+        lab = nm if s.get("labels", True) and nm not in zoned and nm != "keeper" else ""
+        pucks.append(dict(p=nm, xy=E.POS[nm], c="hl" if nm in hl else ("white" if navy else "navy"), label=lab,
                           at=.1 + .3 * k / max(1, len(s["fielders"]))))
     for pk in s.get("pucks", []): pucks.append(pk)
     top_y = _board_matrix(g).mapXY(0, -500).y(); bot_y = _board_matrix(g).mapXY(0, 500).y()
@@ -527,6 +591,15 @@ def sc_board(c, g, t, D, s):
         if pk.get("label"):
             lt = pk["label"]; lz = (24 if short else 20)
             text(c, lt, x, y + 30 * sc + 8, lz, "serifI", ink, q * .95, "c")
+    for z in s.get("zones", []):                  # one label per zone, beside it
+        q = eo(prog(t, T(z, D, .3) + .3, T(z, D, .3) + .7))
+        pts = [m.mapXY(*_fp(p)) for p in z["pos"]]
+        zx = max(p.x() for p in pts) + (40 if short else 34); zy = sum(p.y() for p in pts) / len(pts) + 50
+        lab = z.get("label", "slip cordon" if any("slip" in p for p in z["pos"]) else "")
+        if lab:
+            tw = twidth(lab, 28 if short else 24, "serifBI") + 24
+            rrect(c, zx - 12, zy - 30, tw, 42, 6, HL, q)
+            text(c, lab, zx, zy, 28 if short else 24, "serifBI", (20, 20, 22), q)
     # year tag + headline
     if s.get("tag"):
         tg = s["tag"]; tw = twidth(tg, 30, "monoSB") + 24; ty = 300 if short else 90
@@ -784,6 +857,9 @@ def extra_sfx(s, D, T0):
         for p in s.get("paths", []): ev.append([T0 + T(p, D, .4), "whoosh", .7])
     elif ty == "clipping":
         ev.append([T0 + .1, "whoosh", .8]); ev.append([T0 + .55, "stamp", .35])
+    elif ty == "lab_title":
+        ev.append([T0 + .05, "whoosh", .7]); ev.append([T0 + .4, "tick", 1]); ev.append([T0 + .55, "tick", 1])
+        if len(s.get("players") or s.get("tokens") or []) == 2: ev.append([T0 + .95, "stamp", .8])
     elif ty == "card":
         ev.append([T0 + .05, "whoosh", .8])
         fl = s.get("_t", D * s.get("flip_at", .45)); ev.append([T0 + fl, "whoosh", 1]); ev.append([T0 + fl + .5, "crowd", .5])

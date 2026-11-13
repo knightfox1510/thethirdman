@@ -40,7 +40,7 @@ def vs(i, kicker, title, j, r, lgv, word_r="rashid"):
         {"label": f"Rashid · {r['balls']:,} balls", "v": r2(r["econ"]), "text": f"{r['econ']:.2f}", "c": "GT", "t": "RK", "kit": "GT", "word": word_r},
         {"label": "IPL average", "v": r2(lgv), "text": f"{lgv:.2f}", "c": "grey", "at": .05}], max=11, **rnd(i))
 title = S("Two of the best T20 bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
-          {"type": "lab_title", "kicker": "STAT CHECK", "lines": ["Bumrah", "or [Rashid?]"], "tokens": [JB, RK]})
+          {"type": "lab_title", "kicker": "STAT CHECK", "lines": ["Bumrah or [Rashid?]"], "teaser": "7 rounds · every IPL ball", "players": [{"kit": "MI", "pose": "bowl", "cap": True, "name": "Bumrah", "sub": "IPL 2013-2026", "chip": [f"{J['all']['balls']:,}", "balls bowled"]}, {"kit": "GT", "pose": "bowl", "cap": True, "name": "Rashid Khan", "sub": "IPL 2017-2026", "chip": [f"{R['all']['balls']:,}", "balls bowled"]}]})
 method = S("First, the workload. बुमराह has bowled three thousand six hundred and thirty-one balls in the IPL. Rashid, three thousand five hundred and twenty-seven. Almost exactly the same.",
            dict(type="lab_compare", kicker="THE METHOD", title="Same workload.", a=JB, b=RK, rows=[
                ["Balls bowled", f"{J['all']['balls']:,}", f"{R['all']['balls']:,}", "level"], ["IPL seasons", str(len(J["season"])), str(len(R["season"])), "level"],
@@ -111,5 +111,6 @@ spec["yt"] = {"long": {"title": "Bumrah or Rashid? We checked every IPL ball the
                        "tags": ["Jasprit Bumrah", "Rashid Khan", "Bumrah vs Rashid", "IPL stats", "best T20 bowler", "Stat Check", "The Third Man"]},
               "short": {"title": "Bumrah or Rashid? Every IPL ball, 7 rounds 📊 #Shorts", "description": "Stat Check: Bumrah vs Rashid, every IPL ball since 2013.",
                         "tags": ["Bumrah", "Rashid Khan", "IPL", "cricket stats", "Stat Check", "The Third Man"]}}
+import voice_lint; voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/stat_check_bumrah_rashid.json", "w"), ensure_ascii=False, indent=1)
 print("long words", sum(len(x["vo"].split()) for x in spec["long"]), "short", sum(len(x["vo"].split()) for x in spec["short"]))

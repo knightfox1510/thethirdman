@@ -28,31 +28,43 @@
  ],
  "long": [
   {
-   "vo": "Two of the best T20 bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
+   "vo": "Two of the best T-twenty bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
    "scene": {
     "type": "lab_title",
     "kicker": "STAT CHECK",
     "lines": [
-     "Bumrah",
-     "or [Rashid?]"
+     "Bumrah or [Rashid?]"
     ],
-    "tokens": [
+    "teaser": "7 rounds · every IPL ball",
+    "players": [
      {
-      "t": "JB",
       "kit": "MI",
-      "name": "Bumrah"
+      "pose": "bowl",
+      "cap": true,
+      "name": "Bumrah",
+      "sub": "IPL 2013-2026",
+      "chip": [
+       "3,631",
+       "balls bowled"
+      ]
      },
      {
-      "t": "RK",
       "kit": "GT",
-      "name": "Rashid"
+      "pose": "bowl",
+      "cap": true,
+      "name": "Rashid Khan",
+      "sub": "IPL 2017-2026",
+      "chip": [
+       "3,527",
+       "balls bowled"
+      ]
      }
     ]
    },
    "chapter": "The question"
   },
   {
-   "vo": "First, the workload. बुमराह has bowled three thousand six hundred and thirty-one balls in the IPL. Rashid, three thousand five hundred and twenty-seven. Almost exactly the same.",
+   "vo": "First, the workload. बुमराह has bowled three thousand six hundred and thirty-one balls in the IPL. राशिद, three thousand five hundred and twenty-seven. Almost exactly the same.",
    "scene": {
     "type": "lab_compare",
     "kicker": "THE METHOD",
@@ -91,7 +103,7 @@
    }
   },
   {
-   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. Rashid: seven point two six. Almost nothing in it. Round one: level.",
+   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. राशिद: seven point two six. Almost nothing in it. Round one: level.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 1 · ECONOMY",
@@ -139,7 +151,7 @@
    "chapter": "Round 1: Economy"
   },
   {
-   "vo": "Round two: the powerplay. More than a third of बुमराह's balls come here, at six point nine five. Rashid bowls far fewer, at seven point four seven. बुमराह takes it.",
+   "vo": "Round two: the powerplay. More than a third of बुमराह's balls come here, at six point nine five. राशिद bowls far fewer, at seven point four seven. बुमराह takes it.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 2 · OVERS 1-6",
@@ -187,7 +199,7 @@
    "chapter": "Round 2: Powerplay"
   },
   {
-   "vo": "Round three: the middle overs. This is Rashid's home. Seventy-two percent of his balls, at six point eight six. बुमराह is cheaper still, but bowls far fewer of them. We'll call it level.",
+   "vo": "Round three: the middle overs. This is राशिद's home. Seventy-two percent of his balls, at six point eight six. बुमराह is cheaper still, but bowls far fewer of them. We'll call it level.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 3 · OVERS 7-15",
@@ -235,7 +247,7 @@
    "chapter": "Round 3: Middle overs"
   },
   {
-   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. Rashid, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
+   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. राशिद, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 4 · OVERS 16-20",
@@ -283,7 +295,7 @@
    "chapter": "Round 4: Death"
   },
   {
-   "vo": "Round five: dot balls. Four in every ten of बुमराह's balls are dots. Rashid, about three and a half. बुमराह again.",
+   "vo": "Round five: dot balls. Four in every ten of बुमराह's balls are dots. राशिद, about three and a half. बुमराह again.",
    "scene": {
     "type": "lab_rings",
     "kicker": "ROUND 5 · DOT BALLS",
@@ -322,7 +334,7 @@
    "chapter": "Round 5: Dot balls"
   },
   {
-   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off Rashid, every eighteen. बुमराह.",
+   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off राशिद, every eighteen. बुमराह.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 6 · SIXES",
@@ -362,7 +374,7 @@
    "chapter": "Round 6: Sixes"
   },
   {
-   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, Rashid went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. Rashid takes it.",
+   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, राशिद went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. राशिद takes it.",
    "scene": {
     "type": "lab_dots",
     "kicker": "ROUND 7 · THE PEAK",
@@ -432,7 +444,7 @@
    "chapter": "Round 7: The peak"
   },
   {
-   "vo": "How good was that peak? From twenty seventeen to twenty twenty-two, of every bowler with fifteen hundred balls, Rashid had the best economy in the IPL. Six point three four. Nobody else was under seven.",
+   "vo": "How good was that peak? From twenty seventeen to twenty twenty-two, of every bowler with fifteen hundred balls, राशिद had the best economy in the IPL. Six point three four. Nobody else was under seven.",
    "scene": {
     "type": "lab_vs",
     "kicker": "2017-2022 · MIN. 1,500 BALLS",
@@ -465,7 +477,7 @@
    }
   },
   {
-   "vo": "But since then, Rashid has gone at over eight an over, every season. बुमराह was at his best in twenty twenty-four and twenty twenty-five, before a quiet twenty twenty-six.",
+   "vo": "But since then, राशिद has gone at over eight an over, every season. बुमराह was at his best in twenty twenty-four and twenty twenty-five, before a quiet twenty twenty-six.",
    "scene": {
     "type": "lab_compare",
     "kicker": "SINCE 2023",
@@ -510,7 +522,7 @@
    }
   },
   {
-   "vo": "Both are tougher on left-handers. बुमराह goes at six point six two against them, and seven point six six against right-handers. Rashid's gap is smaller. But he takes a left-hander's wicket every seventeen balls.",
+   "vo": "Both are tougher on left-handers. बुमराह goes at six point six two against them, and seven point six six against right-handers. राशिद's gap is smaller. But he takes a left-hander's wicket every seventeen balls.",
    "scene": {
     "type": "lab_compare",
     "kicker": "LEFT V RIGHT",
@@ -550,7 +562,7 @@
    "chapter": "Left v right, and Kohli"
   },
   {
-   "vo": "And the biggest name they've both bowled to? विराट कोहली has taken one sixty-one off बुमराह's hundred and eight balls. But बुमराह has dismissed him five times. Against Rashid, कोहली has a hundred and seventeen off ninety balls, and been out twice.",
+   "vo": "And the biggest name they've both bowled to? विराट कोहली has taken one sixty-one off बुमराह's hundred and eight balls. But बुमराह has dismissed him five times. Against राशिद, कोहली has a hundred and seventeen off ninety balls, and been out twice.",
    "scene": {
     "type": "lab_compare",
     "kicker": "THE KOHLI TEST",
@@ -595,7 +607,7 @@
    }
   },
   {
-   "vo": "So, the scorecard. बुमराह wins four rounds. Rashid wins one. Two are level.",
+   "vo": "So, the scorecard. बुमराह wins four rounds. राशिद wins one. Two are level.",
    "scene": {
     "type": "lab_score",
     "kicker": "THE SCORE",
@@ -642,7 +654,7 @@
    "chapter": "The verdict"
   },
   {
-   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than Rashid Khan.",
+   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than राशिद ख़ान.",
    "scene": {
     "type": "lab_big_text",
     "kicker": "THE VERDICT",
@@ -672,30 +684,42 @@
  ],
  "short": [
   {
-   "vo": "Two of the best T20 bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
+   "vo": "Two of the best T-twenty bowlers of this era. Both arrived in the IPL after twenty twelve, so we have every ball they've bowled in it. So, who's better? Seven rounds.",
    "scene": {
     "type": "lab_title",
     "kicker": "STAT CHECK",
     "lines": [
-     "Bumrah",
-     "or [Rashid?]"
+     "Bumrah or [Rashid?]"
     ],
-    "tokens": [
+    "teaser": "7 rounds · every IPL ball",
+    "players": [
      {
-      "t": "JB",
       "kit": "MI",
-      "name": "Bumrah"
+      "pose": "bowl",
+      "cap": true,
+      "name": "Bumrah",
+      "sub": "IPL 2013-2026",
+      "chip": [
+       "3,631",
+       "balls bowled"
+      ]
      },
      {
-      "t": "RK",
       "kit": "GT",
-      "name": "Rashid"
+      "pose": "bowl",
+      "cap": true,
+      "name": "Rashid Khan",
+      "sub": "IPL 2017-2026",
+      "chip": [
+       "3,527",
+       "balls bowled"
+      ]
      }
     ]
    }
   },
   {
-   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. Rashid: seven point two six. Almost nothing in it. Round one: level.",
+   "vo": "Round one: economy. Since twenty thirteen, IPL bowlers have gone for eight and a half an over. बुमराह: seven point three four. राशिद: seven point two six. Almost nothing in it. Round one: level.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 1 · ECONOMY",
@@ -742,7 +766,7 @@
    }
   },
   {
-   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. Rashid, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
+   "vo": "Round four: the death. The league goes at ten an over. बुमराह has bowled more than fourteen hundred balls there, at eight point one nine. राशिद, six hundred and thirty, at eight point seven five. बुमराह, clearly.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 4 · OVERS 16-20",
@@ -789,7 +813,7 @@
    }
   },
   {
-   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off Rashid, every eighteen. बुमराह.",
+   "vo": "Round six: sixes. Batters clear the rope off बुमराह once every twenty-seven balls. Off राशिद, every eighteen. बुमराह.",
    "scene": {
     "type": "lab_vs",
     "kicker": "ROUND 6 · SIXES",
@@ -828,7 +852,7 @@
    }
   },
   {
-   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, Rashid went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. Rashid takes it.",
+   "vo": "Round seven: the peak. From twenty seventeen to twenty twenty-two, राशिद went at under six point eight an over. Six seasons in a row. बुमराह has never put together more than three seasons under seven. राशिद takes it.",
    "scene": {
     "type": "lab_dots",
     "kicker": "ROUND 7 · THE PEAK",
@@ -897,7 +921,7 @@
    }
   },
   {
-   "vo": "So, the scorecard. बुमराह wins four rounds. Rashid wins one. Two are level.",
+   "vo": "So, the scorecard. बुमराह wins four rounds. राशिद wins one. Two are level.",
    "scene": {
     "type": "lab_score",
     "kicker": "THE SCORE",
@@ -943,7 +967,7 @@
    }
   },
   {
-   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than Rashid Khan.",
+   "vo": "बुमराह is the better IPL bowler. But for six seasons, no bowler in the IPL was harder to score off than राशिद ख़ान.",
    "scene": {
     "type": "lab_big_text",
     "kicker": "THE VERDICT",

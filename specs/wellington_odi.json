@@ -73,7 +73,7 @@
    }
   },
   {
-   "vo": "India's plan came straight from Gurnoor Brar. In India, he said, the pitches are flat and you live on the hard length. In New Zealand, the extra bounce rewards a bowler who attacks. So India stacked the slip cordon and hit that length, again and again.",
+   "vo": "India's plan came straight from गुरनूर बराड़. In India, he said, the pitches are flat and you live on the hard length. In New Zealand, the extra bounce rewards a bowler who attacks. So India stacked the slip cordon and hit that length, again and again.",
    "scene": {
     "type": "fieldplan",
     "head": {
@@ -127,7 +127,7 @@
    }
   },
   {
-   "vo": "It worked. Auqib Nabi removed Will Young and Tim Seifert early. Then, in the twentieth over, Brar struck twice, Tom Latham and Glenn Phillips, and New Zealand were fifty-three for five. Daryl Mitchell fought back with fifty-five, and Santner added thirty-one. But New Zealand were all out for one thirty-four in forty-one overs, their lowest all-out total against India in a home ODI.",
+   "vo": "It worked. Auqib Nabi removed Will Young and Tim Seifert early. Then, in the twentieth over, बराड़ struck twice, Tom Latham and Glenn Phillips, and New Zealand were fifty-three for five. Daryl Mitchell fought back with fifty-five, and Santner added thirty-one. But New Zealand were all out for one thirty-four in forty-one overs, their lowest all-out total against India in a home ODI.",
    "scene": {
     "type": "timeline",
     "head": {
@@ -161,7 +161,7 @@
    }
   },
   {
-   "vo": "Brar finished with four for thirty and the player of the match award. Anshul Kamboj took two for twenty-five, and Nabi two for thirty-one.",
+   "vo": "बराड़ finished with four for thirty and the player of the match award. अंशुल कंबोज took two for twenty-five, and Nabi two for thirty-one.",
    "scene": {
     "type": "stats",
     "head": {
@@ -231,7 +231,7 @@
    }
   },
   {
-   "vo": "Then Kyle Jamieson took over. At six foot eight, he's built for a pitch like this. He worked over रोहित शर्मा before getting him caught for twenty-three. He got श्रेयस अय्यर with a short ball that seamed in, and took the edge through to the keeper. And later, Kamboj top-edged him to deep third.",
+   "vo": "Then Kyle Jamieson took over. At six foot eight, he's built for a pitch like this. He worked over रोहित शर्मा before getting him caught for twenty-three. He got श्रेयस अय्यर with a short ball that seamed in, and took the edge through to the keeper. And later, कंबोज top-edged him to deep third.",
    "scene": {
     "type": "fieldplan",
     "head": {
@@ -288,7 +288,7 @@
    }
   },
   {
-   "vo": "From there, India kept losing wickets. Four for one. Seventeen for two. Thirty-nine for three. Forty-seven for four. Then अय्यर at eighty-six, Naman Dhir at one hundred and eight, and Kamboj at one hundred and eleven.",
+   "vo": "From there, India kept losing wickets. Four for one. Seventeen for two. Thirty-nine for three. Forty-seven for four. Then अय्यर at eighty-six, Naman Dhir at one hundred and eight, and कंबोज at one hundred and eleven.",
    "scene": {
     "type": "timeline",
     "head": {
@@ -386,7 +386,7 @@
    }
   },
   {
-   "vo": "The man who stood still in the chaos was KL Rahul: twenty-six not out off thirty-eight balls. Not glamorous, but without him there was no par to beat.",
+   "vo": "The man who stood still in the chaos was के एल राहुल: twenty-six not out off thirty-eight balls. Not glamorous, but without him there was no par to beat.",
    "scene": {
     "type": "bignum",
     "head": {
@@ -455,11 +455,11 @@
    }
   },
   {
-   "vo": "India's plan: Gurnoor Brar's hard length, with a packed slip cordon. Four for thirty.",
+   "vo": "India's plan: गुरनूर बराड़'s hard length, with a packed slip cordon. Four for thirty.",
    "scene": {
     "type": "board",
     "tone": "cream",
-    "tag": "THE HARD LENGTH",
+    "tag": "TACTICS BOARD",
     "fielders": [
      "keeper",
      "slip",
@@ -515,7 +515,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "JAMIESON'S BOUNCER",
+    "tag": "TACTICS BOARD",
     "head": [
      "Jamieson's bouncer"
     ],
@@ -608,7 +608,7 @@
    }
   },
   {
-   "vo": "India's plan: Gurnoor Brar's hard length, with a packed slip cordon. Four for thirty.",
+   "vo": "India's plan: गुरनूर बराड़'s hard length, with a packed slip cordon. Four for thirty.",
    "scene": {
     "type": "fieldplan",
     "head": {

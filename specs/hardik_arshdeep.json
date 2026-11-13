@@ -157,7 +157,7 @@
    }
   },
   {
-   "vo": "Now look at what मुंबई get. अर्शदीप सिंह has taken one hundred and eleven IPL wickets for पंजाब, in ninety-six matches. He was the first पंजाब bowler ever to reach a hundred. He's India's leading wicket-taker in T20 internationals. And at twenty-seven, he's in his prime.",
+   "vo": "Now look at what मुंबई get. अर्शदीप सिंह has taken one hundred and eleven IPL wickets for पंजाब, in ninety-six matches. He was the first पंजाब bowler ever to reach a hundred. He's India's leading wicket-taker in T-twenty internationals. And at twenty-seven, he's in his prime.",
    "scene": {
     "type": "bignum",
     "head": {
@@ -394,7 +394,7 @@
    }
   },
   {
-   "vo": "अर्शदीप has one hundred and eleven IPL wickets, and he's India's leading T20I wicket-taker.",
+   "vo": "अर्शदीप has one hundred and eleven IPL wickets, and he's India's leading T-twenty international wicket-taker.",
    "scene": {
     "type": "bignum",
     "value": 111,

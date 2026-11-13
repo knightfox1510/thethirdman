@@ -805,11 +805,11 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
         ca = clamp((lt - t0) / .5) if i == 1 else 1
         c.saveLayerAlpha(None, int(255 * ca)); chrome(c, g, spec, T, total, last); c.restore()
     if film: _looks.film_end(c, g, T, frame)
-    if spec.get("captions") in ("lab", "serif") and grps is not None and (g.fmt == "short" or spec.get("captions_long", True)):
+    if spec.get("burn_captions") is True and spec.get("captions") in ("lab", "serif") and grps is not None:
         if s["type"] not in NO_CAPTION and not s.get("no_captions"): _looks.captions(c, g, lt - lead, grps, spec["captions"], s)
     # burned-in captions are off by default (on-screen graphics carry the key text; .srt ships alongside);
     # a spec can opt back in with "burn_captions": true
-    if g.fmt == "short" and grps is not None and spec.get("captions") == "v2":
+    if g.fmt == "short" and grps is not None and spec.get("captions") == "v2" and spec.get("burn_captions") is True:
         if s["type"] not in NO_CAPTION and not s.get("no_captions"): captions_v2(c, g, lt - lead, grps)
     elif g.fmt == "short" and grps is not None and s["type"] != "cta" and spec.get("burn_captions"):
         captions(c, g, lt - lead, grps)
@@ -925,6 +925,9 @@ def lint_vo(spec):
 def build(spec_path, fmt):
     spec = json.load(open(spec_path)); slug = spec["slug"]
     lint_vo(spec)
+    import voice_lint
+    errs = voice_lint.check_spec(spec, (fmt,))
+    if errs: raise SystemExit("pronunciation rules (run python3 voice_lint.py --fix):\n  " + "\n  ".join(errs))
     apply_theme(theme_for(spec, fmt))
     base = f"{ROOT}/out/{slug}/{fmt}"; os.makedirs(base, exist_ok=True)
     scenes = spec[fmt]
@@ -2031,6 +2034,8 @@ NUMWORDS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eigh
             "seventy", "eighty", "ninety", "hundred", "thousand", "half", "double", "first", "never", "best", "worst"}
 
 
+import voice_lint as _vl
+SHOW.update({k: v for k, v in _vl.show_map().items() if k not in SHOW})
 import looks as _looks
 _looks.install(sys.modules[__name__])
 CLASSIC_DRIFT = {"statement", "bignum", "bars", "compare", "list", "timeline", "stats", "scorecard", "line", "gauge", "over", "swap", "field", "fieldplan", "trajectory", "matchup"}

@@ -29,7 +29,7 @@
  ],
  "short": [
   {
-   "vo": "Jasprit बुमराह's twenty twenty-four IPL was one of the best fast-bowling seasons ever. So we asked a model: has anyone ever bowled like that?",
+   "vo": "जसप्रीत बुमराह's twenty twenty-four IPL was one of the best fast-bowling seasons ever. So we asked a model: has anyone ever bowled like that?",
    "scene": {
     "type": "lab_title",
     "kicker": "THE LAB · EP. 2",
@@ -38,11 +38,23 @@
      "Bumrah's",
      "[bowling twin?]"
     ],
-    "tokens": [
+    "players": [
      {
-      "t": "JB",
       "kit": "MI",
-      "name": "Bumrah 2024"
+      "pose": "bowl",
+      "cap": true,
+      "name": "Jasprit Bumrah",
+      "sub": "Mumbai Indians · IPL 2024",
+      "chips": [
+       [
+        "6.48",
+        "economy"
+       ],
+       [
+        "20",
+        "wickets"
+       ]
+      ]
      }
     ]
    }
@@ -142,7 +154,7 @@
    }
   },
   {
-   "vo": "Fifth, Sunil Narine, in twenty thirteen. Fourth, भुवनेश्वर, in twenty twenty-six. Third, Mohsin Khan. Second, Anrich Nortje. And the closest of all? Dale Steyn.",
+   "vo": "Fifth, Sunil Narine, in twenty thirteen. Fourth, भुवनेश्वर, in twenty twenty-six. Third, मोहसिन ख़ान. Second, Anrich Nortje. And the closest of all? Dale Steyn.",
    "scene": {
     "type": "lab_radial",
     "kicker": "THE CLOSEST SEASONS",
@@ -719,7 +731,7 @@
    }
   },
   {
-   "vo": "Dale Steyn, for Sunrisers Hyderabad, in twenty thirteen. Nineteen wickets at five point six six. Both were near the top of their season for dot balls, and both went for under six an over against left-handers. The difference? Steyn was even harder to hit for six. Bumrah took wickets more often.",
+   "vo": "Dale Steyn, for Sunrisers हैदराबाद, in twenty thirteen. Nineteen wickets at five point six six. Both were near the top of their season for dot balls, and both went for under six an over against left-handers. The difference? Steyn was even harder to hit for six. बुमराह took wickets more often.",
    "scene": {
     "type": "lab_compare",
     "kicker": "#1 OF 502 · DISTANCE 1.89",

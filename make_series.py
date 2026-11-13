@@ -106,7 +106,7 @@ def to_lab(sc, i, slug, look):
             return {"type": "lab_big_text", "kicker": head, "lines": [f"[{ti[0]['v']}]", ti[0]["l"].capitalize()]}
         return {"type": "lab_big_text", "kicker": head, "lines": [f"[{ti[0]['v']}] {sc_(ti[0]['l']).lower()}.", f"[{ti[1]['v']}] {ti[1]['l'].lower()}."]}
     if t == "fieldplan":
-        d = {"type": "board", "tone": "cream" if i % 2 else "navy", "tag": head.upper(), "fielders": sc.get("fielders", []), "hl": sc.get("hl", []),
+        d = {"type": "board", "tone": "cream" if i % 2 else "navy", "tag": "TACTICS BOARD", "fielders": sc.get("fielders", []), "hl": sc.get("hl", []),
              "head": [sc_(head)], "foot": "Illustrative field"}
         if sc.get("length"): d["length"] = {"from": sc["length"]["from"], "to": sc["length"]["to"], "at": .2}
         if sc.get("hl"): d["zones"] = [{"pos": sc["hl"], "at": .35}]
@@ -114,7 +114,7 @@ def to_lab(sc, i, slug, look):
             d.setdefault("paths", []).append({"from": [0, .25], "to": s_["to"], "at": .5, "bend": .15})
         return d
     if t == "trajectory":
-        return {"type": "board", "tone": "navy", "tag": head.upper(), "head": [sc_(head)], "fielders": ["keeper", "slip", "gully", "fine leg", "deep square leg"],
+        return {"type": "board", "tone": "navy", "tag": "TACTICS BOARD", "head": [sc_(head)], "fielders": ["keeper", "slip", "gully", "fine leg", "deep square leg"],
                 "length": {"from": 9, "to": 12, "at": .15, "c": "red"}, "paths": [{"from": [0.06, -0.42], "to": [0, .1], "at": .3, "bend": 0, "c": "red"}],
                 "foot": "Illustrative"}
     if t == "matchup":
@@ -138,6 +138,7 @@ def convert_whatif(slug):
     for k in content[:-1]: sh[k]["scene"]["film"] = True
     sh[content[-1]]["scene"]["film"] = False          # back to colour: today
     spec["theme"] = "stadium"; spec["captions"] = "serif"; spec["series"] = "whatif"
+    import voice_lint; voice_lint.fix_spec(spec)
     json.dump(spec, open(p, "w"), ensure_ascii=False, indent=1)
     return slug
 
@@ -163,6 +164,7 @@ def convert(slug, look):
     spec["captions"] = "serif" if look in ("tactics", "whatif") else "lab"
     spec["series"] = look
     spec.pop("venue", None)
+    import voice_lint; voice_lint.fix_spec(spec)
     json.dump(spec, open(p, "w"), ensure_ascii=False, indent=1)
     return slug
 

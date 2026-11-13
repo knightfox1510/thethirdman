@@ -22,7 +22,7 @@
  },
  "long": [
   {
-   "vo": "In a format built to destroy bowlers, जसप्रीत बुमराह concedes less than six runs an over at T20 World Cups. Five point six six, across forty wickets. That number shouldn't be possible.",
+   "vo": "In a format built to destroy bowlers, जसप्रीत बुमराह concedes less than six runs an over at T-twenty World Cups. Five point six six, across forty wickets. That number shouldn't be possible.",
    "scene": {
     "type": "bignum",
     "value": 5.66,
@@ -205,7 +205,7 @@
    }
   },
   {
-   "vo": "Is बुमराह the greatest T20 bowler ever? Tell us in the comments, and subscribe for more.",
+   "vo": "Is बुमराह the greatest T-twenty bowler ever? Tell us in the comments, and subscribe for more.",
    "scene": {
     "type": "cta",
     "lines": [
@@ -222,7 +222,7 @@
  ],
  "short": [
   {
-   "vo": "जसप्रीत बुमराह concedes five point six six an over at T20 World Cups.",
+   "vo": "जसप्रीत बुमराह concedes five point six six an over at T-twenty World Cups.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -364,7 +364,7 @@
    }
   },
   {
-   "vo": "Is he the greatest T20 bowler ever? Full breakdown on the channel.",
+   "vo": "Is he the greatest T-twenty bowler ever? Full breakdown on the channel.",
    "scene": {
     "type": "cta",
     "lines": [
@@ -388,7 +388,7 @@
  "theme_long": "whites",
  "short_classic": [
   {
-   "vo": "जसप्रीत बुमराह concedes five point six six an over at T20 World Cups.",
+   "vo": "जसप्रीत बुमराह concedes five point six six an over at T-twenty World Cups.",
    "scene": {
     "type": "bignum",
     "value": 5.66,
@@ -469,7 +469,7 @@
    }
   },
   {
-   "vo": "Is he the greatest T20 bowler ever? Full breakdown on the channel.",
+   "vo": "Is he the greatest T-twenty bowler ever? Full breakdown on the channel.",
    "scene": {
     "type": "cta",
     "lines": [

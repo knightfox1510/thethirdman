@@ -148,6 +148,7 @@ def convert(slug):
         out.append({"vo": para["vo"], "scene": new})
     spec["short"] = out
     spec["theme"] = "stadium"; spec["captions"] = "v2"; spec["venue"] = cfg["venue"]
+    import voice_lint; voice_lint.fix_spec(spec)
     json.dump(spec, open(p, "w"), ensure_ascii=False, indent=1)
     return slug
 

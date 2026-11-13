@@ -71,7 +71,7 @@ AS = {"t": "AS", "kit": "SRH", "name": "Abhishek 2026"}; GMt = {"t": "GM", "kit"
 for k, w in enumerate(["closest", "second", "third", "fourth", "fifth"]): radial_items[k]["word"] = w
 def S(vo, scene): return {"vo": vo, "scene": scene}
 hook = S("There's nobody like अभिषेक शर्मा. Or is there? We built a model to find his statistical twin.",
-         {"type": "lab_title", "kicker": "THE LAB · EP. 1", "lines": ["Who is", "Abhishek Sharma's", "[statistical twin?]"], "tokens": [AS]})
+         {"type": "lab_title", "kicker": "THE LAB · EP. 1", "lines": ["Who is", "Abhishek Sharma's", "[statistical twin?]"], "players": [{"kit": "SRH", "pose": "raise", "name": "Abhishek Sharma", "sub": "Sunrisers · IPL 2026", "chips": [[f"{AB.runs:.0f}", "runs"], [f"{AB.SR:.1f}", "strike rate"]]}]})
 inputs = S(f"Step one. Eleven measures, from every ball he faced in twenty twenty-six. Each one is ranked against the thirty batters who faced two hundred balls or more.",
            dict(type="lab_dots", kicker="STEP 1 · THE INPUTS", title="11 measures.", sub="IPL 2026 · percentile v the 30 batters with 200+ balls",
                 rows=dotrows({}), foot=FOOT, **sp(0)))
@@ -162,5 +162,6 @@ spec["yt"] = {"long": {"title": "Who is Abhishek Sharma's statistical twin? We r
               "short": {"title": "Abhishek Sharma's statistical twin? The model says... 🧪 #Shorts",
                         "description": "The Lab, Ep. 1: 11 measures, 405 IPL seasons, one nearest neighbour.",
                         "tags": ["Abhishek Sharma", "Glenn Maxwell", "IPL", "cricket stats", "The Lab", "The Third Man"]}}
+import voice_lint; voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/lab_ep1_abhishek_twin.json", "w"), ensure_ascii=False, indent=1)
 print("short words", sum(len(x["vo"].split()) for x in spec["short"]), "long words", sum(len(x["vo"].split()) for x in spec["long"]))

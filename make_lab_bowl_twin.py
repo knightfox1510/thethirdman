@@ -24,7 +24,7 @@ rows = [dict(label=NM[m], v=round(float(JB["p_" + m])), text=f"{JB[m]:.1f}") for
 for r, m in zip(rows, M):
     if m in ("Dot %", "Balls per six"): r.update(hl=True, at=.3 if m == "Dot %" else .55, badge="#1")
 hook = S("Jasprit बुमराह's twenty twenty-four IPL was one of the best fast-bowling seasons ever. So we asked a model: has anyone ever bowled like that?",
-         {"type": "lab_title", "kicker": "THE LAB · EP. 2", "lines": ["Who is", "Bumrah's", "[bowling twin?]"], "tokens": [{"t": "JB", "kit": "MI", "name": "Bumrah 2024"}]})
+         {"type": "lab_title", "kicker": "THE LAB · EP. 2", "lines": ["Who is", "Bumrah's", "[bowling twin?]"], "players": [{"kit": "MI", "pose": "bowl", "cap": True, "name": "Jasprit Bumrah", "sub": "Mumbai Indians · IPL 2024", "chips": [[f"{JB.Economy:.2f}", "economy"], [str(JB.wkts), "wickets"]]}]})
 inputs = S("Ten measures from every ball he bowled. Economy overall, in the powerplay and at the death. Dot balls. Sixes. Where he bowls, and who to. He ranked first in his season for dot balls, and for balls per six.",
            dict(type="lab_dots", kicker="STEP 1 · THE INPUTS", title="10 measures.", sub="IPL 2024 · percentile v that season's bowlers (180+ balls)", rows=rows, **sp(0)))
 assert JB["p_Dot %"] == 100 and JB["p_Balls per six"] == 100
@@ -80,5 +80,6 @@ for k, nm in [(0, "The question"), (1, "The inputs"), (3, "The twin"), (5, "The 
 spec["yt"] = {"long": {"title": "Who is Bumrah's bowling twin? We ran 513 IPL seasons through a model", "description": "The Lab, Episode 2: Jasprit Bumrah's 2024 IPL season, matched against every IPL bowling season since 2013. Plus the twins of IPL 2026's top wicket-takers.",
                        "tags": ["Jasprit Bumrah", "Dale Steyn", "IPL stats", "Bhuvneshwar Kumar", "Lasith Malinga", "cricket analytics", "The Lab", "The Third Man"]},
               "short": {"title": "Bumrah's bowling twin? The model found a legend 🧪 #Shorts", "description": "The Lab, Ep. 2: 10 measures, 513 IPL bowling seasons, one nearest neighbour.", "tags": ["Bumrah", "Dale Steyn", "IPL", "The Lab", "The Third Man"]}}
+import voice_lint; voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/lab_ep2_bumrah_twin.json", "w"), ensure_ascii=False, indent=1)
 print("short words", sum(len(x["vo"].split()) for x in spec["short"]), "long", sum(len(x["vo"].split()) for x in spec["long"]))

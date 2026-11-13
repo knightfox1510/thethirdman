@@ -38,11 +38,22 @@
      "Abhishek Sharma's",
      "[statistical twin?]"
     ],
-    "tokens": [
+    "players": [
      {
-      "t": "AS",
       "kit": "SRH",
-      "name": "Abhishek 2026"
+      "pose": "raise",
+      "name": "Abhishek Sharma",
+      "sub": "Sunrisers · IPL 2026",
+      "chips": [
+       [
+        "563",
+        "runs"
+       ],
+       [
+        "204.7",
+        "strike rate"
+       ]
+      ]
      }
     ]
    },
@@ -1436,11 +1447,22 @@
      "Abhishek Sharma's",
      "[statistical twin?]"
     ],
-    "tokens": [
+    "players": [
      {
-      "t": "AS",
       "kit": "SRH",
-      "name": "Abhishek 2026"
+      "pose": "raise",
+      "name": "Abhishek Sharma",
+      "sub": "Sunrisers · IPL 2026",
+      "chips": [
+       [
+        "563",
+        "runs"
+       ],
+       [
+        "204.7",
+        "strike rate"
+       ]
+      ]
      }
     ]
    },
@@ -3131,7 +3153,7 @@
    }
   },
   {
-   "vo": "And इशान किशन's twenty twenty-six looks like KL Rahul's twenty sixteen. Very different numbers, until you put each one in its own season.",
+   "vo": "And इशान किशन's twenty twenty-six looks like के एल राहुल's twenty sixteen. Very different numbers, until you put each one in its own season.",
    "scene": {
     "type": "lab_compare",
     "kicker": "LIGHTNING ROUND · DISTANCE 1.29",

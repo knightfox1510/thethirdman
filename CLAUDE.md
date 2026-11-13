@@ -6,6 +6,10 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - API keys come ONLY from env vars: `XI_KEY` (ElevenLabs), `SM_KEY` (Sportmonks), and for publishing `G_CLIENT_ID`, `G_CLIENT_SECRET`, `G_DRIVE_TOKEN`, `G_YT_TOKEN`. Never write them into any file, spec, commit or log (publish/gauth.py also reads a RAM-only /dev/shm file during a session).
 - Upload to YouTube only when the user asks. Drive sync (publish/drive.py) runs after every build.
 
+## Hard rules (the owner has flagged these repeatedly)
+- NO burned-in captions/subtitles in ANY video, long or Short, any series. The engine only draws them if a spec sets "burn_captions": true - never set it. Ship the .srt instead.
+- Pronunciation: every subcontinent player name (first AND last, e.g. जसप्रीत बुमराह, राशिद ख़ान, के एल राहुल) and Indian place names are Devanagari in `vo`; "U19" is spoken "Under nineteen"; "T20" is written "T-twenty"; no digits. voice_lint.py enforces this and engine builds FAIL on violations - add new names to voice_lint.NAMES (SHOW is filled from it).
+
 ## Voice (ElevenLabs "Ruhaan", eleven_multilingual_v2)
 - Write Indian player names in Devanagari in `vo` (e.g. अभिषेक शर्मा). Add each new name to `SHOW` in engine.py so captions show English.
 - Write for the ear: short sentences, and a comma wherever a narrator would breathe. The build warns about 15+ words without punctuation. Pauses come from punctuation: breathe() in engine.py guarantees a pause at every . ? ! : ; , and scene gaps follow how the paragraph ends.
@@ -30,7 +34,7 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 
 ## Production defaults (every new video; use each where it fits the story)
 - Hook: a number or the key claim on screen within 2 seconds. No slow title card first.
-- Shorts use the stadium-stage look: theme "stadium", captions "v2", "stage" scenes with the illustrated player (no likeness of anyone real).
+- Shorts use the stadium-stage look: theme "stadium", "stage" scenes with the illustrated player (no likeness of anyone real).
 - Pick a pose for each beat: walk (entrance), stance, drive, pull, run, bowl, celebrate, raise (milestone), dejected (failure), stand.
 - Put the opponent in the frame on "versus" beats: a second avatar in their kit (e.g. NZ for a semi against New Zealand).
 - Show the ball when a moment is about a shot: "ball": {"word": ..., "shot": six|four}, with "hit" on the batter. Use a side view ("view": "side") for shots.
