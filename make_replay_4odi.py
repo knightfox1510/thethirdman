@@ -54,7 +54,7 @@ print("all facts asserted")
 
 # ---------------------------------------------------------------- helpers
 def S(vo, sc, **kw): return dict({"vo": vo, "scene": sc}, **kw)
-FOOT = "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+FOOT = None   # no on-screen source footers (owner rule); sources go in the description and spec["sources"]
 KIT_NZ = dict(kit="NZ", cap=True); KIT_IN = dict(kit="IND")
 YOUNG_SHOTS = [[int(r.wagon_x), int(r.wagon_y), int(r.bat_runs)] for r in yl.itertuples() if r.bat_runs > 0]
 assert len(YOUNG_SHOTS) == int((yl.bat_runs > 0).sum())
@@ -100,7 +100,7 @@ long = [
        {"label": "Kuldeep", "v": 175, "text": "175 · 42 off 24", "hl": True, "word": "kuldeep"}, {"label": "Arshdeep", "v": 147, "text": "147 · 22 off 15"}, {"label": "Brar", "v": 145, "text": "145 · 32 off 22"},
        {"label": "Nabi", "v": 71, "text": "71 · 12 off 17"}, {"label": "Axar", "v": 57, "text": "57 · 16 off 28"}], "foot": FOOT}),
  S("And he nearly wasn't there. In the second over, Young was put down twice, off consecutive balls, both off आक़िब नबी. The first was a regulation chance at slip, dropped by रोहित शर्मा. Young had made five. He went on to score a hundred and twenty more.",
-   {"type": "lab_big", "kicker": "TWO LIVES", "title": "In the second over.", "value": 120, "suffix": " runs", "label": "scored by Young after being dropped twice off consecutive balls, at five", "color": "red", "foot": "Cricbuzz match commentary (dropped-catch events) · our own analysis"}),
+   {"type": "lab_big", "kicker": "TWO LIVES", "title": "In the second over.", "value": 120, "suffix": " runs", "label": "scored by Young after being dropped twice off consecutive balls, at five", "color": "red", "foot": None}),
  S("So which of India's bowlers deserved more? Arshdeep Singh made Young and the others look uncomfortable, on a third of his balls, and took one wicket. आक़िब नबी, a quarter of his balls, four wickets. And Kuldeep Yadav bowled eight overs for seventy-three, with nothing to show.",
    {"type": "lab_dots", "kicker": "INDIA'S BOWLERS · % OF BALLS BATTER NOT IN CONTROL", "title": "Luck, and the lack of it.", "domain": [0, 40], "ticks": [0, 20, 40], "rows": [
        {"label": "Arshdeep · 1 wkt", "v": 33, "text": "33%", "hl": True, "word": "arshdeep"}, {"label": "Nabi · 4 wkts", "v": 25, "text": "25%", "hl": True},

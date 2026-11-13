@@ -12,6 +12,7 @@ from gfx import text, rrect, paint, prog, eo, eio, eback, clamp, twidth
 E = None          # the engine module (set by install)
 HL = (255, 214, 0)        # highlighter yellow
 RED = (214, 36, 56)
+SHOW_FOOT = False         # Lab scenes never draw the "foot" source line (sources go in the description)
 
 gfx.TF.update({
     "serif": skia.Typeface.MakeFromFile(gfx.FD + "PlayfairBold.ttf"),
@@ -157,7 +158,7 @@ def header(c, g, t, D, s, ink=None, tf="interB"):
         c.restore()
     if s.get("sub"):
         text(c, s["sub"], l["x0"], l["sub"], 24 if g.fmt == "short" else 22, "mono", gfx.MUTED, a)
-    if s.get("foot"):
+    if s.get("foot") and SHOW_FOOT:      # owner rule: no on-screen source footers in Lab scenes
         fy = l["foot"]
         for k, ln in enumerate(E.wrap(s["foot"], l["x1"] - l["x0"], 19, "mono")[:3]):
             text(c, ln, l["x0"], fy + k * 26, 19, "mono", gfx.MUTED, a * .9)
