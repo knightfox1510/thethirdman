@@ -777,7 +777,7 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     global VENUE
     VENUE = spec.get("venue") or {}
     if words is not None: autocue(s, words, lead)
-    if s.get("type") == "stage": stage_events(s, D, words, lead)
+    if s.get("type") in ("stage", "cam"): stage_events(s, D, words, lead)
     _looks.resolve_words(s, words, lead)
     film = _looks.film_on(spec, s)
     if film: _looks.film_begin(c)
@@ -1971,6 +1971,11 @@ def sfx_events(spec, fmt, meta, lead, durs, starts):
             if e.get("word"):
                 tm = next((lead[i] + w["s"] for w in words if _norm(w["w"]) == _norm(e["word"])), tm)
             ev.append([T0 + tm, e["kind"], e.get("gain", 1)])
+        if s.get("type") == "cam":
+            stage_events(s, D, words, lead[i]); ev += _broadcast.sfx(s, D, T0)
+            p = s.get("panel", {})
+            if p: ev.append([T0 + max(0, D * p.get("at", .05) - .1), "whoosh", 1])
+            continue
         if s.get("type") != "stage":
             _looks.resolve_words(s, words, lead[i]); ev += _looks.extra_sfx(s, D, T0)
             if s.get("type") in CLASSIC_DRIFT:             # classic scenes: a soft whoosh in, a tick when a big number lands
@@ -2038,6 +2043,7 @@ import voice_lint as _vl
 SHOW.update({k: v for k, v in _vl.show_map().items() if k not in SHOW})
 import looks as _looks
 _looks.install(sys.modules[__name__])
+import broadcast as _broadcast; _broadcast.install(sys.modules[__name__])
 CLASSIC_DRIFT = {"statement", "bignum", "bars", "compare", "list", "timeline", "stats", "scorecard", "line", "gauge", "over", "swap", "field", "fieldplan", "trajectory", "matchup"}
 CAPW = {"v2": 34, "lab": 60, "serif": 50}
 
