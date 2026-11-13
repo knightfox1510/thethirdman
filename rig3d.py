@@ -49,6 +49,8 @@ DEFEND = dict(yaw=-math.pi / 2, pelvis=.78, lean=.62, look=math.pi, feet=[(.30, 
 DEJECT = dict(yaw=-math.pi / 2 + .6, pelvis=.88, lean=.55, look=0.0, feet=[(.04, 0, -.26), (-.04, 0, .26)], hands=[(.15, .45, -.1), (.2, .35, .1)])
 KEEP = dict(yaw=math.pi, pelvis=.50, lean=.35, look=math.pi, feet=[(.0, 0, -.28), (.0, 0, .28)], hands=[(.50, .45, -.20), (.50, .45, .20)])
 STAND = dict(yaw=0.0, pelvis=.98, lean=.0, look=0.0, feet=[(0, 0, -.12), (0, 0, .12)], hands=[(.0, .90, -.24), (.0, .90, .24)])
+READY = dict(yaw=math.pi, pelvis=.80, lean=.30, look=math.pi, feet=[(.0, 0, -.25), (.0, 0, .25)], hands=[(.45, .70, -.22), (.45, .70, .22)])
+CATCH = dict(yaw=math.pi, pelvis=.95, lean=.0, look=math.pi, feet=[(.0, 0, -.22), (.0, 0, .22)], hands=[(.25, 1.9, -.16), (.25, 1.9, .16)])
 CELEB = dict(yaw=math.pi, pelvis=.95, lean=-.1, look=math.pi, feet=[(0, 0, -.2), (0, 0, .2)], hands=[(.1, 2.2, -.38), (.1, 2.2, .38)])
 
 

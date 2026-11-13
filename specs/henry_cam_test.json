@@ -140,7 +140,12 @@
       }
      ],
      "at": 0.05
-    }
+    },
+    "wagon": [
+     164,
+     142
+    ],
+    "catch": "field"
    }
   },
   {
@@ -229,7 +234,7 @@
    "vo": "Ball six. श्रेयस अय्यर, first ball. Lbw. Nought.",
    "scene": {
     "type": "cam",
-    "hand": "L",
+    "hand": "R",
     "bowler": {
      "kit": "NZ"
     },

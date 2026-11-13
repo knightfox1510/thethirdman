@@ -37,6 +37,25 @@ def _geom(s):
     return hand, off, zb, xb, T
 
 
+WAGON_C, BOUNDARY = 181.0, 65.0           # Cricinfo wagon grid centre (px) and an assumed boundary radius (m): positions are approximate
+
+
+def wagon_to_world(wx, wy):
+    """Cricinfo wagon (x across, y toward the bowler) -> world metres on the field. Verified: RH cover drives sit at low x, LH at high x."""
+    return (wx - WAGON_C) / WAGON_C * BOUNDARY, PL - (wy - WAGON_C) / WAGON_C * BOUNDARY
+
+
+def fielder_pos(s):
+    """Where the catcher stands: from the scene's wagon coordinates, else a keeper/bowler/default position by catch type."""
+    if "_fp" in s: return s["_fp"]
+    kind = s.get("catch", "field"); hand, off, zb, xb, T = _geom(s)
+    if kind == "keeper": fp = (0.4 * off, PL + 8.0)
+    elif kind == "bowler": fp = (0.0, -1.0)
+    elif s.get("wagon"): fp = wagon_to_world(*s["wagon"])
+    else: fp = (-off * 5.5, PL - 7.0)
+    s["_fp"] = fp; return fp
+
+
 def ball_state(s, t, tR, tc):
     """(x, y, z) of the ball, or None. Hand -> bounce -> target before contact, then the result path."""
     hand, off, zb, xb, T = _geom(s)
@@ -50,8 +69,9 @@ def ball_state(s, t, tR, tc):
         if res == "bowled": return None
         if res == "lbw": return (T[0], max(.04, T[1] * (1 - 3 * u) * (u < .35) + .04), T[2] - .5 * u)
         if res == "caught":
-            fx, fz = -off * 5.5, PL - 7.0; q = min(1, u / 1.1)
-            return (lerp(T[0], fx, q), T[1] + 5.5 * 4 * q * (1 - q), lerp(T[2], fz, q))
+            fx, fz = fielder_pos(s); dist = math.hypot(fx - T[0], fz - T[2]); Tf = max(.9, dist / 16 + .55); q = min(1, u / Tf)
+            apex = min(14.0, 2.5 + dist * .2)
+            return (lerp(T[0], fx, q), lerp(T[1], 1.2, q) + apex * 4 * q * (1 - q), lerp(T[2], fz, q))
         return (lerp(T[0], T[0] + off * .3, min(1, u / 1.2)), lerp(T[1], .1, min(1, u / 1.2)), T[2] + 14 * min(1, u / 1.2))
     return None
 
@@ -87,7 +107,9 @@ def _plan(s, D, g, t):
         m = eio(prog(t, tc, tc + .55))
         if res == "bowled": tgt = (look(zc, h, .4, PL), g.W * 7.2)
         elif res == "lbw": tgt = (look(zc, h, .5, PL - .6), g.W * 6.0)
-        elif res == "caught": tgt = (look(zc, h, 1.2, PL - 3.0), g.W * 3.2)
+        elif res == "caught":
+            bb = ball_state(s, t, tR, tc) or (T[0], T[1], T[2]); fx, fz = fielder_pos(s)
+            tgt = (look(zc, h, bb[1] * .6, bb[2]), lerp(g.W * 4.0, g.W * 3.0, min(1, math.hypot(fx - T[0], fz - T[2]) / 25)))
         else: tgt = (look(zc, h, .5, PL + 4.0), g.W * 3.6)
         th0 = look(zc, h, T[1] + .2, T[2]); f0 = g.W * 5.2
         th, f = lerp(th0, tgt[0], m), lerp(f0, tgt[1], m)
@@ -190,7 +212,10 @@ def sc_cam(c, g, t, D, s):
         bp = {"bowled": R.blend(R.STANCE, R.DEJECT, u_), "lbw": R.blend(R.STANCE, R.DEJECT, eio(prog(t, tc + .25, tc + .9))),
               "caught": R.blend(R.STANCE, R.DEFEND, min(1, u_ * 2)), "dot": R.blend(R.STANCE, R.DEFEND, min(1, u_ * 2))}[res]
     R.figure(c, cam, -off * .0 + .0, PL - 1.0, bp, btk, bat=True, pads=True, flip=(hand < 0))
-    if res == "caught" and t >= tc + .6: R.figure(c, cam, -off * 5.5, PL - 7.0, R.CELEB, bk, cap=True)
+    if res == "caught":
+        fx, fz = fielder_pos(s); dist = math.hypot(fx - T[0], fz - T[2]); tcatch = tc + max(.9, dist / 16 + .55)
+        fp = R.READY if t < tcatch - .35 else (R.CATCH if t < tcatch + .5 else R.CELEB)
+        R.figure(c, cam, fx, fz, fp, bk, cap=True)
     bs = ball_state(s, t, tR, tc)
     if bs:
         u, v, k = cam.p(*bs); r = max(5.0, .09 * k)
