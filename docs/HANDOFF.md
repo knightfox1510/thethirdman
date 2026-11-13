@@ -14,3 +14,8 @@
 
 ## Env vars a session needs (never commit): XI_KEY, G_CLIENT_ID, G_CLIENT_SECRET, G_YT_TOKEN (upload scopes), G_DRIVE_TOKEN, TTM_SITE_URL, TTM_SITE_KEY, SM_KEY.
 ## To resume: clone this repo, run setup.sh, read CLAUDE.md and this file, then continue. Renders (out/, deliver/, vo/) are rebuilt with ./batch.sh <slug>; narration is cached per paragraph only within a session's disk.
+
+## Getting finished videos into a fresh session (Drive pull)
+Renders are not in git, but every build is synced to Drive. In a new session, with G_CLIENT_ID, G_CLIENT_SECRET and G_DRIVE_TOKEN set:
+    python3 publish/drive.py pull hardik_arshdeep flip_mi_captains
+This downloads the slug's files (mp4, .srt, cover, thumbnail) from Drive (Videos/ or Published_YT/) into deliver/<slug>/, skipping files that already match. Then upload with `python3 publish/youtube.py <slug> short` (privacy defaults to private). Only re-render (./batch.sh <slug>) when the spec changed; that needs XI_KEY and re-bills narration.

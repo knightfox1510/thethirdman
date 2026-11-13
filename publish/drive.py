@@ -1,5 +1,6 @@
 """Sync finished videos to Google Drive, archiving the previous version.
-    python3 publish/drive.py <slug> [<slug> ...]      # or: all
+    python3 publish/drive.py <slug> [<slug> ...]      # or: all   (upload)
+    python3 publish/drive.py pull <slug> [<slug> ...] # download a slug's files into deliver/<slug>/
 Layout in Drive:
     The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover), not yet posted
     The Third Man/Published_YT/<slug>/      the same, once anything from it has been uploaded to YouTube
@@ -105,7 +106,27 @@ def mark_published(slug):
     return "moved to Published_YT"
 
 
+def pull(slug, root_id):
+    """Download the current files of a video from Videos/ or Published_YT/ into deliver/<slug>/."""
+    import urllib.request
+    from gauth import token
+    cur = video_folder(slug, root_id)
+    dst = os.path.join(DELIVER, slug); os.makedirs(dst, exist_ok=True)
+    for f in children(cur):
+        if f["mimeType"] == FOLDER: continue
+        path = os.path.join(dst, f["name"])
+        if os.path.exists(path) and md5(path) == f.get("md5Checksum"): print(f"  same {f['name']}"); continue
+        req = urllib.request.Request(f"{D}/{f['id']}?alt=media", headers={"Authorization": "Bearer " + token("drive")})
+        with urllib.request.urlopen(req, timeout=600) as r, open(path + ".part", "wb") as o:
+            for b in iter(lambda: r.read(1 << 20), b""): o.write(b)
+        os.replace(path + ".part", path); print(f"  got  {f['name']}")
+
+
 if __name__ == "__main__":
+    if sys.argv[1:2] == ["pull"]:
+        rid = folder("The Third Man")
+        for s in sys.argv[2:]: print(f"== pull {s}"); pull(s, rid)
+        sys.exit(0)
     slugs = sys.argv[1:] or ["all"]
     if slugs == ["all"]: slugs = sorted(d for d in os.listdir(DELIVER) if os.path.isdir(os.path.join(DELIVER, d)))
     root_id = folder("The Third Man")
