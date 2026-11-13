@@ -54,7 +54,7 @@ CATCH = dict(yaw=math.pi, pelvis=.95, lean=.0, look=math.pi, feet=[(.0, 0, -.22)
 CELEB = dict(yaw=math.pi, pelvis=.95, lean=-.1, look=math.pi, feet=[(0, 0, -.2), (0, 0, .2)], hands=[(.1, 2.2, -.38), (.1, 2.2, .38)])
 
 
-def figure(c, cam, x, z, P, kit="IND", bat=False, pads=False, cap=False, brim=False, flip=False, a=1.0):
+def figure(c, cam, x, z, P, kit="IND", bat=False, pads=False, cap=False, brim=False, flip=False, a=1.0, sink=None):
     """Draw one cricketer at ground point (x, z). `flip` mirrors left/right (left-handers)."""
     shirt, trou = KITS.get(kit, kit if isinstance(kit, tuple) else KITS["IND"])
     if isinstance(kit, tuple): shirt, trou = kit, tuple(int(v * .6) for v in kit)
@@ -77,6 +77,7 @@ def figure(c, cam, x, z, P, kit="IND", bat=False, pads=False, cap=False, brim=Fa
     def P3(p): u, v, k = cam.p(*p); return u, v, k
 
     def seg(p0, p1, w, col, al=1.0):
+        if sink is not None: sink.append(("seg", p0, p1, w, col)); return
         a0, a1 = P3(p0), P3(p1)
         def d():
             pp = gfx.paint(col, a * al, stroke=max(1.5, w * (a0[2] + a1[2]) / 2)); pp.setStrokeCap(skia.Paint.kRound_Cap)
@@ -84,6 +85,7 @@ def figure(c, cam, x, z, P, kit="IND", bat=False, pads=False, cap=False, brim=Fa
         prims.append(((p0[2] + p1[2]) / 2, d))
 
     def dot_(p, rad, col, al=1.0):
+        if sink is not None: sink.append(("dot", p, rad, col)); return
         q = P3(p)
         def d(): c.drawCircle(q[0], q[1], max(1.5, rad * q[2]), gfx.paint(col, a * al))
         prims.append((p[2], d))
@@ -108,6 +110,7 @@ def figure(c, cam, x, z, P, kit="IND", bat=False, pads=False, cap=False, brim=Fa
             for k in range(3): seg(add(hp, (0, -.03 - .03 * k, -.0)), add(hp, (-.0, -.03 - .03 * k, 0)), .13, (200, 205, 215), .55)
     elif cap or brim: dot_(add(head, (0, .045, 0)), .12, shirt if cap else (245, 245, 245))
     else: dot_(add(head, (0, .045, 0)), .115, (40, 32, 28))                  # hair
+    if sink is not None: return
     prims.sort(key=lambda t: -t[0])                                         # far first
     sh0 = P3((x, 0, z)); c.drawOval(skia.Rect.MakeXYWH(sh0[0] - .5 * sh0[2], sh0[1] - .09 * sh0[2], 1.0 * sh0[2], .2 * sh0[2]), gfx.paint((0, 0, 0), .22 * a))
     for _, d in prims: d()
