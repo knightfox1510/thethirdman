@@ -1591,6 +1591,25 @@ def _pose(pose, t):
             j.update(head=(0, -86.5), shL=(-14, -74), shR=(14, -74), elL=(-16, -60), elR=(16, -60), hL=(-15, -47), hR=(15, -47),
                      bat=((15, -47), (.5, 1)))
         return j
+    if pose in ("point", "helmet", "arms_wide", "kneel", "catch"):
+        j = dict(view="front", hipL=(-7, -48), hipR=(7, -48), kneeL=(-8, -26), kneeR=(8, -26), ankL=(-9, -5), ankR=(9, -5),
+                 shL=(-15, -77), shR=(15, -77), head=(0, -90), bob=S(t * 2.1) * .35, bat=None)
+        if pose == "point":          # right arm out, finger up and forward; left hand on hip
+            k = S(t * 2.4) * 1.2
+            j.update(elR=(25, -84), hR=(35, -98 + k), elL=(-24, -62), hL=(-14, -50), head=(2, -91))
+        elif pose == "helmet":       # touches the helmet and looks to the sky: the milestone gesture
+            k = S(t * 2) * 1
+            j.update(elR=(21, -86), hR=(7, -94 + k), elL=(-17, -61), hL=(-16, -50), head=(0, -92), bat=((-16, -50), (.2, 1)))
+        elif pose == "arms_wide":    # soak it in
+            k = S(t * 2.2) * 1.5
+            j.update(elL=(-30, -78 + k), hL=(-45, -76 + k), elR=(30, -78 - k), hR=(45, -76 - k), head=(0, -92), ankL=(-12, -5), ankR=(12, -5))
+        elif pose == "kneel":        # knee slide
+            j.update(hipL=(-6, -40), hipR=(7, -40), kneeL=(-9, -12), ankL=(-14, -4), kneeR=(14, -27), ankR=(14, -5),
+                     shL=(-15, -69), shR=(15, -69), head=(0, -82), elL=(-26, -86), hL=(-30, -104), elR=(26, -86), hR=(30, -104), bob=0)
+        else:                        # catch: both hands cupped overhead
+            k = S(t * 3) * 1.2
+            j.update(elL=(-17, -92), hL=(-8, -108 + k), elR=(17, -92), hR=(8, -108 + k), head=(0, -91))
+        return j
     # side-on views, facing +x (to the bowler)
     j = dict(view="side", bob=0.0)
     if pose == "stance":
@@ -1620,6 +1639,30 @@ def _pose(pose, t):
         j.update(hb=hip, hf=(hip[0] + 2, hip[1]), kb=legs[1][0], ab=legs[1][1], kf=legs[0][0], af=legs[0][1],
                  sb=(sh[0] - 2, sh[1]), sf=(sh[0] + 2, sh[1]), head=(sh[0] + 6, sh[1] - 12),
                  eb=arms[1][0], wb=arms[1][1], ef=arms[0][0], wf=arms[0][1], bat=(arms[0][1], (1, .55)))
+    elif pose == "defend":       # forward defence: head over the ball, bat beside the front pad
+        j.update(ab=(-14, -5), af=(17, -5), kb=(-7, -25), kf=(13, -27), hb=(-1, -45), hf=(3, -45), sb=(6, -71), sf=(10, -71),
+                 head=(17, -83), eb=(8, -60), ef=(18, -62), wb=(15, -52), wf=(17, -54), bat=((16, -53), (.1, 1)))
+    elif pose == "cut":          # square cut: weight back, bat sweeping across at shoulder height
+        j.update(ab=(-18, -5), kb=(-10, -25), hb=(-3, -47), af=(12, -6), kf=(5, -27), hf=(2, -47), sb=(-1, -75), sf=(3, -75),
+                 head=(5, -88), eb=(6, -73), ef=(14, -76), wb=(19, -80), wf=(20, -82), bat=((20, -81), (1, .3)))
+    elif pose == "sweep":        # sweep: front knee down, bat low and across
+        j.update(ab=(-18, -3), kb=(-13, -14), hb=(-4, -30), af=(14, -3), kf=(10, -11), hf=(3, -32), sb=(6, -57), sf=(10, -56),
+                 head=(16, -67), eb=(10, -44), ef=(15, -44), wb=(18, -32), wf=(19, -33), bat=((18, -32), (1, .45)))
+    elif pose == "flick":        # whip off the pads, bat finishing high behind
+        j.update(ab=(-12, -5), kb=(-6, -26), hb=(-1, -47), af=(14, -5), kf=(10, -27), hf=(2, -47), sb=(1, -76), sf=(4, -76),
+                 head=(8, -89), eb=(1, -70), ef=(8, -76), wb=(-4, -80), wf=(0, -84), bat=((0, -84), (-.7, -.7)))
+    elif pose == "loft":         # lofted drive: weight back, bat finishing high and long
+        j.update(ab=(-15, -4), kb=(-8, -25), hb=(-2, -46), af=(14, -5), kf=(11, -27), hf=(2, -46), sb=(2, -75), sf=(6, -76),
+                 head=(10, -89), eb=(7, -86), ef=(13, -90), wb=(15, -101), wf=(16, -103), bat=((16, -102), (.7, -.7)))
+    elif pose == "spin":         # spinner's delivery: compact, high front arm
+        j.update(ab=(-10, -5), kb=(-5, -26), hb=(0, -47), af=(12, -5), kf=(7, -27), hf=(2, -47), sb=(0, -76), sf=(3, -76),
+                 head=(6, -89), eb=(3, -92), wb=(5, -108), ef=(13, -72), wf=(19, -68), ball=True)
+    elif pose == "keeper":       # wicketkeeper crouch
+        j.update(ab=(-8, -3), kb=(-8, -16), hb=(-3, -28), af=(8, -3), kf=(9, -16), hf=(2, -28), sb=(5, -52), sf=(9, -52),
+                 head=(16, -63), eb=(11, -40), ef=(17, -40), wb=(20, -26), wf=(21, -27))
+    elif pose == "dive":         # fielder at full stretch
+        j.update(hb=(-20, -22), hf=(-12, -24), kb=(-30, -18), ab=(-42, -14), kf=(-26, -22), af=(-38, -22), sb=(8, -30), sf=(12, -31),
+                 head=(24, -33), eb=(20, -30), wb=(34, -34), ef=(24, -28), wf=(36, -31), bob=-12)
     elif pose == "bowl":
         k = S(t * 2) * 1.5
         j.update(ab=(-15, -6), kb=(-9, -25), hb=(-1, -47), af=(16, -5), kf=(8, -26), hf=(1, -47), sb=(-1, -76), sf=(2, -76),
@@ -1868,7 +1911,7 @@ def _fig_h(g, A): return (470 if g.fmt == "short" else 520) * A.get("scale", 1.0
 def _ball_path(g, s, A, ax, ay, hh, tc, t):
     """Ball position (x, y, radius) at time t, or None; plus the contact point."""
     b = s["ball"]; side = s.get("view") == "side"; d = A.get("dir", 1); u = hh / 100
-    J = _pose(A.get("hit", "drive"), 0) if A.get("hit") in ("pull",) else None
+    J = _pose(A.get("hit", "drive"), 0) if A.get("hit") in ("pull", "cut", "sweep", "flick", "loft", "defend") else None
     if J and J.get("bat"):                            # meet the ball at the sweet spot of the shot's bat
         (hx, hy), (dx, dy) = J["bat"]; L0 = math.hypot(dx, dy); dx, dy = dx / L0, dy / L0
         kx, ky = hx - dx * 3.7 + dx * 33, hy - dy * 3.7 + dy * 33
@@ -1911,7 +1954,11 @@ def sc_stage(c, g, t, D, s):
     av = s.get("avatars", [])
     A0 = av[0] if av else {}
     fx = g.W * A0.get("x2", A0.get("x", .5)); fy = _feet(g) - _fig_h(g, A0) * .55
+    FX = s.get("fx", [])
+    tcs = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
     c.save(); c.translate(fx, fy); c.scale(z, z); c.translate(-fx, -fy)          # camera
+    if "shake" in FX and tcs is not None and tcs <= t < tcs + .6:               # impact shake
+        a_ = 14 * math.exp(-(t - tcs) * 9); c.translate(a_ * math.sin(t * 90), a_ * .6 * math.cos(t * 71))
     if gfx.THEME in ("stadium", "retro", "card", "lab"):
         stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))), far=True)
     tc = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
@@ -1924,6 +1971,12 @@ def sc_stage(c, g, t, D, s):
         hh = _fig_h(g, A)
         pose = A.get("pose", "stand")
         if tc is not None and k == ballk and A.get("hit") and t >= tc - .08: pose = A["hit"]
+        if "spot" in FX and k == 0: _fx_spot(c, g, ax, ay, hh, q, t)
+        if A.get("ghost") and tc is not None and k == ballk and A.get("hit") and tc - .1 <= t < tc + .6:      # motion afterimages
+            for j in (4, 3, 2, 1):
+                tt = t - j * .05; ps = A["hit"] if tt >= tc - .08 else A.get("pose", "stand")
+                avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60) - A.get("dir", 1) * j * 5, ay, hh, A.get("kit", "IND"), A.get("number"), ps, tt + k, q * (.05 + .07 * (5 - j)),
+                       dir=A.get("dir", 1), cap=A.get("cap"), pads=A.get("pads"), bat=A.get("bat"))
         avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"), pose, t + k, q,
                dir=A.get("dir", 1), cap=A.get("cap"), pads=A.get("pads"), bat=A.get("bat"))
         if tc is not None and k == ballk:
@@ -1947,7 +2000,45 @@ def sc_stage(c, g, t, D, s):
                 f = (t - tc_f) / .3; pp = gfx.paint((255, 255, 255), .9 * (1 - f)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(6)
                 c.drawCircle(K[0], K[1], 20 + 120 * f, pp)
     c.restore()
+    if FX: _fx_screen(c, g, t, D, s, FX, tcs)
     stage_panel(c, g, t, D, s)
+
+
+def _fx_spot(c, g, ax, ay, hh, q, t):
+    """A soft stadium spotlight cone behind the figure."""
+    pth = skia.Path(); pth.moveTo(ax - hh * .08, -20); pth.lineTo(ax + hh * .08, -20); pth.lineTo(ax + hh * .62, ay + 10); pth.lineTo(ax - hh * .62, ay + 10); pth.close()
+    pp = skia.Paint(); pp.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, ay)], [skia.Color(255, 255, 255, int(70 * q)), skia.Color(255, 255, 255, int(8 * q))]))
+    c.drawPath(pth, pp)
+    c.drawOval(skia.Rect.MakeXYWH(ax - hh * .55, ay - hh * .035, hh * 1.1, hh * .09), gfx.paint((255, 255, 255), .16 * q))
+
+
+def _fx_screen(c, g, t, D, s, FX, tcs):
+    """Screen-space effects: vignette, impact flash, speed lines, confetti, sparks."""
+    W, H = g.W, g.H
+    if "vignette" in FX:
+        pp = skia.Paint(); pp.setShader(skia.GradientShader.MakeRadial((W / 2, H * .55), H * .75, [skia.Color(0, 0, 0, 0), skia.Color(0, 0, 0, 120)], [.55, 1]))
+        c.drawRect(skia.Rect.MakeWH(W, H), pp)
+    if tcs is not None and tcs - .02 <= t < tcs + .5:
+        f = (t - tcs) / .5
+        if "flash" in FX and t < tcs + .12: c.drawRect(skia.Rect.MakeWH(W, H), gfx.paint((255, 255, 255), .45 * (1 - (t - tcs) / .12)))
+        if "speed" in FX:                                                           # radial streaks out from the contact point
+            cx_, cy_ = W * .5, H * .55
+            for i in range(26):
+                ang = i / 26 * math.tau + .3; r0 = 160 + 420 * f; r1 = r0 + 220 + 140 * ((i * 7) % 5) / 5
+                pp = gfx.paint((255, 255, 255), .5 * (1 - f), stroke=3); c.drawLine(cx_ + math.cos(ang) * r0, cy_ + math.sin(ang) * r0, cx_ + math.cos(ang) * r1, cy_ + math.sin(ang) * r1, pp)
+        if "sparks" in FX:
+            for i in range(22):
+                ang = ((i * 2.399) % math.tau); v = 260 + (i * 53) % 340
+                x = W * .5 + math.cos(ang) * v * f; y = H * .55 + math.sin(ang) * v * f + 380 * f * f
+                c.drawCircle(x, y, 5 * (1 - f) + 1, gfx.paint((255, 214, 60), 1 - f))
+    if "confetti" in FX:
+        t0 = D * s.get("fx_at", .15)
+        if t > t0:
+            cols = [(255, 214, 0), (255, 255, 255), (230, 60, 70), (60, 160, 255)]
+            for i in range(70):
+                rx = (math.sin(i * 12.9898) * 43758.5453) % 1; ry = (math.sin(i * 78.233) * 12543.1) % 1; rs = (math.sin(i * 39.346) * 9871.7) % 1
+                x = rx * W + math.sin(t * 3 + i) * 30; y = -60 + ((t - t0) * (260 + rs * 360) + ry * H) % (H + 120)
+                c.save(); c.translate(x, y); c.rotate(math.degrees(t * (4 + rs * 6) + i)); c.drawRect(skia.Rect.MakeXYWH(-7, -4, 14 * (.5 + rs * .5), 8), gfx.paint(cols[i % 4], .95)); c.restore()
 
 
 def stage_events(s, D, words, lead):

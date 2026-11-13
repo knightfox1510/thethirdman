@@ -42,7 +42,8 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 ## Production defaults (every new video; use each where it fits the story)
 - Hook: a number or the key claim on screen within 2 seconds. No slow title card first.
 - Shorts use the stadium-stage look: theme "stadium", "stage" scenes with the illustrated player (no likeness of anyone real).
-- Pick a pose for each beat: walk (entrance), stance, drive, pull, run, bowl, celebrate, raise (milestone), dejected (failure), stand.
+- Pick a pose for each beat: walk (entrance), stance, drive, pull, run, bowl, celebrate, raise (milestone), dejected (failure), stand. More: batting shots defend, cut, sweep, flick, loft (use as "hit" so the ball meets the bat); bowling spin; keeper (crouch); fielding dive, catch; gestures point, helmet (milestone), arms_wide, kneel.
+- Add graphics where they fit: scene "fx": ["vignette", "spot", "flash", "speed", "shake", "sparks", "confetti"] (confetti starts at "fx_at" fraction), and "ghost": true on a hitting avatar for motion afterimages.
 - Put the opponent in the frame on "versus" beats: a second avatar in their kit (e.g. NZ for a semi against New Zealand).
 - Show the ball when a moment is about a shot: "ball": {"word": ..., "shot": six|four}, with "hit" on the batter. Use a side view ("view": "side") for shots.
 - Vary the camera from scene to scene: "cam" wide / push / pull / close / drift, and switch between end-on and side-on views.

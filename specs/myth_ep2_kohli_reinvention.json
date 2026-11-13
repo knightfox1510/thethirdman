@@ -56,11 +56,15 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "celebrate",
+      "pose": "helmet",
       "x": 0.74
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
    }
   },
   {
@@ -100,11 +104,14 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "stance",
+      "pose": "point",
       "x": 0.4
      }
     ],
-    "cam": "drift"
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -130,9 +137,10 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "drive",
+      "pose": "stance",
       "x": 0.34,
-      "hit": "drive"
+      "hit": "cut",
+      "ghost": true
      }
     ],
     "view": "side",
@@ -144,7 +152,12 @@
     "ball": {
      "at": 0.55,
      "shot": "four"
-    }
+    },
+    "fx": [
+     "vignette",
+     "flash",
+     "speed"
+    ]
    }
   },
   {
@@ -170,9 +183,10 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "pull",
+      "pose": "stance",
       "x": 0.34,
-      "hit": "pull"
+      "hit": "loft",
+      "ghost": true
      }
     ],
     "view": "side",
@@ -184,7 +198,12 @@
     "ball": {
      "at": 0.55,
      "shot": "six"
-    }
+    },
+    "fx": [
+     "vignette",
+     "shake",
+     "sparks"
+    ]
    }
   },
   {
@@ -210,11 +229,15 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "stand",
+      "pose": "arms_wide",
       "x": 0.5
      }
     ],
-    "cam": "wide"
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
    }
   },
   {
@@ -240,11 +263,14 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "stance",
+      "pose": "sweep",
       "x": 0.4
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -260,11 +286,17 @@
      {
       "kit": "RCB",
       "number": 18,
-      "pose": "raise",
+      "pose": "helmet",
       "x": 0.5
      }
     ],
-    "cam": "wide"
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "confetti",
+     "spot"
+    ],
+    "fx_at": 0.55
    }
   },
   {
