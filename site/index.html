@@ -3,62 +3,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Third Man Control Room</title>
+<title>The Third Man · Control room</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1b3e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23e63946'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#10213f">
+<link rel="icon" type="image/png" href="img/brand/favicon-64.png">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* Brand: navy #10213f, cream #f4f1ea, gold #f5b700, grey #96a0b9; Bebas wordmark, Inter text */
 :root{
-  --bg:#f6f3ee; --panel:#fffdf9; --ink:#14182a; --muted:#5d6273; --line:#e3ddd2; --navy:#0d1b3e; --red:#d7263d; --yellow:#ffcf33;
-  --chip:#efe9df; --good:#1f8a4c; --warn:#c46a00; --info:#2357c6; --purple:#7a3fc2; --shadow:0 1px 2px rgba(20,24,42,.06),0 6px 24px rgba(20,24,42,.06);
+  --bg:#f4f1ea; --panel:#fbf9f4; --ink:#10213f; --muted:#5b6472; --line:#e1dccf; --chip:#ebe6d9;
+  --accent:#f5b700; --accent-ink:#8a5f00; --on-accent:#10213f; --alert:#c8312f;
+  --good:#1f7a4a; --warn:#b36200; --info:#2a5db0; --purple:#7a3fc2; --shadow:0 1px 2px rgba(16,33,63,.06),0 8px 24px rgba(16,33,63,.06);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0b1020; --panel:#121a30; --ink:#eef0f7; --muted:#9aa3bd; --line:#232c47; --navy:#e9ecf6; --chip:#1b2440; --shadow:none;
-  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --red:#ff5a6e;
+  --bg:#0b172d; --panel:#10213f; --ink:#f4f1ea; --muted:#96a0b9; --line:#22365c; --chip:#182c52; --accent-ink:#f5b700; --shadow:none;
+  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --alert:#ff6b6b;
 }}
 :root[data-theme="dark"]{
-  --bg:#0b1020; --panel:#121a30; --ink:#eef0f7; --muted:#9aa3bd; --line:#232c47; --navy:#e9ecf6; --chip:#1b2440; --shadow:none;
-  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --red:#ff5a6e;
+  --bg:#0b172d; --panel:#10213f; --ink:#f4f1ea; --muted:#96a0b9; --line:#22365c; --chip:#182c52; --accent-ink:#f5b700; --shadow:none;
+  --good:#4fc382; --warn:#f0a43a; --info:#7aa5ff; --purple:#b28cff; --alert:#ff6b6b;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
-.dot{width:26px;height:26px;border-radius:50%;background:var(--red);position:relative;flex:none}
-.dot:after{content:"";position:absolute;inset:9px;border-radius:50%;background:#fff}
-.brand small{display:block;font:400 11px "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+.logo-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-light{display:none}:root:not([data-theme="light"]) .logo-dark{display:block}}
+:root[data-theme="dark"] .logo-light{display:none}:root[data-theme="dark"] .logo-dark{display:block}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--accent) 0 64px,transparent 64px)}
+.bar{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;flex:none;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand small{font:600 10px "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--line);padding-left:10px}
+nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1}
 nav::-webkit-scrollbar{display:none}
 nav a{padding:7px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:500;white-space:nowrap}
+nav a:hover{color:var(--ink)}
 nav a.on{background:var(--ink);color:var(--bg)}
-#theme{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;width:34px;height:34px;cursor:pointer;flex:none;font-size:17px;line-height:1}
+.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;min-width:34px;height:34px;cursor:pointer;flex:none;font:500 13px Inter,sans-serif;padding:0 10px}
+.iconbtn.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 main{max-width:1180px;margin:0 auto;padding:28px 16px 80px}
-h1{font:800 clamp(28px,4vw,44px)/1.08 "Playfair Display",serif;margin:0 0 6px;letter-spacing:-.01em}
-h2{font:700 24px/1.2 "Playfair Display",serif;margin:34px 0 12px}
+h1,h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;text-transform:uppercase}
+h1{font-size:clamp(40px,6vw,66px);line-height:.98;margin:0 0 8px}
+h2{font-size:30px;line-height:1.1;margin:36px 0 12px}
 h3{font-size:16px;margin:0 0 8px}
 .lede{color:var(--muted);max-width:720px;margin:0 0 22px}
-.kicker{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.kicker{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
 .grid{display:grid;gap:14px}
 .g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);min-width:0}
-.stat b{display:block;font:800 34px/1 "Playfair Display",serif;margin:6px 0 4px}
+.stat b{display:block;font:400 44px/1 "Bebas Neue",Impact,sans-serif;letter-spacing:.02em;margin:6px 0 4px}
 .stat span{color:var(--muted);font-size:13px}
 .chip{display:inline-flex;align-items:center;gap:6px;padding:2px 9px;border-radius:999px;background:var(--chip);font-size:12px;font-weight:500;white-space:nowrap}
-.chip.fmt{background:transparent;border:1px solid var(--line)}
+.chip.fmt{background:transparent;border:1px solid var(--line);text-decoration:none}
+.chip.fmt:hover{border-color:var(--accent)}
 .s-Posted{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
 .s-Ready{background:color-mix(in srgb,var(--info) 16%,transparent);color:var(--info)}
 .s-To-build,.s-To-do{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
 .s-Uploaded-private,.s-Uploading{background:color-mix(in srgb,var(--purple) 18%,transparent);color:var(--purple)}
-.s-Hold{background:color-mix(in srgb,var(--red) 16%,transparent);color:var(--red)}
-.p-High{color:var(--red)} .p-Medium{color:var(--warn)} .p-Low{color:var(--muted)}
+.s-Hold{background:color-mix(in srgb,var(--alert) 16%,transparent);color:var(--alert)}
+.p-High{color:var(--alert)} .p-Medium{color:var(--warn)} .p-Low{color:var(--muted)}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{text-align:left;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
 td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -67,16 +78,20 @@ tr:last-child td{border-bottom:0}
 .muted{color:var(--muted)} .small{font-size:13px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
-.filters button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer;font:500 13px "IBM Plex Sans",sans-serif}
+.filters button,.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:5px 13px;cursor:pointer;font:500 13px Inter,sans-serif}
 .filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.danger{color:var(--alert)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 14px}
+.toolbar .sp{flex:1}
 .fmtcard{cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:transform .15s}
 .fmtcard:hover{transform:translateY(-2px)}
 .fmtcard .thumbs{display:flex;gap:6px;height:150px;overflow:hidden;border-radius:10px}
 .fmtcard .thumbs img{height:100%;border-radius:8px;object-fit:cover}
-.badge-new{background:var(--yellow);color:#14182a;font-weight:700}
-.detail{display:none}
-.detail.on{display:block}
-.back{border:0;background:none;color:var(--muted);cursor:pointer;padding:0;font:500 14px "IBM Plex Sans",sans-serif;margin-bottom:12px}
+.fmtcard h3{font:400 28px/1.1 "Bebas Neue",Impact,sans-serif;letter-spacing:.03em;margin:0;text-transform:uppercase}
+.badge-new{background:var(--accent);color:var(--on-accent);font-weight:700}
+.back{border:0;background:none;color:var(--muted);cursor:pointer;padding:0;font:500 14px Inter,sans-serif;margin-bottom:12px}
 .gallery{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
 .gallery img{height:300px;border-radius:10px;border:1px solid var(--line);flex:none}
 .gallery img.long{height:200px;align-self:center}
@@ -90,78 +105,148 @@ ul.clean{margin:0;padding-left:18px} ul.clean li{margin:4px 0}
 .tl .d{font:600 12px "IBM Plex Mono",monospace;color:var(--muted);padding-top:3px}
 .bars .b{display:grid;grid-template-columns:120px 1fr 54px;gap:10px;align-items:center;font-size:13px;margin:6px 0}
 .bars .track{height:10px;background:var(--chip);border-radius:6px;overflow:hidden}
-.bars .fill{height:100%;background:var(--red);border-radius:6px}
+.bars .fill{height:100%;background:var(--accent);border-radius:6px}
 .empty{padding:24px;text-align:center;color:var(--muted)}
-.note{border-left:3px solid var(--yellow);padding:8px 12px;background:var(--panel);border-radius:0 10px 10px 0;font-size:14px}
-.ytbar{height:12px;background:var(--chip);border-radius:8px;overflow:hidden;margin:8px 0}
-.ytbar i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--yellow))}
+.note{border-left:3px solid var(--accent);padding:8px 12px;background:var(--panel);border-radius:0 10px 10px 0;font-size:14px}
+.note.warn{border-left-color:var(--alert)}
 details summary{cursor:pointer;color:var(--muted);font-size:13px}
+a.lnk{color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:13px}
+a.lnk:hover{text-decoration:underline}
+/* progress */
+.prog{margin:14px 0 4px}
+.prog .top{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:6px}
+.prog .rail{position:relative;height:14px;background:var(--chip);border-radius:8px}
+.prog .fill{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:8px;min-width:3px}
+.prog .mark{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);opacity:.55}
+.prog .marks{position:relative;height:18px;font:500 11px "IBM Plex Mono",monospace;color:var(--muted)}
+.prog .marks span{position:absolute;transform:translateX(-100%);white-space:nowrap;padding-right:4px}
+/* editable tracker */
+.edit input,.edit select{font:inherit;font-size:13px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 7px;width:100%}
+.edit input:focus,.edit select:focus{outline:2px solid var(--accent);outline-offset:0}
+.edit td{padding:6px}
+.edit .c-date{min-width:128px}.edit .c-content{min-width:240px}.edit .c-plat{min-width:170px}.edit .c-stat{min-width:140px}.edit .c-link{min-width:170px}.edit .c-notes{min-width:220px}
+.dirty{color:var(--warn);font-weight:600;font-size:13px}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--ink);padding:20px;max-width:380px;width:calc(100% - 32px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(8,16,33,.55)}
+dialog input{width:100%;font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin:10px 0 14px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:13px;z-index:30;box-shadow:0 8px 30px rgba(0,0,0,.3)}
 @media (max-width:640px){
-  .brand small{display:none} .kv{grid-template-columns:1fr} .gallery img{height:240px}
+  .bar{flex-wrap:wrap;gap:8px 10px} .brand{margin-right:auto} nav{order:3;flex-basis:100%} .brand small{display:none} .brand img{height:28px} .kv{grid-template-columns:1fr} .gallery img{height:240px}
   .bars .b{grid-template-columns:90px 1fr 44px}
   .hide-sm{display:none}
+  .tl{grid-template-columns:64px 1fr;gap:8px}
 }
 </style>
 </head>
 <body>
 <header><div class="bar">
-  <div class="brand"><span class="dot"></span><div>The Third Man<small>Control room</small></div></div>
+  <a class="brand" href="#today" aria-label="The Third Man">
+    <img class="logo-light" src="img/brand/lockup-light.png" alt="The Third Man">
+    <img class="logo-dark" src="img/brand/lockup-dark.png" alt="The Third Man">
+    <small>Control room</small>
+  </a>
   <nav id="nav">
-    <a href="#today">Today</a><a href="#tracker">Tracker</a><a href="#formats">Formats</a><a href="#playbook">Playbook</a>
+    <a href="#today">Today</a><a href="#tracker">Tracker</a><a href="#stats">Stats</a><a href="#formats">Formats</a><a href="#playbook">Playbook</a>
     <a href="#ideas">Ideas</a><a href="#library">Library</a><a href="#data">Data &amp; rules</a>
   </nav>
-  <button id="theme" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  <button id="lock" class="iconbtn" title="Password for editing and stats" aria-label="Password"></button>
+  <button id="theme" class="iconbtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
 </div></header>
 <main id="app"><div class="empty">Loading…</div></main>
+<dialog id="keydlg"><form method="dialog" id="keyform">
+  <h3 id="keytitle" style="font:400 26px 'Bebas Neue',Impact,sans-serif;letter-spacing:.03em;text-transform:uppercase;margin:0">Password</h3>
+  <div class="small muted" id="keymsg"></div>
+  <input id="keyin" type="password" autocomplete="current-password" placeholder="Site password">
+  <div class="row" style="justify-content:flex-end"><button type="button" class="btn" id="keycancel">Cancel</button><button class="btn primary" value="ok">Unlock</button></div>
+</form></dialog>
 
 <script>
 const $ = (s, el=document) => el.querySelector(s);
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const url = s => /^https?:\/\//.test(s || "") ? esc(s) : "";
 const NOW = new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata"}));
 const iso = d => d.toISOString().slice(0,10);
 const TODAY = `${NOW.getFullYear()}-${String(NOW.getMonth()+1).padStart(2,"0")}-${String(NOW.getDate()).padStart(2,"0")}`;
-const fmtDate = s => s ? new Date(s+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"}) : "—";
-const dow = s => s ? new Date(s+"T00:00:00").toLocaleDateString("en-GB",{weekday:"short"}) : "";
+const fmtDate = s => s ? new Date(s.slice(0,10)+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"}) : "—";
+const dow = s => s ? new Date(s.slice(0,10)+"T00:00:00").toLocaleDateString("en-GB",{weekday:"short"}) : "";
+const n0 = v => v == null ? "—" : Number(v).toLocaleString("en-US");
 const statusChip = s => s ? `<span class="chip s-${esc(s).replace(/[()]/g,"").replace(/ /g,"-")}">${esc(s)}</span>` : "";
 const D = {};
 const FMT = id => (D.formats.formats.find(f => f.id === id) || {name:id});
-const fmtChip = id => `<a class="chip fmt" href="#formats/${id}">${esc(FMT(id).name)}</a>`;
+const fmtChip = id => `<a class="chip fmt" href="#formats/${esc(id)}">${esc(FMT(id).name)}</a>`;
+const STATUSES = ["Idea","To build","To do","Ready","Uploading","Uploaded (private)","Posted","Hold"];
+const PLATFORMS = ["YouTube long","YouTube Short","YouTube Short + IG Reel","YouTube long + Short","YouTube long + Shorts","YouTube Short + IG carousel","Instagram Reel","Instagram carousel + Reel","Check"];
+const rid = () => Math.random().toString(36).slice(2,10);
+const byDate = (a,b) => (a.date || "9999").localeCompare(b.date || "9999");
 
+/* ---------- theme, password ---------- */
 try { const t = localStorage.getItem("ttm-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e){}
 $("#theme").onclick = () => {
   const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
   document.documentElement.dataset.theme = dark ? "light" : "dark";
   try { localStorage.setItem("ttm-theme", document.documentElement.dataset.theme); } catch(e){}
 };
+const getKey = () => { try { return localStorage.getItem("ttm-key") || ""; } catch(e){ return ""; } };
+const setKey = k => { try { k ? localStorage.setItem("ttm-key", k) : localStorage.removeItem("ttm-key"); } catch(e){} paintLock(); };
+function paintLock(){ const b = $("#lock"), on = !!getKey(); b.textContent = on ? "Unlocked" : "Locked"; b.classList.toggle("on", on); b.title = on ? "Click to lock this browser again" : "Enter the password for editing and stats"; }
+$("#lock").onclick = async () => { if (getKey()) { setKey(""); toast("Locked"); route(); } else { if (await askKey()) route(); } };
+$("#keycancel").onclick = () => $("#keydlg").close("cancel");
+function askKey(msg){
+  return new Promise(res => {
+    const dlg = $("#keydlg"), inp = $("#keyin");
+    $("#keymsg").textContent = msg || "Needed to edit the tracker and to see channel stats. It is kept in this browser only.";
+    inp.value = ""; dlg.returnValue = ""; dlg.showModal(); inp.focus();
+    dlg.onclose = () => { const v = inp.value.trim(); if (dlg.returnValue === "ok" && v) { setKey(v); res(v); } else res(null); };
+  });
+}
+function toast(t){ const e = document.createElement("div"); e.className = "toast"; e.textContent = t; document.body.appendChild(e); setTimeout(() => e.remove(), 2600); }
+async function api(path, opt = {}){
+  const h = {...(opt.headers || {})}, k = getKey();
+  if (k) h["x-ttm-key"] = k;
+  if (opt.body) h["content-type"] = "application/json";
+  try {
+    const r = await fetch(path, {...opt, headers: h, cache: "no-store"});
+    let j = null; try { j = await r.json(); } catch(e){}
+    return {ok: r.ok, status: r.status, j};
+  } catch(e) { return {ok: false, status: 0, j: null}; }
+}
 
+/* ---------- load ---------- */
 async function load(){
   const get = p => fetch(p, {cache:"no-cache"}).then(r => r.ok ? r.json() : null).catch(() => null);
-  const [formats, schedule, library, fixtures, stills, replay, idx] = await Promise.all(
-    ["data/formats.json","data/schedule.json","data/library.json","data/fixtures.json","data/stills.json","data/replay_sample.json","data/ideas/index.json"].map(get));
-  Object.assign(D, {formats, schedule, library, fixtures, stills: stills || {}, replay, idx: idx || {days:[]}});
-  D.ideas = {};
-  const days = (D.idx.days || []).slice().sort().reverse();
-  D.days = days;
-  if (days[0]) D.ideas[days[0]] = await get(`data/ideas/${days[0]}.json`);
-  route();
+  const [formats, schedule, library, fixtures, stills, replay, idx, drive, vmap, reminders] = await Promise.all(
+    ["data/formats.json","data/schedule.json","data/library.json","data/fixtures.json","data/stills.json","data/replay_sample.json","data/ideas/index.json","data/drive.json","data/video_map.json","data/reminders.json"].map(get));
+  Object.assign(D, {formats, schedule, library, fixtures, stills: stills || {}, replay, idx: idx || {days:[]}, drive: drive || {videos:{}}, vmap: vmap || {}, reminders: reminders || {items:[]}});
+  D.yt = {};
+  for (const [id, m] of Object.entries(D.vmap)) (D.yt[m.slug] ||= {})[m.kind] = id;
+  D.ideas = {}; D.days = (D.idx.days || []).slice().sort().reverse();
+  if (D.days[0]) D.ideas[D.days[0]] = await get(`data/ideas/${D.days[0]}.json`);
+  // live tracker (editable) if the API and storage are connected; otherwise the repo snapshot, read-only
+  const live = await api("/api/schedule");
+  D.schedule.editable = !!(live.ok && live.j && live.j.editable);
+  D.schedule.live = false; D.schedule.base = null;
+  if (D.schedule.editable && live.j.rows) { D.schedule.rows = live.j.rows; D.schedule.live = true; D.schedule.base = live.j.updated; D.schedule.synced = (live.j.updated || "").slice(0,10); }
+  D.schedule.rows.forEach(r => r.id = r.id || rid());
+  paintLock(); route();
 }
 window.addEventListener("hashchange", route);
+window.addEventListener("beforeunload", e => { if (T.dirty) { e.preventDefault(); e.returnValue = ""; } });
 
 function route(){
   const [page, sub] = (location.hash.slice(1) || "today").split("/");
   document.querySelectorAll("#nav a").forEach(a => { const on = a.getAttribute("href") === "#"+page; a.classList.toggle("on", on); if (on) a.scrollIntoView({inline:"center", block:"nearest"}); });
-  const app = $("#app");
-  const views = {today, tracker, formats, playbook, ideas, library, data};
-  app.innerHTML = (views[page] || today)(sub);
-  window.scrollTo(0,0);
+  const views = {today, tracker, stats, formats, playbook, ideas, library, data};
+  $("#app").innerHTML = (views[page] || today)(sub);
+  if (!window.__keepScroll) window.scrollTo(0,0); window.__keepScroll = false;
   (afterRender[page] || (()=>{}))(sub);
 }
 const afterRender = {};
+const rerender = () => { window.__keepScroll = true; const y = scrollY; route(); scrollTo(0, y); };
 
-/* ---------------- Today ---------------- */
+/* ---------- Today ---------- */
 function today(){
   const rows = D.schedule.rows;
-  const upcoming = rows.filter(r => r.date && r.date >= TODAY && r.status !== "Posted").sort((a,b)=>a.date.localeCompare(b.date));
+  const upcoming = rows.filter(r => r.date && r.date >= TODAY && r.status !== "Posted").sort(byDate);
   const week = upcoming.filter(r => r.date <= iso(new Date(NOW.getTime()+7*864e5)));
   const overdue = rows.filter(r => r.date && r.date < TODAY && !["Posted","Hold"].includes(r.status));
   const count = s => rows.filter(r => r.status === s).length;
@@ -171,6 +256,7 @@ function today(){
   const latest = D.days[0] ? D.ideas[D.days[0]] : null;
   const top = latest ? latest.ideas.filter(i => i.priority === "High").slice(0,4) : [];
   const recheck = lib.filter(i => i.recheck && i.status !== "Posted");
+  const rem = (D.reminders.items || []).filter(r => new Date(r.at) > new Date()).slice(0,4);
   return `
   <div class="kicker">${new Date(TODAY+"T00:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}</div>
   <h1>Today in the control room</h1>
@@ -179,36 +265,186 @@ function today(){
     <div class="card stat"><span class="kicker">Posted</span><b>${count("Posted")}</b><span>on the schedule</span></div>
     <div class="card stat"><span class="kicker">Ready</span><b>${count("Ready")}</b><span>built, waiting to post</span></div>
     <div class="card stat"><span class="kicker">To build</span><b>${count("To build")+count("To do")}</b><span>on the schedule</span></div>
-    <div class="card stat"><span class="kicker">YPP bar doubles in</span><b>${ypp} days</b><span>1 Feb 2027: 8,000 watch hours for new applicants</span></div>
+    <div class="card stat"><span class="kicker">Monetisation bar doubles in</span><b>${ypp} days</b><span>1 Feb 2027: 8,000 watch hours for new applicants</span></div>
   </div>
-  ${overdue.length ? `<h2>Overdue</h2><div class="card timeline">${overdue.map(r=>`<div class="tl"><div class="d">${fmtDate(r.date)}</div><div><b>${esc(r.content)}</b> <span class="muted small">· ${esc(r.platform)}</span> ${statusChip(r.status)}${r.notes?`<div class="muted small">${esc(r.notes)}</div>`:""}</div></div>`).join("")}</div>`:""}
+  <div id="todaystats"></div>
+  ${overdue.length ? `<h2>Overdue</h2><div class="card timeline">${overdue.map(r=>`<div class="tl"><div class="d">${fmtDate(r.date)}</div><div><b>${esc(r.content)}</b> <span class="muted small">· ${esc(r.platform)}</span> ${statusChip(r.status)}${r.notes?`<div class="muted small">${esc(r.notes)}</div>`:""}</div></div>`).join("")}<a class="lnk" href="#tracker">Open tracker →</a></div>`:""}
   <div class="grid g2" style="margin-top:8px">
     <div><h2>Next 7 days</h2><div class="card timeline">${week.length ? week.map(r=>`<div class="tl"><div class="d">${dow(r.date)} ${fmtDate(r.date)}</div><div><b>${esc(r.content)}</b> ${statusChip(r.status)}<div class="muted small">${esc(r.platform)}${r.notes?` · ${esc(r.notes)}`:""}</div></div></div>`).join("") : `<div class="empty">Nothing scheduled.</div>`}</div></div>
-    <div><h2>Cricket coming up</h2><div class="card timeline">${fx.map(f=>`<div class="tl"><div class="d">${dow(f.date)} ${fmtDate(f.date)}</div><div><b>${esc(f.event)}</b> <span class="muted small">· ${esc(f.teams)}, ${esc(f.venue)}</span><div class="row small" style="margin-top:4px"><span class="muted">${esc(f.status)}</span> → ${fmtChip(f.format)}</div></div></div>`).join("")}</div></div>
+    <div><h2>Cricket coming up</h2><div class="card timeline">${fx.map(f=>`<div class="tl"><div class="d">${dow(f.date)} ${fmtDate(f.date)}</div><div><b>${esc(f.event)}</b> <span class="muted small">· ${esc(f.teams)}, ${esc(f.venue)}</span><div class="row small" style="margin-top:4px"><span class="muted">${esc(f.status)}</span> → ${fmtChip(f.format)}</div></div></div>`).join("")}</div>
+    ${rem.length?`<h2>Phone alerts coming</h2><div class="card timeline">${rem.map(r=>`<div class="tl"><div class="d">${dow(r.at)} ${fmtDate(r.at)}</div><div><b>${esc(r.label)}</b><div class="muted small">${esc(new Date(r.at).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}))} IST · ${esc(r.what)}</div></div></div>`).join("")}</div>`:""}</div>
   </div>
   <div class="grid g2">
-    <div><h2>Top ideas ${latest?`<span class="muted small mono">${fmtDate(latest.date)}</span>`:""}</h2><div class="card timeline">${top.length?top.map(ideaRow).join(""):`<div class="empty">No ideas yet.</div>`}<a class="small" href="#ideas">All ideas →</a></div></div>
+    <div><h2>Top ideas ${latest?`<span class="muted small mono">${fmtDate(latest.date)}</span>`:""}</h2><div class="card timeline">${top.length?top.map(ideaRow).join(""):`<div class="empty">No ideas yet.</div>`}<a class="lnk" href="#ideas">All ideas →</a></div></div>
     <div><h2>Re-check before posting</h2><div class="card timeline">${recheck.map(i=>`<div class="tl"><div class="d">${fmtDate(i.planned)}</div><div><b>${esc(i.title)}</b><div class="muted small">${esc(i.recheck)}</div></div></div>`).join("") || `<div class="empty">Nothing to re-check.</div>`}</div></div>
   </div>`;
 }
+afterRender.today = async () => {
+  const box = $("#todaystats"); if (!box) return;
+  if (!getKey()) { box.innerHTML = `<div class="note" style="margin-top:14px">Channel numbers (subscribers, watch hours, results per format) are on the <a href="#stats"><b>Stats</b></a> page. Unlock with the site password to see them.</div>`; return; }
+  const r = await api("/api/stats");
+  if (!r.ok || !r.j || r.j.empty) { box.innerHTML = ""; return; }
+  const s = r.j;
+  box.innerHTML = `<div class="grid g3" style="margin-top:14px">
+    <div class="card">${progBar("Subscribers", s.channel.subs, 1000, [{v:1000,l:"1,000"}])}</div>
+    <div class="card">${s.ypp.long_watch_hours_365 != null ? progBar("Long-form watch hours (365 days)", s.ypp.long_watch_hours_365, 8000, [{v:4000,l:"4,000 now"},{v:8000,l:"8,000 from 1 Feb"}]) : `<div class="kicker">Watch hours</div><p class="small muted">Needs the Analytics permission. See the Stats page.</p>`}</div>
+    <div class="card stat"><span class="kicker">Channel views</span><b>${n0(s.channel.views)}</b><span>${s.channel.videos} videos · updated ${fmtDate(s.updated)}</span></div></div>`;
+};
 
-/* ---------------- Tracker ---------------- */
-let trackerFilter = "All";
-function tracker(){
-  const rows = D.schedule.rows.slice().sort((a,b)=>(a.date||"9999").localeCompare(b.date||"9999"));
-  const statuses = ["All", ...new Set(rows.map(r=>r.status))];
-  const shown = rows.filter(r => trackerFilter === "All" || r.status === trackerFilter);
-  return `<div class="kicker">Content schedule</div><h1>Tracker</h1>
-  <p class="lede">Synced from the schedule sheet on ${fmtDate(D.schedule.synced)}. Edit it in <a href="${D.schedule.sheet_url}" target="_blank" rel="noopener">the sheet</a>; this page refreshes after each upload or daily run.</p>
-  <div class="filters">${statuses.map(s=>`<button class="${s===trackerFilter?"on":""}" onclick="trackerFilter='${esc(s)}';route()">${esc(s)} <span class="muted">${s==="All"?rows.length:rows.filter(r=>r.status===s).length}</span></button>`).join("")}</div>
-  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Content</th><th class="hide-sm">Platform</th><th>Status</th><th class="hide-sm">Notes</th></tr></thead><tbody>
-  ${shown.map(r=>`<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--yellow) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
-  <td><b>${esc(r.content)}</b>${r.link?` <a class="small" href="${esc(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small" style="display:none" data-sm>${esc(r.platform)}</div></td>
-  <td class="hide-sm small">${esc(r.platform)}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("")}
-  </tbody></table></div>`;
+/* ---------- progress bar ---------- */
+function progBar(label, val, max, marks){
+  const pct = Math.min(100, val / max * 100);
+  return `<div class="prog"><div class="top"><b>${esc(label)}</b><span class="mono">${n0(Math.round(val * 10) / 10)} / ${n0(max)}</span></div>
+    <div class="rail"><div class="fill" style="width:${pct}%"></div>${marks.map(m => `<div class="mark" style="left:calc(${m.v/max*100}% - 1px)"></div>`).join("")}</div>
+    <div class="marks">${marks.map(m => `<span style="left:${m.v/max*100}%">${esc(m.l)}</span>`).join("")}</div></div>`;
 }
 
-/* ---------------- Formats ---------------- */
+/* ---------- Tracker (view + edit) ---------- */
+const T = {edit:false, rows:null, dirty:false, filter:"All", saving:false, msg:""};
+function tracker(){
+  const S = D.schedule, rows = (T.edit ? T.rows : S.rows);
+  const view = T.edit ? rows : rows.slice().sort(byDate);
+  const statuses = ["All", ...STATUSES.filter(s => rows.some(r => r.status === s))];
+  const shown = view.filter(r => T.filter === "All" || r.status === T.filter);
+  const tools = !S.editable
+    ? `<div class="note warn">Read-only: this copy can't save yet. Connect storage on Vercel (see README) and the tracker becomes editable here.</div>`
+    : T.edit
+      ? `<div class="toolbar"><button class="btn primary" onclick="addRow()">+ Add row</button>
+          <button class="btn primary" id="savebtn" onclick="saveRows()" ${T.dirty&&!T.saving?"":"disabled"}>${T.saving?"Saving…":"Save changes"}</button>
+          <button class="btn" onclick="discardEdit()">${T.dirty?"Discard":"Done"}</button>
+          <span class="dirty" id="dirtymsg">${T.dirty?"Unsaved changes":""}</span><span class="small muted">${esc(T.msg)}</span><span class="sp"></span>
+          <button class="btn" onclick="exportRows()">Export JSON</button></div>
+         ${!S.live?`<div class="note" style="margin-bottom:12px">First save moves the schedule into the site's own storage (from the ${fmtDate(S.synced)} snapshot of the sheet). After that, edit it here only.</div>`:""}`
+      : `<div class="toolbar"><button class="btn primary" onclick="startEdit()">Edit tracker</button><span class="small muted">${esc(T.msg)}</span><span class="sp"></span><button class="btn" onclick="exportRows()">Export JSON</button></div>`;
+  const head = `<thead><tr><th>Date</th><th>Content</th><th${T.edit?"":' class="hide-sm"'}>Platform</th><th>Status</th><th${T.edit?"":' class="hide-sm"'}>${T.edit?"Link":"Notes"}</th>${T.edit?"<th>Notes</th><th></th>":""}</tr></thead>`;
+  const body = shown.map(r => T.edit ? editRow(r) : `<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--accent) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
+    <td><b>${esc(r.content)}</b>${r.link?` <a class="lnk" href="${url(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small show-sm">${esc(r.platform||"")}</div></td>
+    <td class="hide-sm small">${esc(r.platform||"")}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("");
+  return `<div class="kicker">Content schedule</div><h1>Tracker</h1>
+  <p class="lede">${S.live ? `Lives on this site; last saved ${fmtDate(S.synced)}.` : `A snapshot of the schedule sheet from ${fmtDate(S.synced)}.`} ${S.editable ? "Edit it here: change a status, add a video, paste the link after posting." : ""}</p>
+  ${tools}
+  <div class="filters">${statuses.map(s=>`<button class="${s===T.filter?"on":""}" onclick="T.filter=this.dataset.s;rerender()" data-s="${esc(s)}">${esc(s)} <span class="muted">${s==="All"?rows.length:rows.filter(r=>r.status===s).length}</span></button>`).join("")}</div>
+  <div class="tablewrap${T.edit?" edit":""}"><table>${head}<tbody>${body || `<tr><td colspan="7" class="empty">Nothing here.</td></tr>`}</tbody></table></div>
+  <datalist id="plats">${PLATFORMS.map(p=>`<option value="${esc(p)}">`).join("")}</datalist>`;
+}
+function editRow(r){
+  const f = (k, cls, type="text", extra="") => `<td class="${cls}"><input type="${type}" value="${esc(r[k]||"")}" data-id="${r.id}" data-f="${k}" oninput="onEdit(this)" ${extra}></td>`;
+  return `<tr>${f("date","c-date","date")}${f("content","c-content","text",'placeholder="Title"')}
+    <td class="c-plat"><input list="plats" value="${esc(r.platform||"")}" data-id="${r.id}" data-f="platform" oninput="onEdit(this)"></td>
+    <td class="c-stat"><select data-id="${r.id}" data-f="status" onchange="onEdit(this)"><option value=""></option>${STATUSES.map(s=>`<option${s===r.status?" selected":""}>${esc(s)}</option>`).join("")}</select></td>
+    ${f("link","c-link","url",'placeholder="https://…"')}${f("notes","c-notes")}
+    <td><button class="btn danger" title="Delete row" onclick="delRow('${r.id}')">✕</button></td></tr>`;
+}
+function onEdit(el){ const r = T.rows.find(x => x.id === el.dataset.id); if (!r) return; r[el.dataset.f] = el.value || null; markDirty(); }
+function markDirty(){ T.dirty = true; const b = $("#savebtn"); if (b) b.disabled = T.saving; const m = $("#dirtymsg"); if (m) m.textContent = "Unsaved changes"; const d = $(".toolbar .btn:nth-child(3)"); if (d) d.textContent = "Discard"; }
+async function startEdit(){
+  if (!getKey() && !await askKey("Password to edit the tracker.")) return;
+  T.rows = structuredClone(D.schedule.rows).sort(byDate); T.edit = true; T.dirty = false; T.msg = ""; rerender();
+}
+function addRow(){ T.rows.unshift({id: rid(), date: TODAY, platform: "YouTube long", content: "", status: "Idea", link: null, notes: null}); T.dirty = true; rerender(); setTimeout(() => { const i = $('tbody tr input[data-f="content"]'); if (i) i.focus(); }, 30); }
+function delRow(id){ const r = T.rows.find(x => x.id === id); if (r && confirm(`Delete "${r.content || "this row"}"?`)) { T.rows = T.rows.filter(x => x.id !== id); T.dirty = true; rerender(); } }
+function discardEdit(){ if (T.dirty && !confirm("Discard your changes?")) return; T.edit = false; T.dirty = false; T.rows = null; T.msg = ""; rerender(); }
+async function saveRows(){
+  if (T.rows.some(r => !(r.content || "").trim())) { T.msg = "Every row needs a title."; return rerender(); }
+  const rows = T.rows.slice().sort(byDate).map(({id,date,platform,content,status,link,notes}) => ({id, date: date||null, platform: platform||null, content: content.trim(), status: status||null, link: link||null, notes: notes||null}));
+  T.saving = true; rerender();
+  const send = () => api("/api/schedule", {method: "PUT", body: JSON.stringify({rows, base: D.schedule.base || undefined})});
+  let r = await send();
+  if (r.status === 401) { setKey(""); const k = await askKey("Wrong or missing password."); if (k) r = await send(); }
+  T.saving = false;
+  if (r.ok) { D.schedule.rows = rows; D.schedule.base = r.j.updated; D.schedule.live = true; D.schedule.synced = r.j.updated.slice(0,10); T.rows = structuredClone(rows); T.dirty = false; T.msg = "Saved."; toast("Tracker saved"); }
+  else T.msg = (r.j && r.j.error) || (r.status === 0 ? "Could not reach the server." : "Could not save.");
+  rerender();
+}
+function exportRows(){
+  const blob = new Blob([JSON.stringify({exported: new Date().toISOString(), rows: (T.edit ? T.rows : D.schedule.rows)}, null, 1)], {type: "application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `third-man-schedule-${TODAY}.json`; a.click();
+}
+
+/* ---------- Stats ---------- */
+const trendSVG = (pts, w=260, h=60) => {
+  if (pts.length < 2) return `<div class="small muted">A line appears after a second day of data.</div>`;
+  const xs = pts.map((p,i) => i/(pts.length-1)*(w-8)+4), mx = Math.max(...pts.map(p=>p.v)), mn = Math.min(...pts.map(p=>p.v)), span = (mx-mn)||1;
+  const ys = pts.map(p => h-6-(p.v-mn)/span*(h-12));
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" style="display:block"><polyline fill="none" stroke="var(--accent)" stroke-width="2.5" points="${xs.map((x,i)=>x.toFixed(1)+","+ys[i].toFixed(1)).join(" ")}"/><circle cx="${xs.at(-1)}" cy="${ys.at(-1)}" r="3.5" fill="var(--accent)"/></svg>`;
+};
+function stats(){
+  return `<div class="kicker">From YouTube, refreshed daily</div><h1>Channel stats</h1>
+  <p class="lede">Subscribers, views, progress towards monetisation, and which formats work. Private to you: needs the password.</p>
+  <div id="statsbody"><div class="empty">Loading…</div></div>`;
+}
+afterRender.stats = async () => {
+  const box = $("#statsbody");
+  if (!getKey()) { box.innerHTML = `<div class="card empty"><p>Enter the site password to see the numbers.</p><button class="btn primary" onclick="unlockStats()">Unlock</button></div>`; return; }
+  const r = await api("/api/stats");
+  if (r.status === 401) { setKey(""); box.innerHTML = `<div class="card empty"><p>That password didn't match.</p><button class="btn primary" onclick="unlockStats()">Try again</button></div>`; return; }
+  if (r.status === 503 || r.status === 404 || r.status === 0) { box.innerHTML = `<div class="note warn">Stats need the site's storage and YouTube login to be connected on Vercel. Steps are in the README.</div>`; return; }
+  if (!r.ok) { box.innerHTML = `<div class="note warn">${esc((r.j && r.j.error) || "Could not load stats.")}</div>`; return; }
+  box.innerHTML = r.j.empty ? emptyStats() : renderStats(r.j);
+};
+async function unlockStats(){ if (await askKey()) route(); }
+const emptyStats = () => `<div class="card empty"><p>No numbers saved yet. The first automatic pull is at 06:00 IST; you can run it now.</p><button class="btn primary" onclick="refreshStats(this)">Refresh now</button></div>`;
+async function refreshStats(btn){
+  btn.disabled = true; btn.textContent = "Pulling from YouTube…";
+  const r = await api("/api/stats?refresh=1");
+  if (!r.ok) { toast((r.j && r.j.error) || "Refresh failed"); }
+  route();
+}
+function renderStats(s){
+  const hist = s.history || [], y = s.ypp, tg = y.targets;
+  const hh = hist.filter(h => h.long_watch_hours_365 != null);
+  let pace = "";
+  if (hh.length >= 2) {
+    const a = hh[0], b = hh.at(-1), days = (new Date(b.date) - new Date(a.date)) / 864e5;
+    if (days >= 7) {
+      const rate = (b.long_watch_hours_365 - a.long_watch_hours_365) / days, left = Math.max(0, (new Date("2027-02-01") - new Date(b.date)) / 864e5);
+      pace = `<p class="small">At the current pace (${(rate*7).toFixed(1)} hours a week) the 365-day total reaches about <b>${n0(Math.round(b.long_watch_hours_365 + rate*left))}</b> hours by 1 Feb 2027.</p>`;
+    }
+  }
+  const fm = s.formats || [];
+  const maxAvg = Math.max(1, ...fm.map(f => f.avg_views));
+  const vids = (s.videos || []).slice().sort((a,b) => (b.published||"").localeCompare(a.published||""));
+  return `
+  <div class="toolbar"><span class="small muted">Updated ${new Date(s.updated).toLocaleString("en-GB",{timeZone:"Asia/Kolkata",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})} IST</span><span class="sp"></span><button class="btn" onclick="refreshStats(this)">Refresh now</button></div>
+  <div class="grid g4">
+    <div class="card stat"><span class="kicker">Subscribers</span><b>${n0(s.channel.subs)}</b><span>${s.channel.subs >= tg.subs ? "1,000 reached" : n0(tg.subs - s.channel.subs) + " to 1,000"}</span></div>
+    <div class="card stat"><span class="kicker">Channel views</span><b>${n0(s.channel.views)}</b><span>all time</span></div>
+    <div class="card stat"><span class="kicker">Videos</span><b>${s.channel.videos}</b><span>${vids.filter(v=>v.kind==="long").length} long · ${vids.filter(v=>v.kind==="short").length} Shorts</span></div>
+    <div class="card stat"><span class="kicker">Days to 1 Feb 2027</span><b>${Math.ceil((new Date("2027-02-01") - NOW)/864e5)}</b><span>when the bar doubles for new applicants</span></div>
+  </div>
+  <h2>Monetisation progress</h2>
+  <div class="grid g2">
+    <div class="card">${y.long_watch_hours_365 != null
+      ? progBar("Long-form watch hours, last 365 days", y.long_watch_hours_365, tg.watch_hours_feb_2027, [{v:tg.watch_hours_now,l:"4,000 now"},{v:tg.watch_hours_feb_2027,l:"8,000 from 1 Feb"}]) + pace
+      : `<div class="note warn">Watch hours aren't available yet. ${esc(s.analytics_note || "")}</div>`}
+      ${progBar("Subscribers", s.channel.subs, tg.subs, [{v:tg.subs,l:"1,000"}])}</div>
+    <div class="card">${y.shorts_views_90 != null
+      ? progBar("Shorts views, last 90 days", y.shorts_views_90, tg.shorts_views_90d_feb_2027, [{v:tg.shorts_views_90d_now,l:"10M now"},{v:tg.shorts_views_90d_feb_2027,l:"20M from 1 Feb"}])
+      : `<div class="note warn">Shorts views for the last 90 days need the Analytics permission too.</div>`}
+      <p class="small muted">Either route counts: 4,000 public long-form watch hours, or 10 million Shorts views in 90 days (both double for new applicants from 1 Feb 2027), plus 1,000 subscribers.</p></div>
+  </div>
+  <h2>Growth</h2>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">Subscribers</div>${trendSVG(hist.map(h=>({v:h.subs})))}</div>
+    <div class="card"><div class="kicker">Channel views</div>${trendSVG(hist.map(h=>({v:h.views})))}</div>
+    <div class="card"><div class="kicker">Watch hours (365 days)</div>${trendSVG(hh.map(h=>({v:h.long_watch_hours_365})))}</div>
+  </div>
+  <h2>Results per format</h2>
+  ${fm.length ? `<div class="tablewrap"><table><thead><tr><th>Format</th><th>Type</th><th>Videos</th><th>Avg views</th><th class="hide-sm"></th><th>Avg % viewed</th><th class="hide-sm">Watch hours</th></tr></thead><tbody>
+    ${fm.map(f => `<tr><td>${fmtChip(f.format)}</td><td class="small">${f.kind === "short" ? "Short" : "Long"}</td><td>${f.videos}${f.videos < 3 ? ` <span class="muted small">too early</span>` : ""}</td><td><b>${n0(f.avg_views)}</b></td>
+      <td class="hide-sm" style="min-width:140px"><div class="bars"><div class="track" style="height:8px"><div class="fill" style="width:${f.avg_views/maxAvg*100}%"></div></div></div></td>
+      <td>${f.avg_view_pct != null ? f.avg_view_pct + "%" : "—"}</td><td class="hide-sm">${f.watch_hours != null ? f.watch_hours : "—"}</td></tr>`).join("")}</tbody></table></div>
+    <p class="small muted">Long videos and Shorts are kept apart because they aren't comparable. With only a few videos per format, treat this as a hint and not a verdict. "% viewed" is how much of a video people watch on average, weighted by views${s.analytics ? "" : " (needs the Analytics permission)"}.</p>`
+    : `<div class="card empty">Appears once videos from our library are on YouTube.</div>`}
+  <h2>Every video</h2>
+  <div class="tablewrap"><table><thead><tr><th>Video</th><th>Format</th><th>Views</th><th class="hide-sm">Likes</th><th>% viewed</th><th class="hide-sm">Avg watch</th><th class="hide-sm">Subs gained</th><th class="hide-sm">Published</th></tr></thead><tbody>
+    ${vids.map(v => `<tr><td><b>${esc(v.title)}</b> <a class="lnk" href="https://youtu.be/${esc(v.id)}" target="_blank" rel="noopener">↗</a><div class="small muted">${v.kind === "short" ? "Short" : "Long"} · ${esc(v.privacy)}</div></td>
+      <td>${v.format ? fmtChip(v.format) : "—"}</td><td>${n0(v.views)}</td><td class="hide-sm">${n0(v.likes)}</td><td>${v.avg_view_pct != null ? Math.round(v.avg_view_pct) + "%" : "—"}</td>
+      <td class="hide-sm mono small">${v.avg_view_s != null ? Math.floor(v.avg_view_s/60) + ":" + String(Math.round(v.avg_view_s%60)).padStart(2,"0") : "—"}</td><td class="hide-sm">${v.subs_gained != null ? v.subs_gained : "—"}</td><td class="hide-sm small">${fmtDate(v.published)}</td></tr>`).join("")}</tbody></table></div>
+  ${s.analytics ? "" : `<div class="note warn" style="margin-top:14px"><b>Watch hours and % viewed are missing.</b> ${esc(s.analytics_note || "")} Run <span class="mono">publish/reauth_youtube.py</span> once on your computer and put the new token in Vercel as <span class="mono">G_YT_TOKEN</span> (steps in the README).</div>`}`;
+}
+
+/* ---------- Formats ---------- */
 function formats(sub){
   const F = D.formats.formats;
   if (sub) return formatDetail(F.find(f=>f.id===sub) || F[0]);
@@ -217,9 +453,9 @@ function formats(sub){
   <div class="grid g3">${F.map(f=>{
     const st = (D.stills[f.sample]||[]).filter(s=>s.kind==="short").slice(0,3);
     return `<div class="card fmtcard" onclick="location.hash='formats/${f.id}'">
-      <div class="thumbs">${st.length?st.map(s=>`<img loading="lazy" src="${s.src}" alt="">`).join(""):(f.id==="replay"?`<svg viewBox="0 0 360 150" width="100%" height="150">${miniWagon()}</svg>`:"")}</div>
+      <div class="thumbs">${st.length?st.map(s=>`<img loading="lazy" src="${esc(s.src)}" alt="">`).join(""):(f.id==="replay"?`<svg viewBox="0 0 360 150" width="100%" height="150">${miniWagon()}</svg>`:"")}</div>
       <div class="row">${f.status==="new"?`<span class="chip badge-new">New</span>`:""}<span class="kicker">${esc(f.tag)}</span></div>
-      <h3 style="font:700 21px/1.2 'Playfair Display',serif;margin:0">${esc(f.name)}</h3>
+      <h3>${esc(f.name)}</h3>
       <div class="small muted">${esc(f.pitch)}</div>
       <div class="small"><b>When:</b> ${esc(f.trigger)}</div>
       <div class="small mono muted">${esc(f.length)}</div>
@@ -231,7 +467,7 @@ function formatDetail(f){
   return `<button class="back" onclick="location.hash='formats'">← All formats</button>
   <div class="row">${f.status==="new"?`<span class="chip badge-new">New</span>`:""}<span class="kicker">${esc(f.tag)}</span></div>
   <h1>${esc(f.name)}</h1><p class="lede">${esc(f.pitch)}</p>
-  ${st.length?`<div class="gallery">${st.map(s=>`<img loading="lazy" class="${s.kind}" src="${s.src}" alt="Frame from ${esc(s.slug)}" title="${esc(s.slug)}">`).join("")}</div>`:""}
+  ${st.length?`<div class="gallery">${st.map(s=>`<img loading="lazy" class="${esc(s.kind)}" src="${esc(s.src)}" alt="Frame from ${esc(s.slug)}" title="${esc(s.slug)}">`).join("")}</div>`:""}
   ${f.id==="replay"?replaySample():""}
   <div class="grid g2" style="margin-top:18px">
     <div class="card"><h3>At a glance</h3><dl class="kv">
@@ -245,21 +481,15 @@ function formatDetail(f){
   <h2>Videos in this format</h2>
   ${ex.length?libTable(ex):`<div class="card empty">None yet. The pilot is built from the 4th ODI captures.</div>`}`;
 }
-
-/* Replay Room sample from real capture data */
 function wagonSVG(shots, size){
   const c = size/2, R = size/2-8, sx = v => 8 + v/360*(size-16);
-  const col = s => s.r>=6?"var(--red)":s.r===4?"var(--info)":"var(--muted)";
+  const col = s => s.r>=6?"var(--accent)":s.r===4?"var(--info)":"var(--muted)";
   return `<circle cx="${c}" cy="${c}" r="${R}" fill="color-mix(in srgb,var(--good) 10%,transparent)" stroke="var(--line)"/>
     <circle cx="${c}" cy="${c}" r="${R*0.45}" fill="none" stroke="var(--line)" stroke-dasharray="4 4"/>
     <rect x="${c-4}" y="${c-14}" width="8" height="28" rx="2" fill="var(--chip)" stroke="var(--line)"/>
     ${shots.map(s=>`<line x1="${c}" y1="${c}" x2="${sx(s.x)}" y2="${sx(s.y)}" stroke="${col(s)}" stroke-width="${s.r>=4?2:1.2}" stroke-opacity="${s.r>=4?.95:.55}"/>`).join("")}`;
 }
-function miniWagon(){
-  if(!D.replay) return "";
-  const s = D.replay.young.shots;
-  return `<g transform="translate(105,0)">${wagonSVG(s,150)}</g>`;
-}
+function miniWagon(){ if(!D.replay) return ""; return `<g transform="translate(105,0)">${wagonSVG(D.replay.young.shots,150)}</g>`; }
 function replaySample(){
   const r = D.replay; if(!r) return "";
   const y = r.young, maxR = Math.max(...y.blocks.map(b=>b.runs));
@@ -269,9 +499,9 @@ function replaySample(){
   <div class="grid g3">
     <div class="card"><div class="kicker">Will Young · ${y.runs} off ${y.balls}</div><h3>Every scoring shot</h3>
       <svg viewBox="0 0 300 300" width="100%" style="max-width:300px;display:block;margin:auto">${wagonSVG(y.shots,300)}</svg>
-      <div class="row small muted" style="justify-content:center"><span style="color:var(--red)">● six</span><span style="color:var(--info)">● four</span><span>● ones, twos, threes</span></div></div>
+      <div class="row small muted" style="justify-content:center"><span style="color:var(--accent-ink)">● six</span><span style="color:var(--info)">● four</span><span>● ones, twos, threes</span></div></div>
     <div class="card"><div class="kicker">Two innings in one</div><h3>Runs and false shots, every 25 balls</h3>
-      <div class="bars">${y.blocks.map(b=>`<div class="b"><span class="mono small">Balls ${b.balls}</span><div class="track"><div class="fill" style="width:${b.runs/maxR*100}%"></div></div><span class="mono">${b.runs}</span></div>
+      <div class="bars">${y.blocks.map(b=>`<div class="b"><span class="mono small">Balls ${esc(b.balls)}</span><div class="track"><div class="fill" style="width:${b.runs/maxR*100}%"></div></div><span class="mono">${b.runs}</span></div>
       <div class="b" style="margin-top:-4px"><span></span><div class="small muted">${b.false_shots} false shot${b.false_shots===1?"":"s"}</div><span></span></div>`).join("")}</div>
       <p class="small">15 false shots in his first 50 balls, 2 in the next 25: he survived, then took over.</p></div>
     <div class="card"><div class="kicker">The luck meter</div><h3>False shots drawn vs wickets</h3>
@@ -280,13 +510,13 @@ function replaySample(){
   </div>
   <div class="card" style="margin-top:14px"><h3>Where the match went: NZ innings by phase</h3>
     <div class="tablewrap" style="box-shadow:none;border:0"><table><thead><tr><th>Overs</th><th>Runs</th><th>Wickets</th><th>Balls not in control</th></tr></thead><tbody>
-    ${r.phases.map(p=>`<tr${p.overs==="21-30"?' style="background:color-mix(in srgb,var(--red) 10%,transparent)"':""}><td class="mono">${p.overs}</td><td><b>${p.runs}</b></td><td>${p.wkts}</td><td>${p.false_pct}%</td></tr>`).join("")}</tbody></table></div>
+    ${r.phases.map(p=>`<tr${p.overs==="21-30"?' style="background:color-mix(in srgb,var(--accent) 16%,transparent)"':""}><td class="mono">${esc(p.overs)}</td><td><b>${p.runs}</b></td><td>${p.wkts}</td><td>${p.false_pct}%</td></tr>`).join("")}</tbody></table></div>
     <p class="small muted" style="margin:6px 0 0">Overs 21–30: 89 runs with batters out of control on only 7% of balls. The stretch where India lost the grip.</p></div>`;
 }
 
-/* ---------------- Playbook ---------------- */
+/* ---------- Playbook ---------- */
 function playbook(){
-  const P = D.formats.playbook;
+  const P = D.formats.playbook, R = (D.reminders.items || []).filter(r => new Date(r.at) > new Date());
   return `<div class="kicker">When to trigger what</div><h1>Playbook</h1>
   <p class="lede">Match the moment to the format. ${esc(D.formats.cadence)}</p>
   <div class="tablewrap"><table><thead><tr><th>When this happens</th><th>Make</th><th>Timing</th><th class="hide-sm">Output</th><th class="hide-sm">Prep</th></tr></thead><tbody>
@@ -298,10 +528,14 @@ function playbook(){
     <div class="card"><div class="kicker">Before a series</div><p class="small">Tactics Board preview 1–2 days out; ground-guide Short and IG carousel.</p></div>
     <div class="card"><div class="kicker">Quiet days</div><p class="small">Lab episodes and What If? from the library; evergreen and searchable.</p></div>
     <div class="card"><div class="kicker">Every day</div><p class="small">One Short (or Flip). Check the ideas feed each morning.</p></div>
-  </div>`;
+  </div>
+  <h2>Match-day phone alerts</h2>
+  <p class="lede">A check runs after each India match; if the match has ended, your phone buzzes with the steps. Rain-affected or abandoned games say so.</p>
+  <div class="card timeline">${R.length ? R.map(r=>`<div class="tl"><div class="d">${dow(r.at)} ${fmtDate(r.at)}</div><div><b>${esc(r.label)}</b><div class="muted small">${esc(new Date(r.at).toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}))} IST · ${esc(r.what)}</div></div></div>`).join("") : `<div class="empty">No alerts scheduled.</div>`}</div>
+  <div class="note" style="margin-top:12px"><b>When the alert comes:</b> open the match on Cricinfo → Commentary → <b>Load all commentary</b> for each innings → Scorecard and Statistics → <b>Save JSON</b>; repeat on Cricbuzz's Full Commentary page; send both files.</div>`;
 }
 
-/* ---------------- Ideas ---------------- */
+/* ---------- Ideas ---------- */
 function ideaRow(i){
   return `<div class="tl"><div class="d p-${esc(i.priority)}">${esc(i.priority||"")}</div><div><b>${esc(i.title)}</b><div class="row small" style="margin-top:3px">${fmtChip(i.format)}<span class="muted">${esc(i.timing||"")}</span></div>${i.why?`<div class="small muted">${esc(i.why)}</div>`:""}${i.data?`<div class="small mono muted">Data: ${esc(i.data)}</div>`:""}</div></div>`;
 }
@@ -316,21 +550,35 @@ function ideas(day){
   return `<div class="kicker">Daily ideas feed</div><h1>Ideas for ${fmtDate(d.date)}</h1>
   <p class="lede">${esc(d.by||"")}. A scheduled task reads the cricket news each morning and suggests videos for each format.</p>
   <div class="row" style="margin-bottom:12px"><label class="small muted" for="day">Day</label>
-    <select id="day" onchange="location.hash='ideas/'+this.value" style="font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)">${D.days.map(x=>`<option ${x===day?"selected":""}>${x}</option>`).join("")}</select></div>
-  <div class="filters">${fmts.map(f=>`<button class="${f===ideaFmt?"on":""}" onclick="ideaFmt='${f}';route()">${f==="All"?"All":esc(FMT(f).name)}</button>`).join("")}</div>
+    <select id="day" onchange="location.hash='ideas/'+this.value" style="font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)">${D.days.map(x=>`<option ${x===day?"selected":""}>${esc(x)}</option>`).join("")}</select></div>
+  <div class="filters">${fmts.map(f=>`<button class="${f===ideaFmt?"on":""}" onclick="ideaFmt='${esc(f)}';route()">${f==="All"?"All":esc(FMT(f).name)}</button>`).join("")}</div>
   <div class="grid g2">
     <div class="card timeline">${list.map(ideaRow).join("") || `<div class="empty">No ideas for this format.</div>`}</div>
-    <div class="card"><h3>News it read</h3>${(d.news||[]).length?`<ul class="clean small">${d.news.map(n=>`<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>${n.note?` <span class="muted">· ${esc(n.note)}</span>`:""}</li>`).join("")}</ul>`:`<div class="muted small">The first automated run adds the news it used here.</div>`}</div>
+    <div class="card"><h3>News it read</h3>${(d.news||[]).length?`<ul class="clean small">${d.news.map(n=>`<li><a href="${url(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>${n.note?` <span class="muted">· ${esc(n.note)}</span>`:""}</li>`).join("")}</ul>`:`<div class="muted small">The first automated run adds the news it used here.</div>`}</div>
   </div>`;
 }
 
-/* ---------------- Library ---------------- */
+/* ---------- Library (with Drive + YouTube links) ---------- */
 let libFmt = "All";
+function links(i){
+  const dv = (D.drive.videos || {})[i.slug], yt = D.yt[i.slug] || {}, out = [];
+  if (dv) out.push(`<a class="lnk" href="${url(dv.folder)}" target="_blank" rel="noopener">Drive ↗</a>`);
+  if (yt.long) out.push(`<a class="lnk" href="https://youtu.be/${esc(yt.long)}" target="_blank" rel="noopener">YouTube long ↗</a>`);
+  if (yt.short) out.push(`<a class="lnk" href="https://youtu.be/${esc(yt.short)}" target="_blank" rel="noopener">YouTube Short ↗</a>`);
+  return out.join(" · ");
+}
+function files(i){
+  const dv = (D.drive.videos || {})[i.slug]; if (!dv || !dv.files.length) return "";
+  const order = {long:0, short:1, thumbnail:2, cover:3, subtitles:4}; const fl = dv.files.slice().sort((a,b)=>(order[a.kind] ?? 9)-(order[b.kind] ?? 9));
+  return `<details><summary>${fl.length} files in Drive</summary><ul class="clean small">${fl.map(f=>`<li><a class="lnk" href="${url(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> <span class="muted">${esc(f.kind)}${f.mb>=1?` · ${f.mb} MB`:""}</span></li>`).join("")}</ul></details>`;
+}
 function libTable(items){
   return `<div class="tablewrap"><table><thead><tr><th>Video</th><th>Format</th><th class="hide-sm">Long</th><th class="hide-sm">Short</th><th>Status</th><th class="hide-sm">Planned</th></tr></thead><tbody>
-  ${items.map(i=>`<tr><td><b>${esc(i.title)}</b>${i.link?` <a class="small" href="${esc(i.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}
+  ${items.map(i=>`<tr><td><b>${esc(i.title)}</b>${i.link?` <a class="lnk" href="${url(i.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}
+    <div class="small" style="margin-top:2px">${links(i)}</div>
     ${i.recheck?`<div class="small" style="color:var(--warn)">Re-check: ${esc(i.recheck)}</div>`:""}
-    ${i.sources.length?`<details><summary>${i.sources.length} source${i.sources.length>1?"s":""}</summary><ul class="clean small muted">${i.sources.map(s=>`<li style="word-break:break-word">${/^https?:/.test(s)?`<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>`:esc(s)}</li>`).join("")}</ul></details>`:""}</td>
+    ${files(i)}
+    ${i.sources.length?`<details><summary>${i.sources.length} source${i.sources.length>1?"s":""}</summary><ul class="clean small muted">${i.sources.map(s=>`<li style="word-break:break-word">${/^https?:/.test(s)?`<a href="${url(s)}" target="_blank" rel="noopener">${esc(s)}</a>`:esc(s)}</li>`).join("")}</ul></details>`:""}</td>
     <td>${fmtChip(i.format)}</td><td class="hide-sm mono small">${i.long||"—"}</td><td class="hide-sm mono small">${i.short||"—"}</td><td>${statusChip(i.status)}</td><td class="hide-sm mono small">${fmtDate(i.planned)}</td></tr>`).join("")}
   </tbody></table></div>`;
 }
@@ -339,17 +587,19 @@ function library(){
   const fmts = ["All", ...D.formats.formats.map(f=>f.id).filter(id => it.some(i=>i.format===id))];
   const shown = it.filter(i => libFmt==="All" || i.format===libFmt);
   const unsched = it.filter(i => i.status==="Not scheduled").length;
+  const drv = D.drive.root;
   return `<div class="kicker">${it.length} videos built</div><h1>Library</h1>
-  <p class="lede">Everything built, with durations, status and sources. ${unsched?`<b>${unsched}</b> finished videos aren't on the schedule yet.`:""}</p>
-  <div class="filters">${fmts.map(f=>`<button class="${f===libFmt?"on":""}" onclick="libFmt='${f}';route()">${f==="All"?"All":esc(FMT(f).name)} <span class="muted">${f==="All"?it.length:it.filter(i=>i.format===f).length}</span></button>`).join("")}</div>
-  ${libTable(shown)}`;
+  <p class="lede">Everything built, with durations, status, Drive and YouTube links, and sources. ${unsched?`<b>${unsched}</b> finished videos aren't on the schedule yet. `:""}${drv?`<a class="lnk" href="${url(drv)}" target="_blank" rel="noopener">Open the whole Drive folder ↗</a>`:""}</p>
+  <div class="filters">${fmts.map(f=>`<button class="${f===libFmt?"on":""}" onclick="libFmt='${esc(f)}';route()">${f==="All"?"All":esc(FMT(f).name)} <span class="muted">${f==="All"?it.length:it.filter(i=>i.format===f).length}</span></button>`).join("")}</div>
+  ${libTable(shown)}
+  <p class="small muted">Drive links open only while you're signed in to the channel's Google account. Drive's folder state shows as of ${fmtDate(D.drive.synced)}.</p>`;
 }
 
-/* ---------------- Data & rules ---------------- */
+/* ---------- Data & rules ---------- */
 function data(){
   const G = D.formats.global_rules;
   return `<div class="kicker">How we work</div><h1>Data &amp; rules</h1>
-  <p class="lede">The channel-wide rules every video follows, where the numbers come from, and the checklist before anything goes out.</p>
+  <p class="lede">The channel-wide rules every video follows, where the numbers come from, what runs where, and the checklist before anything goes out.</p>
   <h2>Channel-wide rules</h2>
   <div class="grid g2">${G.map(g=>`<div class="card"><b>${esc(g.rule)}</b><div class="small muted" style="margin-top:4px">${esc(g.why)}</div></div>`).join("")}</div>
   <h2>Where the numbers come from</h2>
@@ -358,6 +608,14 @@ function data(){
     <tr><td><b>Match capture</b> <span class="muted small">(our extension)</span></td><td>Any match you open on Cricinfo / Cricbuzz</td><td class="hide-sm small">Ball-by-ball with line, length, shot, control, direction; Cricbuzz notes and field changes</td><td class="small">ODIs, Tests, the Replay Room</td></tr>
     <tr><td><b>Cricsheet</b> <span class="muted small">(free)</span></td><td>Tests, ODIs, T20Is (history)</td><td class="hide-sm small">Ball-by-ball, days after a match; some gaps</td><td class="small">Evergreen history; never as career totals unchecked</td></tr>
     <tr><td><b>Official records</b></td><td>BCCI, NZC, ICC, IPL</td><td class="hide-sm small">Scorecards, career totals, squads</td><td class="small">Checking every headline number</td></tr>
+  </tbody></table></div>
+  <h2>What runs where</h2>
+  <div class="tablewrap"><table><thead><tr><th>Piece</th><th>Runs</th><th class="hide-sm">What it does</th></tr></thead><tbody>
+    <tr><td><b>This site</b></td><td class="small">Vercel, updates on every push</td><td class="hide-sm small">Dashboard, formats, library</td></tr>
+    <tr><td><b>Tracker</b></td><td class="small">Saved in the site's storage when you click Save</td><td class="hide-sm small">Edit here; Export JSON for a backup</td></tr>
+    <tr><td><b>Channel stats</b></td><td class="small">Daily 06:00 IST (Vercel cron)</td><td class="hide-sm small">Pulls YouTube numbers into storage</td></tr>
+    <tr><td><b>Daily ideas</b></td><td class="small">Daily 06:34 IST (scheduled task)</td><td class="hide-sm small">Reads the news, writes ideas per format, updates fixtures</td></tr>
+    <tr><td><b>Match-day alerts</b></td><td class="small">After each India match (scheduled tasks)</td><td class="hide-sm small">Phone buzz with the capture steps</td></tr>
   </tbody></table></div>
   <h2>Before anything goes out</h2>
   <div class="grid g3">

@@ -23,8 +23,8 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - The Sportmonks plan covers IPL 2013-2026 plus T20Is/T20 World Cups. It has NO men's ODIs or Tests, so take those numbers from the web.
 
 ## Workflow
-- Content schedule (what's posted, what's next, library, ideas): the Sheets artifact https://claude.ai/artifact/W2S945TTf7fCL2htKDMfLy. Read it through the Claude Docs connector, and update Status/Link there after every upload.
-- Dashboard (Vercel, served from site/): after any change to videos or the schedule, update site/data/schedule.json from the sheet, run `python3 site_build.py`, commit and push. Format rules live in site/data/formats.json; keep them in step with this file. A daily scheduled task (06:34 IST) writes site/data/ideas/<date>.json and fixtures.json.
+- Content schedule: lives on the control-room site (Tracker page, stored in its Upstash storage). After every upload update Status/Link with `python3 site_sync.py set "<title>" status=Posted link=<url>` (env TTM_SITE_URL, TTM_SITE_KEY) or ask the owner to edit it on the site. The old Sheets artifact https://claude.ai/artifact/W2S945TTf7fCL2htKDMfLy is a legacy snapshot; site/data/schedule.json is only the seed/fallback.
+- Dashboard (Vercel, served from site/): after any change to videos or the schedule, update site/data/schedule.json from the sheet, run `python3 site_build.py` and `python3 drive_links.py` (Drive links, needs G_* env), commit and push. Format rules live in site/data/formats.json; keep them in step with this file. A daily scheduled task (06:34 IST) writes site/data/ideas/<date>.json and fixtures.json.
 - Drive: The Third Man/Videos/<slug> = not yet posted; Published_YT/<slug> = posted (youtube.py moves it); Archive/ = replaced versions.
 - Instagram is posted by hand: Reels = the Short files; carousels in deliver/<slug>/carousel with caption.txt.
 - Adjust one video: edit its spec, then `./batch.sh <slug>` (narration is cached per paragraph, so only changed lines hit the API).

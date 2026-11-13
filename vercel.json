@@ -1,7 +1,12 @@
 {
-  "buildCommand": "",
   "outputDirectory": "site",
   "cleanUrls": true,
+  "functions": {
+    "api/stats.js": { "includeFiles": "site/data/video_map.json", "maxDuration": 60 }
+  },
+  "crons": [
+    { "path": "/api/stats?refresh=1", "schedule": "30 0 * * *" }
+  ],
   "headers": [
     { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
   ]

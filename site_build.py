@@ -1,4 +1,5 @@
-"""Refresh the dashboard's generated data (site/data/library.json, stills.json, replay_sample.json).
+"""Refresh the dashboard's generated data (site/data/library.json, stills.json, replay_sample.json, video_map.json).
+(drive.json comes from drive_links.py.)
     python3 site_build.py [--work /home/claude/video]
 formats.json, schedule.json, fixtures.json and ideas/ are edited directly (by hand or by the daily ideas task).
 Vercel serves site/ as-is (vercel.json), so a push is a deploy."""
@@ -56,6 +57,19 @@ def library():
     return len(items)
 
 
+def video_map():
+    """YouTube video id -> slug / long|short / format, for the stats API (no credentials in it)."""
+    f = f"{WORK}/publish/youtube_log.json"
+    if not os.path.exists(f): return 0
+    m = {}
+    for r in json.load(open(f)):
+        if r.get("deleted"): continue
+        s = r["slug"]
+        m[r["video_id"]] = dict(slug=s, kind=r["fmt"], title=TITLES.get(s, s), format=SERIES.get(s, "flip" if s.startswith("flip_") else "news"))
+    json.dump(m, open(f"{OUT}/video_map.json", "w"), indent=1, ensure_ascii=False)
+    return len(m)
+
+
 def stills():
     out = {}
     for fp in sorted(glob.glob(os.path.join(HERE, "site", "img", "*.webp"))):
@@ -91,5 +105,5 @@ def replay_sample():
 
 
 if __name__ == "__main__":
-    n = library(); stills(); replay_sample()
-    print(f"library {n} videos; stills; replay sample -> {OUT}")
+    n = library(); stills(); replay_sample(); vm = video_map()
+    print(f"library {n} videos; {vm} uploaded videos mapped; stills; replay sample -> {OUT}")

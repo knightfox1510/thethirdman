@@ -1,0 +1,11 @@
+{"note":"Phone alerts: each is a scheduled check that buzzes only if the match has ended. Times are IST.",
+ "items":[
+ {"at":"2026-11-13T16:00:00+05:30","label":"4th ODI, India in New Zealand","what":"Capture Cricinfo + Cricbuzz if the match has ended"},
+ {"at":"2026-11-15T16:00:00+05:30","label":"5th ODI, India in New Zealand","what":"Capture Cricinfo + Cricbuzz if the match has ended"},
+ {"at":"2026-11-21T12:00:00+05:30","label":"1st Test, Wellington (day 3 check)","what":"Capture if the Test has ended"},
+ {"at":"2026-11-22T12:00:00+05:30","label":"1st Test, Wellington (day 4 check)","what":"Capture if the Test has ended"},
+ {"at":"2026-11-23T12:00:00+05:30","label":"1st Test, Wellington (day 5 check)","what":"Capture if the Test has ended"},
+ {"at":"2026-11-29T12:00:00+05:30","label":"2nd Test, Christchurch (day 3 check)","what":"Capture if the Test has ended"},
+ {"at":"2026-11-30T12:00:00+05:30","label":"2nd Test, Christchurch (day 4 check)","what":"Capture if the Test has ended"},
+ {"at":"2026-12-01T12:00:00+05:30","label":"2nd Test, Christchurch (day 5 check)","what":"Capture if the Test has ended"}
+ ]}
