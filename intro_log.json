@@ -23,6 +23,10 @@
   "flip",
   "kinetic",
   "fieldmap",
+  "stumps",
+  "flip",
+  "kinetic",
+  "fieldmap",
   "stumps"
  ],
  "assigned": {
@@ -49,6 +53,10 @@
   "aaryavir_sehwag": "flip",
   "lab_ep1_abhishek_twin": "kinetic",
   "stat_check_bumrah_rashid": "fieldmap",
-  "lab_ep2_bumrah_twin": "stumps"
+  "lab_ep2_bumrah_twin": "stumps",
+  "replay_4odi": "flip",
+  "zz_preview_replay": "kinetic",
+  "replay_4odi_young": "fieldmap",
+  "replay_4odi_dots": "stumps"
  }
 }
