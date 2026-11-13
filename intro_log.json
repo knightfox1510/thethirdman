@@ -27,7 +27,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -57,6 +58,7 @@
   "replay_4odi": "flip",
   "zz_preview_replay": "kinetic",
   "replay_4odi_young": "fieldmap",
-  "replay_4odi_dots": "stumps"
+  "replay_4odi_dots": "stumps",
+  "henry_6balls": "flip"
  }
 }

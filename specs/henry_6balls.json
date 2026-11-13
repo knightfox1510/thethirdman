@@ -1,0 +1,344 @@
+{
+ "slug": "henry_6balls",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "HENRY · 3 WICKETS IN 6 BALLS",
+ "files": {
+  "long": "Henry_Long_unused",
+  "short": "3_Wickets_In_6_Balls_Matt_Henry_vs_India_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "MATT HENRY",
+  "lines": [
+   {
+    "t": "3 WICKETS"
+   },
+   {
+    "t": "6 BALLS",
+    "c": "gold"
+   }
+  ],
+  "hero": "3",
+  "herosize": 420
+ },
+ "sources": [
+  "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length and shot data, captured with our own tool.",
+  "Cricbuzz match capture (match 161271): over-by-over cross-check and dismissal wording (c Finn Allen b Henry; b Henry; lbw b Henry).",
+  "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry.",
+  "All figures computed in make_henry_over.py from data/cricinfo/nz_ind_4odi_balls.csv. Scenes are illustrated recreations (not broadcast footage); a highlights clip was used privately as a staging reference only."
+ ],
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ],
+   [
+    20,
+    20,
+    25
+   ],
+   [
+    60,
+    60,
+    60
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ]
+  ]
+ },
+ "short": [
+  {
+   "vo": "Three wickets. Six balls. Matt Henry against India.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "4TH ODI · MOUNT MAUNGANUI",
+     "lines": [
+      {
+       "t": "3 WICKETS."
+      },
+      {
+       "t": "6 BALLS.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "wide",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Ball one. On the stumps. रोहित शर्मा is caught. Nought.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "BALL ONE",
+     "lines": [
+      {
+       "t": "ROHIT. CAUGHT."
+      },
+      {
+       "t": "0 (1)",
+       "c": "red"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Then three balls to विराट कोहली. Outside off stump. Full, full, and just short of a good length. No run.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "BALLS TWO TO FOUR",
+     "rows": [
+      [
+       "Ball 2 · full",
+       "dot",
+       "ink"
+      ],
+      [
+       "Ball 3 · full",
+       "dot",
+       "ink"
+      ],
+      [
+       "Ball 4 · short of good length",
+       "dot",
+       "ink"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "drift",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Ball five. Outside off, short. विराट कोहली is bowled. Nought off four.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "BALL FIVE",
+     "lines": [
+      {
+       "t": "KOHLI. BOWLED."
+      },
+      {
+       "t": "0 (4)",
+       "c": "red"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.17,
+     0.93
+    ],
+    "ball": {
+     "at": 0.55,
+     "shot": "bowled"
+    }
+   }
+  },
+  {
+   "vo": "Ball six. श्रेयस अय्यर, first ball. Lbw. Nought.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "BALL SIX",
+     "lines": [
+      {
+       "t": "IYER. LBW."
+      },
+      {
+       "t": "0 (1)",
+       "c": "red"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.26
+     }
+    ],
+    "cam": "pull"
+   }
+  },
+  {
+   "vo": "India were nought for three, and never came back. They were all out for eighty-nine.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "label": "INDIA AFTER ONE OVER",
+     "value": 0,
+     "suffix": " / 3",
+     "count_dur": 0.5,
+     "kicker": "Henry's first over",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Matt Henry finished with six for twenty-seven. Follow for the full breakdown.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE REPLAY ROOM",
+     "lines": [
+      {
+       "t": "6 FOR 27."
+      },
+      {
+       "t": "FULL BREAKDOWN →",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "raise",
+      "x": 0.5,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "3 Wickets In 6 Balls! Matt Henry vs India #Shorts",
+   "description": "Matt Henry's first over against India in the 4th ODI at Mount Maunganui: Rohit Sharma caught, Virat Kohli bowled, Shreyas Iyer lbw, all in six balls, no runs conceded. Illustrated recreation built from ball-by-ball data (ESPNcricinfo and Cricbuzz match pages, our own analysis). Part of The Replay Room; the full breakdown is on the channel.",
+   "tags": [
+    "Matt Henry",
+    "India vs New Zealand",
+    "Rohit Sharma",
+    "Virat Kohli",
+    "Shreyas Iyer",
+    "4th ODI",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  }
+ }
+}
