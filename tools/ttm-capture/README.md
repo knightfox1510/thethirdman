@@ -1,6 +1,6 @@
 # Third Man match capture (Chrome extension)
 
-Saves the data of a Cricinfo match page **you have open** as one JSON file. It reads what the page itself loads; it makes no requests of its own and does nothing on other sites.
+Saves the data of a Cricinfo or Cricbuzz match page **you have open** as one JSON file. It reads what the page itself loads; it makes no requests of its own and does nothing on other sites.
 
 ## Install (once)
 1. Unzip `ttm-capture.zip` somewhere permanent.
@@ -14,6 +14,11 @@ Saves the data of a Cricinfo match page **you have open** as one JSON file. It r
 5. Send that file to Claude (attach it in the chat).
 
 Expect ~600 balls for a full ODI. If the count is far lower, scroll the commentary manually to the first ball of each innings and save again.
+
+## Cricbuzz
+Same steps on the match's **Full Commentary** page (cricbuzz.com/live-cricket-full-commentary/<id>/...): click **Load all commentary** (it also presses Cricbuzz's "load more"), switch innings and repeat, open the Scorecard tab, then **Save JSON** (file: `cricbuzz_<id>_<match>.json`). Cricbuzz adds the editorial notes between overs (stats, milestones); we use those as leads to verify, not text to copy.
+
+Tip: stay in one browser tab per match; the capture is kept while you move between that match's tabs.
 
 ## On our side
 `python3 cricinfo_import.py data/cricinfo/<file>.json` builds the ball table and prints which fields were found (runs, wickets, and where present wagon-wheel / line / length / shot / control), with innings totals to check against the official scorecard.

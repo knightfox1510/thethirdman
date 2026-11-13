@@ -1,18 +1,18 @@
 {
   "manifest_version": 3,
   "name": "Third Man Match Capture",
-  "version": "1.0.0",
-  "description": "Saves the match data of a Cricinfo page you have open (scorecard, ball-by-ball, stats) as one JSON file for The Third Man analysis.",
+  "version": "1.1.0",
+  "description": "Saves the match data of a Cricinfo or Cricbuzz match page you have open (scorecard, ball-by-ball, stats) as one JSON file for The Third Man analysis.",
   "icons": { "16": "icons/i16.png", "48": "icons/i48.png", "128": "icons/i128.png" },
   "content_scripts": [
     {
-      "matches": ["https://www.espncricinfo.com/*", "https://www.cricinfo.com/*"],
+      "matches": ["https://www.espncricinfo.com/*", "https://www.cricinfo.com/*", "https://www.cricbuzz.com/*", "https://m.cricbuzz.com/*"],
       "js": ["hook.js"],
       "run_at": "document_start",
       "world": "MAIN"
     },
     {
-      "matches": ["https://www.espncricinfo.com/*", "https://www.cricinfo.com/*"],
+      "matches": ["https://www.espncricinfo.com/*", "https://www.cricinfo.com/*", "https://www.cricbuzz.com/*", "https://m.cricbuzz.com/*"],
       "js": ["panel.js"],
       "run_at": "document_idle"
     }
