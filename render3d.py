@@ -51,7 +51,7 @@ def draw_figure(fid, x, z, P, kit, **kw):
 
 def setup_scene(res):
     bpy.ops.wm.read_factory_settings(use_empty=True); sc = bpy.context.scene
-    sc.render.engine = "CYCLES"; sc.cycles.device = "CPU"; sc.cycles.samples = 24; sc.cycles.use_denoising = True
+    sc.render.engine = "CYCLES"; sc.cycles.device = "CPU"; sc.cycles.samples = 16; sc.cycles.use_denoising = True
     sc.render.resolution_x, sc.render.resolution_y = res; sc.render.film_transparent = False
     w = bpy.data.worlds.new("w"); sc.world = w; w.use_nodes = True; bg = w.node_tree.nodes["Background"]; bg.inputs[0].default_value = (.38, .6, .9, 1); bg.inputs[1].default_value = 1.1
     bpy.ops.object.light_add(type="SUN", location=(-20, -30, 40)); s = bpy.context.object; s.rotation_euler = (math.radians(52), 0, math.radians(-35)); s.data.energy = 4.0; s.data.angle = math.radians(3)
@@ -98,7 +98,7 @@ def render_at(spec_path, idx, t, out, res):
     bz = -.5 - 8.5 * (1 - R.smooth(min(1, t / tR))) if t < tR else B.lerp(-.5, 3.0, 1 - (1 - min(1, (t - tR) / 1.0)) ** 3)
     bx = 0 if t < tR else B.lerp(0, -off * 1.0, 1 - (1 - min(1, (t - tR) / 1.0)) ** 3)
     draw_figure("bowler", bx, bz, B._bowler_pose(t, tR), "NZ", cap=True)
-    draw_figure("ump", -off * 1.45, .3, R.STAND, "UMP", brim=True)
+    draw_figure("ump", -off * 2.6, .6, R.STAND, "UMP", brim=True)
     draw_figure("keeper", 0, B.PL + 8.0, R.KEEP, "NZ", cap=True)
     bp = R.STANCE
     if t >= tc:
@@ -107,12 +107,13 @@ def render_at(spec_path, idx, t, out, res):
     draw_figure("batter", 0, B.PL - 1.0, bp, "IND", bat=True, pads=True)
     stumps3d(t, tc, res, res_ == "bowled" and t >= tc)
     bs = B.ball_state(s, t, tR, tc); bo = sph("ball")
-    if bs: place_dot(bo, bs, .09, (250, 248, 240))
+    if bs: place_dot(bo, bs, .13, (250, 248, 240))
     else: bo.hide_render = True
     bpy.context.scene.render.filepath = out; bpy.ops.render.render(write_still=True)
 
 if __name__ == "__main__":
     spec, idx, od = sys.argv[1], int(sys.argv[2]), sys.argv[3]; ts = [float(x) for x in sys.argv[4:]]
+    if ts and ts[0] < 0: ts = [i / 25 for i in range(int(-ts[0] * 25))]          # negative = every frame for that many seconds
     RES = (540, 960); SC, CAM = setup_scene(RES)
     for t in ts:
-        t0 = time.time(); render_at(spec, idx, t, f"{od}/f_{t:.2f}.png", RES); print("t=%.2f %.1fs" % (t, time.time() - t0), flush=True)
+        t0 = time.time(); render_at(spec, idx, t, (f"{od}/f_{int(round(t*25)):04d}.png" if len(ts) > 20 else f"{od}/f_{t:.2f}.png"), RES); print("t=%.2f %.1fs" % (t, time.time() - t0), flush=True)
