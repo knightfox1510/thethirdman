@@ -224,24 +224,6 @@
     }
    ]
   },
-  "flip_mi_captains": {
-   "state": "not posted",
-   "folder": "https://drive.google.com/drive/folders/1asXWszsxSv-fUNksdtj_dkpiUVdaLK7z",
-   "files": [
-    {
-     "name": "Every_MI_Captain_vs_Rohit_Sharma_Flip_9x16_cover.jpg",
-     "kind": "cover",
-     "mb": 0.2,
-     "url": "https://drive.google.com/file/d/1bm6VwpdcX0p8DMuPE-rFIT87LSRHsovq/view?usp=drivesdk"
-    },
-    {
-     "name": "Every_MI_Captain_vs_Rohit_Sharma_Flip_9x16.mp4",
-     "kind": "short",
-     "mb": 15.9,
-     "url": "https://drive.google.com/file/d/1HfGrYVEmV7yPWMtN11KeLAJq4UA8_V2V/view?usp=drivesdk"
-    }
-   ]
-  },
   "nz_test_preview": {
    "state": "not posted",
    "folder": "https://drive.google.com/drive/folders/19W4_HFBi_srzLu7Mob6lv8d7UTodwgvE",
@@ -1043,6 +1025,24 @@
      "kind": "short",
      "mb": 77.3,
      "url": "https://drive.google.com/file/d/1flwadgLHDe03ywp2j4XnBI7f20ytaaVh/view?usp=drivesdk"
+    }
+   ]
+  },
+  "flip_mi_captains": {
+   "state": "posted",
+   "folder": "https://drive.google.com/drive/folders/1asXWszsxSv-fUNksdtj_dkpiUVdaLK7z",
+   "files": [
+    {
+     "name": "Every_MI_Captain_vs_Rohit_Sharma_Flip_9x16_cover.jpg",
+     "kind": "cover",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1bm6VwpdcX0p8DMuPE-rFIT87LSRHsovq/view?usp=drivesdk"
+    },
+    {
+     "name": "Every_MI_Captain_vs_Rohit_Sharma_Flip_9x16.mp4",
+     "kind": "short",
+     "mb": 15.9,
+     "url": "https://drive.google.com/file/d/1HfGrYVEmV7yPWMtN11KeLAJq4UA8_V2V/view?usp=drivesdk"
     }
    ]
   },
