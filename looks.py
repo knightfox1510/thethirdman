@@ -797,13 +797,85 @@ def chrome(c, g, spec, T_, total, last):
     text(c, "THE THIRD MAN", x, y, 20, "monoSB", ink, .85, "r", track=2)
 
 
+
+# ---------------------------------------------------------------- Replay Room scenes (ball-tracking data)
+def _wheel_xy(x, y, cx, cy, k):
+    """Cricinfo wagon coordinates (0-360, centre 180,180; y 360 = straight down the ground) -> screen, bowler's end at the top, off side on the left for a right-hander."""
+    return cx + (x - 180) * k, cy - (y - 180) * k
+
+
+def sc_lab_wagon(c, g, t, D, s):
+    """Wagon wheel built shot by shot. shots: [[x, y, runs], ...] in play order."""
+    header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
+    cx = (l["x0"] + l["x1"]) / 2 + (0 if short else -200); cy = (l["top"] + l["bot"]) / 2 + 10
+    R = min((l["bot"] - l["top"]) / 2 - 18, (l["x1"] - l["x0"]) / 2 - 10); k = R / 190
+    a = eo(prog(t, 0, .4))
+    c.drawOval(skia.Rect.MakeLTRB(cx - R, cy - R, cx + R, cy + R), paint((236, 244, 232), a))
+    c.drawOval(skia.Rect.MakeLTRB(cx - R, cy - R, cx + R, cy + R), paint((120, 130, 120), a, stroke=3))
+    ring = paint((120, 130, 120), .6 * a, stroke=2); ring.setPathEffect(skia.DashPathEffect.Make([10, 10], 0))
+    c.drawOval(skia.Rect.MakeLTRB(cx - R * .5, cy - R * .5, cx + R * .5, cy + R * .5), ring)
+    c.drawRect(skia.Rect.MakeLTRB(cx - 7, cy - 32, cx + 7, cy + 32), paint((222, 205, 160), a))
+    lab = s.get("labels", ["OFF", "LEG"])
+    text(c, lab[0], cx - R + 14, cy + 8, 24, "monoSB", gfx.MUTED, a); text(c, lab[1], cx + R - 14, cy + 8, 24, "monoSB", gfx.MUTED, a, "r")
+    text(c, "STRAIGHT", cx, cy - R + 36, 22, "monoSB", gfx.MUTED, a, "c")
+    shots = s["wagon_shots"]; n = len(shots); t0 = D * s.get("from", .12); t1 = D * s.get("to", .88)
+    for i, (x, y, r) in enumerate(shots):
+        st = t0 + (t1 - t0) * i / max(1, n - 1); q = eo(prog(t, st, st + .25))
+        if q <= 0: continue
+        xx, yy = _wheel_xy(x, y, cx, cy, k)
+        cc = RED if r >= 6 else ((40, 100, 200) if r == 4 else (140, 140, 136))
+        pp = paint(cc, .9 * q, stroke=5 if r >= 4 else 2.5); pp.setStrokeCap(skia.Paint.kRound_Cap)
+        c.drawLine(cx, cy, cx + (xx - cx) * q, cy + (yy - cy) * q, pp)
+    key = s.get("key", [("six", RED), ("four", (40, 100, 200)), ("1-3 runs", (140, 140, 136))])
+    x = l["x0"] if short else l["x1"] - 330; y = l["bot"] - 4 if short else l["top"] + 60
+    for j, (nm, cc) in enumerate(key):
+        yy = y - j * 40 if short else y + j * 44
+        c.drawCircle(x + 10, yy - 8, 9, paint(cc, a)); text(c, nm, x + 30, yy, 26, "inter", gfx.INK, a)
+
+
+_LENGTHS = ["SHORT", "SHORT_OF_A_GOOD_LENGTH", "GOOD_LENGTH", "FULL", "YORKER"]
+_LINES = {"WIDE_OUTSIDE_OFFSTUMP": -1.6, "OUTSIDE_OFFSTUMP": -0.85, "ON_THE_STUMPS": 0.0, "DOWN_LEG": 1.0}
+
+
+def sc_lab_pitch(c, g, t, D, s):
+    """Pitch map: each ball a dot at its line and length. balls: [[line, length, kind], ...], kind = wicket|false|ok."""
+    header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
+    top, bot = l["top"] + 10, l["bot"] - 10; cx = (l["x0"] + l["x1"]) / 2 + (0 if short else -240); w = 360 if short else 330
+    a = eo(prog(t, 0, .4)); bh = (bot - top) / len(_LENGTHS)
+    c.drawRect(skia.Rect.MakeLTRB(cx - w / 2, top, cx + w / 2, bot), paint((236, 228, 205), a))
+    for i, nm in enumerate(_LENGTHS):
+        y = top + i * bh
+        if i: ln = paint((190, 180, 150), a); ln.setStrokeWidth(2); c.drawLine(cx - w / 2, y, cx + w / 2, y, ln)
+        text(c, nm.replace("SHORT_OF_A_GOOD_LENGTH", "BACK OF A LENGTH").replace("_", " "), cx - w / 2 - 16, y + bh / 2 + 8, 22, "monoSB", gfx.MUTED, a, "r")
+    sw = w / 5.2
+    for xo in (-1, 0, 1): c.drawRect(skia.Rect.MakeLTRB(cx + xo * 26 - 4, bot - 6, cx + xo * 26 + 4, bot + 16), paint((60, 50, 40), a))
+    balls = s["pitch_balls"]; n = len(balls); t0 = D * s.get("from", .1); t1 = D * s.get("to", .85)
+    cnt = {}
+    for i, (line, length, kind) in enumerate(balls):
+        st = t0 + (t1 - t0) * i / max(1, n - 1); q = eo(prog(t, st, st + .2))
+        if q <= 0: continue
+        j = _LENGTHS.index(length) if length in _LENGTHS else 2
+        key = (line, length); m = cnt.get(key, 0); cnt[key] = m + 1
+        xx = cx + _LINES.get(line, 0) * sw * .62 + ((m % 4) - 1.5) * 26 * (1 if m else .3) + (m // 4) * 7
+        yy = top + j * bh + bh * (.3 + .1 * ((m // 4) % 5))
+        if kind == "wicket":
+            c.drawCircle(xx, yy, 17, paint(RED, q)); c.drawCircle(xx, yy, 25, paint(RED, .5 * q, stroke=3))
+        elif kind == "false": c.drawCircle(xx, yy, 11, paint((240, 170, 20), q))
+        else: c.drawCircle(xx, yy, 9, paint((120, 130, 150), .8 * q))
+    key = s.get("key", [("wicket", RED), ("not in control", (240, 170, 20)), ("in control / left", (120, 130, 150))])
+    x = l["x1"] - (330 if not short else 520); y = l["top"] + 70
+    if short: x = l["x0"]; y = l["bot"] + 36
+    for j, (nm, cc) in enumerate(key):
+        if short: c.drawCircle(x + 10 + j * 330, y - 8, 9, paint(cc, a)); text(c, nm, x + 30 + j * 330, y, 24, "inter", gfx.INK, a)
+        else: c.drawCircle(x + 10, y + j * 44 - 8, 9, paint(cc, a)); text(c, nm, x + 30, y + j * 44, 26, "inter", gfx.INK, a)
+
 # ---------------------------------------------------------------- install
 def install(engine):
     global E
     E = engine
     E.SCENES.update({"lab_title": sc_lab_title, "lab_dots": sc_lab_dots, "lab_swarm": sc_lab_swarm, "lab_units": sc_lab_units,
                      "lab_big": sc_lab_big, "lab_radial": sc_lab_radial, "lab_score": sc_lab_score, "lab_rings": sc_lab_rings,
-                     "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
+                     "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "lab_wagon": sc_lab_wagon, "lab_pitch": sc_lab_pitch, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 

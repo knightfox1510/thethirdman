@@ -17,6 +17,8 @@ NAMES = {
     "Sanju Samson": "संजू सैमसन", "Sanju": "संजू", "Samson": "सैमसन", "Vaibhav Sooryavanshi": "वैभव सूर्यवंशी", "Vaibhav Suryavanshi": "वैभव सूर्यवंशी",
     "Sooryavanshi": "सूर्यवंशी", "Suryavanshi": "सूर्यवंशी", "Vaibhav": "वैभव", "Bhuvneshwar Kumar": "भुवनेश्वर कुमार", "Bhuvneshwar": "भुवनेश्वर",
     "Mohsin Khan": "मोहसिन ख़ान", "Mohsin": "मोहसिन", "Rashid Khan": "राशिद ख़ान", "Rashid": "राशिद", "Yash Dayal": "यश दयाल", "Dayal": "दयाल",
+    "Ruturaj Gaikwad": "ऋतुराज गायकवाड़", "Gaikwad": "गायकवाड़", "Ruturaj": "ऋतुराज", "Naman Dhir": "नमन धीर", "Dhir": "धीर", "Naman": "नमन",
+    "Auqib Nabi": "आक़िब नबी", "Nabi": "नबी", "Auqib": "आक़िब",
     "Anshul Kamboj": "अंशुल कंबोज", "Kamboj": "कंबोज", "Tilak Varma": "तिलक वर्मा", "Tilak": "तिलक", "Shreyas Iyer": "श्रेयस अय्यर",
     "Shreyas": "श्रेयस", "Iyer": "अय्यर", "Hardik Pandya": "हार्दिक पंड्या", "Hardik": "हार्दिक", "Krunal Pandya": "क्रुणाल पंड्या", "Krunal": "क्रुणाल",
     "Pandya": "पंड्या", "Arshdeep Singh": "अर्शदीप सिंह", "Arshdeep": "अर्शदीप", "Umran Malik": "उमरान मलिक", "Umran": "उमरान",

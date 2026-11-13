@@ -1,0 +1,248 @@
+{
+ "slug": "replay_4odi_dots",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "INDIA OUT DEFENDING",
+ "files": {
+  "long": "Replay_Room_Dots_Long_unused",
+  "short": "Replay_Room_74_Percent_Dots_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THE REPLAY ROOM",
+  "lines": [
+   {
+    "t": "74%"
+   },
+   {
+    "t": "DOTS",
+    "c": "gold"
+   }
+  ],
+  "hero": "74",
+  "herosize": 420
+ },
+ "sources": [
+  "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot, control and wagon data, captured with our own tool.",
+  "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
+  "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
+  "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."
+ ],
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ],
+   [
+    20,
+    20,
+    25
+   ],
+   [
+    60,
+    60,
+    60
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ]
+  ]
+ },
+ "yt": {
+  "long": {
+   "title": "India's 74% dot balls",
+   "description": "India's 74% dot balls",
+   "tags": [
+    "India vs New Zealand",
+    "Matt Henry",
+    "Will Young",
+    "4th ODI",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "74% dot balls: India out defending #Shorts",
+   "description": "74% dot balls: India out defending #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "Matt Henry",
+    "Will Young",
+    "4th ODI",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  }
+ },
+ "short": [
+  {
+   "vo": "India scored off just one ball in four.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "label": "DOT BALLS",
+     "value": 74,
+     "suffix": "%",
+     "count_dur": 0.7,
+     "kicker": "India's chase",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "push"
+   }
+  },
+  {
+   "vo": "New Zealand? Less than half.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "DOT BALLS",
+     "left": {
+      "v": "47%",
+      "l": "New Zealand",
+      "c": "gold"
+     },
+     "right": {
+      "v": "74%",
+      "l": "India",
+      "c": "red"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "stance",
+      "x": 0.3,
+      "hit": "drive"
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.74
+     }
+    ],
+    "cam": "wide"
+   }
+  },
+  {
+   "vo": "India hit ten boundaries all innings. New Zealand hit forty-one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "FOURS AND SIXES",
+     "left": {
+      "v": "41",
+      "l": "New Zealand",
+      "c": "gold"
+     },
+     "right": {
+      "v": "10",
+      "l": "India",
+      "c": "red"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "drive",
+      "x": 0.3,
+      "hit": "drive"
+     }
+    ],
+    "view": "side",
+    "cam": "pull",
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    },
+    "stumps": [
+     0.2,
+     0.9
+    ]
+   }
+  },
+  {
+   "vo": "Twenty-nine fours and twelve sixes. One hundred and eighty-eight runs in boundaries.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "label": "RUNS IN BOUNDARIES",
+     "value": 188,
+     "count_dur": 0.9,
+     "kicker": "New Zealand",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Seven of India's ten wickets fell to a defensive shot. Follow for the full breakdown.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE REPLAY ROOM",
+     "lines": [
+      {
+       "t": "OUT"
+      },
+      {
+       "t": "DEFENDING.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "push"
+   }
+  }
+ ]
+}

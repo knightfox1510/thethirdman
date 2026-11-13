@@ -1,0 +1,1258 @@
+{
+ "slug": "replay_4odi",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 4TH ODI",
+ "files": {
+  "long": "Replay_Room_333_and_89_NZ_v_India_4th_ODI",
+  "short": "Replay_Room_0_for_3_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "THE REPLAY ROOM",
+  "lines": [
+   {
+    "t": "333 AND"
+   },
+   {
+    "t": "89",
+    "c": "gold"
+   }
+  ],
+  "hero": "244",
+  "herosize": 420
+ },
+ "sources": [
+  "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot, control and wagon data, captured with our own tool.",
+  "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
+  "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
+  "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."
+ ],
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ],
+   [
+    20,
+    20,
+    25
+   ],
+   [
+    60,
+    60,
+    60
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    235,
+    235,
+    235
+   ]
+  ]
+ },
+ "yt": {
+  "long": {
+   "title": "333 and 89: how New Zealand beat India by 244 runs (every ball analysed)",
+   "description": "333 and 89: how New Zealand beat India by 244 runs (every ball analysed)",
+   "tags": [
+    "India vs New Zealand",
+    "Matt Henry",
+    "Will Young",
+    "4th ODI",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "0 for 3 after one over: India's chase in 6 balls #Shorts",
+   "description": "0 for 3 after one over: India's chase in 6 balls #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "Matt Henry",
+    "Will Young",
+    "4th ODI",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  }
+ },
+ "long": [
+  {
+   "vo": "Nought for three. After one over. That is how India's chase of three hundred and thirty-four began at Mount Maunganui. It finished at eighty-nine all out, a defeat by two hundred and forty-four runs. Here is exactly how it happened.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "NZ V IND · 4TH ODI",
+    "lines": [
+     "0 for 3.",
+     "After [one over.]"
+    ]
+   },
+   "chapter": "The hook"
+  },
+  {
+   "vo": "This is the Replay Room. We took every ball of the match: its line, its length, the shot that was played, and whether the batter was in control. Then we asked who decided it, and why. Two innings, two very different stories.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "THE REPLAY ROOM",
+    "lines": [
+     "333 and [89.]"
+    ],
+    "teaser": "Every ball · NZ v IND · 4th ODI"
+   },
+   "chapter": "The Replay Room"
+  },
+  {
+   "vo": "New Zealand made three hundred and thirty-three, all out in the last over. India were bowled out for eighty-nine, in twenty-six point four overs. Matt Henry took the match award.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "THE RESULT",
+    "title": "Won by 244 runs.",
+    "items": [
+     {
+      "label": "New Zealand · 49.6 overs",
+      "v": 333,
+      "text": "333",
+      "c": "NZ",
+      "t": "NZ",
+      "kit": "NZ",
+      "word": "three"
+     },
+     {
+      "label": "India · 26.4 overs",
+      "v": 89,
+      "text": "89",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND",
+      "word": "eighty"
+     }
+    ],
+    "max": 360,
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "Start with the chase. This is every ball Matt Henry bowled. Thirty-four of his fifty-eight landed outside off stump, and half were short or back of a length. Nothing exotic. He asked India the same question again and again. And they kept getting it wrong.",
+   "scene": {
+    "type": "lab_pitch",
+    "kicker": "HENRY · 10 OVERS · 6 FOR 27",
+    "title": "The same question, 58 times.",
+    "pitch_balls": [
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "WIDE_OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "YORKER",
+      "wicket"
+     ]
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis",
+    "from": 0.25,
+    "to": 0.8
+   },
+   "chapter": "The chase"
+  },
+  {
+   "vo": "Look at how India got out. Seven of the ten wickets fell to a defensive shot. Not a slog, not a mistimed pull. A forward defence. रोहित शर्मा and विराट कोहली were both out for nought, defending, in the very first over.",
+   "scene": {
+    "type": "lab_units",
+    "kicker": "HOW INDIA GOT OUT",
+    "title": "Out defending.",
+    "rows": [
+     {
+      "label": "India's ten wickets",
+      "n": 10,
+      "k": 7,
+      "c": "red",
+      "text": "7 defending",
+      "word": "seven"
+     }
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "India scored off just one ball in four. New Zealand scored off more than one in two. India hit ten boundaries all innings, eight fours and two sixes. New Zealand hit forty-one, twenty-nine fours and twelve sixes. Almost two hundred runs in boundaries alone.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "DOT BALLS",
+    "title": "Nothing to hit.",
+    "items": [
+     {
+      "label": "India's dot balls",
+      "v": 74,
+      "text": "74%",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND"
+     },
+     {
+      "label": "New Zealand's dot balls",
+      "v": 47,
+      "text": "47%",
+      "c": "NZ",
+      "t": "NZ",
+      "kit": "NZ",
+      "word": "forty-one"
+     }
+    ],
+    "max": 100,
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "Now the other half. New Zealand's innings, ten overs at a time. Seventy-two without loss in the powerplay. Then fifty-three for three. Then overs twenty-one to thirty: eighty-nine runs, and not a wicket. That's where India lost the grip.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "NEW ZEALAND · RUNS EVERY TEN OVERS",
+    "title": "The middle did it.",
+    "domain": [
+     0,
+     100
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Overs 1-10",
+      "v": 72,
+      "text": "72/0"
+     },
+     {
+      "label": "Overs 11-20",
+      "v": 53,
+      "text": "53/3"
+     },
+     {
+      "label": "Overs 21-30",
+      "v": 89,
+      "text": "89/0",
+      "hl": true,
+      "word": "twenty-one"
+     },
+     {
+      "label": "Overs 31-40",
+      "v": 51,
+      "text": "51/3"
+     },
+     {
+      "label": "Overs 41-50",
+      "v": 68,
+      "text": "68/4"
+     }
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   },
+   "chapter": "The first innings"
+  },
+  {
+   "vo": "And in the middle of it, Will Young. A hundred and twenty-five off a hundred and eight balls. He scored all around the wicket: twenty-seven runs from the cut, twenty-three from the cover drive, sixteen from the pull, twelve from the sweep.",
+   "scene": {
+    "type": "lab_wagon",
+    "kicker": "WILL YOUNG · 125 OFF 108",
+    "title": "Every scoring shot.",
+    "wagon_shots": [
+     [
+      228,
+      210,
+      1
+     ],
+     [
+      2,
+      146,
+      4
+     ],
+     [
+      7,
+      225,
+      4
+     ],
+     [
+      97,
+      67,
+      1
+     ],
+     [
+      320,
+      122,
+      1
+     ],
+     [
+      16,
+      254,
+      4
+     ],
+     [
+      123,
+      200,
+      1
+     ],
+     [
+      297,
+      216,
+      1
+     ],
+     [
+      19,
+      100,
+      4
+     ],
+     [
+      77,
+      84,
+      1
+     ],
+     [
+      246,
+      305,
+      1
+     ],
+     [
+      322,
+      38,
+      6
+     ],
+     [
+      246,
+      17,
+      4
+     ],
+     [
+      266,
+      290,
+      1
+     ],
+     [
+      87,
+      247,
+      1
+     ],
+     [
+      79,
+      92,
+      1
+     ],
+     [
+      321,
+      106,
+      1
+     ],
+     [
+      353,
+      232,
+      4
+     ],
+     [
+      113,
+      348,
+      6
+     ],
+     [
+      260,
+      293,
+      1
+     ],
+     [
+      69,
+      250,
+      1
+     ],
+     [
+      76,
+      189,
+      1
+     ],
+     [
+      245,
+      117,
+      1
+     ],
+     [
+      237,
+      282,
+      1
+     ],
+     [
+      311,
+      113,
+      1
+     ],
+     [
+      302,
+      123,
+      1
+     ],
+     [
+      283,
+      30,
+      4
+     ],
+     [
+      51,
+      219,
+      1
+     ],
+     [
+      297,
+      86,
+      2
+     ],
+     [
+      229,
+      207,
+      1
+     ],
+     [
+      293,
+      129,
+      2
+     ],
+     [
+      361,
+      117,
+      4
+     ],
+     [
+      219,
+      31,
+      3
+     ],
+     [
+      109,
+      79,
+      1
+     ],
+     [
+      56,
+      270,
+      2
+     ],
+     [
+      322,
+      329,
+      4
+     ],
+     [
+      42,
+      203,
+      1
+     ],
+     [
+      25,
+      60,
+      6
+     ],
+     [
+      10,
+      97,
+      4
+     ],
+     [
+      358,
+      238,
+      4
+     ],
+     [
+      39,
+      126,
+      2
+     ],
+     [
+      245,
+      146,
+      1
+     ],
+     [
+      248,
+      183,
+      1
+     ],
+     [
+      125,
+      202,
+      1
+     ],
+     [
+      132,
+      204,
+      1
+     ],
+     [
+      251,
+      146,
+      1
+     ],
+     [
+      109,
+      207,
+      1
+     ],
+     [
+      42,
+      146,
+      1
+     ],
+     [
+      205,
+      3,
+      4
+     ],
+     [
+      25,
+      88,
+      4
+     ],
+     [
+      312,
+      124,
+      1
+     ],
+     [
+      257,
+      304,
+      1
+     ],
+     [
+      28,
+      132,
+      1
+     ],
+     [
+      308,
+      182,
+      1
+     ],
+     [
+      41,
+      326,
+      6
+     ],
+     [
+      348,
+      98,
+      4
+     ],
+     [
+      261,
+      116,
+      1
+     ]
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "But it wasn't flawless. In his first fifty balls, Young was not in control on fifteen of them. Then from ball fifty-one to seventy-five, just twice. That's when he took over. Runs in each block: twenty-two, twenty-eight, thirty-five, and forty in the last thirty-three.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "YOUNG · BALLS NOT IN CONTROL",
+    "title": "Survive, then dominate.",
+    "domain": [
+     0,
+     10
+    ],
+    "ticks": [
+     0,
+     5,
+     10
+    ],
+    "rows": [
+     {
+      "label": "Balls 1-25",
+      "v": 8,
+      "text": "8 · 22 runs"
+     },
+     {
+      "label": "Balls 26-50",
+      "v": 7,
+      "text": "7 · 28 runs"
+     },
+     {
+      "label": "Balls 51-75",
+      "v": 2,
+      "text": "2 · 35 runs",
+      "hl": true,
+      "word": "twice"
+     },
+     {
+      "label": "Balls 76-108",
+      "v": 7,
+      "text": "7 · 40 runs"
+     }
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "So how did he do it? He took the spinners and the quicker men on. Against कुलदीप यादव, a strike rate of a hundred and seventy-five. Against अर्शदीप सिंह and गुरनूर बराड़, a hundred and forty-five. But अक्षर पटेल kept him to sixteen off twenty-eight, and आक़िब नबी to twelve off seventeen. Those two got it right.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "YOUNG · STRIKE RATE AGAINST EACH BOWLER",
+    "title": "Who got it right.",
+    "domain": [
+     0,
+     200
+    ],
+    "ticks": [
+     0,
+     100,
+     200
+    ],
+    "rows": [
+     {
+      "label": "Kuldeep",
+      "v": 175,
+      "text": "175 · 42 off 24",
+      "hl": true,
+      "word": "kuldeep"
+     },
+     {
+      "label": "Arshdeep",
+      "v": 147,
+      "text": "147 · 22 off 15"
+     },
+     {
+      "label": "Brar",
+      "v": 145,
+      "text": "145 · 32 off 22"
+     },
+     {
+      "label": "Nabi",
+      "v": 71,
+      "text": "71 · 12 off 17"
+     },
+     {
+      "label": "Axar",
+      "v": 57,
+      "text": "57 · 16 off 28"
+     }
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "And he nearly wasn't there. In the second over, Young was put down twice, off consecutive balls, both off आक़िब नबी. The first was a regulation chance at slip, dropped by रोहित शर्मा. Young had made five. He went on to score a hundred and twenty more.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "TWO LIVES",
+    "title": "In the second over.",
+    "value": 120,
+    "suffix": " runs",
+    "label": "scored by Young after being dropped twice off consecutive balls, at five",
+    "color": "red",
+    "foot": "Cricbuzz match commentary (dropped-catch events) · our own analysis"
+   }
+  },
+  {
+   "vo": "So which of India's bowlers deserved more? अर्शदीप सिंह made Young and the others look uncomfortable on a third of his balls, and took one wicket. आक़िब नबी, a quarter of his balls, four wickets. And कुलदीप यादव bowled eight overs for seventy-three, with nothing to show.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA'S BOWLERS · % OF BALLS BATTER NOT IN CONTROL",
+    "title": "Luck, and the lack of it.",
+    "domain": [
+     0,
+     40
+    ],
+    "ticks": [
+     0,
+     20,
+     40
+    ],
+    "rows": [
+     {
+      "label": "Arshdeep · 1 wkt",
+      "v": 33,
+      "text": "33%",
+      "hl": true,
+      "word": "arshdeep"
+     },
+     {
+      "label": "Nabi · 4 wkts",
+      "v": 25,
+      "text": "25%",
+      "hl": true
+     },
+     {
+      "label": "Kuldeep · 0 wkts",
+      "v": 19,
+      "text": "19%"
+     },
+     {
+      "label": "Axar · 2 wkts",
+      "v": 12,
+      "text": "12%"
+     }
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   },
+   "chapter": "The verdict"
+  },
+  {
+   "vo": "Then there was the start. Tim Seifert and Will Young put on seventy-two in the powerplay without losing a wicket. Seifert hit fifty-eight off forty-eight. Finn Allen added forty-one off thirty. New Zealand never had to chase a start. India, after the same ten overs, were twenty-six for four.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE START",
+    "title": "Seventy-two for none.",
+    "a": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NZ"
+    },
+    "b": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "IND"
+    },
+    "rows": [
+     [
+      "Runs after 10 overs",
+      "72",
+      "26",
+      "a"
+     ],
+     [
+      "Wickets lost",
+      "0",
+      "4",
+      "a"
+     ],
+     [
+      "Highest score",
+      "125",
+      "27",
+      "a"
+     ],
+     [
+      "Batters to reach 20",
+      "5",
+      "3",
+      "a"
+     ]
+    ],
+    "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
+   }
+  },
+  {
+   "vo": "So who decided it? In the chase, Matt Henry, in six balls. In the first innings, Will Young, but with help. Two dropped catches, a middle stretch of eighty-nine runs, and a plan of short lengths that India's bowlers couldn't turn into wickets.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Henry: [six balls.]",
+     "Young: [two lives.]",
+     "India: no answer."
+    ]
+   },
+   "chapter": "The verdict"
+  },
+  {
+   "vo": "There is one more number. विराट कोहली needed twenty-two runs to become the first man to score two thousand ODI runs against New Zealand. He scored none. The fifth and final match is on the fifteenth of November. India lead the series, but they have two days to answer one question: can they leave the ball outside off stump?",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "KOHLI V NEW ZEALAND · ODI RUNS",
+    "title": "Still 22 short.",
+    "value": 1978,
+    "label": "Two days to the decider",
+    "color": "red",
+    "count_dur": 1.0
+   }
+  },
+  {
+   "vo": "Which video should the Replay Room do next? Tell us in the comments, and follow for the breakdown of the fifth ODI.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "NEXT BREAKDOWN?"
+     },
+     {
+      "t": "THE REPLAY ROOM",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Nought for three. After one over. That's how India's chase started.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "4TH ODI · MOUNT MAUNGANUI",
+     "lines": [
+      {
+       "t": "0 FOR 3."
+      },
+      {
+       "t": "ONE OVER.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "wide",
+    "stumps": [
+     0.17,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Matt Henry. Six balls. रोहित शर्मा, caught. विराट कोहली, bowled. श्रेयस अय्यर, lbw.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "HENRY'S FIRST OVER",
+     "rows": [
+      [
+       "Rohit Sharma",
+       "0 (1)",
+       "red"
+      ],
+      [
+       "Virat Kohli",
+       "0 (4)",
+       "red"
+      ],
+      [
+       "Shreyas Iyer",
+       "0 (1)",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.17,
+     0.93
+    ],
+    "ball": {
+     "at": 0.55,
+     "shot": "bowled"
+    }
+   }
+  },
+  {
+   "vo": "Seven of India's ten wickets came to a defensive shot.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "label": "OUT DEFENDING",
+     "value": 7,
+     "suffix": " / 10",
+     "count_dur": 0.6,
+     "kicker": "How India got out",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift"
+   }
+  },
+  {
+   "vo": "Out for eighty-nine in twenty-six overs. New Zealand won by two hundred and forty-four runs.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "THE RESULT",
+     "left": {
+      "v": "333",
+      "l": "New Zealand",
+      "c": "gold"
+     },
+     "right": {
+      "v": "89",
+      "l": "India",
+      "c": "red"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "celebrate",
+      "x": 0.4,
+      "cap": true
+     },
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "pull"
+   }
+  },
+  {
+   "vo": "Matt Henry finished with six for twenty-seven. What did India do wrong? Follow for the full breakdown.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE REPLAY ROOM",
+     "lines": [
+      {
+       "t": "6 FOR 27."
+      },
+      {
+       "t": "FULL BREAKDOWN →",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "NZ",
+      "pose": "raise",
+      "x": 0.5,
+      "cap": true
+     }
+    ],
+    "cam": "push"
+   }
+  }
+ ]
+}
