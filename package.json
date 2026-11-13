@@ -2,5 +2,5 @@
   "name": "thethirdman-control-room",
   "private": true,
   "description": "Static dashboard (site/) and its small API (api/) for The Third Man",
-  "engines": { "node": "20.x" }
+  "engines": { "node": "26.x" }
 }
