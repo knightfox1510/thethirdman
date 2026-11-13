@@ -71,7 +71,7 @@
  "yt": {
   "long": {
    "title": "333 and 89: how New Zealand beat India by 244 runs (every ball analysed)",
-   "description": "333 and 89: how New Zealand beat India by 244 runs (every ball analysed)",
+   "description": "New Zealand 333. India 89 all out. A 244-run defeat at Mount Maunganui. We took every ball of the 4th ODI (line, length, shot played, and whether the batter was in control) to work out who decided it and why: Matt Henry's triple-wicket first over, Will Young's 125 and the two lives that started it, and the middle overs where India lost the grip.\n\nSources: ball-by-ball data from ESPNcricinfo and Cricbuzz match pages (captured with our own tool, cross-checked over by over); result and Player of the Match from both. All numbers are computed by us from the ball data; 'not in control' is the Cricinfo shot-control flag. All graphics are original, not broadcast footage.",
    "tags": [
     "India vs New Zealand",
     "Matt Henry",
@@ -84,7 +84,7 @@
   },
   "short": {
    "title": "0 for 3 after one over: India's chase in 6 balls #Shorts",
-   "description": "0 for 3 after one over: India's chase in 6 balls #Shorts",
+   "description": "The Replay Room: a ball-by-ball breakdown of NZ v India, 4th ODI, Mount Maunganui. Data: ESPNcricinfo and Cricbuzz match pages, analysis by The Third Man. Full video on the channel.",
    "tags": [
     "India vs New Zealand",
     "Matt Henry",
@@ -986,8 +986,7 @@
      }
     ],
     "foot": "Ball-by-ball: ESPNcricinfo, Cricbuzz · 4th ODI, Mount Maunganui, 13 Nov 2026 · our own analysis"
-   },
-   "chapter": "The verdict"
+   }
   },
   {
    "vo": "Then there was the start. Tim Seifert and Will Young put on seventy-two in the powerplay, without losing a wicket. Seifert hit fifty-eight off forty-eight. Finn Allen added forty-one off thirty. New Zealand never had to chase a start. India, after the same ten overs, were twenty-six for four.",
