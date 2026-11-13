@@ -1,9 +1,11 @@
 """Turn a Third Man capture file (tools/ttm-capture, saved from a Cricinfo match page you opened)
 into a ball table like stats.py's, plus a field report.
-    python3 cricinfo_import.py data/cricinfo/cricinfo_<id>_<slug>.json      # writes ..._balls.csv and prints a report
+    python3 cricinfo_import.py data/cricinfo/cricinfo_<id>.json [data/cricbuzz/cricbuzz_<id>.json]
+Cricinfo is the backbone (line, length, shot, control, wagon wheel). The optional Cricbuzz capture is checked
+against it over by over and adds its running scores plus the notes between balls (field changes, pitch, stats leads).
 Use the numbers for our own analysis and graphics; do not reproduce Cricinfo's text or charts.
 Field names are read defensively: run the report on the first real capture and adjust FIELDS if needed."""
-import json, sys, os
+import json, sys, os, re
 import pandas as pd
 
 # our column -> candidate keys in the Cricinfo ball item
@@ -67,10 +69,31 @@ def report(df, cap):
               f"{len(legal)} legal balls (overs {legal.overs.max()})  <- check against the official scorecard")
 
 
+def cricbuzz(cb, df):
+    """Attach Cricbuzz ball numbers + notes, after checking both sources agree over by over."""
+    items = sorted(cb.get("comments", []), key=lambda x: x.get("timestamp") or 0)
+    balls = [x for x in items if x.get("ballNbr")]
+    bdf = pd.DataFrame([dict(inning=x.get("inningsId"), ov=x.get("overNumber"), runs=x.get("totalRuns") or 0, event=x.get("event")) for x in balls])
+    bdf["over_no"] = bdf.groupby("inning").ov.ffill().apply(lambda v: int(v) + 1)
+    a = df.groupby(["inning", "over_no"]).runs.sum(); b = bdf.groupby(["inning", "over_no"]).runs.sum()
+    bad = (a - b).dropna(); bad = bad[bad != 0]
+    print(f"cricbuzz: {len(balls)} balls; over-by-over runs " + ("MATCH" if bad.empty else f"DIFFER in {list(bad.index)}"))
+    # notes between balls, tagged with the ball they follow
+    notes, last = [], None
+    for x in items:
+        if x.get("ballNbr"): last = (x.get("inningsId"), x.get("overNumber")); continue
+        t = re.sub(r"[BI]\d\$", "", x.get("commText") or "").strip()
+        if t: notes.append(dict(inning=(last or (None,))[0], after_over=(last or (None, None))[1], note=t))
+    return pd.DataFrame(notes)
+
+
 if __name__ == "__main__":
     f = sys.argv[1]
     cap = json.load(open(f))
     df = table(cap)
     report(df, cap)
+    if len(sys.argv) > 2:
+        nt = cricbuzz(json.load(open(sys.argv[2])), df)
+        nf = os.path.splitext(f)[0] + "_notes.csv"; nt.to_csv(nf, index=False); print(f"wrote {nf} ({len(nt)} notes: leads to verify, not text to copy)")
     out = os.path.splitext(f)[0] + "_balls.csv"
     df.to_csv(out, index=False); print("wrote", out)
