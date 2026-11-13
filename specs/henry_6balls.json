@@ -105,6 +105,10 @@
     "stumps": [
      0.17,
      0.93
+    ],
+    "fx": [
+     "vignette",
+     "spot"
     ]
    }
   },
@@ -144,6 +148,9 @@
     "stumps": [
      0.17,
      0.93
+    ],
+    "fx": [
+     "vignette"
     ]
    }
   },
@@ -182,7 +189,7 @@
      },
      {
       "kit": "IND",
-      "pose": "stance",
+      "pose": "defend",
       "x": 0.26
      }
     ],
@@ -191,6 +198,9 @@
     "stumps": [
      0.17,
      0.93
+    ],
+    "fx": [
+     "vignette"
     ]
    }
   },
@@ -234,7 +244,12 @@
     "ball": {
      "at": 0.55,
      "shot": "bowled"
-    }
+    },
+    "fx": [
+     "vignette",
+     "flash",
+     "shake"
+    ]
    }
   },
   {
@@ -268,7 +283,10 @@
       "x": 0.26
      }
     ],
-    "cam": "pull"
+    "cam": "pull",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -291,7 +309,10 @@
       "x": 0.5
      }
     ],
-    "cam": "drift"
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -315,12 +336,18 @@
     "avatars": [
      {
       "kit": "NZ",
-      "pose": "raise",
+      "pose": "arms_wide",
       "x": 0.5,
       "cap": true
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.2
    }
   }
  ],

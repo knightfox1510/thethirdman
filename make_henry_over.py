@@ -66,6 +66,12 @@ short = [
        [dict(kit="NZ", pose="raise", x=.5, cap=True)], cam="push"),
 ]
 
+FXS = {0: ["vignette", "spot"], 1: ["vignette"], 2: ["vignette"], 3: ["vignette", "flash", "shake"], 4: ["vignette"], 5: ["vignette"], 6: ["vignette", "spot", "confetti"]}
+for i, f in FXS.items(): short[i]["scene"]["fx"] = f
+short[2]["scene"]["avatars"][1]["pose"] = "defend"            # three dots: the batter defends
+short[6]["scene"]["avatars"][0]["pose"] = "arms_wide"         # Henry soaks it in
+short[6]["scene"]["fx_at"] = .2
+
 SRC = ["ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length and shot data, captured with our own tool.",
        "Cricbuzz match capture (match 161271): over-by-over cross-check and dismissal wording (c Finn Allen b Henry; b Henry; lbw b Henry).",
        "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry.",

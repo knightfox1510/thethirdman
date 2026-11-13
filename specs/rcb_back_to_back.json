@@ -268,7 +268,10 @@
      }
     ],
     "cam": "push",
-    "view": "side"
+    "view": "side",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -293,12 +296,15 @@
     "avatars": [
      {
       "kit": "RCB",
-      "pose": "stand",
+      "pose": "point",
       "x": 0.5,
       "cap": true
      }
     ],
-    "cam": "drift"
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
    }
   },
   {
@@ -320,8 +326,9 @@
       "kit": "SRH",
       "pose": "stance",
       "x": 0.32,
-      "hit": "drive",
-      "cap": false
+      "hit": "defend",
+      "cap": false,
+      "ghost": true
      }
     ],
     "cam": "wide",
@@ -333,6 +340,11 @@
     "stumps": [
      0.2,
      0.93
+    ],
+    "fx": [
+     "vignette",
+     "flash",
+     "shake"
     ]
    }
   },
@@ -352,12 +364,18 @@
     "avatars": [
      {
       "kit": "RCB",
-      "pose": "celebrate",
+      "pose": "arms_wide",
       "x": 0.5,
       "cap": true
      }
     ],
-    "cam": "push"
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.2
    }
   },
   {
