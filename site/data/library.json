@@ -366,6 +366,57 @@
    ]
   },
   {
+   "slug": "replay_4odi",
+   "title": "Replay 4odi",
+   "format": "news",
+   "long": "4:53",
+   "short": "0:35",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot, control and wagon data, captured with our own tool.",
+    "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
+    "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
+    "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."
+   ]
+  },
+  {
+   "slug": "replay_4odi_dots",
+   "title": "Replay 4odi dots",
+   "format": "news",
+   "long": null,
+   "short": "0:27",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot, control and wagon data, captured with our own tool.",
+    "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
+    "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
+    "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."
+   ]
+  },
+  {
+   "slug": "replay_4odi_young",
+   "title": "Replay 4odi young",
+   "format": "news",
+   "long": null,
+   "short": "0:34",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot, control and wagon data, captured with our own tool.",
+    "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
+    "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
+    "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."
+   ]
+  },
+  {
    "slug": "sachin_t20",
    "title": "What If Sachin Played in the T20 Era",
    "format": "whatif",
