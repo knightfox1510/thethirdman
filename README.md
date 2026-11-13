@@ -50,24 +50,6 @@ for a coloured code chip. Codes: CSK MI RCB KKR SRH DC PBKS RR GT LSG IND NZ AUS
 Figure poses: stance, drive, pull, defend, release (pace), spin, keeper.
 Any item may carry "at" (0–1 of the scene) but items auto-sync to the narration word that matches their label.
 
-## Stadium stage (Shorts default)
-Spec level: `"theme": "stadium"`, `"captions": "v2"`, `"venue": {"time": "night|day|dusk", "crowd": [[r,g,b], ...], "boards": [[r,g,b], [r,g,b]]}`.
-Keep a different look for the long version with `"theme_long"`.
-A `stage` scene:
-```json
-{"type": "stage", "cam": "wide|push|pull|close|drift", "view": "end|side", "stumps": [0.2, 0.92],
- "panel": {"kind": "headline|bignum|versus|score|table|verdict", "at": 0.05, "kicker": "..."},
- "avatars": [{"kit": "IND", "number": 18, "pose": "stance", "hit": "pull", "x": 0.36, "x2": 0.5, "dir": 1, "scale": 1, "cap": false, "pads": true}],
- "ball": {"word": "owns", "shot": "six|four|bowled", "side": -1, "color": "white|red"},
- "sfx": [{"kind": "crowd|crack|whoosh|stamp|bounce", "at": 0.5}]}
-```
-- Poses: front `stand walk celebrate raise dejected`; side-on `stance drive pull run bowl` (`dir: -1` mirrors).
-- `kit` is a team code from TEAMS or an [r, g, b] colour (e.g. cream Test whites). `cap: true` gives a cap with no helmet or pads (bowlers, fielders).
-- `ball` is timed to a spoken word (or `at`, a fraction of the scene). The first avatar plays the shot, switching to its `hit` pose on contact.
-- Panels: `verdict` is the Myth or Data? stamp (`"verdict": "busted|half|confirmed"`).
-- Sound effects are automatic for stage scenes (sfx.py synthesises them; no samples): whoosh on panels, crack + crowd on shots, crowd on big numbers, stamp on verdicts.
-- `make_stage_shorts.py` converts a classic Short to this look. The old version stays in `short_classic`.
-
 ## Instagram extras
 - `python3 variants.py deepcut specs/<slug>.json`: a 90-150 s vertical "deep cut" Reel from the spec's `ig` scenes
   (file name from `files.ig`), ending with a "full breakdown on YouTube" CTA.
