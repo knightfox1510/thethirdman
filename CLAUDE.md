@@ -6,6 +6,10 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - API keys come ONLY from env vars: `XI_KEY` (ElevenLabs), `SM_KEY` (Sportmonks), and for publishing `G_CLIENT_ID`, `G_CLIENT_SECRET`, `G_DRIVE_TOKEN`, `G_YT_TOKEN`. Never write them into any file, spec, commit or log (publish/gauth.py also reads a RAM-only /dev/shm file during a session).
 - Upload to YouTube only when the user asks. Drive sync (publish/drive.py) runs after every build.
 
+## Always log new work (owner rule)
+- Everything new that is generated (video, Short, carousel, or any deliverable) goes to Drive AND the tracker in the same session, even if it is not uploaded: `python3 publish/drive.py <slug>` right after the build, then add a Tracker row with `python3 site_sync.py add date=<YYYY-MM-DD> platform="<YouTube Short|YouTube long|...>" content="<title>" status=Ready notes="Built <date>; on Drive"` and mirror it in site/data/schedule.json. After an upload, set Status=Posted and the link as below.
+- Test or prototype renders (e.g. camera tests) are the exception: keep them out of Drive and the tracker unless the owner asks.
+
 ## Hard rules (the owner has flagged these repeatedly)
 - NO burned-in captions/subtitles in ANY video, long or Short, any series. The engine only draws them if a spec sets "burn_captions": true - never set it. Ship the .srt instead.
 - NO on-screen source/footer lines in any video (e.g. "Ball-by-ball: ESPNcricinfo, Cricbuzz · ... · our own analysis"). Never set "foot" on scenes (Lab scenes ignore it); credit sources only in the YouTube description and the spec's `sources[]`.

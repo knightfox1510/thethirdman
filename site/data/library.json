@@ -221,6 +221,40 @@
    ]
   },
   {
+   "slug": "henry_6balls",
+   "title": "Henry 6balls",
+   "format": "news",
+   "long": null,
+   "short": "0:45",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length and shot data, captured with our own tool.",
+    "Cricbuzz match capture (match 161271): over-by-over cross-check and dismissal wording (c Finn Allen b Henry; b Henry; lbw b Henry).",
+    "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry.",
+    "All figures computed in make_henry_over.py from data/cricinfo/nz_ind_4odi_balls.csv. Scenes are illustrated recreations (not broadcast footage); a highlights clip was used privately as a staging reference only."
+   ]
+  },
+  {
+   "slug": "henry_cam_test",
+   "title": "Henry cam test",
+   "format": "news",
+   "long": null,
+   "short": "0:46",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 1539440): ball-by-ball with line, length and shot data, captured with our own tool.",
+    "Cricbuzz match capture (match 161271): over-by-over cross-check and dismissal wording (c Finn Allen b Henry; b Henry; lbw b Henry).",
+    "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry.",
+    "All figures computed in make_henry_over.py from data/cricinfo/nz_ind_4odi_balls.csv. Scenes are illustrated recreations (not broadcast footage); a highlights clip was used privately as a staging reference only."
+   ]
+  },
+  {
    "slug": "india_160",
    "title": "Why No Indian Has Bowled 160",
    "format": "myth",
@@ -310,6 +344,21 @@
    "recheck": null,
    "sources": [
     "Cricsheet men's ODI and T20I ball-by-ball data (cricsheet.org, ODC-BY). ICC knockouts = semi-finals, quarter-finals and finals of the ODI World Cup, Champions Trophy and T20 World Cup. Figures: analysis/myth_kohli_knockouts.py"
+   ]
+  },
+  {
+   "slug": "myth_ep2_kohli_reinvention",
+   "title": "Myth ep2 kohli reinvention",
+   "format": "news",
+   "long": null,
+   "short": "1:26",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Sportmonks ball-by-ball, IPL 2013-2026 (data/ipl cache). Virat Kohli's legal balls faced; super overs excluded; strike rate = runs off the bat per 100 balls; powerplay = overs 1-6; bowler type from Sportmonks bowling style. League strike rate = all batters' runs off the bat per 100 legal balls in the season. Figures: make_kohli_reinvention.py.",
+    "Cross-check: Kohli's 2026 total (675 runs, strike rate about 165.8) matches RCB's own season review: https://royalchallengers.com/rcb-cricket-news/news/from-virat-kohli-to-tim-david-rcbs-top-five-batters-in-ipl-2026"
    ]
   },
   {

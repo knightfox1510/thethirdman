@@ -274,6 +274,22 @@
    "status": "Ready",
    "link": null,
    "notes": "Global audience"
+  },
+  {
+   "date": "2026-11-14",
+   "platform": "YouTube Short",
+   "content": "Myth or Data? Ep.2: Is Kohli too slow for T20? (Kohli's reinvention)",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 13 Nov; on Drive (Videos). Not uploaded yet"
+  },
+  {
+   "date": "2026-11-14",
+   "platform": "YouTube Short",
+   "content": "3 Wickets In 6 Balls! Matt Henry vs India",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 13 Nov; on Drive (Videos). Not uploaded yet. Illustrated 2D version; 3D version in progress"
   }
  ]
 }
