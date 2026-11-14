@@ -17,7 +17,7 @@ SERIES_SHORT = {"myth": "MYTH OR DATA?", "replay": "THE REPLAY ROOM", "tactics":
                 "rising": "RISING STAR", "flip": "FLIP", "data": "DATA STORY", "channel": "WELCOME"}
 
 
-def render(spec, W=1080, H=1920):
+def render_panel(spec, W=1080, H=1920):
     th = spec.get("thumb") or {}; inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
     arr = np.zeros((H, W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
     bg = skia.Paint(); bg.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, H)], [skia.Color(*NAVY), skia.Color(*NAVY2), skia.Color(*NAVY)], [0, .55, 1]))
@@ -53,6 +53,122 @@ def render(spec, W=1080, H=1920):
     return arr
 
 
+KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "hardik_arshdeep": "MI", "replay_4odi": "NZ", "henry_6balls": "NZ"}
+POSE = {"myth_ep1_kohli_knockouts": "point", "myth_ep2_kohli_reinvention": "helmet", "myth_ep3_aaryavir": "raise", "replay_u19_final": "celebrate", "hardik_arshdeep": "stand",
+        "replay_4odi": "dejected", "anchor": "point", "henry_6balls": "arms_wide"}
+
+
+def _base(spec, W, H, light=False):
+    th = spec.get("thumb") or {}; inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
+    arr = np.zeros((H, W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
+    return th, inf, sid, acc, arr, sf, c
+
+
+def _pill(c, W, inf, sid, acc, y=330, dark=False):
+    ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip") else ""
+    pill = SERIES_SHORT.get(sid, "") + ep
+    if sid == "replay" and inf and inf["ep"][-1:].isalpha(): pill = "THE REPLAY ROOM · EXTRA"
+    pw = twidth(pill, 56, "bebas", 3) + 70
+    rrect(c, W / 2 - pw / 2, y, pw, 84, 42, (14, 14, 18) if dark else acc, 1); text(c, pill, W / 2, y + 61, 56, "bebas", acc if dark else NAVY, 1, "c", track=3)
+
+
+def _navy(c, W, H, acc, glow_y=1090):
+    bg = skia.Paint(); bg.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, H)], [skia.Color(*NAVY), skia.Color(*NAVY2), skia.Color(*NAVY)], [0, .55, 1]))
+    c.drawRect(skia.Rect.MakeWH(W, H), bg)
+    glow = skia.Paint(); glow.setShader(skia.GradientShader.MakeRadial((W / 2, glow_y), 720, [skia.Color(acc[0], acc[1], acc[2], 80), skia.Color(acc[0], acc[1], acc[2], 0)]))
+    c.drawRect(skia.Rect.MakeWH(W, H), glow)
+
+
+def _hook(c, W, th, acc, y0=470, size=200, align="c", x=None, width=940, light=False):
+    y = y0
+    for l in th.get("lines", [])[:2]:
+        z = E.fit(l["t"], width, size, "bebas", 2); y += z * .86
+        hot = l.get("c") in ("gold", "red")
+        col = (acc if hot else ((20, 20, 24) if light else (255, 255, 255)))
+        text(c, l["t"], W / 2 if align == "c" else x, y, z, "bebas", col, 1, align, track=2, glow=16 if (hot and not light) else 0)
+        y += z * .08
+    return y
+
+
+def render_avatar(spec, W=1080, H=1920):
+    th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
+    _navy(c, W, H, acc, 1180)
+    _pill(c, W, inf, sid, acc)
+    y = _hook(c, W, th, acc, 460, 190)
+    kit, pose = KIT.get(spec["slug"], "IND"), POSE.get(spec["slug"], "raise")
+    if spec["slug"] != "channel_trailer":
+        E.avatar(c, W / 2 - 40, 1590, 610, kit, None, pose, 1.1, 1.0, cap=(pose == "arms_wide") or None)
+    hero = th.get("hero")
+    if hero:                                                                    # the number as a sticker on the figure's shoulder
+        cx, cy, r = 800, 1290, 175
+        c.drawCircle(cx, cy, r + 14, paint((0, 0, 0), .35, blur=24)); c.drawCircle(cx, cy, r, paint(acc, 1)); c.drawCircle(cx, cy, r - 14, paint(acc, 1, stroke=5))
+        z = E.fit(hero, 2 * r - 70, 250, "bebas"); text(c, hero, cx, cy + z * .34, z, "bebas", NAVY, 1, "c")
+    gfx.logo_lockup(c, W / 2, 1650, 72, 1, "c")
+    sf.flushAndSubmit(); return arr
+
+
+def render_scoreboard(spec, W=1080, H=1920):
+    th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
+    bg = skia.Paint(); bg.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, H)], [skia.Color(14, 16, 20), skia.Color(30, 34, 42), skia.Color(14, 16, 20)])); c.drawRect(skia.Rect.MakeWH(W, H), bg)
+    _pill(c, W, inf, sid, acc)
+    y = _hook(c, W, th, acc, 460, 190)
+    bx, by, bw, bh = 70, max(y + 50, 940), W - 140, 600
+    rrect(c, bx, by, bw, bh, 38, (62, 66, 74), 1); rrect(c, bx + 16, by + 16, bw - 32, bh - 32, 28, (8, 12, 10), 1)
+    for i in range(17):                                                         # bulbs round the bezel
+        xx = bx + 60 + i * (bw - 120) / 16; c.drawCircle(xx, by + 8, 5, paint(acc, .95)); c.drawCircle(xx, by + bh - 8, 5, paint(acc, .95))
+    LED = (255, 176, 20)
+    hero = th.get("hero", "")
+    z = E.fit(hero, bw - 180, 470, "bebas")
+    for k in range(3):                                                          # LED glow
+        text(c, hero, W / 2, by + bh / 2 + z * .34, z, "bebas", LED, .12 if k < 2 else 1, "c", glow=40 if k < 2 else 8)
+    gfx.logo_lockup(c, W / 2, 1620, 72, 1, "c")
+    sf.flushAndSubmit(); return arr
+
+
+def render_paper(spec, W=1080, H=1920):
+    E.apply_theme("lab")
+    th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
+    c.drawRect(skia.Rect.MakeWH(W, H), paint((246, 245, 241), 1))
+    for i in range(0, W, 60): c.drawLine(i, 0, i, H, paint((20, 20, 24), .035, stroke=1))
+    for j in range(0, H, 60): c.drawLine(0, j, W, j, paint((20, 20, 24), .035, stroke=1))
+    _pill(c, W, inf, sid, acc, dark=True)
+    y = 470
+    for k, l in enumerate(th.get("lines", [])[:2]):
+        z = E.fit(l["t"], 900, 200, "bebas", 2); y += z * .86; hot = l.get("c") in ("gold", "red")
+        if hot:
+            tw = twidth(l["t"], z, "bebas", 2); rrect(c, W / 2 - tw / 2 - 26, y - z * .86, tw + 52, z * .96, 10, acc, 1)
+        text(c, l["t"], W / 2, y, z, "bebas", (20, 20, 24), 1, "c", track=2); y += z * .1
+    hero = th.get("hero")
+    if hero:
+        hz = E.fit(hero, 880, 520, "bebas"); hy = max(y + 80, 1100) + hz * .62
+        text(c, hero, W / 2, hy, hz, "bebas", (20, 20, 24), 1, "c")
+        c.drawRect(skia.Rect.MakeXYWH(W / 2 - 230, hy + 36, 460, 22), paint(acc, 1))
+    gfx.logo_lockup(c, W / 2, 1610, 76, 1, "c")
+    sf.flushAndSubmit(); E.apply_theme("stadium"); return arr
+
+
+def render_poster(spec, W=1080, H=1920):
+    th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
+    _navy(c, W, H, acc, 960)
+    hero = th.get("hero", "")
+    if hero:
+        hz = E.fit(hero, 1200, 1000, "bebas"); text(c, hero, W / 2, 1050 + hz * .34, hz, "bebas", acc, .17, "c")           # giant watermark number
+    _pill(c, W, inf, sid, acc)
+    y = _hook(c, W, th, acc, 560, 260, "l", 90, 900)
+    band = skia.Path(); band.moveTo(0, 1360); band.lineTo(W, 1270); band.lineTo(W, 1480); band.lineTo(0, 1570); band.close(); c.drawPath(band, paint(acc, 1))
+    if hero:
+        z = E.fit(hero, 700, 200, "bebas"); c.save(); c.translate(W / 2, 1420); c.rotate(-5); text(c, hero, 0, z * .34, z, "bebas", NAVY, 1, "c"); c.restore()
+    gfx.logo_lockup(c, W / 2, 1650, 72, 1, "c")
+    sf.flushAndSubmit(); return arr
+
+
+STYLES = {"panel": render_panel, "avatar": render_avatar, "scoreboard": render_scoreboard, "paper": render_paper, "poster": render_poster}
+
+
+def render(spec, W=1080, H=1920, style=None):
+    return STYLES[style or spec.get("cover_style") or "panel"](spec, W, H)
+
+
 def grid(arrs, path, cols=3, tile_w=360):
     """What Instagram's profile grid shows: the centre 3:4 of each 9:16 cover."""
     from PIL import Image
@@ -69,7 +185,8 @@ def grid(arrs, path, cols=3, tile_w=360):
 if __name__ == "__main__":
     E.apply_theme("stadium"); os.makedirs(f"{ROOT}/out/_covers", exist_ok=True); arrs = []
     from PIL import Image
+    style = os.environ.get("STYLE", "panel")
     for slug in sys.argv[1:]:
-        spec = json.load(open(f"{ROOT}/specs/{slug}.json")); a = render(spec); arrs.append(a)
-        Image.fromarray(a[:, :, :3]).save(f"{ROOT}/out/_covers/{slug}_cover_v2.png")
-    print(grid(arrs, f"{ROOT}/out/_covers/grid_v2.png"))
+        spec = json.load(open(f"{ROOT}/specs/{slug}.json")); a = render(spec, style=style); arrs.append(a)
+        Image.fromarray(a[:, :, :3]).save(f"{ROOT}/out/_covers/{slug}_{style}.png")
+    print(grid(arrs, f"{ROOT}/out/_covers/grid_{style}.png"))
