@@ -60,6 +60,30 @@ def igshort(spec_path):
     print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path)); print("cover:", write_cover(spec_path))
 
 
+IG_REEL_CTA = {"vo": "Will आर्यवीर सहवाग play for India like his father did? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+               "scene": IG_CTA["scene"]}
+
+
+def igreel(spec_path):
+    """Extended vertical Instagram Reel (about 2.5 minutes: Instagram stops recommending Reels over 3 minutes) from spec["reel"]: more of the story than the 70-second
+    Short, with the "full breakdown on YouTube, link in bio" end card. Writes deliver/<slug>/<long name with _Long -> _Reel_9x16>_IG.mp4 (+ .srt) and _IG_caption.txt."""
+    spec = json.load(open(spec_path)); slug = spec["slug"]
+    v = copy.deepcopy(spec); v["slug"] = f"{slug}__igreel"
+    v["short"] = spec["reel"] + [spec.get("reel_cta") or IG_REEL_CTA]
+    base = spec["files"]["long"].replace("_Long", "") + "_Reel_9x16_IG"
+    v["files"] = {"short": base, "long": "_unused"}; v.pop("long", None); v.pop("burn_captions", None)
+    os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
+    vp = f"{ROOT}/out/_variants/{slug}__igreel.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
+    subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "short"], check=True)
+    src, dst = f"{ROOT}/deliver/{slug}__igreel", f"{ROOT}/deliver/{slug}"
+    for f in os.listdir(src):
+        if f.startswith(base) and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
+    shutil.rmtree(src, ignore_errors=True)
+    cap = caption_text(spec).replace("Full breakdown on YouTube", "Full breakdown on YouTube")
+    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(cap)
+    print("IG reel:", f"{dst}/{base}.mp4")
+
+
 IG_LONG_CTA = {"vo": "Want more detailed breakdowns like this? Follow The Third Man on YouTube. Link in bio.",
                "scene": {"type": "cta", "lines": [{"t": "MORE DETAILED"}, {"t": "BREAKDOWNS ON YOUTUBE", "c": "gold"}],
                          "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE " + YT_HANDLE, "sub": "FOLLOW FOR SIMILAR DEEP DIVES", "bio": "LINK IN BIO"}}}
@@ -239,4 +263,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "iglong": iglong, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "iglong": iglong, "igreel": igreel, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])

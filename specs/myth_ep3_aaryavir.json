@@ -807,5 +807,417 @@
     "The Third Man"
    ]
   }
- }
+ },
+ "reel": [
+  {
+   "vo": "Three hundred and sixty-one runs in five innings. Player of the Tournament at the Under nineteen Asia Cup. आर्यवीर सहवाग is nineteen, the son of वीरेंद्र सहवाग. Is it like father, like son? We tested it.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "AARYAVIR SEHWAG · U19 ASIA CUP",
+     "left": {
+      "v": "361",
+      "l": "Runs in 5 innings",
+      "c": "gold"
+     },
+     "right": {
+      "v": "90.25",
+      "l": "Average",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.3
+   }
+  },
+  {
+   "vo": "Five innings: seventy not out against Nepal. Twenty-two against Pakistan. A hundred and sixty against the UAE. Fifty-one in the semi-final, and fifty-eight in the final.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "EVERY INNINGS · U19 ASIA CUP 2026",
+     "rows": [
+      [
+       "Nepal",
+       "70*"
+      ],
+      [
+       "Pakistan",
+       "22"
+      ],
+      [
+       "UAE",
+       "160",
+       "gold"
+      ],
+      [
+       "Afghanistan",
+       "51"
+      ],
+      [
+       "Pakistan (final)",
+       "58"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.34,
+      "hit": "drive",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "drift",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "fx": [
+     "vignette",
+     "flash",
+     "speed"
+    ]
+   }
+  },
+  {
+   "vo": "The hundred against the UAE did not start like a सहवाग innings. Fourteen balls for his first run. Then his last sixty runs came off just thirty-seven balls.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "VS UAE · 160 OFF 168",
+     "label": "BALLS FOR HIS FIRST RUN",
+     "value": 14,
+     "count_dur": 0.7,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.34,
+      "hit": "loft",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "pull",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    },
+    "fx": [
+     "vignette",
+     "shake",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "Afterwards, he said: \"I told my dad I will get a big hundred. I have a legacy to live up to.\"",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "AFTER THE 160",
+     "lines": [
+      {
+       "t": "\"A LEGACY"
+      },
+      {
+       "t": "TO LIVE UP TO.\"",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "helmet",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "That legacy: thirty-eight international hundreds, including two Test triple centuries.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "VIRENDER SEHWAG",
+     "label": "INTERNATIONAL HUNDREDS",
+     "value": 38,
+     "count_dur": 0.7,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Test one: turning fifties into hundreds. आर्यवीर turned one of his four into a hundred, twenty-five per cent. His father, in one-day internationals, twenty-eight. Almost the same.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "FIFTIES MADE INTO HUNDREDS",
+     "left": {
+      "v": "25%",
+      "l": "Aaryavir",
+      "c": "gold"
+     },
+     "right": {
+      "v": "28%",
+      "l": "Virender",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.32,
+      "hit": "cut",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "fx": [
+     "vignette",
+     "flash"
+    ]
+   }
+  },
+  {
+   "vo": "Test two: boundaries. Sixty-nine per cent of his runs came in fours and sixes. For his father, sixty-five. The same shape of innings.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "RUNS IN FOURS AND SIXES",
+     "left": {
+      "v": "69%",
+      "l": "Aaryavir",
+      "c": "gold"
+     },
+     "right": {
+      "v": "65%",
+      "l": "Virender",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "pull",
+      "x": 0.32,
+      "hit": "cut",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "drift",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "fx": [
+     "vignette",
+     "shake"
+    ]
+   }
+  },
+  {
+   "vo": "Test three: the start. In our archive of his father's one-day innings, the median wait for a first run was two balls. आर्यवीर's, across five innings, also two.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "BALLS BEFORE THE FIRST RUN",
+     "left": {
+      "v": "2",
+      "l": "Aaryavir",
+      "c": "gold"
+     },
+     "right": {
+      "v": "2",
+      "l": "Virender",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Test four: pace. Here, the son is different. A strike rate of ninety-six, against his father's hundred and four. He is slower, and he lets more balls go by.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "STRIKE RATE",
+     "left": {
+      "v": "96",
+      "l": "Aaryavir",
+      "c": "gold"
+     },
+     "right": {
+      "v": "104",
+      "l": "Virender",
+      "c": "red"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "defend",
+      "x": 0.34
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "There was one quiet game. Against Pakistan in the group stage, twenty-two off forty balls. Six days later, in the final, fifty-eight off sixty-one, with nine fours.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "PAKISTAN, TWICE · STRIKE RATE",
+     "left": {
+      "v": "55",
+      "l": "Group stage SR",
+      "c": "red"
+     },
+     "right": {
+      "v": "95",
+      "l": "Final SR",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.3
+     },
+     {
+      "kit": "IND",
+      "pose": "drive",
+      "x": 0.74
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "So, is आर्यवीर सहवाग just like his father? Our verdict: half busted. The appetite is the same. The pace is not. He is slower, and more patient, and in a final, that may be exactly what India needed.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "verdict",
+     "verdict": "half",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "arms_wide",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.6
+   }
+  }
+ ]
 }
