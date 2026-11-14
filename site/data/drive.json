@@ -1,7 +1,37 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-13",
+ "synced": "2026-11-14",
  "videos": {
+  "bay_oval_new_ball": {
+   "state": "not posted",
+   "folder": "https://drive.google.com/drive/folders/1wPsQh0FTBx7qDaP7vP-Lw8rjtg-Vbozs",
+   "files": [
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview_thumbnail.jpg",
+     "kind": "thumbnail",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1SBGno_vTEjvOtgWA_eqY2kwcxSYbofl4/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1f2k_4_l3uCLHWKAEx3diODT8MYjPFvO3/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.mp4",
+     "kind": "long",
+     "mb": 17.8,
+     "url": "https://drive.google.com/file/d/1QorrTAYAozqRkPLIxv8qOle-7xWxYaRO/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.chapters.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/14ATgzMuslOAcXfVID66NUddCCm5T2rxt/view?usp=drivesdk"
+    }
+   ]
+  },
   "henry_6balls": {
    "state": "not posted",
    "folder": "https://drive.google.com/drive/folders/1BAbKU1Z__AYKTrZvoZ5Z9TT13iVwibtQ",
@@ -31,6 +61,12 @@
    "folder": "https://drive.google.com/drive/folders/1aLRKOk0VCzOlJ6AdbmTPgQYHCq4ISWKm",
    "files": [
     {
+     "name": "Myth_or_Data_Ep2_Kohli_Reinvention_9x16.mp4",
+     "kind": "short",
+     "mb": 141.9,
+     "url": "https://drive.google.com/file/d/1SqiuewbT8rFWpnCmfrWmZyid_6eDvY6s/view?usp=drivesdk"
+    },
+    {
      "name": "Myth_or_Data_Ep2_Kohli_Reinvention_9x16_cover.jpg",
      "kind": "cover",
      "mb": 0.2,
@@ -41,12 +77,6 @@
      "kind": "subtitles",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/10Xhs5q9RaRkFdXv9pR77EmcXy3dACVo4/view?usp=drivesdk"
-    },
-    {
-     "name": "Myth_or_Data_Ep2_Kohli_Reinvention_9x16.mp4",
-     "kind": "short",
-     "mb": 142.6,
-     "url": "https://drive.google.com/file/d/1hlVlSpH-heQw5rNc6xr0Sakvs6S6haOv/view?usp=drivesdk"
     }
    ]
   },
@@ -541,10 +571,16 @@
    "folder": "https://drive.google.com/drive/folders/1GDqHu1Fbu6WnqybuUQWvT9M6ceao5XX2",
    "files": [
     {
+     "name": "RCB_Back_to_Back_Short_9x16.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1FmyWegoIxJa1wF_1IVjtFcLtlYdw8lnc/view?usp=drivesdk"
+    },
+    {
      "name": "RCB_Back_to_Back_Short_9x16.mp4",
      "kind": "short",
-     "mb": 53.8,
-     "url": "https://drive.google.com/file/d/1UjzHAN24FqeQ25vc5OZuEF02JDBDeg6B/view?usp=drivesdk"
+     "mb": 53.3,
+     "url": "https://drive.google.com/file/d/1lcZAy1y5gE9xQy8SPTstqk3WqVih7bzZ/view?usp=drivesdk"
     },
     {
      "name": "How_RCB_Won_Back_to_Back_IPL_Titles.mp4",
@@ -563,12 +599,6 @@
      "kind": "subtitles",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/1HHoXp5CC0176Fu2IPP4QxmsFtwwflLCs/view?usp=drivesdk"
-    },
-    {
-     "name": "RCB_Back_to_Back_Short_9x16.srt",
-     "kind": "subtitles",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/17d8V1eoVxLFRRKPov9T-nza2jZG3z9Kt/view?usp=drivesdk"
     },
     {
      "name": "How_RCB_Won_Back_to_Back_IPL_Titles_thumbnail.jpg",
@@ -889,6 +919,18 @@
    "folder": "https://drive.google.com/drive/folders/1JZJPjeA-J5r5_LtoCkc2bcDZ6Qo8yE7v",
    "files": [
     {
+     "name": "Anchor_Dead_Short_9x16.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1dpbnJKwYr5-VWoSjAuV80Bgf_zQrJeJD/view?usp=drivesdk"
+    },
+    {
+     "name": "Anchor_Dead_Short_9x16.mp4",
+     "kind": "short",
+     "mb": 50.3,
+     "url": "https://drive.google.com/file/d/1buEYpvd7y-dJBKDzXXBtGJ_5zsKaZa0e/view?usp=drivesdk"
+    },
+    {
      "name": "Is_the_T20_Anchor_Dead.srt",
      "kind": "subtitles",
      "mb": 0.0,
@@ -901,22 +943,10 @@
      "url": "https://drive.google.com/file/d/1jZomQvNu_Xp2C4D0EXoek-o-sFdL-36X/view?usp=drivesdk"
     },
     {
-     "name": "Anchor_Dead_Short_9x16.mp4",
-     "kind": "short",
-     "mb": 55.4,
-     "url": "https://drive.google.com/file/d/1L6VqOm45QBZFsO1jH-3Q85yH4eyDRCib/view?usp=drivesdk"
-    },
-    {
      "name": "Anchor_Dead_Short_9x16_cover.jpg",
      "kind": "cover",
      "mb": 0.2,
      "url": "https://drive.google.com/file/d/1UeXoqFRdT7v0zyNjX7MlTimeaxga5Lvt/view?usp=drivesdk"
-    },
-    {
-     "name": "Anchor_Dead_Short_9x16.srt",
-     "kind": "subtitles",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1XQrm9iRfdaD4sGjl1IVSzQFiM1kV-ka-/view?usp=drivesdk"
     },
     {
      "name": "Is_the_T20_Anchor_Dead_thumbnail.jpg",

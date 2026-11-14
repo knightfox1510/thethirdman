@@ -181,7 +181,7 @@ DESC = ("India lead New Zealand 2-1 with one ODI to play, at the same ground as 
 TAGS = ["India vs New Zealand", "5th ODI", "Bay Oval", "Mount Maunganui", "new ball", "cricket analysis", "cricket tactics", "Matt Henry", "India batting", "The Third Man"]
 spec = {"slug": "bay_oval_new_ball", "theme": "lab", "theme_long": "lab", "captions": "serif", "captions_long": False, "series": "tactics",
         "tag": "TACTICS BOARD", "tagsub": "BAY OVAL · 5TH ODI PREVIEW",
-        "files": {"long": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview"},
+        "files": {"long": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview", "short": "_unused"},
         "thumb": {"kicker": "5TH ODI PREVIEW", "lines": [{"t": "SURVIVING THE"}, {"t": "NEW BALL", "c": "gold"}], "hero": "0/3", "herosize": 420},
         "sources": SRC, "long": long,
         "yt": {"long": {"title": "Surviving the New Ball at Bay Oval | NZ vs India 5th ODI Preview (Tactics)", "description": DESC, "tags": TAGS}}}
