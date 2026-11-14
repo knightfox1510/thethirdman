@@ -33,7 +33,12 @@
   "fieldmap",
   "stumps",
   "flip",
-  "kinetic"
+  "kinetic",
+  "fieldmap",
+  "stumps",
+  "flip",
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -69,6 +74,11 @@
   "myth_ep2_kohli_reinvention": "fieldmap",
   "bay_oval_new_ball": "stumps",
   "replay_u19_final": "flip",
-  "replay_u19_final__igshort": "kinetic"
+  "replay_u19_final__igshort": "kinetic",
+  "anchor__igshort": "fieldmap",
+  "replay_4odi__igshort": "stumps",
+  "replay_4odi_young__igshort": "flip",
+  "replay_4odi_dots__igshort": "kinetic",
+  "myth_ep3_aaryavir": "fieldmap"
  }
 }
