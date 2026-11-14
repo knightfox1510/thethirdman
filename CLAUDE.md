@@ -63,6 +63,7 @@ make_series.py re-homes classic Shorts into a series (originals stay in short_cl
 
 ## Accuracy lessons
 - Sportmonks bowled dismissals have no out_id, and non-striker run-outs are not striker_out: count a batter's dismissals as (out_id == batter) or (out_id missing and striker_out). See analysis/lab_twin.py.
+- Cricsheet is a partial sample: e.g. men's ODIs by year run from 44 to 195 matches, 49 of the 54 2003 World Cup matches are present, and nothing exists before mid-2002. Use it for large-sample baselines (check they are stable across eras) and label them "in our archive". NEVER make a "never / first / only / record / lowest" claim from Cricsheet alone: check ESPNcricinfo records or a news source first (the "three wickets in a first over had never happened" error, Nov 2026: Vaas did it in 2003).
 - Cricsheet T20Is are incomplete for some players (e.g. Kohli: 112 of 117 innings, missing his 122*). Never present Cricsheet sums as career totals; check against the official record first.
 - Cross-check headline numbers with an official source (IPL Orange Cap table, team sites) before building, and note any you can't reconcile (e.g. one Rashid wicket) by avoiding that figure.
 - Monetization: YPP entry doubles for new applicants from 1 Feb 2027 (8,000 watch hours or 20M Shorts views in 90 days); current partners are grandfathered. Prioritise long-form watch time before then; Shorts feed subscribers.
