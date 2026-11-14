@@ -60,6 +60,40 @@ def igshort(spec_path):
     print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path)); print("cover:", write_cover(spec_path))
 
 
+IG_LONG_CTA = {"vo": "Want more detailed breakdowns like this? Follow The Third Man on YouTube. Link in bio.",
+               "scene": {"type": "cta", "lines": [{"t": "MORE DETAILED"}, {"t": "BREAKDOWNS ON YOUTUBE", "c": "gold"}],
+                         "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE " + YT_HANDLE, "sub": "FOLLOW FOR SIMILAR DEEP DIVES", "bio": "LINK IN BIO"}}}
+
+
+def iglong(spec_path):
+    """Instagram version of the full-length video: same video, the end card says "follow The Third Man on YouTube for more detailed breakdowns, link in bio".
+    Writes deliver/<slug>/<long name>_IG.mp4 (+ .srt) and <long name>_IG_caption.txt. Narration cache is copied, so only the new last line is voiced."""
+    spec = json.load(open(spec_path)); slug = spec["slug"]; base = spec["files"]["long"]
+    v = copy.deepcopy(spec); v["slug"] = f"{slug}__iglong"
+    sc = v["long"]
+    if sc[-1]["scene"].get("type") == "cta":
+        keep = re.sub(r"[^.!?]*\b(follow|subscribe)\b[^.!?]*[.!?]\s*$", "", sc[-1]["vo"], flags=re.I).strip()
+        sc[-1] = {"vo": (keep + " " + IG_LONG_CTA["vo"]).strip(), "scene": IG_LONG_CTA["scene"]}
+    else: sc.append(IG_LONG_CTA)
+    v["files"] = {"long": base + "_IG", "short": "_unused"}; v.pop("short", None); v.pop("burn_captions", None)
+    src_vo, dst_vo = f"{ROOT}/out/{slug}/long/vo", f"{ROOT}/out/{slug}__iglong/long/vo"
+    if os.path.isdir(src_vo) and not os.path.isdir(dst_vo): shutil.copytree(src_vo, dst_vo)
+    os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
+    vp = f"{ROOT}/out/_variants/{slug}__iglong.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
+    subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "long"], check=True)
+    src, dst = f"{ROOT}/deliver/{slug}__iglong", f"{ROOT}/deliver/{slug}"
+    for f in os.listdir(src):
+        if f.startswith(base + "_IG") and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
+    shutil.rmtree(src, ignore_errors=True)
+    y = (spec.get("yt") or {}).get("long", {}); title = y.get("title", slug)
+    parts = [x.strip() for x in title.split(" | ")]; first = y.get("description", "").split("\n\n")[0]
+    first = re.split(r"\s*(?:Data:|Sources?:)", re.sub(r"#\w+", "", first))[0].strip()
+    cap = (parts[0] + ".\n" + (parts[1] if len(parts) > 1 else "") + "\n\n" + first + "\n\nWant more detailed breakdowns like this? Follow The Third Man on YouTube (" + YT_HANDLE + "). Link in bio.\n\n"
+           + " ".join(h for h in dict.fromkeys(re.findall(r"#\w+", y.get("description", "")) + BASE_TAGS) if len(h) <= 24 and h.lower() != "#shorts")[:300])
+    open(f"{dst}/{base}_IG_caption.txt", "w", encoding="utf-8").write(cap)
+    print("IG long:", f"{dst}/{base}_IG.mp4")
+
+
 # ---------------------------------------------------------------- Instagram captions
 BASE_TAGS = ["#cricket", "#cricketanalysis", "#cricketstats", "#TheThirdMan"]
 
@@ -205,4 +239,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "iglong": iglong, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])

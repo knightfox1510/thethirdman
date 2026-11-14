@@ -311,17 +311,17 @@
    "date": "2026-11-15",
    "platform": "YouTube long",
    "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 14 Nov; 5:12; on Drive (Series/01 Myth or Data/Ep03). Not uploaded yet. Post after Ep 1 and Ep 2"
+   "status": "Posted",
+   "link": "https://youtu.be/PZJsdDzMROQ",
+   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1 and Ep 2). IG long version on Drive"
   },
   {
    "date": "2026-11-15",
    "platform": "YouTube Short + IG Reel",
    "content": "Is Aaryavir Sehwag the Next Sehwag? | Myth or Data Ep 3",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 14 Nov; 1:13; YT + IG versions on Drive. Not uploaded yet"
+   "status": "Posted",
+   "link": "https://youtu.be/pLhRtP8tKvg",
+   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1 and Ep 2). IG version + caption on Drive"
   },
   {
    "date": "2026-11-14",
@@ -330,6 +330,14 @@
    "status": "Posted",
    "link": "https://youtu.be/ueFtSganrNo",
    "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (publish before Ep 2 and Ep 3). IG version + caption on Drive"
+  },
+  {
+   "date": "2026-11-15",
+   "platform": "Instagram long video",
+   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG full-length)",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 14 Nov; 5:13; end card: follow YouTube for more detailed breakdowns, link in bio; caption on Drive (Instagram/)"
   }
  ]
 }

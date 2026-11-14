@@ -573,8 +573,35 @@ def _cta_youtube(c, g, t, y, o):
         c.restore()
 
 
+def _cta_long_youtube(c, g, t, s):
+    o = s["yt"]; gfx.logo_lockup(c, g.cx, 110, 80, eo(prog(t, 0, .5)), "c"); y = 190
+    for i, ln in enumerate(s["lines"]):
+        tt = ln["t"] if isinstance(ln, dict) else ln; gold = isinstance(ln, dict) and ln.get("c") == "gold"
+        sz = fit(tt, g.cw * .8, 95, "bebas", 2); y += sz * .95; p = eo(prog(t, .1 + i * .15, .6 + i * .15))
+        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", (255, 200, 40) if gold else INK, p, "c", track=2)
+    p1 = eback(prog(t, 1.0, 1.6))
+    if p1 > 0:
+        img = _yt_logo("red"); lw = 250; lh = lw * img.height() / img.width(); cy = y + 130
+        c.save(); c.translate(g.cx, cy); sc = clamp(p1, 0, 1.1); c.scale(sc, sc)
+        c.drawImageRect(img, skia.Rect.MakeXYWH(-lw / 2, -lh / 2, lw, lh), skia.SamplingOptions(skia.FilterMode.kLinear), skia.Paint(Alphaf=clamp(p1)))
+        c.restore()
+    p2 = eo(prog(t, 1.4, 2.0))
+    text(c, o.get("label", "THE THIRD MAN"), g.cx, y + 290, 78, "bebas", INK, p2, "c", track=3)
+    if o.get("handle"): text(c, o["handle"], g.cx, y + 345, 38, "interB", (255, 200, 40), p2, "c", track=2)
+    if o.get("sub"): text(c, o["sub"], g.cx, y + 395, 26, "interB", MUTED, p2, "c", track=4)
+    p3 = eback(prog(t, 1.8, 2.4))
+    if o.get("bio") and p3 > 0:
+        lab = o["bio"]; w = twidth(lab, 40, "bebas", 4) + 140; cy = y + 470
+        c.save(); c.translate(g.cx, cy); s_ = clamp(p3, 0, 1.1); c.scale(s_, s_)
+        rrect(c, -w / 2, -42, w, 84, 42, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=(255, 200, 40), sa=clamp(p3))
+        text(c, lab, 0, 14, 40, "bebas", (255, 255, 255), clamp(p3), "c", track=4)
+        c.restore()
+
+
 def sc_cta(c, g, t, D, s):
     long = g.fmt == "long"
+    if s.get("yt") and long:                          # Instagram long version: point viewers to YouTube for more detailed breakdowns
+        _cta_long_youtube(c, g, t, s); return
     gfx.logo_lockup(c, g.cx, 250 if long else 560, 110 if long else 120, eo(prog(t, 0, .5)), "c")
     lines = s["lines"]; y = (430 if long else 780)
     if s.get("yt") and not long:

@@ -117,9 +117,9 @@
    ]
   },
   "myth_ep3_aaryavir": {
-   "state": "not posted",
+   "state": "posted",
    "series": "01 Myth or Data",
-   "episode": "Ep03 - Aaryavir Sehwag, Like Father Like Son",
+   "episode": "Ep03 - Aaryavir Sehwag, Like Father Like Son [posted]",
    "folder": "https://drive.google.com/drive/folders/1QmN9kZkL3eHRtXaEmLLs8WoMlNRuLEj-",
    "files": [
     {
@@ -170,6 +170,27 @@
      "platform": "YouTube",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/1eTLDAXry5SXWS0E6htOxqjgh8b2w2YOd/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1F0iZ0vX9fi9Vv2szMgnwFIoc4MGH9TBg/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1_MdCLUNyyvizDF_gCCFJadtyXciEtbz-/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long_IG.mp4",
+     "kind": "long",
+     "platform": "Instagram",
+     "mb": 13.3,
+     "url": "https://drive.google.com/file/d/1LcEsfODl7ZN_TgIjaS2O9CrEawuY6etJ/view?usp=drivesdk"
     },
     {
      "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16_IG_cover.jpg",

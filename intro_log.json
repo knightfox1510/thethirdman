@@ -49,7 +49,8 @@
   "fieldmap",
   "stumps",
   "flip",
-  "kinetic"
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -101,6 +102,7 @@
   "wellington_odi__igshort": "fieldmap",
   "nz_test_preview__igshort": "stumps",
   "india_160__igshort": "flip",
-  "two_hundred__igshort": "kinetic"
+  "two_hundred__igshort": "kinetic",
+  "myth_ep3_aaryavir__iglong": "fieldmap"
  }
 }
