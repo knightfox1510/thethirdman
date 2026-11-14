@@ -18,7 +18,7 @@ SERIES_SHORT = {"myth": "MYTH OR DATA?", "replay": "THE REPLAY ROOM", "tactics":
 
 
 def render_panel(spec, W=1080, H=1920):
-    th = spec.get("thumb") or {}; inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
+    th = thumb_of(spec); inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
     arr = np.zeros((H, W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
     bg = skia.Paint(); bg.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, H)], [skia.Color(*NAVY), skia.Color(*NAVY2), skia.Color(*NAVY)], [0, .55, 1]))
     c.drawRect(skia.Rect.MakeWH(W, H), bg)
@@ -53,13 +53,29 @@ def render_panel(spec, W=1080, H=1920):
     return arr
 
 
-KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "hardik_arshdeep": "MI", "replay_4odi": "NZ", "henry_6balls": "NZ"}
+KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "rcb_back_to_back": "RCB", "hardik_arshdeep": "MI", "flip_mi_captains": "MI", "dhoni_captain": "CSK",
+       "replay_4odi": "NZ", "replay_4odi_young": "NZ", "henry_6balls": "NZ", "santner_problem": "NZ", "bradman_ipl": "AUS", "flip_root_same_point": "ENG"}
 POSE = {"myth_ep1_kohli_knockouts": "point", "myth_ep2_kohli_reinvention": "helmet", "myth_ep3_aaryavir": "raise", "replay_u19_final": "celebrate", "hardik_arshdeep": "stand",
-        "replay_4odi": "dejected", "anchor": "point", "henry_6balls": "arms_wide"}
+        "replay_4odi": "celebrate", "replay_4odi_young": "raise", "replay_4odi_dots": "dejected", "henry_6balls": "arms_wide", "santner_problem": "point", "abhishek_plan": "point",
+        "wellington_odi": "stand", "nz_test_preview": "walk", "bay_oval_new_ball": "dejected", "lab_ep1_abhishek_twin": "point", "lab_ep2_bumrah_twin": "arms_wide",
+        "stat_check_bumrah_rashid": "point", "bradman_ipl": "raise", "bumrah_vs_90s": "arms_wide", "dhoni_captain": "stand", "sachin_t20": "helmet", "aaryavir_sehwag": "helmet",
+        "flip_abhishek_openers": "point", "flip_bumrah_52_tests": "arms_wide", "flip_mi_captains": "raise", "flip_root_same_point": "point", "anchor": "point",
+        "powerplay_revolution": "point", "ipl_batting_evolution": "walk", "two_hundred": "raise", "india_160": "stand", "bumrah_economy": "arms_wide", "death_kings": "celebrate",
+        "rcb_back_to_back": "celebrate", "kohli_2000_nz": "raise"}
+BOWLERS = {"henry_6balls", "santner_problem", "lab_ep2_bumrah_twin", "bumrah_vs_90s", "flip_bumrah_52_tests", "bumrah_economy", "death_kings"}     # bowlers wear a cap, not a helmet
+# Flips have no thumb block: their cover comes from the spec's own title and end card
+FLIP_COVER = {"flip_abhishek_openers": ("ABHISHEK VS", "THE WORLD'S OPENERS", "191.9"), "flip_bumrah_52_tests": ("BUMRAH VS", "THE BEST OF THE CENTURY", "19.79"),
+              "flip_mi_captains": ("EVERY MI CAPTAIN", "VS ROHIT SHARMA", "56.3%"), "flip_root_same_point": ("JOE ROOT VS", "EVERYONE ELSE", "14,278")}
+
+
+def thumb_of(spec):
+    if spec.get("thumb"): return spec["thumb"]
+    f = FLIP_COVER.get(spec["slug"])
+    return {"lines": [{"t": f[0]}, {"t": f[1], "c": "gold"}], "hero": f[2]} if f else {}
 
 
 def _base(spec, W, H, light=False):
-    th = spec.get("thumb") or {}; inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
+    th = thumb_of(spec); inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
     arr = np.zeros((H, W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
     return th, inf, sid, acc, arr, sf, c
 
@@ -91,19 +107,27 @@ def _hook(c, W, th, acc, y0=470, size=200, align="c", x=None, width=940, light=F
 
 
 def render_avatar(spec, W=1080, H=1920):
+    """The channel cover: navy base, series accent, illustrated player in the team kit, the number as a sticker. Safe band y 300-1620."""
     th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
-    _navy(c, W, H, acc, 1180)
+    _navy(c, W, H, acc, 1160)
     _pill(c, W, inf, sid, acc)
-    y = _hook(c, W, th, acc, 460, 190)
-    kit, pose = KIT.get(spec["slug"], "IND"), POSE.get(spec["slug"], "raise")
-    if spec["slug"] != "channel_trailer":
-        E.avatar(c, W / 2 - 40, 1590, 610, kit, None, pose, 1.1, 1.0, cap=(pose == "arms_wide") or None)
+    _hook(c, W, th, acc, 460, 175)
+    slug = spec["slug"]; kit, pose = KIT.get(slug, "IND"), POSE.get(slug, "stand")
+    if slug == "channel_trailer":                                              # the brand mark stands in for the player
+        c.drawCircle(W / 2, 1190, 330, paint(acc, .10)); gfx.logo_lockup(c, W / 2, 1230, 250, 1, "c")
+    else:
+        E.avatar(c, W / 2 - 30, 1545, 520, kit, None, pose, 1.1, 1.0, cap=True if slug in BOWLERS else None)
     hero = th.get("hero")
-    if hero:                                                                    # the number as a sticker on the figure's shoulder
-        cx, cy, r = 800, 1290, 175
-        c.drawCircle(cx, cy, r + 14, paint((0, 0, 0), .35, blur=24)); c.drawCircle(cx, cy, r, paint(acc, 1)); c.drawCircle(cx, cy, r - 14, paint(acc, 1, stroke=5))
-        z = E.fit(hero, 2 * r - 70, 250, "bebas"); text(c, hero, cx, cy + z * .34, z, "bebas", NAVY, 1, "c")
-    gfx.logo_lockup(c, W / 2, 1650, 72, 1, "c")
+    if hero and slug != "channel_trailer":                                      # the number as a sticker on the figure's shoulder
+        if len(hero) <= 4:
+            cx, cy, r = 780, 1290, 170
+            c.drawCircle(cx, cy, r + 14, paint((0, 0, 0), .35, blur=24)); c.drawCircle(cx, cy, r, paint(acc, 1)); c.drawCircle(cx, cy, r - 14, paint(acc, 1, stroke=5))
+            z = E.fit(hero, 2 * r - 70, 250, "bebas"); text(c, hero, cx, cy + z * .34, z, "bebas", NAVY, 1, "c")
+        else:                                                                    # longer values get a wide rounded sticker
+            z = E.fit(hero, 480, 190, "bebas"); w_ = min(620, twidth(hero, z, "bebas", 0) + 90); cx, cy = W - 80 - w_ / 2, 1290
+            rrect(c, cx - w_ / 2, cy - 112, w_, 224, 60, (0, 0, 0), .35); rrect(c, cx - w_ / 2, cy - 100, w_, 200, 56, acc, 1)
+            text(c, hero, cx, cy + z * .34, z, "bebas", NAVY, 1, "c")
+    gfx.logo_lockup(c, W / 2, 1592, 72, 1, "c")
     sf.flushAndSubmit(); return arr
 
 
@@ -166,7 +190,20 @@ STYLES = {"panel": render_panel, "avatar": render_avatar, "scoreboard": render_s
 
 
 def render(spec, W=1080, H=1920, style=None):
-    return STYLES[style or spec.get("cover_style") or "panel"](spec, W, H)
+    return STYLES[style or spec.get("cover_style") or "avatar"](spec, W, H)
+
+
+def safe_zones(arr, path):
+    """The cover with Instagram's crops marked: profile grid (3:4, centre), feed preview (4:5), and the buttons drawn on grid tiles."""
+    from PIL import Image, ImageDraw
+    im = Image.fromarray(arr[:, :, :3]).convert("RGBA"); W, H = im.size; ov = Image.new("RGBA", im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
+    gy0 = (H - int(W * 4 / 3)) // 2; fy0 = (H - int(W * 5 / 4)) // 2
+    for y0, y1 in ((0, gy0), (H - gy0, H)): d.rectangle([0, y0, W, y1], fill=(0, 0, 0, 170))          # hidden in the grid
+    d.rectangle([0, gy0, W - 1, H - gy0], outline=(0, 255, 120, 255), width=6)                       # grid 3:4
+    d.line([0, fy0, W, fy0], fill=(255, 80, 80, 255), width=5); d.line([0, H - fy0, W, H - fy0], fill=(255, 80, 80, 255), width=5)   # feed 4:5
+    d.rectangle([W - 160, gy0 + 20, W - 30, gy0 + 140], outline=(255, 255, 0, 255), width=5)        # reel icon (top right of a tile)
+    d.rectangle([20, H - gy0 - 120, 250, H - gy0 - 20], outline=(255, 255, 0, 255), width=5)         # view count (bottom left of a tile)
+    Image.alpha_composite(im, ov).convert("RGB").resize((W // 2, H // 2)).save(path); return path
 
 
 def grid(arrs, path, cols=3, tile_w=360):
@@ -185,7 +222,7 @@ def grid(arrs, path, cols=3, tile_w=360):
 if __name__ == "__main__":
     E.apply_theme("stadium"); os.makedirs(f"{ROOT}/out/_covers", exist_ok=True); arrs = []
     from PIL import Image
-    style = os.environ.get("STYLE", "panel")
+    style = os.environ.get("STYLE", "avatar")
     for slug in sys.argv[1:]:
         spec = json.load(open(f"{ROOT}/specs/{slug}.json")); a = render(spec, style=style); arrs.append(a)
         Image.fromarray(a[:, :, :3]).save(f"{ROOT}/out/_covers/{slug}_{style}.png")
