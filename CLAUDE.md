@@ -11,6 +11,12 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - `publish/drive.py <slug>` mirrors deliver/<slug> exactly: any Drive file missing locally is archived. For an existing slug, run `python3 publish/drive.py pull <slug>` first (or rebuild both formats) so a Short-only rebuild doesn't archive the long video.
 - Test or prototype renders (e.g. camera tests) are the exception: keep them out of Drive and the tracker unless the owner asks.
 
+## YouTube naming (owner rule: search-first, consistent)
+- Title pattern: `<Team A> vs <Team B> - <match label> <type> | <hook>`; keywords first (only ~60 characters show on mobile), the hook after the bar, 75 characters or fewer where possible. Always "vs" (never "v"), full names for international teams ("India vs New Zealand", not "IND v NZ"); IPL franchises may use the usual short form (MI vs PBKS). Use the label people search ("5th ODI", "1st Test", "Final").
+- Patterns: Preview (Tactics) `India vs New Zealand - 5th ODI Preview | Surviving the New Ball at Bay Oval`; Match breakdown (Replay Room) `India vs New Zealand - 4th ODI Analysis | How 333 Became 89`; Test preview `India vs New Zealand - 1st Test Preview | <hook>`; Myth or Data / Stat Check `<Player>: <claim>? | Myth or Data`; Shorts `<hook> | India vs New Zealand 4th ODI #Shorts` (title case, no emoji).
+- Description: the first line repeats the title keywords ("India vs New Zealand, 5th ODI preview at Bay Oval ..."), then the story, chapters (long), sources, and hashtags `#INDvNZ #IndiaVsNewZealand #5thODI` (match videos). Tags: "India vs New Zealand", "India vs New Zealand 5th ODI", "IND vs NZ 5th ODI", "New Zealand vs India ODI", plus players and series.
+- Set these in the spec's `yt` block (generators too). To rename a video that is already uploaded: change the spec, then `python3 publish/retitle.py [--title-only] <slug>:<long|short>` (rewrites title, description and tags from the spec; use --title-only if the description was edited in Studio or the local chapters file is missing).
+
 ## Hard rules (the owner has flagged these repeatedly)
 - NO burned-in captions/subtitles in ANY video, long or Short, any series. The engine only draws them if a spec sets "burn_captions": true - never set it. Ship the .srt instead.
 - NO on-screen source/footer lines in any video (e.g. "Ball-by-ball: ESPNcricinfo, Cricbuzz · ... · our own analysis"). Never set "foot" on scenes (Lab scenes ignore it); credit sources only in the YouTube description and the spec's `sources[]`.

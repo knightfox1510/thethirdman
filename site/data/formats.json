@@ -9,6 +9,7 @@
     {"rule": "Every spec carries sources[], including how the data was filtered.", "why": "Goes into the description, and lets us defend any number."},
     {"rule": "Label illustrative visuals (field plans, replays) as illustrative.", "why": "Honesty about what is drawn from data and what is a reconstruction."},
     {"rule": "Write for the ear: short sentences, a comma wherever a narrator would breathe.", "why": "Pauses come from punctuation; long runs sound rushed."},
+    {"rule": "YouTube titles: `<Team A> vs <Team B> - <match label> <type> | <hook>`, keywords first, 75 characters or fewer, \"vs\" and full team names; description starts with the same keywords and ends with hashtags.", "why": "Search and suggested traffic: people search the fixture and match number. Full pattern list in CLAUDE.md (YouTube naming).", "id": "naming"},
     {"rule": "Vary the venue, the camera and the poses from scene to scene; use synthesised sound effects.", "why": "Keeps a faceless channel from looking the same every time."}
   ],
   "formats": [
