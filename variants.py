@@ -35,6 +35,9 @@ def igshort(spec_path):
     """Build deliver/<slug>/<short file>_IG.mp4 (+ .srt, cover): the Short with its last (end-card) scene replaced by the Instagram end card.
     Narration is cached per paragraph, so only the new last line is voiced: the cache of the main Short is copied across first."""
     spec = json.load(open(spec_path)); slug = spec["slug"]
+    if spec.get("pairs"):                                  # Flip format: flips.py draws its own IG end card
+        import flips; flips.build(spec_path, ig=True)
+        print("caption:", write_caption(spec_path)); print("cover:", write_cover(spec_path)); return
     v = copy.deepcopy(spec); v["slug"] = f"{slug}__igshort"
     cta = spec.get("ig_cta") or (IG_CTA if (spec.get("long") or slug in LONG_COMPANION) else IG_CTA_MORE)
     sc = v["short"]; last_is_cta = sc and sc[-1]["scene"].get("type") == "cta"
@@ -115,7 +118,7 @@ def write_cover(spec_path):
     """The Instagram cover (grid-safe, series-coded): <short name>_IG_cover.jpg, to pick when posting the Reel."""
     sys.path.insert(0, ROOT); import covers, engine as E
     spec = json.load(open(spec_path)); base = (spec.get("files") or {}).get("short")
-    if not base or "unused" in base.lower() or not spec.get("thumb"): return None
+    if not base or "unused" in base.lower() or not (spec.get("thumb") or spec["slug"] in covers.FLIP_COVER): return None
     E.apply_theme("stadium"); a = covers.render(spec); d = f"{ROOT}/deliver/{spec['slug']}"; os.makedirs(d, exist_ok=True)
     p = f"{d}/{base}_IG_cover.jpg"; skia_img = __import__("skia").Image.fromarray(a, colorType=__import__("skia").kRGBA_8888_ColorType); skia_img.save(p, __import__("skia").kJPEG, 92); return p
 

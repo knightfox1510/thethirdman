@@ -48,8 +48,11 @@ def main():
             if ef["mimeType"] != FOLDER: continue
             meta = api("GET", f"{D}/{ef['id']}", "drive", params={"fields": "id,name,appProperties,webViewLink"})
             slug = (meta.get("appProperties") or {}).get("slug") or ef["name"]
-            files = [dict(name=x["name"], kind=kind(x["name"]), mb=round(int(x.get("size", 0)) / 1e6, 1), url=x.get("webViewLink"))
-                     for x in kids(ef["id"]) if x["mimeType"] != FOLDER]
+            files = []
+            for x in kids(ef["id"]):
+                if x["mimeType"] != FOLDER: items = [(x, "")]
+                else: items = [(y, x["name"]) for y in kids(x["id"]) if y["mimeType"] != FOLDER]
+                files += [dict(name=y["name"], kind=kind(y["name"]), platform=pl or None, mb=round(int(y.get("size", 0)) / 1e6, 1), url=y.get("webViewLink")) for y, pl in items]
             state = "posted" if ef["name"].endswith("[posted]") else "not posted"
             out["videos"][slug] = {"state": state, "series": sf["name"], "episode": ef["name"], "folder": ef.get("webViewLink") or f"https://drive.google.com/drive/folders/{ef['id']}", "files": files}
             out["series"][sf["name"]]["episodes"].append(slug)

@@ -2,7 +2,8 @@
     python3 publish/drive.py [--keep] <slug> [<slug> ...]      # or: all   (upload; --keep = never archive files missing locally)
     python3 publish/drive.py pull <slug> [<slug> ...] # download a slug's files into deliver/<slug>/
 Layout in Drive:
-    The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover), not yet posted
+    The Third Man/Series/<NN Series>/<EpNN - Subject>[ [posted]]/YouTube/ and /Instagram/   (platform sub folders; _IG files + carousels go to Instagram)
+    (legacy) The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover), not yet posted
     The Third Man/Published_YT/<slug>/      the same, once anything from it has been uploaded to YouTube
     The Third Man/Archive/<slug>/<YYYY-MM-DD HHMM>/   the version that was there before
 A file is only re-uploaded (and the old one archived) when its contents changed (MD5 compare)."""
@@ -47,7 +48,12 @@ def md5(path):
     return h.hexdigest()
 
 
-def sync_dir(src, cur, arch_parent, stamp, label="", keep=False):
+def platform(name, isdir=False):
+    """Which platform subfolder a deliverable belongs to: Instagram = the _IG files (reel, srt, cover, caption) and carousels; everything else YouTube."""
+    return "Instagram" if (isdir or "_IG" in name) else "YouTube"
+
+
+def sync_dir(src, cur, arch_parent, stamp, label="", keep=False, pick=None):
     """Mirror one local folder into Drive folder `cur`; replaced/removed files go to arch_parent/<stamp>/."""
     existing = {f["name"]: f for f in children(cur)}
     arch = None
@@ -60,6 +66,7 @@ def sync_dir(src, cur, arch_parent, stamp, label="", keep=False):
 
     for name in sorted(os.listdir(src)):
         path = os.path.join(src, name)
+        if pick and not pick(name, os.path.isdir(path)): continue
         old = existing.pop(name, None)
         if os.path.isdir(path):   # e.g. carousel/
             sub = old["id"] if old and old.get("mimeType") == FOLDER else folder(name, cur)
@@ -117,7 +124,11 @@ def sync(slug, root_id, stamp, keep=False):
     src = os.path.join(DELIVER, slug)
     if not os.path.isdir(src): print(f"  skip {slug}: nothing in deliver/"); return
     arch_root = folder("Archive", root_id)
-    sync_dir(src, video_folder(slug, root_id), folder(slug, arch_root), stamp, keep=keep)
+    vf = video_folder(slug, root_id)
+    for plat in ("YouTube", "Instagram"):        # one sub folder per platform inside the episode folder
+        if any(platform(n, os.path.isdir(os.path.join(src, n))) == plat for n in os.listdir(src)):
+            sync_dir(src, folder(plat, vf), folder(plat, folder(slug, arch_root)), stamp, label=plat + "/", keep=keep,
+                     pick=lambda n, d, p=plat: platform(n, d) == p)
 
 
 def mark_published(slug):
@@ -141,8 +152,13 @@ def pull(slug, root_id):
     from gauth import token
     cur = video_folder(slug, root_id)
     dst = os.path.join(DELIVER, slug); os.makedirs(dst, exist_ok=True)
-    for f in children(cur):
-        if f["mimeType"] == FOLDER: continue
+    files = []
+    for f in children(cur):                       # files sit in YouTube/ and Instagram/ sub folders (flat legacy folders still work)
+        if f["mimeType"] == FOLDER and f["name"] in ("YouTube", "Instagram"):
+            for g_ in children(f["id"]):
+                if g_["mimeType"] != FOLDER: files.append(g_)
+        elif f["mimeType"] != FOLDER: files.append(f)
+    for f in files:
         path = os.path.join(dst, f["name"])
         if os.path.exists(path) and md5(path) == f.get("md5Checksum"): print(f"  same {f['name']}"); continue
         req = urllib.request.Request(f"{D}/{f['id']}?alt=media", headers={"Authorization": "Bearer " + token("drive")})
