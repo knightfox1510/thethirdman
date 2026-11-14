@@ -1,0 +1,1347 @@
+{
+ "slug": "replay_u19_final",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "U19 ASIA CUP FINAL · IND V PAK",
+ "files": {
+  "long": "India_vs_Pakistan_U19_Asia_Cup_Final_Analysis_338_Chased",
+  "short": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "U19 ASIA CUP FINAL",
+  "lines": [
+   {
+    "t": "338 CHASED"
+   },
+   {
+    "t": "LAST BALL",
+    "c": "gold"
+   }
+  ],
+  "hero": "338",
+  "herosize": 420
+ },
+ "sources": [
+  "ESPNcricinfo match capture, India U19 v Pakistan U19, ACC Men's U19 Asia Cup 2026 final, Al Amerat, Oman, 14 Nov 2026 (match 1558444): ball-by-ball with line, length, shot and control, captured with our own tool.",
+  "Cricbuzz match capture (match 175720): over-by-over cross-check (all runs match) and the first-innings scorecard (Pakistan's batting and India's bowling figures agree with our figures). Result in both: India won by 1 wicket (0 balls remaining).",
+  "Tournament path (group and semi-final results) from the Cricinfo series standings in the same capture. Conventions: balls faced exclude wides; bowler runs exclude byes and leg byes; a run out is not credited to the bowler.",
+  "All figures computed in make_u19_final.py and analysis/u19_final.py from data/cricinfo/u19_final_balls.csv. Web coverage of this match was not yet indexed when this was made, so no record claims are made. Graphics are original illustrations, not broadcast footage."
+ ],
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    0,
+    110,
+    60
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    0,
+    110,
+    60
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "Three runs needed from the last ball. Nine wickets down. The Under nineteen Asia Cup final, India against Pakistan. And मोहित उलवा hit it for four. This is how India chased three hundred and thirty-eight, and won by one wicket, with no balls to spare.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "UNDER-19 ASIA CUP FINAL · LAST BALL",
+    "lines": [
+     "3 to win.",
+     "[1 ball.]"
+    ]
+   }
+  },
+  {
+   "vo": "This is the Replay Room. We took every ball of the Under nineteen Asia Cup final, from the Al Amerat ground in Oman: its line, its length, the shot, and whether the batter was in control. Then we asked how India pulled it off.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "THE REPLAY ROOM · U19 ASIA CUP FINAL",
+    "lines": [
+     "338 [chased.]"
+    ],
+    "teaser": "India U19 v Pakistan U19 · Al Amerat, Oman"
+   },
+   "chapter": "The final"
+  },
+  {
+   "vo": "Pakistan won the toss and batted, and made three thirty-seven for nine. India answered with three thirty-nine for nine. A one-wicket win, on the very last ball.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "THE RESULT",
+    "title": "India won by one wicket.",
+    "items": [
+     {
+      "label": "Pakistan · 50 overs",
+      "v": 337,
+      "text": "337/9",
+      "c": "PAK",
+      "t": "PAK",
+      "kit": "PAK",
+      "word": "thirty-seven"
+     },
+     {
+      "label": "India · 50 overs",
+      "v": 339,
+      "text": "339/9",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND",
+      "word": "thirty-nine"
+     }
+    ],
+    "max": 360
+   }
+  },
+  {
+   "vo": "It was a rematch. On the eighth of November, in the group stage, Pakistan had beaten India by three wickets, chasing two hundred and nine with eleven balls to spare. Pakistan then won all three group games, and the semi-final by nine wickets. India lost that one match, and won the semi-final by eight.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE ROAD TO THE FINAL",
+    "title": "Pakistan: unbeaten. Until now.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA U19"
+    },
+    "b": {
+     "t": "PAK",
+     "kit": "PAK",
+     "name": "PAKISTAN U19"
+    },
+    "rows": [
+     [
+      "Group games won",
+      "2 of 3",
+      "3 of 3",
+      "b"
+     ],
+     [
+      "Head-to-head, 8 Nov",
+      "Lost by 3 wkts",
+      "Won",
+      "b"
+     ],
+     [
+      "Semi-final margin",
+      "8 wickets",
+      "9 wickets",
+      "b"
+     ]
+    ]
+   },
+   "chapter": "The road"
+  },
+  {
+   "vo": "Pakistan's innings. A spectacular start: ninety-three for one in the first ten overs, and two hundred and four for two after thirty. Then the finish. In the last ten overs, they added just sixty-three runs, and lost six wickets.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "PAKISTAN · RUNS IN EACH TEN OVERS",
+    "title": "Fast start. Flat finish.",
+    "domain": [
+     0,
+     100
+    ],
+    "ticks": [
+     0,
+     50,
+     100
+    ],
+    "rows": [
+     {
+      "label": "Overs 1-10 · 1 wkt",
+      "v": 93,
+      "text": "93"
+     },
+     {
+      "label": "Overs 11-20 · 0 wkts",
+      "v": 45,
+      "text": "45"
+     },
+     {
+      "label": "Overs 21-30 · 1 wkt",
+      "v": 66,
+      "text": "66"
+     },
+     {
+      "label": "Overs 31-40 · 1 wkt",
+      "v": 70,
+      "text": "70"
+     },
+     {
+      "label": "Overs 41-50 · 6 wkts",
+      "v": 63,
+      "text": "63",
+      "hl": true,
+      "word": "sixty-three"
+     }
+    ]
+   },
+   "chapter": "Pakistan's innings"
+  },
+  {
+   "vo": "The engine of it was उस्मान ख़ान, a hundred and seven off a hundred and eleven balls. But the spark was अब्दुल क़ादिर. Eighty off fifty-four, including eight sixes. Pakistan hit fifteen sixes in all, to India's eight.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "PAKISTAN'S TWO BIG INNINGS",
+    "title": "The anchor and the hitter.",
+    "a": {
+     "t": "PAK",
+     "kit": "PAK",
+     "name": "USMAN KHAN"
+    },
+    "b": {
+     "t": "PAK",
+     "kit": "PAK",
+     "name": "ABDUL QADIR"
+    },
+    "rows": [
+     [
+      "Runs",
+      "107",
+      "80",
+      "a"
+     ],
+     [
+      "Balls",
+      "111",
+      "54",
+      "level"
+     ],
+     [
+      "Strike rate",
+      "96",
+      "148",
+      "b"
+     ],
+     [
+      "Sixes",
+      "3",
+      "8",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "India's comeback with the ball was built at the death. चिगुरुपति वेंकट took three wickets in two overs, the forty-fifth and the forty-seventh. काव्य पटेल took two more, plus a run out in his final over. Six wickets, for sixty-three runs.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "PAKISTAN'S LAST TEN OVERS",
+    "title": "Six wickets for sixty-three.",
+    "value": 6,
+    "suffix": " WKTS",
+    "label": "for 63 runs in overs 41 to 50: three to Venkata, two to Kavya Patel, one run out",
+    "color": "red",
+    "word": "six"
+   }
+  },
+  {
+   "vo": "Look at काव्य पटेल's ten overs, sixty balls on a pitch map. Four wickets for sixty-eight, from the short-of-a-length cut that got हयाम ख़ान early, to the yorker that bowled निक़ाब शफ़ीक़ at the death. Twenty-nine of the sixty balls went for no run.",
+   "scene": {
+    "type": "lab_pitch",
+    "kicker": "KAVYA PATEL · 10 OVERS · 4 FOR 68",
+    "title": "From back of a length to the yorker.",
+    "pitch_balls": [
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "WIDE_OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "WIDE_OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "ok"
+     ],
+     [
+      "WIDE_OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL_TOSS",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL_TOSS",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL_TOSS",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "wicket"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "YORKER",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "YORKER",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ]
+    ],
+    "from": 0.25,
+    "to": 0.85
+   }
+  },
+  {
+   "vo": "Now, the chase. Three thirty-eight to win. India's openers started steadily: fifty-four without loss after ten overs, a hundred and seven for one after twenty. The first wicket added ninety-five, with आर्यवीर सहवाग making fifty-eight off sixty-one, with nine fours.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA · RUNS IN EACH TEN OVERS",
+    "title": "A chase in three acts.",
+    "domain": [
+     0,
+     100
+    ],
+    "ticks": [
+     0,
+     50,
+     100
+    ],
+    "rows": [
+     {
+      "label": "Overs 1-10 · 0 wkts",
+      "v": 54,
+      "text": "54"
+     },
+     {
+      "label": "Overs 11-20 · 1 wkt",
+      "v": 53,
+      "text": "53"
+     },
+     {
+      "label": "Overs 21-30 · 1 wkt",
+      "v": 60,
+      "text": "60"
+     },
+     {
+      "label": "Overs 31-40 · 4 wkts",
+      "v": 81,
+      "text": "81"
+     },
+     {
+      "label": "Overs 41-50 · 3 wkts",
+      "v": 91,
+      "text": "91",
+      "hl": true,
+      "word": "ninety-one"
+     }
+    ]
+   },
+   "chapter": "The chase"
+  },
+  {
+   "vo": "The required rate tells the story. Seven an over after ten. Eight point six after thirty. Nine after forty. Then eleven point three, after the forty-third over, with only two wickets left. It dipped to eight and a half, and then climbed again, to twelve and a half, with twelve balls to go.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "RUNS NEEDED PER OVER · INDIA'S CHASE OF 338",
+    "title": "The required rate.",
+    "domain": [
+     0,
+     14
+    ],
+    "ticks": [
+     0,
+     7,
+     14
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "After 10 overs",
+      "v": 7.1,
+      "text": "7.1"
+     },
+     {
+      "label": "After 20",
+      "v": 7.7,
+      "text": "7.7"
+     },
+     {
+      "label": "After 30",
+      "v": 8.6,
+      "text": "8.6"
+     },
+     {
+      "label": "After 40",
+      "v": 9.0,
+      "text": "9.0"
+     },
+     {
+      "label": "After 43 · 8 down",
+      "v": 11.3,
+      "text": "11.3",
+      "hl": true
+     },
+     {
+      "label": "After 46",
+      "v": 8.5,
+      "text": "8.5"
+     },
+     {
+      "label": "After 48 · 9 down",
+      "v": 12.5,
+      "text": "12.5",
+      "hl": true,
+      "word": "twelve"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "लक्ष्य रायचंदानी was the anchor: eighty off a hundred and one balls, a strike rate of seventy-nine, with no sixes. It was not pretty, and it was not fast. But it kept India in the game, until the thirty-seventh over.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "INDIA'S OPENERS",
+    "title": "Fast start, then the anchor.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "SEHWAG"
+    },
+    "b": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "RAICHANDANI"
+    },
+    "rows": [
+     [
+      "Runs",
+      "58",
+      "80",
+      "b"
+     ],
+     [
+      "Balls",
+      "61",
+      "101",
+      "level"
+     ],
+     [
+      "Strike rate",
+      "95",
+      "79",
+      "a"
+     ],
+     [
+      "Fours",
+      "9",
+      "5",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Then the match turned. India were two-thirteen for four after thirty-five overs. In the thirty-seventh, अली रज़ा had रायचंदानी caught, and with the very next ball, अन्वय द्रविड़ was run out. सावसानी fell. Then काव्य पटेल. Two fifty-two for eight, after forty-two overs. India needed eighty-six off forty-eight balls, with two wickets in hand.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE TURN · OVERS 35 TO 42",
+    "lines": [
+     "213 for 4.",
+     "Then [252 for 8.]"
+    ]
+   },
+   "chapter": "The turn"
+  },
+  {
+   "vo": "This is where मानल चौहान and मोहित उलवा took over. From the forty-fourth over, three overs, eighteen balls, and forty-five runs. मोहम्मद सय्यम went for nineteen. रिज़वानुल्लाह for thirteen. अली रज़ा for thirteen. Four sixes in all: two from चौहान, two from उलवा.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA · RUNS PER OVER · OVERS 43 TO 50",
+    "title": "The overs that won it.",
+    "domain": [
+     0,
+     20
+    ],
+    "ticks": [
+     0,
+     10,
+     20
+    ],
+    "rows": [
+     {
+      "label": "43rd · Ali Raza",
+      "v": 7,
+      "text": "7"
+     },
+     {
+      "label": "44th · Sayyam",
+      "v": 19,
+      "text": "19",
+      "hl": true,
+      "word": "nineteen"
+     },
+     {
+      "label": "45th · Rizwanullah",
+      "v": 13,
+      "text": "13"
+     },
+     {
+      "label": "46th · Ali Raza",
+      "v": 13,
+      "text": "13"
+     },
+     {
+      "label": "47th · Rizwanullah",
+      "v": 4,
+      "text": "4"
+     },
+     {
+      "label": "48th · Niqab Shafiq",
+      "v": 5,
+      "text": "5 · wkt"
+     },
+     {
+      "label": "49th · Sayyam",
+      "v": 17,
+      "text": "17",
+      "hl": true
+     },
+     {
+      "label": "50th · Ahmed Hussain",
+      "v": 9,
+      "text": "9"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And Pakistan went back to मोहम्मद सय्यम for the forty-ninth over. It cost seventeen: four, six, one, four, one, one. His two overs, the forty-fourth and the forty-ninth, went for thirty-six runs. Almost half of his seventy-nine.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "MOHAMMAD SAYYAM · 10 OVERS · 79 RUNS",
+    "title": "Two overs.",
+    "value": 36,
+    "suffix": " RUNS",
+    "label": "in his 44th and 49th overs: 19 and 17",
+    "color": "red",
+    "word": "thirty-six"
+   }
+  },
+  {
+   "vo": "Twenty-five off twelve became eight off six. And the last over, bowled by अहमद हुसैन, was a masterpiece of nerve. A dot. A wide. Then four singles in a row. Three needed from the last ball. Two would tie it, and send the final to a Super Over.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "THE LAST OVER · NEED 8 OFF 6",
+    "title": "Three to win. One ball.",
+    "domain": [
+     0,
+     5
+    ],
+    "ticks": [
+     0,
+     2,
+     4
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Ball 1",
+      "v": 0,
+      "text": "dot · 8 off 5"
+     },
+     {
+      "label": "Wide",
+      "v": 1,
+      "text": "1 · 7 off 5"
+     },
+     {
+      "label": "Ball 2",
+      "v": 1,
+      "text": "1 · 6 off 4"
+     },
+     {
+      "label": "Ball 3",
+      "v": 1,
+      "text": "1 · 5 off 3"
+     },
+     {
+      "label": "Ball 4",
+      "v": 1,
+      "text": "1 · 4 off 2"
+     },
+     {
+      "label": "Ball 5",
+      "v": 1,
+      "text": "1 · 3 off 1",
+      "hl": true
+     },
+     {
+      "label": "Ball 6",
+      "v": 4,
+      "text": "FOUR",
+      "hl": true,
+      "word": "four"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "मोहित उलवा stood in front of it. Good length, outside off stump. A cover drive. Four. India win the Under nineteen Asia Cup by one wicket, off the last ball.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "THE LAST BALL · AHMED HUSSAIN TO ULVA",
+    "title": "Cover drive. Four.",
+    "value": 4,
+    "label": "Needed three to win. Two would have tied it.",
+    "color": "gold",
+    "word": "four"
+   },
+   "chapter": "The last ball"
+  },
+  {
+   "vo": "So what decided it? Not the lengths. In the last ten overs, India's bowlers and Pakistan's bowlers pitched the ball full, or a yorker, about the same share of the time: forty per cent, and thirty-eight. And both attacks drew a false shot about thirty-seven per cent of the time. But Pakistan's last ten overs brought sixty-three runs, six wickets, and just three boundaries. India's brought ninety-one runs, three wickets, and thirteen boundaries.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE LAST TEN OVERS",
+    "title": "Same lengths. Different result.",
+    "a": {
+     "t": "PAK",
+     "kit": "PAK",
+     "name": "PAKISTAN BATTING"
+    },
+    "b": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA BATTING"
+    },
+    "rows": [
+     [
+      "Full or yorker",
+      "40%",
+      "38%",
+      "level"
+     ],
+     [
+      "Not in control",
+      "37%",
+      "38%",
+      "level"
+     ],
+     [
+      "Runs",
+      "63",
+      "91",
+      "b"
+     ],
+     [
+      "Wickets lost",
+      "6",
+      "3",
+      "b"
+     ],
+     [
+      "Fours and sixes",
+      "3",
+      "13",
+      "b"
+     ]
+    ]
+   },
+   "chapter": "The analysis"
+  },
+  {
+   "vo": "One more number. Pakistan's bowlers gave away seventeen extras in India's innings: nine wides, and eight leg byes. In a match that came down to the final ball, that is seventeen runs, and a free ball in the last over.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "EXTRAS IN INDIA'S INNINGS",
+    "title": "Seventeen free runs.",
+    "value": 17,
+    "label": "9 wides and 8 leg byes, including a wide in the last over",
+    "color": "red",
+    "word": "seventeen"
+   }
+  },
+  {
+   "vo": "Our verdict? India lost the group game by three wickets, and won the final by one. After forty overs they needed nine an over, and were scoring six, and they needed two सय्यम overs to go for thirty-six. But they didn't give up, and they won the Under nineteen Asia Cup.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Behind all day.",
+     "[Ahead at the end.]"
+    ]
+   },
+   "chapter": "The verdict"
+  },
+  {
+   "vo": "Was this the greatest Under nineteen final? Tell us in the comments, and follow for the next Replay Room.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "GREATEST U19 FINAL?"
+     },
+     {
+      "t": "THE REPLAY ROOM",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Three runs needed from the last ball. Nine wickets down. The Under nineteen Asia Cup final. India against Pakistan.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "at": 0.05,
+     "kicker": "UNDER-19 ASIA CUP FINAL",
+     "lines": [
+      {
+       "t": "3 TO WIN."
+      },
+      {
+       "t": "1 BALL.",
+       "c": "gold"
+      }
+     ]
+    },
+    "avatars": [
+     {
+      "kit": "PAK",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "wide",
+    "stumps": [
+     0.17,
+     0.93
+    ],
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Pakistan batted first, and made three thirty-seven. उस्मान ख़ान, a hundred and seven. अब्दुल क़ादिर, eighty off fifty-four, with eight sixes.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "PAKISTAN BATTED FIRST",
+     "left": {
+      "v": "337",
+      "l": "Pakistan",
+      "c": "gold"
+     },
+     "right": {
+      "v": "338",
+      "l": "India needed",
+      "c": "red"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "PAK",
+      "pose": "pull",
+      "x": 0.32,
+      "hit": "loft",
+      "ghost": true
+     },
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.76
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.55,
+     "shot": "six"
+    },
+    "fx": [
+     "vignette",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "But India fell apart. Two-thirteen for four. Then two fifty-two for eight. They needed eighty-six off forty-eight balls.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "AFTER 42 OVERS",
+     "label": "INDIA · NEED 86 OFF 48",
+     "value": 252,
+     "suffix": "/8",
+     "count_dur": 0.6,
+     "color": "red",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Then मानल चौहान and मोहित उलवा hit forty-five off three overs, with four sixes.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "OVERS 44 TO 46",
+     "left": {
+      "v": "45",
+      "l": "Runs",
+      "c": "gold"
+     },
+     "right": {
+      "v": "4",
+      "l": "Sixes",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.32,
+      "hit": "loft",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "pull",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    },
+    "fx": [
+     "vignette",
+     "shake",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "Twenty-five off twelve. Then seventeen off one over. Eight needed from the last six.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "THE LAST OVER",
+     "label": "NEED 8 OFF 6",
+     "value": 8,
+     "suffix": " OFF 6",
+     "count_dur": 0.5,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "run",
+      "x": 0.4
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "A dot. A wide. Four singles. Three needed from the last ball. Two would tie it, and send the final to a Super Over.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE LAST BALL",
+     "lines": [
+      {
+       "t": "3 TO WIN."
+      },
+      {
+       "t": "2 TO TIE.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "PAK",
+      "pose": "bowl",
+      "x": 0.66,
+      "dir": -1
+     },
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.26
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.17,
+     0.93
+    ],
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "मोहित उलवा. Cover drive. Four!",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "AHMED HUSSAIN TO ULVA",
+     "label": "FOUR",
+     "value": 4,
+     "count_dur": 0.4,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.3,
+      "hit": "drive",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "pull",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "word": "four",
+     "shot": "four"
+    },
+    "fx": [
+     "vignette",
+     "flash",
+     "speed",
+     "shake",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "India win by one wicket, off the last ball. Pakistan had beaten them in the group stage. India are Under nineteen Asia Cup champions.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "INDIA WIN THE FINAL",
+     "lines": [
+      {
+       "t": "BY ONE"
+      },
+      {
+       "t": "WICKET.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "arms_wide",
+      "x": 0.34
+     },
+     {
+      "kit": "PAK",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.2
+   }
+  },
+  {
+   "vo": "Was this the greatest Under nineteen final? Tell us in the comments, and follow for the full breakdown.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "GREATEST U19 FINAL?"
+     },
+     {
+      "t": "FULL BREAKDOWN →",
+      "c": "gold"
+     }
+    ],
+    "pill": "FOLLOW FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "India vs Pakistan - U19 Asia Cup Final Analysis | 338 Chased Off the Last Ball",
+   "description": "India vs Pakistan, Under-19 Asia Cup final 2026 analysis: India chased 338 and won by one wicket, off the last ball, at Al Amerat in Oman. We took every ball of the final (line, length, shot played, and whether the batter was in control) to explain how: Pakistan's fast start and flat finish, India's collapse from 213 for 4 to 252 for 8, the overs that won it, and the last-over nerve.\n\nSources: ball-by-ball data from ESPNcricinfo and Cricbuzz match pages (captured with our own tool, cross-checked over by over). All numbers are computed by us; 'not in control' is the Cricinfo shot-control flag. All graphics are original illustrations, not broadcast footage.\n\n#INDvPAK #U19AsiaCup #AsiaCup2026 #IndiaVsPakistan",
+   "tags": [
+    "India vs Pakistan",
+    "India vs Pakistan U19 Asia Cup final",
+    "U19 Asia Cup final 2026",
+    "IND vs PAK U19",
+    "Under 19 Asia Cup",
+    "Mohit Ulva",
+    "Abdul Qadir",
+    "Usman Khan",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "3 Needed Off the Last Ball! | India vs Pakistan U19 Asia Cup Final #Shorts",
+   "description": "India vs Pakistan, Under-19 Asia Cup final 2026: 3 needed off the last ball, nine wickets down. The Replay Room: a ball-by-ball breakdown. Data: ESPNcricinfo and Cricbuzz match pages, analysis by The Third Man. Full video on the channel.\n#INDvPAK #U19AsiaCup #AsiaCup2026",
+   "tags": [
+    "India vs Pakistan",
+    "India vs Pakistan U19 Asia Cup final",
+    "U19 Asia Cup final 2026",
+    "IND vs PAK U19",
+    "Under 19 Asia Cup",
+    "Mohit Ulva",
+    "Abdul Qadir",
+    "Usman Khan",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  }
+ }
+}

@@ -34,6 +34,15 @@ NAMES = {
     "Mohammad Rizwan": "मोहम्मद रिज़वान", "Rizwan": "रिज़वान", "Shaheen Shah Afridi": "शाहीन शाह अफ़रीदी", "Shaheen": "शाहीन",
     "Gautam Gambhir": "गौतम गंभीर", "Gambhir": "गंभीर", "Ajinkya Rahane": "अजिंक्य रहाणे", "Rahane": "रहाणे", "Ajaz Patel": "एजाज़ पटेल",
     "Rachin Ravindra": "रचिन रवींद्र", "Rachin": "रचिन", "Ish Sodhi": "ईश सोढ़ी", "Sodhi": "सोढ़ी", "Nitish Rana": "नितीश राणा", "Rahul": "राहुल",
+    # Under-19 Asia Cup final, Nov 2026 (India and Pakistan squads)
+    "Usman Khan": "उस्मान ख़ान", "Usman": "उस्मान", "Abdul Qadir": "अब्दुल क़ादिर", "Abdul": "अब्दुल", "Qadir": "क़ादिर", "Farhan Yousaf": "फ़रहान यूसुफ़", "Farhan": "फ़रहान", "Yousaf": "यूसुफ़",
+    "Hayam Khan": "हयाम ख़ान", "Hayam": "हयाम", "Ahmed Hussain": "अहमद हुसैन", "Ahmed": "अहमद", "Hussain": "हुसैन", "Niqab Shafiq": "निक़ाब शफ़ीक़", "Niqab": "निक़ाब", "Shafiq": "शफ़ीक़",
+    "Hamza Zahoor": "हमज़ा ज़हूर", "Hamza": "हमज़ा", "Zahoor": "ज़हूर", "Hasnain Abbas Dar": "हसनैन अब्बास डार", "Hasnain": "हसनैन", "Rizwanullah": "रिज़वानुल्लाह",
+    "Mohammad Sayyam": "मोहम्मद सय्यम", "Mohammad": "मोहम्मद", "Sayyam": "सय्यम", "Ali Raza": "अली रज़ा", "Raza": "रज़ा", "Kavya Paresh Patel": "काव्य पारेश पटेल", "Kavya Patel": "काव्य पटेल",
+    "Kavya": "काव्य", "Patel": "पटेल", "Mohit Ulva": "मोहित उलवा", "Mohit": "मोहित", "Ulva": "उलवा", "Manal Chauhan": "मानल चौहान", "Manal": "मानल", "Yashbardhan Chauhan": "यशवर्धन चौहान",
+    "Yashbardhan": "यशवर्धन", "Chauhan": "चौहान", "VK Vineeth": "वी के विनीत", "Vineeth": "विनीत", "Arjun Rajput": "अर्जुन राजपूत", "Arjun": "अर्जुन", "Rajput": "राजपूत",
+    "Aryan Savsani": "आर्यन सावसानी", "Aryan": "आर्यन", "Savsani": "सावसानी", "Chigurupati Venkata": "चिगुरुपति वेंकट", "Chigurupati": "चिगुरुपति", "Venkata": "वेंकट",
+    "Lakshya": "लक्ष्य", "Raichandani": "रायचंदानी",
     # places
     "Hyderabad": "हैदराबाद", "Gujarat": "गुजरात", "Mumbai": "मुंबई", "Delhi": "दिल्ली", "Chennai": "चेन्नई", "Bengaluru": "बेंगलुरु",
     "Bangalore": "बेंगलुरु", "Ranchi": "रांची", "Rajkot": "राजकोट", "Kolkata": "कोलकाता", "Lucknow": "लखनऊ", "Ahmedabad": "अहमदाबाद",
