@@ -75,7 +75,7 @@ spec = {"slug": "myth_ep2_kohli_reinvention", "theme": "stadium", "captions": "v
         "thumb": {"kicker": "MYTH OR DATA? · EP. 2", "lines": [{"t": "IS KOHLI"}, {"t": "TOO SLOW?", "c": "gold"}], "hero": "165.8", "herosize": 300},
         "sources": SRC, "short": short,
         "venue": {"time": "night", "crowd": [[214, 30, 40], [20, 20, 20], [240, 240, 240], [212, 175, 55]], "boards": [[214, 30, 40], [20, 20, 20]]},
-        "yt": {"short": {"title": "Is Kohli too slow for T20? His strike rate: 116 to 166 📊 #Shorts", "description": DESC, "tags": TAGS}}}
+        "yt": {"short": {"title": "Virat Kohli: Is He Too Slow for T20? | Myth or Data Ep 2 #Shorts", "description": DESC, "tags": TAGS}}}
 voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/myth_ep2_kohli_reinvention.json", "w"), ensure_ascii=False, indent=1)
 print("wrote spec,", sum(len(x["vo"].split()) for x in short), "words")

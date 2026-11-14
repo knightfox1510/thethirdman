@@ -6,7 +6,7 @@ Layout in Drive:
     The Third Man/Published_YT/<slug>/      the same, once anything from it has been uploaded to YouTube
     The Third Man/Archive/<slug>/<YYYY-MM-DD HHMM>/   the version that was there before
 A file is only re-uploaded (and the old one archived) when its contents changed (MD5 compare)."""
-import datetime, hashlib, mimetypes, os, sys
+import datetime, hashlib, json, mimetypes, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gauth import api, resumable
 
@@ -82,10 +82,35 @@ def find_child(name, parent):
     return r["files"][0]["id"] if r.get("files") else None
 
 
+def _posted(slug):
+    """True once any non-deleted YouTube upload of this slug is logged."""
+    try: log = json.load(open(os.path.join(ROOT, "publish", "youtube_log.json")))
+    except Exception: return False
+    return any(r["slug"] == slug and not r.get("deleted") for r in log)
+
+
+def by_slug(slug):
+    """The Drive folder tagged slug=<slug> (set by drive_migrate.py / created by video_folder), or None."""
+    r = api("GET", D, "drive", params={"q": f"appProperties has {{ key='slug' and value='{q(slug)}' }} and mimeType='{FOLDER}' and trashed=false",
+                                       "fields": "files(id,name,parents)"})
+    return (r.get("files") or [None])[0]
+
+
 def video_folder(slug, root_id):
-    """A video's folder lives in Videos/ until it is posted, then in Published_YT/."""
+    """Series layout: The Third Man / Series / <NN Series> / <EpNN - Subject> [posted]. A folder created before the series layout
+    (Videos/<slug> or Published_YT/<slug>) is still found, until drive_migrate.py moves it."""
+    f = by_slug(slug)
+    if f: return f["id"]
     pub = find_child("Published_YT", root_id)
-    return (pub and find_child(slug, pub)) or folder(slug, folder("Videos", root_id))
+    legacy = (pub and find_child(slug, pub)) or find_child(slug, find_child("Videos", root_id) or "")
+    if legacy: return legacy
+    import series
+    inf = series.info(slug)
+    sroot = folder("Series", root_id)
+    parent = folder(inf["series_dir"], sroot) if inf else folder("00 Unsorted", sroot)
+    name = (inf["folder"] if inf else slug) + (" [posted]" if _posted(slug) else "")
+    meta = {"name": name, "mimeType": FOLDER, "parents": [parent], "appProperties": {"slug": slug}}
+    return api("POST", D, "drive", body=meta, params={"fields": "id"})["id"]
 
 
 def sync(slug, root_id, stamp, keep=False):
@@ -96,14 +121,18 @@ def sync(slug, root_id, stamp, keep=False):
 
 
 def mark_published(slug):
-    """Move Videos/<slug> to Published_YT/<slug> (called after a YouTube upload)."""
+    """After a YouTube upload: tag the episode folder " [posted]" (the series layout has no Videos/Published split)."""
     root_id = folder("The Third Man")
-    pub = folder("Published_YT", root_id)
-    if find_child(slug, pub): return "already in Published_YT"
-    vids = folder("Videos", root_id); cur = find_child(slug, vids)
-    if not cur: return "no Videos folder to move"
-    api("PATCH", f"{D}/{cur}", "drive", body={}, params={"addParents": pub, "removeParents": vids, "fields": "id"})
-    return "moved to Published_YT"
+    f = by_slug(slug)
+    if not f:
+        pub = folder("Published_YT", root_id); vids = folder("Videos", root_id); cur = find_child(slug, vids)     # legacy folders
+        if not cur: return "no Drive folder to mark"
+        if find_child(slug, pub): return "already in Published_YT"
+        api("PATCH", f"{D}/{cur}", "drive", body={}, params={"addParents": pub, "removeParents": vids, "fields": "id"})
+        return "moved to Published_YT (legacy layout)"
+    if f["name"].endswith("[posted]"): return "already marked posted"
+    api("PATCH", f"{D}/{f['id']}", "drive", body={"name": f["name"] + " [posted]"}, params={"fields": "id"})
+    return "marked [posted]"
 
 
 def pull(slug, root_id):

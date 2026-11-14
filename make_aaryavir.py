@@ -166,8 +166,8 @@ spec = {"slug": "myth_ep3_aaryavir", "theme": "stadium", "theme_long": "lab", "c
         "files": {"long": "Aaryavir_Sehwag_Like_Father_Like_Son_Myth_or_Data", "short": "Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16"},
         "thumb": {"kicker": "MYTH OR DATA? · EP. 3", "lines": [{"t": "LIKE FATHER,"}, {"t": "LIKE SON?", "c": "gold"}], "hero": "361", "herosize": 420},
         "sources": SRC, "venue": VEN, "long": long, "short": short,
-        "yt": {"long": {"title": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data", "description": DESC_L, "tags": TAGS},
-               "short": {"title": "Is Aaryavir Sehwag the Next Sehwag? | U19 Asia Cup Player of the Tournament #Shorts", "description": DESC_S, "tags": TAGS}}}
+        "yt": {"long": {"title": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3", "description": DESC_L, "tags": TAGS},
+               "short": {"title": "Is Aaryavir Sehwag the Next Sehwag? | Myth or Data Ep 3 #Shorts", "description": DESC_S, "tags": TAGS}}}
 voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/myth_ep3_aaryavir.json", "w"), ensure_ascii=False, indent=1)
 print("wrote specs/myth_ep3_aaryavir.json: long", sum(len(x["vo"].split()) for x in long), "words,", len(long), "scenes; short", sum(len(x["vo"].split()) for x in short), "words")

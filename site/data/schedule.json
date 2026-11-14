@@ -278,10 +278,10 @@
   {
    "date": "2026-11-14",
    "platform": "YouTube Short",
-   "content": "Myth or Data? Ep.2: Is Kohli too slow for T20? (Kohli's reinvention)",
+   "content": "Virat Kohli: Is He Too Slow for T20? | Myth or Data Ep 2",
    "status": "Ready",
    "link": null,
-   "notes": "Built 13 Nov; on Drive (Videos). Not uploaded yet"
+   "notes": "Built 13 Nov; on Drive (Series/01 Myth or Data/Ep02). Not uploaded yet"
   },
   {
    "date": "2026-11-14",
@@ -306,6 +306,30 @@
    "status": "Posted",
    "link": "https://youtu.be/52FPh7UbtHk",
    "notes": "Uploaded PRIVATE 14 Nov (YT). IG version with 'full breakdown on YouTube, link in bio' end card: *_IG.mp4 (on Drive). IG Reel by hand"
+  },
+  {
+   "date": "2026-11-15",
+   "platform": "YouTube long",
+   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 14 Nov; 5:12; on Drive (Series/01 Myth or Data/Ep03). Not uploaded yet. Post after Ep 1 and Ep 2"
+  },
+  {
+   "date": "2026-11-15",
+   "platform": "YouTube Short + IG Reel",
+   "content": "Is Aaryavir Sehwag the Next Sehwag? | Myth or Data Ep 3",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 14 Nov; 1:13; YT + IG versions on Drive. Not uploaded yet"
+  },
+  {
+   "date": "2026-11-14",
+   "platform": "YouTube Short + IG Reel",
+   "content": "Virat Kohli: Does He Fail in Knockouts? | Myth or Data Ep 1",
+   "status": "Ready",
+   "link": null,
+   "notes": "Rebuilt 14 Nov (removed the unverified 'best ever' claim); on Drive (Series/01 Myth or Data/Ep01)"
   }
  ]
 }

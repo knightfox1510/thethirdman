@@ -38,16 +38,22 @@ def kind(name):
 def main():
     root = one("The Third Man")
     if not root: raise SystemExit("no 'The Third Man' folder found in Drive")
-    vids, pub = one("Videos", root["id"]), one("Published_YT", root["id"])
-    out = {"root": f"https://drive.google.com/drive/folders/{root['id']}", "synced": datetime.date.today().isoformat(), "videos": {}}
-    for state, parent in (("not posted", vids), ("posted", pub)):
-        if not parent: continue
-        for f in kids(parent["id"]):
-            if f["mimeType"] != FOLDER: continue
+    sroot = one("Series", root["id"])
+    out = {"root": f"https://drive.google.com/drive/folders/{root['id']}", "synced": datetime.date.today().isoformat(), "videos": {}, "series": {}}
+    if not sroot: raise SystemExit("no 'Series' folder yet: run publish/drive_migrate.py --apply")
+    for sf in sorted(kids(sroot["id"]), key=lambda x: x["name"]):
+        if sf["mimeType"] != FOLDER: continue
+        out["series"][sf["name"]] = {"folder": sf.get("webViewLink"), "episodes": []}
+        for ef in sorted(kids(sf["id"]), key=lambda x: x["name"]):
+            if ef["mimeType"] != FOLDER: continue
+            meta = api("GET", f"{D}/{ef['id']}", "drive", params={"fields": "id,name,appProperties,webViewLink"})
+            slug = (meta.get("appProperties") or {}).get("slug") or ef["name"]
             files = [dict(name=x["name"], kind=kind(x["name"]), mb=round(int(x.get("size", 0)) / 1e6, 1), url=x.get("webViewLink"))
-                     for x in kids(f["id"]) if x["mimeType"] != FOLDER]
-            out["videos"][f["name"]] = {"state": state, "folder": f.get("webViewLink") or f"https://drive.google.com/drive/folders/{f['id']}", "files": files}
-            print(f"  {f['name']:34s} {state:10s} {len(files)} files")
+                     for x in kids(ef["id"]) if x["mimeType"] != FOLDER]
+            state = "posted" if ef["name"].endswith("[posted]") else "not posted"
+            out["videos"][slug] = {"state": state, "series": sf["name"], "episode": ef["name"], "folder": ef.get("webViewLink") or f"https://drive.google.com/drive/folders/{ef['id']}", "files": files}
+            out["series"][sf["name"]]["episodes"].append(slug)
+            print(f"  {sf['name']:22s} {ef['name'][:60]:60s} {state:10s} {len(files)} files")
     json.dump(out, open(os.path.join(HERE, "site", "data", "drive.json"), "w"), indent=1)
     print(f"{len(out['videos'])} video folders -> site/data/drive.json")
 

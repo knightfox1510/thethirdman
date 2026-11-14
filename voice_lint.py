@@ -4,7 +4,7 @@ Rules (agreed with the channel owner):
   1. Every subcontinent player name - first and last - and Indian place names are written in Devanagari.
   2. "U19" / "U-19" / "U 19" is read as "Under nineteen" (the screen may still show U19).
   3. No digits in narration: years and numbers are spelled out in words."""
-import json, re, sys, glob
+import json, os, re, sys, glob
 
 # Latin -> Devanagari (longest first when applied). Add new names here AND their parts to engine.SHOW (done automatically below).
 NAMES = {
@@ -82,7 +82,11 @@ def walk(o, fn, key=None):
 
 
 def fix_spec(spec):
-    walk(spec, fix_text); return spec
+    walk(spec, fix_text)
+    try:                                                 # series naming for output files (publish/series.py)
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "publish")); import series; series.apply_names(spec)
+    except Exception: pass
+    return spec
 
 
 def check_spec(spec, fmts=("long", "short")):

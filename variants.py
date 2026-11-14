@@ -25,12 +25,18 @@ YT_CTA = {"vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.
           "scene": {"type": "cta", "lines": [{"t": "WANT THE FULL"}, {"t": "BREAKDOWN?", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "sub": "SUBSCRIBE · INSTAGRAM " + IG_HANDLE, "bio": None}}}
 
 
+# Shorts with no long video of their own: don't promise a "full breakdown" (the replay extras do have one: their episode's long)
+IG_CTA_MORE = {"vo": "More cricket analysis on YouTube. The link is in our bio.",
+               "scene": {"type": "cta", "lines": [{"t": "MORE CRICKET"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE " + YT_HANDLE, "bio": "LINK IN BIO"}}}
+LONG_COMPANION = {"replay_4odi_young", "replay_4odi_dots", "henry_6balls"}
+
+
 def igshort(spec_path):
     """Build deliver/<slug>/<short file>_IG.mp4 (+ .srt, cover): the Short with its last (end-card) scene replaced by the Instagram end card.
     Narration is cached per paragraph, so only the new last line is voiced: the cache of the main Short is copied across first."""
     spec = json.load(open(spec_path)); slug = spec["slug"]
     v = copy.deepcopy(spec); v["slug"] = f"{slug}__igshort"
-    cta = spec.get("ig_cta") or IG_CTA
+    cta = spec.get("ig_cta") or (IG_CTA if (spec.get("long") or slug in LONG_COMPANION) else IG_CTA_MORE)
     sc = v["short"]; last_is_cta = sc and sc[-1]["scene"].get("type") == "cta"
     if not last_is_cta:                                   # a spoken "Follow for the full breakdown." closing line is replaced by the IG end card
         import re
