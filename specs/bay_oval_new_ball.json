@@ -1,0 +1,1029 @@
+{
+ "slug": "bay_oval_new_ball",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "tactics",
+ "tag": "TACTICS BOARD",
+ "tagsub": "BAY OVAL · 5TH ODI PREVIEW",
+ "files": {
+  "long": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview"
+ },
+ "thumb": {
+  "kicker": "5TH ODI PREVIEW",
+  "lines": [
+   {
+    "t": "SURVIVING THE"
+   },
+   {
+    "t": "NEW BALL",
+    "c": "gold"
+   }
+  ],
+  "hero": "0/3",
+  "herosize": 420
+ },
+ "sources": [
+  "Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_json.zip, ODC-BY), 50-over matches 2002 to 25 Oct 2025 (2,617 matches, 5,165 innings; super overs excluded). Bay Oval = the 13 men's ODIs at Bay Oval, Mount Maunganui; 'new ball' = overs 1-10; wickets include run outs, exclude retired hurt; chases exclude D/L results. Figures: analysis/bay_oval_new_ball.py and make_bay_oval_preview.py.",
+  "ESPNcricinfo match capture, NZ v IND 4th ODI, Bay Oval, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot and control, captured with our own tool; first-ten-over figures computed from it.",
+  "Cricbuzz match capture (match 161271): over-by-over cross-check; match notes (toss, conditions, dropped catches) used as leads. Result in both: New Zealand won by 244 runs; Player of the Match Matt Henry.",
+  "Series position (India 2-1; third ODI rained off) and the 5th ODI date (15 Nov) from ESPN's fixture list and the channel's schedule; squads, toss, weather and pitch for the 5th ODI were not yet confirmed when this was made.",
+  "All graphics are original; the field plan is illustrative, not the actual field."
+ ],
+ "long": [
+  {
+   "vo": "Three wickets in the first over. In our ball-by-ball archive of more than five thousand men's one-day innings, it had never happened. Then, on Friday, at the Bay Oval, it happened to India. And on Sunday, they're back.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "FIRST OVER · BAY OVAL",
+    "lines": [
+     "0 in 5,165.",
+     "Then [Friday.]"
+    ]
+   }
+  },
+  {
+   "vo": "This is the preview of the fifth and final one-day international, on Sunday, at the same ground. India lead the series, two-one. The third match was rained off, and New Zealand won the fourth by two hundred and forty-four runs. So the question for India is simple: how do you survive the new ball at Bay Oval?",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "THE PREVIEW · NZ V IND · 5TH ODI",
+    "lines": [
+     "Surviving the",
+     "[new ball.]"
+    ],
+    "teaser": "Bay Oval · Mount Maunganui · Sunday"
+   },
+   "chapter": "The setup"
+  },
+  {
+   "vo": "Two-one to India, with the third match washed out. If New Zealand win on Sunday, it's two-all. India cannot lose the series. But another collapse would carry real momentum into the Test series, which starts on the nineteenth.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "THE SERIES · 5-MATCH ODI",
+    "title": "India lead, two-one.",
+    "items": [
+     {
+      "label": "India",
+      "v": 2,
+      "text": "2",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND",
+      "word": "two-one"
+     },
+     {
+      "label": "New Zealand",
+      "v": 1,
+      "text": "1",
+      "c": "NZ",
+      "t": "NZ",
+      "kit": "NZ"
+     }
+    ],
+    "max": 3
+   }
+  },
+  {
+   "vo": "Start with the ground. Is Bay Oval a new-ball graveyard? The history says no. In thirteen men's one-day internationals here, up to October twenty twenty-five, the first ten overs produced one point four wickets an innings. Across all one-day cricket, it's one point four as well. A wicket falls in the first over in about eight per cent of innings here, against thirteen per cent everywhere. And the run rate is higher: four point nine, against four point seven.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE FIRST TEN OVERS · MEN'S ODIs",
+    "title": "An ordinary new ball.",
+    "a": {
+     "t": "BAY",
+     "kit": "NZ",
+     "name": "BAY OVAL"
+    },
+    "b": {
+     "t": "ALL",
+     "kit": "ink",
+     "name": "ALL ODIs"
+    },
+    "rows": [
+     [
+      "Wickets per innings",
+      "1.42",
+      "1.43",
+      "level"
+     ],
+     [
+      "Runs per over",
+      "4.88",
+      "4.74",
+      "a"
+     ],
+     [
+      "Wicket in over one",
+      "8%",
+      "13%",
+      "a"
+     ],
+     [
+      "Lose 3+ in ten overs",
+      "12%",
+      "16%",
+      "a"
+     ]
+    ]
+   },
+   "chapter": "The ground"
+  },
+  {
+   "vo": "The totals back that up. The average first-innings score is two sixty-eight up to October, and two seventy-two with Friday's three thirty-three. The highest total here is three seventy-one, by New Zealand against Sri Lanka in twenty nineteen. The highest successful chase is three hundred, by New Zealand against India in twenty twenty. Teams batting first have won seven of fourteen. It is an even contest, tilted towards runs.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "FIRST-INNINGS TOTALS AT BAY OVAL · MEN'S ODIs",
+    "title": "A batting ground.",
+    "domain": [
+     150,
+     400
+    ],
+    "ticks": [
+     200,
+     300,
+     400
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Jan 2014 · CAN v NED",
+      "v": 210,
+      "text": "210"
+     },
+     {
+      "label": "Oct 2014 · NZ v SA",
+      "v": 230,
+      "text": "230"
+     },
+     {
+      "label": "Oct 2014 · SA v NZ",
+      "v": 282,
+      "text": "282"
+     },
+     {
+      "label": "Jan 2016 · NZ v SL",
+      "v": 294,
+      "text": "294"
+     },
+     {
+      "label": "Feb 2018 · NZ v ENG",
+      "v": 223,
+      "text": "223"
+     },
+     {
+      "label": "Jan 2019 · NZ v SL",
+      "v": 371,
+      "text": "371",
+      "hl": true,
+      "word": "three"
+     },
+     {
+      "label": "Jan 2019 · NZ v SL",
+      "v": 319,
+      "text": "319"
+     },
+     {
+      "label": "Jan 2019 · IND v NZ",
+      "v": 324,
+      "text": "324"
+     },
+     {
+      "label": "Jan 2019 · NZ v IND",
+      "v": 243,
+      "text": "243"
+     },
+     {
+      "label": "Feb 2020 · IND v NZ",
+      "v": 296,
+      "text": "296"
+     },
+     {
+      "label": "Mar 2022 · NED v NZ",
+      "v": 202,
+      "text": "202"
+     },
+     {
+      "label": "Apr 2025 · NZ v PAK",
+      "v": 264,
+      "text": "264"
+     },
+     {
+      "label": "Oct 2025 · ENG v NZ",
+      "v": 223,
+      "text": "223"
+     },
+     {
+      "label": "Nov 2026 · NZ v IND",
+      "v": 333,
+      "text": "333",
+      "hl": true,
+      "word": "three"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India know this ground. Four one-day matches here: won by ninety runs, won by seven wickets, and lost to a three hundred chase. And on Friday, they were all out for eighty-nine. It is the lowest total ever posted at Bay Oval, by a hundred and thirteen runs.",
+   "scene": {
+    "type": "lab_units",
+    "kicker": "INDIA AT BAY OVAL · MEN'S ODIs",
+    "title": "Two wins. Two defeats.",
+    "rows": [
+     {
+      "label": "India's ODIs here",
+      "n": 4,
+      "k": 2,
+      "c": "red",
+      "text": "2 won · 2 lost",
+      "word": "eighty-nine"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India's new-ball batting is a little more fragile in New Zealand. Across twenty-eight innings, they lose one point four three wickets in the first ten overs, against one point two five everywhere else, and score three runs fewer.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "INDIA BATTING · FIRST TEN OVERS",
+    "title": "A little more fragile.",
+    "a": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "IN NEW ZEALAND"
+    },
+    "b": {
+     "t": "ALL",
+     "kit": "ink",
+     "name": "ELSEWHERE"
+    },
+    "rows": [
+     [
+      "Wickets lost",
+      "1.43",
+      "1.25",
+      "b"
+     ],
+     [
+      "Runs scored",
+      "47.8",
+      "51.0",
+      "b"
+     ],
+     [
+      "Lose 3+ wickets",
+      "14%",
+      "12%",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Why does it matter? Because chases are decided early. In more than two thousand completed one-day chases, teams that lost one wicket or fewer in the first ten overs won sixty-four per cent. Lose three or more, and it drops to twenty-six. Lose four, and it's thirteen. On Friday, India were twenty-six for four.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "CHASES WON · BY WICKETS LOST IN THE FIRST TEN OVERS",
+    "title": "Early wickets decide chases.",
+    "items": [
+     {
+      "label": "One wicket or fewer",
+      "v": 64,
+      "text": "64%",
+      "c": "NZ",
+      "t": "NZ",
+      "kit": "NZ"
+     },
+     {
+      "label": "Three or more",
+      "v": 26,
+      "text": "26%",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND"
+     },
+     {
+      "label": "Four or more",
+      "v": 13,
+      "text": "13%",
+      "c": "IND",
+      "t": "IND",
+      "kit": "IND",
+      "word": "thirteen"
+     }
+    ],
+    "max": 100
+   }
+  },
+  {
+   "vo": "Now, Friday. This is every ball Matt Henry and Kyle Jamieson bowled in the first ten overs: sixty balls, on a pitch map. The gold dots are the wickets. Sixty-three per cent were outside off stump, and more than four in ten were short of a good length or shorter. Nothing exotic. The same question, asked again and again.",
+   "scene": {
+    "type": "lab_pitch",
+    "kicker": "NEW ZEALAND'S NEW BALL · HENRY AND JAMIESON",
+    "title": "The same question, sixty times.",
+    "pitch_balls": [
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "wicket"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "false"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "WIDE_OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "DOWN_LEG",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "GOOD_LENGTH",
+      "false"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT_OF_A_GOOD_LENGTH",
+      "ok"
+     ],
+     [
+      "OUTSIDE_OFFSTUMP",
+      "FULL",
+      "ok"
+     ],
+     [
+      "ON_THE_STUMPS",
+      "SHORT",
+      "false"
+     ]
+    ],
+    "from": 0.3,
+    "to": 0.85
+   },
+   "chapter": "Friday"
+  },
+  {
+   "vo": "India asked a similar question. अर्शदीप सिंह, आक़िब नबी and गुरनूर बराड़ bowled sixty balls of their own, more than three-quarters outside off stump. And they made the batters look just as uncomfortable. New Zealand's openers were not in control on thirty-two per cent of balls. So were India's. The same share. But one side took four wickets and conceded twenty-six runs. The other took none, and conceded seventy-two.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "FIRST TEN OVERS · FRIDAY",
+    "title": "Same share. Different result.",
+    "a": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NZ'S NEW BALL"
+    },
+    "b": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA'S NEW BALL"
+    },
+    "rows": [
+     [
+      "Batter not in control",
+      "32%",
+      "32%",
+      "level"
+     ],
+     [
+      "Wickets",
+      "4",
+      "0",
+      "a"
+     ],
+     [
+      "Runs conceded",
+      "26",
+      "72",
+      "a"
+     ],
+     [
+      "Dot balls",
+      "82%",
+      "55%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "What separated them? Catches. In the second over, Will Young was dropped twice. He went on to make a hundred and twenty-five. India's bowlers beat the bat a third of the time, and got nothing for it.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "THE SECOND OVER",
+    "title": "Two lives.",
+    "value": 125,
+    "label": "Will Young's score after being dropped twice in the second over",
+    "color": "red"
+   }
+  },
+  {
+   "vo": "Look at it bowler by bowler. अर्शदीप सिंह drew a false shot on forty per cent of his balls, the most of anyone in the first ten overs, and took no wickets. Kyle Jamieson, thirty-seven per cent, one wicket. आक़िब नबी, twenty-nine, none. Matt Henry drew them on twenty-seven per cent, and took three.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "FIRST TEN OVERS · % OF BALLS BATTER NOT IN CONTROL",
+    "title": "Beaten, not rewarded.",
+    "domain": [
+     0,
+     50
+    ],
+    "ticks": [
+     0,
+     25,
+     50
+    ],
+    "rows": [
+     {
+      "label": "Arshdeep · 0 wkts",
+      "v": 40,
+      "text": "40%",
+      "hl": true,
+      "word": "forty"
+     },
+     {
+      "label": "Jamieson · 1 wkt",
+      "v": 37,
+      "text": "37%"
+     },
+     {
+      "label": "Nabi · 0 wkts",
+      "v": 29,
+      "text": "29%"
+     },
+     {
+      "label": "Henry · 3 wkts",
+      "v": 27,
+      "text": "27%",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then, how India batted. In the first ten overs, they defended twenty-seven per cent of balls, and scored off just eighteen. New Zealand's openers defended twelve, and scored off forty-five. India left alone twelve per cent. New Zealand's openers never needed to.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "FIRST TEN OVERS · HOW THEY BATTED",
+    "title": "Defend, or score.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND"
+    },
+    "rows": [
+     [
+      "Balls defended",
+      "27%",
+      "12%",
+      "b"
+     ],
+     [
+      "Balls left alone",
+      "12%",
+      "0%",
+      "level"
+     ],
+     [
+      "Balls scored off",
+      "18%",
+      "45%",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "The four wickets tell the same story. रोहित शर्मा, विराट कोहली and ऋतुराज गायकवाड़ were out defending. श्रेयस अय्यर was out pushing. Three of the four balls were outside off stump, and three were short of a good length or shorter. Not one was out to a drive, a cut or a pull.",
+   "scene": {
+    "type": "lab_units",
+    "kicker": "INDIA'S FOUR NEW-BALL WICKETS",
+    "title": "Out on the defensive.",
+    "rows": [
+     {
+      "label": "Dismissed defending or pushing",
+      "n": 4,
+      "k": 4,
+      "c": "red",
+      "text": "4 of 4",
+      "word": "four"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So how do India survive? Three rules, from the data. One: leave more. Sixty-three per cent of New Zealand's new-ball deliveries were outside off stump, and India left alone twelve per cent. Two: score off more balls. New Zealand's openers scored off nearly half. India scored off one in five. Three: respect the back-of-a-length ball. Three of the four wickets came there, or shorter, and none was an attacking shot.",
+   "scene": {
+    "type": "board",
+    "tone": "cream",
+    "tag": "ILLUSTRATIVE FIELD",
+    "head": [
+     "Three ways to",
+     "[survive] the new ball"
+    ],
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "gully",
+     "point",
+     "cover",
+     "mid-off",
+     "mid-on",
+     "fine leg"
+    ],
+    "hl": [
+     "slip",
+     "2nd slip",
+     "gully"
+    ],
+    "zones": [
+     {
+      "pos": [
+       "slip",
+       "2nd slip",
+       "gully"
+      ],
+      "label": "catchers waiting",
+      "at": 0.45
+     }
+    ],
+    "length": {
+     "from": 5.5,
+     "to": 8,
+     "c": "hl",
+     "at": 0.6
+    }
+   },
+   "chapter": "The plan"
+  },
+  {
+   "vo": "And here is what scoring looks like when the new ball doesn't bite. New Zealand's openers made sixty-seven off the bat in ten overs without losing a wicket, in every direction. The on drive brought eighteen of them, the pull fourteen, the cover drive and the cut twelve each.",
+   "scene": {
+    "type": "lab_wagon",
+    "kicker": "NEW ZEALAND · FIRST TEN OVERS · 67 RUNS, NO WICKET",
+    "title": "When the ball doesn't bite.",
+    "wagon_shots": [
+     [
+      228,
+      210,
+      1
+     ],
+     [
+      286,
+      72,
+      1
+     ],
+     [
+      2,
+      146,
+      4
+     ],
+     [
+      257,
+      359,
+      4
+     ],
+     [
+      358,
+      173,
+      6
+     ],
+     [
+      256,
+      52,
+      1
+     ],
+     [
+      4,
+      246,
+      4
+     ],
+     [
+      146,
+      218,
+      1
+     ],
+     [
+      229,
+      201,
+      1
+     ],
+     [
+      7,
+      225,
+      4
+     ],
+     [
+      322,
+      206,
+      2
+     ],
+     [
+      42,
+      246,
+      2
+     ],
+     [
+      97,
+      67,
+      1
+     ],
+     [
+      225,
+      227,
+      1
+     ],
+     [
+      290,
+      335,
+      6
+     ],
+     [
+      22,
+      82,
+      4
+     ],
+     [
+      352,
+      254,
+      4
+     ],
+     [
+      320,
+      122,
+      1
+     ],
+     [
+      228,
+      224,
+      1
+     ],
+     [
+      67,
+      319,
+      6
+     ],
+     [
+      351,
+      229,
+      4
+     ],
+     [
+      80,
+      127,
+      1
+     ],
+     [
+      16,
+      254,
+      4
+     ],
+     [
+      301,
+      123,
+      1
+     ],
+     [
+      123,
+      200,
+      1
+     ],
+     [
+      233,
+      181,
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "What do we know about Sunday? Not much that is certain. The squads, the toss and the weather will be settled on the morning, and we can't say which strip they'll use. What we do know is how Friday played: a slowish, hard surface, a little nip early, and little change later. India won the toss, bowled first, and New Zealand made three thirty-three.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "WHAT WE KNOW · AND DON'T",
+    "lines": [
+     "Friday: slow, hard,",
+     "[a little nip.]"
+    ]
+   },
+   "chapter": "Sunday"
+  },
+  {
+   "vo": "Our read: the new ball at Bay Oval is not the problem. The numbers say it's an ordinary new ball on a ground that scores. What India face is a bowler in form, Matt Henry, with six for twenty-seven, and their own habit of defending the ball outside off stump. Survive the first ten overs with one wicket or fewer, and history says a chase is won sixty-four per cent of the time. Lose three, and it's twenty-six.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Not the pitch.",
+     "[The plan.]"
+    ]
+   },
+   "chapter": "The verdict"
+  },
+  {
+   "vo": "Will India survive the first ten overs? Tell us in the comments, and follow for the Test series preview.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WILL INDIA SURVIVE?"
+     },
+     {
+      "t": "THE THIRD MAN",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "Surviving the New Ball at Bay Oval | NZ vs India 5th ODI Preview (Tactics)",
+   "description": "India lead New Zealand 2-1 with one ODI to play, at the same ground as the 4th ODI where India lost three wickets in the first over and were bowled out for 89. So how do you survive the new ball at Bay Oval? We look at the ground's history (13 men's ODIs), how the first ten overs have played, what happened on Friday ball by ball, and what India's batters can do about it.\n\nSources: Cricsheet ball-by-ball (ODC-BY); ESPNcricinfo and Cricbuzz match pages (captured with our own tool, cross-checked over by over). All numbers are computed by us; 'not in control' is the Cricinfo shot-control flag. Graphics are original illustrations, not broadcast footage; the field plan is illustrative.",
+   "tags": [
+    "India vs New Zealand",
+    "5th ODI",
+    "Bay Oval",
+    "Mount Maunganui",
+    "new ball",
+    "cricket analysis",
+    "cricket tactics",
+    "Matt Henry",
+    "India batting",
+    "The Third Man"
+   ]
+  }
+ }
+}
