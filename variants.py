@@ -54,7 +54,7 @@ def igshort(spec_path):
     for f in os.listdir(src):
         if f.startswith(base + "_IG") and f.endswith((".mp4", ".srt", ".jpg")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
     shutil.rmtree(src, ignore_errors=True)
-    print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path))
+    print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path)); print("cover:", write_cover(spec_path))
 
 
 # ---------------------------------------------------------------- Instagram captions
@@ -109,6 +109,15 @@ def caption_text(spec):
     tagl = [h for h in tagl if len(h) <= 24]
     lines = [hook + ("." if hook[-1] not in ".!?" else ""), ctx, "", body, "", q, "", cta, "", " ".join(tagl[:12])]
     return "\n".join(l for i, l in enumerate(lines) if l or (i and lines[i - 1])).strip() + "\n"
+
+
+def write_cover(spec_path):
+    """The Instagram cover (grid-safe, series-coded): <short name>_IG_cover.jpg, to pick when posting the Reel."""
+    sys.path.insert(0, ROOT); import covers, engine as E
+    spec = json.load(open(spec_path)); base = (spec.get("files") or {}).get("short")
+    if not base or "unused" in base.lower() or not spec.get("thumb"): return None
+    E.apply_theme("stadium"); a = covers.render(spec); d = f"{ROOT}/deliver/{spec['slug']}"; os.makedirs(d, exist_ok=True)
+    p = f"{d}/{base}_IG_cover.jpg"; skia_img = __import__("skia").Image.fromarray(a, colorType=__import__("skia").kRGBA_8888_ColorType); skia_img.save(p, __import__("skia").kJPEG, 92); return p
 
 
 def write_caption(spec_path):
@@ -193,4 +202,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "igcaption": lambda p: print(write_caption(p))}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])

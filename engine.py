@@ -1126,9 +1126,14 @@ def thumb(spec_path):
     for fmt, (OW, OH) in [("long", (1280, 720)), ("short", (1080, 1920))]:
         apply_theme(theme_for(spec, fmt)); g = setup(fmt)
         arr = np.zeros((OH, OW, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
+        long = fmt == "long"
+        if not long:                                         # vertical cover: one consistent system for every series (covers.py)
+            import covers
+            arr = covers.render(spec)
+            name = spec["files"][fmt]; path = f"{outdir}/{name}_cover.jpg"
+            skia.Image.fromarray(arr, colorType=skia.kRGBA_8888_ColorType).save(path, skia.kJPEG, 92); res.append(path); continue
         c.save(); c.scale(OW / g.W, OH / g.H)
         gfx.background(c, 3.0)
-        long = fmt == "long"
         # hero (big number / symbol) with a glow plate
         hero = th.get("hero"); hc = C(th.get("heroc", "gold"))
         if long:

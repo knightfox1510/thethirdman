@@ -45,6 +45,10 @@
   "fieldmap",
   "stumps",
   "flip",
+  "kinetic",
+  "fieldmap",
+  "stumps",
+  "flip",
   "kinetic"
  ],
  "assigned": {
@@ -93,6 +97,10 @@
   "myth_ep1_kohli_knockouts__igshort": "fieldmap",
   "myth_ep2_kohli_reinvention__igshort": "stumps",
   "myth_ep3_aaryavir__igshort": "flip",
-  "rcb_back_to_back__igshort": "kinetic"
+  "rcb_back_to_back__igshort": "kinetic",
+  "wellington_odi__igshort": "fieldmap",
+  "nz_test_preview__igshort": "stumps",
+  "india_160__igshort": "flip",
+  "two_hundred__igshort": "kinetic"
  }
 }
