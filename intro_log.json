@@ -31,7 +31,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -65,6 +66,7 @@
   "henry_6balls": "flip",
   "henry_cam_test": "kinetic",
   "myth_ep2_kohli_reinvention": "fieldmap",
-  "bay_oval_new_ball": "stumps"
+  "bay_oval_new_ball": "stumps",
+  "replay_u19_final": "flip"
  }
 }
