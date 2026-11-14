@@ -539,25 +539,31 @@ def sc_field(c, g, t, D, s):
     c.restore()
 
 
+_YT_LOGO = {}
+
+
+def _yt_logo(kind="red"):
+    if kind not in _YT_LOGO:
+        _YT_LOGO[kind] = skia.Image.open(os.path.join(ROOT, "brand", f"youtube_logo_{kind}.png"))
+    return _YT_LOGO[kind]
+
+
 def _cta_youtube(c, g, t, y, o):
-    """Simplified play-button badge (not the official logo) + 'YOUTUBE' wordmark text, a channel line, and an optional 'link in bio' tag.
-    o: {"label": "YOUTUBE", "sub": "THE THIRD MAN · CRICKET FROM A DIFFERENT ANGLE", "bio": "LINK IN BIO" | None}"""
+    """Vertical end card that points to YouTube. Uses the official YouTube logo from brand/ (supplied by the owner).
+    o: {"label": "THE THIRD MAN", "handle": "@thethirdman_angle", "bio": "LINK IN BIO" | None}"""
     p1 = eback(prog(t, 1.2, 1.8))
     if p1 > 0:
-        label = o.get("label", "YOUTUBE"); sz = 92; tw = twidth(label, sz, "bebas", 3)
-        w, h = tw + 190, 138; cy = y + 150
-        c.save(); c.translate(g.cx, cy); sc = clamp(p1, 0, 1.15) * (1 + .02 * math.sin(max(0, t - 2) * 5)); c.scale(sc, sc)
-        rrect(c, -w / 2, -h / 2, w, h, 36, (230, 30, 30), clamp(p1))
-        tri = skia.Path(); x0 = -w / 2 + 52
-        tri.moveTo(x0, -34); tri.lineTo(x0, 34); tri.lineTo(x0 + 58, 0); tri.close()          # play triangle
-        c.drawPath(tri, paint((255, 255, 255), clamp(p1)))
-        text(c, label, -w / 2 + 140 + tw / 2, 28, sz, "bebas", (255, 255, 255), clamp(p1), "c", track=3)
+        img = _yt_logo("red"); lw = 300; lh = lw * img.height() / img.width(); cy = y + 172
+        c.save(); c.translate(g.cx, cy); sc = clamp(p1, 0, 1.12) * (1 + .02 * math.sin(max(0, t - 2) * 5)); c.scale(sc, sc)
+        c.drawImageRect(img, skia.Rect.MakeXYWH(-lw / 2, -lh / 2, lw, lh), skia.SamplingOptions(skia.FilterMode.kLinear), skia.Paint(Alphaf=clamp(p1)))
         c.restore()
     p2 = eo(prog(t, 1.6, 2.2))
-    if o.get("sub"): text(c, o["sub"], g.cx, y + 290, 28, "interB", (225, 230, 240), p2, "c", track=4)
+    text(c, o.get("label", "THE THIRD MAN"), g.cx, y + 368, 96, "bebas", (255, 255, 255), p2, "c", track=3)
+    if o.get("handle"): text(c, o["handle"], g.cx, y + 430, 42, "interB", GOLD, p2, "c", track=2)
+    if o.get("sub"): text(c, o["sub"], g.cx, y + 482, 28, "interB", (225, 230, 240), p2, "c", track=4)
     p3 = eback(prog(t, 2.0, 2.6))
     if o.get("bio") and p3 > 0:
-        lab = o["bio"]; w = twidth(lab, 44, "bebas", 4) + 150; cy = y + 400
+        lab = o["bio"]; w = twidth(lab, 44, "bebas", 4) + 150; cy = y + 590
         c.save(); c.translate(g.cx, cy); s_ = clamp(p3, 0, 1.1); c.scale(s_, s_)
         rrect(c, -w / 2, -48, w, 96, 48, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=GOLD, sa=clamp(p3))
         ar = skia.Path(); ax = -w / 2 + 52                                                        # up arrow: the bio link sits above the post
@@ -572,7 +578,7 @@ def sc_cta(c, g, t, D, s):
     gfx.logo_lockup(c, g.cx, 250 if long else 560, 110 if long else 120, eo(prog(t, 0, .5)), "c")
     lines = s["lines"]; y = (430 if long else 780)
     if s.get("yt") and not long:
-        _panel_card(c, g.x0, 690, g.cw, 830 if s["yt"].get("bio") else 640, eo(prog(t, 0, .5)))        # keeps the text readable over the pitch
+        _panel_card(c, g.x0, 690, g.cw, 1040 if s["yt"].get("bio") else (900 if s["yt"].get("sub") else 800), eo(prog(t, 0, .5)))        # keeps the text readable over the pitch
     for i, ln in enumerate(lines):
         tt = ln["t"] if isinstance(ln, dict) else ln
         cc = C(ln.get("c")) if isinstance(ln, dict) else INK

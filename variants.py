@@ -2,6 +2,7 @@
 
     python3 variants.py deepcut  specs/<slug>.json   # vertical 90-150 s "deep cut" Reel from spec["ig"]
     python3 variants.py carousel specs/<slug>.json   # 4:5 carousel slides from spec["carousel"]
+    python3 variants.py igshort  specs/<slug>.json   # Instagram version of the Short: same video, end card says "full breakdown on YouTube, link in bio"
 
 spec["ig"]       = list of {"vo", "scene"} like "short" (usually long-form scenes, minus the intro, plus a YouTube CTA)
 spec["carousel"] = {"cover": {"kicker", "lines", "hero"}, "slides": [["long", i], ...], "cta": {"lines", "pill"}, "caption": "..."}
@@ -12,6 +13,38 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
+
+
+# Instagram viewers can't see a YouTube "subscribe" button: their end card points to YouTube and the bio link. (YouTube's own version
+# keeps the spec's end card, ideally the YT_CTA below.) Handle and logo: brand/ and the owner's channel id.
+YT_HANDLE = "@thethirdman_angle"
+IG_CTA = {"vo": "The full breakdown is on YouTube. The link is in our bio.",
+          "scene": {"type": "cta", "lines": [{"t": "FULL BREAKDOWN"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "bio": "LINK IN BIO"}}}
+YT_CTA = {"vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+          "scene": {"type": "cta", "lines": [{"t": "WANT THE FULL"}, {"t": "BREAKDOWN?", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "sub": "SUBSCRIBE · CRICKET FROM A DIFFERENT ANGLE", "bio": None}}}
+
+
+def igshort(spec_path):
+    """Build deliver/<slug>/<short file>_IG.mp4 (+ .srt, cover): the Short with its last (end-card) scene replaced by the Instagram end card.
+    Narration is cached per paragraph, so only the new last line is voiced: the cache of the main Short is copied across first."""
+    spec = json.load(open(spec_path)); slug = spec["slug"]
+    v = copy.deepcopy(spec); v["slug"] = f"{slug}__igshort"
+    cta = spec.get("ig_cta") or IG_CTA
+    sc = v["short"]; last_is_cta = sc and sc[-1]["scene"].get("type") == "cta"
+    v["short"] = (sc[:-1] if last_is_cta else sc) + [cta]
+    base = spec["files"]["short"]; v["files"] = {"short": base + "_IG", "long": "_unused"}
+    v.pop("long", None); v.pop("burn_captions", None)
+    src_vo, dst_vo = f"{ROOT}/out/{slug}/short/vo", f"{ROOT}/out/{slug}__igshort/short/vo"
+    if os.path.isdir(src_vo) and not os.path.isdir(dst_vo): shutil.copytree(src_vo, dst_vo)
+    os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
+    vp = f"{ROOT}/out/_variants/{slug}__igshort.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
+    subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "short"], check=True)
+    src, dst = f"{ROOT}/deliver/{slug}__igshort", f"{ROOT}/deliver/{slug}"
+    os.makedirs(dst, exist_ok=True)
+    for f in os.listdir(src):
+        if f.startswith(base + "_IG") and f.endswith((".mp4", ".srt", ".jpg")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
+    shutil.rmtree(src, ignore_errors=True)
+    print("IG version:", f"{dst}/{base}_IG.mp4")
 
 
 def deepcut(spec_path):
@@ -88,4 +121,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort}[sys.argv[1]](sys.argv[2])

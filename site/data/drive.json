@@ -973,6 +973,24 @@
    "folder": "https://drive.google.com/drive/folders/11SJ6ssT4jrLY9JRXWNrftssIsgGMKukR",
    "files": [
     {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1MAVAf5mmxX3heP2h4CJ9gJpe9r1sHrVI/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1_3V2byqAS5WZnfGjYDqI4QZsK5EBA-yV/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_IG.mp4",
+     "kind": "short",
+     "mb": 155.4,
+     "url": "https://drive.google.com/file/d/1RFdTVNML-QINIIlQ5oV0yO2p1WVCdkot/view?usp=drivesdk"
+    },
+    {
      "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_cover.jpg",
      "kind": "cover",
      "mb": 0.2,
