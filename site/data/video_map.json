@@ -58,5 +58,17 @@
   "kind": "long",
   "title": "bay_oval_new_ball",
   "format": "news"
+ },
+ "UEvmwDqCTsg": {
+  "slug": "replay_u19_final",
+  "kind": "long",
+  "title": "replay_u19_final",
+  "format": "news"
+ },
+ "52FPh7UbtHk": {
+  "slug": "replay_u19_final",
+  "kind": "short",
+  "title": "replay_u19_final",
+  "format": "news"
  }
 }
