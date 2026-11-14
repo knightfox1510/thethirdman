@@ -17,11 +17,12 @@ sys.path.insert(0, ROOT)
 
 # Instagram viewers can't see a YouTube "subscribe" button: their end card points to YouTube and the bio link. (YouTube's own version
 # keeps the spec's end card, ideally the YT_CTA below.) Handle and logo: brand/ and the owner's channel id.
-YT_HANDLE = "@thethirdman_angle"
+YT_HANDLE = "@thethirdman_angle"            # YouTube (underscore)
+IG_HANDLE = "@thethirdman.angle"            # Instagram (dot)
 IG_CTA = {"vo": "The full breakdown is on YouTube. The link is in our bio.",
-          "scene": {"type": "cta", "lines": [{"t": "FULL BREAKDOWN"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "bio": "LINK IN BIO"}}}
+          "scene": {"type": "cta", "lines": [{"t": "FULL BREAKDOWN"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE " + YT_HANDLE, "bio": "LINK IN BIO"}}}
 YT_CTA = {"vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
-          "scene": {"type": "cta", "lines": [{"t": "WANT THE FULL"}, {"t": "BREAKDOWN?", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "sub": "SUBSCRIBE · CRICKET FROM A DIFFERENT ANGLE", "bio": None}}}
+          "scene": {"type": "cta", "lines": [{"t": "WANT THE FULL"}, {"t": "BREAKDOWN?", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": YT_HANDLE, "sub": "SUBSCRIBE · INSTAGRAM " + IG_HANDLE, "bio": None}}}
 
 
 def igshort(spec_path):
@@ -31,6 +32,9 @@ def igshort(spec_path):
     v = copy.deepcopy(spec); v["slug"] = f"{slug}__igshort"
     cta = spec.get("ig_cta") or IG_CTA
     sc = v["short"]; last_is_cta = sc and sc[-1]["scene"].get("type") == "cta"
+    if not last_is_cta:                                   # a spoken "Follow for the full breakdown." closing line is replaced by the IG end card
+        import re
+        sc[-1]["vo"] = re.sub(r"\s*(Follow|Subscribe)[^.!?]*[.!?]\s*$", "", sc[-1]["vo"]).strip()
     v["short"] = (sc[:-1] if last_is_cta else sc) + [cta]
     base = spec["files"]["short"]; v["files"] = {"short": base + "_IG", "long": "_unused"}
     v.pop("long", None); v.pop("burn_captions", None)

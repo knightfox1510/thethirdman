@@ -1,5 +1,5 @@
 """Sync finished videos to Google Drive, archiving the previous version.
-    python3 publish/drive.py <slug> [<slug> ...]      # or: all   (upload)
+    python3 publish/drive.py [--keep] <slug> [<slug> ...]      # or: all   (upload; --keep = never archive files missing locally)
     python3 publish/drive.py pull <slug> [<slug> ...] # download a slug's files into deliver/<slug>/
 Layout in Drive:
     The Third Man/Videos/<slug>/            current files (long, Short, .srt, thumbnail, cover), not yet posted
@@ -47,7 +47,7 @@ def md5(path):
     return h.hexdigest()
 
 
-def sync_dir(src, cur, arch_parent, stamp, label=""):
+def sync_dir(src, cur, arch_parent, stamp, label="", keep=False):
     """Mirror one local folder into Drive folder `cur`; replaced/removed files go to arch_parent/<stamp>/."""
     existing = {f["name"]: f for f in children(cur)}
     arch = None
@@ -63,7 +63,7 @@ def sync_dir(src, cur, arch_parent, stamp, label=""):
         old = existing.pop(name, None)
         if os.path.isdir(path):   # e.g. carousel/
             sub = old["id"] if old and old.get("mimeType") == FOLDER else folder(name, cur)
-            sync_dir(path, sub, folder(name, arch_parent), stamp, label + name + "/")
+            sync_dir(path, sub, folder(name, arch_parent), stamp, label + name + "/", keep)
             continue
         if old and old.get("md5Checksum") == md5(path):
             print(f"  = {label}{name} (unchanged)"); continue
@@ -73,7 +73,7 @@ def sync_dir(src, cur, arch_parent, stamp, label=""):
                   {"name": name, "parents": [cur]}, path, mime, params={"fields": "id"})
         print(f"  ↑ {label}{name} ({os.path.getsize(path) / 1e6:.1f} MB)")
     for name, f in existing.items():
-        if f.get("mimeType") != FOLDER: archive(f, "removed")
+        if f.get("mimeType") != FOLDER and not keep: archive(f, "removed")
 
 
 def find_child(name, parent):
@@ -88,11 +88,11 @@ def video_folder(slug, root_id):
     return (pub and find_child(slug, pub)) or folder(slug, folder("Videos", root_id))
 
 
-def sync(slug, root_id, stamp):
+def sync(slug, root_id, stamp, keep=False):
     src = os.path.join(DELIVER, slug)
     if not os.path.isdir(src): print(f"  skip {slug}: nothing in deliver/"); return
     arch_root = folder("Archive", root_id)
-    sync_dir(src, video_folder(slug, root_id), folder(slug, arch_root), stamp)
+    sync_dir(src, video_folder(slug, root_id), folder(slug, arch_root), stamp, keep=keep)
 
 
 def mark_published(slug):
@@ -127,10 +127,11 @@ if __name__ == "__main__":
         rid = folder("The Third Man")
         for s in sys.argv[2:]: print(f"== pull {s}"); pull(s, rid)
         sys.exit(0)
-    slugs = sys.argv[1:] or ["all"]
+    keep = "--keep" in sys.argv                      # add/replace only: leave Drive files that are not in deliver/<slug> untouched
+    slugs = [a for a in sys.argv[1:] if a != "--keep"] or ["all"]
     if slugs == ["all"]: slugs = sorted(d for d in os.listdir(DELIVER) if os.path.isdir(os.path.join(DELIVER, d)))
     root_id = folder("The Third Man")
     stamp = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H%M")
     for s in slugs:
-        print(f"== {s}"); sync(s, root_id, stamp)
+        print(f"== {s}"); sync(s, root_id, stamp, keep)
     print(f"Drive folder: https://drive.google.com/drive/folders/{root_id}")

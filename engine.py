@@ -559,16 +559,16 @@ def _cta_youtube(c, g, t, y, o):
         c.restore()
     p2 = eo(prog(t, 1.6, 2.2))
     text(c, o.get("label", "THE THIRD MAN"), g.cx, y + 368, 96, "bebas", (255, 255, 255), p2, "c", track=3)
-    if o.get("handle"): text(c, o["handle"], g.cx, y + 430, 42, "interB", GOLD, p2, "c", track=2)
+    if o.get("handle"): text(c, o["handle"], g.cx, y + 430, 42, "interB", (255, 200, 40), p2, "c", track=2)
     if o.get("sub"): text(c, o["sub"], g.cx, y + 482, 28, "interB", (225, 230, 240), p2, "c", track=4)
     p3 = eback(prog(t, 2.0, 2.6))
     if o.get("bio") and p3 > 0:
         lab = o["bio"]; w = twidth(lab, 44, "bebas", 4) + 150; cy = y + 590
         c.save(); c.translate(g.cx, cy); s_ = clamp(p3, 0, 1.1); c.scale(s_, s_)
-        rrect(c, -w / 2, -48, w, 96, 48, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=GOLD, sa=clamp(p3))
+        rrect(c, -w / 2, -48, w, 96, 48, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=(255, 200, 40), sa=clamp(p3))
         ar = skia.Path(); ax = -w / 2 + 52                                                        # up arrow: the bio link sits above the post
         ar.moveTo(ax, -26); ar.lineTo(ax - 20, 0); ar.lineTo(ax - 7, 0); ar.lineTo(ax - 7, 24); ar.lineTo(ax + 7, 24); ar.lineTo(ax + 7, 0); ar.lineTo(ax + 20, 0); ar.close()
-        c.drawPath(ar, paint(GOLD, clamp(p3)))
+        c.drawPath(ar, paint((255, 200, 40), clamp(p3)))
         text(c, lab, 38, 15, 44, "bebas", (255, 255, 255), clamp(p3), "c", track=4)
         c.restore()
 
@@ -582,10 +582,11 @@ def sc_cta(c, g, t, D, s):
     for i, ln in enumerate(lines):
         tt = ln["t"] if isinstance(ln, dict) else ln
         cc = C(ln.get("c")) if isinstance(ln, dict) else INK
+        if s.get("yt") and not long: cc = (255, 200, 40) if (isinstance(ln, dict) and ln.get("c") == "gold") else (255, 255, 255)     # the YouTube end card sits on a dark panel on every theme
         sz = fit(tt, g.cw, 150, "bebas", 2)
         p = eo(prog(t, .1 + i * .15, .6 + i * .15))
         y += sz * .9
-        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", cc, p, "c", track=2, glow=12 if cc == GOLD else 0)
+        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", cc, p, "c", track=2, glow=12 if (cc == GOLD or cc == (255, 200, 40)) else 0)
     if s.get("yt") and not long:                      # vertical end card: send viewers (Instagram especially) to YouTube
         _cta_youtube(c, g, t, y, s["yt"]); return
     pill = s.get("pill") or ("SUBSCRIBE" if long else "FULL BREAKDOWN ON THE CHANNEL")
