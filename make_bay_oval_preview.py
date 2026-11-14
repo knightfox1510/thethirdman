@@ -29,6 +29,14 @@ assert (SB["w1n"], round(SB["w1"]), round(SA["w1"])) == (2, 8, 13) and (round(SB
 # NOTE: Cricsheet coverage is partial (e.g. 119 men's ODIs for 2003, none before 2002), so it cannot show how rare three first-over wickets are;
 # the hook cites Vaas (4 in his first over, 2003 World Cup) and Pollock (3, Lahore, 1990s) from ESPNcricinfo/Sportskeeda instead.
 
+# reconciliation: the 13 men's ODIs before Friday match ESPNcricinfo's Bay Oval results list (dates, winners and margins), checked 14 Nov 2026
+REF = {"2025-10-26": ("New Zealand", "4 wickets"), "2025-04-05": ("New Zealand", "43 runs"), "2022-03-29": ("New Zealand", "7 wickets"), "2020-02-11": ("New Zealand", "5 wickets"),
+       "2019-01-28": ("India", "7 wickets"), "2019-01-26": ("India", "90 runs"), "2019-01-05": ("New Zealand", "21 runs"), "2019-01-03": ("New Zealand", "45 runs"),
+       "2018-02-28": ("England", "6 wickets"), "2016-01-05": ("New Zealand", "36 runs"), "2014-10-24": ("South Africa", "72 runs"), "2014-10-21": ("South Africa", "6 wickets"),
+       "2014-01-28": ("Netherlands", "8 wickets")}
+got = {m["info"]["dates"][0]: (m["info"]["outcome"].get("winner"), " ".join(f"{v} {k}" for k, v in m["info"]["outcome"].get("by", {}).items())) for m in bay}
+assert got == REF, "Bay Oval matches differ from the Cricinfo list"
+
 # Bay Oval totals, results (13 men's matches to Oct 2025) + the 4th ODI
 tot1 = []; bat_first_wins = 0; toss_field = 0
 for m in sorted(bay, key=lambda m: m["info"]["dates"][0]):
@@ -171,6 +179,7 @@ SRC = ["Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_j
        "Bay Oval = the 13 men's ODIs at Bay Oval, Mount Maunganui; 'new ball' = overs 1-10; wickets include run outs, exclude retired hurt; chases exclude D/L results. Figures: analysis/bay_oval_new_ball.py and make_bay_oval_preview.py.",
        "ESPNcricinfo match capture, NZ v IND 4th ODI, Bay Oval, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot and control, captured with our own tool; first-ten-over figures computed from it.",
        "Cricbuzz match capture (match 161271): over-by-over cross-check; match notes (toss, conditions, dropped catches) used as leads. Result in both: New Zealand won by 244 runs; Player of the Match Matt Henry.",
+       "Bay Oval's 13 earlier men's ODIs were reconciled against ESPNcricinfo's ground results list (all dates, winners and margins match); the 14th is the 4th ODI capture.",
        "Series position (India 2-1; third ODI rained off) and the 5th ODI date (15 Nov) from ESPN's fixture list and the channel's schedule; squads, toss, weather and pitch for the 5th ODI were not yet confirmed when this was made.",
        "First-over records: Chaminda Vaas, 4 wickets in his first over (Bangladesh v Sri Lanka, 2003 World Cup) and Shaun Pollock, 3 in his first over (South Africa v Pakistan, Lahore, 1990s): ESPNcricinfo records and Sportskeeda; Henry's figures (3 wickets, 0 runs, first over) from our captures.",
        "All graphics are original; the field plan is illustrative, not the actual field."]
