@@ -1517,7 +1517,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "TEST 1 · CONVERTING FIFTIES · AARYAVIR vs VIRENDER",
+     "kicker": "FIFTIES · AARYAVIR VS VIRENDER",
      "rows": [
       [
        "Scores of 50 or more",
@@ -1566,7 +1566,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "TEST 2 · BOUNDARIES · AARYAVIR vs VIRENDER",
+     "kicker": "BOUNDARIES · AARYAVIR VS VIRENDER",
      "rows": [
       [
        "Runs in fours and sixes",
@@ -1665,7 +1665,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "TEST 4 · PACE · AARYAVIR vs VIRENDER",
+     "kicker": "PACE · AARYAVIR VS VIRENDER",
      "rows": [
       [
        "Strike rate",
@@ -1704,7 +1704,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "PAKISTAN, TWICE · GROUP vs FINAL",
+     "kicker": "PAKISTAN · GROUP VS FINAL",
      "rows": [
       [
        "Runs",
