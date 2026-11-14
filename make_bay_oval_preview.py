@@ -26,10 +26,8 @@ SB, SA = stats(bay), stats(ms)
 assert (SB["n"], SA["n"]) == (26, 5165)
 assert (round(SB["wk"], 2), round(SA["wk"], 2)) == (1.42, 1.43) and (round(SB["rr"], 2), round(SA["rr"], 2)) == (4.88, 4.74)
 assert (SB["w1n"], round(SB["w1"]), round(SA["w1"])) == (2, 8, 13) and (round(SB["three"]), round(SA["three"])) == (12, 16)
-# three wickets in the first over: never, in all 5,165 innings
-c3 = sum(1 for m in ms for inn in m["innings"] if not inn.get("super_over") for o in inn["overs"] if o["over"] == 0
-         and sum(1 for d in o["deliveries"] for w in d.get("wickets", []) if w["kind"] != "retired hurt") >= 3)
-assert c3 == 0
+# NOTE: Cricsheet coverage is partial (e.g. 119 men's ODIs for 2003, none before 2002), so it cannot show how rare three first-over wickets are;
+# the hook cites Vaas (4 in his first over, 2003 World Cup) and Pollock (3, Lahore, 1990s) from ESPNcricinfo/Sportskeeda instead.
 
 # Bay Oval totals, results (13 men's matches to Oct 2025) + the 4th ODI
 tot1 = []; bat_first_wins = 0; toss_field = 0
@@ -96,6 +94,7 @@ assert max(v[0] for k, v in byb.items() if v[2] >= 20) == 40
 w = nb[(nb.inning == 2) & nb.wicket]
 assert list(w.batter) == ["Rohit Sharma", "Virat Kohli", "Shreyas Iyer", "Ruturaj Gaikwad"] and list(w["shot"]) == ["DEFENDED", "DEFENDED", "PUSH", "DEFENDED"]
 assert list(w.pitch_line).count("OUTSIDE_OFFSTUMP") == 3 and sum(l in ("SHORT", "SHORT_OF_A_GOOD_LENGTH") for l in w.pitch_length) == 3
+first6 = n2.iloc[:6]; assert set(first6.bowler) == {"Matt Henry"} and int(first6.runs.sum()) == 0 and int(first6.wicket.sum()) == 3
 hn = n2[n2.bowler == "Matt Henry"]; assert (int(hn.wicket.sum()), int(hn.runs.sum()), len(hn)) == (6, 27, 60)
 sh = A[A.bat_runs > 0].groupby("shot").bat_runs.sum().sort_values(ascending=False); assert int(A.bat_runs.sum()) == 67 and int(sh.sum()) == 67
 YOUNG_NB = [[int(r.wagon_x), int(r.wagon_y), int(r.bat_runs)] for r in A.itertuples() if r.bat_runs > 0]
@@ -117,15 +116,15 @@ code = {"New Zealand": "NZ", "South Africa": "SA", "Sri Lanka": "SL", "England":
 rows_tot = [{"label": f"{months[d[5:7]]} {d[:4]} · {code[t]} v {code[o]}", "v": r, "text": str(r), **({"hl": True, "word": "three"} if r in (371, 333) else {})} for d, t, o, r in tot1]
 
 long = [
- S("Three wickets in the first over. In our ball-by-ball archive of more than five thousand men's one-day innings, it had never happened. Then, on Friday, at the Bay Oval, it happened to India. And on Sunday, they're back.",
-   {"type": "lab_big_text", "kicker": "FIRST OVER · BAY OVAL", "lines": ["0 in 5,165.", "Then [Friday.]"]}),
+ S("Three wickets in the first over of a one-day international. Chaminda Vaas took four, in two thousand and three. Shaun Pollock took three, in Lahore, in the nineties. On Friday, at the Bay Oval, Matt Henry took three, without conceding a run. His victims were रोहित शर्मा, विराट कोहली and श्रेयस अय्यर. And on Sunday, they're back.",
+   {"type": "lab_big_text", "kicker": "FIRST OVER · BAY OVAL · FRIDAY", "lines": ["Three wickets.", "[No runs.]"]}),
  S("This is the preview of the fifth and final one-day international, on Sunday, at the same ground. India lead the series, two-one. The third match was rained off, and New Zealand won the fourth by two hundred and forty-four runs. So the question for India is simple: how do you survive the new ball at Bay Oval?",
    {"type": "lab_title", "kicker": "THE PREVIEW · NZ V IND · 5TH ODI", "lines": ["Surviving the", "[new ball.]"], "teaser": "Bay Oval · Mount Maunganui · Sunday"}, chapter="The setup"),
  S("Two-one to India, with the third match washed out. If New Zealand win on Sunday, it's two-all. India cannot lose the series. But another collapse would carry real momentum into the Test series, which starts on the nineteenth.",
    {"type": "lab_vs", "kicker": "THE SERIES · 5-MATCH ODI", "title": "India lead, two-one.", "items": [
        {"label": "India", "v": 2, "text": "2", "c": "IND", "t": "IND", "kit": "IND", "word": "two-one"}, {"label": "New Zealand", "v": 1, "text": "1", "c": "NZ", "t": "NZ", "kit": "NZ"}], "max": 3}),
- S("Start with the ground. Is Bay Oval a new-ball graveyard? The history says no. In thirteen men's one-day internationals here, up to October twenty twenty-five, the first ten overs produced one point four wickets an innings. Across all one-day cricket, it's one point four as well. A wicket falls in the first over in about eight per cent of innings here, against thirteen per cent everywhere. And the run rate is higher: four point nine, against four point seven.",
-   {"type": "lab_compare", "kicker": "THE FIRST TEN OVERS · MEN'S ODIs", "title": "An ordinary new ball.", "a": {"t": "BAY", "kit": "NZ", "name": "BAY OVAL"}, "b": {"t": "ALL", "kit": "ink", "name": "ALL ODIs"}, "rows": [
+ S("Start with the ground. Is Bay Oval a new-ball graveyard? The history says no. In thirteen men's one-day internationals here, up to October twenty twenty-five, the first ten overs produced one point four wickets an innings. Across every match in our archive, it's one point four as well. A wicket falls in the first over in about eight per cent of innings here, against thirteen per cent everywhere. And the run rate is higher: four point nine, against four point seven.",
+   {"type": "lab_compare", "kicker": "THE FIRST TEN OVERS · MEN'S ODIs", "title": "An ordinary new ball.", "a": {"t": "BAY", "kit": "NZ", "name": "BAY OVAL"}, "b": {"t": "ALL", "kit": "ink", "name": "ARCHIVE"}, "rows": [
        ["Wickets per innings", "1.42", "1.43", "level"], ["Runs per over", "4.88", "4.74", "a"], ["Wicket in over one", "8%", "13%", "a"], ["Lose 3+ in ten overs", "12%", "16%", "a"]]}, chapter="The ground"),
  S("The totals back that up. The average first-innings score is two sixty-eight up to October, and two seventy-two with Friday's three thirty-three. The highest total here is three seventy-one, by New Zealand against Sri Lanka in twenty nineteen. The highest successful chase is three hundred, by New Zealand against India in twenty twenty. Teams batting first have won seven of fourteen. It is an even contest, tilted towards runs.",
    {"type": "lab_dots", "kicker": "FIRST-INNINGS TOTALS AT BAY OVAL · MEN'S ODIs", "title": "A batting ground.", "domain": [150, 400], "ticks": [200, 300, 400], "tick_labels": False, "rows": rows_tot}),
@@ -134,7 +133,7 @@ long = [
  S("India's new-ball batting is a little more fragile in New Zealand. Across twenty-eight innings, they lose one point four three wickets in the first ten overs, against one point two five everywhere else, and score three runs fewer.",
    {"type": "lab_compare", "kicker": "INDIA BATTING · FIRST TEN OVERS", "title": "A little more fragile.", "a": NZ("IN NEW ZEALAND"), "b": {"t": "ALL", "kit": "ink", "name": "ELSEWHERE"}, "rows": [
        ["Wickets lost", "1.43", "1.25", "b"], ["Runs scored", "47.8", "51.0", "b"], ["Lose 3+ wickets", "14%", "12%", "b"]]}),
- S("Why does it matter? Because chases are decided early. In more than two thousand completed one-day chases, teams that lost one wicket or fewer in the first ten overs won sixty-four per cent. Lose three or more, and it drops to twenty-six. Lose four, and it's thirteen. On Friday, India were twenty-six for four.",
+ S("Why does it matter? Because chases are decided early. In our archive of more than two thousand completed one-day chases, teams that lost one wicket or fewer in the first ten overs won sixty-four per cent. Lose three or more, and it drops to twenty-six. Lose four, and it's thirteen. On Friday, India were twenty-six for four.",
    {"type": "lab_vs", "kicker": "CHASES WON · BY WICKETS LOST IN THE FIRST TEN OVERS", "title": "Early wickets decide chases.", "items": [
        {"label": "One wicket or fewer", "v": 64, "text": "64%", "c": "NZ", "t": "NZ", "kit": "NZ"}, {"label": "Three or more", "v": 26, "text": "26%", "c": "IND", "t": "IND", "kit": "IND"},
        {"label": "Four or more", "v": 13, "text": "13%", "c": "IND", "t": "IND", "kit": "IND", "word": "thirteen"}], "max": 100}),
@@ -168,11 +167,12 @@ long = [
    {"type": "cta", "lines": [{"t": "WILL INDIA SURVIVE?"}, {"t": "THE THIRD MAN", "c": "gold"}], "pill": "SUBSCRIBE FOR MORE"}),
 ]
 
-SRC = ["Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_json.zip, ODC-BY), 50-over matches 2002 to 25 Oct 2025 (2,617 matches, 5,165 innings; super overs excluded). "
+SRC = ["Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_json.zip, ODC-BY), 50-over matches 2002 to 25 Oct 2025 (2,617 matches, 5,165 innings; super overs excluded). Coverage is partial (no matches before 2002, thin in the early 2000s), so 'archive' figures are samples, not complete records. "
        "Bay Oval = the 13 men's ODIs at Bay Oval, Mount Maunganui; 'new ball' = overs 1-10; wickets include run outs, exclude retired hurt; chases exclude D/L results. Figures: analysis/bay_oval_new_ball.py and make_bay_oval_preview.py.",
        "ESPNcricinfo match capture, NZ v IND 4th ODI, Bay Oval, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot and control, captured with our own tool; first-ten-over figures computed from it.",
        "Cricbuzz match capture (match 161271): over-by-over cross-check; match notes (toss, conditions, dropped catches) used as leads. Result in both: New Zealand won by 244 runs; Player of the Match Matt Henry.",
        "Series position (India 2-1; third ODI rained off) and the 5th ODI date (15 Nov) from ESPN's fixture list and the channel's schedule; squads, toss, weather and pitch for the 5th ODI were not yet confirmed when this was made.",
+       "First-over records: Chaminda Vaas, 4 wickets in his first over (Bangladesh v Sri Lanka, 2003 World Cup) and Shaun Pollock, 3 in his first over (South Africa v Pakistan, Lahore, 1990s): ESPNcricinfo records and Sportskeeda; Henry's figures (3 wickets, 0 runs, first over) from our captures.",
        "All graphics are original; the field plan is illustrative, not the actual field."]
 DESC = ("India lead New Zealand 2-1 with one ODI to play, at the same ground as the 4th ODI where India lost three wickets in the first over and were bowled out for 89. "
         "So how do you survive the new ball at Bay Oval? We look at the ground's history (13 men's ODIs), how the first ten overs have played, what happened on Friday ball by ball, and what India's batters can do about it.\n\n"

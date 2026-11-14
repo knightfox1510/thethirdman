@@ -26,21 +26,22 @@
   "herosize": 420
  },
  "sources": [
-  "Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_json.zip, ODC-BY), 50-over matches 2002 to 25 Oct 2025 (2,617 matches, 5,165 innings; super overs excluded). Bay Oval = the 13 men's ODIs at Bay Oval, Mount Maunganui; 'new ball' = overs 1-10; wickets include run outs, exclude retired hurt; chases exclude D/L results. Figures: analysis/bay_oval_new_ball.py and make_bay_oval_preview.py.",
+  "Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_json.zip, ODC-BY), 50-over matches 2002 to 25 Oct 2025 (2,617 matches, 5,165 innings; super overs excluded). Coverage is partial (no matches before 2002, thin in the early 2000s), so 'archive' figures are samples, not complete records. Bay Oval = the 13 men's ODIs at Bay Oval, Mount Maunganui; 'new ball' = overs 1-10; wickets include run outs, exclude retired hurt; chases exclude D/L results. Figures: analysis/bay_oval_new_ball.py and make_bay_oval_preview.py.",
   "ESPNcricinfo match capture, NZ v IND 4th ODI, Bay Oval, Mount Maunganui (match 1539440): ball-by-ball with line, length, shot and control, captured with our own tool; first-ten-over figures computed from it.",
   "Cricbuzz match capture (match 161271): over-by-over cross-check; match notes (toss, conditions, dropped catches) used as leads. Result in both: New Zealand won by 244 runs; Player of the Match Matt Henry.",
   "Series position (India 2-1; third ODI rained off) and the 5th ODI date (15 Nov) from ESPN's fixture list and the channel's schedule; squads, toss, weather and pitch for the 5th ODI were not yet confirmed when this was made.",
+  "First-over records: Chaminda Vaas, 4 wickets in his first over (Bangladesh v Sri Lanka, 2003 World Cup) and Shaun Pollock, 3 in his first over (South Africa v Pakistan, Lahore, 1990s): ESPNcricinfo records and Sportskeeda; Henry's figures (3 wickets, 0 runs, first over) from our captures.",
   "All graphics are original; the field plan is illustrative, not the actual field."
  ],
  "long": [
   {
-   "vo": "Three wickets in the first over. In our ball-by-ball archive of more than five thousand men's one-day innings, it had never happened. Then, on Friday, at the Bay Oval, it happened to India. And on Sunday, they're back.",
+   "vo": "Three wickets in the first over of a one-day international. Chaminda Vaas took four, in two thousand and three. Shaun Pollock took three, in Lahore, in the nineties. On Friday, at the Bay Oval, Matt Henry took three, without conceding a run. His victims were रोहित शर्मा, विराट कोहली and श्रेयस अय्यर. And on Sunday, they're back.",
    "scene": {
     "type": "lab_big_text",
-    "kicker": "FIRST OVER · BAY OVAL",
+    "kicker": "FIRST OVER · BAY OVAL · FRIDAY",
     "lines": [
-     "0 in 5,165.",
-     "Then [Friday.]"
+     "Three wickets.",
+     "[No runs.]"
     ]
    }
   },
@@ -86,7 +87,7 @@
    }
   },
   {
-   "vo": "Start with the ground. Is Bay Oval a new-ball graveyard? The history says no. In thirteen men's one-day internationals here, up to October twenty twenty-five, the first ten overs produced one point four wickets an innings. Across all one-day cricket, it's one point four as well. A wicket falls in the first over in about eight per cent of innings here, against thirteen per cent everywhere. And the run rate is higher: four point nine, against four point seven.",
+   "vo": "Start with the ground. Is Bay Oval a new-ball graveyard? The history says no. In thirteen men's one-day internationals here, up to October twenty twenty-five, the first ten overs produced one point four wickets an innings. Across every match in our archive, it's one point four as well. A wicket falls in the first over in about eight per cent of innings here, against thirteen per cent everywhere. And the run rate is higher: four point nine, against four point seven.",
    "scene": {
     "type": "lab_compare",
     "kicker": "THE FIRST TEN OVERS · MEN'S ODIs",
@@ -99,7 +100,7 @@
     "b": {
      "t": "ALL",
      "kit": "ink",
-     "name": "ALL ODIs"
+     "name": "ARCHIVE"
     },
     "rows": [
      [
@@ -281,7 +282,7 @@
    }
   },
   {
-   "vo": "Why does it matter? Because chases are decided early. In more than two thousand completed one-day chases, teams that lost one wicket or fewer in the first ten overs won sixty-four per cent. Lose three or more, and it drops to twenty-six. Lose four, and it's thirteen. On Friday, India were twenty-six for four.",
+   "vo": "Why does it matter? Because chases are decided early. In our archive of more than two thousand completed one-day chases, teams that lost one wicket or fewer in the first ten overs won sixty-four per cent. Lose three or more, and it drops to twenty-six. Lose four, and it's thirteen. On Friday, India were twenty-six for four.",
    "scene": {
     "type": "lab_vs",
     "kicker": "CHASES WON · BY WICKETS LOST IN THE FIRST TEN OVERS",
