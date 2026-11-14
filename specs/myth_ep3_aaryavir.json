@@ -481,7 +481,8 @@
       "v": "90.25",
       "l": "Average",
       "c": "gold"
-     }
+     },
+     "sep": "&"
     },
     "avatars": [
      {
@@ -826,7 +827,8 @@
       "l": "Average",
       "c": "gold"
      },
-     "at": 0.05
+     "at": 0.05,
+     "sep": "&"
     },
     "avatars": [
      {

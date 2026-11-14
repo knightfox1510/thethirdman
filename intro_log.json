@@ -51,7 +51,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -105,6 +106,7 @@
   "india_160__igshort": "flip",
   "two_hundred__igshort": "kinetic",
   "myth_ep3_aaryavir__iglong": "fieldmap",
-  "myth_ep3_aaryavir__igreel": "stumps"
+  "myth_ep3_aaryavir__igreel": "stumps",
+  "myth_ep3_aaryavir__igfull": "flip"
  }
 }

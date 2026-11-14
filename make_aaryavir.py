@@ -123,7 +123,7 @@ VEN = {"time": "day", "crowd": [[25, 100, 200], [240, 240, 240], [250, 150, 30],
 IN = lambda pose, **k: dict(kit="IND", pose=pose, **k)
 short = [
  stage("Three hundred and sixty-one runs. An average of ninety. Player of the Tournament at the Under nineteen Asia Cup. Aaryavir Sehwag.",
-       {"kind": "versus", "at": 0.0, "kicker": "AARYAVIR SEHWAG · U19 ASIA CUP", "left": {"v": "361", "l": "Runs in 5 innings", "c": "gold"}, "right": {"v": "90.25", "l": "Average", "c": "gold"}},
+       {"kind": "versus", "sep": "&", "at": 0.0, "kicker": "AARYAVIR SEHWAG · U19 ASIA CUP", "left": {"v": "361", "l": "Runs in 5 innings", "c": "gold"}, "right": {"v": "90.25", "l": "Average", "c": "gold"}},
        [IN("raise", x=.5)], cam="push", fx=["vignette", "spot", "confetti"], fx_at=.3),
  stage("He is nineteen. And his father is Virender Sehwag: thirty-eight international hundreds, and two Test triple centuries.",
        {"kind": "bignum", "kicker": "VIRENDER SEHWAG", "label": "INTERNATIONAL HUNDREDS", "value": 38, "count_dur": .7, "color": "gold"},

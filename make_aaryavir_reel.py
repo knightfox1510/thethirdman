@@ -8,7 +8,7 @@ V = lambda l, r, kick: {"kind": "versus", "kicker": kick, "left": l, "right": r}
 G = lambda v, l, c="gold": {"v": v, "l": l, "c": c}
 reel = [
  stage("Three hundred and sixty-one runs in five innings. Player of the Tournament at the Under nineteen Asia Cup. आर्यवीर सहवाग is nineteen, the son of वीरेंद्र सहवाग. Is it like father, like son? We tested it.",
-       V(G("361", "Runs in 5 innings"), G("90.25", "Average"), "AARYAVIR SEHWAG · U19 ASIA CUP"), [IND("raise")], cam="push", fx=["vignette", "spot", "confetti"], fx_at=.3),
+       dict(V(G("361", "Runs in 5 innings"), G("90.25", "Average"), "AARYAVIR SEHWAG · U19 ASIA CUP"), sep="&"), [IND("raise")], cam="push", fx=["vignette", "spot", "confetti"], fx_at=.3),
  stage("Five innings: seventy not out against Nepal. Twenty-two against Pakistan. A hundred and sixty against the UAE. Fifty-one in the semi-final, and fifty-eight in the final.",
        {"kind": "table", "kicker": "EVERY INNINGS · U19 ASIA CUP 2026", "rows": [["Nepal", "70*"], ["Pakistan", "22"], ["UAE", "160", "gold"], ["Afghanistan", "51"], ["Pakistan (final)", "58"]]},
        [IND("stance", .34, hit="drive", ghost=True)], view="side", cam="drift", stumps=[.2, .93], ball={"at": .5, "shot": "four"}, fx=["vignette", "flash", "speed"]),

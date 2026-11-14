@@ -1935,7 +1935,7 @@ def stage_panel(c, g, t, D, s, a=1.0):
             text(c, vs, cx, y + 190, fit(vs, cw * .42, 170, "bebas"), "bebas", cc, q, "c", glow=12 if side.get("c") == "gold" else 0)
             for j, l in enumerate(wrap(side["l"].upper(), cw * .4, 26, "interB")):
                 text(c, l, cx, y + 245 + j * 32, 26, "interB", MUTED, q, "c", track=3)
-        text(c, "VS", g.cx, y + 175, 44, "bebas", MUTED, pa, "c")
+        text(c, p.get("sep", "VS"), g.cx, y + 175, 44, "bebas", MUTED, pa, "c")
     elif kind == "score":          # a match card: event, then the innings
         _panel_card(c, x0, y, cw, 300, pa)
         text(c, p["event"].upper(), g.cx, y + 58, fit(p["event"].upper(), cw - 60, 30, "interB", 4), "interB", MUTED, pa, "c", track=4)
