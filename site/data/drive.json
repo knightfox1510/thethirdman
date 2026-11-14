@@ -2,36 +2,6 @@
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
  "synced": "2026-11-14",
  "videos": {
-  "bay_oval_new_ball": {
-   "state": "not posted",
-   "folder": "https://drive.google.com/drive/folders/1wPsQh0FTBx7qDaP7vP-Lw8rjtg-Vbozs",
-   "files": [
-    {
-     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.srt",
-     "kind": "subtitles",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1WyrPmrIJGN76H-1WFytLY_Lqe1uNzbhC/view?usp=drivesdk"
-    },
-    {
-     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.mp4",
-     "kind": "long",
-     "mb": 18.1,
-     "url": "https://drive.google.com/file/d/1U38Ie86yF7z9dikMKO58Eruyplt5S7ac/view?usp=drivesdk"
-    },
-    {
-     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.chapters.txt",
-     "kind": "text",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1A08Q3Pa8klthfaIon5HwofrtWdyb4cvb/view?usp=drivesdk"
-    },
-    {
-     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview_thumbnail.jpg",
-     "kind": "thumbnail",
-     "mb": 0.1,
-     "url": "https://drive.google.com/file/d/1SBGno_vTEjvOtgWA_eqY2kwcxSYbofl4/view?usp=drivesdk"
-    }
-   ]
-  },
   "henry_6balls": {
    "state": "not posted",
    "folder": "https://drive.google.com/drive/folders/1BAbKU1Z__AYKTrZvoZ5Z9TT13iVwibtQ",
@@ -995,6 +965,36 @@
      "kind": "thumbnail",
      "mb": 0.1,
      "url": "https://drive.google.com/file/d/1DArwaC5yI9i_NTnBDUBc8EowlXP2fXtX/view?usp=drivesdk"
+    }
+   ]
+  },
+  "bay_oval_new_ball": {
+   "state": "posted",
+   "folder": "https://drive.google.com/drive/folders/1wPsQh0FTBx7qDaP7vP-Lw8rjtg-Vbozs",
+   "files": [
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1WyrPmrIJGN76H-1WFytLY_Lqe1uNzbhC/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.mp4",
+     "kind": "long",
+     "mb": 18.1,
+     "url": "https://drive.google.com/file/d/1U38Ie86yF7z9dikMKO58Eruyplt5S7ac/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview.chapters.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1A08Q3Pa8klthfaIon5HwofrtWdyb4cvb/view?usp=drivesdk"
+    },
+    {
+     "name": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview_thumbnail.jpg",
+     "kind": "thumbnail",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1SBGno_vTEjvOtgWA_eqY2kwcxSYbofl4/view?usp=drivesdk"
     }
    ]
   },

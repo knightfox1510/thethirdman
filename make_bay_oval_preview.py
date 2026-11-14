@@ -183,17 +183,20 @@ SRC = ["Cricsheet men's ODI ball-by-ball archive (cricsheet.org/downloads/odis_j
        "Series position (India 2-1; third ODI rained off) and the 5th ODI date (15 Nov) from ESPN's fixture list and the channel's schedule; squads, toss, weather and pitch for the 5th ODI were not yet confirmed when this was made.",
        "First-over records: Chaminda Vaas, 4 wickets in his first over (Bangladesh v Sri Lanka, 2003 World Cup) and Shaun Pollock, 3 in his first over (South Africa v Pakistan, Lahore, 1990s): ESPNcricinfo records and Sportskeeda; Henry's figures (3 wickets, 0 runs, first over) from our captures.",
        "All graphics are original; the field plan is illustrative, not the actual field."]
-DESC = ("India lead New Zealand 2-1 with one ODI to play, at the same ground as the 4th ODI where India lost three wickets in the first over and were bowled out for 89. "
-        "So how do you survive the new ball at Bay Oval? We look at the ground's history (13 men's ODIs), how the first ten overs have played, what happened on Friday ball by ball, and what India's batters can do about it.\n\n"
+DESC = ("India vs New Zealand, 5th ODI preview at Bay Oval, Mount Maunganui: how can India survive the new ball? India lead the series 2-1, and New Zealand can level it on Sunday.\n\n"
+        "On Friday, in the 4th ODI at the same ground, Matt Henry took three wickets in the first over and India were bowled out for 89. We look at Bay Oval's ODI history (14 men's matches), "
+        "how the first ten overs have played here, what happened on Friday ball by ball, and what India's batters can do about it.\n\n"
         "Sources: Cricsheet ball-by-ball (ODC-BY); ESPNcricinfo and Cricbuzz match pages (captured with our own tool, cross-checked over by over). All numbers are computed by us; "
-        "'not in control' is the Cricinfo shot-control flag. Graphics are original illustrations, not broadcast footage; the field plan is illustrative.")
-TAGS = ["India vs New Zealand", "5th ODI", "Bay Oval", "Mount Maunganui", "new ball", "cricket analysis", "cricket tactics", "Matt Henry", "India batting", "The Third Man"]
+        "'not in control' is the Cricinfo shot-control flag. Graphics are original illustrations, not broadcast footage; the field plan is illustrative.\n\n"
+        "#INDvNZ #IndiaVsNewZealand #5thODI #BayOval")
+TAGS = ["India vs New Zealand", "India vs New Zealand 5th ODI", "IND vs NZ 5th ODI", "IND vs NZ 2026", "New Zealand vs India ODI", "5th ODI preview", "Bay Oval", "Mount Maunganui",
+        "new ball", "Matt Henry", "India batting", "cricket analysis", "cricket tactics", "The Third Man"]
 spec = {"slug": "bay_oval_new_ball", "theme": "lab", "theme_long": "lab", "captions": "serif", "captions_long": False, "series": "tactics",
         "tag": "TACTICS BOARD", "tagsub": "BAY OVAL · 5TH ODI PREVIEW",
         "files": {"long": "Surviving_the_New_Ball_at_Bay_Oval_5th_ODI_Preview", "short": "_unused"},
         "thumb": {"kicker": "5TH ODI PREVIEW", "lines": [{"t": "SURVIVING THE"}, {"t": "NEW BALL", "c": "gold"}], "hero": "0/3", "herosize": 420},
         "sources": SRC, "long": long,
-        "yt": {"long": {"title": "Surviving the New Ball at Bay Oval | NZ vs India 5th ODI Preview (Tactics)", "description": DESC, "tags": TAGS}}}
+        "yt": {"long": {"title": "India vs New Zealand - 5th ODI Preview | Surviving the New Ball at Bay Oval", "description": DESC, "tags": TAGS}}}
 voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/bay_oval_new_ball.json", "w"), ensure_ascii=False, indent=1)
 print("wrote specs/bay_oval_new_ball.json:", sum(len(x["vo"].split()) for x in long), "words,", len(long), "scenes")
