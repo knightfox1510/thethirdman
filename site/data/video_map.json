@@ -70,5 +70,17 @@
   "kind": "short",
   "title": "replay_u19_final",
   "format": "news"
+ },
+ "ueFtSganrNo": {
+  "slug": "myth_ep1_kohli_knockouts",
+  "kind": "short",
+  "title": "Myth or Data? Ep. 1: Kohli in knockouts",
+  "format": "myth"
+ },
+ "3WQid2DRgwE": {
+  "slug": "myth_ep2_kohli_reinvention",
+  "kind": "short",
+  "title": "myth_ep2_kohli_reinvention",
+  "format": "news"
  }
 }

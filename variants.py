@@ -7,7 +7,7 @@
 spec["ig"]       = list of {"vo", "scene"} like "short" (usually long-form scenes, minus the intro, plus a YouTube CTA)
 spec["carousel"] = {"cover": {"kicker", "lines", "hero"}, "slides": [["long", i], ...], "cta": {"lines", "pill"}, "caption": "..."}
 Output lands in deliver/<slug>/ next to the other files."""
-import copy, json, os, shutil, subprocess, sys
+import copy, json, os, re, shutil, subprocess, sys
 import numpy as np, skia
 from PIL import Image
 
@@ -54,7 +54,69 @@ def igshort(spec_path):
     for f in os.listdir(src):
         if f.startswith(base + "_IG") and f.endswith((".mp4", ".srt", ".jpg")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
     shutil.rmtree(src, ignore_errors=True)
-    print("IG version:", f"{dst}/{base}_IG.mp4")
+    print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path))
+
+
+# ---------------------------------------------------------------- Instagram captions
+BASE_TAGS = ["#cricket", "#cricketanalysis", "#cricketstats", "#TheThirdMan"]
+
+
+def _hashtag(s):
+    w = re.sub(r"[^A-Za-z0-9 ]+", " ", s).split()
+    return "#" + "".join(x if x.isupper() else x[:1].upper() + x[1:] for x in w) if w else ""
+
+
+def caption_text(spec):
+    """Instagram caption for a spec's Short: hook, context, call to action (YouTube + link in bio), hashtags."""
+    y = (spec.get("yt") or {}).get("short") or (spec.get("yt") or {}).get("long") or {}
+    import voice_lint
+    sm_ = voice_lint.show_map()
+    en = lambda s: " ".join(sm_.get(w, w) for w in s.split())
+    sys.path.insert(0, f"{ROOT}/publish"); import series as _series
+    inf = _series.info(spec["slug"])
+    if not y.get("title") and inf:                       # older specs have no yt block: build from the episode name and the narration
+        narr = [s_ for sc_ in (spec.get("short") or []) for s_ in re.split(r"(?<=[.!?])\s+", en(sc_.get("vo", ""))) if s_ and not re.search(r"[\u0900-\u097F]", s_)]
+        y = {"title": inf["subject"] + " | " + inf["series_name"], "description": " ".join(narr[:3]),
+             "tags": [inf["series_name"], inf["subject"]]}
+    title = re.sub(r"#\w+", "", y.get("title", "")).strip(" |")
+    parts = [x.strip() for x in title.split(" | ") if x.strip()]
+    hook = re.sub(r"[^\w\s:'’,.?!%&-]", "", parts[0] if parts else spec["slug"]).strip()          # no emoji in the hook
+    if re.match(r"(Is|Does|Can|Why|Who|How|Will|Did|Are)\b", hook) and hook[-1] not in ".!?": hook += "?"
+    ctx = parts[1] if len(parts) > 1 else ""
+    desc = y.get("description", "")
+    body = desc.split("\n\n")[0].replace("#Shorts\n", "").strip()
+    body = re.sub(r"#\w+", "", body).strip()
+    body = re.split(r"\s*(?:Data:|Sources?:|Full video on the channel)", body)[0].strip()
+    sents = re.split(r"(?<=[.!?])\s+", body); out = ""
+    for s_ in sents:
+        if len(out) + len(s_) > 330: break
+        out += (" " if out else "") + s_
+    body = out
+    has_long = bool(spec.get("long")) or spec.get("slug") in LONG_COMPANION
+    q = ""                                               # the video's own comment prompt ("Was this the greatest Under nineteen final? Tell us in the comments"), Devanagari names back to English
+    import voice_lint
+    sm = voice_lint.show_map()
+    for sc_ in reversed(spec.get("short") or []):
+        v_ = " ".join(sm.get(w, w) for w in sc_.get("vo", "").split())
+        m_ = re.search(r"([^.!?]*\?)\s*(Tell us[^.]*\.|Let us know[^.]*\.)?", v_)
+        if m_ and "comments" in v_ and not re.search(r"[\u0900-\u097F]", m_.group(0)) and "Want the full" not in v_:
+            q = re.sub(r"(comments)[^.]*\.", r"\1.", m_.group(0).strip()); break
+    cta = ("Full breakdown on YouTube: The Third Man (" + YT_HANDLE + ")" if has_long else "More cricket analysis on YouTube: The Third Man (" + YT_HANDLE + ")") + ". Link in bio."
+    tags = re.findall(r"#\w+", desc.replace("#Shorts", "")) + [_hashtag(t) for t in y.get("tags", []) if t.lower() not in ("the third man",)]
+    seen, tagl = set(), []
+    for h in tags + BASE_TAGS:
+        if h and h.lower() not in seen and len(h) > 2: seen.add(h.lower()); tagl.append(h)
+    tagl = [h for h in tagl if len(h) <= 24]
+    lines = [hook + ("." if hook[-1] not in ".!?" else ""), ctx, "", body, "", q, "", cta, "", " ".join(tagl[:12])]
+    return "\n".join(l for i, l in enumerate(lines) if l or (i and lines[i - 1])).strip() + "\n"
+
+
+def write_caption(spec_path):
+    spec = json.load(open(spec_path)); slug = spec["slug"]
+    base = (spec.get("files") or {}).get("short")
+    if not base or "unused" in base.lower(): return None
+    d = f"{ROOT}/deliver/{slug}"; os.makedirs(d, exist_ok=True)
+    path = f"{d}/{base}_IG_caption.txt"; open(path, "w", encoding="utf-8").write(caption_text(spec)); return path
 
 
 def deepcut(spec_path):
@@ -131,4 +193,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "igcaption": lambda p: print(write_caption(p))}[sys.argv[1]](sys.argv[2])

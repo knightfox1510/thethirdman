@@ -42,7 +42,9 @@
   "stumps",
   "flip",
   "kinetic",
-  "fieldmap"
+  "fieldmap",
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -87,6 +89,8 @@
   "henry_6balls__igshort": "stumps",
   "kohli_2000_nz__igshort": "flip",
   "hardik_arshdeep__igshort": "kinetic",
-  "myth_ep1_kohli_knockouts__igshort": "fieldmap"
+  "myth_ep1_kohli_knockouts__igshort": "fieldmap",
+  "myth_ep2_kohli_reinvention__igshort": "stumps",
+  "myth_ep3_aaryavir__igshort": "flip"
  }
 }

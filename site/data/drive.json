@@ -3,22 +3,46 @@
  "synced": "2026-11-14",
  "videos": {
   "myth_ep1_kohli_knockouts": {
-   "state": "not posted",
+   "state": "posted",
    "series": "01 Myth or Data",
-   "episode": "Ep01 - Does Kohli Fail in Knockouts",
+   "episode": "Ep01 - Does Kohli Fail in Knockouts [posted]",
    "folder": "https://drive.google.com/drive/folders/1bYVwg6PvGlEEhOKWGZDrGKuJptzaoXFY",
    "files": [
     {
-     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16.mp4",
+     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1ekFCM82JcVm0KgmbIN4zvipghc88Iaro/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/11AZuiWCr9PxPgOQM6FvEPQo925hbjWZo/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1tcm12iAlGGFM_-MjfxQdyBTzJHwb0awt/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16_IG.mp4",
      "kind": "short",
-     "mb": 167.8,
-     "url": "https://drive.google.com/file/d/1G0z6AgUr7afDtROyvEawd3NznPz4wQrQ/view?usp=drivesdk"
+     "mb": 159.4,
+     "url": "https://drive.google.com/file/d/1MfU2Y3PXK7sHz629DssaWb4XfKTiM00r/view?usp=drivesdk"
     },
     {
      "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16.srt",
      "kind": "subtitles",
      "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1fHsJOcP7Dp8IDtCETluiHzAYc69i71Nz/view?usp=drivesdk"
+     "url": "https://drive.google.com/file/d/1XJNPBJN92OnpLPzS-TwOlt681wJXPk01/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16.mp4",
+     "kind": "short",
+     "mb": 166.2,
+     "url": "https://drive.google.com/file/d/1H5srCUGtKtmeRnzYDPsI60Sc20YPHAfU/view?usp=drivesdk"
     },
     {
      "name": "Myth_or_Data_Ep01_Does_Kohli_Fail_in_Knockouts_Short_9x16_cover.jpg",
@@ -29,11 +53,17 @@
    ]
   },
   "myth_ep2_kohli_reinvention": {
-   "state": "not posted",
+   "state": "posted",
    "series": "01 Myth or Data",
-   "episode": "Ep02 - Is Kohli Too Slow for T20",
+   "episode": "Ep02 - Is Kohli Too Slow for T20 [posted]",
    "folder": "https://drive.google.com/drive/folders/1aLRKOk0VCzOlJ6AdbmTPgQYHCq4ISWKm",
    "files": [
+    {
+     "name": "Myth_or_Data_Ep02_Is_Kohli_Too_Slow_for_T20_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1IRiuwsCrioDGdtiMjf4dTvyTQNehrZ12/view?usp=drivesdk"
+    },
     {
      "name": "Myth_or_Data_Ep02_Is_Kohli_Too_Slow_for_T20_Short_9x16.srt",
      "kind": "subtitles",
@@ -54,12 +84,74 @@
     }
    ]
   },
+  "myth_ep3_aaryavir": {
+   "state": "not posted",
+   "series": "01 Myth or Data",
+   "episode": "Ep03 - Aaryavir Sehwag, Like Father Like Son",
+   "folder": "https://drive.google.com/drive/folders/1QmN9kZkL3eHRtXaEmLLs8WoMlNRuLEj-",
+   "files": [
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1o5oe7jaX4JzJB0aJkCaP85pLNl5KT1y5/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1NYCab14jEXnH93sVg6S36QUmCtE9ZjpK/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1mY5yJ8r3tlAU3NrBfIg5e2zhJloWA6lr/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Short_9x16.mp4",
+     "kind": "short",
+     "mb": 156.5,
+     "url": "https://drive.google.com/file/d/1ma2GKavON5UrO5lU8z-62PAeFPCaTxf_/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1HFlSkMmOftvV2QDZTK5kN_q6YCHRyhNx/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1klY_3Pv1djE2RY_5RiBMOLsqiL7PtMAG/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long.mp4",
+     "kind": "long",
+     "mb": 13.4,
+     "url": "https://drive.google.com/file/d/1MYToeuj1U4f-qzZcCL3MM3Qm4OdAJQ6F/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep03_Aaryavir_Sehwag_Like_Father_Like_Son_Long.chapters.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1eTLDAXry5SXWS0E6htOxqjgh8b2w2YOd/view?usp=drivesdk"
+    }
+   ]
+  },
   "replay_4odi": {
    "state": "posted",
    "series": "02 The Replay Room",
    "episode": "Ep01 - India vs New Zealand 4th ODI [posted]",
    "folder": "https://drive.google.com/drive/folders/1fxm9So5KPSMYeNrQeUaxkVdLiOIzEHh-",
    "files": [
+    {
+     "name": "Replay_Room_Ep01_India_vs_New_Zealand_4th_ODI_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1J0C8SrEmHbQtVc63I7t0jRd2x5R5oqrc/view?usp=drivesdk"
+    },
     {
      "name": "Replay_Room_Ep01_India_vs_New_Zealand_4th_ODI_Short_9x16.mp4",
      "kind": "short",
@@ -129,6 +221,12 @@
    "folder": "https://drive.google.com/drive/folders/1UMnvPk9bZQ4pJkyAsi9gg7N0OksJITWt",
    "files": [
     {
+     "name": "Replay_Room_Ep01b_4th_ODI_extra_Will_Young_Two_Innings_in_One_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1HpIidiVL0Q8Aet3XmNLzl18boRqs9qqQ/view?usp=drivesdk"
+    },
+    {
      "name": "Replay_Room_Ep01b_4th_ODI_extra_Will_Young_Two_Innings_in_One_Short_9x16.mp4",
      "kind": "short",
      "mb": 74.6,
@@ -178,6 +276,12 @@
    "episode": "Ep01c - 4th ODI extra, India 74 Percent Dot Balls [posted]",
    "folder": "https://drive.google.com/drive/folders/1qd07ARQftVNyjtST1a6tbPYq5MTat2fG",
    "files": [
+    {
+     "name": "Replay_Room_Ep01c_4th_ODI_extra_India_74_Percent_Dot_Balls_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/18l7ymng9o0cVtT7VRw8qZRxcm0Nmaz4H/view?usp=drivesdk"
+    },
     {
      "name": "Replay_Room_Ep01c_4th_ODI_extra_India_74_Percent_Dot_Balls_Short_9x16.mp4",
      "kind": "short",
@@ -229,6 +333,12 @@
    "folder": "https://drive.google.com/drive/folders/1BAbKU1Z__AYKTrZvoZ5Z9TT13iVwibtQ",
    "files": [
     {
+     "name": "Replay_Room_Ep01d_4th_ODI_extra_Matt_Henry_3_Wickets_in_6_Balls_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1YVrOf69SLLxp5iQY7pnctZ2_ywWe6X0M/view?usp=drivesdk"
+    },
+    {
      "name": "Replay_Room_Ep01d_4th_ODI_extra_Matt_Henry_3_Wickets_in_6_Balls_Short_9x16.srt",
      "kind": "subtitles",
      "mb": 0.0,
@@ -278,6 +388,12 @@
    "episode": "Ep02 - India vs Pakistan U19 Asia Cup Final [posted]",
    "folder": "https://drive.google.com/drive/folders/11SJ6ssT4jrLY9JRXWNrftssIsgGMKukR",
    "files": [
+    {
+     "name": "Replay_Room_Ep02_India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/11NLnOXKNyUELKY_1z98gbSaD5fwMHT_y/view?usp=drivesdk"
+    },
     {
      "name": "Replay_Room_Ep02_India_vs_Pakistan_U19_Asia_Cup_Final_Long.chapters.txt",
      "kind": "text",
@@ -347,6 +463,12 @@
    "folder": "https://drive.google.com/drive/folders/1Su9kYiKSFfY6IVKJHa1cJx9n12PK1n-x",
    "files": [
     {
+     "name": "Tactics_Board_Ep01_The_Santner_Problem_NZ_v_IND_T20Is_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1DcYa1lFdV5UujSGct2PY9K7F4hTMO4TZ/view?usp=drivesdk"
+    },
+    {
      "name": "Tactics_Board_Ep01_The_Santner_Problem_NZ_v_IND_T20Is_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -390,6 +512,12 @@
    "episode": "Ep02 - How to Bowl to Abhishek Sharma",
    "folder": "https://drive.google.com/drive/folders/1QgLgaSTU1WPAUHhoElqmjzLTOEkfsxsH",
    "files": [
+    {
+     "name": "Tactics_Board_Ep02_How_to_Bowl_to_Abhishek_Sharma_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1JQGExo65YiXxQYP6RuUMn9h8MCLK11ga/view?usp=drivesdk"
+    },
     {
      "name": "Tactics_Board_Ep02_How_to_Bowl_to_Abhishek_Sharma_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -435,6 +563,12 @@
    "folder": "https://drive.google.com/drive/folders/1z2bOc__IVt1j3J6TbH5agRYs2XOswLKr",
    "files": [
     {
+     "name": "Tactics_Board_Ep03_Wellington_ODI_Breakdown_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/12ulTukT4IPvPpKlTkq_XjCbkqgOA5JB2/view?usp=drivesdk"
+    },
+    {
      "name": "Tactics_Board_Ep03_Wellington_ODI_Breakdown_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -478,6 +612,12 @@
    "episode": "Ep04 - India in New Zealand Test Preview",
    "folder": "https://drive.google.com/drive/folders/19W4_HFBi_srzLu7Mob6lv8d7UTodwgvE",
    "files": [
+    {
+     "name": "Tactics_Board_Ep04_India_in_New_Zealand_Test_Preview_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/18itLWLkQSuQKXd2OK1OghnYExwa4R_sH/view?usp=drivesdk"
+    },
     {
      "name": "Tactics_Board_Ep04_India_in_New_Zealand_Test_Preview_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -561,6 +701,12 @@
    "folder": "https://drive.google.com/drive/folders/1R8qKYMdymidGY0_NAxKZJNO6SkupwfAC",
    "files": [
     {
+     "name": "The_Lab_Ep01_Abhishek_Sharma_s_Statistical_Twin_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1vhYYbLyGioPCtMYMpJJyG0eNlt2i3bdI/view?usp=drivesdk"
+    },
+    {
      "name": "The_Lab_Ep01_Abhishek_Sharma_s_Statistical_Twin_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -611,6 +757,12 @@
    "folder": "https://drive.google.com/drive/folders/1rY9NRmypXhB9TGnRjicJFrxzmVOtQ54M",
    "files": [
     {
+     "name": "The_Lab_Ep02_Bumrah_s_Bowling_Twin_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1MPAHeR2HD0re7Da-mgdi0PM9a8vHP5dX/view?usp=drivesdk"
+    },
+    {
      "name": "The_Lab_Ep02_Bumrah_s_Bowling_Twin_Short_9x16_cover.jpg",
      "kind": "cover",
      "mb": 0.2,
@@ -636,6 +788,12 @@
    "episode": "Ep01 - Bumrah or Rashid",
    "folder": "https://drive.google.com/drive/folders/1Smz-JDbDkhnaZe1ijmoMtfNXSqsDizpP",
    "files": [
+    {
+     "name": "Stat_Check_Ep01_Bumrah_or_Rashid_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1YRo3Sl_MjCjdJETAtTv3A4z9_xscyvuJ/view?usp=drivesdk"
+    },
     {
      "name": "Stat_Check_Ep01_Bumrah_or_Rashid_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -687,6 +845,12 @@
    "folder": "https://drive.google.com/drive/folders/1D5pG20ADBqGRsRcXyoHQix4_5Ge8I6Q0",
    "files": [
     {
+     "name": "What_If_Ep01_Bradman_in_the_IPL_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1Ncg7a_sH-N18eIqC6cYw8f3Ymj4_BKzt/view?usp=drivesdk"
+    },
+    {
      "name": "What_If_Ep01_Bradman_in_the_IPL_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -730,6 +894,12 @@
    "episode": "Ep02 - Bumrah vs 90s Sachin and Lara",
    "folder": "https://drive.google.com/drive/folders/11AvUTG0AtOfH-Z_k_b_62HWCKHWMWbWz",
    "files": [
+    {
+     "name": "What_If_Ep02_Bumrah_vs_90s_Sachin_and_Lara_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1liB8yItwgH10zq4sow2NqQvxnKCeiC9_/view?usp=drivesdk"
+    },
     {
      "name": "What_If_Ep02_Bumrah_vs_90s_Sachin_and_Lara_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -775,6 +945,12 @@
    "folder": "https://drive.google.com/drive/folders/1av34N7D_vUkkWfJF6o-1zF262tF538yk",
    "files": [
     {
+     "name": "What_If_Ep03_Dhoni_Never_Became_Captain_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1RnqI_KOEXTDUU7ZayW9snvAdYXLHGLoy/view?usp=drivesdk"
+    },
+    {
      "name": "What_If_Ep03_Dhoni_Never_Became_Captain_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -818,6 +994,12 @@
    "episode": "Ep04 - Sachin in the T20 Era",
    "folder": "https://drive.google.com/drive/folders/16eyOY2CUKp6p3PvE049E3gdPKttqbe71",
    "files": [
+    {
+     "name": "What_If_Ep04_Sachin_in_the_T20_Era_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1tChJWxHRhX4r2tcD2Lz-_WmYv28cfllG/view?usp=drivesdk"
+    },
     {
      "name": "What_If_Ep04_Sachin_in_the_T20_Era_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -863,6 +1045,12 @@
    "folder": "https://drive.google.com/drive/folders/1DYnUItA0MHiKb8yXx11uoh87LX4NLNSd",
    "files": [
     {
+     "name": "Rising_Star_Ep01_Aaryavir_Sehwag_160_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1cn1NFnQCIlelmGUXS18bo90hrOz6TSNJ/view?usp=drivesdk"
+    },
+    {
      "name": "Rising_Star_Ep01_Aaryavir_Sehwag_160_Short_9x16_cover.jpg",
      "kind": "cover",
      "mb": 0.1,
@@ -889,6 +1077,12 @@
    "folder": "https://drive.google.com/drive/folders/12pGAVlreXc8pM0FS8C3toxRtO7IzCitF",
    "files": [
     {
+     "name": "Flip_Ep01_Abhishek_Sharma_vs_T20I_Openers_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1li3MyKJj5KdUzVa_h28EzGaYKX1n5n80/view?usp=drivesdk"
+    },
+    {
      "name": "Flip_Ep01_Abhishek_Sharma_vs_T20I_Openers_Short_9x16.mp4",
      "kind": "short",
      "mb": 20.0,
@@ -908,6 +1102,12 @@
    "episode": "Ep02 - Bumrah vs Fast Bowlers After 52 Tests",
    "folder": "https://drive.google.com/drive/folders/1zHfh1WhshsPSkVLmt7LJfNZlMnckNQUu",
    "files": [
+    {
+     "name": "Flip_Ep02_Bumrah_vs_Fast_Bowlers_After_52_Tests_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1xxNEoWrjSVSRthEdQuMNevbTlfAQS0oH/view?usp=drivesdk"
+    },
     {
      "name": "Flip_Ep02_Bumrah_vs_Fast_Bowlers_After_52_Tests_Short_9x16.mp4",
      "kind": "short",
@@ -929,6 +1129,12 @@
    "folder": "https://drive.google.com/drive/folders/1asXWszsxSv-fUNksdtj_dkpiUVdaLK7z",
    "files": [
     {
+     "name": "Flip_Ep03_Every_MI_Captain_vs_Rohit_Sharma_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1ZV_6R8zbI_nT5qQkB3ude-7zsvFGjn07/view?usp=drivesdk"
+    },
+    {
      "name": "Flip_Ep03_Every_MI_Captain_vs_Rohit_Sharma_Short_9x16.mp4",
      "kind": "short",
      "mb": 15.9,
@@ -949,6 +1155,12 @@
    "folder": "https://drive.google.com/drive/folders/1YTovLNe6Nq_hihUJaxoktA2kw6PC19I-",
    "files": [
     {
+     "name": "Flip_Ep04_Joe_Root_vs_Everyone_at_the_Same_Point_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1IFzBVarPxuLJSMlOyuZxTzKPs8Iz1BMf/view?usp=drivesdk"
+    },
+    {
      "name": "Flip_Ep04_Joe_Root_vs_Everyone_at_the_Same_Point_Short_9x16.mp4",
      "kind": "short",
      "mb": 19.7,
@@ -968,6 +1180,12 @@
    "episode": "Ep01 - Is the T20 Anchor Dead",
    "folder": "https://drive.google.com/drive/folders/1JZJPjeA-J5r5_LtoCkc2bcDZ6Qo8yE7v",
    "files": [
+    {
+     "name": "Data_Story_Ep01_Is_the_T20_Anchor_Dead_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1AFSgx285XesCz1CEd0JtNeGuAY3GjlDp/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep01_Is_the_T20_Anchor_Dead_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -1031,6 +1249,12 @@
    "folder": "https://drive.google.com/drive/folders/1OgnoyVFLim4_3F47cgMu5s7XfWR6cA-G",
    "files": [
     {
+     "name": "Data_Story_Ep02_The_Powerplay_Revolution_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1AOmaVZdICNyvfYWVVKRL_GYvaP-dNBvv/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep02_The_Powerplay_Revolution_Short_9x16.srt",
      "kind": "subtitles",
      "mb": 0.0,
@@ -1087,6 +1311,12 @@
    "folder": "https://drive.google.com/drive/folders/1PBY8-zxhlT-bQCvBVigHAWTG3l1FGMIJ",
    "files": [
     {
+     "name": "Data_Story_Ep03_How_the_IPL_Changed_T20_Batting_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1v-6hLC51-tSwFnAtPTDM0m3IlRB4iMt8/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep03_How_the_IPL_Changed_T20_Batting_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -1137,6 +1367,12 @@
    "folder": "https://drive.google.com/drive/folders/1d3niQFTA3GOLWnXW5dKfqWgnixwXC6Bq",
    "files": [
     {
+     "name": "Data_Story_Ep04_Why_200_Is_the_New_160_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/13YlRStZsbGr9Qf9YKr-wsNB5-C6ovXmq/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep04_Why_200_Is_the_New_160_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -1180,6 +1416,12 @@
    "episode": "Ep05 - India's Missing 160",
    "folder": "https://drive.google.com/drive/folders/1qg88EaG5RVQ9RbdOGIar_PZLdXVAjzyu",
    "files": [
+    {
+     "name": "Data_Story_Ep05_India_s_Missing_160_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/196P9GGnwwwqdM-hzT7Clw-QqelGd7LOV/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep05_India_s_Missing_160_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -1225,6 +1467,12 @@
    "folder": "https://drive.google.com/drive/folders/1m7-l0jEhZo2ShDw80GZA28_lbiXDthiv",
    "files": [
     {
+     "name": "Data_Story_Ep06_The_Bumrah_Paradox_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1_yKG5xfYjv9uWfOPZuy9jAaxGs_XJiCp/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep06_The_Bumrah_Paradox_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -1268,6 +1516,12 @@
    "episode": "Ep07 - The Death Overs Kings",
    "folder": "https://drive.google.com/drive/folders/1P5Km_Lzsz17o3-cyFrY9iGdBex3hWTtL",
    "files": [
+    {
+     "name": "Data_Story_Ep07_The_Death_Overs_Kings_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1quzYNHuN8WSgU7o_0-ljHZyaQDuJ1JRu/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep07_The_Death_Overs_Kings_Long_thumbnail.jpg",
      "kind": "thumbnail",
@@ -1313,6 +1567,12 @@
    "folder": "https://drive.google.com/drive/folders/1GDqHu1Fbu6WnqybuUQWvT9M6ceao5XX2",
    "files": [
     {
+     "name": "Data_Story_Ep08_How_RCB_Won_Back_to_Back_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/10TUk3g2MS7WfhMItwA1uG-s1APeS7aGl/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep08_How_RCB_Won_Back_to_Back_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -1356,6 +1616,12 @@
    "episode": "Ep09 - Hardik for Arshdeep Trade [posted]",
    "folder": "https://drive.google.com/drive/folders/1ni_vrzieGmhDR1jj5pRHs4mM1GE90n-5",
    "files": [
+    {
+     "name": "Data_Story_Ep09_Hardik_for_Arshdeep_Trade_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/16E2vVUtws7FHBHyyX0aF-L7-5EGYl0Z3/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep09_Hardik_for_Arshdeep_Trade_Short_9x16_cover.jpg",
      "kind": "cover",
@@ -1419,6 +1685,12 @@
    "folder": "https://drive.google.com/drive/folders/1lOMBobEuk7zq_69q1yDD-yLB85MLh0Tr",
    "files": [
     {
+     "name": "Data_Story_Ep10_Kohli_vs_New_Zealand_Milestone_Watch_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1KQ3-zp3mCYl8kex-jvDXRZM3rBT-7rf1/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep10_Kohli_vs_New_Zealand_Milestone_Watch_Short_9x16.mp4",
      "kind": "short",
      "mb": 20.2,
@@ -1463,6 +1735,12 @@
    "folder": "https://drive.google.com/drive/folders/1J7xa9qrK4P8MC0PHSLs1rr7f76nvbHNl",
    "files": [
     {
+     "name": "Channel_Ep00_Welcome_to_The_Third_Man_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/18qBZnDvyKJP-dfG0K_usSdyTbVWNczMc/view?usp=drivesdk"
+    },
+    {
      "name": "Channel_Ep00_Welcome_to_The_Third_Man_Long_thumbnail.jpg",
      "kind": "thumbnail",
      "mb": 0.1,
@@ -1506,7 +1784,8 @@
    "folder": "https://drive.google.com/drive/folders/1Uho8Jb7AXhs2iS4jv1v3RVV2WxstO1a2",
    "episodes": [
     "myth_ep1_kohli_knockouts",
-    "myth_ep2_kohli_reinvention"
+    "myth_ep2_kohli_reinvention",
+    "myth_ep3_aaryavir"
    ]
   },
   "02 The Replay Room": {

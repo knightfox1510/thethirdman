@@ -357,13 +357,14 @@
    "title": "Myth or Data? Ep. 1: Kohli in knockouts",
    "format": "myth",
    "long": null,
-   "short": null,
+   "short": "1:38",
    "status": "Not scheduled",
    "link": null,
    "planned": null,
    "recheck": null,
    "sources": [
-    "Cricsheet men's ODI and T20I ball-by-ball data (cricsheet.org, ODC-BY). ICC knockouts = semi-finals, quarter-finals and finals of the ODI World Cup, Champions Trophy and T20 World Cup. Figures: analysis/myth_kohli_knockouts.py"
+    "Cricsheet men's ODI and T20I ball-by-ball data (cricsheet.org, ODC-BY). ICC knockouts = semi-finals, quarter-finals and finals of the ODI World Cup, Champions Trophy and T20 World Cup. Figures: analysis/myth_kohli_knockouts.py",
+    "Check (14 Nov 2026): Kohli's six T20 World Cup knockout innings 72*, 77, 89*, 50, 9, 76 = 373 runs, 4 dismissals, average 93.25. The earlier 'best of any batter' claim was removed: it came from a partial Cricsheet archive and was not checked against complete records."
    ]
   },
   {
@@ -379,6 +380,25 @@
    "sources": [
     "Sportmonks ball-by-ball, IPL 2013-2026 (data/ipl cache). Virat Kohli's legal balls faced; super overs excluded; strike rate = runs off the bat per 100 balls; powerplay = overs 1-6; bowler type from Sportmonks bowling style. League strike rate = all batters' runs off the bat per 100 legal balls in the season. Figures: make_kohli_reinvention.py.",
     "Cross-check: Kohli's 2026 total (675 runs, strike rate about 165.8) matches RCB's own season review: https://royalchallengers.com/rcb-cricket-news/news/from-virat-kohli-to-tim-david-rcbs-top-five-batters-in-ipl-2026"
+   ]
+  },
+  {
+   "slug": "myth_ep3_aaryavir",
+   "title": "Myth ep3 aaryavir",
+   "format": "news",
+   "long": "5:11",
+   "short": "1:12",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Aaryavir Sehwag's five innings: the Cricbuzz commentary captures of the Nepal (4th match), Pakistan (8th match), UAE (11th match) and Afghanistan (semi-final) games, and the final (Cricbuzz 175720 + Cricinfo 1558444). His totals (361 runs, average 90.25, one hundred, three fifties) reproduce the Player of the Tournament figures in BCCI's Instagram post.",
+    "Quote: Aaryavir Sehwag to the media after his 160 vs UAE, as reported by Outlook India: https://www.outlookindia.com/sports/cricket/india-vs-uae-u-19-asia-cup-2026-aaryavir-sehwag-promise-father-virender",
+    "Earlier big scores (press reports): 297 in the Cooch Behar Trophy https://cricket.com/news/virender-sehwags-son-aaryavir-smashes-297-in-cooch-behar-trophy-11222024-1732257974695 ; 173 off 143 in the Vinoo Mankad Trophy https://www.bjsports.live/latest-news-en/aaryavir-sehwag-smashes-173-off-143-to-lead-delhi-u19-in-vinoo-mankad-trophy ; 160 off 168 vs UAE https://wisden.com/cricket-news/son-of-india-legend-aaryavir-sehwag-smashes-160-in-168-balls-for-india-u19",
+    "Virender Sehwag's career figures: ESPNcricinfo player profile and Wikipedia (Tests: 8,586 runs, 23 hundreds, 32 fifties, highest 319; ODIs: 251 matches, 8,273 runs, 15 hundreds, 38 fifties, strike rate 104.33, 1,132 fours, 136 sixes). Checked 14 Nov 2026.",
+    "Style comparison for Virender Sehwag: Cricsheet ball-by-ball archive (cricsheet.org, ODC-BY), 165 of his ODI innings 2002-2013 (a sample: coverage is partial), balls faced exclude wides. The two players' figures come from different levels of cricket (Under-19 against senior internationals), so they show style, not quality.",
+    "All figures computed in make_aaryavir.py. Graphics are original illustrations: no photographs or likeness of any player."
    ]
   },
   {
