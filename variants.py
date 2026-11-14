@@ -85,15 +85,12 @@ def igreel(spec_path):
 
 
 def igfull(spec_path):
-    """Full-detail vertical version: every scene of the long video, re-laid out in 9:16 (lab theme), with the Instagram end card. Same narration as the long video
-    (cache copied). Over 3 minutes, so Instagram will not push it as a Reel: post it as a regular video / for people who want the whole story.
+    """Full-detail vertical version: the whole narration of the long video, re-laid out in 9:16 as stadium-stage scenes (spec["full"], see make_aaryavir_full.py),
+    with the Instagram end card. Over 3 minutes, so Instagram will not push it as a Reel: post it as a regular video for people who want the whole story.
     Writes deliver/<slug>/<long name with _Long -> _Full_9x16>_IG.mp4 (+ .srt) and _IG_caption.txt."""
     spec = json.load(open(spec_path)); slug = spec["slug"]
     v = copy.deepcopy(spec); v["slug"] = f"{slug}__igfull"
-    sc = copy.deepcopy(spec["long"]); last = sc[-1]
-    if last["scene"].get("type") == "cta": sc[-1] = spec.get("reel_cta") or IG_REEL_CTA
-    else: sc.append(IG_REEL_CTA)
-    v["short"] = sc; v["theme"] = spec.get("theme_long", spec.get("theme")); v["captions"] = spec.get("captions_long", False)
+    v["short"] = spec["full"] + [spec.get("reel_cta") or IG_REEL_CTA]
     base = spec["files"]["long"].replace("_Long", "") + "_Full_9x16_IG"
     v["files"] = {"short": base, "long": "_unused"}; v.pop("long", None); v.pop("burn_captions", None)
     os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
@@ -103,7 +100,7 @@ def igfull(spec_path):
     for f in os.listdir(src):
         if f.startswith(base) and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
     shutil.rmtree(src, ignore_errors=True)
-    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(caption_text(spec).replace("Link in bio.", "Link in bio."))
+    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(caption_text(spec))
     print("IG full vertical:", f"{dst}/{base}.mp4")
 
 
