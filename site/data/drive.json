@@ -2,6 +2,54 @@
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
  "synced": "2026-11-14",
  "videos": {
+  "replay_u19_final": {
+   "state": "not posted",
+   "folder": "https://drive.google.com/drive/folders/11SJ6ssT4jrLY9JRXWNrftssIsgGMKukR",
+   "files": [
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1Zy2kJIYaKiGBzPOm4GeH_GkKgpMCuXQl/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1X-iMyJ62hTvvlbwF7htl7zYxRvZ67jaa/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Short_9x16.mp4",
+     "kind": "short",
+     "mb": 164.0,
+     "url": "https://drive.google.com/file/d/1VAxUfoq0vQ5JKVEzZEFdGXfvX_OLuVwE/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Analysis_338_Chased_thumbnail.jpg",
+     "kind": "thumbnail",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1rK2QjCllWGBAQXzQvni2aSMyBQNn0p10/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Analysis_338_Chased.srt",
+     "kind": "subtitles",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1GJOQu3z4pPMza7bS81NVwY3lD-Q2FpJ0/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Analysis_338_Chased.mp4",
+     "kind": "long",
+     "mb": 15.7,
+     "url": "https://drive.google.com/file/d/14eE0VOq6sZI-biNvArznw09kg2ePX6-8/view?usp=drivesdk"
+    },
+    {
+     "name": "India_vs_Pakistan_U19_Asia_Cup_Final_Analysis_338_Chased.chapters.txt",
+     "kind": "text",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1Az6cHHpfwiExRIuBh3Wx39_CyXjBpeSd/view?usp=drivesdk"
+    }
+   ]
+  },
   "henry_6balls": {
    "state": "not posted",
    "folder": "https://drive.google.com/drive/folders/1BAbKU1Z__AYKTrZvoZ5Z9TT13iVwibtQ",

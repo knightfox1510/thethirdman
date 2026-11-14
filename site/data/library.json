@@ -486,6 +486,23 @@
    ]
   },
   {
+   "slug": "replay_u19_final",
+   "title": "Replay u19 final",
+   "format": "news",
+   "long": "6:07",
+   "short": "1:14",
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "ESPNcricinfo match capture, India U19 v Pakistan U19, ACC Men's U19 Asia Cup 2026 final, Al Amerat, Oman, 14 Nov 2026 (match 1558444): ball-by-ball with line, length, shot and control, captured with our own tool.",
+    "Cricbuzz match capture (match 175720): over-by-over cross-check (all runs match) and the first-innings scorecard (Pakistan's batting and India's bowling figures agree with our figures). Result in both: India won by 1 wicket (0 balls remaining).",
+    "Tournament path (group and semi-final results) from the Cricinfo series standings in the same capture. Conventions: balls faced exclude wides; bowler runs exclude byes and leg byes; a run out is not credited to the bowler.",
+    "All figures computed in make_u19_final.py and analysis/u19_final.py from data/cricinfo/u19_final_balls.csv. Web coverage of this match was not yet indexed when this was made, so no record claims are made. Graphics are original illustrations, not broadcast footage."
+   ]
+  },
+  {
    "slug": "sachin_t20",
    "title": "What If Sachin Played in the T20 Era",
    "format": "whatif",
