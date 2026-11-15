@@ -69,6 +69,7 @@ h3{font-size:16px;margin:0 0 8px}
 .s-To-build,.s-To-do{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
 .s-Uploaded-private,.s-Uploading{background:color-mix(in srgb,var(--purple) 18%,transparent);color:var(--purple)}
 .s-Hold{background:color-mix(in srgb,var(--alert) 16%,transparent);color:var(--alert)}
+.s-Cancelled{background:var(--chip);color:var(--muted);text-decoration:line-through}
 .p-High{color:var(--alert)} .p-Medium{color:var(--warn)} .p-Low{color:var(--muted)}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{text-align:left;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
@@ -198,7 +199,7 @@ const statusChip = s => s ? `<span class="chip s-${esc(s).replace(/[()]/g,"").re
 const D = {};
 const FMT = id => (D.formats.formats.find(f => f.id === id) || {name:id});
 const fmtChip = id => `<a class="chip fmt" href="#formats/${esc(id)}">${esc(FMT(id).name)}</a>`;
-const STATUSES = ["Idea","To build","To do","Ready","Uploading","Uploaded (private)","Posted","Hold"];
+const STATUSES = ["Idea","To build","To do","Ready","Uploading","Uploaded (private)","Posted","Hold","Cancelled"];
 const PLATFORMS = ["YouTube long","YouTube Short","YouTube Short + IG Reel","YouTube long + Short","YouTube long + Shorts","YouTube Short + IG carousel","Instagram Reel","Instagram carousel + Reel","Check"];
 const rid = () => Math.random().toString(36).slice(2,10);
 const byDate = (a,b) => (a.date || "9999").localeCompare(b.date || "9999");

@@ -4,7 +4,7 @@
 const { getJSON, setJSON, storageReady, authed, send } = require("./_lib");
 
 const KEY = "ttm:schedule";
-const STATUSES = ["Idea", "To build", "To do", "Ready", "Uploading", "Uploaded (private)", "Posted", "Hold"];
+const STATUSES = ["Idea", "To build", "To do", "Ready", "Uploading", "Uploaded (private)", "Posted", "Hold", "Cancelled"];
 const clip = (v, n) => (v == null || v === "" ? null : String(v).slice(0, n));
 
 function clean(rows) {
