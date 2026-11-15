@@ -11,10 +11,10 @@ import engine as E, gfx, series
 from gfx import text, rrect, paint, twidth
 
 ACCENT = {"myth": (255, 200, 40), "replay": (255, 92, 92), "tactics": (92, 190, 255), "lab": (110, 225, 170), "statcheck": (190, 150, 255),
-          "whatif": (255, 160, 70), "rising": (255, 130, 205), "flip": (70, 225, 225), "data": (255, 236, 150), "channel": (255, 200, 40)}
+          "whatif": (255, 160, 70), "rising": (255, 130, 205), "flip": (70, 225, 225), "data": (255, 236, 150), "channel": (255, 200, 40), "didyouknow": (190, 235, 70)}
 NAVY, NAVY2 = (9, 14, 30), (22, 36, 72)
 SERIES_SHORT = {"myth": "MYTH OR DATA?", "replay": "THE REPLAY ROOM", "tactics": "TACTICS BOARD", "lab": "THE LAB", "statcheck": "STAT CHECK", "whatif": "WHAT IF?",
-                "rising": "RISING STAR", "flip": "FLIP", "data": "DATA STORY", "channel": "WELCOME"}
+                "rising": "RISING STAR", "flip": "FLIP", "data": "DATA STORY", "channel": "WELCOME", "didyouknow": "DID YOU KNOW?"}
 
 
 def render_panel(spec, W=1080, H=1920):
@@ -28,7 +28,7 @@ def render_panel(spec, W=1080, H=1920):
     glow = skia.Paint(); glow.setShader(skia.GradientShader.MakeRadial((W / 2, 1090), 700, [skia.Color(acc[0], acc[1], acc[2], 70), skia.Color(acc[0], acc[1], acc[2], 0)]))
     c.drawRect(skia.Rect.MakeWH(W, H), glow)
     # series / episode pill
-    ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip") else ""
+    ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip", "didyouknow") else ""
     pill = SERIES_SHORT.get(sid, "") + ep
     if sid == "replay" and inf and inf["ep"][-1:].isalpha(): pill = "THE REPLAY ROOM · EXTRA"
     pw = twidth(pill, 56, "bebas", 3) + 70
@@ -81,7 +81,7 @@ def _base(spec, W, H, light=False):
 
 
 def _pill(c, W, inf, sid, acc, y=330, dark=False):
-    ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip") else ""
+    ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip", "didyouknow") else ""
     pill = SERIES_SHORT.get(sid, "") + ep
     if sid == "replay" and inf and inf["ep"][-1:].isalpha(): pill = "THE REPLAY ROOM · EXTRA"
     pw = twidth(pill, 56, "bebas", 3) + 70

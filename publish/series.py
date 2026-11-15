@@ -16,6 +16,7 @@ SERIES = [  # (id, folder number, name, file prefix)
     ("flip", 8, "Flip", "Flip"),
     ("data", 9, "Data Stories", "Data_Story"),
     ("channel", 10, "Channel", "Channel"),
+    ("didyouknow", 11, "Did You Know", "Did_You_Know"),
 ]
 # slug -> (series id, episode label, subject as shown in the Drive folder name)
 EPISODES = {
