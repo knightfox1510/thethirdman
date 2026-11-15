@@ -55,7 +55,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -113,6 +114,7 @@
   "myth_ep3_aaryavir__igfull": "flip",
   "gambhir_player_coach": "kinetic",
   "gambhir_player_coach__igshort": "fieldmap",
-  "gambhir_player_coach__iglong": "stumps"
+  "gambhir_player_coach__iglong": "stumps",
+  "dyk_fielding_positions": "flip"
  }
 }
