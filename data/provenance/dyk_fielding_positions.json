@@ -1,0 +1,86 @@
+{
+ "slug": "dyk_fielding_positions",
+ "claims": [
+  {
+   "claim": "names work as two parts: an angle word (cover, mid-wicket, leg) and a distance word (short, deep, long, silly)",
+   "value": "angle word + distance word",
+   "sources": {
+    "wikipedia": "angle word + distance word",
+    "sportplan_guide": "angle word + distance word"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "silly = very close to the batter (a perceived danger)",
+   "value": "very close, dangerous",
+   "sources": {
+    "wikipedia": "very close, dangerous",
+    "sportplan_guide": "very close, dangerous"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "square = level with the batter, across the pitch",
+   "value": "level with the batter",
+   "sources": {
+    "wikipedia": "level with the batter",
+    "sportplan_guide": "level with the batter"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "slips are numbered outwards from the wicket-keeper",
+   "value": "first slip nearest the keeper",
+   "sources": {
+    "wikipedia": "first slip nearest the keeper",
+    "sportplan_guide": "first slip nearest the keeper"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "third man is on the off side, behind the wicket",
+   "value": "off side, behind the wicket",
+   "sources": {
+    "wikipedia": "off side, behind the wicket",
+    "sportplan_guide": "off side, behind the wicket"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "third man stops edges that get past the slips (purpose)",
+   "value": "stops edges past the slips",
+   "sources": {
+    "wikipedia": null,
+    "sportplan_guide": "stops edges past the slips",
+    "cricketwriter_guide": "stops edges past the slips"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "no documented origin of the name 'third man' found",
+   "value": "no documented origin",
+   "sources": {
+    "wikipedia": "no documented origin",
+    "sportplan_guide": "no documented origin"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 7
+ }
+}

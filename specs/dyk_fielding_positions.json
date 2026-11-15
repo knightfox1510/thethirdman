@@ -1,0 +1,296 @@
+{
+ "slug": "dyk_fielding_positions",
+ "theme": "stadium",
+ "captions": "v2",
+ "captions_long": false,
+ "series": "didyouknow",
+ "tag": "DID YOU KNOW?",
+ "tagsub": "EP. 1 · FIELDING POSITIONS",
+ "files": {
+  "long": "Did_You_Know_Ep01_unused",
+  "short": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "DID YOU KNOW? · EP. 1",
+  "lines": [
+   {
+    "t": "WHERE IS"
+   },
+   {
+    "t": "THIRD MAN?",
+    "c": "gold"
+   }
+  ],
+  "hero": "?",
+  "herosize": 420
+ },
+ "sources": [
+  "Definitions checked against two independent written sources: Wikipedia, 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket) (naming system; 'silly' per the Oxford English Dictionary; slips numbered outwards from the wicket-keeper) and 'Glossary of cricket terms' https://en.wikipedia.org/wiki/Glossary_of_cricket_terms (third man: behind the wicket-keeper on the off side, beyond slip and gully); and SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp (same points; third man's purpose, also stated by https://www.cricketwriter.com/cricket-fielding-positions-third-man/).",
+  "Neither source, and no other we found, documents why the position is called 'third man'; the video says the origin is not documented. Field plans are illustrative, for a right-handed batter (mirrored for a left-hander); positions are neither fixed nor precisely defined and fielders can stand anywhere. Figures: make_dyk_fielding.py."
+ ],
+ "venue": {
+  "time": "dusk",
+  "crowd": [
+   [
+    190,
+    235,
+    70
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    190,
+    235,
+    70
+   ]
+  ]
+ },
+ "short": [
+  {
+   "vo": "Third man. Silly mid-off. Deep backward square leg. Cricket's fielding names sound like nonsense. But they are a code, and once you can read it, you can read any field.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Cricket's fielding names",
+     "[are a code]"
+    ],
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "gully",
+     "point",
+     "cover",
+     "mid-off",
+     "mid-on",
+     "midwicket",
+     "square leg",
+     "fine leg",
+     "third man",
+     "deep midwicket",
+     "long-on"
+    ],
+    "batter_label": "right-hander",
+    "labels": false
+   }
+  },
+  {
+   "vo": "The first word gives the angle from the batter: leg, cover, mid-wicket, point.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Word one:",
+     "[the angle]"
+    ],
+    "fielders": [
+     "cover",
+     "midwicket",
+     "point",
+     "square leg"
+    ],
+    "batter_label": "right-hander",
+    "hl": [
+     "cover",
+     "midwicket"
+    ]
+   }
+  },
+  {
+   "vo": "A second word gives the distance. Short is closer. Deep or long is farther. And silly means so close that it looks dangerous, which is exactly where the name comes from.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Word two:",
+     "[the distance]"
+    ],
+    "fielders": [
+     "short leg",
+     "square leg",
+     "deep square leg",
+     "cover",
+     "deep cover"
+    ],
+    "batter_label": "right-hander",
+    "hl": [
+     "short leg",
+     "deep square leg"
+    ]
+   }
+  },
+  {
+   "vo": "Square means level with the batter, across the pitch. Backward and forward tilt the angle.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Square means",
+     "[level with the bat]"
+    ],
+    "fielders": [
+     "square leg",
+     "point",
+     "backward point",
+     "cover"
+    ],
+    "batter_label": "right-hander",
+    "hl": [
+     "square leg",
+     "point"
+    ]
+   }
+  },
+  {
+   "vo": "Close catchers have their own code. Slips are numbered outwards from the wicket-keeper: first slip, second slip, third slip. Together, the slip cordon.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Slips are numbered",
+     "[from the keeper]"
+    ],
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "3rd slip",
+     "gully"
+    ],
+    "batter_label": "right-hander",
+    "zones": [
+     {
+      "pos": [
+       "slip",
+       "2nd slip",
+       "3rd slip"
+      ],
+      "label": "slip cordon",
+      "at": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Third man stands behind the wicket, on the off side, far beyond the slips. His job: stop the edges that fly past them and race to the boundary.",
+   "scene": {
+    "type": "board",
+    "tone": "navy",
+    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "head": [
+     "Where is",
+     "[third man?]"
+    ],
+    "fielders": [
+     "keeper",
+     "slip",
+     "2nd slip",
+     "gully",
+     "third man"
+    ],
+    "batter_label": "right-hander",
+    "hl": [
+     "third man"
+    ],
+    "labels": true
+   }
+  },
+  {
+   "vo": "So why is it called third man? Honestly, nobody has a documented answer. The name is old, and the explanations you hear are only theories.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "WHY 'THIRD'?",
+     "lines": [
+      {
+       "t": "NO DOCUMENTED"
+      },
+      {
+       "t": "ANSWER.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "point",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Now you can read any field. Follow for more Did You Know.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "DID YOU KNOW?"
+     },
+     {
+      "t": "FOLLOW FOR MORE",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Fielding Positions Explained: Where Is Third Man? | Did You Know Ep 1 #Shorts",
+   "description": "Fielding positions explained: where is third man, and why are cricket's fielding names so strange? The names are a code: an angle word (leg, cover, mid-wicket, point) and a distance word (short, deep, long, silly). Slips are numbered outwards from the wicket-keeper; third man stands behind the wicket on the off side. Why is it called third man? No documented origin exists. Illustrative field plans for a right-handed batter. Sources: Wikipedia (Fielding (cricket); Glossary of cricket terms) and SportPlan's fielding positions guide.\n\n#DidYouKnow #CricketExplained #FieldingPositions #Shorts",
+   "tags": [
+    "fielding positions",
+    "cricket fielding positions explained",
+    "third man",
+    "silly point",
+    "slip cordon",
+    "cricket explained",
+    "Did You Know",
+    "cricket rules",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

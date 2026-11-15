@@ -57,6 +57,7 @@ EPISODES = {
     "kohli_2000_nz": ("data", "10", "Kohli vs New Zealand Milestone Watch"),
     "gambhir_player_coach": ("data", "11", "Gautam Gambhir, Player vs Coach"),
     "channel_trailer": ("channel", "00", "Welcome to The Third Man"),
+    "dyk_fielding_positions": ("didyouknow", "01", "Fielding Positions, Where Is Third Man"),
 }
 _S = {s[0]: s for s in SERIES}
 

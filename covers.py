@@ -61,7 +61,7 @@ POSE = {"myth_ep1_kohli_knockouts": "point", "myth_ep2_kohli_reinvention": "helm
         "stat_check_bumrah_rashid": "point", "bradman_ipl": "raise", "bumrah_vs_90s": "arms_wide", "dhoni_captain": "stand", "sachin_t20": "helmet", "aaryavir_sehwag": "helmet",
         "flip_abhishek_openers": "point", "flip_bumrah_52_tests": "arms_wide", "flip_mi_captains": "raise", "flip_root_same_point": "point", "anchor": "point",
         "powerplay_revolution": "point", "ipl_batting_evolution": "walk", "two_hundred": "raise", "india_160": "stand", "bumrah_economy": "arms_wide", "death_kings": "celebrate",
-        "rcb_back_to_back": "celebrate", "kohli_2000_nz": "raise", "gambhir_player_coach": "arms_wide"}
+        "rcb_back_to_back": "celebrate", "kohli_2000_nz": "raise", "gambhir_player_coach": "arms_wide", "dyk_fielding_positions": "point"}
 BOWLERS = {"henry_6balls", "santner_problem", "lab_ep2_bumrah_twin", "bumrah_vs_90s", "flip_bumrah_52_tests", "bumrah_economy", "death_kings"}     # bowlers wear a cap, not a helmet
 # Flips have no thumb block: their cover comes from the spec's own title and end card
 FLIP_COVER = {"flip_abhishek_openers": ("ABHISHEK VS", "THE WORLD'S OPENERS", "191.9"), "flip_bumrah_52_tests": ("BUMRAH VS", "THE BEST OF THE CENTURY", "19.79"),
