@@ -107,7 +107,8 @@
   };
   box.querySelector("#ttm-save").onclick = saveJson;
   // batch.js (same content-script world) drives these in batch mode
-  window.__ttm = { site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, render };
+  const meta = () => { for (const v of Object.values(store.pages)) { const d = v && v.props && v.props.appPageProps && v.props.appPageProps.data; if (d && d.match) return d.match; } return null; };
+  window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, render };
 
   const start = () => { document.body.appendChild(box); grabNext(); save(); render(); };
   // client-side tab switches do not reload the page: re-read on URL change

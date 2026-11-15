@@ -11,7 +11,7 @@
 3. Browser batch capture of Tier A pages (see tools/ttm-capture/README.md), then `python3 -m dataops.ingest <downloads folder>`.
 Known gaps found by the audit (Nov 2026): Cricsheet holds 219 of India's 601 Tests (nothing before Dec 2001), 529 of 1,088 ODIs (nothing before Jun 2002), 289 of 303 T20Is (no Afghanistan matches, one Sri Lanka, one Scotland missing). So all-time totals and records must come from Tier A, never from Cricsheet sums.
 
-## 3. Measures we can add (beyond approach, intent and risk)
+## 3. Measures (implemented in `dataops/measures.py` where Cricsheet ball-by-ball allows; the rest need the Cricinfo captures) (beyond approach, intent and risk)
 **Player profiles (e.g. a full Kohli career)**
 - Era-adjusted value: runs above the league average per innings, by year; peak and decline detection; rolling 20-innings form curve; age curve against peers.
 - Phase and matchup splits: powerplay / middle / death; pace vs spin, left- vs right-arm; record against the 10 bowlers he faced most; line, length and shot (Cricinfo captures); wagon-wheel scoring zones; control % (false-shot rate).
@@ -29,3 +29,6 @@ Known gaps found by the audit (Nov 2026): Cricsheet holds 219 of India's 601 Tes
 - Luck vs skill: Pythagorean expected wins, close-match record (under 10 runs / last over), schedule difficulty.
 - Comparison rules: same-format baseline per era, minimum sample sizes shown, same core players before / after, per-100-matches views.
 **Unique visuals we can make from our data** (nobody shows these): "team DNA" radars per coach, intent timelines, XI-stability trees, collapse maps, player-usage flows, matchup heat maps, hazard curves, expected-vs-actual results.
+
+## 4. What the captures give us per match (dataops/matchdata.py)
+Series and match ids, date, format, day/night, season, toss winner and choice, result and margin, scheduled overs; venue (id, name, town, country, capacity); both teams, home side, captains; umpires, TV and reserve umpire, referee; innings (runs, wickets, overs, extras by type, fours, sixes, dropped catches); playing XI with each player's roles, batting and bowling style, date of birth; bench / squad members and roles when the playing-XI tab is captured; every partnership, fall of wicket, DRS review (team, umpire, batter, outcome); ball-by-ball with line, length, shot, control and wagon-wheel where Cricinfo has it. Coaches and support staff were NOT in the match-page data of our first two captures; the batch mode also saves each series' squads page so we can see where (if anywhere) the site lists them: `matchdata` prints every key it finds with coach / staff / squad in its name under `unmapped`.

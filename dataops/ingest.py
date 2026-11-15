@@ -13,7 +13,15 @@ def main(folder):
         elif f.startswith(("page_", "list_")):
             dst = f"{ROOT}/data/reference/captures"; info = f"{len(d.get('tables', []))} tables, {len(d.get('links', d.get('matches', [])))} match links, title {d.get('title', '')[:50]!r}"
         else: continue
-        os.makedirs(dst, exist_ok=True); shutil.copy(os.path.join(folder, f), os.path.join(dst, f)); print(f"{f[:60]:60s} -> {os.path.relpath(dst, ROOT)}  {info}")
+        os.makedirs(dst, exist_ok=True); target = os.path.join(dst, f)
+        if os.path.exists(target):                                                 # never keep two copies of a match: replace only with a MORE complete capture
+            import hashlib
+            if hashlib.sha1(open(target, "rb").read()).digest() == hashlib.sha1(open(os.path.join(folder, f), "rb").read()).digest(): print(f"{f[:60]:60s} duplicate (identical): skipped"); continue
+            if f.startswith(("cricinfo_", "cricbuzz_")):
+                old = json.load(open(target, encoding="utf-8"))
+                if (len(old.get("comments", [])), len(old.get("pages", {}))) >= (len(d.get("comments", [])), len(d.get("pages", {}))) and old.get("schema", 1) >= d.get("schema", 1): print(f"{f[:60]:60s} existing capture is as complete or better: skipped"); continue
+        shutil.copy(os.path.join(folder, f), target); print(f"{f[:60]:60s} -> {os.path.relpath(dst, ROOT)}  {info}")
+    from . import store; idx = store.build(); print(f"index: {len(idx)} matches, {sum(r['complete'] for r in idx.values())} complete")
 
 
 if __name__ == "__main__":

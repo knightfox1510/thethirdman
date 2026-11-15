@@ -27,11 +27,15 @@ Tip: stay in one browser tab per match; the capture is kept while you move betwe
 Use the numbers for our own analysis and our own graphics. Do not copy Cricinfo's commentary text, charts or images into videos, and cross-check headline figures with the official scorecard (BCCI / NZC). Credit "ball-by-ball data: ESPNcricinfo" in the description sources.
 
 
-## Batch mode (v1.2)
-A second panel (bottom-left, "Third Man batch") works through a list of links in your own tab, at a human pace (random 4-25 s pauses, cap of 20 matches per run by default, never in parallel).
-- **Matches:** paste match links, one per line (or press **Add links on this page** on a series / results page), press **Start**. For each match it opens the commentary, scorecard and statistics tabs, loads all commentary, and downloads the same `cricinfo_<id>_<match>.json` / `cricbuzz_...json` as the manual flow. The log shows balls per match and flags a low count (an ODI is about 600).
-- **Other pages:** paste any other link (a player's stats page, a Statsguru / records table, a team results list) and it saves that page as `page_<site>_<path>.json` (tables, page data, text, match links). Use it to capture the official results list of a team for a date range or a player's career summary: these are the reference data `dataops/audit.py` checks our archive against.
-- **Save this list** saves just the match links and result text of the page you are on; **Save this page** saves the current page once.
-- **Stops by itself** on a captcha / access-denied page (solve it, press Start again) and when you press Stop. Progress survives page loads.
-- Not tested against the live sites from our side (they block our servers): after the first batch, check the log's ball counts and tell us if a tab name changed (`TABS` at the top of batch.js).
-- Same rules as before: your own browser, our own analysis and graphics, no republishing of their text or images. These sites' terms restrict automated collection, so keep runs small and paced.
+## Batch and crawl mode (v1.3)
+A second panel (bottom-left, "Third Man batch") works through a queue of links in your own tab at a human pace (random 4-25 s pauses, cap per run, never parallel). It recognises each link:
+- **Match:** opens the scorecard, **playing XI** (squad / bench / roles when the site has them), ball-by-ball commentary (skipped for old matches that have none) and statistics, and downloads one `cricinfo_<id>_<match>.json`.
+- **Series page:** collects the match links on it (fixtures and results) and queues the ones not yet captured.
+- **A team's season / results list** (e.g. `https://www.cricinfo.com/ci/engine/series/index.html?search=india;view=season`): collects every series link on it and queues them. Set **from year** to limit how far back to go. Series then queue their matches. So one link can build a whole team's history; it runs over several sessions (press Start again, the queue and progress are kept).
+- **Any other page** (a player's stats page such as `.../cricketers/abhishek-sharma-1070183/bowling-batting-stats`, a records table): saved as `page_*.json` with its tables and page data, and with every format tab / filter clicked through (Tests, ODIs, T20Is, IPL ...).
+- **Queue links on this page / Save this page** do the same manually.
+- **Never captured twice:** finished matches and series are remembered in the browser; **Import known ids** seeds it with what the repo already holds (`python3 -m dataops.store known`, paste the output); a match is only re-done if it was captured live / incomplete or with an older capture version. In the repo, `python3 -m dataops.ingest <downloads folder>` keeps one file per match and replaces it only with a more complete capture; `python3 -m dataops.store missing` lists the incomplete ones.
+- **Stops by itself** on a captcha / access-denied page (solve it, press Start) and when you press Stop. Matches that were still live are never marked done.
+- Rough pace: about 1-1.5 minutes per match, so 300 matches is several hours over a few sessions. Old matches (pre-2000s) have a scorecard and no ball-by-ball and are quicker.
+- Not tested against the live sites from our side (they block our servers). Run 3 matches first, ingest them, and check `python3 -m dataops.matchdata --all` for what each capture holds. If a tab name changed, fix `TABS` at the top of batch.js.
+- Same rules as before: your own browser, our own analysis and graphics, no republishing of their text or images. The sites' terms restrict automated collection: keep runs small and paced.
