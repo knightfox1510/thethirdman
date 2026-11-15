@@ -354,6 +354,30 @@
    "status": "Ready",
    "link": null,
    "notes": "Built 14 Nov; whole long-video story in 9:16; over 3 min so post as a regular video, not a Reel; end card: full breakdown on YouTube, link in bio; caption on Drive (Instagram/)"
+  },
+  {
+   "date": "2026-11-16",
+   "platform": "YouTube long",
+   "content": "Gautam Gambhir: Player vs Coach | The Full Data Story",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 15 Nov; 4:25; on Drive (Series/09 Data Stories/Ep11). Not uploaded; verify coach record vs ESPNcricinfo first"
+  },
+  {
+   "date": "2026-11-16",
+   "platform": "YouTube Short + IG Reel",
+   "content": "Gautam Gambhir: Player vs Coach | Who Did It Better? #Shorts",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 15 Nov; YT + IG versions and caption on Drive. Not uploaded"
+  },
+  {
+   "date": "2026-11-16",
+   "platform": "Instagram long video",
+   "content": "Gautam Gambhir: Player vs Coach (IG full-length)",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 15 Nov; end card: follow YouTube, link in bio; caption on Drive (Instagram/)"
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-14",
+ "synced": "2026-11-15",
  "videos": {
   "myth_ep1_kohli_knockouts": {
    "state": "posted",
@@ -2319,6 +2319,105 @@
     }
    ]
   },
+  "gambhir_player_coach": {
+   "state": "not posted",
+   "series": "09 Data Stories",
+   "episode": "Ep11 - Gautam Gambhir, Player vs Coach",
+   "folder": "https://drive.google.com/drive/folders/1FRpK0fVJzyENku3jJWLsw_Su9igW1KbO",
+   "files": [
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1v2xTkfCcPn5ngBbgQZZQNYnX6MTd4Ug6/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1qeoOwEjAR6sjJGvuCCF7NVI9WsUBnRLl/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1yl2U6xdYmsbsLEQpvAxGq4N4NwkF8Le0/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 98.5,
+     "url": "https://drive.google.com/file/d/19eII0p3HD5WO0IIS4HOWNY_4uhSQK3tP/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1nWzoKun7NIuee4OUh3xtg1AhBgwfVVdI/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1pDxlyaJ8MwVPrC7asPWZAB9k-NBm7we-/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long_IG.mp4",
+     "kind": "long",
+     "platform": "Instagram",
+     "mb": 11.4,
+     "url": "https://drive.google.com/file/d/1BI3-3HSL1Unf2QTm98Hdyidu4wQePzlt/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1MXNkzImc8C6JS7IACNOK39mYlX1RpM7h/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1IGjbitcf23XcWedEawVqHYRqZdvkBdAX/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 99.2,
+     "url": "https://drive.google.com/file/d/1c9wt0UQas1XAHpwgt2N5H1C6FIzgaErh/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1peVkMLvKFuVwccJjHV6jcvb3opRrZyIl/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1MSdwMm_b8AB6t1WD7yrK-MDC2CRrIKbu/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep11_Gautam_Gambhir_Player_vs_Coach_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 11.5,
+     "url": "https://drive.google.com/file/d/1wCd6pTujX81XFtdtXYYbz4WhGGbx4m3a/view?usp=drivesdk"
+    }
+   ]
+  },
   "channel_trailer": {
    "state": "posted",
    "series": "10 Channel",
@@ -2462,7 +2561,8 @@
     "death_kings",
     "rcb_back_to_back",
     "hardik_arshdeep",
-    "kohli_2000_nz"
+    "kohli_2000_nz",
+    "gambhir_player_coach"
    ]
   },
   "10 Channel": {
