@@ -534,7 +534,7 @@
  ],
  "short": [
   {
-   "vo": "Third man. The fielder far behind the wicket, on the off side. Why is he called that? Nobody has proved it.",
+   "vo": "Third man. Picture the field from above. The bowler is at the top, the batter at the bottom, the wicket-keeper just behind the stumps. Now look far behind the wicket, on the off side, near the boundary. That lonely fielder is third man.",
    "scene": {
     "type": "plate",
     "plate": "I",
@@ -575,11 +575,11 @@
      "DID YOU",
      "KNOW?"
     ],
-    "stamp_at": 0.7
+    "stamp_at": 0.8
    }
   },
   {
-   "vo": "His job: stop the edge that beats the slips and races to the boundary.",
+   "vo": "Why stand all the way back there? Because bats have edges. A thick edge, or a deliberate steer, can beat the slips and race away. Third man is the last line of defence, turning a certain four into a few runs, or none.",
    "scene": {
     "type": "plate",
     "plate": "II",
@@ -625,17 +625,50 @@
       "lx": -60,
       "ly": 90
      }
+    ],
+    "note": [
+     "the last line of defence"
     ]
    }
   },
   {
-   "vo": "You will hear four theories: overarm bowling, the gap beside the gully, a slip pushed back, a third man on the boundary. None cites a source.",
+   "vo": "And who is he? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he gets a moment to recover.",
+   "scene": {
+    "type": "plate",
+    "plate": "III",
+    "title": "Who stands there?",
+    "sub": "often a fast bowler, between his overs",
+    "figures": [
+     {
+      "p": "bowler",
+      "fig": null,
+      "xy": [
+       0.06,
+       -0.42
+      ]
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man (a bowler resting)",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "the quiet corner of the field"
+    ]
+   }
+  },
+  {
+   "vo": "So why is he called third? Four explanations circulate: overarm bowling, the gap beside the gully, a slip pushed back, or the third fielder on the boundary. Plausible. But none cites a source.",
    "scene": {
     "type": "plate_page",
     "kicker": "THE NAME",
     "title": "Four theories",
     "body": "Overarm bowling. The gap beside the gully. A slip pushed back. The third fielder on the boundary.",
-    "margin": "None has a source.",
+    "margin": "Plausible. None has a source.",
     "figures": [
      {
       "p": "slip",
@@ -667,14 +700,18 @@
    }
   },
   {
-   "vo": "What we can prove: Lillywhite's Cricketers' Companion, eighteen eighty-four, already says: getting a third man as well as a mid-on.",
+   "vo": "What we can prove: James Lillywhite's Cricketers' Companion, printed in eighteen eighty-four, says it is the fashion to dispense with the long-stop, thereby getting a third man as well as a mid-on. So the name is at least that old.",
    "scene": {
     "type": "plate_page",
     "kicker": "A PRINTED SOURCE",
     "title": "In print by 1884",
-    "body": "\"...thereby getting a 'third man' as well as 'mid-on'...\"  James Lillywhite's Cricketers' Companion, 1884",
+    "body": "\"...to dispense with long-stop, thereby getting a 'third man' as well as 'mid-on'...\"  James Lillywhite's Cricketers' Companion, 1884",
     "margin": "The earliest mention we found.",
     "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
      {
       "p": "third man",
       "fig": null,
@@ -692,7 +729,7 @@
    }
   },
   {
-   "vo": "And in two thousand three, सचिन तेंदुलकर upper-cut शोएब अख़्तर over third man for six, on his way to ninety-eight, as India beat Pakistan.",
+   "vo": "And a famous moment: the World Cup, Centurion, two thousand three. In India's second over, सचिन तेंदुलकर upper-cuts शोएब अख़्तर over third man for six. He makes ninety-eight, and India beat Pakistan by six wickets.",
    "scene": {
     "type": "plate_list",
     "plate": "IV",
@@ -717,7 +754,7 @@
    }
   },
   {
-   "vo": "Want the full story? Subscribe to The Third Man on YouTube.",
+   "vo": "Next time the ball flies past the slips, look for him: a simple job, and a name nobody can explain. Subscribe to The Third Man on YouTube for more Did You Know.",
    "scene": {
     "type": "cta",
     "lines": [

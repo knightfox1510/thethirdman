@@ -1,7 +1,7 @@
 # Did You Know? : series plan and backlog
 
 **What it is:** one surprising or misunderstood thing about cricket per video. Short answer first, then the Law, then a drawn example, then the twist. Evergreen, searchable ("can a batter be out for ...", "what is a silly mid-off"), and topical when the thing happens in a match.
-**Format:** Short 40-75 s (main), IG version as usual; occasional 3-4 min long by theme. Hook: the question on screen in 2 seconds. Series colour lime, theme stadium, field plans from the Tactics Board (labelled Illustrative).
+**Format:** Short 90-120 s, explanatory (about 200-260 words: what it is, where it is, why it exists, the twist), IG version as usual; occasional 3-4 min long by theme. Hook: the question on screen in 2 seconds. Series colour lime, theme stadium, field plans from the Tactics Board (labelled Illustrative).
 
 ## Accuracy workflow (rules are the one thing we cannot get wrong)
 1. Find the Law in the MCC Laws of Cricket (current code) and, for format rules, the ICC Playing Conditions (Test / ODI / T20I). Two sources agree, or we do not publish.

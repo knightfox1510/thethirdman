@@ -57,7 +57,8 @@
   "fieldmap",
   "stumps",
   "flip",
-  "kinetic"
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -117,6 +118,7 @@
   "gambhir_player_coach__igshort": "fieldmap",
   "gambhir_player_coach__iglong": "stumps",
   "dyk_fielding_positions": "flip",
-  "dyk_fielding_positions__igshort": "kinetic"
+  "dyk_fielding_positions__igshort": "kinetic",
+  "dyk_third_man": "fieldmap"
  }
 }

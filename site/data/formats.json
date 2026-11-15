@@ -266,7 +266,7 @@
    "status": "new",
    "tag": "Rules, positions and the odd corners of cricket, explained",
    "pitch": "One surprising or misunderstood thing about cricket per video: a rule, a position, something a player can or cannot do, a strange dismissal. Short answer first, then the Law, then a drawn example.",
-   "length": "Short 40–75 s (the main product) + an occasional 3–4 min long compilation by theme (dismissals, fielding positions, no-balls ...)",
+   "length": "Short 90-120 s, EXPLANATORY (the main product: define the term, show it drawn, say why it matters, then the exception or twist) + a 3-4 min long for the bigger topics",
    "trigger": "Evergreen, plus topical hooks: post the matching episode when the thing happens in a match (a Mankad, a timed-out, a handled-ball, a concussion substitute, a DLS reset, a super over).",
    "data": "The Laws of Cricket (MCC, current code) for rules; the ICC Playing Conditions for format-specific rules (powerplays, DRS, over rates, concussion and impact substitutes); ESPNcricinfo / Wisden for history and first instances. A rule is quoted with its Law number and checked against two sources.",
    "look": "Theme stadium, stage scenes with the illustrated players; Tactics Board field plans (labelled Illustrative) for positions; a big on-screen question as the hook; the Law number as a stamp. Series colour lime.",
@@ -288,7 +288,8 @@
     "Every rule is checked against the Laws of Cricket and, for format rules, the ICC Playing Conditions: two sources, Law number in the description.",
     "Say which version applies (Test / ODI / T20I / IPL) when rules differ, and the year of the Law if it changed recently.",
     "Never present a real incident as the \"first\" or \"only\" without a Tier A source.",
-    "Use our own drawings only; field plans labelled Illustrative."
+    "Use our own drawings only; field plans labelled Illustrative.",
+    "Shorts explain, they do not just state: about 200-260 words, one idea built in steps (what it is, where it is, why it exists, the twist). Under three minutes so Reels and Shorts stay eligible for recommendation."
    ]
   },
   {
