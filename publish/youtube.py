@@ -68,6 +68,10 @@ def main():
     base = spec["files"][a.fmt]
     video = os.path.join(out, base + ".mp4")
     if not os.path.exists(video): raise SystemExit(f"missing {video}: build it first")
+    sys.path.insert(0, ROOT)
+    from dataops import verify as _verify
+    _m = _verify.gate(spec)
+    if _m: raise SystemExit("data verification gate: " + _m)
     title, desc, tags = meta_for(spec, a.fmt)
     chap = os.path.join(out, base + ".chapters.txt")
     if a.fmt == "long" and os.path.exists(chap):      # YouTube turns timestamps in the description into chapters

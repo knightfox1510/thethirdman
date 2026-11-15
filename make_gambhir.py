@@ -59,6 +59,18 @@ assert round(max(gaps_exact)) == 15 and min(gaps_exact) > 0
 # series results from the Tests list (checked against Wikipedia's account: NZ 0-3, England 2-2, wins v Bangladesh and West Indies, loss to South Africa; Australia 1-3 and Sri Lanka 1-0 from the same results)
 print("all facts asserted", REC)
 
+# ---------------------------------------------------------------- verification gate (dataops/verify.py)
+from dataops import verify as V
+Vc = V.Claims("gambhir_player_coach")
+# second sources found so far: none for the coach-record window (Wikipedia/ESPNcricinfo give all-time totals only). The all-time audit shows Cricsheet misses 14 India T20Is
+# (every one against Afghanistan, plus one each v Sri Lanka and Scotland), so the T20I window total may be short. Until a Cricinfo capture of India's results since 27 Jul 2024 exists these stay UNVERIFIED.
+Vc.check("India Tests since 27 Jul 2024 W-L-D", (8, 10, 3), {"cricsheet": (8, 10, 3)}, scope="archive")
+Vc.check("India ODIs since 27 Jul 2024 W-L-T", (15, 10, 1), {"cricsheet": (15, 10, 1)}, scope="archive")
+Vc.check("India T20Is since 27 Jul 2024 W-L-NR (super-over wins counted as wins)", (48, 16, 4), {"cricsheet": (48, 16, 4)}, scope="archive")
+Vc.check("Player career: Tests 4154 runs", 4154, {"wikipedia": 4154, "cricsheet": None})
+Vc.check("Player career: ODIs 5238 runs", 5238, {"wikipedia": 5238, "cricsheet": None})
+Vc.check("IPL 2013-17 runs", 2068, {"sportmonks": 2068}, scope="archive")
+
 # ---------------------------------------------------------------- scenes
 def S(vo, sc, **kw): return dict({"vo": vo, "scene": sc}, **kw)
 def stage(vo, panel, av, **kw): return S(vo, dict({"type": "stage", "panel": dict(panel, at=.05), "avatars": av}, **kw))
@@ -138,6 +150,7 @@ spec = {"slug": "gambhir_player_coach", "theme": "stadium", "theme_long": "lab",
         "sources": SRC, "venue": VEN, "long": long, "short": short,
         "yt": {"long": {"title": "Gautam Gambhir: Player vs Coach | The Full Data Story", "description": DESC_L, "tags": TAGS},
                "short": {"title": "Gautam Gambhir: Player vs Coach | Who Did It Better? #Shorts", "description": DESC_S, "tags": TAGS}}}
+Vc.save(spec)
 voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/gambhir_player_coach.json", "w"), ensure_ascii=False, indent=1)
 print("wrote specs/gambhir_player_coach.json: long", sum(len(x["vo"].split()) for x in long), "words;", "short", sum(len(x["vo"].split()) for x in short), "words")

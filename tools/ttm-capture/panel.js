@@ -78,8 +78,7 @@
     if (el) el.textContent = `${n} balls captured · tabs: ${tabs}`;
   };
 
-  box.querySelector("#ttm-scroll").onclick = async (e) => {
-    const btn = e.target; btn.disabled = true;
+  const loadAll = async (btn) => {
     let last = -1, still = 0;
     while (still < 4) {
       window.scrollTo(0, document.body.scrollHeight);
@@ -88,12 +87,11 @@
       await new Promise((r) => setTimeout(r, 1500));
       const n = Object.keys(store.comments).length;
       still = n === last ? still + 1 : 0; last = n;
-      btn.textContent = `Loading… ${n} balls`;
+      if (btn) btn.textContent = `Loading… ${n} balls`;
     }
-    btn.textContent = "Load all commentary"; btn.disabled = false;
+    return Object.keys(store.comments).length;
   };
-
-  box.querySelector("#ttm-save").onclick = () => {
+  const saveJson = () => {
     grabNext(); grabText();
     store.saved_at = new Date().toISOString(); store.page_url = location.href;
     const out = { ...store, comments: Object.values(store.comments) };
@@ -101,7 +99,15 @@
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob); a.download = `${SITE}_${matchId}_${matchSlug}.json`;
     document.body.appendChild(a); a.click(); a.remove();
+    return Object.keys(store.comments).length;
   };
+  box.querySelector("#ttm-scroll").onclick = async (e) => {
+    const btn = e.target; btn.disabled = true; await loadAll(btn);
+    btn.textContent = "Load all commentary"; btn.disabled = false;
+  };
+  box.querySelector("#ttm-save").onclick = saveJson;
+  // batch.js (same content-script world) drives these in batch mode
+  window.__ttm = { site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, render };
 
   const start = () => { document.body.appendChild(box); grabNext(); save(); render(); };
   // client-side tab switches do not reload the page: re-read on URL change

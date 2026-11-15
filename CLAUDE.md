@@ -73,6 +73,12 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - Flip - the benchmark flip format (flips.py).
 make_series.py re-homes classic Shorts into a series (originals stay in short_classic).
 
+## Data verification (owner rule, Nov 2026: credibility first)
+- No number in a video unless it passes `dataops/verify.py`: two independent sources agree (Tier A Cricinfo/ICC/board > Tier B Cricsheet/Sportmonks > Tier C Wikipedia), or the video says "in our archive" for a single-source number. New generators call `Claims.check(...)` for every headline number and `Claims.save(spec)`; specs with `provenance_required` are blocked at build (engine.py) and upload (publish/youtube.py) while any claim is UNVERIFIED or in CONFLICT.
+- Before any career / record / coach-tenure claim, run the coverage audit (`python3 -m dataops.audit team <Team> [--since D]`, `player "<Cricsheet name>" "<Wikipedia title>"`). Cricsheet is NOT complete: no Tests/ODIs before 2001-02, and recent gaps exist (e.g. no India v Afghanistan T20Is). Totals, records and "first/only/never" come from Tier A. See docs/DATA_PLAN.md.
+- Define terms in the claim: a super-over result is a tie in Cricinfo's tables (Wikipedia: Tie+Win); media call it a win. Say which.
+- Tier A capture: the extension's batch mode (tools/ttm-capture) in the owner's browser; `python3 -m dataops.ingest <folder>`.
+
 ## Accuracy lessons
 - Sportmonks bowled dismissals have no out_id, and non-striker run-outs are not striker_out: count a batter's dismissals as (out_id == batter) or (out_id missing and striker_out). See analysis/lab_twin.py.
 - Cricsheet is a partial sample: e.g. men's ODIs by year run from 44 to 195 matches, 49 of the 54 2003 World Cup matches are present, and nothing exists before mid-2002. Use it for large-sample baselines (check they are stable across eras) and label them "in our archive". NEVER make a "never / first / only / record / lowest" claim from Cricsheet alone: check ESPNcricinfo records or a news source first (the "three wickets in a first over had never happened" error, Nov 2026: Vaas did it in 2003).

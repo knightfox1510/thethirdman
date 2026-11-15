@@ -25,3 +25,13 @@ Tip: stay in one browser tab per match; the capture is kept while you move betwe
 
 ## Use of the data
 Use the numbers for our own analysis and our own graphics. Do not copy Cricinfo's commentary text, charts or images into videos, and cross-check headline figures with the official scorecard (BCCI / NZC). Credit "ball-by-ball data: ESPNcricinfo" in the description sources.
+
+
+## Batch mode (v1.2)
+A second panel (bottom-left, "Third Man batch") works through a list of links in your own tab, at a human pace (random 4-25 s pauses, cap of 20 matches per run by default, never in parallel).
+- **Matches:** paste match links, one per line (or press **Add links on this page** on a series / results page), press **Start**. For each match it opens the commentary, scorecard and statistics tabs, loads all commentary, and downloads the same `cricinfo_<id>_<match>.json` / `cricbuzz_...json` as the manual flow. The log shows balls per match and flags a low count (an ODI is about 600).
+- **Other pages:** paste any other link (a player's stats page, a Statsguru / records table, a team results list) and it saves that page as `page_<site>_<path>.json` (tables, page data, text, match links). Use it to capture the official results list of a team for a date range or a player's career summary: these are the reference data `dataops/audit.py` checks our archive against.
+- **Save this list** saves just the match links and result text of the page you are on; **Save this page** saves the current page once.
+- **Stops by itself** on a captcha / access-denied page (solve it, press Start again) and when you press Stop. Progress survives page loads.
+- Not tested against the live sites from our side (they block our servers): after the first batch, check the log's ball counts and tell us if a tab name changed (`TABS` at the top of batch.js).
+- Same rules as before: your own browser, our own analysis and graphics, no republishing of their text or images. These sites' terms restrict automated collection, so keep runs small and paced.

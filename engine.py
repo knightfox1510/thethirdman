@@ -994,6 +994,9 @@ def build(spec_path, fmt):
     import voice_lint
     errs = voice_lint.check_spec(spec, (fmt,))
     if errs: raise SystemExit("pronunciation rules (run python3 voice_lint.py --fix):\n  " + "\n  ".join(errs))
+    from dataops import verify as _verify                                   # data gate: every claim needs two sources or an on-screen 'in our archive' label
+    _m = _verify.gate(spec)
+    if _m: raise SystemExit("data verification gate: " + _m)
     apply_theme(theme_for(spec, fmt))
     base = f"{ROOT}/out/{slug}/{fmt}"; os.makedirs(base, exist_ok=True)
     scenes = spec[fmt]
