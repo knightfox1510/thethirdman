@@ -26,6 +26,9 @@ def parse(path):
         s = state.setdefault(inn, {"score": 0, "ball": 0, "wkts": 0})
         text = re.sub(r"B\d\$", "", c["commText"]).strip()
         m = re.match(r"^(.*?) to (.*?),", text); bowler, batter = (m.group(1).strip(), m.group(2).strip()) if m else ((c.get("bowlerStriker") or {}).get("bowlName", ""), (c.get("batsmanStriker") or {}).get("batName", ""))
+        sb, sw = (c.get("batsmanStriker") or {}).get("batName", ""), (c.get("bowlerStriker") or {}).get("bowlName", "")        # the structured full names win over the commentary's short forms ("Rahul", "Nicholls")
+        if sb: batter = sb
+        if sw: bowler = sw
         score = c.get("batTeamScore", s["score"]); runs = score - s["score"]
         legal = c["ballNbr"] != s["ball"]
         ev = c.get("event") or ""

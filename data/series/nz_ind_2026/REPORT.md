@@ -1,6 +1,6 @@
 # NZ v IND ODI series 2026: analysis of the 4th and 5th ODIs (Bay Oval), in the context of the series
 
-Everything below is derived by code from our own tables (`data/series/nz_ind_2026/`); series context for matches 1-3 is from Wikipedia (which cites Cricinfo match reports). Matches 4 and 5 are ball by ball (Cricbuzz captures; the 4th also has an independent Cricinfo capture that agrees over by over). Win probability is from a model fitted on the Cricsheet ODI archive (see Method).
+Everything below is derived by code from our own tables (`data/series/nz_ind_2026/`); series context for matches 1-3 is from Wikipedia (which cites Cricinfo match reports). Matches 1, 2, 4 and 5 are ball by ball (Cricbuzz captures; the 4th also has an independent Cricinfo capture that agrees over by over); this report covers the 4th and 5th in depth, SERIES.md the whole series. Win probability is from a model fitted on the Cricsheet ODI archive (see Method).
 
 ## Headlines
 
@@ -17,13 +17,13 @@ Everything below is derived by code from our own tables (`data/series/nz_ind_202
 
 | # | Date | Venue | Result | Player of the match | Ball by ball? |
 |---|---|---|---|---|---|
-| 1 | 2026-11-04 | Eden Park, Auckland | India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32 | Anshul Kamboj | no |
-| 2 | 2026-11-07 | Wellington Regional Stadium | India won by 4 runs (DLS): NZ 134 (41), India 113/7 (26), par 109 | Gurnoor Brar (4/30) | no |
+| 1 | 2026-11-04 | Eden Park, Auckland | India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32 | Anshul Kamboj | yes |
+| 2 | 2026-11-07 | Wellington Regional Stadium | India won by 4 runs (DLS): NZ 134 (41), India 113/7 (26), par 109 | Gurnoor Brar (4/30) | yes |
 | 3 | 2026-11-10 | Seddon Park, Hamilton | No result (rain, no play) | - | no |
 | 4 | 2026-11-13 | Bay Oval, Mount Maunganui | New Zealand won by 244 runs: NZ 333, India 89 (26.4) | Matt Henry (6/27) | yes |
 | 5 | 2026-11-15 | Bay Oval, Mount Maunganui | India won by 22 runs: India 209 (42.1), NZ 187 (48.1) | Arshdeep Singh (3/30) | yes |
 
-Source: Wikipedia, 'Indian cricket team in New Zealand in 2026-27' (Tier C; cites Cricinfo match reports); matches 4 and 5 are also in our own captures. India won the series 3-1 (one no result). Matches 1-3 are not captured ball by ball: capture them (Cricinfo series 1539421, matches 1539437 / 1539438 / 1539439) to extend every table here to the full series.
+Source: Wikipedia, 'Indian cricket team in New Zealand in 2026-27' (Tier C; cites Cricinfo match reports); matches 4 and 5 are also in our own captures. India won the series 3-1 (one no result). The 3rd ODI had no play (rain). Matches 1, 2, 4 and 5 are ball by ball: the whole series is in SERIES.md.
 
 ## The 5th ODI in detail
 
@@ -183,14 +183,14 @@ New Zealand scored 333 after India dropped Will Young twice in the second over, 
 - **Toss:** the side winning the toss chose to field in all five matches (Wikipedia: India in 1-4, New Zealand in 5). In the two we have ball by ball, the side batting first won the 4th (NZ, 333) and the 5th (India, 209): defending, not chasing, produced the results at Bay Oval.
 - **Catching** is a recurring theme: in the two matches we hold, India dropped 3 chances in the 4th and 2 in the 5th, and New Zealand 1 and 2. A Cricbuzz note during the 5th ODI chase says India had made 14 misfields and dropped eight catches in the series so far (catching efficiency 74.1%): a lead for the whole series, which we can only confirm once matches 1-3 are captured.
 - **Kohli's series:** Wikipedia lists him as India's leading run-scorer with 86; the Cricbuzz notes say the 5th ODI gave him a third single-digit score in the series. (Both leads: from the 4th (0) and 5th (5) we have, the other two innings are not ours.)
-- **Not computed:** series batting/bowling leaderboards, trends over five matches, and any claim about matches 1-3, because we do not hold them ball by ball. Capture them and re-run `analysis/nz_ind_*.py`.
+- **See SERIES.md** for the leaderboards, powerplay table, drops and catches across the four matches that were played.
 
 ## Video angles this supports (all numbers above are code-derived; check against Cricinfo before use)
 
 1. **"The 22% win"**: India defended 209 against a model's 78% chase: the Santner moment (27 points), the drops (net 24 runs against a 22-run margin), the dot-ball squeeze. Long + Short.
 2. **"Two days at Bay Oval"**: the 4th v 5th table: same ground, same toss decision, opposite results; India's pace plan, NZ's spin plan. Long.
 3. **"The hidden winner"**: Naman Dhir's 2-0-4-1 (and Yash Thakur's debut, "two in two" at 30.6/31.1: Nabi's Bracewell then Thakur's Foxcroft, a combined 39-point swing). Short.
-4. **"The cost of a drop"**: Will Young, 125 after two chances in two balls. A Data Story across the series once matches 1-3 are captured.
+4. **"The cost of a drop"**: Will Young, 125 after two chances in two balls. A Data Story across the series (SERIES.md: India dropped eight chances in four matches, the batters let off first scored 244 more runs).
 
 ## Method, validation and limits
 

@@ -6,8 +6,9 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np
 from dataops import winprob
 
+from analysis_cfg_shim import *  # noqa
 OUT = "data/series/nz_ind_2026"; M = winprob.load()
-MATCHES = {"nz_ind_4odi": {"india_bats": 2, "label": "4th ODI"}, "nz_ind_5odi": {"india_bats": 1, "label": "5th ODI"}}
+MATCHES = {k: {"india_bats": INFO[k]["india_bats"], "label": INFO[k]["label"], "revision": INFO[k].get("revision")} for k in STEMS}
 
 
 def read(stem):
@@ -19,14 +20,16 @@ def read(stem):
 
 
 def trajectory(stem):
-    rows = read(stem); ib = MATCHES[stem]["india_bats"]; target = max(r["score_after"] for r in rows if r["inning"] == 1) + 1
+    rows = read(stem); ib = MATCHES[stem]["india_bats"]; target = max(r["score_after"] for r in rows if r["inning"] == 1) + 1; rev = MATCHES[stem].get("revision")
     out = []
     p0 = {1: float(M.p_first(0, 300, 0)[0]), 2: float(M.p_chase(target, 300, 0)[0])}
     prev = {1: p0[1], 2: p0[2]}; legal = {1: 0, 2: 0}
     for r in rows:
         inn = r["inning"]; legal[inn] += r["legal"]; left = 300 - legal[inn]
         if inn == 1: wp = float(M.p_first(r["score_after"], left, r["wkts_after"])[0])
-        else: wp = float(M.p_chase(target - r["score_after"], left, r["wkts_after"])[0])
+        else:
+            tg, tot = (rev["target"], rev["balls_total"]) if (rev and legal[2] >= rev["after_legal_ball"]) else (target, 300)           # a rain-revised chase: the DLS target and the shorter innings
+            wp = float(M.p_chase(tg - r["score_after"], tot - legal[2], r["wkts_after"])[0])
         wp_india = wp if inn == ib else 1 - wp                         # win probability of the side batting that innings, restated for India
         if inn == 1: bat_wp = wp; prev_india = prev[1] if ib == 1 else 1 - prev[1]
         else: prev_india = prev[2] if ib == 2 else 1 - prev[2]

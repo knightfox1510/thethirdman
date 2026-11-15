@@ -1,4 +1,416 @@
 {
+ "nz_ind_1odi": {
+  "curve": [
+   {
+    "inning": 1,
+    "after_over": 5,
+    "score": "22/1",
+    "india_wp": 0.5744
+   },
+   {
+    "inning": 1,
+    "after_over": 10,
+    "score": "45/2",
+    "india_wp": 0.6181
+   },
+   {
+    "inning": 1,
+    "after_over": 15,
+    "score": "79/3",
+    "india_wp": 0.5777
+   },
+   {
+    "inning": 1,
+    "after_over": 20,
+    "score": "95/4",
+    "india_wp": 0.6546
+   },
+   {
+    "inning": 1,
+    "after_over": 25,
+    "score": "109/5",
+    "india_wp": 0.7303
+   },
+   {
+    "inning": 1,
+    "after_over": 30,
+    "score": "124/7",
+    "india_wp": 0.8354
+   },
+   {
+    "inning": 1,
+    "after_over": 35,
+    "score": "146/8",
+    "india_wp": 0.8343
+   },
+   {
+    "inning": 1,
+    "after_over": 40,
+    "score": "185/9",
+    "india_wp": 0.7527
+   },
+   {
+    "inning": 1,
+    "after_over": 41,
+    "score": "185/10",
+    "india_wp": 0.7942
+   },
+   {
+    "inning": 2,
+    "after_over": 5,
+    "score": "31/1",
+    "india_wp": 0.9566
+   },
+   {
+    "inning": 2,
+    "after_over": 10,
+    "score": "49/1",
+    "india_wp": 0.9736
+   },
+   {
+    "inning": 2,
+    "after_over": 15,
+    "score": "90/1",
+    "india_wp": 0.9962
+   },
+   {
+    "inning": 2,
+    "after_over": 20,
+    "score": "124/4",
+    "india_wp": 0.9959
+   },
+   {
+    "inning": 2,
+    "after_over": 23,
+    "score": "143/5",
+    "india_wp": 1.0
+   }
+  ],
+  "tipping_point": {
+   "over": 4.3,
+   "inning": 1,
+   "score": "22/1",
+   "india_wp": 0.5646,
+   "text": "Arshdeep Singh to Will Young,  Caught by Shreyas Iyer!!  He's not going to drop this one! The left-arm seamer goes short of a length, and Young attempts the pul"
+  },
+  "india_wp_extremes": {
+   "min": 0.4451,
+   "min_at": "inn1 over 4.2 (22/0)",
+   "max": 1.0,
+   "max_at": "inn2 over 22.4 (143/5)"
+  },
+  "chase_checkpoints": [
+   {
+    "after_over": 10,
+    "score": "49/1",
+    "need": 137,
+    "balls_left": 240,
+    "required_rate": 3.42,
+    "run_rate_so_far": 4.9
+   },
+   {
+    "after_over": 20,
+    "score": "124/4",
+    "need": 62,
+    "balls_left": 180,
+    "required_rate": 2.07,
+    "run_rate_so_far": 6.2
+   },
+   {
+    "after_over": 22,
+    "score": "143/5",
+    "need": 43,
+    "balls_left": 164,
+    "required_rate": 1.57,
+    "run_rate_so_far": 6.31
+   }
+  ],
+  "fielding": {
+   "Shreyas Iyer": {
+    "catches": 2,
+    "catch_swing": 0.155
+   },
+   "Mitchell Santner": {
+    "catches": 1,
+    "catch_swing": 0.129
+   },
+   "Naman Dhir": {
+    "catches": 1,
+    "catch_swing": 0.113
+   },
+   "Ruturaj Gaikwad": {
+    "catches": 1,
+    "catch_swing": 0.105
+   },
+   "Virat Kohli": {
+    "catches": 2,
+    "catch_swing": 0.096
+   },
+   "Rahul": {
+    "catches": 1,
+    "catch_swing": 0.038
+   },
+   "Glenn Phillips": {
+    "catches": 1,
+    "catch_swing": 0.003
+   },
+   "Nicholls": {
+    "catches": 1,
+    "catch_swing": 0.001
+   },
+   "Tom Latham": {
+    "catches": 1,
+    "catch_swing": 0.001
+   },
+   "Tim Seifert": {
+    "catches": 1,
+    "catch_swing": 0.001
+   }
+  },
+  "collapse_windows": {
+   "1": {
+    "most_wickets_in_10_overs": 4,
+    "runs_in_that_window": 35,
+    "from_over": 25.5,
+    "to_over": 35.4
+   },
+   "2": {
+    "most_wickets_in_10_overs": 4,
+    "runs_in_that_window": 29,
+    "from_over": 17.6,
+    "to_over": 22.4
+   }
+  },
+  "hidden": {
+   "definition": "hidden winner: top-4 win-probability added but outside the top-4 of a plain scorecard rank (runs + 20 x wickets); hidden loser: bottom-5 win-probability added although inside the scorecard top-6",
+   "winners": [
+    {
+     "player": "Anshul Kamboj",
+     "team": "India",
+     "wpa": 0.141,
+     "wpa_rank": 2,
+     "card_rank": 5,
+     "line": "0 (0); 2/22 in 10.0"
+    },
+    {
+     "player": "Daryl Mitchell",
+     "team": "New Zealand",
+     "wpa": 0.1,
+     "wpa_rank": 4,
+     "card_rank": 10,
+     "line": "28 (41); 0/0 in 0.0"
+    }
+   ],
+   "losers": []
+  }
+ },
+ "nz_ind_2odi": {
+  "curve": [
+   {
+    "inning": 1,
+    "after_over": 5,
+    "score": "7/1",
+    "india_wp": 0.6915
+   },
+   {
+    "inning": 1,
+    "after_over": 10,
+    "score": "29/3",
+    "india_wp": 0.8106
+   },
+   {
+    "inning": 1,
+    "after_over": 15,
+    "score": "44/3",
+    "india_wp": 0.7996
+   },
+   {
+    "inning": 1,
+    "after_over": 20,
+    "score": "53/5",
+    "india_wp": 0.9172
+   },
+   {
+    "inning": 1,
+    "after_over": 25,
+    "score": "73/5",
+    "india_wp": 0.8941
+   },
+   {
+    "inning": 1,
+    "after_over": 30,
+    "score": "92/5",
+    "india_wp": 0.8736
+   },
+   {
+    "inning": 1,
+    "after_over": 35,
+    "score": "112/6",
+    "india_wp": 0.8853
+   },
+   {
+    "inning": 1,
+    "after_over": 40,
+    "score": "132/9",
+    "india_wp": 0.9314
+   },
+   {
+    "inning": 1,
+    "after_over": 41,
+    "score": "134/10",
+    "india_wp": 0.944
+   },
+   {
+    "inning": 2,
+    "after_over": 5,
+    "score": "20/2",
+    "india_wp": 0.8925
+   },
+   {
+    "inning": 2,
+    "after_over": 10,
+    "score": "40/3",
+    "india_wp": 0.8761
+   },
+   {
+    "inning": 2,
+    "after_over": 15,
+    "score": "54/4",
+    "india_wp": 0.8386
+   },
+   {
+    "inning": 2,
+    "after_over": 20,
+    "score": "86/5",
+    "india_wp": 0.8964
+   },
+   {
+    "inning": 2,
+    "after_over": 25,
+    "score": "110/6",
+    "india_wp": 0.9403
+   },
+   {
+    "inning": 2,
+    "after_over": 26,
+    "score": "113/7",
+    "india_wp": 0.8827
+   }
+  ],
+  "tipping_point": {
+   "over": 0.1,
+   "inning": 1,
+   "score": "0/0",
+   "india_wp": 0.5564,
+   "text": "Arshdeep Singh to Will Young, no run, on a good length and shaping back into the right-hander - Young prods across and defends it to the on-side"
+  },
+  "india_wp_extremes": {
+   "min": 0.5564,
+   "min_at": "inn1 over 0.1 (0/0)",
+   "max": 0.9721,
+   "max_at": "inn2 over 24.3 (108/5)"
+  },
+  "chase_checkpoints": [
+   {
+    "after_over": 10,
+    "score": "40/3",
+    "need": 95,
+    "balls_left": 240,
+    "required_rate": 2.38,
+    "run_rate_so_far": 4.0
+   },
+   {
+    "after_over": 20,
+    "score": "86/5",
+    "need": 49,
+    "balls_left": 180,
+    "required_rate": 1.63,
+    "run_rate_so_far": 4.3
+   },
+   {
+    "after_over": 26,
+    "score": "113/7",
+    "need": 22,
+    "balls_left": 144,
+    "required_rate": 0.92,
+    "run_rate_so_far": 4.35
+   }
+  ],
+  "fielding": {
+   "Anshul Kamboj": {
+    "catches": 3,
+    "catch_swing": 0.193
+   },
+   "Jacob Duffy": {
+    "catches": 2,
+    "catch_swing": 0.192
+   },
+   "Rahul": {
+    "catches": 2,
+    "catch_swing": 0.131
+   },
+   "Nicholls": {
+    "catches": 2,
+    "catch_swing": 0.118
+   },
+   "Will Young": {
+    "catches": 1,
+    "catch_swing": 0.067
+   },
+   "Tom Latham": {
+    "catches": 1,
+    "catch_swing": 0.06
+   },
+   "Naman Dhir": {
+    "catches": 1,
+    "catch_swing": 0.059
+   },
+   "Tim Seifert": {
+    "catches": 1,
+    "catch_swing": 0.041
+   },
+   "Rohit Sharma": {
+    "catches": 1,
+    "catch_swing": 0.018
+   }
+  },
+  "collapse_windows": {
+   "1": {
+    "most_wickets_in_10_overs": 5,
+    "runs_in_that_window": 22,
+    "from_over": 34.5,
+    "to_over": 40.6
+   },
+   "2": {
+    "most_wickets_in_10_overs": 3,
+    "runs_in_that_window": 27,
+    "from_over": 19.4,
+    "to_over": 25.6
+   }
+  },
+  "hidden": {
+   "definition": "hidden winner: top-4 win-probability added but outside the top-4 of a plain scorecard rank (runs + 20 x wickets); hidden loser: bottom-5 win-probability added although inside the scorecard top-6",
+   "winners": [
+    {
+     "player": "Auqib Nabi",
+     "team": "India",
+     "wpa": 0.138,
+     "wpa_rank": 2,
+     "card_rank": 6,
+     "line": "1 (1); 2/31 in 7.0"
+    },
+    {
+     "player": "KL Rahul",
+     "team": "India",
+     "wpa": 0.125,
+     "wpa_rank": 3,
+     "card_rank": 10,
+     "line": "26 (37); 0/0 in 0.0"
+    }
+   ],
+   "losers": []
+  }
+ },
  "nz_ind_4odi": {
   "curve": [
    {
@@ -540,6 +952,53 @@
   }
  },
  "drops": {
+  "nz_ind_1odi": {
+   "list": [
+    {
+     "fielding_side": "India",
+     "batter": "Tim Seifert",
+     "over": 3.4,
+     "runs_at_drop": "7",
+     "final": "38",
+     "runs_after_drop": 31
+    },
+    {
+     "fielding_side": "India",
+     "batter": "Henry Nicholls",
+     "over": 6.3,
+     "runs_at_drop": "4",
+     "final": "9",
+     "runs_after_drop": 5
+    }
+   ],
+   "runs_conceded_after_drops": {
+    "India": 36
+   }
+  },
+  "nz_ind_2odi": {
+   "list": [
+    {
+     "fielding_side": "India",
+     "batter": "Daryl Mitchell",
+     "over": 16.2,
+     "runs_at_drop": "21",
+     "final": "55",
+     "runs_after_drop": 34
+    },
+    {
+     "fielding_side": "NZ",
+     "batter": "Rohit Sharma",
+     "over": 3.3,
+     "runs_at_drop": "9",
+     "final": "23",
+     "runs_after_drop": 14
+    }
+   ],
+   "runs_conceded_after_drops": {
+    "India": 34,
+    "NZ": 14
+   }
+  },
   "nz_ind_4odi": {
    "list": [
     {
@@ -631,7 +1090,7 @@
     "result": "India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32",
     "motm": "Anshul Kamboj",
     "top": "Kohli 74 (51); Arshdeep 4/70; Duffy 3/49",
-    "ball_by_ball": false
+    "ball_by_ball": true
    },
    {
     "n": 2,
@@ -641,7 +1100,7 @@
     "motm": "Gurnoor Brar (4/30)",
     "top": "Mitchell 55 (104); Iyer 30 (46); Jamieson 3/35",
     "note": "Fisher replaced Tickner as a concussion substitute",
-    "ball_by_ball": false
+    "ball_by_ball": true
    },
    {
     "n": 3,

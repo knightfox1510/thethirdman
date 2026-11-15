@@ -1,0 +1,1206 @@
+{
+ "leaders": {
+  "NZ most runs": [
+   "Will Young",
+   162
+  ],
+  "IND most runs": [
+   "Virat Kohli",
+   86
+  ],
+  "NZ most wickets": [
+   "Jacob Duffy",
+   9
+  ],
+  "IND most wickets": [
+   "Gurnoor Brar",
+   9
+  ]
+ },
+ "bat": {
+  "Will Young": {
+   "team": "New Zealand",
+   "runs": 162,
+   "balls": 177,
+   "outs": 4,
+   "inns": 4,
+   "fours": 20,
+   "sixes": 4,
+   "scores": [
+    [
+     "1st",
+     9,
+     11,
+     true
+    ],
+    [
+     "2nd",
+     6,
+     17,
+     true
+    ],
+    [
+     "4th",
+     125,
+     108,
+     true
+    ],
+    [
+     "5th",
+     22,
+     41,
+     true
+    ]
+   ]
+  },
+  "Tim Seifert": {
+   "team": "New Zealand",
+   "runs": 110,
+   "balls": 116,
+   "outs": 4,
+   "inns": 4,
+   "fours": 11,
+   "sixes": 5,
+   "scores": [
+    [
+     "1st",
+     38,
+     43,
+     true
+    ],
+    [
+     "2nd",
+     0,
+     5,
+     true
+    ],
+    [
+     "4th",
+     58,
+     47,
+     true
+    ],
+    [
+     "5th",
+     14,
+     21,
+     true
+    ]
+   ]
+  },
+  "Henry Nicholls": {
+   "team": "New Zealand",
+   "runs": 20,
+   "balls": 36,
+   "outs": 2,
+   "inns": 2,
+   "fours": 3,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     9,
+     11,
+     true
+    ],
+    [
+     "2nd",
+     11,
+     25,
+     true
+    ]
+   ]
+  },
+  "Daryl Mitchell": {
+   "team": "New Zealand",
+   "runs": 83,
+   "balls": 145,
+   "outs": 2,
+   "inns": 2,
+   "fours": 8,
+   "sixes": 3,
+   "scores": [
+    [
+     "1st",
+     28,
+     41,
+     true
+    ],
+    [
+     "2nd",
+     55,
+     104,
+     true
+    ]
+   ]
+  },
+  "Tom Latham": {
+   "team": "New Zealand",
+   "runs": 10,
+   "balls": 33,
+   "outs": 2,
+   "inns": 2,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     3,
+     11,
+     true
+    ],
+    [
+     "2nd",
+     7,
+     22,
+     true
+    ]
+   ]
+  },
+  "Glenn Phillips": {
+   "team": "New Zealand",
+   "runs": 34,
+   "balls": 55,
+   "outs": 2,
+   "inns": 2,
+   "fours": 3,
+   "sixes": 1,
+   "scores": [
+    [
+     "1st",
+     34,
+     51,
+     true
+    ],
+    [
+     "2nd",
+     0,
+     4,
+     true
+    ]
+   ]
+  },
+  "Mitchell Santner": {
+   "team": "New Zealand",
+   "runs": 83,
+   "balls": 113,
+   "outs": 4,
+   "inns": 4,
+   "fours": 3,
+   "sixes": 6,
+   "scores": [
+    [
+     "1st",
+     4,
+     15,
+     true
+    ],
+    [
+     "2nd",
+     31,
+     38,
+     true
+    ],
+    [
+     "4th",
+     24,
+     29,
+     true
+    ],
+    [
+     "5th",
+     24,
+     31,
+     true
+    ]
+   ]
+  },
+  "Nathan Smith": {
+   "team": "New Zealand",
+   "runs": 4,
+   "balls": 18,
+   "outs": 2,
+   "inns": 2,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     1,
+     9,
+     true
+    ],
+    [
+     "2nd",
+     3,
+     9,
+     true
+    ]
+   ]
+  },
+  "Kyle Jamieson": {
+   "team": "New Zealand",
+   "runs": 27,
+   "balls": 41,
+   "outs": 2,
+   "inns": 3,
+   "fours": 2,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     1,
+     6,
+     true
+    ],
+    [
+     "2nd",
+     7,
+     14,
+     true
+    ],
+    [
+     "4th",
+     19,
+     21,
+     false
+    ]
+   ]
+  },
+  "Jacob Duffy": {
+   "team": "New Zealand",
+   "runs": 25,
+   "balls": 36,
+   "outs": 1,
+   "inns": 3,
+   "fours": 4,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     15,
+     21,
+     false
+    ],
+    [
+     "2nd",
+     1,
+     3,
+     false
+    ],
+    [
+     "5th",
+     9,
+     12,
+     true
+    ]
+   ]
+  },
+  "Blair Tickner": {
+   "team": "New Zealand",
+   "runs": 50,
+   "balls": 47,
+   "outs": 3,
+   "inns": 3,
+   "fours": 2,
+   "sixes": 4,
+   "scores": [
+    [
+     "1st",
+     34,
+     23,
+     true
+    ],
+    [
+     "2nd",
+     2,
+     5,
+     true
+    ],
+    [
+     "5th",
+     14,
+     19,
+     true
+    ]
+   ]
+  },
+  "Rohit Sharma": {
+   "team": "India",
+   "runs": 30,
+   "balls": 48,
+   "outs": 4,
+   "inns": 4,
+   "fours": 3,
+   "sixes": 2,
+   "scores": [
+    [
+     "1st",
+     0,
+     6,
+     true
+    ],
+    [
+     "2nd",
+     23,
+     28,
+     true
+    ],
+    [
+     "4th",
+     0,
+     1,
+     true
+    ],
+    [
+     "5th",
+     7,
+     13,
+     true
+    ]
+   ]
+  },
+  "Shubman Gill": {
+   "team": "India",
+   "runs": 37,
+   "balls": 57,
+   "outs": 2,
+   "inns": 2,
+   "fours": 5,
+   "sixes": 0,
+   "scores": [
+    [
+     "1st",
+     37,
+     56,
+     true
+    ],
+    [
+     "2nd",
+     0,
+     1,
+     true
+    ]
+   ]
+  },
+  "Virat Kohli": {
+   "team": "India",
+   "runs": 86,
+   "balls": 69,
+   "outs": 4,
+   "inns": 4,
+   "fours": 14,
+   "sixes": 1,
+   "scores": [
+    [
+     "1st",
+     74,
+     51,
+     true
+    ],
+    [
+     "2nd",
+     7,
+     7,
+     true
+    ],
+    [
+     "4th",
+     0,
+     4,
+     true
+    ],
+    [
+     "5th",
+     5,
+     7,
+     true
+    ]
+   ]
+  },
+  "Shreyas Iyer": {
+   "team": "India",
+   "runs": 67,
+   "balls": 86,
+   "outs": 4,
+   "inns": 4,
+   "fours": 8,
+   "sixes": 2,
+   "scores": [
+    [
+     "1st",
+     15,
+     13,
+     true
+    ],
+    [
+     "2nd",
+     30,
+     46,
+     true
+    ],
+    [
+     "4th",
+     0,
+     1,
+     true
+    ],
+    [
+     "5th",
+     22,
+     26,
+     true
+    ]
+   ]
+  },
+  "Axar Patel": {
+   "team": "India",
+   "runs": 74,
+   "balls": 110,
+   "outs": 4,
+   "inns": 4,
+   "fours": 9,
+   "sixes": 1,
+   "scores": [
+    [
+     "1st",
+     0,
+     2,
+     true
+    ],
+    [
+     "2nd",
+     7,
+     17,
+     true
+    ],
+    [
+     "4th",
+     21,
+     36,
+     true
+    ],
+    [
+     "5th",
+     46,
+     55,
+     true
+    ]
+   ]
+  },
+  "KL Rahul": {
+   "team": "India",
+   "runs": 29,
+   "balls": 42,
+   "outs": 0,
+   "inns": 2,
+   "fours": 2,
+   "sixes": 2,
+   "scores": [
+    [
+     "1st",
+     3,
+     5,
+     false
+    ],
+    [
+     "2nd",
+     26,
+     37,
+     false
+    ]
+   ]
+  },
+  "Naman Dhir": {
+   "team": "India",
+   "runs": 60,
+   "balls": 74,
+   "outs": 3,
+   "inns": 4,
+   "fours": 5,
+   "sixes": 2,
+   "scores": [
+    [
+     "1st",
+     5,
+     3,
+     false
+    ],
+    [
+     "2nd",
+     12,
+     16,
+     true
+    ],
+    [
+     "4th",
+     21,
+     24,
+     true
+    ],
+    [
+     "5th",
+     22,
+     31,
+     true
+    ]
+   ]
+  },
+  "Anshul Kamboj": {
+   "team": "India",
+   "runs": 1,
+   "balls": 3,
+   "outs": 1,
+   "inns": 1,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "2nd",
+     1,
+     3,
+     true
+    ]
+   ]
+  },
+  "Auqib Nabi": {
+   "team": "India",
+   "runs": 11,
+   "balls": 18,
+   "outs": 2,
+   "inns": 3,
+   "fours": 2,
+   "sixes": 0,
+   "scores": [
+    [
+     "2nd",
+     1,
+     1,
+     false
+    ],
+    [
+     "4th",
+     5,
+     8,
+     true
+    ],
+    [
+     "5th",
+     5,
+     9,
+     true
+    ]
+   ]
+  },
+  "Nick Kelly": {
+   "team": "New Zealand",
+   "runs": 28,
+   "balls": 53,
+   "outs": 2,
+   "inns": 2,
+   "fours": 2,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     4,
+     8,
+     true
+    ],
+    [
+     "5th",
+     24,
+     45,
+     true
+    ]
+   ]
+  },
+  "Dean Foxcroft": {
+   "team": "New Zealand",
+   "runs": 39,
+   "balls": 55,
+   "outs": 2,
+   "inns": 2,
+   "fours": 5,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     8,
+     13,
+     true
+    ],
+    [
+     "5th",
+     31,
+     42,
+     true
+    ]
+   ]
+  },
+  "Finn Allen": {
+   "team": "New Zealand",
+   "runs": 42,
+   "balls": 34,
+   "outs": 2,
+   "inns": 2,
+   "fours": 5,
+   "sixes": 2,
+   "scores": [
+    [
+     "4th",
+     41,
+     29,
+     true
+    ],
+    [
+     "5th",
+     1,
+     5,
+     true
+    ]
+   ]
+  },
+  "Michael Bracewell": {
+   "team": "New Zealand",
+   "runs": 34,
+   "balls": 53,
+   "outs": 2,
+   "inns": 2,
+   "fours": 3,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     15,
+     20,
+     true
+    ],
+    [
+     "5th",
+     19,
+     33,
+     true
+    ]
+   ]
+  },
+  "Kristian Clarke": {
+   "team": "New Zealand",
+   "runs": 38,
+   "balls": 56,
+   "outs": 2,
+   "inns": 2,
+   "fours": 2,
+   "sixes": 1,
+   "scores": [
+    [
+     "4th",
+     22,
+     22,
+     true
+    ],
+    [
+     "5th",
+     16,
+     34,
+     true
+    ]
+   ]
+  },
+  "Matt Henry": {
+   "team": "New Zealand",
+   "runs": 2,
+   "balls": 2,
+   "outs": 1,
+   "inns": 1,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     2,
+     2,
+     true
+    ]
+   ]
+  },
+  "Matthew Fisher": {
+   "team": "New Zealand",
+   "runs": 4,
+   "balls": 7,
+   "outs": 1,
+   "inns": 2,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     1,
+     1,
+     true
+    ],
+    [
+     "5th",
+     3,
+     6,
+     false
+    ]
+   ]
+  },
+  "Ruturaj Gaikwad": {
+   "team": "India",
+   "runs": 23,
+   "balls": 39,
+   "outs": 2,
+   "inns": 2,
+   "fours": 3,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     5,
+     13,
+     true
+    ],
+    [
+     "5th",
+     18,
+     26,
+     true
+    ]
+   ]
+  },
+  "Ishan Kishan": {
+   "team": "India",
+   "runs": 73,
+   "balls": 111,
+   "outs": 2,
+   "inns": 2,
+   "fours": 7,
+   "sixes": 2,
+   "scores": [
+    [
+     "4th",
+     27,
+     53,
+     true
+    ],
+    [
+     "5th",
+     46,
+     58,
+     true
+    ]
+   ]
+  },
+  "Kuldeep Yadav": {
+   "team": "India",
+   "runs": 1,
+   "balls": 4,
+   "outs": 1,
+   "inns": 1,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     1,
+     4,
+     true
+    ]
+   ]
+  },
+  "Gurnoor Brar": {
+   "team": "India",
+   "runs": 2,
+   "balls": 13,
+   "outs": 1,
+   "inns": 1,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "4th",
+     2,
+     13,
+     true
+    ]
+   ]
+  },
+  "Arshdeep Singh": {
+   "team": "India",
+   "runs": 14,
+   "balls": 7,
+   "outs": 1,
+   "inns": 2,
+   "fours": 0,
+   "sixes": 2,
+   "scores": [
+    [
+     "4th",
+     0,
+     3,
+     false
+    ],
+    [
+     "5th",
+     14,
+     4,
+     true
+    ]
+   ]
+  },
+  "Yash Thakur": {
+   "team": "India",
+   "runs": 0,
+   "balls": 4,
+   "outs": 1,
+   "inns": 1,
+   "fours": 0,
+   "sixes": 0,
+   "scores": [
+    [
+     "5th",
+     0,
+     4,
+     true
+    ]
+   ]
+  },
+  "Mohammed Siraj": {
+   "team": "India",
+   "runs": 14,
+   "balls": 20,
+   "outs": 0,
+   "inns": 1,
+   "fours": 1,
+   "sixes": 1,
+   "scores": [
+    [
+     "5th",
+     14,
+     20,
+     false
+    ]
+   ]
+  }
+ },
+ "bowl": {
+  "Arshdeep Singh": {
+   "team": "India",
+   "balls": 222,
+   "runs": 171,
+   "wkts": 8,
+   "dots": 134,
+   "matches": 4
+  },
+  "Auqib Nabi": {
+   "team": "India",
+   "balls": 186,
+   "runs": 160,
+   "wkts": 5,
+   "dots": 109,
+   "matches": 4
+  },
+  "Anshul Kamboj": {
+   "team": "India",
+   "balls": 108,
+   "runs": 47,
+   "wkts": 4,
+   "dots": 77,
+   "matches": 2
+  },
+  "Gurnoor Brar": {
+   "team": "India",
+   "balls": 176,
+   "runs": 143,
+   "wkts": 9,
+   "dots": 111,
+   "matches": 3
+  },
+  "Axar Patel": {
+   "team": "India",
+   "balls": 181,
+   "runs": 111,
+   "wkts": 6,
+   "dots": 105,
+   "matches": 4
+  },
+  "Kyle Jamieson": {
+   "team": "New Zealand",
+   "balls": 138,
+   "runs": 81,
+   "wkts": 5,
+   "dots": 102,
+   "matches": 3
+  },
+  "Jacob Duffy": {
+   "team": "New Zealand",
+   "balls": 133,
+   "runs": 144,
+   "wkts": 9,
+   "dots": 74,
+   "matches": 3
+  },
+  "Blair Tickner": {
+   "team": "New Zealand",
+   "balls": 54,
+   "runs": 62,
+   "wkts": 1,
+   "dots": 31,
+   "matches": 2
+  },
+  "Nathan Smith": {
+   "team": "New Zealand",
+   "balls": 58,
+   "runs": 40,
+   "wkts": 1,
+   "dots": 41,
+   "matches": 2
+  },
+  "Matthew Fisher": {
+   "team": "New Zealand",
+   "balls": 108,
+   "runs": 82,
+   "wkts": 6,
+   "dots": 69,
+   "matches": 3
+  },
+  "Kuldeep Yadav": {
+   "team": "India",
+   "balls": 48,
+   "runs": 73,
+   "wkts": 0,
+   "dots": 18,
+   "matches": 1
+  },
+  "Naman Dhir": {
+   "team": "India",
+   "balls": 36,
+   "runs": 33,
+   "wkts": 2,
+   "dots": 19,
+   "matches": 2
+  },
+  "Matt Henry": {
+   "team": "New Zealand",
+   "balls": 58,
+   "runs": 27,
+   "wkts": 6,
+   "dots": 43,
+   "matches": 1
+  },
+  "Kristian Clarke": {
+   "team": "New Zealand",
+   "balls": 24,
+   "runs": 26,
+   "wkts": 0,
+   "dots": 11,
+   "matches": 2
+  },
+  "Michael Bracewell": {
+   "team": "New Zealand",
+   "balls": 72,
+   "runs": 41,
+   "wkts": 1,
+   "dots": 38,
+   "matches": 2
+  },
+  "Mitchell Santner": {
+   "team": "New Zealand",
+   "balls": 60,
+   "runs": 47,
+   "wkts": 3,
+   "dots": 34,
+   "matches": 1
+  },
+  "Mohammed Siraj": {
+   "team": "India",
+   "balls": 60,
+   "runs": 50,
+   "wkts": 2,
+   "dots": 37,
+   "matches": 1
+  },
+  "Yash Thakur": {
+   "team": "India",
+   "balls": 60,
+   "runs": 38,
+   "wkts": 1,
+   "dots": 35,
+   "matches": 1
+  }
+ },
+ "wpa": {
+  "Virat Kohli": {
+   "team": "India",
+   "wpa": -0.012999999999999998,
+   "matches": 4
+  },
+  "Anshul Kamboj": {
+   "team": "India",
+   "wpa": 0.12899999999999998,
+   "matches": 2
+  },
+  "Gurnoor Brar": {
+   "team": "India",
+   "wpa": 0.184,
+   "matches": 3
+  },
+  "Daryl Mitchell": {
+   "team": "New Zealand",
+   "wpa": 0.11900000000000001,
+   "matches": 2
+  },
+  "Shubman Gill": {
+   "team": "India",
+   "wpa": 0.03,
+   "matches": 2
+  },
+  "Axar Patel": {
+   "team": "India",
+   "wpa": 0.212,
+   "matches": 4
+  },
+  "Blair Tickner": {
+   "team": "New Zealand",
+   "wpa": 0.088,
+   "matches": 3
+  },
+  "Arshdeep Singh": {
+   "team": "India",
+   "wpa": 0.33999999999999997,
+   "matches": 4
+  },
+  "Tim Seifert": {
+   "team": "New Zealand",
+   "wpa": 0.04100000000000001,
+   "matches": 4
+  },
+  "Shreyas Iyer": {
+   "team": "India",
+   "wpa": 0.029000000000000005,
+   "matches": 4
+  },
+  "KL Rahul": {
+   "team": "India",
+   "wpa": 0.126,
+   "matches": 2
+  },
+  "Naman Dhir": {
+   "team": "India",
+   "wpa": 0.23900000000000002,
+   "matches": 4
+  },
+  "Jacob Duffy": {
+   "team": "New Zealand",
+   "wpa": -0.17900000000000002,
+   "matches": 3
+  },
+  "Glenn Phillips": {
+   "team": "New Zealand",
+   "wpa": -0.097,
+   "matches": 2
+  },
+  "Will Young": {
+   "team": "New Zealand",
+   "wpa": 0.088,
+   "matches": 4
+  },
+  "Nathan Smith": {
+   "team": "New Zealand",
+   "wpa": -0.172,
+   "matches": 2
+  },
+  "Mitchell Santner": {
+   "team": "New Zealand",
+   "wpa": -0.075,
+   "matches": 4
+  },
+  "Henry Nicholls": {
+   "team": "New Zealand",
+   "wpa": -0.124,
+   "matches": 2
+  },
+  "Kyle Jamieson": {
+   "team": "New Zealand",
+   "wpa": 0.005999999999999988,
+   "matches": 3
+  },
+  "Tom Latham": {
+   "team": "New Zealand",
+   "wpa": -0.16799999999999998,
+   "matches": 2
+  },
+  "Rohit Sharma": {
+   "team": "India",
+   "wpa": -0.306,
+   "matches": 4
+  },
+  "Auqib Nabi": {
+   "team": "India",
+   "wpa": -0.173,
+   "matches": 4
+  },
+  "Matthew Fisher": {
+   "team": "New Zealand",
+   "wpa": 0.113,
+   "matches": 3
+  },
+  "Matt Henry": {
+   "team": "New Zealand",
+   "wpa": 0.152,
+   "matches": 1
+  },
+  "Finn Allen": {
+   "team": "New Zealand",
+   "wpa": -0.10400000000000001,
+   "matches": 2
+  },
+  "Kristian Clarke": {
+   "team": "New Zealand",
+   "wpa": -0.153,
+   "matches": 2
+  },
+  "Ishan Kishan": {
+   "team": "India",
+   "wpa": 0.071,
+   "matches": 2
+  },
+  "Ruturaj Gaikwad": {
+   "team": "India",
+   "wpa": -0.037,
+   "matches": 2
+  },
+  "Michael Bracewell": {
+   "team": "New Zealand",
+   "wpa": -0.059,
+   "matches": 2
+  },
+  "Dean Foxcroft": {
+   "team": "New Zealand",
+   "wpa": -0.1,
+   "matches": 2
+  },
+  "Nick Kelly": {
+   "team": "New Zealand",
+   "wpa": -0.13,
+   "matches": 2
+  },
+  "Kuldeep Yadav": {
+   "team": "India",
+   "wpa": -0.177,
+   "matches": 1
+  },
+  "Mohammed Siraj": {
+   "team": "India",
+   "wpa": 0.064,
+   "matches": 1
+  },
+  "Yash Thakur": {
+   "team": "India",
+   "wpa": 0.032,
+   "matches": 1
+  }
+ }
+}

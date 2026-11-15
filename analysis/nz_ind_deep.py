@@ -10,13 +10,14 @@ import numpy as np
 from dataops import winprob, cricsheet as CS
 
 OUT = "data/series/nz_ind_2026"; AN = OUT + "/analysis"; os.makedirs(AN, exist_ok=True)
-STEMS = {"nz_ind_4odi": "4th ODI", "nz_ind_5odi": "5th ODI"}
-INDIA_BATS = {"nz_ind_4odi": 2, "nz_ind_5odi": 1}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from nz_ind_cfg import STEMS as _ST, INDIA_BATS, LABELS
+STEMS = {k: LABELS[k] for k in _ST}
 INDIA = {"Rohit Sharma", "Virat Kohli", "Ruturaj Gaikwad", "Shreyas Iyer", "Axar Patel", "Naman Dhir", "Auqib Nabi", "Yash Thakur", "Ishan Kishan", "Arshdeep Singh", "Mohammed Siraj", "Gurnoor Brar", "Kuldeep Yadav"}
 STYLE = {  # bowling style from the Cricinfo capture of the 4th ODI (playing-XI roles); the 5th-ODI newcomers (Yash Thakur, Siraj) are marked assumed
     "Will Young": "spin", "Nick Kelly": "spin", "Dean Foxcroft": "spin", "Michael Bracewell": "spin", "Mitchell Santner": "spin", "Kristian Clarke": "pace", "Kyle Jamieson": "pace", "Matt Henry": "pace", "Matthew Fisher": "pace",
-    "Jacob Duffy": "pace", "Blair Tickner": "pace", "Arshdeep Singh": "pace", "Auqib Nabi": "pace", "Axar Patel": "spin", "Gurnoor Brar": "pace", "Kuldeep Yadav": "spin", "Naman Dhir": "spin", "Mohammed Siraj": "pace", "Yash Thakur": "pace"}
-ASSUMED_STYLE = {"Mohammed Siraj", "Yash Thakur", "Jacob Duffy", "Blair Tickner", "Kristian Clarke"}
+    "Jacob Duffy": "pace", "Blair Tickner": "pace", "Nathan Smith": "pace", "Anshul Kamboj": "pace", "Arshdeep Singh": "pace", "Auqib Nabi": "pace", "Axar Patel": "spin", "Gurnoor Brar": "pace", "Kuldeep Yadav": "spin", "Naman Dhir": "spin", "Mohammed Siraj": "pace", "Yash Thakur": "pace"}
+ASSUMED_STYLE = {"Mohammed Siraj", "Yash Thakur", "Jacob Duffy", "Blair Tickner", "Kristian Clarke", "Nathan Smith", "Anshul Kamboj"}
 PHASES = {"powerplay (1-10)": (0, 10), "middle (11-40)": (10, 40), "death (41-50)": (40, 50)}
 
 
@@ -105,15 +106,16 @@ def main():
                 dr = max(dr, d)
             M["innings"][inn]["longest_dot_run"] = {"balls": best, "ends_over": best_end}; M["innings"][inn]["longest_boundary_drought_balls"] = dr
         # ---------------- bowling cards & pace v spin
-        card = collections.defaultdict(lambda: {"balls": 0, "runs": 0, "wkts": 0, "dots": 0, "bdry": 0, "wides_nb": 0})
+        card = collections.defaultdict(lambda: {"balls": 0, "runs": 0, "wkts": 0, "dots": 0, "bdry": 0, "wides_nb": 0}); bteam = {}
         for r in rows:
+            bteam[r["bowler"]] = "New Zealand" if r["bat_team"] == "IND" else "India"
             c = card[(r["bowler"], r["inning"])]; c["runs"] += r["runs"] if r["extra"] not in ("leg bye", "bye") else 0; c["wides_nb"] += (not r["legal"])
             if r["legal"]: c["balls"] += 1; c["dots"] += r["runs"] == 0; c["bdry"] += r["bat_runs"] in (4, 6)
             c["wkts"] += 1 if (r["wicket"] and r["dismissal"] != "run out") else 0
         M["bowling"] = [{"bowler": k[0], "inning": k[1], "overs": f"{v['balls'] // 6}.{v['balls'] % 6}", "runs": v["runs"], "wkts": v["wkts"], "econ": round(6 * v["runs"] / max(v["balls"], 1), 2), "dot_pct": round(100 * v["dots"] / max(v["balls"], 1), 1), "boundary_balls": v["bdry"], "wides_nb": v["wides_nb"], "style": STYLE.get(k[0], "?") + ("*" if k[0] in ASSUMED_STYLE else "")} for k, v in card.items()]
         ps = collections.defaultdict(lambda: {"pace": [0, 0, 0], "spin": [0, 0, 0]})
         for b in M["bowling"]:
-            team = "India" if b["bowler"] in INDIA else "New Zealand"; st = b["style"].rstrip("*")
+            team = bteam.get(b["bowler"], "?"); st = b["style"].rstrip("*")
             if st in ("pace", "spin"): ps[team][st][0] += int(b["overs"].split(".")[0]) * 6 + int(b["overs"].split(".")[1]); ps[team][st][1] += b["runs"]; ps[team][st][2] += b["wkts"]
         M["pace_vs_spin"] = {t: {k: {"overs": f"{v[0] // 6}.{v[0] % 6}", "runs": v[1], "wkts": v[2], "econ": round(6 * v[1] / max(v[0], 1), 2)} for k, v in d.items()} for t, d in ps.items()}
         summary["matches"][stem] = M

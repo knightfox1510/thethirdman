@@ -4,7 +4,8 @@ the last-wicket stand's value, collapses, and the series context (Wikipedia for 
 import csv, json, os, sys, collections
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = "data/series/nz_ind_2026"; AN = OUT + "/analysis"
-INDIA_BATS = {"nz_ind_4odi": 2, "nz_ind_5odi": 1}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from nz_ind_cfg import INDIA_BATS
 
 
 def wp(stem):
@@ -67,8 +68,8 @@ def main():
         drops[stem] = {"list": rows_, "runs_conceded_after_drops": dict(tot)}
     out["drops"] = drops
     out["series"] = {"source": "Wikipedia, 'Indian cricket team in New Zealand in 2026-27' (Tier C; cites Cricinfo match reports); matches 4 and 5 are also in our own captures",
-                     "matches": [{"n": 1, "date": "2026-11-04", "venue": "Eden Park, Auckland", "result": "India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32", "motm": "Anshul Kamboj", "top": "Kohli 74 (51); Arshdeep 4/70; Duffy 3/49", "ball_by_ball": False},
-                                 {"n": 2, "date": "2026-11-07", "venue": "Wellington Regional Stadium", "result": "India won by 4 runs (DLS): NZ 134 (41), India 113/7 (26), par 109", "motm": "Gurnoor Brar (4/30)", "top": "Mitchell 55 (104); Iyer 30 (46); Jamieson 3/35", "note": "Fisher replaced Tickner as a concussion substitute", "ball_by_ball": False},
+                     "matches": [{"n": 1, "date": "2026-11-04", "venue": "Eden Park, Auckland", "result": "India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32", "motm": "Anshul Kamboj", "top": "Kohli 74 (51); Arshdeep 4/70; Duffy 3/49", "ball_by_ball": True},
+                                 {"n": 2, "date": "2026-11-07", "venue": "Wellington Regional Stadium", "result": "India won by 4 runs (DLS): NZ 134 (41), India 113/7 (26), par 109", "motm": "Gurnoor Brar (4/30)", "top": "Mitchell 55 (104); Iyer 30 (46); Jamieson 3/35", "note": "Fisher replaced Tickner as a concussion substitute", "ball_by_ball": True},
                                  {"n": 3, "date": "2026-11-10", "venue": "Seddon Park, Hamilton", "result": "No result (rain, no play)", "ball_by_ball": False},
                                  {"n": 4, "date": "2026-11-13", "venue": "Bay Oval, Mount Maunganui", "result": "New Zealand won by 244 runs: NZ 333, India 89 (26.4)", "motm": "Matt Henry (6/27)", "top": "Young 125 (108)", "note": "Iyer captained India in ODIs for the first time", "ball_by_ball": True},
                                  {"n": 5, "date": "2026-11-15", "venue": "Bay Oval, Mount Maunganui", "result": "India won by 22 runs: India 209 (42.1), NZ 187 (48.1)", "motm": "Arshdeep Singh (3/30)", "top": "Axar 46 (55); Santner 3/47; Foxcroft 31 (42)", "note": "Yash Thakur ODI debut", "ball_by_ball": True}],
