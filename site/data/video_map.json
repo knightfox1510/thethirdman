@@ -124,5 +124,17 @@
   "kind": "short",
   "title": "data_nz_ind_series",
   "format": "datastories"
+ },
+ "rt1PDv6tpzs": {
+  "slug": "dyk_third_man",
+  "kind": "long",
+  "title": "dyk_third_man",
+  "format": "didyouknow"
+ },
+ "5xidfs5Gpo4": {
+  "slug": "dyk_third_man",
+  "kind": "short",
+  "title": "dyk_third_man",
+  "format": "didyouknow"
  }
 }
