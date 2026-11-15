@@ -1,0 +1,973 @@
+{
+ "matches": {
+  "nz_ind_4odi": {
+   "label": "4th ODI",
+   "innings": {
+    "1": {
+     "team": "New Zealand",
+     "score": 333,
+     "wkts": 10,
+     "legal_balls": 300,
+     "overs": "50.0",
+     "run_rate": 6.66,
+     "extras_deliveries": 5,
+     "fours": 28,
+     "sixes": 12,
+     "phases": {
+      "powerplay (1-10)": {
+       "runs": 72,
+       "wkts": 0,
+       "balls": 60,
+       "rr": 7.2,
+       "dot_pct": 55.0,
+       "boundary_pct": 16.7
+      },
+      "middle (11-40)": {
+       "runs": 193,
+       "wkts": 6,
+       "balls": 180,
+       "rr": 6.43,
+       "dot_pct": 47.2,
+       "boundary_pct": 13.3
+      },
+      "death (41-50)": {
+       "runs": 68,
+       "wkts": 4,
+       "balls": 60,
+       "rr": 6.8,
+       "dot_pct": 40.0,
+       "boundary_pct": 8.3
+      }
+     },
+     "dot_pct": 47.3,
+     "boundary_pct": 13.0,
+     "longest_dot_run": {
+      "balls": 7,
+      "ends_over": 14.5
+     },
+     "longest_boundary_drought_balls": 22
+    },
+    "2": {
+     "team": "India",
+     "score": 89,
+     "wkts": 10,
+     "legal_balls": 160,
+     "overs": "26.4",
+     "run_rate": 3.34,
+     "extras_deliveries": 7,
+     "fours": 8,
+     "sixes": 2,
+     "phases": {
+      "powerplay (1-10)": {
+       "runs": 26,
+       "wkts": 4,
+       "balls": 60,
+       "rr": 2.6,
+       "dot_pct": 81.7,
+       "boundary_pct": 6.7
+      },
+      "middle (11-40)": {
+       "runs": 63,
+       "wkts": 6,
+       "balls": 100,
+       "rr": 3.78,
+       "dot_pct": 64.0,
+       "boundary_pct": 6.0
+      }
+     },
+     "dot_pct": 70.6,
+     "boundary_pct": 6.2,
+     "longest_dot_run": {
+      "balls": 10,
+      "ends_over": 3.3
+     },
+     "longest_boundary_drought_balls": 40
+    }
+   },
+   "partnerships": [
+    {
+     "inning": "1",
+     "wicket": "1",
+     "runs": "85",
+     "balls": "72",
+     "batters": "Tim Seifert & Will Young",
+     "end_over": "11.6"
+    },
+    {
+     "inning": "1",
+     "wicket": "2",
+     "runs": "11",
+     "balls": "14",
+     "batters": "Nick Kelly & Will Young",
+     "end_over": "14.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "3",
+     "runs": "29",
+     "balls": "31",
+     "batters": "Will Young & Dean Foxcroft",
+     "end_over": "19.3"
+    },
+    {
+     "inning": "1",
+     "wicket": "4",
+     "runs": "90",
+     "balls": "65",
+     "batters": "Will Young & Finn Allen",
+     "end_over": "30.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "5",
+     "runs": "41",
+     "balls": "40",
+     "batters": "Will Young & Michael Bracewell",
+     "end_over": "36.6"
+    },
+    {
+     "inning": "1",
+     "wicket": "6",
+     "runs": "2",
+     "balls": "5",
+     "batters": "Michael Bracewell & Mitchell Santner",
+     "end_over": "37.5"
+    },
+    {
+     "inning": "1",
+     "wicket": "7",
+     "runs": "35",
+     "balls": "39",
+     "batters": "Mitchell Santner & Kristian Clarke",
+     "end_over": "44.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "8",
+     "runs": "25",
+     "balls": "22",
+     "batters": "Kyle Jamieson & Kristian Clarke",
+     "end_over": "47.6"
+    },
+    {
+     "inning": "1",
+     "wicket": "9",
+     "runs": "14",
+     "balls": "11",
+     "batters": "Kyle Jamieson & Matt Henry",
+     "end_over": "49.5"
+    },
+    {
+     "inning": "1",
+     "wicket": "10",
+     "runs": "1",
+     "balls": "1",
+     "batters": "Matthew Fisher",
+     "end_over": "49.6"
+    },
+    {
+     "inning": "2",
+     "wicket": "1",
+     "runs": "0",
+     "balls": "1",
+     "batters": "Rohit Sharma",
+     "end_over": "0.1"
+    },
+    {
+     "inning": "2",
+     "wicket": "2",
+     "runs": "0",
+     "balls": "4",
+     "batters": "Virat Kohli",
+     "end_over": "0.5"
+    },
+    {
+     "inning": "2",
+     "wicket": "3",
+     "runs": "0",
+     "balls": "1",
+     "batters": "Shreyas Iyer",
+     "end_over": "0.6"
+    },
+    {
+     "inning": "2",
+     "wicket": "4",
+     "runs": "9",
+     "balls": "27",
+     "batters": "Ruturaj Gaikwad & Ishan Kishan",
+     "end_over": "5.3"
+    },
+    {
+     "inning": "2",
+     "wicket": "5",
+     "runs": "44",
+     "balls": "70",
+     "batters": "Axar Patel & Ishan Kishan",
+     "end_over": "17.1"
+    },
+    {
+     "inning": "2",
+     "wicket": "6",
+     "runs": "8",
+     "balls": "18",
+     "batters": "Naman Dhir & Ishan Kishan",
+     "end_over": "20.1"
+    },
+    {
+     "inning": "2",
+     "wicket": "7",
+     "runs": "5",
+     "balls": "9",
+     "batters": "Auqib Nabi & Naman Dhir",
+     "end_over": "21.4"
+    },
+    {
+     "inning": "2",
+     "wicket": "8",
+     "runs": "3",
+     "balls": "8",
+     "batters": "Kuldeep Yadav & Naman Dhir",
+     "end_over": "22.6"
+    },
+    {
+     "inning": "2",
+     "wicket": "9",
+     "runs": "14",
+     "balls": "6",
+     "batters": "Naman Dhir",
+     "end_over": "23.6"
+    },
+    {
+     "inning": "2",
+     "wicket": "10",
+     "runs": "6",
+     "balls": "16",
+     "batters": "Gurnoor Brar & Arshdeep Singh",
+     "end_over": "26.4"
+    }
+   ],
+   "drops": [
+    {
+     "inning": 1,
+     "over": 1.5,
+     "batter": "Will Young",
+     "bowler": "Auqib Nabi",
+     "batter_runs_at_drop": "5",
+     "batter_final_runs": "125",
+     "text": "Auqib Nabi to Will Young, no run,  On a length around off and the ball shapes away to catch the outside edge. Flies to Rohit at a comfortable height and the ball pops out of his grasp. Should have tak"
+    },
+    {
+     "inning": 1,
+     "over": 1.6,
+     "batter": "Will Young",
+     "bowler": "Auqib Nabi",
+     "batter_runs_at_drop": "5",
+     "batter_final_runs": "125",
+     "text": "Auqib Nabi to Will Young, no run,  Kishan - the culprit on this occasion. Auqib Nabi cannot believe his luck. Stands there shell-shocked. Back of a length delivery around off and Will Young gets anoth"
+    },
+    {
+     "inning": 1,
+     "over": 40.5,
+     "batter": "Mitchell Santner",
+     "bowler": "Naman Dhir",
+     "batter_runs_at_drop": "7",
+     "batter_final_runs": "24",
+     "text": "Naman Dhir to Mitchell Santner, no run, did that carry? Or was it just short. That carried, confirm the replays, and  This one gripped into the surface slightly and arrived slightly late. Mitchell San"
+    },
+    {
+     "inning": 2,
+     "over": 5.4,
+     "batter": "Axar Patel",
+     "bowler": "Kyle Jamieson",
+     "batter_runs_at_drop": "0",
+     "batter_final_runs": "21",
+     "text": "Kyle Jamieson to Axar Patel, no run,  Nick Kelly is the culprit. Steep bounce and Axar Patel can't control as he hops to dab. Hits him high on the bat and goes towards backward point. Kelly comes in a"
+    }
+   ],
+   "reviews": [
+    {
+     "inning": 1,
+     "over": 33.3,
+     "text": "Kuldeep Yadav to Will Young, no run, the confidence of Kuldeep Yadav and Ishan Kishan proven to be wrong. India  It's very full but has pitched outside leg, Will Young sweeps and it's too full for the shot, he misses and is rapped on the pads. A loud appeal is"
+    },
+    {
+     "inning": 1,
+     "over": 47.6,
+     "text": "Auqib Nabi to Kristian Clarke,  Lbw!! That's plumb, but Kristian Clarke takes a review with NZ having both reviews left. This was pitched up by the bowler around off and Kristian Clarke tried to flick it away. Gets beaten on the inside edge and gets rapped on "
+    },
+    {
+     "inning": 2,
+     "over": 0.6,
+     "text": "Matt Henry to Shreyas Iyer,  Lbw!!  New Zealand review. Is height going to save Shreyas Iyer? Looks close to the naked eye. Sharp in-seamer on a good length, beats Shreyas' inside edge as he defends from the crease. Gets rapped on the back leg adjacent to the "
+    },
+    {
+     "inning": 2,
+     "over": 15.6,
+     "text": "Matthew Fisher to Ishan Kishan, no run,  Sharp short of length delivery and zippy stuff, Ishan Kishan goes on the back foot and gets a thick inside edge on the flick. On to the pad. To the naked eye, the inside edge was clearly visible and Santner even checked"
+    }
+   ],
+   "bowling": [
+    {
+     "bowler": "Arshdeep Singh",
+     "inning": 1,
+     "overs": "10.0",
+     "runs": 55,
+     "wkts": 1,
+     "econ": 5.5,
+     "dot_pct": 43.3,
+     "boundary_balls": 5,
+     "wides_nb": 1,
+     "style": "pace"
+    },
+    {
+     "bowler": "Auqib Nabi",
+     "inning": 1,
+     "overs": "8.0",
+     "runs": 59,
+     "wkts": 2,
+     "econ": 7.38,
+     "dot_pct": 45.8,
+     "boundary_balls": 7,
+     "wides_nb": 2,
+     "style": "pace"
+    },
+    {
+     "bowler": "Gurnoor Brar",
+     "inning": 1,
+     "overs": "10.0",
+     "runs": 69,
+     "wkts": 2,
+     "econ": 6.9,
+     "dot_pct": 53.3,
+     "boundary_balls": 11,
+     "wides_nb": 1,
+     "style": "pace"
+    },
+    {
+     "bowler": "Axar Patel",
+     "inning": 1,
+     "overs": "10.0",
+     "runs": 39,
+     "wkts": 2,
+     "econ": 3.9,
+     "dot_pct": 55.0,
+     "boundary_balls": 3,
+     "wides_nb": 0,
+     "style": "spin"
+    },
+    {
+     "bowler": "Kuldeep Yadav",
+     "inning": 1,
+     "overs": "8.0",
+     "runs": 73,
+     "wkts": 0,
+     "econ": 9.12,
+     "dot_pct": 37.5,
+     "boundary_balls": 9,
+     "wides_nb": 1,
+     "style": "spin"
+    },
+    {
+     "bowler": "Naman Dhir",
+     "inning": 1,
+     "overs": "4.0",
+     "runs": 29,
+     "wkts": 1,
+     "econ": 7.25,
+     "dot_pct": 45.8,
+     "boundary_balls": 4,
+     "wides_nb": 0,
+     "style": "spin"
+    },
+    {
+     "bowler": "Matt Henry",
+     "inning": 2,
+     "overs": "9.4",
+     "runs": 27,
+     "wkts": 6,
+     "econ": 2.79,
+     "dot_pct": 74.1,
+     "boundary_balls": 4,
+     "wides_nb": 2,
+     "style": "pace"
+    },
+    {
+     "bowler": "Kyle Jamieson",
+     "inning": 2,
+     "overs": "6.0",
+     "runs": 12,
+     "wkts": 1,
+     "econ": 2.0,
+     "dot_pct": 83.3,
+     "boundary_balls": 1,
+     "wides_nb": 1,
+     "style": "pace"
+    },
+    {
+     "bowler": "Kristian Clarke",
+     "inning": 2,
+     "overs": "2.0",
+     "runs": 13,
+     "wkts": 0,
+     "econ": 6.5,
+     "dot_pct": 50.0,
+     "boundary_balls": 2,
+     "wides_nb": 0,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Matthew Fisher",
+     "inning": 2,
+     "overs": "7.0",
+     "runs": 31,
+     "wkts": 3,
+     "econ": 4.43,
+     "dot_pct": 66.7,
+     "boundary_balls": 3,
+     "wides_nb": 4,
+     "style": "pace"
+    },
+    {
+     "bowler": "Michael Bracewell",
+     "inning": 2,
+     "overs": "2.0",
+     "runs": 6,
+     "wkts": 0,
+     "econ": 3.0,
+     "dot_pct": 50.0,
+     "boundary_balls": 0,
+     "wides_nb": 0,
+     "style": "spin"
+    }
+   ],
+   "pace_vs_spin": {
+    "India": {
+     "pace": {
+      "overs": "28.0",
+      "runs": 183,
+      "wkts": 5,
+      "econ": 6.54
+     },
+     "spin": {
+      "overs": "22.0",
+      "runs": 141,
+      "wkts": 3,
+      "econ": 6.41
+     }
+    },
+    "New Zealand": {
+     "pace": {
+      "overs": "24.4",
+      "runs": 83,
+      "wkts": 10,
+      "econ": 3.36
+     },
+     "spin": {
+      "overs": "2.0",
+      "runs": 6,
+      "wkts": 0,
+      "econ": 3.0
+     }
+    }
+   }
+  },
+  "nz_ind_5odi": {
+   "label": "5th ODI",
+   "innings": {
+    "1": {
+     "team": "India",
+     "score": 209,
+     "wkts": 10,
+     "legal_balls": 253,
+     "overs": "42.1",
+     "run_rate": 4.96,
+     "extras_deliveries": 8,
+     "fours": 19,
+     "sixes": 6,
+     "phases": {
+      "powerplay (1-10)": {
+       "runs": 37,
+       "wkts": 3,
+       "balls": 60,
+       "rr": 3.7,
+       "dot_pct": 70.0,
+       "boundary_pct": 5.0
+      },
+      "middle (11-40)": {
+       "runs": 146,
+       "wkts": 5,
+       "balls": 180,
+       "rr": 4.87,
+       "dot_pct": 53.9,
+       "boundary_pct": 9.4
+      },
+      "death (41-50)": {
+       "runs": 26,
+       "wkts": 2,
+       "balls": 13,
+       "rr": 12.0,
+       "dot_pct": 53.8,
+       "boundary_pct": 30.8
+      }
+     },
+     "dot_pct": 57.7,
+     "boundary_pct": 9.5,
+     "longest_dot_run": {
+      "balls": 7,
+      "ends_over": 10.1
+     },
+     "longest_boundary_drought_balls": 37
+    },
+    "2": {
+     "team": "New Zealand",
+     "score": 187,
+     "wkts": 10,
+     "legal_balls": 289,
+     "overs": "48.1",
+     "run_rate": 3.88,
+     "extras_deliveries": 10,
+     "fours": 18,
+     "sixes": 2,
+     "phases": {
+      "powerplay (1-10)": {
+       "runs": 41,
+       "wkts": 1,
+       "balls": 60,
+       "rr": 4.1,
+       "dot_pct": 63.3,
+       "boundary_pct": 8.3
+      },
+      "middle (11-40)": {
+       "runs": 114,
+       "wkts": 5,
+       "balls": 180,
+       "rr": 3.8,
+       "dot_pct": 62.2,
+       "boundary_pct": 7.2
+      },
+      "death (41-50)": {
+       "runs": 32,
+       "wkts": 4,
+       "balls": 49,
+       "rr": 3.92,
+       "dot_pct": 53.1,
+       "boundary_pct": 4.1
+      }
+     },
+     "dot_pct": 60.9,
+     "boundary_pct": 6.9,
+     "longest_dot_run": {
+      "balls": 13,
+      "ends_over": 23.1
+     },
+     "longest_boundary_drought_balls": 33
+    }
+   },
+   "partnerships": [
+    {
+     "inning": "1",
+     "wicket": "1",
+     "runs": "23",
+     "balls": "33",
+     "batters": "Ruturaj Gaikwad & Rohit Sharma",
+     "end_over": "5.3"
+    },
+    {
+     "inning": "1",
+     "wicket": "2",
+     "runs": "10",
+     "balls": "12",
+     "batters": "Virat Kohli & Ruturaj Gaikwad",
+     "end_over": "7.3"
+    },
+    {
+     "inning": "1",
+     "wicket": "3",
+     "runs": "1",
+     "balls": "4",
+     "batters": "Shreyas Iyer & Ruturaj Gaikwad",
+     "end_over": "8.1"
+    },
+    {
+     "inning": "1",
+     "wicket": "4",
+     "runs": "52",
+     "balls": "55",
+     "batters": "Axar Patel & Shreyas Iyer",
+     "end_over": "17.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "5",
+     "runs": "35",
+     "balls": "46",
+     "batters": "Axar Patel & Ishan Kishan",
+     "end_over": "24.6"
+    },
+    {
+     "inning": "1",
+     "wicket": "6",
+     "runs": "39",
+     "balls": "50",
+     "batters": "Naman Dhir & Ishan Kishan",
+     "end_over": "33.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "7",
+     "runs": "6",
+     "balls": "12",
+     "batters": "Auqib Nabi & Ishan Kishan",
+     "end_over": "35.2"
+    },
+    {
+     "inning": "1",
+     "wicket": "8",
+     "runs": "0",
+     "balls": "4",
+     "batters": "Yash Thakur",
+     "end_over": "35.6"
+    },
+    {
+     "inning": "1",
+     "wicket": "9",
+     "runs": "17",
+     "balls": "27",
+     "batters": "Mohammed Siraj & Ishan Kishan",
+     "end_over": "40.3"
+    },
+    {
+     "inning": "1",
+     "wicket": "10",
+     "runs": "26",
+     "balls": "10",
+     "batters": "Mohammed Siraj & Arshdeep Singh",
+     "end_over": "42.1"
+    },
+    {
+     "inning": "2",
+     "wicket": "1",
+     "runs": "26",
+     "balls": "33",
+     "batters": "Tim Seifert & Will Young",
+     "end_over": "5.3"
+    },
+    {
+     "inning": "2",
+     "wicket": "2",
+     "runs": "38",
+     "balls": "66",
+     "batters": "Nick Kelly & Will Young",
+     "end_over": "16.3"
+    },
+    {
+     "inning": "2",
+     "wicket": "3",
+     "runs": "18",
+     "balls": "25",
+     "batters": "Dean Foxcroft & Nick Kelly",
+     "end_over": "20.4"
+    },
+    {
+     "inning": "2",
+     "wicket": "4",
+     "runs": "1",
+     "balls": "5",
+     "batters": "Finn Allen",
+     "end_over": "21.3"
+    },
+    {
+     "inning": "2",
+     "wicket": "5",
+     "runs": "36",
+     "balls": "57",
+     "batters": "Michael Bracewell & Dean Foxcroft",
+     "end_over": "30.6"
+    },
+    {
+     "inning": "2",
+     "wicket": "6",
+     "runs": "0",
+     "balls": "1",
+     "batters": "Dean Foxcroft",
+     "end_over": "31.1"
+    },
+    {
+     "inning": "2",
+     "wicket": "7",
+     "runs": "39",
+     "balls": "57",
+     "batters": "Mitchell Santner & Kristian Clarke",
+     "end_over": "40.4"
+    },
+    {
+     "inning": "2",
+     "wicket": "8",
+     "runs": "3",
+     "balls": "12",
+     "batters": "Kristian Clarke & Blair Tickner",
+     "end_over": "42.4"
+    },
+    {
+     "inning": "2",
+     "wicket": "9",
+     "runs": "20",
+     "balls": "22",
+     "batters": "Jacob Duffy & Blair Tickner",
+     "end_over": "46.2"
+    },
+    {
+     "inning": "2",
+     "wicket": "10",
+     "runs": "6",
+     "balls": "11",
+     "batters": "Matthew Fisher & Blair Tickner",
+     "end_over": "48.1"
+    }
+   ],
+   "drops": [
+    {
+     "inning": 1,
+     "over": 8.5,
+     "batter": "Axar Patel",
+     "bowler": "Jacob Duffy",
+     "batter_runs_at_drop": "2",
+     "batter_final_runs": "46",
+     "text": "Jacob Duffy to Axar Patel, 2 runs, tough chance and  Full on the legs, Axar Patel flicks and doesn't keep it down. Foxcroft leaps and tips it over the bar with two hands. That didn't stick"
+    },
+    {
+     "inning": 1,
+     "over": 10.3,
+     "batter": "Shreyas Iyer",
+     "bowler": "Jacob Duffy",
+     "batter_runs_at_drop": "5",
+     "batter_final_runs": "22",
+     "text": "Jacob Duffy to Shreyas Iyer, 1 run,  Fullish outside off, Shreyas Iyer gets forward to drive and the thick outside edge flies. Allen is slow to put his hands up. On the reverse-cup and it bursts throu"
+    },
+    {
+     "inning": 2,
+     "over": 18.1,
+     "batter": "Dean Foxcroft",
+     "bowler": "Arshdeep Singh",
+     "batter_runs_at_drop": "5",
+     "batter_final_runs": "31",
+     "text": "Arshdeep Singh to Dean Foxcroft, no run,  Such a sitter. On a short of length and angled into off, wobble-seam delivery, Dean Foxcroft looks to defend. The thick outside edge flies at a nice height to"
+    },
+    {
+     "inning": 2,
+     "over": 25.5,
+     "batter": "Michael Bracewell",
+     "bowler": "Yash Thakur",
+     "batter_runs_at_drop": "8",
+     "batter_final_runs": "19",
+     "text": "Yash Thakur to Michael Bracewell, no run,  Siraj goes to the bowler and pats him lovingly on the head and back. Thakur airborne and nearly grabbed it, was in the hands till the last moment and then it"
+    }
+   ],
+   "reviews": [
+    {
+     "inning": 2,
+     "over": 1.1,
+     "text": "Mohammed Siraj to Tim Seifert, no run, huge appeal for a possible strangle down the leg side as Kishan dives to his left and takes the catch. There was a noise, but it might have come off the pad. India have decided to go for the review. Comes in sharply from "
+    },
+    {
+     "inning": 2,
+     "over": 38.2,
+     "text": "Naman Dhir to Kristian Clarke, no run, Kristian Clarke has been given OUT  Mitchell Santner prods his partner to review, was it heading down leg? Was pushed through quicker and drifted onto the right-hander - Clarke was deep in the crease and played all around"
+    },
+    {
+     "inning": 2,
+     "over": 42.5,
+     "text": "Arshdeep Singh to Jacob Duffy, no run, another one, is it? Another one? Have New Zealand gone for the review? Yes, Jacob Duffy has sent it upstairs! A vicious bumper from Arshdeep Singh, and Duffy finds himself in a real tangle. He closes his eyes while attemp"
+    }
+   ],
+   "bowling": [
+    {
+     "bowler": "Jacob Duffy",
+     "inning": 1,
+     "overs": "8.1",
+     "runs": 60,
+     "wkts": 3,
+     "econ": 7.35,
+     "dot_pct": 57.1,
+     "boundary_balls": 7,
+     "wides_nb": 2,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Matthew Fisher",
+     "inning": 1,
+     "overs": "7.0",
+     "runs": 28,
+     "wkts": 2,
+     "econ": 4.0,
+     "dot_pct": 64.3,
+     "boundary_balls": 4,
+     "wides_nb": 2,
+     "style": "pace"
+    },
+    {
+     "bowler": "Kristian Clarke",
+     "inning": 1,
+     "overs": "2.0",
+     "runs": 13,
+     "wkts": 0,
+     "econ": 6.5,
+     "dot_pct": 41.7,
+     "boundary_balls": 2,
+     "wides_nb": 1,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Blair Tickner",
+     "inning": 1,
+     "overs": "5.0",
+     "runs": 24,
+     "wkts": 1,
+     "econ": 4.8,
+     "dot_pct": 66.7,
+     "boundary_balls": 4,
+     "wides_nb": 2,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Mitchell Santner",
+     "inning": 1,
+     "overs": "10.0",
+     "runs": 47,
+     "wkts": 3,
+     "econ": 4.7,
+     "dot_pct": 56.7,
+     "boundary_balls": 5,
+     "wides_nb": 1,
+     "style": "spin"
+    },
+    {
+     "bowler": "Michael Bracewell",
+     "inning": 1,
+     "overs": "10.0",
+     "runs": 35,
+     "wkts": 1,
+     "econ": 3.5,
+     "dot_pct": 53.3,
+     "boundary_balls": 2,
+     "wides_nb": 0,
+     "style": "spin"
+    },
+    {
+     "bowler": "Arshdeep Singh",
+     "inning": 2,
+     "overs": "10.0",
+     "runs": 30,
+     "wkts": 3,
+     "econ": 3.0,
+     "dot_pct": 70.0,
+     "boundary_balls": 4,
+     "wides_nb": 1,
+     "style": "pace"
+    },
+    {
+     "bowler": "Mohammed Siraj",
+     "inning": 2,
+     "overs": "10.0",
+     "runs": 50,
+     "wkts": 2,
+     "econ": 5.0,
+     "dot_pct": 61.7,
+     "boundary_balls": 7,
+     "wides_nb": 3,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Auqib Nabi",
+     "inning": 2,
+     "overs": "10.0",
+     "runs": 37,
+     "wkts": 1,
+     "econ": 3.7,
+     "dot_pct": 53.3,
+     "boundary_balls": 3,
+     "wides_nb": 2,
+     "style": "pace"
+    },
+    {
+     "bowler": "Yash Thakur",
+     "inning": 2,
+     "overs": "10.0",
+     "runs": 38,
+     "wkts": 1,
+     "econ": 3.8,
+     "dot_pct": 58.3,
+     "boundary_balls": 3,
+     "wides_nb": 4,
+     "style": "pace*"
+    },
+    {
+     "bowler": "Axar Patel",
+     "inning": 2,
+     "overs": "6.1",
+     "runs": 28,
+     "wkts": 2,
+     "econ": 4.54,
+     "dot_pct": 59.5,
+     "boundary_balls": 3,
+     "wides_nb": 0,
+     "style": "spin"
+    },
+    {
+     "bowler": "Naman Dhir",
+     "inning": 2,
+     "overs": "2.0",
+     "runs": 4,
+     "wkts": 1,
+     "econ": 2.0,
+     "dot_pct": 66.7,
+     "boundary_balls": 0,
+     "wides_nb": 0,
+     "style": "spin"
+    }
+   ],
+   "pace_vs_spin": {
+    "New Zealand": {
+     "pace": {
+      "overs": "22.1",
+      "runs": 125,
+      "wkts": 6,
+      "econ": 5.64
+     },
+     "spin": {
+      "overs": "20.0",
+      "runs": 82,
+      "wkts": 4,
+      "econ": 4.1
+     }
+    },
+    "India": {
+     "pace": {
+      "overs": "40.0",
+      "runs": 155,
+      "wkts": 7,
+      "econ": 3.88
+     },
+     "spin": {
+      "overs": "8.1",
+      "runs": 32,
+      "wkts": 3,
+      "econ": 3.92
+     }
+    }
+   }
+  }
+ },
+ "baseline_runs_per_over_2015_plus_first10": [
+  3.93,
+  4.6,
+  4.78,
+  5.07,
+  5.03,
+  5.15,
+  5.14,
+  5.14,
+  4.94,
+  5.04
+ ]
+}

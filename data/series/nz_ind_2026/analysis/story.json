@@ -1,0 +1,676 @@
+{
+ "nz_ind_4odi": {
+  "curve": [
+   {
+    "inning": 1,
+    "after_over": 5,
+    "score": "32/0",
+    "india_wp": 0.3844
+   },
+   {
+    "inning": 1,
+    "after_over": 10,
+    "score": "72/0",
+    "india_wp": 0.2357
+   },
+   {
+    "inning": 1,
+    "after_over": 15,
+    "score": "97/2",
+    "india_wp": 0.3523
+   },
+   {
+    "inning": 1,
+    "after_over": 20,
+    "score": "125/3",
+    "india_wp": 0.3568
+   },
+   {
+    "inning": 1,
+    "after_over": 25,
+    "score": "159/3",
+    "india_wp": 0.25
+   },
+   {
+    "inning": 1,
+    "after_over": 30,
+    "score": "214/3",
+    "india_wp": 0.1108
+   },
+   {
+    "inning": 1,
+    "after_over": 35,
+    "score": "235/4",
+    "india_wp": 0.1431
+   },
+   {
+    "inning": 1,
+    "after_over": 40,
+    "score": "265/6",
+    "india_wp": 0.1801
+   },
+   {
+    "inning": 1,
+    "after_over": 45,
+    "score": "294/7",
+    "india_wp": 0.1941
+   },
+   {
+    "inning": 1,
+    "after_over": 50,
+    "score": "333/10",
+    "india_wp": 0.1668
+   },
+   {
+    "inning": 2,
+    "after_over": 5,
+    "score": "8/3",
+    "india_wp": 0.0219
+   },
+   {
+    "inning": 2,
+    "after_over": 10,
+    "score": "26/4",
+    "india_wp": 0.0131
+   },
+   {
+    "inning": 2,
+    "after_over": 15,
+    "score": "43/4",
+    "india_wp": 0.0146
+   },
+   {
+    "inning": 2,
+    "after_over": 20,
+    "score": "61/5",
+    "india_wp": 0.0078
+   },
+   {
+    "inning": 2,
+    "after_over": 25,
+    "score": "85/9",
+    "india_wp": 0.0004
+   },
+   {
+    "inning": 2,
+    "after_over": 27,
+    "score": "89/10",
+    "india_wp": 0.0002
+   }
+  ],
+  "tipping_point": {
+   "over": 1.2,
+   "inning": 1,
+   "score": "10/0",
+   "india_wp": 0.473,
+   "text": "Auqib Nabi to Tim Seifert, , another lovely shot. This time it's by Tim Seifert. This was pitched up by the bowler and Tim Seifert played a picture perfect on-d"
+  },
+  "india_wp_extremes": {
+   "min": 0.0002,
+   "min_at": "inn2 over 26.4 (89/10)",
+   "max": 0.5599,
+   "max_at": "inn1 over 0.2 (0/0)"
+  },
+  "chase_checkpoints": [
+   {
+    "after_over": 10,
+    "score": "26/4",
+    "need": 308,
+    "balls_left": 240,
+    "required_rate": 7.7,
+    "run_rate_so_far": 2.6
+   },
+   {
+    "after_over": 20,
+    "score": "61/5",
+    "need": 273,
+    "balls_left": 180,
+    "required_rate": 9.1,
+    "run_rate_so_far": 3.05
+   },
+   {
+    "after_over": 26,
+    "score": "89/10",
+    "need": 245,
+    "balls_left": 140,
+    "required_rate": 10.5,
+    "run_rate_so_far": 3.34
+   }
+  ],
+  "fielding": {
+   "Ishan Kishan": {
+    "catches": 2,
+    "catch_swing": 0.105
+   },
+   "Finn Allen": {
+    "catches": 2,
+    "catch_swing": 0.089
+   },
+   "Gurnoor Brar": {
+    "catches": 1,
+    "catch_swing": 0.081
+   },
+   "Rohit Sharma": {
+    "catches": 1,
+    "catch_swing": 0.033
+   },
+   "Naman Dhir": {
+    "catches": 1,
+    "catch_swing": 0.03
+   },
+   "Kumar Kushagra": {
+    "catches": 1,
+    "catch_swing": 0.026
+   },
+   "Michael Bracewell": {
+    "catches": 1,
+    "catch_swing": 0.011
+   },
+   "Tim Seifert": {
+    "catches": 1,
+    "catch_swing": 0.003
+   },
+   "Mitchell Santner": {
+    "catches": 1,
+    "catch_swing": 0.0
+   }
+  },
+  "collapse_windows": {
+   "1": {
+    "most_wickets_in_10_overs": 4,
+    "runs_in_that_window": 40,
+    "from_over": 44.2,
+    "to_over": 49.6
+   },
+   "2": {
+    "most_wickets_in_10_overs": 6,
+    "runs_in_that_window": 36,
+    "from_over": 17.1,
+    "to_over": 26.4
+   }
+  },
+  "hidden": {
+   "definition": "hidden winner: top-4 win-probability added but outside the top-4 of a plain scorecard rank (runs + 20 x wickets); hidden loser: bottom-5 win-probability added although inside the scorecard top-6",
+   "winners": [
+    {
+     "player": "Tim Seifert",
+     "team": "New Zealand",
+     "wpa": 0.199,
+     "wpa_rank": 2,
+     "card_rank": 5,
+     "line": "58 (47); 0/0 in 0.0"
+    },
+    {
+     "player": "Finn Allen",
+     "team": "New Zealand",
+     "wpa": 0.086,
+     "wpa_rank": 4,
+     "card_rank": 8,
+     "line": "41 (29); 0/0 in 0.0"
+    }
+   ],
+   "losers": [
+    {
+     "player": "Auqib Nabi",
+     "team": "India",
+     "wpa": -0.099,
+     "wpa_rank": 20,
+     "card_rank": 6,
+     "line": "5 (8); 2/59 in 8.0"
+    }
+   ]
+  }
+ },
+ "nz_ind_5odi": {
+  "curve": [
+   {
+    "inning": 1,
+    "after_over": 5,
+    "score": "22/0",
+    "india_wp": 0.5401
+   },
+   {
+    "inning": 1,
+    "after_over": 10,
+    "score": "37/3",
+    "india_wp": 0.2337
+   },
+   {
+    "inning": 1,
+    "after_over": 15,
+    "score": "73/3",
+    "india_wp": 0.3796
+   },
+   {
+    "inning": 1,
+    "after_over": 20,
+    "score": "94/4",
+    "india_wp": 0.3385
+   },
+   {
+    "inning": 1,
+    "after_over": 25,
+    "score": "121/5",
+    "india_wp": 0.343
+   },
+   {
+    "inning": 1,
+    "after_over": 30,
+    "score": "141/5",
+    "india_wp": 0.3792
+   },
+   {
+    "inning": 1,
+    "after_over": 35,
+    "score": "166/6",
+    "india_wp": 0.3754
+   },
+   {
+    "inning": 1,
+    "after_over": 40,
+    "score": "183/8",
+    "india_wp": 0.2785
+   },
+   {
+    "inning": 1,
+    "after_over": 43,
+    "score": "209/10",
+    "india_wp": 0.3051
+   },
+   {
+    "inning": 2,
+    "after_over": 5,
+    "score": "24/0",
+    "india_wp": 0.1315
+   },
+   {
+    "inning": 2,
+    "after_over": 10,
+    "score": "41/1",
+    "india_wp": 0.1845
+   },
+   {
+    "inning": 2,
+    "after_over": 15,
+    "score": "58/1",
+    "india_wp": 0.128
+   },
+   {
+    "inning": 2,
+    "after_over": 20,
+    "score": "80/2",
+    "india_wp": 0.156
+   },
+   {
+    "inning": 2,
+    "after_over": 25,
+    "score": "89/4",
+    "india_wp": 0.4564
+   },
+   {
+    "inning": 2,
+    "after_over": 30,
+    "score": "116/4",
+    "india_wp": 0.2711
+   },
+   {
+    "inning": 2,
+    "after_over": 35,
+    "score": "131/6",
+    "india_wp": 0.5834
+   },
+   {
+    "inning": 2,
+    "after_over": 40,
+    "score": "155/6",
+    "india_wp": 0.4001
+   },
+   {
+    "inning": 2,
+    "after_over": 45,
+    "score": "173/8",
+    "india_wp": 0.8102
+   },
+   {
+    "inning": 2,
+    "after_over": 49,
+    "score": "187/10",
+    "india_wp": 0.9827
+   }
+  ],
+  "tipping_point": {
+   "over": 40.4,
+   "inning": 2,
+   "score": "158/7",
+   "india_wp": 0.6386,
+   "text": "Naman Dhir to Mitchell Santner,  Caught by Arshdeep Singh!! Mitchell Santner has holed out and this could be the match for India. The injury to his hand was bit"
+  },
+  "india_wp_extremes": {
+   "min": 0.1102,
+   "min_at": "inn2 over 15.6 (64/1)",
+   "max": 0.9827,
+   "max_at": "inn2 over 48.1 (187/10)"
+  },
+  "chase_checkpoints": [
+   {
+    "after_over": 10,
+    "score": "41/1",
+    "need": 169,
+    "balls_left": 240,
+    "required_rate": 4.22,
+    "run_rate_so_far": 4.1
+   },
+   {
+    "after_over": 20,
+    "score": "80/2",
+    "need": 130,
+    "balls_left": 180,
+    "required_rate": 4.33,
+    "run_rate_so_far": 4.0
+   },
+   {
+    "after_over": 30,
+    "score": "116/4",
+    "need": 94,
+    "balls_left": 120,
+    "required_rate": 4.7,
+    "run_rate_so_far": 3.87
+   },
+   {
+    "after_over": 40,
+    "score": "155/6",
+    "need": 55,
+    "balls_left": 60,
+    "required_rate": 5.5,
+    "run_rate_so_far": 3.88
+   },
+   {
+    "after_over": 48,
+    "score": "187/10",
+    "need": 23,
+    "balls_left": 11,
+    "required_rate": 12.55,
+    "run_rate_so_far": 3.88
+   }
+  ],
+  "last_wicket_stand": {
+   "from": "183/9 to 209/10",
+   "runs": 26,
+   "legal_balls": 10,
+   "india_wp_before": 0.2306,
+   "india_wp_after": 0.3051,
+   "wp_gain": 0.074
+  },
+  "india_fall_of_wickets": [
+   [
+    23,
+    5.3
+   ],
+   [
+    33,
+    7.3
+   ],
+   [
+    34,
+    8.1
+   ],
+   [
+    86,
+    17.2
+   ],
+   [
+    121,
+    24.6
+   ],
+   [
+    160,
+    33.2
+   ],
+   [
+    166,
+    35.2
+   ],
+   [
+    166,
+    35.6
+   ],
+   [
+    183,
+    40.3
+   ],
+   [
+    209,
+    42.1
+   ]
+  ],
+  "fielding": {
+   "Arshdeep Singh": {
+    "catches": 1,
+    "catch_swing": 0.268
+   },
+   "Tim Seifert": {
+    "catches": 3,
+    "catch_swing": 0.265
+   },
+   "Naman Dhir": {
+    "catches": 1,
+    "catch_swing": 0.185
+   },
+   "Matthew Fisher": {
+    "catches": 2,
+    "catch_swing": 0.14
+   },
+   "Ishan Kishan": {
+    "catches": 1,
+    "catch_swing": 0.139
+   },
+   "Yash Thakur": {
+    "catches": 1,
+    "catch_swing": 0.124
+   },
+   "Virat Kohli": {
+    "catches": 1,
+    "catch_swing": 0.122
+   },
+   "Dean Foxcroft": {
+    "catches": 1,
+    "catch_swing": 0.118
+   },
+   "Ruturaj Gaikwad": {
+    "catches": 1,
+    "catch_swing": 0.113
+   },
+   "Will Young": {
+    "catches": 1,
+    "catch_swing": 0.085
+   },
+   "Nick Kelly": {
+    "catches": 1,
+    "catch_swing": 0.07
+   },
+   "Finn Allen": {
+    "catches": 1,
+    "catch_swing": 0.063
+   }
+  },
+  "collapse_windows": {
+   "1": {
+    "most_wickets_in_10_overs": 5,
+    "runs_in_that_window": 49,
+    "from_over": 33.2,
+    "to_over": 42.1
+   },
+   "2": {
+    "most_wickets_in_10_overs": 4,
+    "runs_in_that_window": 29,
+    "from_over": 40.4,
+    "to_over": 48.1
+   }
+  },
+  "hidden": {
+   "definition": "hidden winner: top-4 win-probability added but outside the top-4 of a plain scorecard rank (runs + 20 x wickets); hidden loser: bottom-5 win-probability added although inside the scorecard top-6",
+   "winners": [
+    {
+     "player": "Naman Dhir",
+     "team": "India",
+     "wpa": 0.257,
+     "wpa_rank": 2,
+     "card_rank": 8,
+     "line": "22 (31); 1/4 in 2.0"
+    },
+    {
+     "player": "Matthew Fisher",
+     "team": "New Zealand",
+     "wpa": 0.084,
+     "wpa_rank": 4,
+     "card_rank": 7,
+     "line": "3 (6); 2/28 in 7.0"
+    }
+   ],
+   "losers": [
+    {
+     "player": "Jacob Duffy",
+     "team": "New Zealand",
+     "wpa": -0.202,
+     "wpa_rank": 22,
+     "card_rank": 4,
+     "line": "9 (12); 3/60 in 8.1"
+    }
+   ]
+  }
+ },
+ "drops": {
+  "nz_ind_4odi": {
+   "list": [
+    {
+     "fielding_side": "India",
+     "batter": "Will Young",
+     "over": 1.5,
+     "runs_at_drop": "5",
+     "final": "125",
+     "runs_after_drop": 120
+    },
+    {
+     "fielding_side": "India",
+     "batter": "Will Young",
+     "over": 1.6,
+     "runs_at_drop": "5",
+     "final": "125",
+     "runs_after_drop": 120
+    },
+    {
+     "fielding_side": "India",
+     "batter": "Mitchell Santner",
+     "over": 40.5,
+     "runs_at_drop": "7",
+     "final": "24",
+     "runs_after_drop": 17
+    },
+    {
+     "fielding_side": "NZ",
+     "batter": "Axar Patel",
+     "over": 5.4,
+     "runs_at_drop": "0",
+     "final": "21",
+     "runs_after_drop": 21
+    }
+   ],
+   "runs_conceded_after_drops": {
+    "India": 137,
+    "NZ": 21
+   }
+  },
+  "nz_ind_5odi": {
+   "list": [
+    {
+     "fielding_side": "NZ",
+     "batter": "Axar Patel",
+     "over": 8.5,
+     "runs_at_drop": "2",
+     "final": "46",
+     "runs_after_drop": 44
+    },
+    {
+     "fielding_side": "NZ",
+     "batter": "Shreyas Iyer",
+     "over": 10.3,
+     "runs_at_drop": "5",
+     "final": "22",
+     "runs_after_drop": 17
+    },
+    {
+     "fielding_side": "India",
+     "batter": "Dean Foxcroft",
+     "over": 18.1,
+     "runs_at_drop": "5",
+     "final": "31",
+     "runs_after_drop": 26
+    },
+    {
+     "fielding_side": "India",
+     "batter": "Michael Bracewell",
+     "over": 25.5,
+     "runs_at_drop": "8",
+     "final": "19",
+     "runs_after_drop": 11
+    }
+   ],
+   "runs_conceded_after_drops": {
+    "NZ": 61,
+    "India": 37
+   }
+  }
+ },
+ "series": {
+  "source": "Wikipedia, 'Indian cricket team in New Zealand in 2026-27' (Tier C; cites Cricinfo match reports); matches 4 and 5 are also in our own captures",
+  "matches": [
+   {
+    "n": 1,
+    "date": "2026-11-04",
+    "venue": "Eden Park, Auckland",
+    "result": "India won by 5 wickets (DLS): NZ 185 (40.2), India 143/5 (22.4), target 143 from 32",
+    "motm": "Anshul Kamboj",
+    "top": "Kohli 74 (51); Arshdeep 4/70; Duffy 3/49",
+    "ball_by_ball": false
+   },
+   {
+    "n": 2,
+    "date": "2026-11-07",
+    "venue": "Wellington Regional Stadium",
+    "result": "India won by 4 runs (DLS): NZ 134 (41), India 113/7 (26), par 109",
+    "motm": "Gurnoor Brar (4/30)",
+    "top": "Mitchell 55 (104); Iyer 30 (46); Jamieson 3/35",
+    "note": "Fisher replaced Tickner as a concussion substitute",
+    "ball_by_ball": false
+   },
+   {
+    "n": 3,
+    "date": "2026-11-10",
+    "venue": "Seddon Park, Hamilton",
+    "result": "No result (rain, no play)",
+    "ball_by_ball": false
+   },
+   {
+    "n": 4,
+    "date": "2026-11-13",
+    "venue": "Bay Oval, Mount Maunganui",
+    "result": "New Zealand won by 244 runs: NZ 333, India 89 (26.4)",
+    "motm": "Matt Henry (6/27)",
+    "top": "Young 125 (108)",
+    "note": "Iyer captained India in ODIs for the first time",
+    "ball_by_ball": true
+   },
+   {
+    "n": 5,
+    "date": "2026-11-15",
+    "venue": "Bay Oval, Mount Maunganui",
+    "result": "India won by 22 runs: India 209 (42.1), NZ 187 (48.1)",
+    "motm": "Arshdeep Singh (3/30)",
+    "top": "Axar 46 (55); Santner 3/47; Foxcroft 31 (42)",
+    "note": "Yash Thakur ODI debut",
+    "ball_by_ball": true
+   }
+  ],
+  "result": "India won the series 3-1 (one no result)"
+ }
+}
