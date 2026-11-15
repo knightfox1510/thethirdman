@@ -1,4 +1,4 @@
-// Batch + crawl mode (v1.5): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Batch + crawl mode (v1.6: auto-resume, keep-awake, stall watchdog): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
 // Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
 // a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
 // Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
@@ -15,8 +15,11 @@
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   let stopFlag = false;                                                 // set by Stop / Clear: every wait below checks it, so nothing keeps running after you press Stop
   const wait = async (ms) => { const end = Date.now() + ms; while (Date.now() < end) { if (stopFlag) return false; await sleep(Math.min(250, end - Date.now())); } return !stopFlag; };
-  const blank = () => ({ running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
-  const get = () => new Promise((r) => chrome.storage.local.get("ttm_batch", (v) => r(Object.assign(blank(), v.ttm_batch || {}))));
+  const BACKOFF = [20, 45, 90];                                         // minutes to wait after a human-check / access-denied page when auto-resume is on (3 tries, then it stops and waits for you)
+  const blank = () => ({ auto: false, cool: 20, keepAwake: true, backoff: null, blockTries: 0, navTries: 0, errs: 0, pausedUntil: 0, resumeUrl: null, running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
+  const OPTS = ["auto", "cool", "keepAwake", "backoff"];                // settings live in their own key so changing them mid-run is never overwritten by a running step
+  const get = () => new Promise((r) => chrome.storage.local.get(["ttm_batch", "ttm_opts"], (v) => r(Object.assign(blank(), v.ttm_batch || {}, v.ttm_opts || {}))));
+  const setOpts = (s) => new Promise((r) => chrome.storage.local.set({ ttm_opts: Object.fromEntries(OPTS.map((k) => [k, s[k]])) }, r));
   const set = (s) => new Promise((r) => chrome.storage.local.set({ ttm_batch: s }, r));
   const clean = (u) => String(u).split("#")[0];
   const matchId = (u) => { try { const x = new URL(u, location.href); const p = x.pathname;
@@ -32,6 +35,39 @@
   const blocked = () => /access denied|captcha|unusual traffic|are you a robot|just a moment|verify you are human/i.test(document.title + " " + (document.body ? document.body.innerText.slice(0, 600) : ""));
   const notFound = () => /page not found|404|can't find|couldn't find/i.test(document.title);
   const yearOf = (t) => { const m = (t || "").match(/\b(19\d\d|20\d\d)\b/); return m ? +m[1] : 0; };
+  // ---- keep the computer awake while running (background.js uses chrome.power; it lets go by itself if this tab stops sending a heartbeat)
+  const awake = (on) => { try { chrome.runtime.sendMessage({ ttm: "awake", on }, () => void chrome.runtime.lastError); } catch (e) {} };
+  const heartbeat = () => get().then((s) => awake(!!(s.running && s.keepAwake !== false))).catch(() => {});
+  // ---- navigation with a stall watchdog: if the page has not replaced this one after 2 minutes, try again (3 times)
+  let navTimer = null;
+  const nav = (url) => {
+    clearTimeout(navTimer);
+    navTimer = setTimeout(async () => {
+      const s = await get(); if (!s.running || stopFlag) return;
+      s.navTries = (s.navTries || 0) + 1;
+      if (s.navTries <= 3) { await log(s, `page did not load in 2 minutes: trying again (${s.navTries}/3)`); return nav(url); }
+      s.navTries = 0; s.resumeUrl = url;
+      if (s.auto && (s.blockTries || 0) < (s.backoff || BACKOFF).length) return backOff(s, "Page keeps failing to load (network down?)");
+      return stopped(s, "STOPPED: the page will not load. Check the network, then press Resume.");
+    }, 120000);
+    location.assign(url);
+  };
+  // ---- auto-resume: pause (state is saved, so a reload of this tab does not lose the pause), then carry on by itself
+  const backOff = async (s, why) => {
+    const list = s.backoff || BACKOFF, m = list[s.blockTries || 0] * (0.9 + Math.random() * 0.2); s.blockTries = (s.blockTries || 0) + 1;
+    return coolDown(s, why, m);
+  };
+  const coolDown = async (s, why, mins, resetRun) => {
+    if (mins != null) { s.pausedUntil = Date.now() + mins * 60000; if (resetRun) s.results = []; await log(s, `${why}: auto-resume in ${mins < 1 ? Math.round(mins * 60) + " s" : Math.round(mins) + " min"} (about ${new Date(s.pausedUntil).toTimeString().slice(0, 5)}).`); }
+    while (Date.now() < s.pausedUntil) {
+      if (stopFlag) return;
+      s.now = `paused (auto): resumes in ${Math.max(1, Math.ceil((s.pausedUntil - Date.now()) / 60000))} min`; render(s);
+      if (!(await wait(Math.min(30000, Math.max(250, s.pausedUntil - Date.now()))))) return;
+    }
+    const t = await get(); if (!t.running || stopFlag) return;
+    const url = t.resumeUrl; t.pausedUntil = 0; t.resumeUrl = null; await log(t, "Auto-resume: carrying on.");
+    return url ? nav(url) : goNext(t, false);
+  };
   const log = async (s, msg) => { s.log.push(new Date().toISOString().slice(11, 19) + " " + msg); s.log = s.log.slice(-120); await set(s); render(s); };
 
   // Links are collected from the page's MAIN content only, never from the header, menus, side panels or "recent / live / trending matches" widgets, and, for a series page, only matches of THAT series.
@@ -71,20 +107,35 @@
     if (front) s.queue.splice(s.idx + 1, 0, ...fresh); else s.queue.push(...fresh);
     return fresh.length;
   };
-  const stopped = async (s, msg) => { s.running = false; s.now = ""; if (!(s.queue.length - s.idx)) s.started = false; await log(s, msg); };
-  const advance = async (s) => { s.idx++; s.tab = 0; s.plan = null; while (s.idx < s.queue.length && s.done[doneKey(s.queue[s.idx])] && s.done[doneKey(s.queue[s.idx])].schema === SCHEMA) s.idx++; await set(s); };   // skips already-done items at once
+  const stopped = async (s, msg) => { s.running = false; s.now = ""; s.pausedUntil = 0; awake(false); if (!(s.queue.length - s.idx)) s.started = false; await log(s, msg); };
+  const advance = async (s) => { s.blockTries = 0; s.navTries = 0; s.errs = 0; s.idx++; s.tab = 0; s.plan = null; while (s.idx < s.queue.length && s.done[doneKey(s.queue[s.idx])] && s.done[doneKey(s.queue[s.idx])].schema === SCHEMA) s.idx++; await set(s); };   // skips already-done items at once
   const goNext = async (s, pause = true) => {
     if (stopFlag) return;
     if (s.idx >= s.queue.length) return stopped(s, `DONE: queue finished, ${s.results.length} captured this run.`);
+    if (s.results.length >= s.max && s.auto) { s.resumeUrl = null; return coolDown(s, `Run limit reached (${s.max})`, (+s.cool || 20) * (0.8 + Math.random() * 0.4), true); }
     if (s.results.length >= s.max) return stopped(s, `Run limit reached (${s.max}). ${s.queue.length - s.idx} still queued: press Resume to continue.`);
     s.now = `next: ${label(s.queue[s.idx])}`; await set(s); render(s);
     if (pause && !(await wait(rnd(BETWEEN)))) return;
-    location.assign(s.queue[s.idx]);
+    nav(s.queue[s.idx]);
   };
 
-  const step = async () => {
+  const step = async () => {                                            // errors never leave the run silently dead: with auto-resume it retries (5 times), otherwise it stops and says why
+    try { await stepInner(); } catch (e) {
+      const s = await get(); if (!s.running || stopFlag) return;
+      s.errs = (s.errs || 0) + 1; await log(s, `error: ${e && e.message}`);
+      if (s.auto && s.errs <= 5) { if (!(await wait(30000))) return; return step(); }
+      return stopped(s, "STOPPED after an error (see the log). Press Resume to try again.");
+    }
+  };
+  const stepInner = async () => {
     const s = await get(); if (!s.running || stopFlag) return render(s);
-    if (blocked()) return stopped(s, "STOPPED: the site is asking for a human check. Solve it in the tab, then press Resume.");
+    clearTimeout(navTimer); s.navTries = 0;
+    if (s.pausedUntil > Date.now()) return coolDown(s, null);          // the page was reloaded during an auto-resume pause: finish the pause first
+    if (s.pausedUntil) { s.pausedUntil = 0; await set(s); }
+    if (blocked()) {
+      if (s.auto && (s.blockTries || 0) < (s.backoff || BACKOFF).length) { s.resumeUrl = location.href; return backOff(s, "The site asked for a human check / denied access"); }
+      return stopped(s, s.auto ? `STOPPED: still blocked after ${(s.backoff || BACKOFF).length} automatic retries. Solve the check in the tab, then press Resume.` : "STOPPED: the site is asking for a human check. Solve it in the tab, then press Resume.");
+    }
     const job = s.queue[s.idx]; if (!job) return stopped(s, `DONE: ${s.results.length} captured.`);
     const k = kind(job), key = doneKey(job);
     if (s.done[key] && s.done[key].schema === SCHEMA) { await advance(s); return goNext(s, false); }                       // already captured: skip, no waiting
@@ -92,7 +143,7 @@
     const onTarget = k === "match" ? matchId(here) === target : here.split("?")[0] === clean(job).split("?")[0];
     s.now = label(job); render(s);
     const go = k === "match" ? tabUrl(job, TABS.score) : (k === "series" && SITE === "cricinfo" && !/match-schedule-fixtures-and-results|match-results/.test(job) && seriesSeg(job) ? `${new URL(job).origin}/series/${seriesSeg(job)}/match-schedule-fixtures-and-results` : job);
-    if (!onTarget && !(k === "series" && clean(location.href).split("?")[0] === clean(go).split("?")[0])) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; location.assign(go); return; }
+    if (!onTarget && !(k === "series" && clean(location.href).split("?")[0] === clean(go).split("?")[0])) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; nav(go); return; }
     if (!(await wait(rnd(DELAY)))) return;
     if (k !== "match" && notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
 
@@ -133,7 +184,7 @@
     const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
     if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
     let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
-    if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; location.assign(tabUrl(job, TABS[s.plan[nx]])); return; }
+    if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
     const balls = T.saveJson();                                                        // one json per match
     s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary };
     s.results.push({ id: key, balls });
@@ -163,6 +214,13 @@
         <label style="display:block;margin-bottom:6px">Max matches per run <input id="tb-max" type="number" min="1" max="100" style="width:56px;${INP}"></label>
         <label style="display:block;margin-bottom:6px">Only from year <input id="tb-since" type="number" style="width:70px;${INP}"> <span style="color:${C.mute}">(0 = all)</span></label>
         <label style="display:block;margin-bottom:8px"><input id="tb-lists" type="checkbox"> also save series / list pages (for audits)</label>
+        <div style="border-top:1px solid ${C.line};margin:2px 0 8px;padding-top:8px">
+          <label style="display:block;margin-bottom:4px"><input id="tb-auto" type="checkbox"> <b>Auto-resume</b> (keeps going while you sleep)</label>
+          <div style="color:${C.mute};font-size:11px;margin:0 0 6px 20px">After the run limit it rests, then carries on; after a human-check page it waits 20, 45 then 90 minutes and tries again, then stops for you.</div>
+          <label style="display:block;margin:0 0 6px 20px">Rest between runs <input id="tb-cool" type="number" min="5" max="240" style="width:56px;${INP}"> min</label>
+          <label style="display:block;margin-bottom:2px"><input id="tb-awake" type="checkbox"> Keep this computer awake while running</label>
+          <div style="color:${C.mute};font-size:11px;margin:0 0 4px 20px">Keep the laptop plugged in and the lid open, and leave this tab in its own window.</div>
+        </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap">${B("tb-page", "Save this page", C.card, "border:1px solid " + C.line)}${B("tb-known", "Import known ids", C.card, "border:1px solid " + C.line)}${B("tb-reset", "Forget done", C.card, "border:1px solid " + C.red + ";color:#fca5a5")}</div></div>
       <div id="tb-logt" style="margin:8px 0 4px;color:${C.mute};cursor:pointer;font-size:12px">▾ Activity</div>
       <pre id="tb-log" style="height:130px;overflow:auto;margin:0;padding:6px 8px;background:${C.card};border-radius:8px;font:11px/1.45 ui-monospace,monospace;white-space:pre-wrap;color:${C.text}"></pre>
@@ -172,7 +230,8 @@
   const lines = (t) => t.split(/\s+/).filter((x) => /^https?:/.test(x));
   const render = (s) => {
     const left = Math.max(0, s.queue.length - s.idx), done = Object.keys(s.done || {}).length, ran = (s.results || []).length;
-    const chip = $("tb-chip"); chip.textContent = s.running ? "RUNNING" : left ? "STOPPED" : "IDLE"; chip.style.background = s.running ? C.green : left ? C.amber : C.line;
+    const paused = s.running && s.pausedUntil > Date.now();
+    const chip = $("tb-chip"); chip.textContent = paused ? "RESTING" : s.running ? "RUNNING" : left ? "STOPPED" : "IDLE"; chip.style.background = paused ? C.blue : s.running ? C.green : left ? C.amber : C.line;
     $("tb-go").textContent = s.running ? "● Running…" : (s.started && left ? "▶ Resume" : "▶ Start"); $("tb-go").disabled = s.running; $("tb-go").style.opacity = s.running ? .6 : 1;
     $("tb-stop").disabled = !s.running; $("tb-stop").style.opacity = s.running ? 1 : .45;
     $("tb-now").textContent = s.now ? (s.running ? "Now: " : "") + s.now : (s.running ? "Starting…" : "Not running");
@@ -185,7 +244,10 @@
   };
   const start = async () => {
     document.body.appendChild(box); let s = await get();
-    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; render(s);
+    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; render(s);
+    const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
+    $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = saveOpts;
+    setInterval(heartbeat, 45000); heartbeat();
     $("tb-q").oninput = () => render(s);
     const ui = async (k) => { s = await get(); s.ui[k] = !s.ui[k]; await set(s); render(s); };
     $("tb-head").onclick = () => ui("min"); $("tb-optt").onclick = () => ui("opts"); $("tb-logt").onclick = () => ui("log");
@@ -193,12 +255,13 @@
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
       const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
-      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked });
+      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked });
+      await setOpts(s);
       if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }
-      await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run`); step();
+      await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run${s.auto ? ", auto-resume ON" : ""}`); heartbeat(); step();
     };
-    $("tb-stop").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); s.running = false; s.now = ""; await log(s, `Stopped. ${Math.max(0, s.queue.length - s.idx)} still queued: press Resume to continue, or Clear queue.`); };
-    $("tb-clear").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); Object.assign(s, { running: false, started: false, queue: [], idx: 0, tab: 0, plan: null, now: "", results: [] }); $("tb-q").value = ""; await log(s, "Queue cleared."); };
+    $("tb-stop").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); s.running = false; s.now = ""; s.pausedUntil = 0; s.resumeUrl = null; await log(s, `Stopped. ${Math.max(0, s.queue.length - s.idx)} still queued: press Resume to continue, or Clear queue.`); };
+    $("tb-clear").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); Object.assign(s, { pausedUntil: 0, resumeUrl: null, running: false, started: false, queue: [], idx: 0, tab: 0, plan: null, now: "", results: [] }); $("tb-q").value = ""; await log(s, "Queue cleared."); };
     $("tb-add").onclick = async () => { s = await get(); const ls = links(isSeries(location.href) ? location.href : null); const cur = lines($("tb-q").value); const all = [...new Set(cur.concat(ls.map((x) => x.url)))]; $("tb-q").value = all.join("\n"); await log(s, `Added ${all.length - cur.length} new links from this page (${ls.length} found).`); render(s); };
     $("tb-page").onclick = async () => { const n = await savePage("page"); s = await get(); await log(s, `Saved this page (${n} tables).`); };
     $("tb-known").onclick = async () => { const txt = prompt("Paste the JSON printed by `python3 -m dataops.store known`"); if (!txt) return; s = await get();
