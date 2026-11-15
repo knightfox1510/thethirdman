@@ -28,7 +28,9 @@
 ## Production notes
 - Register each episode in `publish/series.py` (series id `didyouknow`) before the first build. File names: `Did_You_Know_Ep01_<Subject>_Short_9x16`.
 - Title pattern: `<Question>? | Did You Know Ep 3 #Shorts`.
-- Scenes: stage + "board" (field plan) + verdict-style "YES / NO / IT DEPENDS" panel. Add a Law-number stamp panel as a new `law` panel kind when the first episode is built.
+- Look (built): the "plate" look (plate.py), scenes `plate` (inked field, numbered figures, ball paths), `plate_page` (a Law quote or theory, margin note, red stamp) and `plate_list`. The Law number is a stamp (`stamp=["LAW","28.4"]`). Field plans are labelled Illustrative.
+- Built so far: Ep 1 `dyk_third_man` (long + Short), Ep 2 `dyk_fielding_positions` (Short, 1:42, make_dyk_fielding.py; Law 28.4: at most two fielders besides the keeper behind the batting crease on the leg side, a breach is a no ball). Ep 2 caveat: the MCC 2026 edition (in force Oct 2026) was not read in full; confirm the clause number before publishing.
+- Generator pattern: make_dyk_<topic>.py with V.Claims for every claim (two sources), then `python3 engine.py voice specs/<slug>.json short` (narration first), `engine.py stills`, then `engine.py build ... short`, `variants.py igshort`, `publish/drive.py`.
 
 ## More topic areas (added Nov 2026)
 **Batting shots:** every shot and what it is for (forward defence, back foot defence, drive: straight, cover, off, on; cut and square cut; pull and hook; sweep, paddle, reverse sweep; flick and glance; late cut and upper cut; slog sweep; scoop, ramp, dilscoop; switch hit; helicopter shot; the leave); where each shot sends the ball (wagon wheel zones); which shots go with which length; "playing and missing" vs "edge"; the stance, the grip, the backlift; the bat's anatomy (sweet spot, edge, toe, shoulder).

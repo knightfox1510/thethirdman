@@ -4,6 +4,8 @@
 formats.json, schedule.json, fixtures.json and ideas/ are edited directly (by hand or by the daily ideas task).
 Vercel serves site/ as-is (vercel.json), so a push is a deploy."""
 import json, glob, os, subprocess, sys, re
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from publish import series as _series   # slug -> series id (the registry every video is added to before its first build)
 HERE = os.path.dirname(os.path.abspath(__file__))
 WORK = sys.argv[sys.argv.index("--work") + 1] if "--work" in sys.argv else (os.path.exists("/home/claude/video") and "/home/claude/video") or HERE
 OUT = os.path.join(HERE, "site", "data")
@@ -13,6 +15,24 @@ SERIES = {"myth_ep1_kohli_knockouts": "myth", "anchor": "myth", "bumrah_economy"
           "stat_check_bumrah_rashid": "statcheck", "wellington_odi": "tactics", "santner_problem": "tactics", "abhishek_plan": "tactics",
           "death_kings": "tactics", "nz_test_preview": "tactics", "bradman_ipl": "whatif", "sachin_t20": "whatif", "dhoni_captain": "whatif",
           "bumrah_vs_90s": "whatif", "aaryavir_sehwag": "rising", "kohli_2000_nz": "news", "hardik_arshdeep": "news", "channel_trailer": "news"}
+SITE_FORMAT = {"data": "datastories", "channel": "news"}   # series id (publish/series.py) -> format id on the site (site/data/formats.json); the rest are the same
+
+
+def format_of(slug):
+    """Format id for a slug: the series registry first (every new video is registered there), then the older hand map, then flip_/news."""
+    e = _series.EPISODES.get(slug)
+    if e: return SITE_FORMAT.get(e[0], e[0])
+    return SERIES.get(slug, "flip" if slug.startswith("flip_") else "news")
+
+
+def title_of(slug, sp):
+    """Hand title if we have one, else the YouTube long (or Short) title from the spec, else the slug."""
+    if slug in TITLES: return TITLES[slug]
+    yt = sp.get("yt") or {}
+    t = (yt.get("long") or yt.get("short") or {}).get("title")
+    return re.sub(r"\s*#Shorts\s*$", "", t) if t else slug.replace("_", " ").capitalize()
+
+
 # titles and re-check notes as kept in the schedule sheet's Library tab
 TITLES = {"channel_trailer": "Channel trailer", "ipl_batting_evolution": "How the IPL Changed T20 Batting Forever",
           "nz_test_preview": "Can India Win a Test Series in New Zealand?", "hardik_arshdeep": "Hardik–Arshdeep trade: who won?",
@@ -44,11 +64,11 @@ def library():
         sp = json.load(open(p)); s = sp["slug"]; f = sp.get("files", {}) or {}
         d = f"{WORK}/deliver/{s}"
         name = lambda k: f.get(k) if isinstance(f.get(k), str) and f.get(k) != "_unused" else None
-        title = TITLES.get(s, s.replace("_", " ").capitalize())
+        title = title_of(s, sp)
         rows = [r for r in sched if r["content"] and (r["content"].lower()[:18] in title.lower() or title.lower()[:18] in r["content"].lower())]
         posted = next((r for r in rows if r["status"] == "Posted"), None)
         planned = sorted(rows, key=lambda r: r["date"] or "9999")
-        items.append(dict(slug=s, title=title, format=SERIES.get(s, "flip" if s.startswith("flip_") else "news"),
+        items.append(dict(slug=s, title=title, format=format_of(s), series=(_series.info(s) or {}).get("series_name"), ep=(_series.info(s) or {}).get("ep"),
                           long=dur(f"{d}/{name('long')}.mp4") if name("long") else None, short=dur(f"{d}/{name('short')}.mp4") if name("short") else None,
                           status=(posted or (planned[0] if planned else {})).get("status") or "Not scheduled",
                           link=(posted or {}).get("link"), planned=planned[0]["date"] if planned else None,
@@ -65,7 +85,7 @@ def video_map():
     for r in json.load(open(f)):
         if r.get("deleted"): continue
         s = r["slug"]
-        m[r["video_id"]] = dict(slug=s, kind=r["fmt"], title=TITLES.get(s, s), format=SERIES.get(s, "flip" if s.startswith("flip_") else "news"))
+        m[r["video_id"]] = dict(slug=s, kind=r["fmt"], title=TITLES.get(s, s), format=format_of(s))
     json.dump(m, open(f"{OUT}/video_map.json", "w"), indent=1, ensure_ascii=False)
     return len(m)
 

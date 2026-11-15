@@ -15,6 +15,7 @@ Dashboard for The Third Man: today, editable tracker, channel stats, formats (ru
 Without steps 2–3 the site still works read-only from the files in `site/data/`.
 
 ## How the pieces work
+- **Filters** (Tracker, Library): multi-selects for each field (status, platform, channel, kind, link, month; format, has, length, planned month), a date range with quick ranges, and text search; active filters show as removable chips and are kept while you move between pages.
 - **Tracker**: stored in Upstash (`/api/schedule`). The first Save moves the schedule there, seeded from `schedule.json`. Edit on the site; **Export JSON** is the backup. Claude updates it with `python3 site_sync.py` (env `TTM_SITE_URL`, `TTM_SITE_KEY`).
 - **Stats** (`/api/stats`, password-protected): subscribers, views, per-video numbers, progress to 4,000 / 8,000 watch hours and the Shorts route, results per format (long and Shorts kept apart; "too early" under 3 videos). Daily history gives the trend lines and pace.
 - **Drive links**: `python3 drive_links.py` writes `data/drive.json`; Library shows the folder and files per video. Re-run after builds or uploads.

@@ -120,6 +120,30 @@ a.lnk:hover{text-decoration:underline}
 .prog .mark{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);opacity:.55}
 .prog .marks{position:relative;height:18px;font:500 11px "IBM Plex Mono",monospace;color:var(--muted)}
 .prog .marks span{position:absolute;transform:translateX(-100%);white-space:nowrap;padding-right:4px}
+/* filters */
+.fbar{display:flex;gap:10px 12px;flex-wrap:wrap;align-items:flex-end;margin:0 0 10px;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.fld{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fld .lbl{font:600 10px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fbar input[type=search],.fbar input[type=date]{font:inherit;font-size:13px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 11px;min-width:0}
+.fbar input[type=search]{width:170px}.fbar input[type=date]{width:136px}
+.fbar input:focus{outline:2px solid var(--accent);outline-offset:0}
+.ms{position:relative}
+.ms>summary{list-style:none;cursor:pointer;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 12px;font:500 13px Inter,sans-serif;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.ms>summary::-webkit-details-marker{display:none}
+.ms.has>summary,.ms[open]>summary{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.ms .pop{position:absolute;z-index:25;top:calc(100% + 4px);left:0;min-width:230px;max-width:min(340px,86vw);max-height:320px;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,.28)}
+.ms .pop label{display:flex;gap:8px;align-items:center;padding:5px 8px;border-radius:8px;cursor:pointer;font-size:13px}
+.ms .pop label:hover{background:var(--chip)}
+.ms .pop label span:nth-of-type(1){flex:1;min-width:0}
+.ms .acts{display:flex;gap:12px;padding:2px 8px 6px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.lnkbtn{border:0;background:none;color:var(--accent-ink);cursor:pointer;font:600 12px Inter,sans-serif;padding:0}
+.presets{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.presets button{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer;font:500 12px Inter,sans-serif}
+.presets button:hover{border-color:var(--accent)}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 12px;min-height:26px}
+.fchips .chip button{border:0;background:none;color:inherit;cursor:pointer;padding:0 0 0 2px;font-size:13px;line-height:1}
+.fcount{font-size:13px;color:var(--muted);margin-right:4px}
+@media (max-width:640px){.fbar input[type=search]{width:140px}.fbar input[type=date]{width:128px}}
 /* editable tracker */
 .edit input,.edit select{font:inherit;font-size:13px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:5px 7px;width:100%}
 .edit input:focus,.edit select:focus{outline:2px solid var(--accent);outline-offset:0}
@@ -299,13 +323,108 @@ function progBar(label, val, max, marks){
     <div class="marks">${marks.map(m => `<span style="left:${m.v/max*100}%">${esc(m.l)}</span>`).join("")}</div></div>`;
 }
 
+/* ---------- Filters: multi-selects, date range, search (shared by Tracker and Library) ---------- */
+const FS = {trk:{}, lib:{}};                       // filter state per page; survives navigation
+const FAPPLY = {};                                 // page -> function that redraws only the results (inputs keep focus)
+const fset = (p,k) => (FS[p][k] ||= new Set());
+const addDays = (d,n) => { const x = new Date(d+"T00:00:00"); x.setDate(x.getDate()+n); return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,"0")}-${String(x.getDate()).padStart(2,"0")}`; };
+const monthName = m => m === "none" ? "No date" : new Date(m+"-01T00:00:00").toLocaleDateString("en-GB",{month:"short",year:"numeric"});
+const secs = t => { if (!t) return null; const [m,s] = String(t).split(":").map(Number); return m*60+s; };
+function fMulti(p,k,label,opts){
+  const sel = fset(p,k);
+  return `<div class="fld"><span class="lbl">${esc(label)}</span><details class="ms${sel.size?" has":""}" data-p="${p}" data-k="${k}">
+    <summary><span class="sum">${sumText(sel,opts)}</span><span class="muted">▾</span></summary>
+    <div class="pop"><div class="acts"><button type="button" class="lnkbtn" data-act="all">Select all</button><button type="button" class="lnkbtn" data-act="none">Clear</button></div>
+    ${opts.map(o=>`<label><input type="checkbox" value="${esc(o.v)}"${sel.has(o.v)?" checked":""}><span>${esc(o.l)}</span><span class="muted small">${o.n}</span></label>`).join("") || `<div class="small muted" style="padding:6px 8px">No values yet</div>`}</div></details></div>`;
+}
+const sumText = (sel,opts) => !sel.size ? "Any" : sel.size === 1 ? esc((opts.find(o=>o.v===[...sel][0])||{l:[...sel][0]}).l) : `${sel.size} selected`;
+const fText = (p,k,label,ph) => `<div class="fld"><span class="lbl">${esc(label)}</span><input type="search" data-p="${p}" data-k="${k}" placeholder="${esc(ph||"Search")}" value="${esc(FS[p][k]||"")}"></div>`;
+const fDate = (p,label) => `<div class="fld"><span class="lbl">${esc(label)}</span><div class="row" style="gap:6px;flex-wrap:nowrap"><input type="date" data-p="${p}" data-k="from" value="${esc(FS[p].from||"")}" aria-label="${esc(label)} from"><span class="muted small">to</span><input type="date" data-p="${p}" data-k="to" value="${esc(FS[p].to||"")}" aria-label="${esc(label)} to"></div></div>`;
+const fPresets = p => `<div class="fld"><span class="lbl">Quick range</span><div class="presets">${[["today","Today"],["next7","Next 7 days"],["last7","Last 7 days"],["month","This month"],["past","Past"],["upcoming","Upcoming"]].map(([k,l])=>`<button type="button" data-p="${p}" data-preset="${k}">${l}</button>`).join("")}</div></div>`;
+function presetRange(k){
+  const m = TODAY.slice(0,7);
+  return {today:[TODAY,TODAY], next7:[TODAY,addDays(TODAY,7)], last7:[addDays(TODAY,-7),TODAY], month:[m+"-01", (()=>{const d=new Date(NOW.getFullYear(),NOW.getMonth()+1,0); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;})()], past:["",addDays(TODAY,-1)], upcoming:[TODAY,""]}[k];
+}
+function countBy(items, fn){ const m = new Map(); items.forEach(i => { const v = fn(i); (Array.isArray(v)?v:[v]).forEach(x => { if (x != null) m.set(x,(m.get(x)||0)+1); }); }); return m; }
+const optsFrom = (map, order, label) => { const keys = [...map.keys()].sort((a,b) => order ? (order.indexOf(a)<0?99:order.indexOf(a)) - (order.indexOf(b)<0?99:order.indexOf(b)) || String(a).localeCompare(b) : map.get(b)-map.get(a) || String(a).localeCompare(b)); return keys.map(k => ({v:k, l:label?label(k):k, n:map.get(k)})); };
+function fActive(p, defs){          // defs: [{k,label,show:(state)=>string|null}] -> chips of what is on, each removable
+  const F = FS[p], out = [];
+  for (const d of defs) { const t = d.show(F); if (t) out.push(`<span class="chip">${esc(d.label)}: ${esc(t)} <button type="button" data-p="${p}" data-drop="${d.k}" title="Remove" aria-label="Remove ${esc(d.label)} filter">✕</button></span>`); }
+  return out.join("");
+}
+const setTxt = (sel,opts,labels) => sel.size ? [...sel].map(v=>(labels||{})[v]||v).join(", ") : null;
+document.addEventListener("change", e => {
+  const cb = e.target.closest(".ms input[type=checkbox]"); if (!cb) return;
+  const ms = cb.closest(".ms"), set = fset(ms.dataset.p, ms.dataset.k);
+  cb.checked ? set.add(cb.value) : set.delete(cb.value); FAPPLY[ms.dataset.p] && FAPPLY[ms.dataset.p]();
+});
+document.addEventListener("input", e => {
+  const t = e.target.closest(".fbar input[data-k]"); if (!t) return;
+  FS[t.dataset.p][t.dataset.k] = t.value; FAPPLY[t.dataset.p] && FAPPLY[t.dataset.p]();
+});
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-act]");
+  if (a) { const ms = a.closest(".ms"), set = fset(ms.dataset.p, ms.dataset.k), all = a.dataset.act === "all"; set.clear(); ms.querySelectorAll("input").forEach(i => { i.checked = all; if (all) set.add(i.value); }); FAPPLY[ms.dataset.p](); return; }
+  const pr = e.target.closest("[data-preset]");
+  if (pr) { const [f,t] = presetRange(pr.dataset.preset), p = pr.dataset.p; FS[p].from = f; FS[p].to = t; document.querySelectorAll(`.fbar input[data-p="${p}"][data-k="from"]`).forEach(i => i.value = f); document.querySelectorAll(`.fbar input[data-p="${p}"][data-k="to"]`).forEach(i => i.value = t); FAPPLY[p](); return; }
+  const dr = e.target.closest("[data-drop]");
+  if (dr) { const p = dr.dataset.p; filterDrop(p, dr.dataset.drop); return; }
+  const cl = e.target.closest("[data-fclear]");
+  if (cl) { const p = cl.dataset.fclear; FS[p] = {}; rerender(); return; }
+  document.querySelectorAll(".ms[open]").forEach(m => { if (!m.contains(e.target)) m.removeAttribute("open"); });   // click outside closes
+});
+function filterDrop(p, k){
+  const F = FS[p]; if (k === "date") { F.from = ""; F.to = ""; } else if (F[k] instanceof Set) F[k].clear(); else F[k] = "";
+  rerender();
+}
+function fRefreshUI(p, optsByKey){   // update the multi-select summaries and highlight after a change, without rebuilding inputs
+  document.querySelectorAll(`.ms[data-p="${p}"]`).forEach(ms => { const set = fset(p, ms.dataset.k); ms.classList.toggle("has", set.size > 0); const o = optsByKey[ms.dataset.k] || []; ms.querySelector(".sum").innerHTML = sumText(set, o); });
+}
+
 /* ---------- Tracker (view + edit) ---------- */
-const T = {edit:false, rows:null, dirty:false, filter:"All", saving:false, msg:""};
+const T = {edit:false, rows:null, dirty:false, saving:false, msg:""};
+const chanOf = r => { const p = r.platform || ""; const o = []; if (/youtube/i.test(p)) o.push("YouTube"); if (/instagram|\bIG\b/i.test(p)) o.push("Instagram"); return o.length ? o : ["Other"]; };
+const kindOf = r => { const p = r.platform || "", o = []; if (/long/i.test(p)) o.push("Long video"); if (/short/i.test(p)) o.push("Short"); if (/reel/i.test(p)) o.push("Reel"); if (/carousel/i.test(p)) o.push("Carousel"); return o.length ? o : ["Other"]; };
+function trkOpts(rows){
+  return {
+    month: optsFrom(countBy(rows, r => r.date ? r.date.slice(0,7) : "none"), null, monthName).sort((a,b) => (a.v==="none") - (b.v==="none") || b.v.localeCompare(a.v)),
+    platform: optsFrom(countBy(rows, r => r.platform || "(none)")),
+    channel: optsFrom(countBy(rows, chanOf)),
+    kind: optsFrom(countBy(rows, kindOf)),
+    status: optsFrom(countBy(rows, r => r.status || "(none)"), STATUSES),
+    link: optsFrom(countBy(rows, r => r.link ? "Has link" : "No link"), ["Has link","No link"]),
+  };
+}
+function trkMatch(r, F){
+  const has = (k, v) => { const s = F[k]; return !s || !s.size || (Array.isArray(v) ? v.some(x => s.has(x)) : s.has(v)); };
+  if (F.q && !(r.content||"").toLowerCase().includes(F.q.trim().toLowerCase())) return false;
+  if (F.notes && !(r.notes||"").toLowerCase().includes(F.notes.trim().toLowerCase())) return false;
+  if ((F.from || F.to) && !r.date) return false;
+  if (F.from && r.date < F.from) return false;
+  if (F.to && r.date > F.to) return false;
+  return has("month", r.date ? r.date.slice(0,7) : "none") && has("platform", r.platform || "(none)") && has("channel", chanOf(r)) && has("kind", kindOf(r)) && has("status", r.status || "(none)") && has("link", r.link ? "Has link" : "No link");
+}
+const TRK_CHIPS = [
+  {k:"q",label:"Content",show:F=>F.q||null},{k:"notes",label:"Notes",show:F=>F.notes||null},
+  {k:"date",label:"Date",show:F=>(F.from||F.to) ? `${F.from?fmtDate(F.from):"…"} to ${F.to?fmtDate(F.to):"…"}` : null},
+  {k:"month",label:"Month",show:F=>setTxt(F.month||new Set(),null,{none:"No date"})},{k:"platform",label:"Platform",show:F=>setTxt(F.platform||new Set())},
+  {k:"channel",label:"Channel",show:F=>setTxt(F.channel||new Set())},{k:"kind",label:"Kind",show:F=>setTxt(F.kind||new Set())},
+  {k:"status",label:"Status",show:F=>setTxt(F.status||new Set())},{k:"link",label:"Link",show:F=>setTxt(F.link||new Set())}];
+function trkRows(){ const S = D.schedule, rows = T.edit ? T.rows : S.rows; return {rows, shown: (T.edit ? rows : rows.slice().sort(byDate)).filter(r => trkMatch(r, FS.trk))}; }
+function trkBody(shown){
+  return shown.map(r => T.edit ? editRow(r) : `<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--accent) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
+    <td><b>${esc(r.content)}</b>${r.link?` <a class="lnk" href="${url(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small show-sm">${esc(r.platform||"")}</div></td>
+    <td class="hide-sm small">${esc(r.platform||"")}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("") || `<tr><td colspan="7" class="empty">Nothing matches these filters. <button class="lnkbtn" data-fclear="trk">Clear filters</button></td></tr>`;
+}
+FAPPLY.trk = () => {
+  const {rows, shown} = trkRows(), o = trkOpts(rows);
+  const b = $("#fbody"); if (b) b.innerHTML = trkBody(shown);
+  const c = $("#fcount"); if (c) c.textContent = `${shown.length} of ${rows.length} rows`;
+  const ch = $("#fchips"); if (ch) ch.innerHTML = fActive("trk", TRK_CHIPS);
+  fRefreshUI("trk", o);
+};
 function tracker(){
-  const S = D.schedule, rows = (T.edit ? T.rows : S.rows);
-  const view = T.edit ? rows : rows.slice().sort(byDate);
-  const statuses = ["All", ...STATUSES.filter(s => rows.some(r => r.status === s))];
-  const shown = view.filter(r => T.filter === "All" || r.status === T.filter);
+  const S = D.schedule, {rows, shown} = trkRows(), o = trkOpts(rows);
   const tools = !S.editable
     ? `<div class="note warn">Read-only: this copy can't save yet. Connect storage on Vercel (see README) and the tracker becomes editable here.</div>`
     : T.edit
@@ -317,14 +436,15 @@ function tracker(){
          ${!S.live?`<div class="note" style="margin-bottom:12px">First save moves the schedule into the site's own storage (from the ${fmtDate(S.synced)} snapshot of the sheet). After that, edit it here only.</div>`:""}`
       : `<div class="toolbar"><button class="btn primary" onclick="startEdit()">Edit tracker</button><span class="small muted">${esc(T.msg)}</span><span class="sp"></span><button class="btn" onclick="exportRows()">Export JSON</button></div>`;
   const head = `<thead><tr><th>Date</th><th>Content</th><th${T.edit?"":' class="hide-sm"'}>Platform</th><th>Status</th><th${T.edit?"":' class="hide-sm"'}>${T.edit?"Link":"Notes"}</th>${T.edit?"<th>Notes</th><th></th>":""}</tr></thead>`;
-  const body = shown.map(r => T.edit ? editRow(r) : `<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--accent) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
-    <td><b>${esc(r.content)}</b>${r.link?` <a class="lnk" href="${url(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small show-sm">${esc(r.platform||"")}</div></td>
-    <td class="hide-sm small">${esc(r.platform||"")}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("");
   return `<div class="kicker">Content schedule</div><h1>Tracker</h1>
   <p class="lede">${S.live ? `Lives on this site; last saved ${fmtDate(S.synced)}.` : `A snapshot of the schedule sheet from ${fmtDate(S.synced)}.`} ${S.editable ? "Edit it here: change a status, add a video, paste the link after posting." : ""}</p>
   ${tools}
-  <div class="filters">${statuses.map(s=>`<button class="${s===T.filter?"on":""}" onclick="T.filter=this.dataset.s;rerender()" data-s="${esc(s)}">${esc(s)} <span class="muted">${s==="All"?rows.length:rows.filter(r=>r.status===s).length}</span></button>`).join("")}</div>
-  <div class="tablewrap${T.edit?" edit":""}"><table>${head}<tbody>${body || `<tr><td colspan="7" class="empty">Nothing here.</td></tr>`}</tbody></table></div>
+  <div class="fbar">
+    ${fText("trk","q","Content","Search titles")}${fDate("trk","Date")}${fMulti("trk","month","Month",o.month)}${fPresets("trk")}
+    ${fMulti("trk","status","Status",o.status)}${fMulti("trk","platform","Platform",o.platform)}${fMulti("trk","channel","Channel",o.channel)}${fMulti("trk","kind","Kind",o.kind)}${fMulti("trk","link","Link",o.link)}${fText("trk","notes","Notes","Search notes")}
+  </div>
+  <div class="fchips"><span class="fcount" id="fcount">${shown.length} of ${rows.length} rows</span><span id="fchips">${fActive("trk", TRK_CHIPS)}</span> <button class="lnkbtn" data-fclear="trk">Clear all</button></div>
+  <div class="tablewrap${T.edit?" edit":""}"><table>${head}<tbody id="fbody">${trkBody(shown)}</tbody></table></div>
   <datalist id="plats">${PLATFORMS.map(p=>`<option value="${esc(p)}">`).join("")}</datalist>`;
 }
 function editRow(r){
@@ -341,7 +461,7 @@ async function startEdit(){
   if (!getKey() && !await askKey("Password to edit the tracker.")) return;
   T.rows = structuredClone(D.schedule.rows).sort(byDate); T.edit = true; T.dirty = false; T.msg = ""; rerender();
 }
-function addRow(){ T.rows.unshift({id: rid(), date: TODAY, platform: "YouTube long", content: "", status: "Idea", link: null, notes: null}); T.dirty = true; rerender(); setTimeout(() => { const i = $('tbody tr input[data-f="content"]'); if (i) i.focus(); }, 30); }
+function addRow(){ FS.trk = {}; T.rows.unshift({id: rid(), date: TODAY, platform: "YouTube long", content: "", status: "Idea", link: null, notes: null}); T.dirty = true; rerender(); setTimeout(() => { const i = $('tbody tr input[data-f="content"]'); if (i) i.focus(); }, 30); }
 function delRow(id){ const r = T.rows.find(x => x.id === id); if (r && confirm(`Delete "${r.content || "this row"}"?`)) { T.rows = T.rows.filter(x => x.id !== id); T.dirty = true; rerender(); } }
 function discardEdit(){ if (T.dirty && !confirm("Discard your changes?")) return; T.edit = false; T.dirty = false; T.rows = null; T.msg = ""; rerender(); }
 async function saveRows(){
@@ -559,7 +679,6 @@ function ideas(day){
 }
 
 /* ---------- Library (with Drive + YouTube links) ---------- */
-let libFmt = "All";
 function links(i){
   const dv = (D.drive.videos || {})[i.slug], yt = D.yt[i.slug] || {}, out = [];
   if (dv) out.push(`<a class="lnk" href="${url(dv.folder)}" target="_blank" rel="noopener">Drive ↗</a>`);
@@ -573,8 +692,10 @@ function files(i){
   return `<details><summary>${fl.length} files in Drive</summary><ul class="clean small">${fl.map(f=>`<li><a class="lnk" href="${url(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> <span class="muted">${esc(f.kind)}${f.mb>=1?` · ${f.mb} MB`:""}</span></li>`).join("")}</ul></details>`;
 }
 function libTable(items){
+  if (!items.length) return `<div class="tablewrap"><div class="empty">Nothing matches these filters. <button class="lnkbtn" data-fclear="lib">Clear filters</button></div></div>`;
   return `<div class="tablewrap"><table><thead><tr><th>Video</th><th>Format</th><th class="hide-sm">Long</th><th class="hide-sm">Short</th><th>Status</th><th class="hide-sm">Planned</th></tr></thead><tbody>
   ${items.map(i=>`<tr><td><b>${esc(i.title)}</b>${i.link?` <a class="lnk" href="${url(i.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}
+    ${i.series?`<div class="mono small muted">${esc(i.series)} · Ep ${esc(i.ep)}</div>`:""}
     <div class="small" style="margin-top:2px">${links(i)}</div>
     ${i.recheck?`<div class="small" style="color:var(--warn)">Re-check: ${esc(i.recheck)}</div>`:""}
     ${files(i)}
@@ -582,16 +703,55 @@ function libTable(items){
     <td>${fmtChip(i.format)}</td><td class="hide-sm mono small">${i.long||"—"}</td><td class="hide-sm mono small">${i.short||"—"}</td><td>${statusChip(i.status)}</td><td class="hide-sm mono small">${fmtDate(i.planned)}</td></tr>`).join("")}
   </tbody></table></div>`;
 }
+const drvOf = i => (D.drive.videos || {})[i.slug];
+const lenBucket = (t, edges, names) => { const x = secs(t); if (x == null) return null; for (let k = 0; k < edges.length; k++) if (x < edges[k]) return names[k]; return names[edges.length]; };
+const LONGB = ["Under 3 min","3–6 min","6–10 min","Over 10 min"], SHORTB = ["Under 1 min","1–1.5 min","1.5–2 min","Over 2 min"];
+const whereOf = i => { const o = [], yt = D.yt[i.slug] || {}, dv = drvOf(i); if (dv) o.push("On Drive"); if (yt.long || yt.short || i.link) o.push("On YouTube"); if (!o.includes("On YouTube")) o.push("Not on YouTube"); if (i.long) o.push("Has long"); if (i.short) o.push("Has Short"); if (i.recheck) o.push("Needs re-check"); return o; };
+function libOpts(it){
+  const fo = D.formats.formats.map(f => f.id);
+  return {
+    format: optsFrom(countBy(it, i => i.format), fo, id => FMT(id).name),
+    status: optsFrom(countBy(it, i => i.status || "(none)"), ["Not scheduled",...STATUSES]),
+    has: optsFrom(countBy(it, whereOf), ["Has long","Has Short","On Drive","On YouTube","Not on YouTube","Needs re-check"]),
+    longlen: optsFrom(countBy(it, i => lenBucket(i.long,[180,360,600],LONGB)), LONGB),
+    shortlen: optsFrom(countBy(it, i => lenBucket(i.short,[60,90,120],SHORTB)), SHORTB),
+    month: optsFrom(countBy(it, i => i.planned ? i.planned.slice(0,7) : "none"), null, monthName).sort((a,b) => (a.v==="none") - (b.v==="none") || b.v.localeCompare(a.v)),
+  };
+}
+function libMatch(i, F){
+  const has = (k, v) => { const s = F[k]; return !s || !s.size || (Array.isArray(v) ? v.some(x => s.has(x)) : s.has(v)); };
+  if (F.q) { const q = F.q.trim().toLowerCase(); if (![i.title, i.slug, i.series, ...(i.sources||[])].some(x => (x||"").toLowerCase().includes(q))) return false; }
+  if ((F.from || F.to) && !i.planned) return false;
+  if (F.from && i.planned < F.from) return false;
+  if (F.to && i.planned > F.to) return false;
+  if (F.has && F.has.size) { const w = whereOf(i); if (![...F.has].every(x => w.includes(x))) return false; }     // "has" is AND: Has Short + On Drive means both
+  return has("format", i.format) && has("status", i.status || "(none)") && has("longlen", lenBucket(i.long,[180,360,600],LONGB)) && has("shortlen", lenBucket(i.short,[60,90,120],SHORTB)) && has("month", i.planned ? i.planned.slice(0,7) : "none");
+}
+const LIB_CHIPS = [
+  {k:"q",label:"Search",show:F=>F.q||null},{k:"format",label:"Format",show:F=>F.format&&F.format.size?[...F.format].map(x=>FMT(x).name).join(", "):null},
+  {k:"status",label:"Status",show:F=>setTxt(F.status||new Set())},{k:"has",label:"Has",show:F=>setTxt(F.has||new Set())},
+  {k:"longlen",label:"Long length",show:F=>setTxt(F.longlen||new Set())},{k:"shortlen",label:"Short length",show:F=>setTxt(F.shortlen||new Set())},
+  {k:"date",label:"Planned",show:F=>(F.from||F.to) ? `${F.from?fmtDate(F.from):"…"} to ${F.to?fmtDate(F.to):"…"}` : null},
+  {k:"month",label:"Planned month",show:F=>setTxt(F.month||new Set(),null,{none:"Not planned"})}];
+FAPPLY.lib = () => {
+  const it = D.library.items, shown = it.filter(i => libMatch(i, FS.lib)), o = libOpts(it);
+  const b = $("#libres"); if (b) b.innerHTML = libTable(shown);
+  const c = $("#fcount"); if (c) c.textContent = `${shown.length} of ${it.length} videos`;
+  const ch = $("#fchips"); if (ch) ch.innerHTML = fActive("lib", LIB_CHIPS);
+  fRefreshUI("lib", o);
+};
 function library(){
-  const it = D.library.items;
-  const fmts = ["All", ...D.formats.formats.map(f=>f.id).filter(id => it.some(i=>i.format===id))];
-  const shown = it.filter(i => libFmt==="All" || i.format===libFmt);
+  const it = D.library.items, o = libOpts(it), shown = it.filter(i => libMatch(i, FS.lib));
   const unsched = it.filter(i => i.status==="Not scheduled").length;
   const drv = D.drive.root;
   return `<div class="kicker">${it.length} videos built</div><h1>Library</h1>
   <p class="lede">Everything built, with durations, status, Drive and YouTube links, and sources. ${unsched?`<b>${unsched}</b> finished videos aren't on the schedule yet. `:""}${drv?`<a class="lnk" href="${url(drv)}" target="_blank" rel="noopener">Open the whole Drive folder ↗</a>`:""}</p>
-  <div class="filters">${fmts.map(f=>`<button class="${f===libFmt?"on":""}" onclick="libFmt='${esc(f)}';route()">${f==="All"?"All":esc(FMT(f).name)} <span class="muted">${f==="All"?it.length:it.filter(i=>i.format===f).length}</span></button>`).join("")}</div>
-  ${libTable(shown)}
+  <div class="fbar">
+    ${fText("lib","q","Search","Title, series, source")}${fMulti("lib","format","Format",o.format)}${fMulti("lib","status","Status",o.status)}${fMulti("lib","has","Has (all of)",o.has)}
+    ${fMulti("lib","longlen","Long length",o.longlen)}${fMulti("lib","shortlen","Short length",o.shortlen)}${fDate("lib","Planned date")}${fMulti("lib","month","Planned month",o.month)}${fPresets("lib")}
+  </div>
+  <div class="fchips"><span class="fcount" id="fcount">${shown.length} of ${it.length} videos</span><span id="fchips">${fActive("lib", LIB_CHIPS)}</span> <button class="lnkbtn" data-fclear="lib">Clear all</button></div>
+  <div id="libres">${libTable(shown)}</div>
   <p class="small muted">Drive links open only while you're signed in to the channel's Google account. Drive's folder state shows as of ${fmtDate(D.drive.synced)}.</p>`;
 }
 

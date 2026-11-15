@@ -9,43 +9,43 @@
   "slug": "kohli_2000_nz",
   "kind": "short",
   "title": "Kohli: 22 runs from 2,000 vs NZ",
-  "format": "news"
+  "format": "datastories"
  },
  "zaPe7_3Wbd4": {
   "slug": "hardik_arshdeep",
   "kind": "long",
   "title": "Hardik–Arshdeep trade: who won?",
-  "format": "news"
+  "format": "datastories"
  },
  "7rq2iG31XzA": {
   "slug": "replay_4odi",
   "kind": "long",
   "title": "replay_4odi",
-  "format": "news"
+  "format": "replay"
  },
  "qj3O8VV8UuM": {
   "slug": "replay_4odi",
   "kind": "short",
   "title": "replay_4odi",
-  "format": "news"
+  "format": "replay"
  },
  "lUG6cKDhctg": {
   "slug": "replay_4odi_young",
   "kind": "short",
   "title": "replay_4odi_young",
-  "format": "news"
+  "format": "replay"
  },
  "xXcqw651rGM": {
   "slug": "replay_4odi_dots",
   "kind": "short",
   "title": "replay_4odi_dots",
-  "format": "news"
+  "format": "replay"
  },
  "k583jqs5KVw": {
   "slug": "hardik_arshdeep",
   "kind": "short",
   "title": "Hardik–Arshdeep trade: who won?",
-  "format": "news"
+  "format": "datastories"
  },
  "rnFvvukHfTM": {
   "slug": "flip_mi_captains",
@@ -57,19 +57,19 @@
   "slug": "bay_oval_new_ball",
   "kind": "long",
   "title": "bay_oval_new_ball",
-  "format": "news"
+  "format": "tactics"
  },
  "UEvmwDqCTsg": {
   "slug": "replay_u19_final",
   "kind": "long",
   "title": "replay_u19_final",
-  "format": "news"
+  "format": "replay"
  },
  "52FPh7UbtHk": {
   "slug": "replay_u19_final",
   "kind": "short",
   "title": "replay_u19_final",
-  "format": "news"
+  "format": "replay"
  },
  "ueFtSganrNo": {
   "slug": "myth_ep1_kohli_knockouts",
@@ -81,19 +81,19 @@
   "slug": "myth_ep2_kohli_reinvention",
   "kind": "short",
   "title": "myth_ep2_kohli_reinvention",
-  "format": "news"
+  "format": "myth"
  },
  "PZJsdDzMROQ": {
   "slug": "myth_ep3_aaryavir",
   "kind": "long",
   "title": "myth_ep3_aaryavir",
-  "format": "news"
+  "format": "myth"
  },
  "ENh6XkG-z9g": {
   "slug": "myth_ep3_aaryavir",
   "kind": "short",
   "title": "myth_ep3_aaryavir",
-  "format": "news"
+  "format": "myth"
  },
  "iis64YP-g-o": {
   "slug": "flip_abhishek_openers",
@@ -105,24 +105,24 @@
   "slug": "replay_5odi",
   "kind": "long",
   "title": "replay_5odi",
-  "format": "news"
+  "format": "replay"
  },
  "Ty2LP-UQV1c": {
   "slug": "replay_5odi",
   "kind": "short",
   "title": "replay_5odi",
-  "format": "news"
+  "format": "replay"
  },
  "UAlk7dwMfjw": {
   "slug": "data_nz_ind_series",
   "kind": "long",
   "title": "data_nz_ind_series",
-  "format": "news"
+  "format": "datastories"
  },
  "SLTOXJ6CQqw": {
   "slug": "data_nz_ind_series",
   "kind": "short",
   "title": "data_nz_ind_series",
-  "format": "news"
+  "format": "datastories"
  }
 }
