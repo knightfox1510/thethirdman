@@ -550,12 +550,13 @@ def logo_mark(c, cx, cy, size, a=1.0, detail=True):
 
 def logo_lockup(c, x, y, h, a=1.0, align="l"):
     """Mark + 'THE THIRD MAN' wordmark; (x, y) = left/center of the mark row baseline area, h = mark height."""
-    tw = twidth("THIRD MAN", h * .62, "bebas", track=1) + h * 0.28
+    bf = "brand" if THEME == "plate" else "bebas"            # the wordmark keeps the brand condensed face even on the wide serif "plate" theme
+    tw = twidth("THIRD MAN", h * .62, bf, track=1) + h * 0.28
     total = h + tw
     x0 = x - total / 2 if align == "c" else (x - total if align == "r" else x)
     logo_mark(c, x0 + h / 2, y, h, a, detail=h >= 70)
     text(c, "THE", x0 + h * 1.28, y - h * .14, h * .2, "interB", MUTED, a, track=h * .06)
-    text(c, "THIRD MAN", x0 + h * 1.26, y + h * .33, h * .62, "bebas", INK, a, track=1)
+    text(c, "THIRD MAN", x0 + h * 1.26, y + h * .33, h * .62, bf, INK, a, track=1)
 
 
 # ---------------------------------------------------------------- themes
@@ -576,6 +577,7 @@ THEMES = {
 THEME = "floodlights"
 GLOWK = 1.0
 _TF0 = dict(TF)
+TF["brand"] = _TF0["bebas"]
 
 
 def apply_theme(name):

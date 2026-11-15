@@ -2482,12 +2482,139 @@
     }
    ]
   },
+  "dyk_third_man": {
+   "state": "not posted",
+   "series": "11 Did You Know",
+   "episode": "Ep01 - Third Man, Position and the Name Mystery",
+   "folder": "https://drive.google.com/drive/folders/1yC9IAHAhw0bissbDeqcxykTgUE7U7aVD",
+   "files": [
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1mZX1PRCrm4X3r3Tqp9Aq2oS0yYYdvRp6/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1ABO-X3sdZ2s_1zf-jy5q_-yXxtaNnhlu/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1pFaDlyUUvs7642qd481ktKmRJsP2ra6v/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 16.0,
+     "url": "https://drive.google.com/file/d/1tyKT2XcF-OC6d0Yqh3Y5iNcqfJ8Myxd0/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1a7yJN-UZTon4mTIOPd_jYjlwI9ntbTHJ/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1sIX1SFwb8wXuvNqT6wlcL_QMSaRL_I8U/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long_IG.mp4",
+     "kind": "long",
+     "platform": "Instagram",
+     "mb": 39.4,
+     "url": "https://drive.google.com/file/d/12Faj2QJ_bkJ4kK_m8YnPqVYVpaJdoKwa/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1OZ1GJOY_HKn3zJihtonyTlLet-wzJs2G/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1oQugNeJH11kpR5UNc601e06fO0xXsqLw/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 18.5,
+     "url": "https://drive.google.com/file/d/1P0yMeXEcvL8HOqcCDt6WQ5y1tPGgh_Fk/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1NaugHqGKGmkoaLITWAwseEZpTcMyeO6R/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1GhxMFceFzv37eHgwkdOVYrRhzZmdz1VB/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 40.0,
+     "url": "https://drive.google.com/file/d/1aeaRFQ4jMrp9FC-kIJkJE8HDlYZcNlpk/view?usp=drivesdk"
+    }
+   ]
+  },
   "dyk_fielding_positions": {
    "state": "not posted",
    "series": "11 Did You Know",
-   "episode": "Ep01 - Fielding Positions, Where Is Third Man",
+   "episode": "Ep02 - Fielding Positions, Reading the Names",
    "folder": "https://drive.google.com/drive/folders/1tF9g93gZVxpsZROEoFi2rfBs0JVoNY-c",
    "files": [
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1EVUeqIvA4Cko1l6NlFRUm4P1OXLxTBhs/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1RZLVFbeeALKYjpu4sByJVvoB6eXjhhLa/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1m5j_8s3QUqErDDKNcMTV93W-QVXOfWwa/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 48.7,
+     "url": "https://drive.google.com/file/d/1hTClye4sBgFHP9Wk3eHT_jDV76HK7QsM/view?usp=drivesdk"
+    },
     {
      "name": "Did_You_Know_Ep01_unused_thumbnail.jpg",
      "kind": "thumbnail",
@@ -2610,6 +2737,7 @@
   "11 Did You Know": {
    "folder": "https://drive.google.com/drive/folders/1sSIiAclQfCq6OWDI1GaCwjkQ2QFNpEHX",
    "episodes": [
+    "dyk_third_man",
     "dyk_fielding_positions"
    ]
   }

@@ -1040,10 +1040,11 @@ def build(spec_path, fmt):
 # ------------------------------------------------------------------ animated logo outro
 def outro_frame(c, g, t):
     gfx.background(c, 200 + t)
+    BF = "brand" if gfx.THEME == "plate" else "bebas"                        # the wordmark keeps the brand face on the wide serif plate theme
     long = g.fmt == "long"
     size = 300 if long else 360
     if long:
-        ww = twidth("THIRD MAN", 190, "bebas", 3)
+        ww = twidth("THIRD MAN", 190, BF, 3)
         mx, my = g.W / 2 - (.12 * size + ww) / 2, g.H / 2
     else:
         mx, my = g.W / 2, 800
@@ -1081,11 +1082,11 @@ def outro_frame(c, g, t):
         if long:
             x = mx + size * .62; off = (1 - pw) * 60
             text(c, "THE", x + off, my - 60, 52, "interB", MUTED, pw, track=20)
-            text(c, "THIRD MAN", x + off, my + 90, 190, "bebas", INK, pw, track=3)
+            text(c, "THIRD MAN", x + off, my + 90, 190, BF, INK, pw, track=3)
         else:
             off = (1 - pw) * 50
             text(c, "THE", g.W / 2, my + 300 + off, 48, "interB", MUTED, pw, "c", track=20)
-            text(c, "THIRD MAN", g.W / 2, my + 470 + off, 190, "bebas", INK, pw, "c", track=3)
+            text(c, "THIRD MAN", g.W / 2, my + 470 + off, 190, BF, INK, pw, "c", track=3)
     ptg = eo(prog(t, 2.0, 2.6))
     if ptg > 0:
         tg = "CRICKET FROM A DIFFERENT ANGLE"
