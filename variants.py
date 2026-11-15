@@ -60,7 +60,7 @@ def igshort(spec_path):
     print("IG version:", f"{dst}/{base}_IG.mp4"); print("caption:", write_caption(spec_path)); print("cover:", write_cover(spec_path))
 
 
-IG_REEL_CTA = {"vo": "Will आर्यवीर सहवाग play for India like his father did? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+IG_REEL_CTA = {"vo": "Tell us what you think in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
                "scene": IG_CTA["scene"]}
 
 

@@ -1166,5 +1166,25 @@
   7,
   9,
   11
- ]
+ ],
+ "reel_cta": {
+  "vo": "Was this a series India deserved to win? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "FULL BREAKDOWN"
+    },
+    {
+     "t": "ON YOUTUBE",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ }
 }
