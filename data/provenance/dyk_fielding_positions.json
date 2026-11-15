@@ -2,7 +2,7 @@
  "slug": "dyk_fielding_positions",
  "claims": [
   {
-   "claim": "names work as two parts: an angle word (cover, mid-wicket, leg) and a distance word (short, deep, long, silly)",
+   "claim": "names work as two parts: an angle word (leg, cover, mid-wicket, point) and a distance word (silly, short, deep, long)",
    "value": "angle word + distance word",
    "sources": {
     "wikipedia": "angle word + distance word",
@@ -13,7 +13,18 @@
    "conflicts": []
   },
   {
-   "claim": "silly = very close to the batter (a perceived danger)",
+   "claim": "short = closer to the batter; deep or long = farther",
+   "value": "short closer, deep/long farther",
+   "sources": {
+    "wikipedia": "short closer, deep/long farther",
+    "sportplan_guide": "short closer, deep/long farther"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "silly = so close to the batter that it is dangerous",
    "value": "very close, dangerous",
    "sources": {
     "wikipedia": "very close, dangerous",
@@ -35,45 +46,99 @@
    "conflicts": []
   },
   {
-   "claim": "slips are numbered outwards from the wicket-keeper",
-   "value": "first slip nearest the keeper",
+   "claim": "fine = behind the batter, closer to the line of the pitch (the opposite of square)",
+   "value": "behind, near the line of the pitch",
    "sources": {
-    "wikipedia": "first slip nearest the keeper",
-    "sportplan_guide": "first slip nearest the keeper"
+    "wikipedia_glossary": "behind, near the line of the pitch",
+    "sportplan_guide": "behind, near the line of the pitch"
    },
    "scope": "career",
    "status": "OK",
    "conflicts": []
   },
   {
-   "claim": "third man is on the off side, behind the wicket",
-   "value": "off side, behind the wicket",
+   "claim": "point, cover, mid-off are off-side positions",
+   "value": "off side",
    "sources": {
-    "wikipedia": "off side, behind the wicket",
-    "sportplan_guide": "off side, behind the wicket"
+    "sportplan_guide": "off side",
+    "wikipedia_glossary": "off side"
    },
    "scope": "career",
    "status": "OK",
    "conflicts": []
   },
   {
-   "claim": "third man stops edges that get past the slips (purpose)",
-   "value": "stops edges past the slips",
+   "claim": "mid-on, mid-wicket, square leg are leg-side positions",
+   "value": "leg side",
    "sources": {
-    "wikipedia": null,
-    "sportplan_guide": "stops edges past the slips",
-    "cricketwriter_guide": "stops edges past the slips"
+    "sportplan_guide": "leg side",
+    "wikipedia_glossary": "leg side"
    },
    "scope": "career",
    "status": "OK",
    "conflicts": []
   },
   {
-   "claim": "no documented origin of the name 'third man' found",
-   "value": "no documented origin",
+   "claim": "fine leg is behind square on the leg side; third man is its off-side counterpart",
+   "value": "fine leg / third man",
    "sources": {
-    "wikipedia": "no documented origin",
-    "sportplan_guide": "no documented origin"
+    "sportplan_guide": "fine leg / third man",
+    "wikipedia": "fine leg / third man"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "slips are numbered outwards from the wicket-keeper; together the slip cordon",
+   "value": "numbered outwards from the keeper",
+   "sources": {
+    "wikipedia": "numbered outwards from the keeper",
+    "sportplan_guide": "numbered outwards from the keeper"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "gully is squarer than the slips, on the off side",
+   "value": "squarer than the slips, off side",
+   "sources": {
+    "sportplan_guide": "squarer than the slips, off side",
+    "wikipedia_glossary": "squarer than the slips, off side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Law 28.4: no more than two fielders, other than the wicket-keeper, behind the popping crease on the on side",
+   "value": "two behind the popping crease on the on side",
+   "sources": {
+    "mcc_laws": "two behind the popping crease on the on side",
+    "icc_playing_conditions": "two behind the popping crease on the on side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "a breach is a no ball, called by the striker's end umpire",
+   "value": "no ball",
+   "sources": {
+    "mcc_laws": "no ball",
+    "icc_playing_conditions": "no ball"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "positions are neither fixed nor precisely defined (captain's choice; left-handers reverse the sides)",
+   "value": "not fixed",
+   "sources": {
+    "wikipedia": "not fixed",
+    "sportplan_guide": "not fixed"
    },
    "scope": "career",
    "status": "OK",
@@ -81,6 +146,6 @@
   }
  ],
  "summary": {
-  "OK": 7
+  "OK": 13
  }
 }

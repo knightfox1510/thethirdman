@@ -1,23 +1,23 @@
 {
  "slug": "dyk_fielding_positions",
- "theme": "stadium",
- "captions": "v2",
+ "theme": "plate",
+ "captions": "serif",
  "captions_long": false,
  "series": "didyouknow",
  "tag": "DID YOU KNOW?",
- "tagsub": "EP. 1 · FIELDING POSITIONS",
+ "tagsub": "EP. 2 · FIELDING POSITIONS",
  "files": {
-  "long": "Did_You_Know_Ep01_unused",
-  "short": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16"
+  "long": "Did_You_Know_Ep02_Fielding_Positions_Reading_the_Names_Long",
+  "short": "Did_You_Know_Ep02_Fielding_Positions_Reading_the_Names_Short_9x16"
  },
  "thumb": {
-  "kicker": "DID YOU KNOW? · EP. 1",
+  "kicker": "DID YOU KNOW? · EP. 2",
   "lines": [
    {
-    "t": "WHERE IS"
+    "t": "READ ANY"
    },
    {
-    "t": "THIRD MAN?",
+    "t": "CRICKET FIELD",
     "c": "gold"
    }
   ],
@@ -25,8 +25,9 @@
   "herosize": 420
  },
  "sources": [
-  "Definitions checked against two independent written sources: Wikipedia, 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket) (naming system; 'silly' per the Oxford English Dictionary; slips numbered outwards from the wicket-keeper) and 'Glossary of cricket terms' https://en.wikipedia.org/wiki/Glossary_of_cricket_terms (third man: behind the wicket-keeper on the off side, beyond slip and gully); and SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp (same points; third man's purpose, also stated by https://www.cricketwriter.com/cricket-fielding-positions-third-man/).",
-  "Neither source, and no other we found, documents why the position is called 'third man'; the video says the origin is not documented. Field plans are illustrative, for a right-handed batter (mirrored for a left-hander); positions are neither fixed nor precisely defined and fielders can stand anywhere. Figures: make_dyk_fielding.py."
+  "Names and definitions, checked against two independent written sources: Wikipedia, 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket) (names as an angle word plus a distance word; silly, short, deep, long; square; slips numbered outwards from the wicket-keeper; positions 'neither fixed nor precisely defined') and 'Glossary of cricket terms' https://en.wikipedia.org/wiki/Glossary_of_cricket_terms (cover, fine, cordon); and SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp (sides, square, slips, gully, third man, mirrored for left-handers).",
+  "Law 28.4 (Limitation of on side fielders): MCC Laws of Cricket, 2017 Code (3rd edition 2022), Law 28 'The Fielder' https://www.lords.org/mcc/the-laws/the-fielder (also quoted by Wisden, https://www.wisden.com/series/australia-in-england-2024/cricket-news/england-concede-rare-bodyline-no-ball-for-illegal-leg-side-field-placings); ICC Men's Test Playing Conditions clause 28.4 https://www.icc-cricket.com/news/mens-test-match-clause-28-the-fielder and Men's ODI clause 28.4.2-28.4.3 (striker's end umpire calls no ball) https://icc-cricket.com/news/mens-odi-match-clause-28-the-fielder. The 'on side' is the leg side for the batter.",
+  "MCC published a 2026 edition of the Laws, in force from October 2026 (https://www.lords.org/getmedia/72990a68-98cd-4c6e-89ac-a2dce54533ad/Ten-major-changes-to-Laws-for-2026-edition_5.pdf); its ten headline changes do not touch Law 28, but the full 2026 text was not read, so check the clause number against the current edition. Field plans are illustrative, for a right-handed batter (mirrored for a left-hander). Figures: make_dyk_fielding.py."
  ],
  "venue": {
   "time": "dusk",
@@ -67,229 +68,342 @@
  },
  "short": [
   {
-   "vo": "Third man. Silly mid-off. Deep backward square leg. Cricket's fielding names sound like nonsense. But they are a code, and once you can read it, you can read any field.",
+   "vo": "Silly mid-off. Deep backward square leg. Third man. Cricket's fielding names sound like nonsense. They are not. They are a code, and once you can read it, you can read any field.",
    "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Cricket's fielding names",
-     "[are a code]"
+    "type": "plate",
+    "plate": "I",
+    "title": "READING THE FIELD",
+    "sub": "the names are a code",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "gully",
+      "fig": null
+     },
+     {
+      "p": "point",
+      "fig": null,
+      "label": "point",
+      "side": 1
+     },
+     {
+      "p": "cover",
+      "fig": null,
+      "label": "cover",
+      "side": 1
+     },
+     {
+      "p": "mid-off",
+      "fig": null,
+      "label": "mid-off",
+      "side": 1
+     },
+     {
+      "p": "mid-on",
+      "fig": null,
+      "label": "mid-on",
+      "side": -1
+     },
+     {
+      "p": "midwicket",
+      "fig": null
+     },
+     {
+      "p": "square leg",
+      "fig": null,
+      "label": "square leg",
+      "side": -1
+     },
+     {
+      "p": "fine leg",
+      "fig": null,
+      "label": "fine leg",
+      "side": -1
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "label": "third man",
+      "hl": true,
+      "side": -1
+     }
     ],
-    "fielders": [
-     "keeper",
-     "slip",
-     "2nd slip",
-     "gully",
-     "point",
-     "cover",
-     "mid-off",
-     "mid-on",
-     "midwicket",
-     "square leg",
-     "fine leg",
-     "third man",
-     "deep midwicket",
-     "long-on"
+    "legend": false,
+    "stamp": [
+     "DID YOU",
+     "KNOW?"
     ],
-    "batter_label": "",
-    "big_labels": true,
-    "labels": false,
+    "stamp_at": 0.75
+   }
+  },
+  {
+   "vo": "The first word is an angle, seen from the batter. Point, cover and mid-off sit on the off side. Mid-on, mid-wicket and square leg sit on the leg side.",
+   "scene": {
+    "type": "plate",
+    "plate": "II",
+    "title": "Word one: the angle",
+    "sub": "off side on the right, leg side on the left",
+    "figures": [
+     {
+      "p": "point",
+      "fig": null,
+      "label": "point",
+      "side": 1,
+      "ldy": -26
+     },
+     {
+      "p": "cover",
+      "fig": null,
+      "label": "cover",
+      "side": 1
+     },
+     {
+      "p": "mid-off",
+      "fig": null,
+      "label": "mid-off",
+      "side": 1
+     },
+     {
+      "p": "mid-on",
+      "fig": null,
+      "label": "mid-on",
+      "side": -1
+     },
+     {
+      "p": "midwicket",
+      "fig": null,
+      "label": "mid-wicket",
+      "side": -1
+     },
+     {
+      "p": "square leg",
+      "fig": null,
+      "label": "square leg",
+      "side": -1
+     }
+    ],
+    "legend": false,
     "note": [
-     "third man · silly mid-off",
-     "deep backward square leg"
+     "off side: point · cover · mid-off",
+     "leg side: mid-on · mid-wicket · square leg"
     ]
    }
   },
   {
-   "vo": "The first word gives the angle from the batter: leg, cover, mid-wicket, point.",
+   "vo": "The second word is the distance. Short means closer to the batter. Deep, or long, means farther. And silly means so close that it is dangerous, only a few metres from the bat.",
    "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Word one:",
-     "[the angle]"
+    "type": "plate",
+    "plate": "III",
+    "title": "Word two: the distance",
+    "sub": "short · deep · long · silly",
+    "figures": [
+     {
+      "p": "short leg",
+      "fig": null,
+      "label": "short leg",
+      "side": -1
+     },
+     {
+      "p": "deep square leg",
+      "fig": null,
+      "label": "deep square leg",
+      "side": -1
+     },
+     {
+      "p": "cover",
+      "fig": null,
+      "label": "cover",
+      "side": 1
+     },
+     {
+      "p": "deep cover",
+      "fig": null,
+      "label": "deep cover",
+      "side": 1
+     }
     ],
-    "fielders": [
-     "cover",
-     "midwicket",
-     "point",
-     "square leg"
-    ],
-    "batter_label": "",
-    "big_labels": true,
-    "hl": [
-     "cover",
-     "midwicket"
-    ],
-    "note": [
-     "leg · cover · mid-wicket · point"
-    ]
-   }
-  },
-  {
-   "vo": "A second word gives the distance. Short is closer. Deep or long is farther. And silly means so close that it looks dangerous, which is exactly where the name comes from.",
-   "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Word two:",
-     "[the distance]"
-    ],
-    "fielders": [
-     "short leg",
-     "deep square leg",
-     "cover",
-     "deep cover"
-    ],
-    "batter_label": "",
-    "big_labels": true,
-    "hl": [
-     "short leg",
-     "deep square leg"
-    ],
+    "legend": false,
     "note": [
      "short = closer · deep or long = farther",
-     "[silly = dangerously close]"
+     "silly = dangerously close"
     ]
    }
   },
   {
-   "vo": "Square means level with the batter, across the pitch. Backward and forward tilt the angle.",
+   "vo": "Square means level with the batter, across the pitch. Fine is the opposite: behind the batter, close to the line of the pitch. So fine leg is behind square on the leg side, and third man is its partner on the off side.",
    "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Square means",
-     "[level with the bat]"
+    "type": "plate",
+    "plate": "IV",
+    "title": "Square and fine",
+    "sub": "across the pitch, or behind it",
+    "figures": [
+     {
+      "p": "square leg",
+      "fig": null,
+      "label": "square leg",
+      "side": -1
+     },
+     {
+      "p": "point",
+      "fig": null,
+      "label": "point",
+      "side": 1
+     },
+     {
+      "p": "fine leg",
+      "fig": null,
+      "label": "fine leg",
+      "side": -1
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "label": "third man",
+      "side": 1,
+      "hl": true
+     }
     ],
-    "fielders": [
-     "square leg",
-     "point",
-     "backward point"
-    ],
-    "batter_label": "",
-    "big_labels": true,
-    "hl": [
-     "square leg",
-     "point"
-    ],
+    "legend": false,
     "note": [
      "square = level with the batter",
-     "backward / forward tilt the angle"
+     "fine = behind, near the line of the pitch"
     ]
    }
   },
   {
-   "vo": "Close catchers have their own code. Slips are numbered outwards from the wicket-keeper: first slip, second slip, third slip. Together, the slip cordon.",
+   "vo": "Close to the keeper, slips are numbered outwards. First slip, second slip, third slip. Together, the slip cordon. The gully stands a little squarer, on the off side.",
    "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Slips are numbered",
-     "[from the keeper]"
-    ],
-    "fielders": [
-     "keeper",
-     "slip",
-     "2nd slip",
-     "3rd slip",
-     "gully"
-    ],
-    "batter_label": "",
-    "big_labels": true,
-    "zones": [
+    "type": "plate",
+    "plate": "V",
+    "title": "The slip cordon",
+    "sub": "numbered outwards from the keeper",
+    "figures": [
      {
-      "pos": [
-       "slip",
-       "2nd slip",
-       "3rd slip"
-      ],
-      "label": "slip cordon",
-      "at": 0.3
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "2nd slip",
+      "fig": 3,
+      "name": "Second slip",
+      "side": 1,
+      "dy": -40
+     },
+     {
+      "p": "3rd slip",
+      "fig": 4,
+      "name": "Third slip",
+      "side": 1,
+      "dy": -46
+     },
+     {
+      "p": "gully",
+      "fig": 5,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Here is the twist. Fielders cannot stand anywhere. Law twenty-eight point four says that when the bowler delivers, no more than two fielders, besides the keeper, may be behind the batting crease on the leg side. A third there, and the umpire calls no ball.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THE LAW",
+    "title": "Law 28.4",
+    "body": "At the instant of the bowler's delivery there shall not be more than two fielders, other than the wicket-keeper, behind the popping crease on the on side.",
+    "margin": "A breach is a no ball.",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
+     {
+      "p": "fine leg",
+      "fig": null
+     },
+     {
+      "p": "deep square leg",
+      "fig": null
+     },
+     {
+      "p": "leg slip",
+      "fig": null,
+      "hl": true
      }
     ],
-    "note": [
-     "first slip · second slip · third slip",
-     "numbered outwards from the keeper"
-    ]
+    "stamp": [
+     "LAW",
+     "28.4"
+    ],
+    "stamp_angle": -9
    }
   },
   {
-   "vo": "Third man stands behind the wicket, on the off side, far beyond the slips. His job: stop the edges that fly past them and race to the boundary.",
+   "vo": "Everything else is the captain's call. The names are loose labels, not fixed spots, and for a left-hander, every side flips.",
    "scene": {
-    "type": "board",
-    "tone": "navy",
-    "tag": "ILLUSTRATIVE FIELD",
-    "head": [
-     "Where is",
-     "[third man?]"
-    ],
-    "fielders": [
-     "keeper",
-     "slip",
-     "2nd slip",
-     "gully",
-     "third man"
-    ],
-    "batter_label": "",
-    "big_labels": true,
-    "hl": [
-     "third man"
-    ],
-    "labels": true,
-    "note": [
-     "off side, behind the wicket,",
-     "[far beyond the slips]"
-    ]
-   }
-  },
-  {
-   "vo": "So why is it called third man? Honestly, nobody has a documented answer. The name is old, and the explanations you hear are only theories.",
-   "scene": {
-    "type": "stage",
-    "panel": {
-     "kind": "headline",
-     "kicker": "WHY 'THIRD'?",
-     "lines": [
-      {
-       "t": "NO DOCUMENTED"
-      },
-      {
-       "t": "ANSWER.",
-       "c": "gold"
-      }
-     ],
-     "at": 0.05
-    },
-    "avatars": [
+    "type": "plate_page",
+    "kicker": "THE CATCH",
+    "title": "Not fixed",
+    "body": "Positions are neither fixed nor precisely defined. The captain moves them for the bowler and the batter, and a left-hander reverses the sides.",
+    "margin": "So a field is a plan, not a map.",
+    "figures": [
      {
-      "kit": "IND",
-      "pose": "point",
-      "x": 0.5
+      "p": "point",
+      "fig": null
+     },
+     {
+      "p": "cover",
+      "fig": null
+     },
+     {
+      "p": "fine leg",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null
+     },
+     {
+      "p": "mid-on",
+      "fig": null
      }
     ],
-    "cam": "push",
-    "fx": [
-     "vignette",
-     "spot"
-    ]
+    "stamp": [
+     "CAPTAIN'S",
+     "CALL"
+    ],
+    "stamp_angle": 8
    }
   },
   {
-   "vo": "Now you can read any field. Follow for more Did You Know.",
+   "vo": "Now you can read any field. Next match, try naming every fielder before the commentator does. Subscribe to The Third Man on YouTube for more Did You Know.",
    "scene": {
     "type": "cta",
     "lines": [
      {
-      "t": "DID YOU KNOW?"
+      "t": "WANT THE FULL"
      },
      {
-      "t": "FOLLOW FOR MORE",
+      "t": "STORY?",
       "c": "gold"
      }
     ],
@@ -304,17 +418,18 @@
  ],
  "yt": {
   "short": {
-   "title": "Fielding Positions Explained: Where Is Third Man? | Did You Know Ep 1 #Shorts",
-   "description": "Fielding positions explained: where is third man, and why are cricket's fielding names so strange? The names are a code: an angle word (leg, cover, mid-wicket, point) and a distance word (short, deep, long, silly). Slips are numbered outwards from the wicket-keeper; third man stands behind the wicket on the off side. Why is it called third man? No documented origin exists. Illustrative field plans for a right-handed batter. Sources: Wikipedia (Fielding (cricket); Glossary of cricket terms) and SportPlan's fielding positions guide.\n\n#DidYouKnow #CricketExplained #FieldingPositions #Shorts",
+   "title": "Fielding Positions Explained: How to Read Any Field | Did You Know Ep 2 #Shorts",
+   "description": "Fielding positions explained: how to read any cricket field. Names are a code: an angle word (cover, mid-wicket, point, square leg) and a distance word (short, deep, long, silly). Slips are numbered outwards from the wicket-keeper. Then the twist: Law 28.4 says no more than two fielders, besides the wicket-keeper, may stand behind the batting crease on the leg side when the bowler delivers; a third is a no ball. Positions are loose labels, not fixed spots. Illustrative field plans for a right-handed batter.\n\nSources: MCC Laws of Cricket (Law 28.4, 2017 Code, 3rd edition 2022), ICC Playing Conditions clause 28.4, Wikipedia (Fielding (cricket); Glossary of cricket terms), SportPlan's fielding positions guide.\n\n#FieldingPositions #CricketExplained #DidYouKnow #Shorts",
    "tags": [
     "fielding positions",
     "cricket fielding positions explained",
-    "third man",
-    "silly point",
+    "silly mid-off",
+    "square leg",
     "slip cordon",
+    "Law 28.4",
+    "cricket rules",
     "cricket explained",
     "Did You Know",
-    "cricket rules",
     "The Third Man"
    ]
   }
