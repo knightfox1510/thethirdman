@@ -2481,6 +2481,42 @@
      "url": "https://drive.google.com/file/d/18qBZnDvyKJP-dfG0K_usSdyTbVWNczMc/view?usp=drivesdk"
     }
    ]
+  },
+  "dyk_fielding_positions": {
+   "state": "not posted",
+   "series": "11 Did You Know",
+   "episode": "Ep01 - Fielding Positions, Where Is Third Man",
+   "folder": "https://drive.google.com/drive/folders/1tF9g93gZVxpsZROEoFi2rfBs0JVoNY-c",
+   "files": [
+    {
+     "name": "Did_You_Know_Ep01_unused_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/10oUCw8nOsJgH8-phjU5JJU0CgeexgF9Z/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1It47dPEKMhvUFLhZb3AqfI8oU8baJcFz/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1INu1wb_sRJhT78yJzG48RyB_-qeZGceH/view?usp=drivesdk"
+    },
+    {
+     "name": "Did_You_Know_Ep01_Fielding_Positions_Where_Is_Third_Man_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 50.1,
+     "url": "https://drive.google.com/file/d/1ClDcq1fU6z86CjCJfGCbWGgJddxoLt-a/view?usp=drivesdk"
+    }
+   ]
   }
  },
  "series": {
@@ -2569,6 +2605,12 @@
    "folder": "https://drive.google.com/drive/folders/1JKROR0oeLvN990uUdl3HP1qCZRraEOTZ",
    "episodes": [
     "channel_trailer"
+   ]
+  },
+  "11 Did You Know": {
+   "folder": "https://drive.google.com/drive/folders/1sSIiAclQfCq6OWDI1GaCwjkQ2QFNpEHX",
+   "episodes": [
+    "dyk_fielding_positions"
    ]
   }
  }
