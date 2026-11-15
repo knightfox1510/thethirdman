@@ -265,7 +265,7 @@ def sc_lab_big_text(c, g, t, D, s):
     """An editorial statement: big lines, [highlighted] parts boxed."""
     header(c, g, t, D, {k: v for k, v in s.items() if k != "title"}); l = L(g); short = g.fmt == "short"
     lines = [ln["t"] if isinstance(ln, dict) else ln for ln in s["lines"]]
-    size = 104 if short else 110; y = (l["top"] + l["bot"]) / 2 - (len(lines) - 1) * size * .55 + size * .3
+    size = (128 if s.get("vert") else 104) if short else 110; y = (l["top"] + l["bot"]) / 2 - (len(lines) - 1) * size * .55 + size * .3 + (120 if s.get("vert") else 0)
     for k, ln in enumerate(lines):
         q = eo(prog(t, .08 + .14 * k, .5 + .14 * k))
         z = E.fit(ln.replace("[", "").replace("]", ""), l["x1"] - l["x0"], size, "interB", -2)
@@ -297,10 +297,10 @@ def sc_lab_vs(c, g, t, D, s):
 
 def sc_lab_dots(c, g, t, D, s):
     header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
-    rows = s["rows"]; n = len(rows)
-    lw = 360 if short else 520
-    xa, xb = l["x0"] + lw, l["x1"] - 110
-    top = l["top"] + 40; rh = min(66 if short else 44, (l["bot"] - top) / max(1, n))
+    rows = s["rows"]; n = len(rows); vert = s.get("vert")
+    lw = 0 if vert else (360 if short else 520)
+    xa, xb = l["x0"] + lw, l["x1"] - (170 if vert else 110)
+    top = l["top"] + 40 + (40 if vert else 0); rh = min(66 if short else 44, (l["bot"] - top) / max(1, n)) if not vert else min(150, (1560 - top) / max(1, n))
     lo, hi = s.get("domain", [0, 100])
     X = lambda v: xa + (xb - xa) * (v - lo) / (hi - lo)
     a = eo(prog(t, .2, .6))
@@ -317,9 +317,10 @@ def sc_lab_dots(c, g, t, D, s):
         st = D * s.get("from", .08) + k * D * s.get("stagger", .45) / max(1, n)
         q = eo(prog(t, st, st + .5))
         hl = r.get("hl") and t >= T(r, D, 0) if isinstance(r.get("hl"), bool) else False
-        lsz = 28 if short else 24
-        if hl: rrect(c, l["x0"] - 8, y - lsz * .95, twidth(r["label"], lsz, "interSB") + 16, lsz * 1.35, 6, (250, 205, 212), q)
-        text(c, r["label"], l["x0"], y, lsz, "interSB" if hl else "inter", gfx.INK, q)
+        lsz = 34 if vert else (28 if short else 24)
+        ly = y - 44 if vert else y
+        if hl: rrect(c, l["x0"] - 8, ly - lsz * .95, twidth(r["label"], lsz, "interSB") + 16, lsz * 1.35, 6, (250, 205, 212), q)
+        text(c, r["label"], l["x0"], ly, lsz, "interSB" if hl else "inter", gfx.INK, q)
         lp = paint((205, 203, 196), q); lp.setStrokeWidth(2); c.drawLine(xa, y - 9, xb, y - 9, lp)
         for v in s.get("ticks", [lo, (lo + hi) / 2, hi])[1:-1]:
             c.drawLine(X(v), y - 15, X(v), y - 3, lp)
@@ -329,10 +330,10 @@ def sc_lab_dots(c, g, t, D, s):
             pp = paint((40, 40, 40), .5 * q); pp.setStrokeWidth(4); c.drawLine(X(lo + (vals[0] - lo) * q), y - 9, X(lo + (vals[1] - lo) * q), y - 9, pp)
         for j, v in enumerate(vals):
             vx = X(lo + (v - lo) * q)
-            c.drawCircle(vx, y - 9, 13 if short else 10, paint(cols[j % len(cols)], q))
-            if hl and j == 0: c.drawCircle(vx, y - 9, 18, paint(RED, q, stroke=3))
+            c.drawCircle(vx, y - 9, 18 if vert else (13 if short else 10), paint(cols[j % len(cols)], q))
+            if hl and j == 0: c.drawCircle(vx, y - 9, 26 if vert else 18, paint(RED, q, stroke=3))
         txt = r.get("text", f'{vals[0]:g}')
-        text(c, txt, xb + 26, y, 26 if short else 22, "monoSB", gfx.INK, q)
+        text(c, txt, xb + 26, y + (4 if vert else 0), 36 if vert else (26 if short else 22), "monoSB", gfx.INK, q)
         if r.get("badge") and hl:
             bx = xb + 26 + twidth(txt, 26, "monoSB") + 14
             rrect(c, bx, y - 26, twidth(r["badge"], 22, "monoSB") + 14, 34, 5, RED, q)
@@ -409,14 +410,16 @@ def sc_lab_big(c, g, t, D, s):
     v = s["value"]; dec = s.get("dec", 0); st = T(s, D, .1); q = eio(prog(t, st, st + s.get("count_dur", 1.0)))
     cur = s.get("from", 0) + (v - s.get("from", 0)) * q
     vs = s.get("prefix", "") + f"{cur:,.{dec}f}" + s.get("suffix", "")
-    y = (l["top"] + l["bot"]) / 2 + (40 if short else 60)
-    z = E.fit(vs, (l["x1"] - l["x0"]) * .75, 230 if short else 260, "interB", -4)
+    vert = s.get("vert")
+    y = (l["top"] + l["bot"]) / 2 + (40 if short else 60) + (150 if vert else 0)
+    z = E.fit(vs, (l["x1"] - l["x0"]) * (.95 if vert else .75), 330 if vert else (230 if short else 260), "interB", -4)
     w = text(c, vs, l["x0"], y, z, "interB", col(s.get("color", "red")), eo(prog(t, st, st + .3)), track=-4)
     if s.get("unit"):
         text(c, s["unit"], l["x0"] + twidth(vs, z, "interB", -4) + 20, y, 40 if short else 36, "interB", gfx.INK, eo(prog(t, st + .3, st + .7)))
     if s.get("label"):
-        for k, ln in enumerate(E.wrap(s["label"], l["x1"] - l["x0"], 34 if short else 30, "inter")):
-            text(c, ln, l["x0"], y + 70 + k * 44, 34 if short else 30, "inter", gfx.MUTED, eo(prog(t, st + .4, st + .8)))
+        lsz_ = 40 if vert else (34 if short else 30)
+        for k, ln in enumerate(E.wrap(s["label"], l["x1"] - l["x0"], lsz_, "inter")):
+            text(c, ln, l["x0"], y + 90 + k * (lsz_ + 14), lsz_, "inter", gfx.MUTED, eo(prog(t, st + .4, st + .8)))
 
 
 def sc_lab_radial(c, g, t, D, s):
@@ -481,21 +484,24 @@ def sc_lab_rings(c, g, t, D, s):
 def sc_lab_compare(c, g, t, D, s):
     """Head-to-head table: two tokens on top, rows of [label, a, b, winner a|b|level]."""
     header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
-    A, B = s["a"], s["b"]; w = l["x1"] - l["x0"]
-    ca, cb = l["x0"] + w * .62, l["x0"] + w * .88; y = l["top"] + 40
+    A, B = s["a"], s["b"]; w = l["x1"] - l["x0"]; vert = s.get("vert")
+    ca, cb = (l["x0"] + w * .27, l["x0"] + w * .73) if vert else (l["x0"] + w * .62, l["x0"] + w * .88); y = l["top"] + 40 + (30 if vert else 0)
     a = eo(prog(t, .1, .5))
     for cxx, P in ((ca, A), (cb, B)):
         token(c, cxx, y, 40 if short else 34, P["t"], P.get("kit", "ink"), a)
         text(c, P["name"], cxx, y + 74, 26 if short else 22, "interB", gfx.INK, a, "c")
-    y += 150; rh = 88 if short else 64
+    y += 150 + (30 if vert else 0); rh = 190 if vert else (88 if short else 64)
     for k, r in enumerate(s["rows"]):
         st = T(r, D, .15 + .6 * k / max(1, len(s["rows"]))); q = eo(prog(t, st, st + .35))
-        lp = paint((210, 208, 200), q); lp.setStrokeWidth(2); c.drawLine(l["x0"], y + rh * .62, l["x1"], y + rh * .62, lp)
-        text(c, r[0], l["x0"], y + rh * .4, 30 if short else 26, "inter", gfx.INK, q)
+        lp = paint((210, 208, 200), q); lp.setStrokeWidth(2); c.drawLine(l["x0"], y + rh * .86 if vert else y + rh * .62, l["x1"], y + rh * .86 if vert else y + rh * .62, lp)
+        if vert: text(c, r[0], l["x0"], y + 30, 32, "interSB", gfx.MUTED, q)
+        else: text(c, r[0], l["x0"], y + rh * .4, 30 if short else 26, "inter", gfx.INK, q)
+        vy = y + 120 if vert else y + rh * .4
         for j, (cxx, v) in enumerate(((ca, r[1]), (cb, r[2]))):
             win = (r[3] == "a" and j == 0) or (r[3] == "b" and j == 1)
-            if win: rrect(c, cxx - 80, y + rh * .4 - 38, 160, 50, 8, HL, q)
-            text(c, v, cxx, y + rh * .4, 36 if short else 30, "interB" if win else "inter", gfx.INK if win else gfx.MUTED, q, "c")
+            vsz = E.fit(v, 400 if vert else 160, 64 if vert else (36 if short else 30), "interB" if win else "inter", 0) if vert else (36 if short else 30)
+            if win: rrect(c, cxx - (210 if vert else 80), vy - (56 if vert else 38), 420 if vert else 160, 76 if vert else 50, 8, HL, q)
+            text(c, v, cxx, vy, vsz, "interB" if win else "inter", gfx.INK if win else gfx.MUTED, q, "c")
         y += rh
 
 

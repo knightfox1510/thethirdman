@@ -66,7 +66,9 @@
   "stumps",
   "flip",
   "kinetic",
-  "fieldmap"
+  "fieldmap",
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -135,6 +137,8 @@
   "data_nz_ind_series__igshort": "stumps",
   "replay_5odi__igshort": "flip",
   "replay_5odi__igreel": "kinetic",
-  "data_nz_ind_series__igreel": "fieldmap"
+  "data_nz_ind_series__igreel": "fieldmap",
+  "replay_5odi__iglab": "stumps",
+  "data_nz_ind_series__iglab": "flip"
  }
 }

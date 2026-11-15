@@ -1178,5 +1178,14 @@
    ]
   }
  },
- "provenance_required": true
+ "provenance_required": true,
+ "lab_reel": [
+  0,
+  3,
+  5,
+  7,
+  8,
+  9,
+  12
+ ]
 }

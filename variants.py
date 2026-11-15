@@ -104,6 +104,28 @@ def igfull(spec_path):
     print("IG full vertical:", f"{dst}/{base}.mp4")
 
 
+def iglab(spec_path):
+    """Vertical Instagram Reel in The Lab look (no avatars): editorial-paper lab scenes picked from spec["long"] by spec["lab_reel"] (indices), 9:16, with the
+    Instagram end card. Writes deliver/<slug>/<long name with _Long -> _Lab_9x16>_IG.mp4 (+ .srt) and _IG_caption.txt."""
+    spec = json.load(open(spec_path)); slug = spec["slug"]
+    v = copy.deepcopy(spec); v["slug"] = f"{slug}__iglab"
+    v["short"] = [copy.deepcopy(spec["long"][i]) for i in spec["lab_reel"]]
+    for sc in v["short"]: sc["scene"]["vert"] = True
+    v["short"].append(spec.get("reel_cta") or IG_REEL_CTA)
+    v["theme"] = spec.get("theme_long", "lab"); v["captions"] = spec.get("captions_long") or "lab"
+    base = spec["files"]["long"].replace("_Long", "") + "_Lab_9x16_IG"
+    v["files"] = {"short": base, "long": "_unused"}; v.pop("long", None); v.pop("burn_captions", None)
+    os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
+    vp = f"{ROOT}/out/_variants/{slug}__iglab.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
+    subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "short"], check=True)
+    src, dst = f"{ROOT}/deliver/{slug}__iglab", f"{ROOT}/deliver/{slug}"
+    for f in os.listdir(src):
+        if f.startswith(base) and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
+    shutil.rmtree(src, ignore_errors=True)
+    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(caption_text(spec))
+    print("IG lab reel:", f"{dst}/{base}.mp4")
+
+
 IG_LONG_CTA = {"vo": "Want more detailed breakdowns like this? Follow The Third Man on YouTube. Link in bio.",
                "scene": {"type": "cta", "lines": [{"t": "MORE DETAILED"}, {"t": "BREAKDOWNS ON YOUTUBE", "c": "gold"}],
                          "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE " + YT_HANDLE, "sub": "FOLLOW FOR SIMILAR DEEP DIVES", "bio": "LINK IN BIO"}}}
@@ -283,4 +305,4 @@ def carousel(spec_path):
 
 
 if __name__ == "__main__":
-    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "iglong": iglong, "igreel": igreel, "igfull": igfull, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])
+    {"deepcut": deepcut, "carousel": carousel, "igshort": igshort, "iglong": iglong, "igreel": igreel, "igfull": igfull, "iglab": iglab, "igcaption": lambda p: print(write_caption(p)), "igcover": lambda p: print(write_cover(p))}[sys.argv[1]](sys.argv[2])
