@@ -35,7 +35,9 @@ gfx.THEMES.update({
                  RED=(232, 64, 64), ORANGE=(255, 128, 20), PANEL=(17, 24, 46), LINE=(52, 64, 98), display="Bebas.ttf",
                  heading="OswaldBold.ttf", glow=1.0, light=False),
 })
-LOOKS = ("lab", "board", "retro", "card")
+gfx.THEMES["plate"] = dict(BG=(238, 226, 196), INK=(52, 36, 26), MUTED=(120, 100, 70), GOLD=(160, 40, 36), BLUE=(60, 80, 110), RED=(160, 40, 36),
+                           ORANGE=(180, 100, 40), PANEL=(246, 238, 214), LINE=(200, 186, 160), display="PlayfairBold.ttf", heading="PlayfairBold.ttf", glow=0.0, light=True)
+LOOKS = ("lab", "board", "retro", "card", "plate")
 
 
 def col(c_):
@@ -882,6 +884,7 @@ def install(engine):
     E.SCENES.update({"lab_title": sc_lab_title, "lab_dots": sc_lab_dots, "lab_swarm": sc_lab_swarm, "lab_units": sc_lab_units,
                      "lab_big": sc_lab_big, "lab_radial": sc_lab_radial, "lab_score": sc_lab_score, "lab_rings": sc_lab_rings,
                      "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "lab_wagon": sc_lab_wagon, "lab_pitch": sc_lab_pitch, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
+    import plate; plate.install(engine)
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 
@@ -891,6 +894,8 @@ def install(engine):
         if th == "board": return bg_board(c, T_)
         if th == "retro": return bg_retro(c, T_)
         if th == "card": return bg_card(c, T_)
+        if th == "plate":
+            import plate; return plate.bg(c, T_)
         return prev_bg(c, T_)
     gfx.background = bg
     prev_chrome = E.chrome
@@ -938,6 +943,8 @@ def extra_sfx(s, D, T0):
     elif ty == "lab_title":
         ev.append([T0 + .05, "whoosh", .7]); ev.append([T0 + .4, "tick", 1]); ev.append([T0 + .55, "tick", 1])
         if len(s.get("players") or s.get("tokens") or []) == 2: ev.append([T0 + .95, "stamp", .8])
+    elif ty in ("plate", "plate_page", "plate_list"):
+        import plate; ev += plate.sfx(s, D, T0)
     elif ty == "card":
         ev.append([T0 + .05, "whoosh", .8])
         fl = s.get("_t", D * s.get("flip_at", .45)); ev.append([T0 + fl, "whoosh", 1]); ev.append([T0 + fl + .5, "crowd", .5])
