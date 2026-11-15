@@ -27,19 +27,31 @@
 | Four / six (ball flight to the rope, sector named) | done | Young 13.4 (six), Seifert 2.2 (four) | rope radius approximate (65 m), wagon spot extended to the rope when it sits inside |
 | Wide, no-ball (overstep foot), free hit | done | Jamieson 49.1 (wide), Kuldeep 25.4 (no-ball, also a four) | overstep distance is not in the data |
 | Misfield / fumble | done (from commentary leads) | Iyer 24.6 at extra cover | |
-| Dropped chance | built, NOT tested | no example in the captured commentary | needs a match whose text says a catch was put down |
-| Bouncer (height above the shoulder at the crease) | built (tag), NOT tested | none of the six short balls checked reached shoulder height at the model's speed | |
+| Dropped chance (Cricbuzz event DROPPED; dropper and position from the text) | done | Young 1.5 (Rohit), Axar 5.4 (Kelly at backward point) | 17 DROPPED events exist across the 9 Cricbuzz captures; only matches with a Cricinfo table can be drawn |
+| Bouncer (commentary says so, or the model puts the ball above the shoulder) | done (tag + higher bounce) | Brar 11.3 to Young | height is the model's, not measured |
 | Spin (loop, drift, slower, lower release) | done (basic) | Axar 14.2, Kuldeep 25.4 | turn after pitching is not modelled (direction is rarely in the text) |
 | Seam in/away after pitching | done (small lateral move) | Henry over | |
-| Swing before pitching (conventional / reverse) | NOT built | | text cues exist ("swing"); needs a lateral arc in the pre-bounce phase |
-| Bowler arm / angle (left-arm, round the wicket) | tag only | | release point is not moved yet |
+| Swing before pitching (in / away, from the text) | done | Arshdeep 0.5, Young 1.5 | direction from commentary; size of the swing is illustrative |
+| Bowler arm / angle (left-arm, round the wicket): the release point moves | done | Arshdeep 26.5 (round the wicket) | the bowler's arm is only known when the text says left-arm |
 | Batter's-eye and keeper's-eye cameras | done (rough framing) | Kohli 0.5, Rohit 0.1 | |
 | Over on one page (six landing spots, outcome, control) | done | Henry's first over | data only |
 | Where the runs went (wagon plot, any slice: over, spell, innings, match) | done | Will Young's innings | data only; fours/sixes/wicket in red |
-| Hit wicket, obstructing the field, handled the ball, timed out | NOT built | no examples in the captures | rare; text-driven |
-| Captain's field-placement view (the whole field at a moment) | NOT built | | positions are only known for the fielders the commentary names |
+| Hit wicket, handled the ball, obstructing the field, timed out, retired | built, NOT tested on a real ball | none in our captures (smoke-tested only) | law numbers deliberately not shown (the MCC 2026 edition may renumber) |
+| Field as the commentary describes it (one over) | done, sparse by nature | Henry's first over (2 positions named) | NOT a full field: only fielders the commentary mentions |
 | DRS / ball-tracking (pitching, impact, hitting, umpire's call) | not planned | | no tracking data |
-| Animation | catch only | Finn Allen 30.2 | the others are still posters; the same path code can animate them |
+| Animation (orbiting camera: delivery, then catch / run-out throw / boundary flight) | done | catch (Allen 30.2), run out (49.5 direct hit), six (Young 13.4) | any situation with a ball path can be animated the same way |
+| Free hit (the ball after a no-ball) | done | Seifert 1.3: six off the free hit | the table order decides it; balls bowled twice under one number are told apart (`nth`) |
+| Run-out missed (Cricbuzz event RUNOUT_MISS) | done | Kohli's throw from mid off, 47.2 | |
+| Review (UDRS): commentary notes only | done (no tracking picture) | Iyer 0.6 (three reds), Young 33.3 | we have no ball-tracking data |
+| Leave (LEFT_ALONE: 54 in the two tables) | done | Allen | |
+| Byes and leg byes | done | Seifert 9.1 (leg byes), Clarke 40.1 (byes) | |
+| Caught and bowled | built, NOT tested | none in our captures | |
+| Edges, body blows, beaten, milestones (50 / 100), maiden over | done as tags | various | from the commentary and Cricbuzz events (leads) |
+
+## Known data gaps
+- Cricbuzz and Cricinfo sometimes disagree on length (flagged on the poster) and on an event (Kuldeep 25.4: Cricinfo four + no-ball, Cricbuzz tags SIX): a CONFLICT until a third source settles it.
+- Cricbuzz-only matches (1st, 2nd, 5th ODI and four U19 matches) have the commentary leads but no Cricinfo ball table: they cannot be drawn until their Cricinfo pages are captured.
+- Speed is in about 4% of commentary lines (default 130 kph; 85 for spin).
 
 ## Checks before any of this is published
 Every number goes through `dataops.verify` (two sources, or "in our archive"); the length disagreement on a ball is a CONFLICT until a third source settles it; commentary leads are paraphrased as facts, never quoted.

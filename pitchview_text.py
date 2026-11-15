@@ -38,7 +38,7 @@ NOBALL_RE = re.compile(r"(no.?ball|overstep\w*|front.?foot|free hit)", re.I)
 
 
 SWING_RE = re.compile(r"(?:swing\w*|shap(?:es|ed|ing)|banana)[^.]{0,25}?\b(away|in)\b|\b(reverse swing|late swing|conventional swing)", re.I)
-EDGE_RE = re.compile(r"\b(inside edge|outside edge|top edge|thick edge|thin edge|leading edge|under-?edge|bottom edge|edge[sd]?)\b", re.I)
+EDGE_RE = re.compile(r"\b(inside edge|outside edge|top edge|thick edge|thin edge|leading edge|under-?edge|bottom edge|inside-edged|outside-edged|top-edged|edged)\b", re.I)   # specific edges only: a bare 'edge' also matches 'the edge of the rope'
 BODY_RE = re.compile(r"\b(helmet|grille|on the pad|thigh pad|on the body|ribs|gloves?|finger|forearm|hit on the (?:arm|shoulder|chest|head)|rapped)\b", re.I)
 BOUNCER_RE = re.compile(r"\b(bouncer|banged in short|short ball|short and (?:rising|nasty)|bumper)\b", re.I)
 DROPPER_RE = re.compile(r"\b([A-Z][a-z]+)\b[^.]{0,45}?(?:puts? (?:him )?down|drops?|dropped|spill\w*|lets it go|puts down)|([A-Z][a-z]+) (?:- |is )the culprit|[Ff]lies to ([A-Z][a-z]+)")
