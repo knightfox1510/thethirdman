@@ -66,11 +66,13 @@
   // ---- panel UI ----
   const box = document.createElement("div");
   box.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:2147483647;background:#0d1b3e;color:#fff;font:13px/1.4 system-ui,sans-serif;padding:12px 14px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.35);width:230px";
-  box.innerHTML = `<div style="font-weight:700;margin-bottom:6px">Third Man capture · ${SITE}</div>
+  box.innerHTML = `<div id="ttm-head" style="font-weight:700;margin-bottom:6px;cursor:pointer">Manual capture · ${SITE} <span id="ttm-chev" style="float:right;opacity:.7">▾</span></div><div id="ttm-body">
     <div id="ttm-n" style="opacity:.85;margin-bottom:8px"></div>
     <button id="ttm-scroll" style="width:100%;margin-bottom:6px;padding:6px;border:0;border-radius:6px;background:#2a3b6b;color:#fff;cursor:pointer">Load all commentary</button>
     <button id="ttm-save" style="width:100%;padding:6px;border:0;border-radius:6px;background:#e63946;color:#fff;font-weight:700;cursor:pointer">Save JSON</button>
-    <div style="opacity:.6;font-size:11px;margin-top:6px">Open the commentary, scorecard and statistics tabs (and switch innings in commentary), then save.</div>`;
+    <div style="opacity:.6;font-size:11px;margin-top:6px">Open the commentary, scorecard and statistics tabs (and switch innings in commentary), then save.</div></div>`;
+  const collapse = (on) => { box.querySelector("#ttm-body").style.display = on ? "none" : "block"; box.querySelector("#ttm-chev").textContent = on ? "▸" : "▾"; box.style.width = on ? "170px" : "230px"; try { localStorage.setItem("ttm_manual_collapsed", on ? "1" : "0"); } catch (e) {} };
+  box.querySelector("#ttm-head").onclick = () => collapse(box.querySelector("#ttm-body").style.display !== "none");
   const render = () => {
     const n = Object.keys(store.comments).length;
     const tabs = Object.keys(store.pages).filter((k) => !k.endsWith("_text")).join(", ") || "none";
@@ -80,7 +82,7 @@
 
   const loadAll = async (btn) => {
     let last = -1, still = 0;
-    while (still < 4) {
+    while (still < 4 && !window.__ttmStop) {
       window.scrollTo(0, document.body.scrollHeight);
       const more = [...document.querySelectorAll("button, a, div[role=button], span")].find((b) => /^\s*(load|show|view) more/i.test(b.textContent || "") && b.offsetParent);
       if (more) more.click();
@@ -110,7 +112,7 @@
   const meta = () => { for (const v of Object.values(store.pages)) { const d = v && v.props && v.props.appPageProps && v.props.appPageProps.data; if (d && d.match) return d.match; } return null; };
   window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, render };
 
-  const start = () => { document.body.appendChild(box); grabNext(); save(); render(); };
+  const start = () => { document.body.appendChild(box); let c = true; try { c = localStorage.getItem("ttm_manual_collapsed") !== "0"; } catch (e) {} collapse(c); grabNext(); save(); render(); };
   // client-side tab switches do not reload the page: re-read on URL change
   let lastPath = location.pathname;
   setInterval(() => { if (location.pathname !== lastPath) { lastPath = location.pathname; setTimeout(() => { grabText(); save(); render(); }, 1500); } }, 1000);

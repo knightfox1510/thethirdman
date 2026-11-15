@@ -1,17 +1,21 @@
-// Batch + crawl mode (v1.3): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
-// Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves one JSON), a SERIES page (collects its match links and
-// queues them), a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one JSON, with each stat tab/filter).
-// Nothing is captured twice: finished matches/series are remembered in the browser (chrome.storage) and you can paste the ids we already hold (python3 -m dataops.store known).
+// Batch + crawl mode (v1.4): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
+// a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
+// Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
+// Upcoming and live matches are skipped (nothing is saved for them). Stop is immediate (it cancels the pending wait / navigation), Clear queue empties the list.
 (() => {
   const SITE = /cricbuzz/.test(location.hostname) ? "cricbuzz" : "cricinfo";
   const SCHEMA = 3;                                                     // bump when the capture gains new tabs/fields: older captures are then re-done once
   const TABS = SITE === "cricinfo"
     ? { score: "full-scorecard", xi: "match-playing-xi", comm: "ball-by-ball-commentary", stats: "match-statistics" }
     : { score: "live-cricket-scorecard", comm: "live-cricket-full-commentary" };       // tab slugs: adjust here if a site renames them
+  const TAB_LABEL = { score: "scorecard", xi: "playing XI", comm: "commentary", stats: "statistics" };
   const MAX_DEFAULT = 20, DELAY = [4000, 9000], BETWEEN = [12000, 25000];
   const rnd = ([a, b]) => a + Math.random() * (b - a);
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  const blank = () => ({ running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, log: [], results: [], done: {} });
+  let stopFlag = false;                                                 // set by Stop / Clear: every wait below checks it, so nothing keeps running after you press Stop
+  const wait = async (ms) => { const end = Date.now() + ms; while (Date.now() < end) { if (stopFlag) return false; await sleep(Math.min(250, end - Date.now())); } return !stopFlag; };
+  const blank = () => ({ running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
   const get = () => new Promise((r) => chrome.storage.local.get("ttm_batch", (v) => r(Object.assign(blank(), v.ttm_batch || {}))));
   const set = (s) => new Promise((r) => chrome.storage.local.set({ ttm_batch: s }, r));
   const clean = (u) => String(u).split("#")[0];
@@ -21,119 +25,164 @@
   const isSeries = (u) => { try { const p = new URL(u, location.href).pathname; return SITE === "cricinfo" ? (/\/series\/[^/]+-\d+\/?(match-results|match-schedule-fixtures-and-results|squads)?\/?$/.test(p) || /\/ci\/engine\/series\/\d+\.html/.test(p)) && !matchId(u) : /\/cricket-series\/\d+\//.test(p); } catch (e) { return false; } };
   const kind = (u) => matchId(u) ? "match" : isSeries(u) ? "series" : /index\.html\?.*view=season|\/team\/[^/]+\/(match-results|series)|match-results|series-results/.test(u) ? "list" : "page";
   const doneKey = (u) => SITE + ":" + (matchId(u) || clean(u));
+  const label = (u) => { const k = kind(u); return k === "match" ? `match ${matchId(u)}` : k === "page" ? `page ${(new URL(u, location.href).pathname.split("/").filter(Boolean).slice(-2).join("/"))}` : `${k} ${clean(u).slice(-40)}`; };
   const tabUrl = (u, name) => { const x = new URL(u, location.href);
     if (SITE === "cricinfo") { const m = x.pathname.match(/^(\/series\/[^/]+\/[^/]+-\d+)/); return m ? `${x.origin}${m[1]}/${name}` : u; }
     const m = x.pathname.match(/^\/[a-z-]+\/(\d{4,})\/([^/?#]+)/); return m ? `${x.origin}/${name}/${m[1]}/${m[2]}` : u; };
   const blocked = () => /access denied|captcha|unusual traffic|are you a robot|just a moment|verify you are human/i.test(document.title + " " + (document.body ? document.body.innerText.slice(0, 600) : ""));
   const notFound = () => /page not found|404|can't find|couldn't find/i.test(document.title);
-  const log = async (s, msg) => { s.log.push(new Date().toISOString().slice(11, 19) + " " + msg); s.log = s.log.slice(-80); await set(s); render(s); };
+  const yearOf = (t) => { const m = (t || "").match(/\b(19\d\d|20\d\d)\b/); return m ? +m[1] : 0; };
+  const log = async (s, msg) => { s.log.push(new Date().toISOString().slice(11, 19) + " " + msg); s.log = s.log.slice(-120); await set(s); render(s); };
 
   const links = () => {                                                  // every match / series link on the page, with its row text
     const out = new Map();
     for (const a of document.querySelectorAll("a[href]")) {
       const h = clean(a.href); const k = kind(h); if (k !== "match" && k !== "series") continue;
       const id = k === "match" ? matchId(h) : h; const row = a.closest("tr, li, div[class*=match], div[class*=card]") || a.parentElement;
-      if (!out.has(k + id)) out.set(k + id, { kind: k, id, url: h, text: (row ? row.innerText : a.innerText).replace(/\s+/g, " ").trim().slice(0, 300) });
+      if (!out.has(k + id)) out.set(k + id, { kind: k, id, url: h, text: ((row ? row.innerText || row.textContent : a.innerText || a.textContent) || "").replace(/\s+/g, " ").trim().slice(0, 300) });
     } return [...out.values()];
   };
-  const yearOf = (t) => { const m = (t || "").match(/\b(19\d\d|20\d\d)\b/); return m ? +m[1] : 0; };
-
-  const savePage = async () => {                                         // any other page: tables, page data, text, links; stats pages: every format tab / filter too
+  const download = (name, obj) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(obj)], { type: "application/json" })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); };
+  const savePage = async (prefix = "page") => {                          // tables, page data, text, links; stats pages: every format tab / filter too
     const grab = () => ({ tables: [...document.querySelectorAll("table")].slice(0, 60).map((t) => [...t.rows].map((r) => [...r.cells].map((c) => c.innerText.trim()))), text: (document.querySelector("main") || document.body).innerText.slice(0, 600000) });
     let nd = null; try { const el = document.getElementById("__NEXT_DATA__"); nd = el ? JSON.parse(el.textContent) : null; } catch (e) {}
     const out = { site: SITE, schema: SCHEMA, page_url: location.href, title: document.title, saved_at: new Date().toISOString(), next_data: nd, ...grab(), links: links(), views: {} };
-    if (/stats|records|statsguru|career/i.test(location.href)) {                                           // click through the tabs / filters a person would (Tests, ODIs, T20Is, IPL ...)
+    if (/stats|records|statsguru|career/i.test(location.href)) {
       const tabs = [...document.querySelectorAll("[role=tab], button, a")].filter((b) => b.offsetParent && /^(tests?|odis?|t20is?|t20|ipl|first[- ]class|list a|batting|bowling|fielding|all)$/i.test((b.textContent || "").trim())).slice(0, 14);
-      for (const b of tabs) { try { b.click(); await sleep(2500); out.views[(b.textContent || "").trim()] = grab(); } catch (e) {} }
+      for (const b of tabs) { if (stopFlag) break; try { b.click(); await sleep(2500); out.views[(b.textContent || "").trim()] = grab(); } catch (e) {} }
     }
-    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(out)], { type: "application/json" }));
-    a.download = `page_${SITE}_${(location.pathname + location.search).replace(/[^a-z0-9]+/gi, "_").slice(0, 80)}.json`; document.body.appendChild(a); a.click(); a.remove();
+    download(`${prefix}_${SITE}_${(location.pathname + location.search).replace(/[^a-z0-9]+/gi, "_").slice(0, 80)}.json`, out);
     return out.tables.length + Object.values(out.views).reduce((n, v) => n + v.tables.length, 0);
   };
 
-  const enqueue = (s, items, front) => {                                 // adds links not already done / queued, newest first as listed
+  const enqueue = (s, items, front) => {                                 // adds links not already done / queued
     const have = new Set(s.queue.map((u) => doneKey(u)));
     const fresh = items.filter((u) => !s.done[doneKey(u)] && !have.has(doneKey(u)) && (!s.since || !yearOf(u.text) || yearOf(u.text) >= s.since)).map((u) => u.url);
     if (front) s.queue.splice(s.idx + 1, 0, ...fresh); else s.queue.push(...fresh);
     return fresh.length;
   };
-  const finish = async (s, msg) => { s.running = false; await log(s, msg); };
-  const next = async (s, extraWait = 0) => {
-    if (s.idx >= s.queue.length || s.results.length >= s.max) return finish(s, `DONE: ${s.results.length} captured this run (cap ${s.max}), ${Math.max(0, s.queue.length - s.idx)} still queued. Press Start to continue later.`);
-    await sleep(rnd(BETWEEN) + extraWait); location.assign(s.queue[s.idx]);
+  const stopped = async (s, msg) => { s.running = false; s.now = ""; if (!(s.queue.length - s.idx)) s.started = false; await log(s, msg); };
+  const advance = async (s) => { s.idx++; s.tab = 0; s.plan = null; while (s.idx < s.queue.length && s.done[doneKey(s.queue[s.idx])] && s.done[doneKey(s.queue[s.idx])].schema === SCHEMA) s.idx++; await set(s); };   // skips already-done items at once
+  const goNext = async (s, pause = true) => {
+    if (stopFlag) return;
+    if (s.idx >= s.queue.length) return stopped(s, `DONE: queue finished, ${s.results.length} captured this run.`);
+    if (s.results.length >= s.max) return stopped(s, `Run limit reached (${s.max}). ${s.queue.length - s.idx} still queued: press Resume to continue.`);
+    s.now = `next: ${label(s.queue[s.idx])}`; await set(s); render(s);
+    if (pause && !(await wait(rnd(BETWEEN)))) return;
+    location.assign(s.queue[s.idx]);
   };
 
   const step = async () => {
-    const s = await get(); if (!s.running) return render(s);
-    if (blocked()) return finish(s, "STOPPED: the site is asking for a human check. Solve it in the tab, then press Start again.");
-    const job = s.queue[s.idx]; if (!job) return finish(s, `DONE: ${s.results.length} captured.`);
+    const s = await get(); if (!s.running || stopFlag) return render(s);
+    if (blocked()) return stopped(s, "STOPPED: the site is asking for a human check. Solve it in the tab, then press Resume.");
+    const job = s.queue[s.idx]; if (!job) return stopped(s, `DONE: ${s.results.length} captured.`);
     const k = kind(job), key = doneKey(job);
-    if (s.done[key] && s.done[key].schema === SCHEMA && !s.force) { s.idx++; s.tab = 0; s.plan = null; await set(s); return next(s); }      // already captured: skip
+    if (s.done[key] && s.done[key].schema === SCHEMA) { await advance(s); return goNext(s, false); }                       // already captured: skip, no waiting
     const here = clean(location.href), target = k === "match" ? matchId(job) : clean(job);
-    const onTarget = k === "match" ? matchId(here) === target : here === clean(job) || (k !== "match" && here.split("?")[0] === clean(job).split("?")[0]);
-    if (!onTarget) { await log(s, `open ${s.idx + 1}/${s.queue.length} [${k}]`); await sleep(rnd(DELAY)); location.assign(k === "match" ? tabUrl(job, TABS.score) : job); return; }
-    await sleep(rnd(DELAY));
-    if (notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; s.idx++; s.tab = 0; s.plan = null; await log(s, "  page not found: skipped"); return next(s); }
+    const onTarget = k === "match" ? matchId(here) === target : here.split("?")[0] === clean(job).split("?")[0];
+    s.now = label(job); render(s);
+    if (!onTarget) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; location.assign(k === "match" ? tabUrl(job, TABS.score) : job); return; }
+    if (!(await wait(rnd(DELAY)))) return;
+    if (notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
 
     if (k === "list" || k === "series") {                                              // collect the next level down
-      for (let i = 0; i < 4; i++) { window.scrollTo(0, document.body.scrollHeight); await sleep(1200); }
-      const ls = links(); const sub = ls.filter((x) => k === "list" ? x.kind === "series" : x.kind === "match");
-      const n = enqueue(s, sub, true); await savePage();
-      s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, found: sub.length }; s.idx++; s.tab = 0;
-      await log(s, `  ${k}: ${sub.length} links, ${n} new queued`); return next(s);
+      for (let i = 0; i < 4 && !stopFlag; i++) { window.scrollTo(0, document.body.scrollHeight); await sleep(1200); }
+      if (stopFlag) return;
+      const sub = links().filter((x) => k === "list" ? x.kind === "series" : x.kind === "match"); const n = enqueue(s, sub, true);
+      if (s.saveLists) await savePage(k);
+      s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, found: sub.length };
+      await log(s, `  ${k}: ${sub.length} links found, ${n} new queued`); await advance(s); return goNext(s);
     }
     if (k === "page") {
-      const n = await savePage(); s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, tables: n }; s.results.push({ id: key }); s.idx++;
-      await log(s, `  SAVED page (${n} tables)`); return next(s);
+      const n = await savePage("page"); if (stopFlag) return; s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, tables: n }; s.results.push({ id: key });
+      await log(s, `  saved page (${n} tables)`); await advance(s); return goNext(s);
     }
     // ---- a match
-    const T = window.__ttm; if (!T) { await sleep(2500); return step(); }
+    const T = window.__ttm; if (!T) { if (!(await wait(2500))) return; return step(); }
     if (!s.plan) s.plan = Object.keys(TABS);                                           // scorecard first, then the rest, decided by what the match has
-    const name = s.plan[s.tab || 0]; await log(s, `match ${target}: ${name}`);
+    const name = s.plan[s.tab || 0]; s.now = `match ${target} · ${TAB_LABEL[name] || name} (${(s.tab || 0) + 1}/${s.plan.length})`; await log(s, `match ${target}: ${TAB_LABEL[name] || name}`);
+    const mt0 = T.meta();
+    if (mt0 && mt0.state && mt0.state !== "POST") { await log(s, `  match is ${mt0.state === "PRE" ? "upcoming" : "not finished"}: skipped, nothing saved`); await advance(s); return goNext(s); }
     if (name === "comm") {
-      const mt = T.meta(); if (mt && mt.hasCommentary === false) await log(s, "  no ball-by-ball for this match: skipped");
+      if (mt0 && mt0.hasCommentary === false) await log(s, "  no ball-by-ball for this match: skipped");
       else { let n = await T.loadAll();
         const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
-        for (const b of inn.slice(0, 3)) { b.click(); await sleep(2500); n = await T.loadAll(); } await log(s, `  ${n} balls so far`); }
-    } else { await sleep(2500); T.grabText(); T.save(); }
-    if ((s.tab || 0) + 1 < s.plan.length) { s.tab = (s.tab || 0) + 1; await set(s); await sleep(rnd(DELAY)); location.assign(tabUrl(job, TABS[s.plan[s.tab]])); return; }
-    const mt = T.meta() || {}; const balls = T.saveJson();
+        for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); } await log(s, `  ${n} balls so far`); }
+    } else { if (!(await wait(2500))) return; T.grabText(); T.save(); }
+    if (stopFlag) return;
+    if ((s.tab || 0) + 1 < s.plan.length) { s.tab = (s.tab || 0) + 1; await set(s); if (!(await wait(rnd(DELAY)))) return; location.assign(tabUrl(job, TABS[s.plan[s.tab]])); return; }
+    const mt = T.meta() || {}; const balls = T.saveJson();                             // one json per match
     s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, state: mt.state || null, hasMatchPlayers: !!mt.hasMatchPlayers };
-    s.results.push({ id: key, balls }); s.idx++; s.tab = 0; s.plan = null;
-    await log(s, `  SAVED ${target}: ${balls} balls${mt.hasCommentary && balls < 150 ? "  (LOW: check the commentary loaded)" : ""}${mt.state && mt.state !== "POST" ? "  (match not finished: will be re-done later)" : ""}`);
-    if (mt.state && mt.state !== "POST") delete s.done[key];                           // live / incomplete matches are never marked done
-    return next(s);
+    s.results.push({ id: key, balls });
+    await log(s, `  SAVED match ${target}: ${balls} balls${mt.hasCommentary && balls < 150 ? "  (LOW: check the commentary loaded)" : ""}`);
+    await advance(s); return goNext(s);
   };
 
-  // ---------- panel
+  // ---------- panel (dark card, light text everywhere: nothing white-on-white)
+  const C = { bg: "#0f172a", card: "#1e293b", line: "#334155", text: "#e2e8f0", mute: "#94a3b8", green: "#16a34a", red: "#dc2626", amber: "#d97706", blue: "#3b82f6" };
   const box = document.createElement("div");
-  box.style.cssText = "position:fixed;left:16px;bottom:16px;z-index:2147483647;background:#101a33;color:#fff;font:12px/1.4 system-ui,sans-serif;padding:10px 12px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.35);width:290px";
-  const btn = (id, label, bg = "#2a3b6b") => `<button id="${id}" style="flex:1;background:${bg};color:#fff;border:0;border-radius:6px;padding:5px;cursor:pointer">${label}</button>`;
-  box.innerHTML = `<div style="font-weight:700;margin-bottom:4px">Third Man batch <span id="tb-n" style="opacity:.6;font-weight:400"></span></div>
-    <textarea id="tb-q" rows="3" placeholder="links, one per line: matches, series, a team's season view, player stats pages" style="width:100%;box-sizing:border-box;font:11px monospace"></textarea>
-    <div style="display:flex;gap:4px;margin:4px 0">${btn("tb-go", "Start", "#e63946")}${btn("tb-stop", "Stop")}${btn("tb-add", "Queue links on this page")}</div>
-    <div style="display:flex;gap:4px;margin-bottom:4px">${btn("tb-page", "Save this page")}${btn("tb-known", "Import known ids")}${btn("tb-reset", "Forget done")}</div>
-    <label style="opacity:.8">max per run <input id="tb-max" type="number" value="${MAX_DEFAULT}" min="1" max="100" style="width:44px"></label>
-    <label style="opacity:.8;margin-left:6px">from year <input id="tb-since" type="number" value="0" style="width:52px"></label>
-    <pre id="tb-log" style="max-height:120px;overflow:auto;margin:6px 0 0;font-size:10px;white-space:pre-wrap;opacity:.85"></pre>`;
-  const render = (s) => { const l = box.querySelector("#tb-log"); if (l) { l.textContent = (s.log || []).slice(-14).join("\n"); l.scrollTop = 1e9; }
-    const n = box.querySelector("#tb-n"); if (n) n.textContent = `${Object.keys(s.done || {}).length} done · ${Math.max(0, (s.queue || []).length - (s.idx || 0))} queued`; };
+  box.style.cssText = `position:fixed;left:16px;bottom:16px;z-index:2147483647;background:${C.bg};color:${C.text};font:13px/1.45 system-ui,sans-serif;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.45);width:330px;border:1px solid ${C.line}`;
+  const B = (id, text, bg, extra = "") => `<button id="${id}" style="background:${bg};color:#fff;border:0;border-radius:8px;padding:8px 10px;font:600 13px system-ui;cursor:pointer;${extra}">${text}</button>`;
+  const INP = `background:${C.card};color:${C.text};border:1px solid ${C.line};border-radius:6px;padding:4px 6px;font:13px system-ui`;
+  box.innerHTML = `
+    <div id="tb-head" style="display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer">
+      <b style="flex:1">Third Man capture</b><span id="tb-chip" style="font:700 11px system-ui;padding:2px 8px;border-radius:99px;background:${C.line}">IDLE</span><span id="tb-min" style="color:${C.mute}">–</span></div>
+    <div id="tb-body" style="padding:0 12px 12px">
+      <div id="tb-now" style="color:${C.mute};font-size:12px;min-height:18px;margin-bottom:4px"></div>
+      <div style="height:8px;background:${C.card};border-radius:99px;overflow:hidden"><div id="tb-bar" style="height:100%;width:0;background:${C.green};transition:width .3s"></div></div>
+      <div id="tb-stats" style="display:flex;justify-content:space-between;color:${C.mute};font-size:12px;margin:5px 0 10px"></div>
+      <div style="font-weight:600;margin-bottom:3px">Links to capture <span id="tb-count" style="color:${C.mute};font-weight:400"></span></div>
+      <textarea id="tb-q" rows="4" spellcheck="false" placeholder="Paste links here, one per line:&#10;• match pages&#10;• a series page&#10;• a team's season / results list&#10;• a player's stats page" style="width:100%;box-sizing:border-box;${INP};font:11px ui-monospace,monospace;resize:vertical"></textarea>
+      <div style="display:flex;gap:6px;margin:8px 0 6px">${B("tb-go", "▶ Start", C.green, "flex:2")}${B("tb-stop", "■ Stop", C.red, "flex:1")}</div>
+      <div style="display:flex;gap:6px">${B("tb-add", "＋ Add links from this page", C.card, "flex:2;border:1px solid " + C.line)}${B("tb-clear", "Clear queue", C.card, "flex:1;border:1px solid " + C.line)}</div>
+      <div id="tb-optt" style="margin:10px 0 4px;color:${C.mute};cursor:pointer;font-size:12px">▸ Options</div>
+      <div id="tb-opts" style="display:none;border:1px solid ${C.line};border-radius:8px;padding:8px;margin-bottom:6px">
+        <label style="display:block;margin-bottom:6px">Max matches per run <input id="tb-max" type="number" min="1" max="100" style="width:56px;${INP}"></label>
+        <label style="display:block;margin-bottom:6px">Only from year <input id="tb-since" type="number" style="width:70px;${INP}"> <span style="color:${C.mute}">(0 = all)</span></label>
+        <label style="display:block;margin-bottom:8px"><input id="tb-lists" type="checkbox"> also save series / list pages (for audits)</label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">${B("tb-page", "Save this page", C.card, "border:1px solid " + C.line)}${B("tb-known", "Import known ids", C.card, "border:1px solid " + C.line)}${B("tb-reset", "Forget done", C.card, "border:1px solid " + C.red + ";color:#fca5a5")}</div></div>
+      <div id="tb-logt" style="margin:8px 0 4px;color:${C.mute};cursor:pointer;font-size:12px">▾ Activity</div>
+      <pre id="tb-log" style="height:130px;overflow:auto;margin:0;padding:6px 8px;background:${C.card};border-radius:8px;font:11px/1.45 ui-monospace,monospace;white-space:pre-wrap;color:${C.text}"></pre>
+      <div style="display:flex;justify-content:space-between;margin-top:4px"><span style="color:${C.mute};font-size:11px">One .json file is downloaded per match.</span><a id="tb-clog" href="#" style="color:${C.mute};font-size:11px">clear log</a></div>
+    </div>`;
+  const $ = (id) => box.querySelector("#" + id);
+  const lines = (t) => t.split(/\s+/).filter((x) => /^https?:/.test(x));
+  const render = (s) => {
+    const left = Math.max(0, s.queue.length - s.idx), done = Object.keys(s.done || {}).length, ran = (s.results || []).length;
+    const chip = $("tb-chip"); chip.textContent = s.running ? "RUNNING" : left ? "STOPPED" : "IDLE"; chip.style.background = s.running ? C.green : left ? C.amber : C.line;
+    $("tb-go").textContent = s.running ? "● Running…" : (s.started && left ? "▶ Resume" : "▶ Start"); $("tb-go").disabled = s.running; $("tb-go").style.opacity = s.running ? .6 : 1;
+    $("tb-stop").disabled = !s.running; $("tb-stop").style.opacity = s.running ? 1 : .45;
+    $("tb-now").textContent = s.now ? (s.running ? "Now: " : "") + s.now : (s.running ? "Starting…" : "Not running");
+    const total = s.queue.length || 1; $("tb-bar").style.width = Math.min(100, Math.round(100 * (s.queue.length ? s.idx / total : 0))) + "%";
+    $("tb-stats").innerHTML = `<span>Queue: <b style="color:${C.text}">${left}</b> left of ${s.queue.length}</span><span>This run: <b style="color:${C.text}">${ran}</b>/${s.max}</span><span>Done ever: <b style="color:${C.text}">${done}</b></span>`;
+    $("tb-count").textContent = `(${lines($("tb-q").value).length} links)`;
+    const l = $("tb-log"); l.textContent = (s.log || []).slice(-60).join("\n"); l.scrollTop = 1e9;
+    $("tb-body").style.display = s.ui.min ? "none" : "block"; $("tb-min").textContent = s.ui.min ? "+" : "–"; $("tb-opts").style.display = s.ui.opts ? "block" : "none"; $("tb-optt").textContent = (s.ui.opts ? "▾" : "▸") + " Options";
+    l.style.display = s.ui.log ? "block" : "none"; $("tb-logt").textContent = (s.ui.log ? "▾" : "▸") + " Activity";
+  };
   const start = async () => {
-    document.body.appendChild(box); const s = await get(); box.querySelector("#tb-q").value = s.queue.slice(s.idx).join("\n"); box.querySelector("#tb-max").value = s.max; box.querySelector("#tb-since").value = s.since || 0; render(s);
-    const q = () => box.querySelector("#tb-q");
-    box.querySelector("#tb-go").onclick = async () => {
-      const t = await get(); const typed = q().value.split(/\s+/).filter((x) => /^https?:/.test(x));
-      Object.assign(t, { queue: typed, idx: 0, tab: 0, plan: null, running: typed.length > 0, results: [], max: Math.min(100, +box.querySelector("#tb-max").value || MAX_DEFAULT), since: +box.querySelector("#tb-since").value || 0, force: false });
-      await log(t, `START: ${typed.length} queued, cap ${t.max}${t.since ? ", from " + t.since : ""}`); step();
+    document.body.appendChild(box); let s = await get();
+    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; render(s);
+    $("tb-q").oninput = () => render(s);
+    const ui = async (k) => { s = await get(); s.ui[k] = !s.ui[k]; await set(s); render(s); };
+    $("tb-head").onclick = () => ui("min"); $("tb-optt").onclick = () => ui("opts"); $("tb-logt").onclick = () => ui("log");
+    $("tb-go").onclick = async () => {
+      s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
+      const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
+      const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
+      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked });
+      if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }
+      await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run`); step();
     };
-    box.querySelector("#tb-stop").onclick = async () => { const t = await get(); t.running = false; await log(t, "stopped by you"); };
-    box.querySelector("#tb-add").onclick = async () => { const t = await get(); const ls = links(); q().value = [...new Set(q().value.split(/\s+/).filter(Boolean).concat(ls.map((x) => x.url)))].join("\n"); await log(t, `added ${ls.length} links from this page`); };
-    box.querySelector("#tb-page").onclick = async () => { const n = await savePage(); const t = await get(); await log(t, `saved this page (${n} tables)`); };
-    box.querySelector("#tb-known").onclick = async () => {                                    // ids already held by the repo: python3 -m dataops.store known
-      const txt = prompt("Paste the JSON from `python3 -m dataops.store known`"); if (!txt) return; const t = await get();
-      try { const j = JSON.parse(txt); let n = 0; for (const [site, ids] of Object.entries(j)) for (const id of ids) { t.done[`${site}:${id}`] = { at: "repo", schema: SCHEMA }; n++; } await log(t, `imported ${n} known ids`); } catch (e) { alert("not valid JSON"); } };
-    box.querySelector("#tb-reset").onclick = async () => { if (!confirm("Forget which matches are done in this browser? (the repo's own index is unaffected)")) return; const t = await get(); t.done = {}; await log(t, "done-list cleared"); };
-    if (s.running) step();                                                                  // resume after a page load
+    $("tb-stop").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); s.running = false; s.now = ""; await log(s, `Stopped. ${Math.max(0, s.queue.length - s.idx)} still queued: press Resume to continue, or Clear queue.`); };
+    $("tb-clear").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); Object.assign(s, { running: false, started: false, queue: [], idx: 0, tab: 0, plan: null, now: "", results: [] }); $("tb-q").value = ""; await log(s, "Queue cleared."); };
+    $("tb-add").onclick = async () => { s = await get(); const ls = links(); const cur = lines($("tb-q").value); const all = [...new Set(cur.concat(ls.map((x) => x.url)))]; $("tb-q").value = all.join("\n"); await log(s, `Added ${all.length - cur.length} new links from this page (${ls.length} found).`); render(s); };
+    $("tb-page").onclick = async () => { const n = await savePage("page"); s = await get(); await log(s, `Saved this page (${n} tables).`); };
+    $("tb-known").onclick = async () => { const txt = prompt("Paste the JSON printed by `python3 -m dataops.store known`"); if (!txt) return; s = await get();
+      try { const j = JSON.parse(txt); let n = 0; for (const [site, ids] of Object.entries(j)) for (const id of ids) { s.done[`${site}:${id}`] = { at: "repo", schema: SCHEMA }; n++; } await log(s, `Imported ${n} ids we already hold: they will be skipped.`); } catch (e) { alert("That is not valid JSON."); } };
+    $("tb-reset").onclick = async () => { if (!confirm("Forget which matches are done in this browser? (the repo's own index is not affected)")) return; s = await get(); s.done = {}; await log(s, "Done-list cleared."); };
+    $("tb-clog").onclick = async (e) => { e.preventDefault(); s = await get(); s.log = []; await set(s); render(s); };
+    if (s.running) { stopFlag = false; step(); }                                                    // resume after a page load
   };
   if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
 })();

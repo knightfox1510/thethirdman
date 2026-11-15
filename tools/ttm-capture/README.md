@@ -27,7 +27,9 @@ Tip: stay in one browser tab per match; the capture is kept while you move betwe
 Use the numbers for our own analysis and our own graphics. Do not copy Cricinfo's commentary text, charts or images into videos, and cross-check headline figures with the official scorecard (BCCI / NZC). Credit "ball-by-ball data: ESPNcricinfo" in the description sources.
 
 
-## Batch and crawl mode (v1.3)
+## Batch and crawl mode (v1.4)
+Panel layout: a status chip (IDLE / RUNNING / STOPPED), what it is doing now, a progress bar (queue position), counts (queue left, this run, done ever), your link list, **Start / Resume** and **Stop**, **Add links from this page** and **Clear queue**, a collapsible Options box (max per run, from year, also save series/list pages, Save this page, Import known ids, Forget done) and an Activity log. **Stop is immediate** (it cancels the pending wait and navigation); **Clear queue** stops and empties the list. One .json file is downloaded per match (series / list pages are only saved if you tick the option). Upcoming and live matches are skipped and nothing is saved for them. Text is light on dark everywhere.
+
 A second panel (bottom-left, "Third Man batch") works through a queue of links in your own tab at a human pace (random 4-25 s pauses, cap per run, never parallel). It recognises each link:
 - **Match:** opens the scorecard, **playing XI** (squad / bench / roles when the site has them), ball-by-ball commentary (skipped for old matches that have none) and statistics, and downloads one `cricinfo_<id>_<match>.json`.
 - **Series page:** collects the match links on it (fixtures and results) and queues the ones not yet captured.
