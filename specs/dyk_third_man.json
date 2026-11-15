@@ -878,7 +878,7 @@
     "type": "plate",
     "plate": "II",
     "title": "His job",
-    "sub": "to stop what gets past the slips",
+    "sub": "stop what beats the slips",
     "figures": [
      {
       "p": "keeper",
@@ -921,8 +921,37 @@
      }
     ],
     "note": [
-     "saves the boundary",
-     "the slips could not"
+     "the last line of defence"
+    ]
+   }
+  },
+  {
+   "vo": "And who is he? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he gets a moment to recover.",
+   "scene": {
+    "type": "plate",
+    "plate": "III",
+    "title": "Who stands there?",
+    "sub": "often a fast bowler, between his overs",
+    "figures": [
+     {
+      "p": "bowler",
+      "fig": null,
+      "xy": [
+       0.06,
+       -0.42
+      ]
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man (a bowler resting)",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "the quiet corner of the field"
     ]
    }
   },
@@ -1246,6 +1275,7 @@
    }
   }
  },
+ "reel_caption": "Why is it called third man?\nDid You Know Ep 1\n\nThe fielder far behind the wicket has a name nobody can explain. Four popular theories, none with a source, and one printed clue from 1884. Which one do you believe? Tell us in the comments.\n\nFull breakdown on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\n#ThirdMan #DidYouKnow #ThirdManCricket #WhyIsItCalledThirdMan #FieldingPositions #CricketExplained #cricket #cricketanalysis #TheThirdMan",
  "yt": {
   "long": {
    "title": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1",

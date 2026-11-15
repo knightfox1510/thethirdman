@@ -79,7 +79,7 @@ def igreel(spec_path):
     for f in os.listdir(src):
         if f.startswith(base) and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
     shutil.rmtree(src, ignore_errors=True)
-    cap = caption_text(spec).replace("Full breakdown on YouTube", "Full breakdown on YouTube")
+    cap = spec.get("reel_caption") or caption_text(spec)   # a spec may carry its own Reel caption when the Reel covers different ground than the Short
     open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(cap)
     print("IG reel:", f"{dst}/{base}.mp4")
 

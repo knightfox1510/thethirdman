@@ -101,7 +101,8 @@ def L(i, **over):
     sc = json.loads(json.dumps(long[i])); sc.update(over); return sc
 reel = [
  L(0, vo="Third man. Picture the field from above. The bowler is at the top, the batter at the bottom. Now look far behind the wicket, on the off side, near the boundary. That lonely fielder is third man."),
- L(1),
+ L(1, **{"scene": short[1]["scene"]}),
+ S(short[2]["vo"], short[2]["scene"]),
  page("So why is he called third? Not first, not second, not tenth. You will hear four explanations, and they all sound sensible. But none of them comes with a source.",
       kicker="THE NAME", title="Why \"third\"?", body="Cricket websites repeat four explanations. We looked for a document behind each of them, and did not find one.", margin="Four stories. No proof.", figures=[SL | {"fig": None}, GU | {"fig": None}, TM | {"fig": None}], stamp=["FOUR", "THEORIES"], stamp_angle=-8),
  L(5), L(6), L(7), L(8),
@@ -112,6 +113,8 @@ reel = [
       kicker="WHAT IT TELLS US", title="Already familiar", body="The 1884 text uses \"third man\" without explaining it: the name was already in use. Its origin before that is not documented in anything we could find.", margin="If you know a document, tell us.", figures=[TM | {"fig": None}], stamp=["ORIGIN", "UNKNOWN"], stamp_angle=7),
  L(13, vo="So next time the ball flies past the slips, look for him. A simple job, and a name nobody can explain."),
 ]
+reel_caption = ("Why is it called third man?\nDid You Know Ep 1\n\nThe fielder far behind the wicket has a name nobody can explain. Four popular theories, none with a source, and one printed clue from 1884. Which one do you believe? Tell us in the comments.\n\n"
+                "Full breakdown on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\n#ThirdMan #DidYouKnow #ThirdManCricket #WhyIsItCalledThirdMan #FieldingPositions #CricketExplained #cricket #cricketanalysis #TheThirdMan")
 reel_cta = {"vo": "Which of the four theories do you believe? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.", "scene": {"type": "cta", "lines": [{"t": "FULL BREAKDOWN"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE @thethirdman_angle", "bio": "LINK IN BIO"}}}
 
 SRC = ["Position and job: Wikipedia, 'Glossary of cricket terms' (third man: behind the wicket-keeper on the off side, beyond the slip and gully areas) https://en.wikipedia.org/wiki/Glossary_of_cricket_terms and 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket); SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp; cricketwriter.com, 'Third Man' https://www.cricketwriter.com/cricket-fielding-positions-third-man/.",
@@ -126,7 +129,7 @@ TAGS = ["third man", "third man cricket", "why is it called third man", "fieldin
 spec = {"slug": "dyk_third_man", "theme": "plate", "theme_long": "plate", "captions": "serif", "captions_long": False, "series": "didyouknow", "tag": "DID YOU KNOW?", "tagsub": "EP. 1 · THIRD MAN",
         "files": {"long": "x", "short": "x"},
         "thumb": {"kicker": "DID YOU KNOW? · EP. 1", "lines": [{"t": "WHY IS IT CALLED"}, {"t": "THIRD MAN?", "c": "gold"}], "hero": "?", "herosize": 420},
-        "sources": SRC, "venue": {"time": "dusk", "crowd": [[190, 235, 70], [240, 240, 240], [25, 100, 200], [20, 60, 140]], "boards": [[25, 100, 200], [190, 235, 70]]}, "long": long, "short": short, "reel": reel, "reel_cta": reel_cta,
+        "sources": SRC, "venue": {"time": "dusk", "crowd": [[190, 235, 70], [240, 240, 240], [25, 100, 200], [20, 60, 140]], "boards": [[25, 100, 200], [190, 235, 70]]}, "long": long, "short": short, "reel": reel, "reel_cta": reel_cta, "reel_caption": reel_caption,
         "yt": {"long": {"title": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1", "description": DESC_L, "tags": TAGS},
                "short": {"title": "Why Is It Called Third Man? The Unsolved Mystery | Did You Know Ep 1 #Shorts", "description": DESC_S, "tags": TAGS}}}
 c.save(spec)
