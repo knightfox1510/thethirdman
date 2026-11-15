@@ -626,6 +626,105 @@
     }
    ]
   },
+  "replay_5odi": {
+   "state": "not posted",
+   "series": "02 The Replay Room",
+   "episode": "Ep03 - India vs New Zealand 5th ODI",
+   "folder": "https://drive.google.com/drive/folders/1OYlCo9dmiUToFzsvke6tJaRqxJconmQ2",
+   "files": [
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/19yabFxwOIpzeci_hXrf26LLsBFm6UNl3/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1njzVExN4cukKUEnRUOh7_vkow-NMhcK5/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1r3ocnLeHLn93W_MkmlE4eFQWkh642F0H/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 154.9,
+     "url": "https://drive.google.com/file/d/13ikNsJsu1RExDwkkAwGIaMTvEGx-fpyp/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Reel_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1HF5sDIs70242JazL73LUPnb0K5KoHvpq/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Reel_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1c1O1hNSi0NttZBIGGy-YGeEKLR-BPmYW/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Reel_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 273.3,
+     "url": "https://drive.google.com/file/d/11URa612dYxd76_U1I1riB8agAPKjmLU8/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1muRQ67h_T61I4CWA3arCBb0R7Rph3gGc/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1BTljVc2nsnX4-wajeF2thRFQNO-CPiYk/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 155.1,
+     "url": "https://drive.google.com/file/d/19WOa2qNKCy0Xm1CZw_3Hz18l_-MAWCbi/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/13dU1vG5o2ikRP1gGex4itov9sUsxI0k2/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1ODP94iKHnHJU0sG7NvqiPBDZNjLbuYFL/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 10.6,
+     "url": "https://drive.google.com/file/d/1jARPGssCXkeOARL7rESRFFjxy4X6LHQl/view?usp=drivesdk"
+    }
+   ]
+  },
   "santner_problem": {
    "state": "not posted",
    "series": "03 Tactics Board",
@@ -2418,6 +2517,105 @@
     }
    ]
   },
+  "data_nz_ind_series": {
+   "state": "not posted",
+   "series": "09 Data Stories",
+   "episode": "Ep12 - India vs New Zealand ODI Series 2026",
+   "folder": "https://drive.google.com/drive/folders/1ntnwytDBnCXN8qFdOwSOT9zgnDI6igW5",
+   "files": [
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1LZP0YvVAo_ECkys9qvYVx5xjRNOC7_Rm/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1V6gGa1MqoLwMYlEn2YqWTbGPhrxmF2po/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1ZIKk27i_jbg8T-14Vf_h63LGG5ZfSXxa/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 106.7,
+     "url": "https://drive.google.com/file/d/1aJTcgcWfhSURtkzPMtNEeRM9aD__870d/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Reel_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1kHPPi7cZ9d_cpKVLIHRpZ-i1nUl2trba/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Reel_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1io619ghdc3Vs5sIeKTkcjVLww0LcBTqP/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Reel_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 183.0,
+     "url": "https://drive.google.com/file/d/1NsVtzXeWAJGtQNjYOzn1F91fqW3usyQ2/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/12cxdnO895lmHlQZTNcxBthom4upB1wnJ/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1O-oU4ok8R1rN3hy5VzILTPH_wlJTcebp/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 108.4,
+     "url": "https://drive.google.com/file/d/1PxppOszAbpXdq5L8b7M1t9MTEVNP5r-o/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1N5_I1gjmHdxxk1gescjRuBJJMsAid1Lw/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1SOMaXfE-zJD_0wTXaV8WiH7RTtKs7I5s/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 8.6,
+     "url": "https://drive.google.com/file/d/1HQqPcuf_9ZprGS6wopyd_dIzUtZSCc5w/view?usp=drivesdk"
+    }
+   ]
+  },
   "channel_trailer": {
    "state": "posted",
    "series": "10 Channel",
@@ -2662,7 +2860,8 @@
     "replay_4odi_young",
     "replay_4odi_dots",
     "henry_6balls",
-    "replay_u19_final"
+    "replay_u19_final",
+    "replay_5odi"
    ]
   },
   "03 Tactics Board": {
@@ -2725,7 +2924,8 @@
     "rcb_back_to_back",
     "hardik_arshdeep",
     "kohli_2000_nz",
-    "gambhir_player_coach"
+    "gambhir_player_coach",
+    "data_nz_ind_series"
    ]
   },
   "10 Channel": {

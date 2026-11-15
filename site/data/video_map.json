@@ -82,5 +82,23 @@
   "kind": "short",
   "title": "myth_ep2_kohli_reinvention",
   "format": "news"
+ },
+ "PZJsdDzMROQ": {
+  "slug": "myth_ep3_aaryavir",
+  "kind": "long",
+  "title": "myth_ep3_aaryavir",
+  "format": "news"
+ },
+ "ENh6XkG-z9g": {
+  "slug": "myth_ep3_aaryavir",
+  "kind": "short",
+  "title": "myth_ep3_aaryavir",
+  "format": "news"
+ },
+ "iis64YP-g-o": {
+  "slug": "flip_abhishek_openers",
+  "kind": "short",
+  "title": "Flip: Abhishek vs the world's T20I openers",
+  "format": "flip"
  }
 }

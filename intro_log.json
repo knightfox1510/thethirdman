@@ -60,7 +60,13 @@
   "kinetic",
   "fieldmap",
   "stumps",
-  "flip"
+  "flip",
+  "kinetic",
+  "fieldmap",
+  "stumps",
+  "flip",
+  "kinetic",
+  "fieldmap"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -123,6 +129,12 @@
   "dyk_fielding_positions__igshort": "kinetic",
   "dyk_third_man": "fieldmap",
   "dyk_third_man__igshort": "stumps",
-  "dyk_third_man__iglong": "flip"
+  "dyk_third_man__iglong": "flip",
+  "replay_5odi": "kinetic",
+  "data_nz_ind_series": "fieldmap",
+  "data_nz_ind_series__igshort": "stumps",
+  "replay_5odi__igshort": "flip",
+  "replay_5odi__igreel": "kinetic",
+  "data_nz_ind_series__igreel": "fieldmap"
  }
 }
