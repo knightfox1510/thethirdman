@@ -1,4 +1,4 @@
-// Batch + crawl mode (v1.4): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Batch + crawl mode (v1.4.1): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
 // Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
 // a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
 // Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
@@ -34,10 +34,18 @@
   const yearOf = (t) => { const m = (t || "").match(/\b(19\d\d|20\d\d)\b/); return m ? +m[1] : 0; };
   const log = async (s, msg) => { s.log.push(new Date().toISOString().slice(11, 19) + " " + msg); s.log = s.log.slice(-120); await set(s); render(s); };
 
-  const links = () => {                                                  // every match / series link on the page, with its row text
-    const out = new Map();
-    for (const a of document.querySelectorAll("a[href]")) {
+  // Links are collected from the page's MAIN content only, never from the header, menus, side panels or "recent / live / trending matches" widgets, and, for a series page, only matches of THAT series.
+  const WIDGET = "header, nav, aside, footer, [role=navigation], [class*=trending], [class*=Trending], [class*=recent], [class*=Recent], [class*=live-match], [class*=LiveMatch], [class*=carousel], [class*=Carousel], [class*=ticker], [class*=Ticker], [class*=sidebar], [class*=Sidebar], [class*=related], [class*=Related], [class*=upcoming], [class*=Upcoming], [class*=latest], [class*=Latest], [class*=news], [class*=News], [class*=widget], [class*=Widget], [class*=menu], [class*=Menu]";
+  const seriesSeg = (u) => { try { const p = new URL(u, location.href).pathname; return SITE === "cricinfo" ? (p.match(/\/series\/([^/]+-\d+)/) || [])[1] || null : (p.match(/\/cricket-series\/(\d+)\/([^/]+)/) || []).slice(1).join("/") || null; } catch (e) { return null; } };
+  const links = (scope) => {                                             // scope: a series page url (or null for a list page / "add links" button)
+    const root = document.querySelector("main") || document.querySelector("[role=main]") || document.body; const seg = scope ? seriesSeg(scope) : null; const out = new Map();
+    for (const a of root.querySelectorAll("a[href]")) {
+      if (a.closest(WIDGET)) continue;                                   // sidebar / menu / recent-matches widgets
       const h = clean(a.href); const k = kind(h); if (k !== "match" && k !== "series") continue;
+      if (seg && k === "match") {                                        // a series page: only its own matches
+        if (SITE === "cricinfo" && !new URL(h).pathname.includes("/series/" + seg + "/")) continue;
+        if (SITE === "cricbuzz") { const slug = (seg.split("/")[1] || ""), ms = (new URL(h).pathname.split("/").pop() || ""); if (slug && !ms.endsWith(slug.replace(/-\d+$/, "")) && !ms.includes(slug.replace(/-\d{4}$/, ""))) continue; }
+      }
       const id = k === "match" ? matchId(h) : h; const row = a.closest("tr, li, div[class*=match], div[class*=card]") || a.parentElement;
       if (!out.has(k + id)) out.set(k + id, { kind: k, id, url: h, text: ((row ? row.innerText || row.textContent : a.innerText || a.textContent) || "").replace(/\s+/g, " ").trim().slice(0, 300) });
     } return [...out.values()];
@@ -81,14 +89,17 @@
     const here = clean(location.href), target = k === "match" ? matchId(job) : clean(job);
     const onTarget = k === "match" ? matchId(here) === target : here.split("?")[0] === clean(job).split("?")[0];
     s.now = label(job); render(s);
-    if (!onTarget) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; location.assign(k === "match" ? tabUrl(job, TABS.score) : job); return; }
+    const go = k === "match" ? tabUrl(job, TABS.score) : (k === "series" && SITE === "cricinfo" && !/match-schedule-fixtures-and-results|match-results/.test(job) && seriesSeg(job) ? `${new URL(job).origin}/series/${seriesSeg(job)}/match-schedule-fixtures-and-results` : job);
+    if (!onTarget && !(k === "series" && clean(location.href).split("?")[0] === clean(go).split("?")[0])) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; location.assign(go); return; }
     if (!(await wait(rnd(DELAY)))) return;
     if (notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
 
     if (k === "list" || k === "series") {                                              // collect the next level down
       for (let i = 0; i < 4 && !stopFlag; i++) { window.scrollTo(0, document.body.scrollHeight); await sleep(1200); }
       if (stopFlag) return;
-      const sub = links().filter((x) => k === "list" ? x.kind === "series" : x.kind === "match"); const n = enqueue(s, sub, true);
+      const sub = links(k === "series" ? job : null).filter((x) => k === "list" ? x.kind === "series" : x.kind === "match");
+      if (sub.length > 150) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, refused: sub.length }; await log(s, `  ${k}: ${sub.length} links found, far more than expected: not queued (the page layout may have changed). Add this ${k}'s links by hand.`); await advance(s); return goNext(s); }
+      const n = enqueue(s, sub, true); if (sub.length) await log(s, `  e.g. ${sub.slice(0, 2).map((x) => (x.text || x.id).slice(0, 50)).join(" | ")}`);
       if (s.saveLists) await savePage(k);
       s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, found: sub.length };
       await log(s, `  ${k}: ${sub.length} links found, ${n} new queued`); await advance(s); return goNext(s);
@@ -176,7 +187,7 @@
     };
     $("tb-stop").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); s.running = false; s.now = ""; await log(s, `Stopped. ${Math.max(0, s.queue.length - s.idx)} still queued: press Resume to continue, or Clear queue.`); };
     $("tb-clear").onclick = async () => { stopFlag = true; window.__ttmStop = true; s = await get(); Object.assign(s, { running: false, started: false, queue: [], idx: 0, tab: 0, plan: null, now: "", results: [] }); $("tb-q").value = ""; await log(s, "Queue cleared."); };
-    $("tb-add").onclick = async () => { s = await get(); const ls = links(); const cur = lines($("tb-q").value); const all = [...new Set(cur.concat(ls.map((x) => x.url)))]; $("tb-q").value = all.join("\n"); await log(s, `Added ${all.length - cur.length} new links from this page (${ls.length} found).`); render(s); };
+    $("tb-add").onclick = async () => { s = await get(); const ls = links(isSeries(location.href) ? location.href : null); const cur = lines($("tb-q").value); const all = [...new Set(cur.concat(ls.map((x) => x.url)))]; $("tb-q").value = all.join("\n"); await log(s, `Added ${all.length - cur.length} new links from this page (${ls.length} found).`); render(s); };
     $("tb-page").onclick = async () => { const n = await savePage("page"); s = await get(); await log(s, `Saved this page (${n} tables).`); };
     $("tb-known").onclick = async () => { const txt = prompt("Paste the JSON printed by `python3 -m dataops.store known`"); if (!txt) return; s = await get();
       try { const j = JSON.parse(txt); let n = 0; for (const [site, ids] of Object.entries(j)) for (const id of ids) { s.done[`${site}:${id}`] = { at: "repo", schema: SCHEMA }; n++; } await log(s, `Imported ${n} ids we already hold: they will be skipped.`); } catch (e) { alert("That is not valid JSON."); } };
