@@ -6,7 +6,7 @@ Three layers stop the same data being captured twice: (1) the extension remember
 keeps one file per match id (by content hash, replacing it only with a MORE complete capture)."""
 import glob, hashlib, json, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-INDEX = f"{ROOT}/data/capture_index.json"; SCHEMA = 3
+INDEX = f"{ROOT}/data/capture_index.json"; SCHEMA = 4
 
 
 def describe(path):

@@ -1,11 +1,11 @@
-// Batch + crawl mode (v1.4.1): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Batch + crawl mode (v1.5): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
 // Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
 // a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
 // Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
 // Upcoming and live matches are skipped (nothing is saved for them). Stop is immediate (it cancels the pending wait / navigation), Clear queue empties the list.
 (() => {
   const SITE = /cricbuzz/.test(location.hostname) ? "cricbuzz" : "cricinfo";
-  const SCHEMA = 3;                                                     // bump when the capture gains new tabs/fields: older captures are then re-done once
+  const SCHEMA = 4;                                                     // bump when the capture gains new tabs/fields: older captures are then re-done once
   const TABS = SITE === "cricinfo"
     ? { score: "full-scorecard", xi: "match-playing-xi", comm: "ball-by-ball-commentary", stats: "match-statistics" }
     : { score: "live-cricket-scorecard", comm: "live-cricket-full-commentary" };       // tab slugs: adjust here if a site renames them
@@ -20,14 +20,14 @@
   const set = (s) => new Promise((r) => chrome.storage.local.set({ ttm_batch: s }, r));
   const clean = (u) => String(u).split("#")[0];
   const matchId = (u) => { try { const x = new URL(u, location.href); const p = x.pathname;
-    if (SITE === "cricinfo") { if (/\/series\/[^/]+\/[^/]+-\d+(\/|$)/.test(p)) return (p.match(/\/series\/[^/]+\/[^/]+-(\d+)/) || [])[1]; const o = p.match(/\/(?:ci\/engine\/)?match\/(\d+)\.html/); return o ? o[1] : null; }
+    if (SITE === "cricinfo") { if (/^\/series\/[^/]+-\d+\/[^/]+-\d+(\/|$)/.test(p)) return (p.match(/^\/series\/[^/]+-\d+\/[^/]+-(\d+)/) || [])[1]; const o = p.match(/\/(?:ci\/engine\/)?match\/(\d+)\.html/); return o ? o[1] : null; }
     return (p.match(/\/(?:live-cricket-[a-z-]+|cricket-scores?)\/(\d{4,})\//) || [])[1] || null; } catch (e) { return null; } };
   const isSeries = (u) => { try { const p = new URL(u, location.href).pathname; return SITE === "cricinfo" ? (/\/series\/[^/]+-\d+\/?(match-results|match-schedule-fixtures-and-results|squads)?\/?$/.test(p) || /\/ci\/engine\/series\/\d+\.html/.test(p)) && !matchId(u) : /\/cricket-series\/\d+\//.test(p); } catch (e) { return false; } };
   const kind = (u) => matchId(u) ? "match" : isSeries(u) ? "series" : /index\.html\?.*view=season|\/team\/[^/]+\/(match-results|series)|match-results|series-results/.test(u) ? "list" : "page";
   const doneKey = (u) => SITE + ":" + (matchId(u) || clean(u));
   const label = (u) => { const k = kind(u); return k === "match" ? `match ${matchId(u)}` : k === "page" ? `page ${(new URL(u, location.href).pathname.split("/").filter(Boolean).slice(-2).join("/"))}` : `${k} ${clean(u).slice(-40)}`; };
   const tabUrl = (u, name) => { const x = new URL(u, location.href);
-    if (SITE === "cricinfo") { const m = x.pathname.match(/^(\/series\/[^/]+\/[^/]+-\d+)/); return m ? `${x.origin}${m[1]}/${name}` : u; }
+    if (SITE === "cricinfo") { const m = x.pathname.match(/^(\/series\/[^/]+-\d+\/[^/]+-\d+)/); return m ? `${x.origin}${m[1]}/${name}` : u; }
     const m = x.pathname.match(/^\/[a-z-]+\/(\d{4,})\/([^/?#]+)/); return m ? `${x.origin}/${name}/${m[1]}/${m[2]}` : u; };
   const blocked = () => /access denied|captcha|unusual traffic|are you a robot|just a moment|verify you are human/i.test(document.title + " " + (document.body ? document.body.innerText.slice(0, 600) : ""));
   const notFound = () => /page not found|404|can't find|couldn't find/i.test(document.title);
@@ -37,15 +37,17 @@
   // Links are collected from the page's MAIN content only, never from the header, menus, side panels or "recent / live / trending matches" widgets, and, for a series page, only matches of THAT series.
   const WIDGET = "header, nav, aside, footer, [role=navigation], [class*=trending], [class*=Trending], [class*=recent], [class*=Recent], [class*=live-match], [class*=LiveMatch], [class*=carousel], [class*=Carousel], [class*=ticker], [class*=Ticker], [class*=sidebar], [class*=Sidebar], [class*=related], [class*=Related], [class*=upcoming], [class*=Upcoming], [class*=latest], [class*=Latest], [class*=news], [class*=News], [class*=widget], [class*=Widget], [class*=menu], [class*=Menu]";
   const seriesSeg = (u) => { try { const p = new URL(u, location.href).pathname; return SITE === "cricinfo" ? (p.match(/\/series\/([^/]+-\d+)/) || [])[1] || null : (p.match(/\/cricket-series\/(\d+)\/([^/]+)/) || []).slice(1).join("/") || null; } catch (e) { return null; } };
+  const structured = () => {                                             // Cricinfo: props.appPageProps.data.content.matches is the series' own list; props.editionDetails.trendingMatches is the unrelated sidebar
+    try { const nd = JSON.parse(document.getElementById("__NEXT_DATA__").textContent); const ms = nd.props.appPageProps.data.content.matches; if (!Array.isArray(ms)) return null;
+      return ms.filter((m) => m && m.slug && m.objectId && m.series && m.series.slug).map((m) => ({ kind: "match", id: String(m.objectId), url: `${location.origin}/series/${m.series.slug}-${m.series.objectId}/${m.slug}-${m.objectId}/full-scorecard`,
+        text: `${m.title || ""} ${m.startDate || ""} ${m.status || ""}`, year: m.startDate ? +m.startDate.slice(0, 4) : 0, state: m.state })); } catch (e) { return null; }
+  };
   const links = (scope) => {                                             // scope: a series page url (or null for a list page / "add links" button)
     const root = document.querySelector("main") || document.querySelector("[role=main]") || document.body; const seg = scope ? seriesSeg(scope) : null; const out = new Map();
     for (const a of root.querySelectorAll("a[href]")) {
       if (a.closest(WIDGET)) continue;                                   // sidebar / menu / recent-matches widgets
       const h = clean(a.href); const k = kind(h); if (k !== "match" && k !== "series") continue;
-      if (seg && k === "match") {                                        // a series page: only its own matches
-        if (SITE === "cricinfo" && !new URL(h).pathname.includes("/series/" + seg + "/")) continue;
-        if (SITE === "cricbuzz") { const slug = (seg.split("/")[1] || ""), ms = (new URL(h).pathname.split("/").pop() || ""); if (slug && !ms.endsWith(slug.replace(/-\d+$/, "")) && !ms.includes(slug.replace(/-\d{4}$/, ""))) continue; }
-      }
+      if (seg && k === "match" && SITE === "cricbuzz") { const slug = (seg.split("/")[1] || ""), ms = (new URL(h).pathname.split("/").pop() || ""); if (slug && !ms.endsWith(slug.replace(/-\d+$/, "")) && !ms.includes(slug.replace(/-\d{4}$/, ""))) continue; }   // (Cricinfo matches can belong to a different tour series than the trophy page: no series filter there)
       const id = k === "match" ? matchId(h) : h; const row = a.closest("tr, li, div[class*=match], div[class*=card]") || a.parentElement;
       if (!out.has(k + id)) out.set(k + id, { kind: k, id, url: h, text: ((row ? row.innerText || row.textContent : a.innerText || a.textContent) || "").replace(/\s+/g, " ").trim().slice(0, 300) });
     } return [...out.values()];
@@ -92,12 +94,14 @@
     const go = k === "match" ? tabUrl(job, TABS.score) : (k === "series" && SITE === "cricinfo" && !/match-schedule-fixtures-and-results|match-results/.test(job) && seriesSeg(job) ? `${new URL(job).origin}/series/${seriesSeg(job)}/match-schedule-fixtures-and-results` : job);
     if (!onTarget && !(k === "series" && clean(location.href).split("?")[0] === clean(go).split("?")[0])) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; location.assign(go); return; }
     if (!(await wait(rnd(DELAY)))) return;
-    if (notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
+    if (k !== "match" && notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
 
     if (k === "list" || k === "series") {                                              // collect the next level down
       for (let i = 0; i < 4 && !stopFlag; i++) { window.scrollTo(0, document.body.scrollHeight); await sleep(1200); }
       if (stopFlag) return;
-      const sub = links(k === "series" ? job : null).filter((x) => k === "list" ? x.kind === "series" : x.kind === "match");
+      const st = k === "series" && SITE === "cricinfo" ? structured() : null;                       // authoritative list when the page has it, else the main-content links
+      const sub = st && st.length ? st : links(k === "series" ? job : null).filter((x) => k === "list" ? x.kind === "series" : x.kind === "match");
+      if (st) await log(s, `  series list from the page data: ${st.length} matches${st.filter((x) => x.state && x.state !== "POST").length ? ` (${st.filter((x) => x.state && x.state !== "POST").length} not finished: they will be skipped)` : ""}`);
       if (sub.length > 150) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, refused: sub.length }; await log(s, `  ${k}: ${sub.length} links found, far more than expected: not queued (the page layout may have changed). Add this ${k}'s links by hand.`); await advance(s); return goNext(s); }
       const n = enqueue(s, sub, true); if (sub.length) await log(s, `  e.g. ${sub.slice(0, 2).map((x) => (x.text || x.id).slice(0, 50)).join(" | ")}`);
       if (s.saveLists) await savePage(k);
@@ -110,22 +114,30 @@
     }
     // ---- a match
     const T = window.__ttm; if (!T) { if (!(await wait(2500))) return; return step(); }
-    if (!s.plan) s.plan = Object.keys(TABS);                                           // scorecard first, then the rest, decided by what the match has
-    const name = s.plan[s.tab || 0]; s.now = `match ${target} · ${TAB_LABEL[name] || name} (${(s.tab || 0) + 1}/${s.plan.length})`; await log(s, `match ${target}: ${TAB_LABEL[name] || name}`);
-    const mt0 = T.meta();
-    if (mt0 && mt0.state && mt0.state !== "POST") { await log(s, `  match is ${mt0.state === "PRE" ? "upcoming" : "not finished"}: skipped, nothing saved`); await advance(s); return goNext(s); }
-    if (name === "comm") {
-      if (mt0 && mt0.hasCommentary === false) await log(s, "  no ball-by-ball for this match: skipped");
-      else { let n = await T.loadAll();
+    if (!s.plan) s.plan = Object.keys(TABS);                                           // scorecard first; the other tabs only if the match has them
+    const idx = s.tab || 0, name = s.plan[idx]; s.now = `match ${target} · ${TAB_LABEL[name] || name}`; await log(s, `match ${target}: ${TAB_LABEL[name] || name}`);
+    if (notFound()) {
+      if (idx === 0) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  match page not found: skipped"); await advance(s); return goNext(s); }
+      await log(s, `  no ${TAB_LABEL[name] || name} page for this match: skipped (the rest is still saved)`);
+    } else {
+      const mt0 = T.meta();
+      if (mt0 && mt0.state && mt0.state !== "POST") { await log(s, `  match is ${mt0.state === "PRE" ? "upcoming" : "not finished"}: skipped, nothing saved`); await advance(s); return goNext(s); }
+      if (name === "comm") {
+        let n = await T.loadAll();
         const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
-        for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); } await log(s, `  ${n} balls so far`); }
-    } else { if (!(await wait(2500))) return; T.grabText(); T.save(); }
+        for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); } await log(s, `  ${n} balls so far`);
+      } else { if (!(await wait(2500))) return; T.grabText(); T.save(); }
+    }
     if (stopFlag) return;
-    if ((s.tab || 0) + 1 < s.plan.length) { s.tab = (s.tab || 0) + 1; await set(s); if (!(await wait(rnd(DELAY)))) return; location.assign(tabUrl(job, TABS[s.plan[s.tab]])); return; }
-    const mt = T.meta() || {}; const balls = T.saveJson();                             // one json per match
-    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, state: mt.state || null, hasMatchPlayers: !!mt.hasMatchPlayers };
+    const mtn = T.meta() || {};                                                        // what does this match have? (old matches: scorecard and players, no commentary)
+    const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
+    if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
+    let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
+    if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; location.assign(tabUrl(job, TABS[s.plan[nx]])); return; }
+    const balls = T.saveJson();                                                        // one json per match
+    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mt.hasCommentary && balls < 150 ? "  (LOW: check the commentary loaded)" : ""}`);
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : mtn.hasCommentary && balls < 150 ? "  (LOW: check the commentary loaded)" : ""}`);
     await advance(s); return goNext(s);
   };
 

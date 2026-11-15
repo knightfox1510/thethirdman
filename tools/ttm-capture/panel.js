@@ -96,7 +96,7 @@
   const saveJson = () => {
     grabNext(); grabText();
     store.saved_at = new Date().toISOString(); store.page_url = location.href;
-    const out = { ...store, comments: Object.values(store.comments) };
+    const out = { ...store, schema: 4, comments: Object.values(store.comments) };
     const blob = new Blob([JSON.stringify(out)], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob); a.download = `${SITE}_${matchId}_${matchSlug}.json`;
