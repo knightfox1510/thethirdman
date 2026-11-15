@@ -1,0 +1,1161 @@
+{
+ "slug": "data_nz_ind_series",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "v2",
+ "captions_long": false,
+ "series": "data",
+ "tag": "DATA STORIES",
+ "tagsub": "EP. 12 · INDIA V NEW ZEALAND ODI SERIES",
+ "files": {
+  "long": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Long",
+  "short": "Data_Story_Ep12_India_vs_New_Zealand_ODI_Series_2026_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "DATA STORIES · EP. 12",
+  "lines": [
+   {
+    "t": "8 DROPS."
+   },
+   {
+    "t": "STILL 3-1",
+    "c": "gold"
+   }
+  ],
+  "hero": "8",
+  "herosize": 420
+ },
+ "sources": [
+  "Ball-by-ball for the four matches played: Cricbuzz full-commentary captures (1st: match 161245, 2nd: 161256, 4th: 161271, 5th: 161282), parsed into one row per delivery (data/series/nz_ind_2026). Totals, individual figures and the series leaders (Young 162, Kohli 86, Brar 9 wkts, Duffy 9 wkts) checked against Wikipedia's 'Indian cricket team in New Zealand in 2026-27' (citing Cricinfo): 26 validation checks; the 4th ODI also agrees with an independent Cricinfo capture over by over.",
+  "The 3rd ODI (Hamilton, 10 November) had no play. The 1st ODI was decided by DLS (target 143 from 32 overs) and the 2nd on DLS (India 113/7, 4 runs ahead of the par score of 109).",
+  "Win probability added: our own model, fitted on 1,719 men's 50-over ODIs in the Cricsheet archive (2009 onwards, no rain method); an indication, not a fact (matches 1 and 2 were rain-affected). Drops: the runs a batter scored after the first dropped chance (descriptive, not a counterfactual); Cricbuzz's own note during the 5th ODI also puts India's drops at eight. Figures: analysis/nz_ind_*.py, make_nz_ind_series.py."
+ ],
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "Eight dropped catches in four matches. And India still won the one-day series, three-one. How? We went through every ball.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "INDIA V NEW ZEALAND · ODI SERIES 2026",
+    "title": "Eight dropped catches.",
+    "value": 8,
+    "label": "India's let-offs across the four matches played · the series finished 3-1 to India (one washout)",
+    "color": "red",
+    "word": "eight"
+   }
+  },
+  {
+   "vo": "This is a Data Story: the whole series, from our own ball-by-ball data for every match that was played.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "DATA STORIES · EP. 12",
+    "lines": [
+     "India v New Zealand,",
+     "[the whole series]"
+    ],
+    "teaser": "ODI series · November 2026 · four matches played, one washed out"
+   }
+  },
+  {
+   "vo": "Four results. Won by five wickets in Auckland. Won by four runs in Wellington. Hamilton, washed out. Lost by two hundred and forty-four runs at Bay Oval. Then won by twenty-two runs, at the same ground, two days later.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "THE FOUR RESULTS · INDIA'S SCORE v NEW ZEALAND'S",
+    "title": "Win, win, wash-out, loss, win.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND"
+    },
+    "rows": [
+     [
+      "1st · Auckland",
+      "143/5 (22.4)",
+      "185",
+      "a"
+     ],
+     [
+      "2nd · Wellington",
+      "113/7 (26)",
+      "134",
+      "a"
+     ],
+     [
+      "3rd · Hamilton",
+      "no play",
+      "no play",
+      "level"
+     ],
+     [
+      "4th · Bay Oval",
+      "89",
+      "333",
+      "b"
+     ],
+     [
+      "5th · Bay Oval",
+      "209",
+      "187",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Two of the three wins came under the rain rules. In Auckland, the target was cut to one forty-three from thirty-two overs. In Wellington, play stopped at one thirteen for seven, four runs ahead of the par score.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "RAIN",
+    "lines": [
+     "Two of three wins",
+     "[came by DLS.]"
+    ]
+   }
+  },
+  {
+   "vo": "India bowled New Zealand out in all four innings. But look at the averages. India's attack took thirty-seven wickets at twenty-two point three. New Zealand's took thirty-two, at seventeen point two. The fourth match explains it: without it, India's bowlers average seventeen point three, and New Zealand's twenty-one.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "BOWLING AVERAGES · RUNS PER WICKET",
+    "title": "Bowled out four times. Worse average.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA'S ATTACK"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND'S ATTACK"
+    },
+    "rows": [
+     [
+      "Wickets",
+      "37",
+      "32",
+      "a"
+     ],
+     [
+      "Average, all four matches",
+      "22.3",
+      "17.2",
+      "b"
+     ],
+     [
+      "Average, without the 4th",
+      "17.3",
+      "21.0",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "The top order was the other problem. India's third wicket fell at one twenty-four, thirty-nine, nought, and thirty-four. In the fourth match, India were nought for three.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA'S SCORE WHEN THE THIRD WICKET FELL",
+    "title": "Three down, early.",
+    "domain": [
+     0,
+     130
+    ],
+    "ticks": [
+     0,
+     65,
+     130
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "1st ODI · Auckland",
+      "v": 124,
+      "text": "124"
+     },
+     {
+      "label": "2nd ODI · Wellington",
+      "v": 39,
+      "text": "39",
+      "hl": true
+     },
+     {
+      "label": "4th ODI · Bay Oval",
+      "v": 0,
+      "text": "0",
+      "hl": true
+     },
+     {
+      "label": "5th ODI · Bay Oval",
+      "v": 34,
+      "text": "34",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "विराट कोहली, India's top scorer in the series, made seventy-four in Auckland, then seven, nought, and five. Eighty-six runs in total, from four innings.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "VIRAT KOHLI · EVERY INNINGS",
+    "title": "86 runs. 74 of them in one game.",
+    "domain": [
+     0,
+     80
+    ],
+    "ticks": [
+     0,
+     40,
+     80
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "1st ODI",
+      "v": 74,
+      "text": "74 (51)",
+      "hl": true
+     },
+     {
+      "label": "2nd ODI",
+      "v": 7,
+      "text": "7"
+     },
+     {
+      "label": "4th ODI",
+      "v": 0,
+      "text": "0 (4)"
+     },
+     {
+      "label": "5th ODI",
+      "v": 5,
+      "text": "5 (7)"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And the catching. India dropped eight chances in the four matches, and New Zealand four. The batters let off first scored two hundred and forty-four more runs after India's drops, and ninety-six after New Zealand's. Will Young, dropped twice in two balls in the fourth match, went on to score a hundred and twenty after the first.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "DROPPED CATCHES · THE WHOLE SERIES",
+    "title": "Eight drops. 244 runs.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA DROPPED"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND DROPPED"
+    },
+    "rows": [
+     [
+      "Chances dropped",
+      "8",
+      "4",
+      "a"
+     ],
+     [
+      "Runs by the let-off batters afterwards",
+      "244",
+      "96",
+      "a"
+     ],
+     [
+      "Biggest: Will Young, 4th ODI",
+      "120 after the first",
+      "",
+      "level"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "The leading run-scorers: Will Young, a hundred and sixty-two. Then Tim Seifert, a hundred and ten. Then विराट कोहली, with eighty-six. For the bowlers, गुरनूर बराड़ and Jacob Duffy took nine wickets each.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "THE SERIES LEADERS · RUNS",
+    "title": "Young led the way.",
+    "domain": [
+     0,
+     170
+    ],
+    "ticks": [
+     0,
+     85,
+     170
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Will Young (NZ)",
+      "v": 162,
+      "text": "162",
+      "hl": true
+     },
+     {
+      "label": "Tim Seifert (NZ)",
+      "v": 110,
+      "text": "110"
+     },
+     {
+      "label": "Virat Kohli (IND)",
+      "v": 86,
+      "text": "86",
+      "hl": true
+     },
+     {
+      "label": "Daryl Mitchell (NZ)",
+      "v": 83,
+      "text": "83"
+     },
+     {
+      "label": "Mitchell Santner (NZ)",
+      "v": 83,
+      "text": "83"
+     },
+     {
+      "label": "Axar Patel (IND)",
+      "v": 74,
+      "text": "74"
+     },
+     {
+      "label": "Ishan Kishan (IND)",
+      "v": 73,
+      "text": "73"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "By our win-probability measure, the most valuable player of the series was अर्शदीप सिंह, then नमन धीर, अक्षर पटेल, and गुरनूर बराड़. The most costly: रोहित शर्मा.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "WIN PROBABILITY ADDED OVER THE SERIES · OUR MODEL",
+    "title": "Who really won it?",
+    "domain": [
+     -0.4,
+     0.4
+    ],
+    "ticks": [
+     -0.4,
+     0,
+     0.4
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Arshdeep Singh (IND)",
+      "v": 0.34,
+      "text": "+0.34",
+      "hl": true
+     },
+     {
+      "label": "Naman Dhir (IND)",
+      "v": 0.24,
+      "text": "+0.24"
+     },
+     {
+      "label": "Axar Patel (IND)",
+      "v": 0.21,
+      "text": "+0.21"
+     },
+     {
+      "label": "Gurnoor Brar (IND)",
+      "v": 0.18,
+      "text": "+0.18"
+     },
+     {
+      "label": "Jacob Duffy (NZ)",
+      "v": -0.18,
+      "text": "-0.18"
+     },
+     {
+      "label": "Rohit Sharma (IND)",
+      "v": -0.31,
+      "text": "-0.31",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Three grounds, three different games. New Zealand's first innings scored four point six an over in Auckland, three point three in Wellington, and six point seven at Bay Oval in the fourth match. India's first innings at Bay Oval, in the fifth, five an over.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "FIRST-INNINGS RUN RATE · BY GROUND",
+    "title": "Wellington was the hardest.",
+    "domain": [
+     0,
+     8
+    ],
+    "ticks": [
+     0,
+     4,
+     8
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Auckland · NZ, 185",
+      "v": 4.59,
+      "text": "4.59"
+     },
+     {
+      "label": "Wellington · NZ, 134",
+      "v": 3.27,
+      "text": "3.27",
+      "hl": true
+     },
+     {
+      "label": "Bay Oval, 4th · NZ, 333",
+      "v": 6.66,
+      "text": "6.66",
+      "hl": true
+     },
+     {
+      "label": "Bay Oval, 5th · India, 209",
+      "v": 4.96,
+      "text": "4.96"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So how did India win three-one? They bowled well, and they won two matches under the rain rules, and they escaped, in the fifth, by a margin smaller than their let-offs. The thing to fix is the catching.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "Bowling won it.",
+     "[Catching is the fix.]"
+    ]
+   }
+  },
+  {
+   "vo": "Was this a series India deserved to win? Tell us in the comments, and follow for more Data Stories.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "DESERVED TO WIN?"
+     },
+     {
+      "t": "DATA STORIES",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Eight dropped catches in four matches. And India still won the series, three-one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "INDIA v NEW ZEALAND · ODI SERIES",
+     "left": {
+      "v": "8",
+      "l": "catches dropped by India",
+      "c": "red"
+     },
+     "right": {
+      "v": "3-1",
+      "l": "series result",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.3
+     },
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.72
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Five matches, one washout. Won by five wickets, and by four runs, both under the rain rules. Lost by two hundred and forty-four. Then won by twenty-two.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "THE RESULTS",
+     "rows": [
+      [
+       "1st · Auckland",
+       "WON (DLS)",
+       "gold"
+      ],
+      [
+       "2nd · Wellington",
+       "WON (DLS)",
+       "gold"
+      ],
+      [
+       "3rd · Hamilton",
+       "NO PLAY",
+       "ink"
+      ],
+      [
+       "4th · Bay Oval",
+       "LOST BY 244",
+       "red"
+      ],
+      [
+       "5th · Bay Oval",
+       "WON BY 22",
+       "gold"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "India's attack bowled New Zealand out in every innings. But the averages say otherwise: India's twenty-two, New Zealand's seventeen. The fourth match decides it.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "BOWLING AVERAGE · RUNS PER WICKET",
+     "left": {
+      "v": "22.3",
+      "l": "India's bowlers",
+      "c": "red"
+     },
+     "right": {
+      "v": "17.2",
+      "l": "New Zealand's",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The cost of the drops: the batters let off first scored two hundred and forty-four more runs. Will Young, dropped twice in two balls in the fourth match, made a hundred and twenty after the first.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "RUNS AFTER INDIA'S DROPS",
+     "label": "SCORED BY THE LET-OFF BATTERS",
+     "value": 244,
+     "count_dur": 0.8,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "shake"
+    ]
+   }
+  },
+  {
+   "vo": "The top order failed: the third wicket fell at nought in the fourth match, and विराट कोहली made eighty-six runs in four innings, seventy-four of them in one game.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "VIRAT KOHLI · EVERY INNINGS",
+     "rows": [
+      [
+       "1st ODI",
+       "74",
+       "gold"
+      ],
+      [
+       "2nd ODI",
+       "7",
+       "ink"
+      ],
+      [
+       "4th ODI",
+       "0",
+       "red"
+      ],
+      [
+       "5th ODI",
+       "5",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "point",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "By our win-probability measure, the most valuable player of the series was अर्शदीप सिंह. The thing to fix is the catching.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE VERDICT",
+     "lines": [
+      {
+       "t": "BOWLING WON IT."
+      },
+      {
+       "t": "CATCHING IS THE FIX.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.5
+   }
+  },
+  {
+   "vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "reel": [
+  {
+   "vo": "Eight dropped catches in four matches. And India still won the series, three-one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "INDIA v NEW ZEALAND · ODI SERIES",
+     "left": {
+      "v": "8",
+      "l": "catches dropped by India",
+      "c": "red"
+     },
+     "right": {
+      "v": "3-1",
+      "l": "series result",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.3
+     },
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.72
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Five matches, one washout. Won by five wickets, and by four runs, both under the rain rules. Lost by two hundred and forty-four. Then won by twenty-two.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "THE RESULTS",
+     "rows": [
+      [
+       "1st · Auckland",
+       "WON (DLS)",
+       "gold"
+      ],
+      [
+       "2nd · Wellington",
+       "WON (DLS)",
+       "gold"
+      ],
+      [
+       "3rd · Hamilton",
+       "NO PLAY",
+       "ink"
+      ],
+      [
+       "4th · Bay Oval",
+       "LOST BY 244",
+       "red"
+      ],
+      [
+       "5th · Bay Oval",
+       "WON BY 22",
+       "gold"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Two of the three wins came under the rain rules. In Auckland, the target was cut to one forty-three from thirty-two overs. In Wellington, play stopped at one thirteen for seven, four runs ahead of the par score.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "RAIN",
+     "lines": [
+      {
+       "t": "TWO OF THREE WINS"
+      },
+      {
+       "t": "CAME BY DLS",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "India's attack bowled New Zealand out in every innings. But the averages say otherwise: India's twenty-two, New Zealand's seventeen. The fourth match decides it.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "BOWLING AVERAGE · RUNS PER WICKET",
+     "left": {
+      "v": "22.3",
+      "l": "India's bowlers",
+      "c": "red"
+     },
+     "right": {
+      "v": "17.2",
+      "l": "New Zealand's",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The top order was the other problem. India's third wicket fell at one twenty-four, thirty-nine, nought, and thirty-four.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "INDIA'S SCORE WHEN THE THIRD WICKET FELL",
+     "rows": [
+      [
+       "1st ODI",
+       "124",
+       "ink"
+      ],
+      [
+       "2nd ODI",
+       "39",
+       "red"
+      ],
+      [
+       "4th ODI",
+       "0",
+       "red"
+      ],
+      [
+       "5th ODI",
+       "34",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The cost of the drops: the batters let off first scored two hundred and forty-four more runs. Will Young, dropped twice in two balls in the fourth match, made a hundred and twenty after the first.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "RUNS AFTER INDIA'S DROPS",
+     "label": "SCORED BY THE LET-OFF BATTERS",
+     "value": 244,
+     "count_dur": 0.8,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "dejected",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "shake"
+    ]
+   }
+  },
+  {
+   "vo": "The top order failed: the third wicket fell at nought in the fourth match, and विराट कोहली made eighty-six runs in four innings, seventy-four of them in one game.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "VIRAT KOHLI · EVERY INNINGS",
+     "rows": [
+      [
+       "1st ODI",
+       "74",
+       "gold"
+      ],
+      [
+       "2nd ODI",
+       "7",
+       "ink"
+      ],
+      [
+       "4th ODI",
+       "0",
+       "red"
+      ],
+      [
+       "5th ODI",
+       "5",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "point",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "The leading run-scorers: Will Young, a hundred and sixty-two. Tim Seifert, a hundred and ten. Then विराट कोहली, eighty-six. गुरनूर बराड़ and Jacob Duffy took nine wickets each.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "THE LEADERS",
+     "rows": [
+      [
+       "Will Young (NZ)",
+       "162 runs",
+       "gold"
+      ],
+      [
+       "Tim Seifert (NZ)",
+       "110 runs",
+       "ink"
+      ],
+      [
+       "Virat Kohli (IND)",
+       "86 runs",
+       "gold"
+      ],
+      [
+       "Brar (IND) & Duffy (NZ)",
+       "9 wkts each",
+       "ink"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4,
+      "hit": "drive",
+      "ghost": true
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "fx": [
+     "vignette",
+     "flash"
+    ]
+   }
+  },
+  {
+   "vo": "By our win-probability measure, the most valuable player of the series was अर्शदीप सिंह. The thing to fix is the catching.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE VERDICT",
+     "lines": [
+      {
+       "t": "BOWLING WON IT."
+      },
+      {
+       "t": "CATCHING IS THE FIX.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.5
+   }
+  },
+  {
+   "vo": "Was this a series India deserved to win? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "FULL BREAKDOWN"
+     },
+     {
+      "t": "ON YOUTUBE",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "YOUTUBE @thethirdman_angle",
+     "bio": "LINK IN BIO"
+    }
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "India vs New Zealand - ODI Series Analysis | Eight Dropped Catches, 3-1",
+   "description": "India vs New Zealand ODI series analysis: eight dropped catches and still 3-1. Every ball of the four matches played: the two DLS wins, the 244-run defeat at Bay Oval, the top order that kept falling early, India's catching (244 runs scored after India's drops against 96 after New Zealand's), the series leaders, and our win-probability ranking of who really won it. Ball-by-ball data: Cricbuzz; series figures checked against Wikipedia/Cricinfo; our own analysis.\n\n#INDvNZ #IndiaVsNewZealand #ODISeries",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand ODI series",
+    "IND vs NZ ODI series",
+    "New Zealand vs India ODI",
+    "Virat Kohli",
+    "Will Young",
+    "Arshdeep Singh",
+    "cricket analysis",
+    "Data Stories",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "Eight Drops and Still 3-1 | India vs New Zealand ODI Series #Shorts",
+   "description": "Eight dropped catches in four matches, and India still won the series 3-1. Two DLS wins, a 244-run defeat, and 244 runs scored after India's drops. Cricbuzz ball-by-ball; our own analysis.\n\n#INDvNZ #ODISeries #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand ODI series",
+    "IND vs NZ ODI series",
+    "New Zealand vs India ODI",
+    "Virat Kohli",
+    "Will Young",
+    "Arshdeep Singh",
+    "cricket analysis",
+    "Data Stories",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

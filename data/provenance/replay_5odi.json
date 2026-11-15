@@ -1,0 +1,276 @@
+{
+ "slug": "replay_5odi",
+ "claims": [
+  {
+   "claim": "India 209 (42.1), NZ 187 (48.1), India won by 22 runs",
+   "value": [
+    209,
+    187,
+    22
+   ],
+   "sources": {
+    "wikipedia": [
+     209,
+     187,
+     22
+    ],
+    "cricbuzz_ball_by_ball": [
+     209,
+     187,
+     22
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Axar Patel 46 (55); Arshdeep Singh 3/30; Santner 3/47; Foxcroft 31 (42)",
+   "value": [
+    [
+     46,
+     55
+    ],
+    [
+     3,
+     30
+    ],
+    [
+     3,
+     47
+    ],
+    [
+     31,
+     42
+    ]
+   ],
+   "sources": {
+    "wikipedia": [
+     [
+      46,
+      55
+     ],
+     [
+      3,
+      30
+     ],
+     [
+      3,
+      47
+     ],
+     [
+      31,
+      42
+     ]
+    ],
+    "cricbuzz_ball_by_ball": [
+     [
+      46,
+      55
+     ],
+     [
+      3,
+      30
+     ],
+     [
+      3,
+      47
+     ],
+     [
+      31,
+      42
+     ]
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Arshdeep Singh Player of the Match; Yash Thakur ODI debut",
+   "value": [
+    "Arshdeep Singh",
+    "Yash Thakur"
+   ],
+   "sources": {
+    "wikipedia": [
+     "Arshdeep Singh",
+     "Yash Thakur"
+    ],
+    "cricbuzz_ball_by_ball": [
+     "Arshdeep Singh",
+     "Yash Thakur"
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ pace 6/125 in 22.1 overs, spin 4/82 in 20 overs",
+   "value": [
+    [
+     6,
+     125,
+     "22.1"
+    ],
+    [
+     4,
+     82,
+     "20.0"
+    ]
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     [
+      6,
+      125,
+      "22.1"
+     ],
+     [
+      4,
+      82,
+      "20.0"
+     ]
+    ],
+    "cricbuzz_editorial_line": [
+     [
+      6,
+      125,
+      "22.1"
+     ],
+     [
+      4,
+      82,
+      "20.0"
+     ]
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India's chance of defending 209 = 22% (our model)",
+   "value": 22,
+   "sources": {
+    "our_model_cricsheet_archive": 22
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Santner's wicket at 158/7 was a 27-point swing; India >50% from there (our model)",
+   "value": [
+    27,
+    64
+   ],
+   "sources": {
+    "our_model_cricsheet_archive": [
+     27,
+     64
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "the double (Bracewell 30.6, Foxcroft 31.1) = 39 points (our model)",
+   "value": 39,
+   "sources": {
+    "our_model_cricsheet_archive": 39
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "drops: 61 runs after NZ's let-offs, 37 after India's (descriptive)",
+   "value": [
+    61,
+    37
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     61,
+     37
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Naman Dhir 2-0-4-1, +26 points (our model), hidden winner",
+   "value": 26,
+   "sources": {
+    "our_model_cricsheet_archive": 26
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "4th v 5th at Bay Oval: NZ run rate 6.66 v 3.88; powerplay 7.2 v 4.1; Arshdeep 55/1 v 30/3",
+   "value": [
+    [
+     6.66,
+     3.88
+    ],
+    [
+     7.2,
+     4.1
+    ],
+    [
+     55,
+     1,
+     30,
+     3
+    ]
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     [
+      6.66,
+      3.88
+     ],
+     [
+      7.2,
+      4.1
+     ],
+     [
+      55,
+      1,
+      30,
+      3
+     ]
+    ],
+    "cricinfo_4th_odi_capture": [
+     [
+      6.66,
+      3.88
+     ],
+     [
+      7.2,
+      4.1
+     ],
+     [
+      55,
+      1,
+      30,
+      3
+     ]
+    ]
+   },
+   "scope": "archive",
+   "status": "OK",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 5,
+  "LABELLED": 5
+ }
+}
