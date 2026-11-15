@@ -95,6 +95,25 @@ short = [
    {"type": "plate_list", "plate": "IV", "title": "A famous six", "sub": "World Cup, Centurion, 1 March 2003", "rows": [["2003", "Tendulkar, upper cut over third man", "Off Shoaib Akhtar, the second over of the chase"], ["98", "his score, off 75 balls", "India won by six wickets"]], "stamp": ["CHECKED"], "stamp_at": .7}),
  {"vo": "Next time the ball flies past the slips, look for him: a simple job, and a name nobody can explain. Subscribe to The Third Man on YouTube for more Did You Know.", "scene": {"type": "cta", "lines": [{"t": "WANT THE FULL"}, {"t": "STORY?", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "@thethirdman_angle", "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle", "bio": None}}},
 ]
+# ---- the ~2.5 minute vertical Instagram Reel (variants.py igreel): the Short barely touches the name, so this cut spends most of its time on it
+# (the four theories one by one, then the 1884 text and what it does and does not tell us). Same verified material as the long video.
+def L(i, **over):
+    sc = json.loads(json.dumps(long[i])); sc.update(over); return sc
+reel = [
+ L(0, vo="Third man. Picture the field from above. The bowler is at the top, the batter at the bottom. Now look far behind the wicket, on the off side, near the boundary. That lonely fielder is third man."),
+ L(1),
+ page("So why is he called third? Not first, not second, not tenth. You will hear four explanations, and they all sound sensible. But none of them comes with a source.",
+      kicker="THE NAME", title="Why \"third\"?", body="Cricket websites repeat four explanations. We looked for a document behind each of them, and did not find one.", margin="Four stories. No proof.", figures=[SL | {"fig": None}, GU | {"fig": None}, TM | {"fig": None}], stamp=["FOUR", "THEORIES"], stamp_angle=-8),
+ L(5), L(6), L(7), L(8),
+ page("Notice what the four have in common. Each is a good story, and each is repeated by websites that do not say where they got it. A neat story is not evidence.",
+      kicker="WEIGHING THEM UP", title="Good stories", body="Every theory is plausible. Not one cites a source we could check.", margin="Plausible is not proven.", figures=[dict(p="slip", fig=None), dict(p="gully", fig=None), TM | {"fig": None}], stamp=["NO SOURCE", "NO PROOF"], stamp_angle=8),
+ L(9, vo="Here is something solid. James Lillywhite's Cricketers' Companion, printed in eighteen eighty-four, says: it is the fashion now to dispense with the long-stop, thereby getting a third man as well as a mid-on."),
+ page("Look closely at that line. In the passage we found, the book does not explain the name. It simply uses it, as a term its readers already knew. So the name is at least that old, and the story behind it is older still.",
+      kicker="WHAT IT TELLS US", title="Already familiar", body="The 1884 text uses \"third man\" without explaining it: the name was already in use. Its origin before that is not documented in anything we could find.", margin="If you know a document, tell us.", figures=[TM | {"fig": None}], stamp=["ORIGIN", "UNKNOWN"], stamp_angle=7),
+ L(13, vo="So next time the ball flies past the slips, look for him. A simple job, and a name nobody can explain."),
+]
+reel_cta = {"vo": "Which of the four theories do you believe? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.", "scene": {"type": "cta", "lines": [{"t": "FULL BREAKDOWN"}, {"t": "ON YOUTUBE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE @thethirdman_angle", "bio": "LINK IN BIO"}}}
+
 SRC = ["Position and job: Wikipedia, 'Glossary of cricket terms' (third man: behind the wicket-keeper on the off side, beyond the slip and gully areas) https://en.wikipedia.org/wiki/Glossary_of_cricket_terms and 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket); SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp; cricketwriter.com, 'Third Man' https://www.cricketwriter.com/cricket-fielding-positions-third-man/.",
        "Who stands there: Wikipedia 'Fielding (cricket)' and PitchVision, 'Specialist fielding: fine leg and third man' https://cdn0.pitchvision.com/specialist-fielding-fine-leg-and-third-man.",
        "The four theories are repeated on cricket websites (Cricket Lounge https://thecricketlounge.com/read-the-story-behind-the-third-man-position-in-cricket/ ; Idiom Origins https://idiomorigins.org/origin/third-man ; cricketwriter.com; the History of Cricket blog); none cites a source. We found no document that settles the origin; the video shows each as unproven.",
@@ -107,10 +126,10 @@ TAGS = ["third man", "third man cricket", "why is it called third man", "fieldin
 spec = {"slug": "dyk_third_man", "theme": "plate", "theme_long": "plate", "captions": "serif", "captions_long": False, "series": "didyouknow", "tag": "DID YOU KNOW?", "tagsub": "EP. 1 · THIRD MAN",
         "files": {"long": "x", "short": "x"},
         "thumb": {"kicker": "DID YOU KNOW? · EP. 1", "lines": [{"t": "WHY IS IT CALLED"}, {"t": "THIRD MAN?", "c": "gold"}], "hero": "?", "herosize": 420},
-        "sources": SRC, "venue": {"time": "dusk", "crowd": [[190, 235, 70], [240, 240, 240], [25, 100, 200], [20, 60, 140]], "boards": [[25, 100, 200], [190, 235, 70]]}, "long": long, "short": short,
+        "sources": SRC, "venue": {"time": "dusk", "crowd": [[190, 235, 70], [240, 240, 240], [25, 100, 200], [20, 60, 140]], "boards": [[25, 100, 200], [190, 235, 70]]}, "long": long, "short": short, "reel": reel, "reel_cta": reel_cta,
         "yt": {"long": {"title": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1", "description": DESC_L, "tags": TAGS},
                "short": {"title": "Why Is It Called Third Man? The Unsolved Mystery | Did You Know Ep 1 #Shorts", "description": DESC_S, "tags": TAGS}}}
 c.save(spec)
 voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/dyk_third_man.json", "w"), ensure_ascii=False, indent=1)
-print("wrote spec: long", sum(len(x["vo"].split()) for x in long), "words,", len(long), "scenes; short", sum(len(x["vo"].split()) for x in short), "words")
+print("reel:", len(reel), "scenes,", sum(len(x["vo"].split()) for x in reel), "words (+ CTA)"); print("wrote spec: long", sum(len(x["vo"].split()) for x in long), "words,", len(long), "scenes; short", sum(len(x["vo"].split()) for x in short), "words")
