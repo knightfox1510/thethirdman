@@ -20,21 +20,21 @@ c.check("third man stops edges that get past the slips (purpose)", "stops edges 
 c.check("no documented origin of the name 'third man' found", "no documented origin", {W: "no documented origin", G: "no documented origin"})
 
 def S(vo, sc, **kw): return dict({"vo": vo, "scene": sc}, **kw)
-def board(vo, head, fielders, **kw): return S(vo, dict({"type": "board", "tone": "navy", "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD", "head": head, "fielders": fielders, "batter_label": "right-hander"}, **kw))
+def board(vo, head, fielders, **kw): return S(vo, dict({"type": "board", "tone": "navy", "tag": "ILLUSTRATIVE FIELD", "head": head, "fielders": fielders, "batter_label": "", "big_labels": True}, **kw))
 ALL = ["keeper", "slip", "2nd slip", "gully", "point", "cover", "mid-off", "mid-on", "midwicket", "square leg", "fine leg", "third man", "deep midwicket", "long-on"]
 short = [
  board("Third man. Silly mid-off. Deep backward square leg. Cricket's fielding names sound like nonsense. But they are a code, and once you can read it, you can read any field.",
-       ["Cricket's fielding names", "[are a code]"], ALL, labels=False),
+       ["Cricket's fielding names", "[are a code]"], ALL, labels=False, note=["third man · silly mid-off", "deep backward square leg"]),
  board("The first word gives the angle from the batter: leg, cover, mid-wicket, point.",
-       ["Word one:", "[the angle]"], ["cover", "midwicket", "point", "square leg"], hl=["cover", "midwicket"]),
+       ["Word one:", "[the angle]"], ["cover", "midwicket", "point", "square leg"], hl=["cover", "midwicket"], note=["leg · cover · mid-wicket · point"]),
  board("A second word gives the distance. Short is closer. Deep or long is farther. And silly means so close that it looks dangerous, which is exactly where the name comes from.",
-       ["Word two:", "[the distance]"], ["short leg", "square leg", "deep square leg", "cover", "deep cover"], hl=["short leg", "deep square leg"]),
+       ["Word two:", "[the distance]"], ["short leg", "deep square leg", "cover", "deep cover"], hl=["short leg", "deep square leg"], note=["short = closer · deep or long = farther", "[silly = dangerously close]"]),
  board("Square means level with the batter, across the pitch. Backward and forward tilt the angle.",
-       ["Square means", "[level with the bat]"], ["square leg", "point", "backward point", "cover"], hl=["square leg", "point"]),
+       ["Square means", "[level with the bat]"], ["square leg", "point", "backward point"], hl=["square leg", "point"], note=["square = level with the batter", "backward / forward tilt the angle"]),
  board("Close catchers have their own code. Slips are numbered outwards from the wicket-keeper: first slip, second slip, third slip. Together, the slip cordon.",
-       ["Slips are numbered", "[from the keeper]"], ["keeper", "slip", "2nd slip", "3rd slip", "gully"], zones=[{"pos": ["slip", "2nd slip", "3rd slip"], "label": "slip cordon", "at": .3}]),
+       ["Slips are numbered", "[from the keeper]"], ["keeper", "slip", "2nd slip", "3rd slip", "gully"], zones=[{"pos": ["slip", "2nd slip", "3rd slip"], "label": "slip cordon", "at": .3}], note=["first slip · second slip · third slip", "numbered outwards from the keeper"]),
  board("Third man stands behind the wicket, on the off side, far beyond the slips. His job: stop the edges that fly past them and race to the boundary.",
-       ["Where is", "[third man?]"], ["keeper", "slip", "2nd slip", "gully", "third man"], hl=["third man"], labels=True),
+       ["Where is", "[third man?]"], ["keeper", "slip", "2nd slip", "gully", "third man"], hl=["third man"], labels=True, note=["off side, behind the wicket,", "[far beyond the slips]"]),
  S("So why is it called third man? Honestly, nobody has a documented answer. The name is old, and the explanations you hear are only theories.",
    {"type": "stage", "panel": {"kind": "headline", "kicker": "WHY 'THIRD'?", "lines": [{"t": "NO DOCUMENTED"}, {"t": "ANSWER.", "c": "gold"}], "at": .05}, "avatars": [{"kit": "IND", "pose": "point", "x": .5}], "cam": "push", "fx": ["vignette", "spot"]}),
  {"vo": "Now you can read any field. Follow for more Did You Know.", "scene": {"type": "cta", "lines": [{"t": "DID YOU KNOW?"}, {"t": "FOLLOW FOR MORE", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "@thethirdman_angle", "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle", "bio": None}}},

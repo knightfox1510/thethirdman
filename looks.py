@@ -590,7 +590,7 @@ def sc_board(c, g, t, D, s):
         c.drawOval(skia.Rect.MakeXYWH(x - rw, y - rh, rw * 2, rh * 2), paint(E._sh(cc, .72) if pk["c"] != "white" else (190, 190, 186)))
         c.drawOval(skia.Rect.MakeXYWH(x - rw, y - hh - rh, rw * 2, rh * 2), paint(cc))
         if pk.get("label"):
-            lt = pk["label"]; lz = (24 if short else 20)
+            lt = pk["label"]; lz = ((34 if short else 26) if s.get("big_labels") else (24 if short else 20))
             text(c, lt, x, y + 30 * sc + 8, lz, "serifI", ink, q * .95, "c")
     for z in s.get("zones", []):                  # one label per zone, beside it
         q = eo(prog(t, T(z, D, .3) + .3, T(z, D, .3) + .7))
@@ -612,6 +612,11 @@ def sc_board(c, g, t, D, s):
             q = eo(prog(t, .1 + .12 * k, .5 + .12 * k))
             zz = E.fit(ln.replace("[", "").replace("]", ""), g.W - 200, z, "serifBI")
             rich(c, ln, g.W / 2, y + k * zz * 1.15, zz, "serifBI", ink, q, "c")
+    if s.get("note"):                                   # a short key line (or two) under the field: the term in plain words (graphics, not subtitles)
+        nl = s["note"] if isinstance(s["note"], list) else [s["note"]]
+        for k, ln in enumerate(nl):
+            q = eo(prog(t, .35 + .15 * k, .8 + .15 * k)); zz = E.fit(ln.replace("[", "").replace("]", ""), g.W - 160, 54 if short else 40, "serifBI")
+            rich(c, ln, g.W / 2, (1500 if short else 1030) + k * zz * 1.3, zz, "serifBI", ink, q, "c")
     if s.get("foot"):
         text(c, s["foot"].upper(), g.W / 2, 1390 if short else 1050, 19, "mono", (150, 160, 185) if navy else (120, 120, 116), a, "c", track=2)
 

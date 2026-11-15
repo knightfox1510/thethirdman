@@ -71,7 +71,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Cricket's fielding names",
      "[are a code]"
@@ -92,8 +92,13 @@
      "deep midwicket",
      "long-on"
     ],
-    "batter_label": "right-hander",
-    "labels": false
+    "batter_label": "",
+    "big_labels": true,
+    "labels": false,
+    "note": [
+     "third man · silly mid-off",
+     "deep backward square leg"
+    ]
    }
   },
   {
@@ -101,7 +106,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Word one:",
      "[the angle]"
@@ -112,10 +117,14 @@
      "point",
      "square leg"
     ],
-    "batter_label": "right-hander",
+    "batter_label": "",
+    "big_labels": true,
     "hl": [
      "cover",
      "midwicket"
+    ],
+    "note": [
+     "leg · cover · mid-wicket · point"
     ]
    }
   },
@@ -124,22 +133,26 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Word two:",
      "[the distance]"
     ],
     "fielders": [
      "short leg",
-     "square leg",
      "deep square leg",
      "cover",
      "deep cover"
     ],
-    "batter_label": "right-hander",
+    "batter_label": "",
+    "big_labels": true,
     "hl": [
      "short leg",
      "deep square leg"
+    ],
+    "note": [
+     "short = closer · deep or long = farther",
+     "[silly = dangerously close]"
     ]
    }
   },
@@ -148,7 +161,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Square means",
      "[level with the bat]"
@@ -156,13 +169,17 @@
     "fielders": [
      "square leg",
      "point",
-     "backward point",
-     "cover"
+     "backward point"
     ],
-    "batter_label": "right-hander",
+    "batter_label": "",
+    "big_labels": true,
     "hl": [
      "square leg",
      "point"
+    ],
+    "note": [
+     "square = level with the batter",
+     "backward / forward tilt the angle"
     ]
    }
   },
@@ -171,7 +188,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Slips are numbered",
      "[from the keeper]"
@@ -183,7 +200,8 @@
      "3rd slip",
      "gully"
     ],
-    "batter_label": "right-hander",
+    "batter_label": "",
+    "big_labels": true,
     "zones": [
      {
       "pos": [
@@ -194,6 +212,10 @@
       "label": "slip cordon",
       "at": 0.3
      }
+    ],
+    "note": [
+     "first slip · second slip · third slip",
+     "numbered outwards from the keeper"
     ]
    }
   },
@@ -202,7 +224,7 @@
    "scene": {
     "type": "board",
     "tone": "navy",
-    "tag": "DID YOU KNOW? · ILLUSTRATIVE FIELD",
+    "tag": "ILLUSTRATIVE FIELD",
     "head": [
      "Where is",
      "[third man?]"
@@ -214,11 +236,16 @@
      "gully",
      "third man"
     ],
-    "batter_label": "right-hander",
+    "batter_label": "",
+    "big_labels": true,
     "hl": [
      "third man"
     ],
-    "labels": true
+    "labels": true,
+    "note": [
+     "off side, behind the wicket,",
+     "[far beyond the slips]"
+    ]
    }
   },
   {
