@@ -31,6 +31,7 @@ c = V.Claims("dyk_third_man")
 W, SP, CW, PV = "wikipedia", "sportplan_guide", "cricketwriter_guide", "pitchvision"
 c.check("third man: off side, behind the wicket", "off side, behind the wicket", {W: "off side, behind the wicket", SP: "off side, behind the wicket", CW: "off side, behind the wicket"})
 c.check("third man's job: stops edges and steers that beat the slips", "stops edges past the slips", {SP: "stops edges past the slips", CW: "stops edges past the slips"})
+c.check("slips are numbered outwards from the wicket-keeper", "first slip nearest the keeper", {W: "first slip nearest the keeper", SP: "first slip nearest the keeper"})
 c.check("fast bowlers often field at third man between their overs", "pace bowlers rest at third man", {W: "pace bowlers rest at third man", PV: "pace bowlers rest at third man"})
 c.check("theory: arrived with overarm bowling (reported, no source cited)", "reported", {"cricket_lounge": "reported"}, scope="archive")
 c.check("theory: covers the gap between slips and gully (reported, no source cited)", "reported", {"cricketwriter_guide": "reported"}, scope="archive")
@@ -53,6 +54,8 @@ long = [
        plate="I", title="THE THIRD MAN", sub="a fielder of the off side, far behind the wicket", figures=[KP, SL, GU, TM], stamp=["DID YOU", "KNOW?"], stamp_at=.7),
  plate("His job is simple. When a thick edge, or a deliberate steer, beats the slips and races away, third man is the one who stops it from becoming four.",
        plate="II", title="His job", sub="to stop what gets past the slips", figures=[KP, SL, GU, TM], paths=[{"from": "slip", "to": "third man", "at": .35, "label": "the edge", "lx": -60, "ly": 90}], note=["saves the boundary", "the slips could not"]),
+ plate("To see where he fits, count outwards from the keeper. First slip, second slip, third slip. Then the gully. And then, far beyond all of them, third man.",
+       plate="II-b", title="Counting outwards", sub="slips are numbered from the wicket-keeper", figures=[KP, dict(p="slip", fig=2, name="First slip", side=1, dy=54), dict(p="2nd slip", fig=3, name="Second slip", side=1, dy=-40), dict(p="gully", fig=5, name="Gully", side=1, dy=-34), dict(TM, fig=6, name="Third man")], note=["slips are numbered outwards", "from the keeper"]),
  plate("And who stands there? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he has time to recover.",
        plate="III", title="Who stands there?", sub="often a fast bowler, between his overs", figures=[dict(p="bowler", fig=None, xy=[.06, -.42]), dict(TM, name="Third man (a bowler resting)")], note=["the quiet corner of the field"]),
  page("So why is it called third? You will hear four explanations. Not one of them comes with a source.",

@@ -170,6 +170,57 @@
    }
   },
   {
+   "vo": "To see where he fits, count outwards from the keeper. First slip, second slip, third slip. Then the gully. And then, far beyond all of them, third man.",
+   "scene": {
+    "type": "plate",
+    "plate": "II-b",
+    "title": "Counting outwards",
+    "sub": "slips are numbered from the wicket-keeper",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "2nd slip",
+      "fig": 3,
+      "name": "Second slip",
+      "side": 1,
+      "dy": -40
+     },
+     {
+      "p": "gully",
+      "fig": 5,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 6,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "slips are numbered outwards",
+     "from the keeper"
+    ]
+   }
+  },
+  {
    "vo": "And who stands there? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he has time to recover.",
    "scene": {
     "type": "plate",

@@ -130,14 +130,15 @@ def _header(c, g, s, t, D, x0, y0, x1, y1, ax="c"):
     """PLATE n / title / subtitle. Returns the y below the header."""
     a = eo(prog(t, 0, .4)); short = g.fmt == "short"; cxm = (x0 + x1) / 2 if ax == "c" else x0 + 30
     al = "c" if ax == "c" else "l"
-    if s.get("plate"): text(c, "PLATE " + str(s["plate"]) if not str(s["plate"]).startswith("PLATE") else str(s["plate"]), cxm, y0 + (84 if short else 62), 32, "serifI", INK, .8 * a, al, track=10)
-    ty = y0 + (200 if short else 160)
+    if s.get("plate"): text(c, "PLATE " + str(s["plate"]) if not str(s["plate"]).startswith("PLATE") else str(s["plate"]), cxm, y0 + (84 if short else 78), 32 if short else 38, "serifI", INK, .8 * a, al, track=10)
+    ty = y0 + (200 if short else 205)
     if s.get("title"):
-        z = E.fit(s["title"], (x1 - x0 - 60) if ax == "c" else 640, 96 if short else 84, "serifBI"); text(c, s["title"], cxm, ty, z, "serifBI", INK, a, al)
+        z = E.fit(s["title"], (x1 - x0 - 60) if ax == "c" else 780, 96 if short else 112, "serifBI"); text(c, s["title"], cxm, ty, z, "serifBI", INK, a, al)
     if s.get("sub"):
-        lines = E.wrap(s["sub"], (x1 - x0 - 120) if ax == "c" else 640, 38 if short else 34, "serifI")
-        for i, ln in enumerate(lines[:3]): text(c, ln, cxm, ty + 62 + i * 46, 38 if short else 34, "serifI", INK, .85 * a, al)
-        return ty + 62 + min(3, len(lines)) * 46
+        zs = 38 if short else 46; lh = 46 if short else 58
+        lines = E.wrap(s["sub"], (x1 - x0 - 120) if ax == "c" else 760, zs, "serifI")
+        for i, ln in enumerate(lines[:3]): text(c, ln, cxm, ty + 68 + i * lh, zs, "serifI", INK, .85 * a, al)
+        return ty + 68 + min(3, len(lines)) * lh
     return ty + 30
 
 
@@ -159,42 +160,43 @@ def sc_plate(c, g, t, D, s):
         if s.get("stamp"): stamp(c, x1 - 150, y1 - 120, s["stamp"], t, D * s.get("stamp_at", .6))
     else:
         yb = _header(c, g, s, t, D, x0, y0, x1, y1, ax="l")
-        R = 360; cx, cy = x0 + 1010, (y0 + y1) / 2 + 30
+        R = 380; cx, cy = x1 - 470, (y0 + y1) / 2 + 10
         field(c, cx, cy, R, figs, t, D, s)
-        ly = yb + 70
+        ly = yb + 80
         for i, f in enumerate(figs if s.get("legend", True) else []):
             if f.get("fig") is None: continue
             q = eo(prog(t, D * (.3 + .4 * i / max(1, len(figs))), D * (.3 + .4 * i / max(1, len(figs))) + .4))
-            text(c, f"Fig. {f['fig']}  {f.get('name') or f.get('label') or f['p'].title()}", x0 + 30, ly + i * 46, 32, "serifI", RED if f.get("hl") else INK, q)
+            text(c, f"Fig. {f['fig']}  {f.get('name') or f.get('label') or f['p'].title()}", x0 + 30, ly + i * 56, 40, "serifI", RED if f.get("hl") else INK, q)
         if s.get("note"):
-            for i, ln in enumerate(s["note"] if isinstance(s["note"], list) else [s["note"]]):
-                text(c, ln, x0 + 30, y1 - 70 - (len(s["note"]) - 1 - i) * 48 if isinstance(s["note"], list) else y1 - 70, 36, "serifBI", RED, eo(prog(t, D * .5, D * .5 + .5)))
-        if s.get("stamp"): stamp(c, x0 + 640, y1 - 170, s["stamp"], t, D * s.get("stamp_at", .6))
+            nl = s["note"] if isinstance(s["note"], list) else [s["note"]]
+            for i, ln in enumerate(nl): text(c, ln, x0 + 30, y1 - 80 - (len(nl) - 1 - i) * 58, 44, "serifBI", RED, eo(prog(t, D * .5, D * .5 + .5)))
+        if s.get("stamp"): stamp(c, x0 + 680, y1 - 190, s["stamp"], t, D * s.get("stamp_at", .6), r=110)
 
 
 def sc_plate_page(c, g, t, D, s):
     bg(c, t); x0, y0, x1, y1 = _frame(c, g, eo(prog(t, 0, .3))); short = g.fmt == "short"
     a = eo(prog(t, 0, .4))
-    text(c, s.get("kicker", ""), x0 + 40, y0 + (84 if short else 66), 30, "mono", INK, .8 * a, track=6)
-    z = E.fit(s.get("title", ""), x1 - x0 - 80, 92 if short else 80, "serifBI"); text(c, s.get("title", ""), x0 + 40, y0 + (190 if short else 160), z, "serifBI", INK, a)
-    bw = (x1 - x0 - 110) if short else 880; size = 42 if short else 38; y = y0 + (270 if short else 230)
+    text(c, s.get("kicker", ""), x0 + 40, y0 + (84 if short else 80), 30 if short else 38, "mono", INK, .8 * a, track=6)
+    z = E.fit(s.get("title", ""), x1 - x0 - 80, 92 if short else 118, "serifBI"); text(c, s.get("title", ""), x0 + 40, y0 + (190 if short else 205), z, "serifBI", INK, a)
+    bw = (x1 - x0 - 110) if short else 1000; size = 42 if short else 52; y = y0 + (270 if short else 300)
     for i, ln in enumerate(E.wrap(s.get("body", ""), bw, size, "serifI")):
         q = eo(prog(t, .25 + .08 * i, .65 + .08 * i)); text(c, ln, x0 + 40, y + i * (size + 14), size, "serifI", INK, .95 * q)
     n = len(E.wrap(s.get("body", ""), bw, size, "serifI")); yn = y + n * (size + 14) + 24
     if s.get("margin"):
-        for i, ln in enumerate(E.wrap(s["margin"], bw, 36 if short else 32, "serifBI")): text(c, ln, x0 + 40, yn + i * 46, 36 if short else 32, "serifBI", RED, eo(prog(t, D * .5, D * .5 + .5)))
-        yn += len(E.wrap(s["margin"], bw, 36, "serifBI")) * 46 + 20
+        mz = 36 if short else 44
+        for i, ln in enumerate(E.wrap(s["margin"], bw, mz, "serifBI")): text(c, ln, x0 + 40, yn + i * (mz + 12), mz, "serifBI", RED, eo(prog(t, D * .5, D * .5 + .5)))
+        yn += len(E.wrap(s["margin"], bw, mz, "serifBI")) * (mz + 12) + 20
     if s.get("figures"):
-        R = 190 if short else 230; cx, cy = (g.W / 2, min(y1 - R - 60, max(yn + R + 20, y0 + 900))) if short else (x1 - 360, (y0 + y1) / 2 + 40)
+        R = 190 if short else 290; cx, cy = (g.W / 2, min(y1 - R - 60, max(yn + R + 20, y0 + 900))) if short else (x1 - 470, (y0 + y1) / 2 + 40)
         field(c, cx, cy, R, s["figures"], t, D, dict(s, batter=False), small=True)
-    if s.get("stamp"): stamp(c, (x1 - 170) if short else (x1 - 220), (y1 - 200) if short else (y1 - 160), s["stamp"], t, D * s.get("stamp_at", .55), ang=s.get("stamp_angle", 10))
+    if s.get("stamp"): stamp(c, (x1 - 170) if short else (x1 - 1010), (y1 - 200) if short else (y1 - 190), s["stamp"], t, D * s.get("stamp_at", .55), ang=s.get("stamp_angle", 10), r=96 if short else 120)
 
 
 def sc_plate_list(c, g, t, D, s):
     bg(c, t); x0, y0, x1, y1 = _frame(c, g, eo(prog(t, 0, .3))); short = g.fmt == "short"
     yb = _header(c, g, s, t, D, x0, y0, x1, y1)
-    rows = s.get("rows", []); y = yb + (96 if short else 70); lw = x1 - x0 - 100
-    avail = (y1 - 110) - y; rh = min(230 if short else 190, avail / max(1, len(rows))); size = 50 if short else 40
+    rows = s.get("rows", []); y = yb + (96 if short else 90); lw = x1 - x0 - 100
+    avail = (y1 - 110) - y; rh = min(230 if short else 250, avail / max(1, len(rows))); size = 50 if short else 56
     c.drawLine(x0 + 50, y - 50, x1 - 50, y - 50, paint(INK, .8, stroke=2))
     for i, r in enumerate(rows):
         st = D * (.1 + .6 * i / max(1, len(rows))); q = eo(prog(t, st, st + .4)); yy = y + i * rh

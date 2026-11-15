@@ -25,6 +25,17 @@
    "conflicts": []
   },
   {
+   "claim": "slips are numbered outwards from the wicket-keeper",
+   "value": "first slip nearest the keeper",
+   "sources": {
+    "wikipedia": "first slip nearest the keeper",
+    "sportplan_guide": "first slip nearest the keeper"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
    "claim": "fast bowlers often field at third man between their overs",
    "value": "pace bowlers rest at third man",
    "sources": {
@@ -148,7 +159,7 @@
   }
  ],
  "summary": {
-  "OK": 6,
+  "OK": 7,
   "LABELLED": 6
  }
 }
