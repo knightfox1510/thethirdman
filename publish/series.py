@@ -54,6 +54,7 @@ EPISODES = {
     "rcb_back_to_back": ("data", "08", "How RCB Won Back to Back"),
     "hardik_arshdeep": ("data", "09", "Hardik for Arshdeep Trade"),
     "kohli_2000_nz": ("data", "10", "Kohli vs New Zealand Milestone Watch"),
+    "gambhir_player_coach": ("data", "11", "Gautam Gambhir, Player vs Coach"),
     "channel_trailer": ("channel", "00", "Welcome to The Third Man"),
 }
 _S = {s[0]: s for s in SERIES}
