@@ -6,6 +6,7 @@ import math, os, subprocess, glob
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from pitchview import *
+from pitchview_situations import classify, situation, sector_name
 
 FONTS = "fonts/"
 font = lambda n, s: ImageFont.truetype(FONTS + n, max(1, int(s)))
@@ -27,6 +28,12 @@ class Cam:
     def p(s, pt):
         v = np.array(pt, float) - s.C; z = v @ s.f
         return None if z < 0.3 else (s.cx + s.F * (v @ s.r) / z, s.cy - s.F * (v @ s.u) / z, z)
+
+
+class LookCam(Cam):
+    """A camera placed at an eye position looking at a target (batter's-eye and keeper's-eye views)."""
+    def __init__(s, eye, target, F=1500, cx=W / 2, cy=380):
+        s.C = np.array(eye, float); f = np.array(target, float) - s.C; s.f = f / np.linalg.norm(f); r = np.cross(s.f, [0, 0, 1.0]); s.r = r / np.linalg.norm(r); s.u = np.cross(s.r, s.f); s.F, s.cx, s.cy = F, cx, cy
 
 
 def mix(a, b, t): return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
@@ -83,8 +90,20 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
         bxx = 0.55 * hand; head = (bxx, gy - 0.1, H_ - 0.12)
         line3([(bxx, gy - 0.1, 0), (bxx, gy - 0.1, H_ - 0.3)], P["fig"], 9); line3([(bxx, gy - 0.1, 0.9), (bxx - 0.25 * hand, gy - 0.5, 0.55)], P["fig"], 7)
         dot(head, 0.12, outline=P["fig"], width=int(5 * S)); line3([(bxx + 0.05 * hand, gy - 0.4, 0.5), (bxx - 0.18 * hand, gy - 0.9, 0.25)], P["accent"], 6)
+    if tr.get("rope"):                                               # boundary rope (assumed radius, labelled)
+        line3([(BOUNDARY_M * math.cos(a / 120 * 2 * math.pi), PL / 2 + BOUNDARY_M * math.sin(a / 120 * 2 * math.pi), 0) for a in range(121)], P["muted"], 4, dash=3)
+    if tr.get("overstep"):                                           # the front foot over the bowler's crease (distance illustrative)
+        line3([(-0.15, 1.22, 0.0), (0.25, 1.22 - 0.25, 0.0)], P["accent"], 14)
+    if tr.get("batter_adv"):                                         # a batter who has come down the track
+        ax = 0.55 * hand; ay = gy - tr["batter_adv"]
+        line3([(ax, ay, 0), (ax, ay, H_ - 0.3)], P["fig"], 9); dot((ax, ay, H_ - 0.12), 0.12, outline=P["fig"], width=int(5 * S)); line3([(ax, ay + 0.2, 0.0), (ax + 0.3 * hand, ay - 0.35, 0.0)], P["fig"], 7)
+        label((ax, ay, H_ + 0.1), "BATTER (OUT OF HIS CREASE, ILLUSTRATIVE)", font("PlexMonoSB.ttf", 18), P["muted"], "la", dx=14, bg=P["bg"])
     pre, post, bat = tr["pre"], tr["post"], tr["bat"]
     line3(pre + post, P["accent"], 7)
+    if tr.get("throw"):
+        line3(tr["throw"], P["field"], 6, dash=2); e = tr["throw"][-1]; dot(e, 0.35, outline=P["accent"], width=int(6 * S))
+        label((e[0], e[1], 0.0), "STUMPS BROKEN", font("PlexMonoSB.ttf", 20), P["accent"], "la", dx=16, dy=12, bg=P["bg"])
+    if tr.get("gloves"): dot(tr["gloves"], 0.30, outline=P["field"], width=int(6 * S)); label(tr["gloves"], "GLOVES", font("PlexMonoSB.ttf", 20), P["field"], "la", dx=16, dy=-6, bg=P["bg"])
     if tr["bounce"]:
         bx_, by_, _ = tr["bounce"]; line3([(bx_ + 0.9 * math.cos(a / 24 * 2 * math.pi), by_ + 0.9 * math.sin(a / 24 * 2 * math.pi), 0) for a in range(25)], P["accent"], 4)
     if show_gate: dot((tr["contact"][0], gy, tr["gate_z"]), 0.16, fill=P["accent"], outline=P["bg"], width=int(3 * S))
@@ -100,7 +119,8 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
         dot((cx_, cy_, 0.02), 0.28, fill=P["accent"], outline=P["field"], width=int(3 * S))
         q0 = cam.p((sx, sy, 0.02)); left_side = q0 and q0[0] < 380
         label((sx, sy, 0.02), (f["name"] or "fielder").upper() + " · " + f["position"].upper(), font("PlexMonoSB.ttf", 22), P["ink"], "la" if left_side else "ra", dx=22 if left_side else -22, dy=-4, bg=P["bg"])
-        label((cx_, cy_, 0.02), "CATCH" if not f.get("approx") else "CATCH (APPROX.)", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
+        kind_ = tr.get("kind", "caught")
+        if kind_ == "caught": label((cx_, cy_, 0.02), "CATCH" if not f.get("approx") else "CATCH (APPROX.)", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
     if ball_xyz: dot(ball_xyz, 0.17, fill=P["ink"])
     if fielder_xyz: dot(fielder_xyz, 0.42, fill=P["field"])
     return im, cam
@@ -168,8 +188,9 @@ def wrap(text, f, width):
 
 
 def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.0, caption=None, match=None):
+    sit = situation(dl, tr)
     """Swiss layout: hairline rules, the ball number, a 3D picture, a side-on bounce panel, three facts, the result in words, and the 'illustrative' note."""
-    sm, _ = scene(P, cam, dl, tr, S=S, size=(W, 760), show_gate=(not dl.how == "caught"), ball_xyz=ball_xyz, fielder_xyz=fielder_xyz, trail=trail)
+    sm, _ = scene(P, cam, dl, tr, S=S, size=(W, 760), show_gate=(sit["kind"] in ("bowled", "lbw", "ball", "wide", "no_ball", "dropped", "misfield") and cam.F > 1800), ball_xyz=ball_xyz, fielder_xyz=fielder_xyz, trail=trail)
     im = Image.new("RGB", (int(W * S), int(H * S)), P["bg"]); d = ImageDraw.Draw(im); X = lambda v: int(v * S)
     im.paste(sm, (0, X(330)))
     d.line([X(60), X(96), X(W - 60), X(96)], fill=P["rule"], width=X(4))
@@ -197,13 +218,19 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
             for j, ln in enumerate(wrap(s2, font("PlexMono.ttf", 15), cw - 30)): d.text((X(x), X(y0 + 108 + j * 20)), ln, font=font("PlexMono.ttf", 15), fill=P["accent"], anchor="la")
     d.line([X(60), X(y0 + 160), X(W - 60), X(y0 + 160)], fill=P["rule"], width=X(3))
     yb = y0 + 180
-    big = {"caught": "CAUGHT", "bowled": "BOWLED", "lbw": "LBW", "stumped": "STUMPED", "run out": "RUN OUT"}.get(dl.how, "NO WICKET")
-    d.text((X(60), X(yb)), big, font=font("OswaldBold.ttf", 92), fill=P["accent"], anchor="la")
-    f_ = font("Inter-Medium.otf", 27); lines = wrap(sm_["where"][0].upper() + sm_["where"][1:] + ".", f_, 520)
-    if dl.how == "caught" and tr.get("field") and tr["field"].get("exceptional"): lines += wrap("A demanding catch: the commentary describes a dive.", f_, 520)
-    if tr["stump_z"] is not None and dl.how in ("bowled", "lbw"): lines += wrap(f"Model: {tr['stump_z']:.2f} m at the stumps, under their 0.71 m.", f_, 520)
-    lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
-    for j, ln in enumerate(lines[:6]): d.text((X(500), X(yb + 4 + j * 36)), ln, font=f_, fill=P["ink"], anchor="la")
+    res_ = {"caught": "CAUGHT", "bowled": "BOWLED", "lbw": "LBW", "stumped": "STUMPED", "run_out": "RUN OUT"}
+    d.text((X(60), X(yb)), sit["big"], font=font("OswaldBold.ttf", 92 if len(sit["big"]) < 9 else 70), fill=P["accent"], anchor="la")
+    f_ = font("Inter-Medium.otf", 27); lines = []
+    if sit["kind"] in ("caught", "bowled", "lbw"):
+        lines = wrap(sm_["where"][0].upper() + sm_["where"][1:] + ".", f_, 520)
+        if sit["kind"] == "caught" and tr.get("field") and tr["field"].get("exceptional"): lines += wrap("A demanding catch: the commentary describes a dive.", f_, 520)
+        if tr["stump_z"] is not None and sit["kind"] in ("bowled", "lbw"): lines += wrap(f"Model: {tr['stump_z']:.2f} m at the stumps, under their 0.71 m.", f_, 520)
+        lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
+    else:
+        for ln in sit["lines"]: lines += wrap(ln, f_, 520)
+        if sit["kind"] not in ("ball", "wide", "no_ball"): lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
+    for tg in sit["tags"]: lines += wrap(tg.capitalize() + ".", font("Inter-Medium.otf", 24), 520)
+    for j, ln in enumerate(lines[:7]): d.text((X(500), X(yb + 4 + j * 34)), ln, font=f_, fill=P["ink"], anchor="la")
     foot = [f"MOCK-UP · ILLUSTRATIVE: bounce, height, arcs and the fielder's move are modelled ({dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter).", "From the data: zones, shot, control, dismissal, catcher. From commentary (leads): fielding position, speed, how it behaved."]
     for i, ln in enumerate(foot): d.text((X(60), X(1846 + i * 26)), ln, font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
     if caption: d.text((X(W // 2), X(1290)), caption, font=font("OswaldBold.ttf", 34), fill=P["ink"], anchor="mm")
@@ -221,6 +248,80 @@ def animate(P, dl, tr, out_mp4, match, seconds=5.0, fps=24, S=1.0):
         poster(P, dl, tr, cam, fr + f"f{i:03d}.png", S=S, ball_xyz=ball, fielder_xyz=fx, trail=max(0.05, a), match=match)
         Image.open(fr + f"f{i:03d}.png").resize((720, 1280), Image.LANCZOS).save(fr + f"f{i:03d}.png")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(fps), "-i", fr + "f%03d.png", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", out_mp4], check=True)
+
+
+def _header(d, P, X, match, title_big, sub_right):
+    d.line([X(60), X(96), X(W - 60), X(96)], fill=P["rule"], width=X(4))
+    d.text((X(60), X(124)), "THE THIRD MAN · INSIGHTS", font=font("PlexMonoSB.ttf", 24), fill=P["muted"], anchor="la"); d.text((X(W - 60), X(124)), (match or "").upper(), font=font("PlexMonoSB.ttf", 24), fill=P["muted"], anchor="ra")
+    d.text((X(60), X(170)), title_big, font=font("OswaldBold.ttf", 150), fill=P["accent"], anchor="la")
+    for i, ln in enumerate(sub_right): d.text((X(W - 60), X(190 + i * 66)), ln, font=font("OswaldBold.ttf", 56), fill=P["ink"], anchor="ra")
+
+
+def _ground(d, P, X, cx, cy, sc, with_rope=True):
+    """Top-down ground, bowler's end at the top: the 30-yard circle as one clear ring, the (approximate) rope, the pitch."""
+    if with_rope: d.ellipse([X(cx - BOUNDARY_M * sc), X(cy - BOUNDARY_M * sc), X(cx + BOUNDARY_M * sc), X(cy + BOUNDARY_M * sc)], outline=P["muted"], width=X(3))
+    d.ellipse([X(cx - 27.43 * sc), X(cy - 27.43 * sc), X(cx + 27.43 * sc), X(cy + 27.43 * sc)], outline=P["circle"], width=X(4))
+    d.text((X(cx), X(cy - 27.43 * sc - 6)), "30-YARD CIRCLE", font=font("PlexMonoSB.ttf", 16), fill=P["circle"], anchor="ms")
+    if with_rope: d.text((X(cx), X(cy - BOUNDARY_M * sc - 6)), f"BOUNDARY (APPROX. {BOUNDARY_M:.0f} m)", font=font("PlexMonoSB.ttf", 16), fill=P["muted"], anchor="ms")
+    d.rectangle([X(cx - PW / 2 * sc), X(cy - PL / 2 * sc), X(cx + PW / 2 * sc), X(cy + PL / 2 * sc)], fill=P["pitch"], outline=P["line"], width=X(2))
+
+
+def wagon_poster(P, df, out, title, who, match, hand="R", S=1.5):
+    """Where the runs went (data only): every recorded shot from the batter's end to its wagon-wheel spot; fours and sixes heavier. Works for an over, a spell, a batter's innings or a whole match (pass a DataFrame slice)."""
+    im = Image.new("RGB", (int(W * S), int(H * S)), P["bg"]); d = ImageDraw.Draw(im); X = lambda v: int(v * S)
+    _header(d, P, X, match, title, who)
+    cx, cy, sc = W / 2, 790, 440 / (BOUNDARY_M * 1.02); _ground(d, P, X, cx, cy, sc)
+    sh = df[(df.wagon_x > 0) & (df.runs > 0) | (df.wicket == True) & (df.wagon_x > 0)]
+    base = (cx, cy + PL / 2 * sc - 0)
+    for _, r in sh.iterrows():
+        ex, ey = wagon_world(r.wagon_x, r.wagon_y); px, py = cx + ex * sc, cy + (ey - PL / 2) * sc
+        runs = int(r.bat_runs); wk = bool(r.wicket)
+        col = P["accent"] if (runs >= 4 or wk) else P["ink"]; w = 7 if runs == 6 else 5 if runs == 4 else 2
+        d.line([X(cx), X(cy + PL / 2 * sc), X(px), X(py)], fill=col, width=X(w))
+        if wk: d.ellipse([X(px - 9), X(py - 9), X(px + 9), X(py + 9)], fill=P["ink"], outline=P["accent"], width=X(3))
+        elif runs >= 4: d.ellipse([X(px - 7), X(py - 7), X(px + 7), X(py + 7)], fill=col)
+    side_off, side_leg = (0, 0)
+    for _, r in sh.iterrows():
+        leg = (r.wagon_x > 180) if hand == "R" else (r.wagon_x < 180); runs = int(r.bat_runs)
+        if leg: side_leg += runs
+        else: side_off += runs
+    tot = int(df.bat_runs.sum()); b4 = int((df.four == True).sum()); b6 = int((df.six == True).sum()); wk = int((df.wicket == True).sum()); balls = int((df.legal == True).sum())
+    y0 = 1330; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3)); cw = (W - 120) / 4
+    for i, (k, v) in enumerate([("RUNS OFF THE BAT", str(tot)), ("BALLS", str(balls)), ("FOURS · SIXES", f"{b4} · {b6}"), ("WICKETS", str(wk))]):
+        x = 60 + i * cw; d.text((X(x), X(y0 + 22)), k, font=font("PlexMonoSB.ttf", 19), fill=P["muted"], anchor="la"); d.text((X(x), X(y0 + 56)), v, font=font("OswaldBold.ttf", 64), fill=P["ink"], anchor="la")
+    d.line([X(60), X(y0 + 150), X(W - 60), X(y0 + 150)], fill=P["rule"], width=X(3)); f_ = font("Inter-Medium.otf", 29)
+    d.text((X(60), X(y0 + 175)), f"Off side {side_off} runs · leg side {side_leg} runs (recorded shots).", font=f_, fill=P["ink"], anchor="la")
+    d.text((X(60), X(y0 + 218)), "Red line = a boundary or a wicket. The line ends at the wagon-wheel spot; the rope radius is approximate.", font=font("Inter-Medium.otf", 24), fill=P["muted"], anchor="la")
+    d.text((X(60), X(1846)), "FROM THE DATA: Cricinfo capture (wagon wheel, runs, wickets). Positions are approximate (wagon grid scale assumed).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    im.resize((W, H), Image.LANCZOS).save(out)
+
+
+def over_poster(P, df, out, title, who, match, S=1.5):
+    """An over (or any six balls) on one page, data only: where each ball pitched (line and length zones), how it ended and who was in control."""
+    im = Image.new("RGB", (int(W * S), int(H * S)), P["bg"]); d = ImageDraw.Draw(im); X = lambda v: int(v * S)
+    _header(d, P, X, match, title, who)
+    rows = list(df.head(6).itertuples()); cw, chh = 320, 480
+    for i, r in enumerate(rows):
+        x0 = 60 + (i % 3) * (cw + 20); y0 = 340 + (i // 3) * (chh + 24)
+        wk = bool(r.wicket); d.rounded_rectangle([X(x0), X(y0), X(x0 + cw), X(y0 + chh)], radius=X(6), outline=P["accent"] if wk else P["muted"], width=X(4 if wk else 2))
+        d.text((X(x0 + 14), X(y0 + 12)), f"BALL {i + 1}", font=font("PlexMonoSB.ttf", 20), fill=P["muted"], anchor="la")
+        chip = {1: "OUT", 2: "OUT"}.get(0, ""); label_ = "OUT" if wk else (f"{int(r.runs)}" if r.runs else "·")
+        d.text((X(x0 + cw - 14), X(y0 + 6)), label_, font=font("OswaldBold.ttf", 44), fill=P["accent"] if (wk or r.runs >= 4) else P["ink"], anchor="ra")
+        px0, px1, py0, py1 = x0 + cw / 2 - 52, x0 + cw / 2 + 52, y0 + 70, y0 + chh - 120
+        d.rectangle([X(px0), X(py0), X(px1), X(py1)], fill=P["pitch"], outline=P["line"], width=X(2))
+        for frac in (.2, .4, .6, .8): d.line([X(px0), X(py0 + (py1 - py0) * frac), X(px1), X(py0 + (py1 - py0) * frac)], fill=mix(P["muted"], P["bg"], .5), width=X(1))
+        dl = type("D", (), dict(line=r.pitch_line, hand="R", wide=False))(); lx = line_x(dl); L = LEN_FROM_STUMPS.get(r.pitch_length)
+        if L is not None:
+            y = py0 + (py1 - py0) * (1 - L / PL) ; x = x0 + cw / 2 + lx / (PW / 2) * 50
+            d.ellipse([X(x - 12), X(y - 12), X(x + 12), X(y + 12)], fill=P["accent"] if wk else P["ink"], outline=P["bg"], width=X(2))
+        d.text((X(x0 + cw / 2), X(y1 := py1 + 14)), LEN_LABEL.get(r.pitch_length, r.pitch_length).title(), font=font("OswaldBold.ttf", 26), fill=P["ink"], anchor="ma")
+        d.text((X(x0 + cw / 2), X(y1 + 36)), LINE_LABEL.get(r.pitch_line, r.pitch_line).title(), font=font("Inter-Medium.otf", 22), fill=P["ink"], anchor="ma")
+        d.text((X(x0 + cw / 2), X(y1 + 66)), (str(r.shot).replace("_", " ").title() + (" · in control" if r.control == 1 else " · not in control")), font=font("PlexMono.ttf", 15), fill=P["muted"], anchor="ma")
+    n = len(rows); wk = sum(bool(r.wicket) for r in rows); runs = sum(int(r.runs) for r in rows); short = sum(r.pitch_length in ("SHORT", "SHORT_OF_A_GOOD_LENGTH") for r in rows); nic = sum(int(r.control) == 2 for r in rows)
+    y0 = 1400; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3)); f_ = font("Inter-Medium.otf", 30)
+    for j, ln in enumerate([f"{wk} wicket{'s' if wk != 1 else ''}, {runs} run{'s' if runs != 1 else ''} in {n} balls.", f"{short} of {n} balls were short of a good length or shorter; the batter was not in control of {nic}.", "Data only: where each ball pitched is the Cricinfo line and length zone; spots within a zone are drawn at its centre."]): d.text((X(60), X(y0 + 30 + j * 52)), ln, font=f_ if j < 2 else font("Inter-Medium.otf", 24), fill=P["ink"] if j < 2 else P["muted"], anchor="la")
+    d.text((X(60), X(1846)), "FROM THE DATA: Cricinfo capture (line, length, shot, control, runs, wickets).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    im.resize((W, H), Image.LANCZOS).save(out)
 
 
 if __name__ == "__main__":

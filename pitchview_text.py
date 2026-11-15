@@ -8,6 +8,7 @@ import json, re
 POS = ("first slip|second slip|third slip|fourth slip|fly slip|slip|gully|backward point|deep point|point|short cover|extra cover|deep extra cover|deep cover|cover point|cover|"
        "mid-?off|mid-?on|short mid-?wicket|deep mid-?wicket|mid-?wicket|backward square leg|deep backward square leg|deep square leg|square leg|short leg|leg slip|"
        "deep fine leg|fine leg|short third man|third man|long-?on|long-?off|cow corner|silly point|silly mid-?off|silly mid-?on|wicket-?keeper|keeper|bowler")
+POS = POS.replace("-?", "[- ]?")
 POS_RE = re.compile(r"\b(?:at|in|by|to)\s+(?:the\s+)?(%s)\b" % POS, re.I)
 SPEED_RE = re.compile(r"(\d{2,3}(?:\.\d)?)\s?kph", re.I)
 SIDE_RE = re.compile(r"(?:to|on)\s+his\s+(left|right)", re.I)
@@ -19,6 +20,21 @@ LOW_RE = re.compile(r"keeps? (?:a bit |a little )?low|stays? low|stayed low|shoo
 BOUNCE_RE = re.compile(r"extra bounce|bounces? (?:more|steeply)|steep bounce|bounce is tough|leaps? up|lifts?|rears?|climbs", re.I)
 SPIN_RE = re.compile(r"turn(?:s|ed|ing)? (?:sharply|a lot|big|away|in)|spun|spinning|grips?|drift", re.I)
 REVIEW_RE = re.compile(r"(umpire'?s call|ball-?tracking|three reds|hitting the stumps|missing the stumps|sonic|hotspot|review)", re.I)
+
+
+DROP_RE = re.compile(r"\b(dropped|drops|dropping|put down|grassed|spills?|spilled|burst through)\b", re.I)
+MISFIELD_RE = re.compile(r"\b(fumbl\w*|misfield\w*|mis-field\w*|lets it through|through the legs|bobbled?)\b", re.I)
+OVERTHROW_RE = re.compile(r"over-?throw", re.I)
+DIRECT_RE = re.compile(r"direct[- ]hit", re.I)
+RUNOUT_END_RE = re.compile(r"(keeper'?s end|bowler'?s end|non-striker'?s end|striker'?s end)", re.I)
+THROWER_RE = re.compile(r"\b([A-Z][a-z]+(?: [A-Z][a-z]+)?) (?:charges in|collects|picks up|gathers|fires|throws|swoops|runs in|is quick to collect)", re.I)
+TOWARDS_RE = re.compile(r"(?:towards|to|at)\s+(%s)\b" % POS, re.I)
+SPIN_CUE_RE = re.compile(r"\b(tossed up|flighted|flight|loop(?:s|ed|y)?|dragged down|googly|wrong'?un|doosra|carrom|arm ball|turning|turned|turns|spinner|spun)\b", re.I)
+DRIFT_RE = re.compile(r"drift\w*\s+(?:into|in to|towards)\s+the\s+(left|right)-?hander|drift\w*\s+(away)", re.I)
+COMEDOWN_RE = re.compile(r"(come[sd]? down the (?:track|wicket|pitch)|charg\w+|dances? down|steps? out|advanc\w+ down)", re.I)
+ROUND_RE = re.compile(r"round the wicket", re.I)
+LEFTARM_RE = re.compile(r"left-?arm|left-?armer", re.I)
+NOBALL_RE = re.compile(r"(no.?ball|overstep\w*|front.?foot|free hit)", re.I)
 
 
 def _norm_pos(p):
@@ -44,7 +60,7 @@ def ball_text(comments_or_path, inning, over):
         out = {"has_text": True}
         m = SPEED_RE.search(t1)
         if m: out["speed_kph"] = float(m.group(1))
-        pos = POS_RE.findall(t1)
+        tp = t1.replace("-", " "); pos = POS_RE.findall(tp)
         if pos: out["position"] = _norm_pos(pos[-1] if re.search(r"caught|catch|taken|snaffle", t1, re.I) else pos[0])
         m = re.search(r"(?:Caught|Stumped) by ([A-Z][A-Za-z'\-]+(?: [A-Z][A-Za-z'\-]+){0,2})!", t1)
         if m: out["catcher"] = m.group(1)
@@ -60,5 +76,22 @@ def ball_text(comments_or_path, inning, over):
         for w, code in LEN_WORDS:
             if w in low: out["length_text"] = code; break
         if REVIEW_RE.search(t1): out["review"] = True
+        if DROP_RE.search(t1) and re.search(r"catch|chance|edge", t1, re.I): out["drop"] = True
+        if MISFIELD_RE.search(t1): out["misfield"] = True
+        if OVERTHROW_RE.search(t1): out["overthrow"] = True
+        if DIRECT_RE.search(t1): out["direct_hit"] = True
+        m = RUNOUT_END_RE.search(t1)
+        if m: out["throw_end"] = m.group(1).lower().replace("'", "")
+        m = THROWER_RE.search(t1)
+        if m: out["thrower"] = m.group(1)
+        m = re.search(r"(?:drives?|hits?|pushes|pushed|flicks?|pulls?|cuts?|sweeps?|plays?|nudges?|works?|steers?)[^.]{0,40}?(?:towards|to)\s+(%s)\b" % POS, tp, re.I)
+        if m: out["shot_to"] = _norm_pos(m.group(1))
+        if SPIN_CUE_RE.search(t1): out["spin"] = True
+        m = DRIFT_RE.search(t1)
+        if m: out["drift"] = "in" if m.group(1) else "away"
+        if COMEDOWN_RE.search(t1): out["came_down"] = True
+        if ROUND_RE.search(t1): out["round"] = True
+        if LEFTARM_RE.search(t1): out["left_arm"] = True
+        if NOBALL_RE.search(t1): out["noball_text"] = NOBALL_RE.search(t1).group(1).lower()
         return out
     return {}

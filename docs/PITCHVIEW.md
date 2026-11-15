@@ -16,27 +16,30 @@
 | How far a fielder moved | start spot to the commentary-implied catch spot (1.4 m moving, 2.4 m diving) | estimate, labelled |
 | Keeper standing back | assumed for pace >= 120 kph | assumption, labelled |
 
-## Situations
-| Situation | Status | Notes |
-|---|---|---|
-| Bowled, lbw (bounce solved to hit the stumps; kept-low / extra bounce) | done (poster) | Cricinfo and Cricbuzz can disagree on length (Kohli 0.5: Short vs good length): shown, not hidden |
-| Caught at slip / gully / point / cover / mid-off ... (named position) | done (poster, animation) | catch spot = start spot + the described move |
-| Exceptional catch (dive, one hand, running) | done (animation of the move) | distance is an estimate; no player tracking exists in our data |
-| Keeper catch (edge, top-edge) | done | wagon spot is where the SHOT went, so it is not used for keeper catches |
-| Caught in the deep with no position named | partial | falls back to the wagon-wheel spot, marked "approx." |
-| Stumped | todo | keeper's gloves + stumps break; needs how far the batter was out of the crease (not in data) |
-| Run out | todo | throw path from the fielder's spot to the stumps; Cricinfo has dismissal code 4 (assumed), the fielder from the text |
-| Hit wicket, obstructing, handled, timed out | todo | rare; text-driven |
-| Boundary four / six (ball flight to the rope) | todo | wagon spot gives the direction; height unknown |
-| Dropped catch, misfield, overthrow | todo | text leads ("dropped"); no tracking |
-| Wide, no-ball, free hit, bouncer | todo | the pitch table has no wide/no-ball geometry; bouncers need height at the crease (model can do it) |
-| Spin (turn, drift, flight) | todo | needs a spin parameter; the commentary gives turn words; the current bounce model is pace-only |
-| Swing (conventional / reverse) and seam | partial | seam in/away is a small lateral move after pitching; swing before pitching not modelled |
-| Left-arm, round the wicket, left-hand bat | partial | batter hand handled; bowler arm/angle not yet |
-| DRS / ball-tracking (lbw: pitching, impact, hitting; umpire's call) | not planned for now | needs tracking data we do not have; the text only says "umpire's call" |
-| Batter's-eye view (balls faced as dots by control; shot arrows) | todo | all data exists in the table |
-| Keeper-eye view, captain's field-placement view | todo | positions from text and Cricbuzz field-change notes |
-| Partnership / over / spell sequences (six balls in one scene) | todo | the model is per ball; sequencing is a layout job |
+## Situations (renders: `python3 pitchview_demo.py` -> deliver/_pitchview_mockups/v3/, from real balls of the 4th ODI)
+| Situation | Status | Tested on | Notes |
+|---|---|---|---|
+| Bowled, lbw (bounce solved to the stumps; kept-low / extra bounce) | done | Kohli 0.5, Iyer 0.6 | Cricinfo vs Cricbuzz length disagreements are shown, not hidden |
+| Caught: named position, exceptional (dive), keeper (standing back assumed) | done, animated | Rohit 0.1 (first slip), Finn Allen 30.2 (short cover, dive), Seifert 11.6 (keeper) | fielder's move is an estimate |
+| Caught with no position named | partial | - | falls back to the wagon spot, marked approx. |
+| Stumped | done | Kelly 14.2 (Axar, flight + drift, came down the track) | how far out of the crease is NOT in the data: drawn illustrative |
+| Run out: direct hit by the bowler; throw from the deep | done | Henry (non-striker) 49.5; Fisher 49.6 | who was short and by how much is not in the data; the non-striker's name comes from out_id |
+| Four / six (ball flight to the rope, sector named) | done | Young 13.4 (six), Seifert 2.2 (four) | rope radius approximate (65 m), wagon spot extended to the rope when it sits inside |
+| Wide, no-ball (overstep foot), free hit | done | Jamieson 49.1 (wide), Kuldeep 25.4 (no-ball, also a four) | overstep distance is not in the data |
+| Misfield / fumble | done (from commentary leads) | Iyer 24.6 at extra cover | |
+| Dropped chance | built, NOT tested | no example in the captured commentary | needs a match whose text says a catch was put down |
+| Bouncer (height above the shoulder at the crease) | built (tag), NOT tested | none of the six short balls checked reached shoulder height at the model's speed | |
+| Spin (loop, drift, slower, lower release) | done (basic) | Axar 14.2, Kuldeep 25.4 | turn after pitching is not modelled (direction is rarely in the text) |
+| Seam in/away after pitching | done (small lateral move) | Henry over | |
+| Swing before pitching (conventional / reverse) | NOT built | | text cues exist ("swing"); needs a lateral arc in the pre-bounce phase |
+| Bowler arm / angle (left-arm, round the wicket) | tag only | | release point is not moved yet |
+| Batter's-eye and keeper's-eye cameras | done (rough framing) | Kohli 0.5, Rohit 0.1 | |
+| Over on one page (six landing spots, outcome, control) | done | Henry's first over | data only |
+| Where the runs went (wagon plot, any slice: over, spell, innings, match) | done | Will Young's innings | data only; fours/sixes/wicket in red |
+| Hit wicket, obstructing the field, handled the ball, timed out | NOT built | no examples in the captures | rare; text-driven |
+| Captain's field-placement view (the whole field at a moment) | NOT built | | positions are only known for the fielders the commentary names |
+| DRS / ball-tracking (pitching, impact, hitting, umpire's call) | not planned | | no tracking data |
+| Animation | catch only | Finn Allen 30.2 | the others are still posters; the same path code can animate them |
 
 ## Checks before any of this is published
 Every number goes through `dataops.verify` (two sources, or "in our archive"); the length disagreement on a ball is a CONFLICT until a third source settles it; commentary leads are paraphrased as facts, never quoted.
