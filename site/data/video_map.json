@@ -100,5 +100,29 @@
   "kind": "short",
   "title": "Flip: Abhishek vs the world's T20I openers",
   "format": "flip"
+ },
+ "9Iu25SLhXGg": {
+  "slug": "replay_5odi",
+  "kind": "long",
+  "title": "replay_5odi",
+  "format": "news"
+ },
+ "Ty2LP-UQV1c": {
+  "slug": "replay_5odi",
+  "kind": "short",
+  "title": "replay_5odi",
+  "format": "news"
+ },
+ "UAlk7dwMfjw": {
+  "slug": "data_nz_ind_series",
+  "kind": "long",
+  "title": "data_nz_ind_series",
+  "format": "news"
+ },
+ "SLTOXJ6CQqw": {
+  "slug": "data_nz_ind_series",
+  "kind": "short",
+  "title": "data_nz_ind_series",
+  "format": "news"
  }
 }
