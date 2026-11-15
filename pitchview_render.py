@@ -39,7 +39,7 @@ class LookCam(Cam):
 def mix(a, b, t): return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
 
 
-def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, fielder_xyz=None, trail=1.0):
+def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, fielder_xyz=None, trail=1.0, throw_trail=1.0):
     """The 3D picture. ball_xyz / fielder_xyz place the moving ball and the moving fielder (for the animation); trail < 1 draws only that fraction of the off-the-bat arc."""
     Wd, Hd = int(size[0] * S), int(size[1] * S); im = Image.new("RGB", (Wd, Hd), P["bg"]); d = ImageDraw.Draw(im)
     sc = lambda q: (q[0] * S, q[1] * S)
@@ -101,8 +101,9 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
     pre, post, bat = tr["pre"], tr["post"], tr["bat"]
     line3(pre + post, P["accent"], 7)
     if tr.get("throw"):
-        line3(tr["throw"], P["field"], 6, dash=2); e = tr["throw"][-1]; dot(e, 0.35, outline=P["accent"], width=int(6 * S))
-        label((e[0], e[1], 0.0), "STUMPS BROKEN", font("PlexMonoSB.ttf", 20), P["accent"], "la", dx=16, dy=12, bg=P["bg"])
+        th = tr["throw"]; line3(th[:max(2, int(len(th) * throw_trail))], P["field"], 6, dash=2); e = th[-1]; dot(e, 0.35, outline=P["accent"], width=int(6 * S))
+        if throw_trail >= 1.0: label((e[0], e[1], 0.0), "MISSED" if tr.get("kind") == "runout_miss" else "STUMPS BROKEN", font("PlexMonoSB.ttf", 20), P["accent"], "la", dx=16, dy=12, bg=P["bg"])
+        if tr.get("missed_stumps"): ms_ = tr["missed_stumps"]; dot(ms_, 0.30, outline=P["field"], width=int(4 * S))
     if tr.get("gloves"): dot(tr["gloves"], 0.30, outline=P["field"], width=int(6 * S)); label(tr["gloves"], "GLOVES", font("PlexMonoSB.ttf", 20), P["field"], "la", dx=16, dy=-6, bg=P["bg"])
     if tr["bounce"]:
         bx_, by_, _ = tr["bounce"]; line3([(bx_ + 0.9 * math.cos(a / 24 * 2 * math.pi), by_ + 0.9 * math.sin(a / 24 * 2 * math.pi), 0) for a in range(25)], P["accent"], 4)
@@ -120,7 +121,10 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
         q0 = cam.p((sx, sy, 0.02)); left_side = q0 and q0[0] < 380
         label((sx, sy, 0.02), (f["name"] or "fielder").upper() + " · " + f["position"].upper(), font("PlexMonoSB.ttf", 22), P["ink"], "la" if left_side else "ra", dx=22 if left_side else -22, dy=-4, bg=P["bg"])
         kind_ = tr.get("kind", "caught")
+        if kind_ == "dropped": label((cx_, cy_, 0.02), "DROPPED", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
         if kind_ == "caught": label((cx_, cy_, 0.02), "CATCH" if not f.get("approx") else "CATCH (APPROX.)", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
+    if tr.get("cross"):                                              # a dropped chance: a cross where the ball went down
+        cxm = tr["cross"]; line3([(cxm[0] - .5, cxm[1] - .5, cxm[2]), (cxm[0] + .5, cxm[1] + .5, cxm[2])], P["accent"], 8); line3([(cxm[0] - .5, cxm[1] + .5, cxm[2]), (cxm[0] + .5, cxm[1] - .5, cxm[2])], P["accent"], 8)
     if ball_xyz: dot(ball_xyz, 0.17, fill=P["ink"])
     if fielder_xyz: dot(fielder_xyz, 0.42, fill=P["field"])
     return im, cam
@@ -187,10 +191,10 @@ def wrap(text, f, width):
     return lines + [cur] if cur else lines
 
 
-def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.0, caption=None, match=None):
+def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.0, caption=None, match=None, throw_trail=1.0):
     sit = situation(dl, tr)
     """Swiss layout: hairline rules, the ball number, a 3D picture, a side-on bounce panel, three facts, the result in words, and the 'illustrative' note."""
-    sm, _ = scene(P, cam, dl, tr, S=S, size=(W, 760), show_gate=(sit["kind"] in ("bowled", "lbw", "ball", "wide", "no_ball", "dropped", "misfield") and cam.F > 1800), ball_xyz=ball_xyz, fielder_xyz=fielder_xyz, trail=trail)
+    sm, _ = scene(P, cam, dl, tr, S=S, size=(W, 760), show_gate=(sit["kind"] in ("bowled", "lbw", "ball", "wide", "no_ball", "dropped", "misfield") and cam.F > 1800), ball_xyz=ball_xyz, fielder_xyz=fielder_xyz, trail=trail, throw_trail=throw_trail)
     im = Image.new("RGB", (int(W * S), int(H * S)), P["bg"]); d = ImageDraw.Draw(im); X = lambda v: int(v * S)
     im.paste(sm, (0, X(330)))
     d.line([X(60), X(96), X(W - 60), X(96)], fill=P["rule"], width=X(4))
@@ -229,25 +233,37 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
     else:
         for ln in sit["lines"]: lines += wrap(ln, f_, 520)
         if sit["kind"] not in ("ball", "wide", "no_ball"): lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
-    for tg in sit["tags"]: lines += wrap(tg.capitalize() + ".", font("Inter-Medium.otf", 24), 520)
-    for j, ln in enumerate(lines[:7]): d.text((X(500), X(yb + 4 + j * 34)), ln, font=f_, fill=P["ink"], anchor="la")
+    for tg in sit["tags"]: lines += wrap(tg.capitalize() + ".", font("Inter-Medium.otf", 22), 540)
+    small = len(lines) > 6; f2 = font("Inter-Medium.otf", 23 if small else 27)
+    for j, ln in enumerate(lines[:10]): d.text((X(500), X(yb + 4 + j * (28 if small else 34))), ln, font=f2, fill=P["ink"], anchor="la")
     foot = [f"MOCK-UP · ILLUSTRATIVE: bounce, height, arcs and the fielder's move are modelled ({dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter).", "From the data: zones, shot, control, dismissal, catcher. From commentary (leads): fielding position, speed, how it behaved."]
     for i, ln in enumerate(foot): d.text((X(60), X(1846 + i * 26)), ln, font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
     if caption: d.text((X(W // 2), X(1290)), caption, font=font("OswaldBold.ttf", 34), fill=P["ink"], anchor="mm")
     im.resize((W, H), Image.LANCZOS).save(out)
 
 
-def animate(P, dl, tr, out_mp4, match, seconds=5.0, fps=24, S=1.0):
-    """The ball off the bat while the fielder moves from his start spot to the catch (a dive rises and drops). Silent preview, 720x1280."""
-    cam = follow_cam(tr, -50, 32); n = int(seconds * fps); fr = out_mp4[:-4] + "_frames/"; os.makedirs(fr, exist_ok=True)
+def animate(P, dl, tr, out_mp4, match, seconds=6.0, fps=24, S=1.0, orbit=(-64, -26)):
+    """Silent preview, 720x1280: the delivery (slowed), then what happened next, with the camera orbiting slowly.
+    Catch: ball off the bat while the fielder moves to the catch. Run out: ball to the fielder, then the throw, then the stumps. Boundary: the ball to the rope. Others: the delivery and its result."""
+    sit = situation(dl, tr); fr = out_mp4[:-4] + "_frames/"; os.makedirs(fr, exist_ok=True)
     for f in glob.glob(fr + "*.png"): os.remove(f)
-    bat = tr["bat"]; fp = fielder_path(tr["field"]) if tr.get("field") else []
+    n = int(seconds * fps); delivery = tr["pre"] + tr["post"]; bat = tr["bat"]; throw = tr.get("throw") or []; fp = fielder_path(tr["field"]) if (tr.get("field") and tr["field"].get("moved_m", 0) > 0.2) else []
+    w_del, w_bat, w_thr = 0.34, (0.36 if bat else 0.0), (0.22 if throw else 0.0)
     for i in range(n):
-        t = i / (n - 1); a = min(1.0, max(0.0, (t - 0.12) / 0.78)); k = int(a * (len(bat) - 1))
-        ball = bat[k] if bat else None; fx = fp[min(len(fp) - 1, int(a * (len(fp) - 1)))] if fp else None
-        poster(P, dl, tr, cam, fr + f"f{i:03d}.png", S=S, ball_xyz=ball, fielder_xyz=fx, trail=max(0.05, a), match=match)
+        t = i / (n - 1); yaw = orbit[0] + (orbit[1] - orbit[0]) * t; cam = follow_cam(tr, yaw, 30)
+        a1 = min(1.0, t / w_del); ball = delivery[int(a1 * (len(delivery) - 1))]; trail = 1.0 if not bat else 0.0; thr = 1.0 if not throw else 0.0; fx = None
+        if t > w_del and bat:
+            a2 = min(1.0, (t - w_del) / w_bat); ball = bat[int(a2 * (len(bat) - 1))]; trail = max(0.05, a2)
+            if fp: fx = fp[min(len(fp) - 1, int(a2 * (len(fp) - 1)))]
+        if t > w_del + w_bat and throw:
+            a3 = min(1.0, (t - w_del - w_bat) / w_thr); ball = throw[int(a3 * (len(throw) - 1))]; thr = max(0.05, a3); trail = 1.0
+        if t > w_del + w_bat + w_thr: trail, thr = 1.0, 1.0
+        if t <= w_del: trail = 0.0 if bat else 1.0; thr = 0.0 if throw else 1.0
+        poster(P, dl, tr, cam, fr + f"f{i:03d}.png", S=S, ball_xyz=ball, fielder_xyz=fx, trail=max(trail, 0.02) if bat else 1.0, throw_trail=thr if throw else 1.0, match=match)
         Image.open(fr + f"f{i:03d}.png").resize((720, 1280), Image.LANCZOS).save(fr + f"f{i:03d}.png")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(fps), "-i", fr + "f%03d.png", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", out_mp4], check=True)
+    for f in glob.glob(fr + "*.png"): os.remove(f)
+    os.rmdir(fr)
 
 
 def _header(d, P, X, match, title_big, sub_right):
@@ -321,6 +337,31 @@ def over_poster(P, df, out, title, who, match, S=1.5):
     y0 = 1400; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3)); f_ = font("Inter-Medium.otf", 30)
     for j, ln in enumerate([f"{wk} wicket{'s' if wk != 1 else ''}, {runs} run{'s' if runs != 1 else ''} in {n} balls.", f"{short} of {n} balls were short of a good length or shorter; the batter was not in control of {nic}.", "Data only: where each ball pitched is the Cricinfo line and length zone; spots within a zone are drawn at its centre."]): d.text((X(60), X(y0 + 30 + j * 52)), ln, font=f_ if j < 2 else font("Inter-Medium.otf", 24), fill=P["ink"] if j < 2 else P["muted"], anchor="la")
     d.text((X(60), X(1846)), "FROM THE DATA: Cricinfo capture (line, length, shot, control, runs, wickets).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    im.resize((W, H), Image.LANCZOS).save(out)
+
+
+def field_poster(P, comments, inning, over, df, out, title, who, match, hand="R", S=1.5):
+    """The field as the commentary describes it for one over: every fielding position it names, placed on the ground (typical spots, mirrored for left-handers), with the shots' directions as thin lines.
+    This is NOT a full field: only fielders the commentary mentions appear, and the poster says so."""
+    from pitchview_text import ball_text
+    im = Image.new("RGB", (int(W * S), int(H * S)), P["bg"]); d = ImageDraw.Draw(im); X = lambda v: int(v * S)
+    _header(d, P, X, match, title, who); cx, cy, sc = W / 2, 790, 440 / (BOUNDARY_M * 1.02); _ground(d, P, X, cx, cy, sc)
+    seen = {}
+    for i in range(1, 7):
+        f = ball_text(comments, inning, round(over + i / 10.0, 1))
+        for key in ("position", "shot_to"):
+            pos = f.get(key)
+            if pos in POSITIONS and pos not in ("bowler", "keeper"): seen.setdefault(pos, i)
+    for _, r in df.iterrows():
+        if r.wagon_x > 0:
+            ex, ey = wagon_world(r.wagon_x, r.wagon_y); d.line([X(cx), X(cy + PL / 2 * sc), X(cx + ex * sc), X(cy + (ey - PL / 2) * sc)], fill=mix(P["muted"], P["bg"], .4), width=X(2))
+    for pos, i in seen.items():
+        x, y = spot(pos, hand); px, py = cx + x * sc, cy + (y - PL / 2) * sc
+        d.ellipse([X(px - 9), X(py - 9), X(px + 9), X(py + 9)], fill=P["ink"]); d.text((X(px + 14), X(py)), pos.upper(), font=font("PlexMonoSB.ttf", 17), fill=P["ink"], anchor="lm")
+    y0 = 1330; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3))
+    d.text((X(60), X(y0 + 28)), f"{len(seen)} fielding position{'s' if len(seen) != 1 else ''} named by the commentary for this over.", font=font("Inter-Medium.otf", 30), fill=P["ink"], anchor="la")
+    d.text((X(60), X(y0 + 76)), "This is not the full field: only fielders the commentary mentions appear. Spots are typical for each position.", font=font("Inter-Medium.otf", 24), fill=P["muted"], anchor="la")
+    d.text((X(60), X(1846)), "LEADS: Cricbuzz commentary (positions named); DATA: Cricinfo wagon wheel (shot lines). Positions are typical spots, not measured.", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
     im.resize((W, H), Image.LANCZOS).save(out)
 
 

@@ -56,6 +56,7 @@ class Delivery:
     position: str = ""; side: str = ""; exceptional: str = ""; bounce: str = ""; movement: str = ""
     four: bool = False; six: bool = False; wide: bool = False; noball: bool = False; byes: int = 0; legbyes: int = 0
     spin: bool = False; drift: str = ""; came_down: bool = False; round_wicket: bool = False; left_arm: bool = False
+    swing: str = ""; free_hit: bool = False; events: list = field(default_factory=list); out_batter: str = ""
 
 
 def _dismissal_text(js, batter):
@@ -78,10 +79,10 @@ def infer_hand(d, batter):
     return "L" if v < 0 else "R"
 
 
-def from_table(csv, capture_json, inning, over, hand=None, cricbuzz=None, **assume):
+def from_table(csv, capture_json, inning, over, hand=None, cricbuzz=None, nth=0, **assume):
     d = pd.read_csv(csv); r = d[(d.inning == inning) & (d.overs.round(1) == round(over, 1))]
     if r.empty: raise ValueError(f"no ball {over} in innings {inning}")
-    r = r.iloc[0]; hand = hand or infer_hand(d, r.batter); js = open(capture_json, encoding="utf-8").read() if capture_json else ""
+    row_idx = r.index[nth]; r = r.iloc[nth]; hand = hand or infer_hand(d, r.batter); js = open(capture_json, encoding="utf-8").read() if capture_json else ""
     out_name = r.batter                                                  # who was dismissed: the striker, unless a run-out took the non-striker (out_id differs from batter_id)
     if bool(r.wicket) and pd.notna(r.out_id) and int(r.out_id) != int(r.batter_id):
         nm = d[d.batter_id == int(r.out_id)].batter; out_name = nm.iloc[0] if len(nm) else r.batter
@@ -92,15 +93,20 @@ def from_table(csv, capture_json, inning, over, hand=None, cricbuzz=None, **assu
     if m: fielder = m.group(2).strip()
     dl = Delivery(bowler=r.bowler, batter=r.batter, over=float(r.overs), line=r.pitch_line, length=r.pitch_length, shot=str(r.shot), control=int(r.control), runs=int(r.runs),
                   wicket=bool(r.wicket), how=how, fielder=fielder, keeper_catch=bool(m and m.group(1)), wagon=(float(r.wagon_x), float(r.wagon_y)), hand=hand, **assume)
+    prev = d[(d.inning == inning) & (d.index < row_idx)].tail(1)               # the previous delivery in the order bowled
+    dl.free_hit = bool(len(prev) and int(prev.iloc[0].noballs) > 0)          # a no-ball is followed by a free hit (ODI/T20I rule)
     dl.out_batter = out_name; dl.four, dl.six, dl.wide, dl.noball = bool(r.four), bool(r.six), int(r.wides) > 0, int(r.noballs) > 0; dl.byes, dl.legbyes = int(r.byes), int(r.legbyes)
     if cricbuzz:
-        f = ball_text(cricbuzz, inning, over); dl.facts = f
+        f = ball_text(cricbuzz, inning, over, nth=nth); dl.facts = f
+        dl.events = f.get("events", []); dl.swing = f.get("swing", "")
+        if f.get("bouncer") and not dl.bounce: dl.bounce = "extra"
         dl.spin = bool(f.get("spin")); dl.drift = f.get("drift", ""); dl.came_down = bool(f.get("came_down")); dl.round_wicket = bool(f.get("round")); dl.left_arm = bool(f.get("left_arm"))
         if dl.spin and "pace_kmh" not in assume and "speed_kph" not in f: dl.pace_kmh, dl.release_z, dl.restitution = 85.0, 2.0, 0.50     # a spinner: slower, lower release, less bounce (assumptions)
         if "speed_kph" in f and "pace_kmh" not in assume: dl.pace_kmh = f["speed_kph"]
         if f.get("catcher"): dl.fielder = f["catcher"]
         dl.position = f.get("position", ""); dl.side = f.get("side", ""); dl.exceptional = f.get("exceptional", ""); dl.bounce = f.get("bounce", ""); dl.movement = f.get("movement", "")
         if f.get("length_text") and f["length_text"] != dl.length: dl.length_table = dl.length; dl.length_note = "conflict"
+    if dl.how == "caught" and dl.fielder and dl.fielder.split()[-1] in dl.bowler and not dl.keeper_catch: dl.position = "bowler"          # caught and bowled
     return dl
 
 
@@ -114,15 +120,22 @@ def wagon_world(wx, wy):
     return ((wx - 180) * K, PL - (wy - 180) * K)
 
 
+def release_x(dl):
+    """Where the bowler lets go across the crease: a right-armer over the wicket releases on the leg side of a right-hander's stumps, round the wicket on the off side; a left-armer mirrors (illustrative)."""
+    right = 0 if dl.left_arm else 1; over = 0 if dl.round_wicket else 1
+    return 0.75 if right == over else -0.75
+
+
 def _flight(dl, yb, e, xb, v, n, zr, full_toss=False):
     """Ball height along the pitch for a given bounce spot yb and restitution e: pre-bounce arc, then the rebound (speed loses 20%). Returns (pre, post, gate_z, stump_z)."""
-    xr = xb * 0.3 + (0.25 if dl.hand == "R" else -0.25); yr = 1.0; gate_y = PL - 1.22
+    xr = release_x(dl); yr = 1.0; gate_y = PL - 1.22
     t1 = (yb - yr) / v; vz0 = (-zr + 0.5 * G * t1 * t1) / t1; vzi = vz0 - G * t1; vzp = -e * vzi; v1 = 0.80 * v; t2 = (PL - yb) / v1
     mv = {"in": 0.35, "away": -0.35}.get(dl.movement, 0.0) * (1 if dl.hand == "R" else -1) * -1      # seam movement after pitching: 'in' drifts towards the batter's body (leg side), 'away' towards off
     xs = xb - mv
     loft = 0.9 if dl.spin else 0.0; legdir = 1 if dl.hand == "R" else -1                               # a spinner's ball loops; drift bows the path (both illustrative)
     dr = {"in": -0.25, "away": 0.25}.get(dl.drift, 0.0) * legdir
-    pre = [(lerp(xr, xb, a) + dr * math.sin(math.pi * a), lerp(yr, yb, a), max(0.0, zr + vz0 * (a * t1) - 0.5 * G * (a * t1) ** 2 + loft * math.sin(math.pi * a))) for a in np.linspace(0, 1, n)]
+    sw = {"in": 0.40, "away": -0.40}.get(dl.swing, 0.0) * legdir                                       # swing before pitching: a late bow in the air (illustrative; direction from the commentary)
+    pre = [(lerp(xr, xb, a) + dr * math.sin(math.pi * a) + sw * math.sin(math.pi * a) ** 2 * a, lerp(yr, yb, a), max(0.0, zr + vz0 * (a * t1) - 0.5 * G * (a * t1) ** 2 + loft * math.sin(math.pi * a))) for a in np.linspace(0, 1, n)]
     post = [(lerp(xb, xs, a), lerp(yb, PL, a), max(0.0, vzp * (a * t2) - 0.5 * G * (a * t2) ** 2)) for a in np.linspace(0, 1, n)]
     tg = (gate_y - yb) / v1; gate_z = max(0.0, vzp * tg - 0.5 * G * tg * tg); stump_z = max(0.0, vzp * t2 - 0.5 * G * t2 * t2)
     return pre, post, gate_z, stump_z, xs
@@ -139,7 +152,7 @@ def trajectory(dl, n=60):
     e = {"low": 0.42, "extra": 0.70}.get(dl.bounce, dl.restitution)
     length = dl.length; note = dl.length_note
     if full_toss:
-        yb = None; xr = xb * 0.3 + (0.25 if dl.hand == "R" else -0.25); t = (gate_y - 1.0) / v; vz0 = (0.95 - zr + 0.5 * G * t * t) / t
+        yb = None; xr = release_x(dl); t = (gate_y - 1.0) / v; vz0 = (0.95 - zr + 0.5 * G * t * t) / t
         pre = [(lerp(xr, xb, a), lerp(1.0, gate_y, a), zr + vz0 * (a * t) - 0.5 * G * (a * t) ** 2) for a in np.linspace(0, 1, n)]; post = []; gate_z = pre[-1][2]; bounce = None; xs = xb
     else:
         def solve(L):

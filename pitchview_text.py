@@ -37,6 +37,15 @@ LEFTARM_RE = re.compile(r"left-?arm|left-?armer", re.I)
 NOBALL_RE = re.compile(r"(no.?ball|overstep\w*|front.?foot|free hit)", re.I)
 
 
+SWING_RE = re.compile(r"(?:swing\w*|shap(?:es|ed|ing)|banana)[^.]{0,25}?\b(away|in)\b|\b(reverse swing|late swing|conventional swing)", re.I)
+EDGE_RE = re.compile(r"\b(inside edge|outside edge|top edge|thick edge|thin edge|leading edge|under-?edge|bottom edge|edge[sd]?)\b", re.I)
+BODY_RE = re.compile(r"\b(helmet|grille|on the pad|thigh pad|on the body|ribs|gloves?|finger|forearm|hit on the (?:arm|shoulder|chest|head)|rapped)\b", re.I)
+BOUNCER_RE = re.compile(r"\b(bouncer|banged in short|short ball|short and (?:rising|nasty)|bumper)\b", re.I)
+DROPPER_RE = re.compile(r"\b([A-Z][a-z]+)\b[^.]{0,45}?(?:puts? (?:him )?down|drops?|dropped|spill\w*|lets it go|puts down)|([A-Z][a-z]+) (?:- |is )the culprit|[Ff]lies to ([A-Z][a-z]+)")
+REVIEW_OUT_RE = re.compile(r"(three reds|umpire'?s call|overturn\w*|decision stays|stays with|clipping|missing the stumps|going over|pitched outside leg|pitching outside leg|impact outside|inside edge|ultra ?edge)", re.I)
+HIT_WICKET_RE = re.compile(r"hit[- ]wicket|treads on|dislodg", re.I)
+
+
 def _norm_pos(p):
     p = re.sub(r"\s+", " ", p.lower().replace("-", " ")).strip()
     return {"midoff": "mid off", "midon": "mid on", "midwicket": "mid wicket", "wicketkeeper": "keeper", "wicket keeper": "keeper"}.get(p.replace(" ", ""), p).replace("mid wicket", "midwicket")
@@ -46,16 +55,17 @@ def load(path):
     return json.load(open(path, encoding="utf-8"))["comments"]
 
 
-def ball_text(comments_or_path, inning, over):
+def ball_text(comments_or_path, inning, over, nth=0):
     """Facts for one ball (inning 1/2, over like 0.1). Returns {} if the capture has no text for it."""
     cs = load(comments_or_path) if isinstance(comments_or_path, str) else comments_or_path
-    key = round(float(over), 1)
+    key = round(float(over), 1); seen = 0
     for c in cs:
         t = c.get("commText") or ""
         try: ov = round(float(c.get("overNumber")), 1)
         except (TypeError, ValueError): continue
         if ov != key or c.get("inningsId") not in (inning, str(inning), None): continue
         if not (c.get("ballNbr") or 0) or len(t) < 40: continue
+        if seen < nth: seen += 1; continue                                  # the nth delivery with this over number (no-balls and wides are bowled again under the same number)
         t1 = re.sub(r"B\d\$", " ", re.sub(r"\s+", " ", t))
         out = {"has_text": True}
         m = SPEED_RE.search(t1)
@@ -93,5 +103,21 @@ def ball_text(comments_or_path, inning, over):
         if ROUND_RE.search(t1): out["round"] = True
         if LEFTARM_RE.search(t1): out["left_arm"] = True
         if NOBALL_RE.search(t1): out["noball_text"] = NOBALL_RE.search(t1).group(1).lower()
+        ev = [e for e in str(c.get("event") or "").split(",") if e and e not in ("NONE", "over-break")]
+        if ev: out["events"] = ev
+        m = SWING_RE.search(t1)
+        if m: out["swing"] = (m.group(1) or "reverse").lower()
+        m = EDGE_RE.search(t1)
+        if m: out["edge"] = m.group(1).lower().replace("-", " ")
+        if BODY_RE.search(t1): out["body"] = BODY_RE.search(t1).group(1).lower()
+        if BOUNCER_RE.search(t1): out["bouncer"] = True
+        if "DROPPED" in ev or DROP_RE.search(t1):
+            m = DROPPER_RE.search(t1)
+            if m: out["dropper"] = next(g for g in m.groups() if g)
+            out["drop"] = True
+        if "RUNOUT_MISS" in ev: out["runout_miss"] = True
+        if "UDRS" in ev or re.search(r"\breview\b", t1, re.I):
+            out["review"] = True; m = REVIEW_OUT_RE.findall(t1); out["review_notes"] = list(dict.fromkeys(x.lower() for x in m))[:3]
+        if HIT_WICKET_RE.search(t1): out["hit_wicket"] = True
         return out
     return {}
