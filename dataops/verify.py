@@ -65,7 +65,7 @@ class Claims:
 def gate(spec):
     """None if the spec may be built/uploaded; otherwise a message. Specs without provenance_required (older videos) pass."""
     if not spec.get("provenance_required"): return None
-    p = f"{ROOT}/data/provenance/{spec['slug']}.json"
+    p = f"{ROOT}/data/provenance/{spec['slug'].split('__')[0]}.json"          # Instagram / reel / full variants (slug__igshort ...) share their video's provenance
     if not os.path.exists(p): return f"{spec['slug']}: provenance_required but {p} is missing: run the generator (it must call dataops.verify)"
     bad = [i for i in json.load(open(p))["claims"] if i["status"] in ("UNVERIFIED", "CONFLICT")]
     if bad: return f"{spec['slug']}: {len(bad)} unverified/conflicting claims, e.g. " + "; ".join(f"{b['claim']} [{b['status']}]" for b in bad[:4])
