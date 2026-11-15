@@ -1,0 +1,37 @@
+{
+ "Test": {
+  "total": {
+   "matches": 601,
+   "won": 187,
+   "lost": 188,
+   "tied": 1,
+   "drawn": 225
+  },
+  "as_of": "v  at Sinhalese Sports Club Cricket Ground, Colombo, 2nd Test, 23 August - 27 August 2026.",
+  "source": "https://en.wikipedia.org/wiki/Template:India_Test_cricket_records_by_opponent (cites ESPNcricinfo results summaries)"
+ },
+ "ODI": {
+  "total": {
+   "matches": 1088,
+   "won": 579,
+   "lost": 454,
+   "tied": 10,
+   "no_result": 45
+  },
+  "as_of": "v  at Bay Oval, Tauranga, 13 November 2026",
+  "source": "https://en.wikipedia.org/wiki/Template:India_ODI_cricket_records_by_opponent (cites ESPNcricinfo results summaries)"
+ },
+ "T20I": {
+  "total": {
+   "matches": 303,
+   "won": 201,
+   "lost": 85,
+   "tied": 1,
+   "tie_win": 6,
+   "tie_loss": 0,
+   "no_result": 10
+  },
+  "as_of": "v  at Seddon Park, Hamilton, New Zealand|Hamilton, 1 November 2026",
+  "source": "https://en.wikipedia.org/wiki/Template:India_T20I_cricket_records_by_opponent (cites ESPNcricinfo results summaries)"
+ }
+}

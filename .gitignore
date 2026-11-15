@@ -11,6 +11,10 @@ __pycache__/
 # Sportmonks feed data: re-fetch with fetch_ipl.py (not redistributable)
 data/*
 !data/abhishek_t20i_ids.json
+# small, needed by the verification gate and audits: keep in git
+!data/provenance/
+!data/audit/
+!data/reference/
 # secrets
 .env
 *.key
