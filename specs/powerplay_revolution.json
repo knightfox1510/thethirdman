@@ -808,5 +808,42 @@
  ],
  "captions": "lab",
  "series": "lab",
- "captions_long": false
+ "captions_long": false,
+ "yt": {
+  "long": {
+   "title": "IPL Powerplay Revolution: From 6.9 to 10.1 an Over | Data Story Ep 2",
+   "description": "IPL powerplay analysis: teams now score over ten an over in overs 1-6, up from under seven in 2013. We went through every IPL ball since 2013 to see what changed.\n\nIn 2013, IPL teams scored 6.9 an over in the powerplay. In 2026 it was 10.1. Sixty-run powerplays went from 5% of innings to 51%, and eighty-plus powerplays from zero to seventeen in a season. The record is Sunrisers Hyderabad's 125/0 against Delhi Capitals on 20 April 2024. The twist: wickets per match barely moved (2.8 to 3.2). The risk stayed the same, the mindset changed: the Impact Player rule, openers who attack from ball one, and sixes as the plan.\n\nChapters:\n0:00 Under 7 an over to over 10\n0:15 The take-off, 2013 to 2026\n0:36 60+ powerplays\n0:49 80+ powerplays\n0:59 The record: SRH 125/0\n1:10 The twist: same risk\n1:28 What changed\n1:49 Verdict\n\nMethod: Sportmonks ball-by-ball for every IPL match 2013-2026, super overs excluded, powerplay = overs 1-6. Figures are from our own archive. The 125/0 record is also reported by news outlets, and no 2026 innings passed it (2026 best: Punjab Kings 116/0 vs Delhi Capitals).\n\n#IPL #IPL2026 #Powerplay #DataStory",
+   "tags": [
+    "IPL powerplay",
+    "IPL powerplay run rate",
+    "IPL 2026",
+    "IPL powerplay analysis",
+    "IPL data",
+    "T20 powerplay",
+    "Impact Player rule",
+    "Abhishek Sharma",
+    "Travis Head",
+    "SRH 125/0",
+    "IPL stats",
+    "cricket data story",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "IPL Powerplay Now Scores 10 an Over | Data Story Ep 2 #Shorts",
+   "description": "IPL teams now score over 10 an over in the powerplay, up from under 7 in 2013. 80+ powerplays went from zero to seventeen in a season, but wickets barely changed. Full breakdown on the channel.\n\nFigures from our own archive: Sportmonks ball-by-ball, IPL 2013-2026, overs 1-6, super overs excluded.\n\n#IPL #IPL2026 #Powerplay #Shorts",
+   "tags": [
+    "IPL powerplay",
+    "IPL powerplay run rate",
+    "IPL 2026",
+    "IPL powerplay analysis",
+    "IPL data",
+    "T20 powerplay",
+    "Impact Player rule",
+    "Abhishek Sharma",
+    "Travis Head",
+    "#Shorts"
+   ]
+  }
+ }
 }
