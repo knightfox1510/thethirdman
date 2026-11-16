@@ -175,8 +175,14 @@
       if (mt0 && mt0.state && mt0.state !== "POST") { await log(s, `  match is ${mt0.state === "PRE" ? "upcoming" : "not finished"}: skipped, nothing saved`); await advance(s); return goNext(s); }
       if (name === "comm") {
         let n = await T.loadAll();
-        const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
-        for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); } await log(s, `  ${n} balls so far`);
+        const tm = await T.eachTeam();                                                   // the team dropdown ("SL v") switches the innings on Cricinfo: do every team
+        await log(s, tm.found ? `  team control: ${tm.tried.join(" | ")}` : "  team control: none found on this page (using innings tabs, if any)");
+        if (tm.found) n = T.count();
+        else {
+          const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
+          for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); }
+        }
+        await log(s, `  ${n} balls so far, innings seen: ${T.innings().join(", ") || "?"}`);
       } else { if (!(await wait(2500))) return; T.grabText(); T.save(); }
     }
     if (stopFlag) return;
@@ -184,18 +190,19 @@
     const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
     if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
     let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
-    const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
+    const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}; innings ${inf.innings.join(", ") || "?"}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
     const needs = mtn.hasCommentary !== false, have = T.count();
-    if (needs && have < 150) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
+    const twoInn = T.innings().length >= 2 || !needs;
+    if (needs && (have < 150 || !twoInn)) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
       s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
-      if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
+      if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls / innings ${T.innings().join(", ") || "?"}: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
     }
     const balls = T.saveJson();                                                        // one json per match
-    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && balls < 150 };
+    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || T.innings().length < 2), innings: T.innings() };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && balls < 150 ? "  (STILL LOW after 3 tries: marked incomplete, use Redo low captures later)" : ""}`);
-    if (!(needs && balls < 150)) await T.clear();                                      // the match is on disk: free its stored copy
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || T.innings().length < 2) ? "  (STILL INCOMPLETE after 3 tries: marked incomplete; innings seen " + (T.innings().join(", ") || "?") + ")" : ""}`);
+    if (!(needs && (balls < 150 || T.innings().length < 2))) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
 

@@ -138,6 +138,43 @@
     for (let i = 0; i < 4; i++) { window.scrollBy(0, vh * 0.12); await pause(160); }
     for (let i = 0; i < 2; i++) { window.scrollBy(0, -vh * 0.15); await pause(160); }
   };
+  // The commentary page shows ONE innings at a time. On Cricinfo the switch is a team dropdown ("SL v") beside the sort ("New") and the filter ("Full Commentary"); other layouts use innings tabs or a <select>.
+  // eachTeam() opens that control, switches to every other team and loads that innings' commentary completely. It reports what it found so the log shows it.
+  const teamNames = () => { const m = (document.title + " " + ((document.querySelector('meta[property="og:title"]') || {}).content || "")).match(/([A-Z][\w .'-]+?) (?:vs|v) ([A-Z][\w .'-]+?)(?:,|\s-|\s\d|$)/); return m ? [m[1].trim(), m[2].trim()] : []; };
+  const vis = (e) => !!(e && e.offsetParent !== null && e.getBoundingClientRect().height > 0);
+  const CODE_RE = /^[A-Z]{2,5}$/;
+  const findTeamControl = () => {
+    for (const sel of document.querySelectorAll("select")) {
+      const o = [...sel.options].map((x) => x.text.trim()); if (vis(sel) && o.length >= 2 && o.length <= 4 && o.every((t) => CODE_RE.test(t) || teamNames().some((n) => t.includes(n) || n.includes(t)))) return { kind: "select", el: sel, label: o[sel.selectedIndex] };
+    }
+    const btns = [...document.querySelectorAll("button, [role=button], [role=combobox], [aria-haspopup]")].filter((b) => vis(b) && !b.closest(AD));
+    const anchor = btns.find((b) => /^\s*(full commentary|highlights|commentary)\b/i.test(b.textContent || ""));             // the team control sits beside the "Full Commentary" filter
+    const near = anchor ? btns.filter((b) => b.parentElement === anchor.parentElement || (b.parentElement && b.parentElement.parentElement === anchor.parentElement)) : btns;
+    const names = teamNames();
+    const hit = near.find((b) => { const t = (b.textContent || "").trim(); return t.length <= 24 && (CODE_RE.test(t) || names.some((n) => t === n || t.startsWith(n))); });
+    return hit ? { kind: "button", el: hit, label: (hit.textContent || "").trim() } : null;
+  };
+  const eachTeam = async (btn) => {
+    const done = [], info = { found: false, tried: [] }; let ctl = findTeamControl();
+    if (!ctl) return info; info.found = true; const first = ctl.label; done.push(first); info.tried.push(first + " (shown first)");
+    const names = teamNames();
+    for (let round = 0; round < 4 && !window.__ttmStop; round++) {
+      ctl = findTeamControl(); if (!ctl) break;
+      let target = null;
+      if (ctl.kind === "select") { const o = [...ctl.el.options].find((x) => !done.includes(x.text.trim())); if (!o) break; target = o.text.trim(); ctl.el.value = o.value; ctl.el.dispatchEvent(new Event("change", { bubbles: true })); }
+      else {
+        const before = new Set([...document.querySelectorAll("*")].filter(vis)); ctl.el.click(); await pause(600);
+        const opts = [...document.querySelectorAll("*")].filter((e) => vis(e) && !before.has(e) && e.children.length === 0 || (vis(e) && !before.has(e) && /^(option|menuitem|menuitemradio)$/.test(e.getAttribute("role") || "")));
+        const cand = opts.map((e) => ({ e, t: (e.textContent || "").trim() })).filter((x) => x.t && x.t.length <= 24 && (CODE_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
+        if (!cand.length) { document.body.click(); if (done.length < 2) info.tried.push("dropdown opened but no other team option found"); break; }
+        target = cand[0].t; (cand[0].e.closest("[role=option], [role=menuitem], li, button, a") || cand[0].e).click();
+      }
+      done.push(target); info.tried.push(target + " (switched)"); await pause(2500);
+      const n = await loadAll(btn); info.tried[info.tried.length - 1] += `: ${n} balls so far`;
+    }
+    return info;
+  };
+  const innings = () => [...new Set(Object.values(store.comments).map((c) => c.inningNumber ?? c.inning ?? c.inningsId).filter((x) => x !== undefined && x !== null))].sort();
   const loadAll = async (btn) => {
     let last = -1, still = 0, tries = 0;
     while (still < 6 && !window.__ttmStop) {
@@ -182,7 +219,7 @@
     store.comments = store.comments || {}; store.pages = store.pages || {}; store.api = store.api || [];
     ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
     window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
-      info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
+      eachTeam, innings, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
       clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
     if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
     let lastPath = location.pathname;                                           // client-side tab switches do not reload the page: re-read on URL change
