@@ -1,0 +1,348 @@
+{
+ "team": "India",
+ "formats": {
+  "Test": {
+   "held": 219,
+   "by_opponent": {
+    "Afghanistan": {
+     "held": 0,
+     "reference": 2,
+     "missing": 2
+    },
+    "Australia": {
+     "held": 48,
+     "reference": 112,
+     "missing": 64
+    },
+    "Bangladesh": {
+     "held": 13,
+     "reference": 15,
+     "missing": 2
+    },
+    "England": {
+     "held": 50,
+     "reference": 141,
+     "missing": 91
+    },
+    "New Zealand": {
+     "held": 22,
+     "reference": 65,
+     "missing": 43
+    },
+    "Pakistan": {
+     "held": 6,
+     "reference": 59,
+     "missing": 53
+    },
+    "South Africa": {
+     "held": 32,
+     "reference": 46,
+     "missing": 14
+    },
+    "Sri Lanka": {
+     "held": 23,
+     "reference": 48,
+     "missing": 25
+    },
+    "West Indies": {
+     "held": 24,
+     "reference": 102,
+     "missing": 78
+    },
+    "Zimbabwe": {
+     "held": 1,
+     "reference": 11,
+     "missing": 10
+    }
+   },
+   "held_per_year": {
+    "2001": 1,
+    "2003": 2,
+    "2004": 7,
+    "2005": 2,
+    "2006": 10,
+    "2007": 10,
+    "2008": 15,
+    "2009": 6,
+    "2010": 14,
+    "2011": 12,
+    "2012": 9,
+    "2013": 8,
+    "2014": 10,
+    "2015": 9,
+    "2016": 12,
+    "2017": 11,
+    "2018": 13,
+    "2019": 8,
+    "2020": 4,
+    "2021": 14,
+    "2022": 7,
+    "2023": 8,
+    "2024": 15,
+    "2025": 10,
+    "2026": 2
+   },
+   "held_from": "2001-12-19",
+   "held_to": "2026-08-23"
+  },
+  "ODI": {
+   "held": 529,
+   "by_opponent": {
+    "Afghanistan": {
+     "held": 0,
+     "reference": 7,
+     "missing": 7
+    },
+    "Australia": {
+     "held": 86,
+     "reference": 155,
+     "missing": 69
+    },
+    "Bangladesh": {
+     "held": 30,
+     "reference": 42,
+     "missing": 12
+    },
+    "Bermuda": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "England": {
+     "held": 66,
+     "reference": 113,
+     "missing": 47
+    },
+    "Hong Kong": {
+     "held": 2,
+     "reference": 2,
+     "missing": 0
+    },
+    "Ireland": {
+     "held": 3,
+     "reference": 3,
+     "missing": 0
+    },
+    "Kenya": {
+     "held": 3,
+     "reference": 13,
+     "missing": 10
+    },
+    "Namibia": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Nepal": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Netherlands": {
+     "held": 3,
+     "reference": 3,
+     "missing": 0
+    },
+    "New Zealand": {
+     "held": 58,
+     "reference": 128,
+     "missing": 70
+    },
+    "Pakistan": {
+     "held": 46,
+     "reference": 136,
+     "missing": 90
+    },
+    "Scotland": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "South Africa": {
+     "held": 50,
+     "reference": 97,
+     "missing": 47
+    },
+    "Sri Lanka": {
+     "held": 90,
+     "reference": 171,
+     "missing": 81
+    },
+    "United Arab Emirates": {
+     "held": 1,
+     "reference": 3,
+     "missing": 2
+    },
+    "West Indies": {
+     "held": 65,
+     "reference": 145,
+     "missing": 80
+    },
+    "Zimbabwe": {
+     "held": 22,
+     "reference": 66,
+     "missing": 44
+    }
+   },
+   "held_per_year": {
+    "2002": 2,
+    "2003": 21,
+    "2004": 23,
+    "2005": 16,
+    "2006": 28,
+    "2007": 35,
+    "2008": 28,
+    "2009": 31,
+    "2010": 27,
+    "2011": 34,
+    "2012": 17,
+    "2013": 34,
+    "2014": 23,
+    "2015": 23,
+    "2016": 13,
+    "2017": 29,
+    "2018": 19,
+    "2019": 27,
+    "2020": 9,
+    "2021": 6,
+    "2022": 24,
+    "2023": 34,
+    "2024": 3,
+    "2025": 14,
+    "2026": 9
+   },
+   "held_from": "2002-06-29",
+   "held_to": "2026-10-03"
+  },
+  "T20I": {
+   "held": 289,
+   "by_opponent": {
+    "Afghanistan": {
+     "held": 0,
+     "reference": 12,
+     "missing": 12
+    },
+    "Australia": {
+     "held": 37,
+     "reference": 37,
+     "missing": 0
+    },
+    "Bangladesh": {
+     "held": 18,
+     "reference": 18,
+     "missing": 0
+    },
+    "England": {
+     "held": 35,
+     "reference": 35,
+     "missing": 0
+    },
+    "Hong Kong": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Ireland": {
+     "held": 10,
+     "reference": 10,
+     "missing": 0
+    },
+    "Japan": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Namibia": {
+     "held": 2,
+     "reference": 2,
+     "missing": 0
+    },
+    "Nepal": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Netherlands": {
+     "held": 2,
+     "reference": 2,
+     "missing": 0
+    },
+    "New Zealand": {
+     "held": 36,
+     "reference": 36,
+     "missing": 0
+    },
+    "Oman": {
+     "held": 1,
+     "reference": 1,
+     "missing": 0
+    },
+    "Pakistan": {
+     "held": 18,
+     "reference": 18,
+     "missing": 0
+    },
+    "Scotland": {
+     "held": 1,
+     "reference": 2,
+     "missing": 1
+    },
+    "South Africa": {
+     "held": 36,
+     "reference": 36,
+     "missing": 0
+    },
+    "Sri Lanka": {
+     "held": 33,
+     "reference": 34,
+     "missing": 1
+    },
+    "United Arab Emirates": {
+     "held": 2,
+     "reference": 2,
+     "missing": 0
+    },
+    "United States of America": {
+     "held": 2,
+     "reference": 2,
+     "missing": 0
+    },
+    "West Indies": {
+     "held": 36,
+     "reference": 36,
+     "missing": 0
+    },
+    "Zimbabwe": {
+     "held": 17,
+     "reference": 17,
+     "missing": 0
+    }
+   },
+   "held_per_year": {
+    "2006": 1,
+    "2007": 7,
+    "2008": 1,
+    "2009": 10,
+    "2010": 6,
+    "2011": 4,
+    "2012": 13,
+    "2013": 1,
+    "2014": 7,
+    "2015": 4,
+    "2016": 21,
+    "2017": 13,
+    "2018": 19,
+    "2019": 16,
+    "2020": 10,
+    "2021": 15,
+    "2022": 39,
+    "2023": 22,
+    "2024": 22,
+    "2025": 21,
+    "2026": 37
+   },
+   "held_from": "2006-12-01",
+   "held_to": "2026-11-01"
+  }
+ }
+}
