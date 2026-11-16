@@ -140,9 +140,11 @@
     const k = kind(job), key = doneKey(job);
     if (s.done[key] && s.done[key].schema === SCHEMA) { await advance(s); return goNext(s, false); }                       // already captured: skip, no waiting
     const here = clean(location.href), target = k === "match" ? matchId(job) : clean(job);
-    const onTarget = k === "match" ? matchId(here) === target : here.split("?")[0] === clean(job).split("?")[0];
+    const wantTab = k === "match" ? TABS[(s.plan || Object.keys(TABS))[s.tab || 0]] : null;
+    const onTab = (t) => SITE === "cricinfo" ? location.pathname.split("/").filter(Boolean)[3] === t : location.pathname.replace(/^\//, "").startsWith(t);
+    const onTarget = k === "match" ? (matchId(here) === target && onTab(wantTab)) : here.split("?")[0] === clean(job).split("?")[0];   // same MATCH is not enough: a resume on the statistics tab was recorded as the scorecard
     s.now = label(job); render(s);
-    const go = k === "match" ? tabUrl(job, TABS.score) : (k === "series" && SITE === "cricinfo" && !/match-schedule-fixtures-and-results|match-results/.test(job) && seriesSeg(job) ? `${new URL(job).origin}/series/${seriesSeg(job)}/match-schedule-fixtures-and-results` : job);
+    const go = k === "match" ? tabUrl(job, wantTab) : (k === "series" && SITE === "cricinfo" && !/match-schedule-fixtures-and-results|match-results/.test(job) && seriesSeg(job) ? `${new URL(job).origin}/series/${seriesSeg(job)}/match-schedule-fixtures-and-results` : job);
     if (!onTarget && !(k === "series" && clean(location.href).split("?")[0] === clean(go).split("?")[0])) { await log(s, `opening ${s.idx + 1}/${s.queue.length}: ${label(job)}`); if (!(await wait(rnd(DELAY)))) return; nav(go); return; }
     if (!(await wait(rnd(DELAY)))) return;
     if (k !== "match" && notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
@@ -183,7 +185,7 @@
           const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
           for (const b of inn.slice(0, 3)) { if (stopFlag) return; b.click(); await sleep(2500); n = await T.loadAll(); }
         }
-        await log(s, `  ${n} balls so far, innings seen: ${T.innings().join(", ") || "?"}`);
+        await log(s, `  ${n} balls so far; innings seen ${T.innings().join(", ") || "?"} of expected ${T.expected().join(", ") || "?"}`);
       } else { if (!(await wait(2500))) return; T.grabText(); T.save(); }
     }
     if (stopFlag) return;
@@ -194,17 +196,18 @@
     const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}; innings ${inf.innings.join(", ") || "?"}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
     const needs = mtn.hasCommentary !== false, have = T.count();
-    const twoInn = T.innings().length >= 2 || !needs;
+    const exp = T.expected(), seenInn = T.innings(), missingInn = exp.length ? exp.filter((n) => !seenInn.includes(n)) : (seenInn.length >= 2 ? [] : [2]);   // what the page itself lists (2 for an ODI, 4 for a Test) minus what we captured
+    const twoInn = !needs || missingInn.length === 0;
     const noCtl = !!(s.noctl && s.noctl[key]);                                        // no team control on this page: reloading cannot add the other innings, so do not waste three loads on it
     if (needs && (have < 150 || (!twoInn && !noCtl))) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
       s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
       if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls / innings ${T.innings().join(", ") || "?"}: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
     }
     const balls = T.saveJson();                                                        // one json per match
-    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || T.innings().length < 2), innings: T.innings() };
+    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || missingInn.length > 0), innings: T.innings(), expected: exp };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || T.innings().length < 2) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + (noCtl ? "; no team control found, so the other innings could not be switched to" : " after 3 tries") + ")" : ""}`);
-    if (!(needs && (balls < 150 || T.innings().length < 2))) await T.clear();                                      // the match is on disk: free its stored copy
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || missingInn.length) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + " of expected " + (exp.join(", ") || "?") + (noCtl ? "; no team control found, so the missing innings could not be switched to" : " after 3 tries") + ")" : ""}`);
+    if (!(needs && (balls < 150 || missingInn.length))) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
 

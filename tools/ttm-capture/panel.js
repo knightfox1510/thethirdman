@@ -143,6 +143,15 @@
   const teamNames = () => { const m = (document.title + " " + ((document.querySelector('meta[property="og:title"]') || {}).content || "")).match(/([A-Z][\w .'-]+?) (?:vs|v) ([A-Z][\w .'-]+?)(?:,|\s-|\s\d|$)/); return m ? [m[1].trim(), m[2].trim()] : []; };
   const vis = (e) => !!(e && e.offsetParent !== null && e.getBoundingClientRect().height > 0);
   const CODE_RE = /^[A-Z]{2,5}$/;
+  // The page's own data (present on every tab) says which teams played and which innings have balls: match.teams[].team.abbreviation / name / inningNumbers, content.innings[].inningNumber / balls.
+  const pageData = () => { for (const v of Object.values(store.pages)) { const d = v && v.props && v.props.appPageProps && v.props.appPageProps.data; if (d && d.match) return d; } return null; };
+  const teamList = () => { const d = pageData(); return ((d && d.match && d.match.teams) || []).map((t) => ({ abbr: (t.team && t.team.abbreviation) || "", name: (t.team && (t.team.longName || t.team.name)) || "", innings: t.inningNumbers || [] })); };
+  const expectedInnings = () => {                                                  // 1,2 for a one-day match, 1..4 for a Test: whatever the page lists with balls bowled
+    const d = pageData(); let ex = []; const inn = d && d.content && d.content.innings;
+    if (Array.isArray(inn)) ex = inn.filter((i) => (i.balls || 0) > 0).map((i) => i.inningNumber);
+    if (!ex.length) ex = teamList().flatMap((t) => t.innings);
+    return [...new Set(ex)].sort((a, b) => a - b);
+  };
   const ownText = (e) => (e.textContent || "").replace(/\s+/g, " ").trim();
   const clickable = (e) => e.closest("button, [role=button], [role=combobox], [role=tab], [aria-haspopup], a") || e;
   const rowItems = (lbl) => {                                                       // every short visible item on the filter's own visual row, left to right (not tied to any parent element)
@@ -152,7 +161,8 @@
     return uniq.sort((a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left);
   };
   const toolbarChips = () => {                                                       // the row that holds "New", the team control and "Full Commentary": found through the filter label, whatever tags the page uses
-    const lbl = [...document.querySelectorAll("button, [role=button], div, span, a, li")].filter((e) => vis(e) && !e.closest(AD) && /^(full commentary|highlights|wickets|commentary)$/i.test(ownText(e))).filter((e) => ![...e.children].some((c) => /^(full commentary|highlights|wickets|commentary)$/i.test(ownText(c))))[0];
+    const FILTER = /^(full commentary)$/i;                                           // the filter button only: the nav tab "Commentary" (Summary | Scorecard | Commentary | ...) is NOT it, and matching it picked the wrong row on 65208
+    const lbl = [...document.querySelectorAll("button, [role=button], div, span, a, li")].filter((e) => vis(e) && !e.closest(AD) && !e.closest("[role=tablist], nav") && FILTER.test(ownText(e))).filter((e) => ![...e.children].some((c) => FILTER.test(ownText(c))))[0];
     if (!lbl) return { lbl: null, chips: [] };
     let anc = lbl;
     for (let i = 0; i < 6 && anc.parentElement; i++) {
@@ -165,12 +175,20 @@
     const row = rowItems(lbl); return { lbl, chips: row.length >= 2 ? row : [] };                    // no common ancestor found: use the row scan
   };
   const findTeamControl = () => {
+    const teams = teamList(), words = new Set(teams.flatMap((t) => [t.abbr, t.name]).filter(Boolean)), names = teamNames();
     for (const sel of document.querySelectorAll("select")) {
-      const o = [...sel.options].map((x) => x.text.trim()); if (vis(sel) && o.length >= 2 && o.length <= 4 && o.every((t) => CODE_RE.test(t) || teamNames().some((n) => t.includes(n) || n.includes(t)))) return { kind: "select", el: sel, label: o[sel.selectedIndex] };
+      const o = [...sel.options].map((x) => x.text.trim()); if (vis(sel) && o.length >= 2 && o.length <= 4 && o.every((t) => words.has(t) || CODE_RE.test(t) || names.some((n) => t.includes(n) || n.includes(t)))) return { kind: "select", el: sel, label: o[sel.selectedIndex] };
     }
-    const { chips } = toolbarChips(); const names = teamNames(); const SORT = /^(new|old|newest|oldest|latest|full commentary|highlights|wickets|fours|sixes|commentary)$/i;
-    let hit = chips.find((e) => { const t = ownText(e); return CODE_RE.test(t) || names.some((n) => t === n || t.startsWith(n) || n.startsWith(t)); });
-    if (!hit) { const rest = chips.filter((e) => !SORT.test(ownText(e))); if (rest.length === 1) hit = rest[0]; }   // exactly one chip is neither the sort nor the filter: that is the team control
+    const { lbl, chips } = toolbarChips(); const SORT = /^(new|old|newest|oldest|latest|full commentary|highlights|wickets|fours|sixes|commentary)$/i;
+    let hit = chips.find((e) => words.has(ownText(e)));                                                          // 1. on the filter's row: an item that IS a team's abbreviation or name (from the page's own data)
+    if (!hit && lbl) hit = rowItems(lbl).find((e) => words.has(ownText(e)));
+    if (!hit) {                                                                                                  // 2. anywhere above the first commentary item: a short item that is exactly a team label
+      const first = [...document.querySelectorAll("main *")].find((e) => /^\s*\d{1,2}\.\d\s*$/.test(e.textContent || "") && vis(e)), limit = first ? first.getBoundingClientRect().top + window.scrollY : 1200;
+      hit = [...document.querySelectorAll("body *")].filter((e) => vis(e) && !e.closest(AD) && !e.closest("h1, h2, h3, h4, h5, h6") && !e.closest("[role=tablist], nav") && words.has(ownText(e)) && ![...e.children].some((c) => words.has(ownText(c))) && e.getBoundingClientRect().top + window.scrollY < limit)
+        .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top).pop();                      // the lowest such item is the one nearest the commentary (the header's team names sit higher up)
+    }
+    if (!hit) hit = chips.find((e) => CODE_RE.test(ownText(e)) || names.some((n) => ownText(e) === n || ownText(e).startsWith(n)));
+    if (!hit) { const rest = chips.filter((e) => !SORT.test(ownText(e))); if (rest.length === 1) hit = rest[0]; }
     return hit ? { kind: "button", el: clickable(hit), label: ownText(hit) } : null;
   };
   const describeToolbar = () => {                                                  // what the page actually has near the filter, for the log when the control is not found
@@ -180,27 +198,33 @@
   const eachTeam = async (btn) => {
     const done = [], info = { found: false, tried: [] }; let ctl = findTeamControl();
     if (!ctl) return info; info.found = true; const first = ctl.label; done.push(first); info.tried.push(first + " (shown first)");
-    const names = teamNames();
-    for (let round = 0; round < 4 && !window.__ttmStop; round++) {
+    const teams = teamList(), words = new Set(teams.flatMap((t) => [t.abbr, t.name]).filter(Boolean)), names = teamNames();
+    const missing = () => expectedInnings().filter((n) => !innings().includes(n));
+    for (let round = 0; round < 5 && !window.__ttmStop; round++) {
+      if (expectedInnings().length && !missing().length) break;                                   // every innings the page lists has been seen
       ctl = findTeamControl(); if (!ctl) break;
       let target = null;
       if (ctl.kind === "select") { const o = [...ctl.el.options].find((x) => !done.includes(x.text.trim())); if (!o) break; target = o.text.trim(); ctl.el.value = o.value; ctl.el.dispatchEvent(new Event("change", { bubbles: true })); }
       else {
         const before = new Set([...document.querySelectorAll("*")].filter(vis)); ctl.el.click(); await pause(600);
-        const opts = [...document.querySelectorAll("*")].filter((e) => vis(e) && !before.has(e) && e.children.length === 0 || (vis(e) && !before.has(e) && /^(option|menuitem|menuitemradio)$/.test(e.getAttribute("role") || "")));
-        const cand = opts.map((e) => ({ e, t: (e.textContent || "").trim() })).filter((x) => x.t && x.t.length <= 24 && (CODE_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
-        if (!cand.length) { document.body.click(); if (done.length < 2) info.tried.push("dropdown opened but no other team option found"); break; }
+        const opts = [...document.querySelectorAll("*")].filter((e) => vis(e) && !before.has(e) && (e.children.length === 0 || /^(option|menuitem|menuitemradio)$/.test(e.getAttribute("role") || "")));
+        let cand = opts.map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && (words.has(x.t) || CODE_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
+        if (!cand.length) cand = [...document.querySelectorAll("[role=option], [role=menuitem], li")].filter(vis).map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && !done.includes(x.t) && x.t !== ctl.label);   // any option that is not the current one
+        if (!cand.length) { document.body.click(); if (missing().length) info.tried.push("dropdown opened but no other option found"); break; }
         target = cand[0].t; (cand[0].e.closest("[role=option], [role=menuitem], li, button, a") || cand[0].e).click();
       }
-      done.push(target); info.tried.push(target + " (switched)"); await pause(2500);
+      const innBefore = innings().length; done.push(target); info.tried.push(target + " (switched)");
+      for (let i = 0; i < 25 && innings().length <= innBefore && !window.__ttmStop; i++) await pause(1000);                 // wait until new innings' balls arrive
       const n = await loadAll(btn); info.tried[info.tried.length - 1] += `: ${n} balls so far`;
     }
+    info.expected = expectedInnings(); info.missing = missing();
     return info;
   };
   const innings = () => [...new Set(Object.values(store.comments).map((c) => c.inningNumber ?? c.inning ?? c.inningsId).filter((x) => x !== undefined && x !== null))].sort();
   const loadAll = async (btn) => {
     let last = -1, still = 0, tries = 0;
-    while (still < 6 && !window.__ttmStop) {
+    for (let i = 0; i < 25 && Object.keys(store.comments).length === 0 && !window.__ttmStop; i++) await pause(1000);   // the first batch can be slow: do not start counting stalls before it arrives
+    while (still < (Object.keys(store.comments).length < 100 ? 12 : 6) && !window.__ttmStop) {              // few balls so far: be more patient before giving up (65208 stopped at 20, then got 318 on the retry)
       const more = moreButton(); if (more) more.click();
       const el = window.__ttmNoLast ? null : (lastItem() || repeatedItem());
       if (!el && still >= 1) { await sweep(); }
@@ -240,9 +264,10 @@
     let old = null; try { old = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}                         // a capture started by the previous version of this panel
     const stored = await kvGet(KEY); if (stored) store = stored; else if (old) store = old;
     store.comments = store.comments || {}; store.pages = store.pages || {}; store.api = store.api || [];
+    delete store.pages[matchSlug]; delete store.pages[matchSlug + "_text"];                                       // left behind by the old tab-naming bug (every tab shared this key)
     ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
     window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
-      eachTeam, innings, diag: describeToolbar, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
+      eachTeam, innings, expected: expectedInnings, diag: describeToolbar, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), expected: expectedInnings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
       clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
     if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
     let lastPath = location.pathname;                                           // client-side tab switches do not reload the page: re-read on URL change
