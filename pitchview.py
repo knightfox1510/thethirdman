@@ -207,6 +207,7 @@ def where_text(dl, tr):
             stand = ", standing back (assumed)" if f["position"] == "keeper back" else ""
             return f"caught behind by wicket-keeper {dl.fielder}{stand}{move}"
         return f"caught at {f['position']}{' (approx.)' if f.get('approx') else ''} by {dl.fielder}{move}"
+    if dl.how == "caught" and dl.fielder: return f"caught by {dl.fielder} (position not stated)"
     return {"bowled": "bowled: the ball hit the stumps", "lbw": "lbw: hit on the pad in front of the stumps", "stumped": "stumped by the wicket-keeper", "run out": "run out"}.get(dl.how, dl.how)
 
 
@@ -224,5 +225,5 @@ def height_label(z, H):
 def summary(dl, tr):
     """Plain facts for captions and the voiceover: data first, model clearly marked."""
     z = tr["gate_z"]
-    return dict(line=LINE_LABEL.get(dl.line, dl.line), length=LEN_LABEL.get(dl.length, dl.length), shot=dl.shot.replace("_", " ").lower(), control="in control" if dl.control == 1 else "not in control",
+    return dict(line=LINE_LABEL.get(dl.line, dl.line), length=LEN_LABEL.get(dl.length, dl.length), shot=dl.shot.replace("_", " ").lower(), control=("in control" if dl.control == 1 else "not in control") if dl.control else "not recorded (commentary only)",
                 how=dl.how, fielder=dl.fielder, height_m=round(z, 2), height_text=height_label(z, dl.batter_h), keeper=dl.keeper_catch, where=where_text(dl, tr), stump_z=tr.get("stump_z"))

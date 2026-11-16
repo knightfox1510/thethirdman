@@ -62,6 +62,7 @@ def situation(dl, tr):
     if dl.free_hit: tags.append("FREE HIT (the previous ball was a no ball)")
     if dl.swing: tags.append(f"SWING {dl.swing.upper()} IN THE AIR (commentary)" if dl.swing in ("in", "away") else f"{dl.swing.upper()} (commentary)")
     if f.get("bouncer"): tags.append("BOUNCER (commentary)")
+    if f.get("overthrow"): tags.append("OVERTHROW mentioned in the commentary")
     if f.get("edge"): tags.append(f"{f['edge'].upper()} (commentary)")
     if f.get("body") and k not in ("lbw",): tags.append(f"HIT ON THE BODY: {f['body'].upper()} (commentary)")
     if dl.control == 2 and dl.runs == 0 and not dl.wicket and dl.shot not in ("LEFT_ALONE", "DEFENDED", ""): tags.append("BEATEN: the batter was not in control")
@@ -78,16 +79,17 @@ def situation(dl, tr):
         lines += [("The batter came down the track (commentary); about %.1f m out of the crease is illustrative." % adv) if dl.came_down else "How far he was out of the crease is not in our data."]
         if dl.spin and dl.drift: lines += [f"Flight and drift {dl.drift}wards beat the shot (commentary)."]
     elif k == "run_out":
-        thrower = f.get("thrower", ""); end_y = PL if "keeper" in f.get("throw_end", "keeper") or "striker" in f.get("throw_end", "") and "non" not in f.get("throw_end", "") else 0.0
-        bowler_direct = bool(f.get("direct_hit")) and thrower and thrower.split()[-1] in dl.bowler
-        if bowler_direct: start = (0.6, PL - 17.0); pos = "bowler"
-        else:
-            pos = f.get("shot_to") or "mid off"; pos = pos if pos in POSITIONS else "mid off"; start = spot(pos, dl.hand)
-        stumps = (0.0, end_y, 0.4); tr["throw"] = _arc((start[0], start[1], 0.8), stumps, 1.6 if not bowler_direct else 0.8)
-        tr["bat"] = _arc(contact, (start[0], start[1], 0.2), 0.6 if bowler_direct else 3.0)
-        tr["field"] = dict(name=thrower, position=pos, start=start, catch=start, moved_m=0.0, exceptional=False, side="", approx=False)
-        tr["end"] = stumps; tr["stumps_break"] = stumps
-        lines += [(f"Direct hit by the bowler, {thrower}, at the keeper's end." if bowler_direct else f"Throw from {pos}{(' by ' + thrower) if thrower else ''} to the keeper's end; the stumps are broken.")]
+        thrower = f.get("thrower", ""); bowler_direct = bool(f.get("direct_hit")) and thrower and thrower.split()[-1] in dl.bowler
+        pos = "bowler" if bowler_direct else (f.get("shot_to") if f.get("shot_to") in POSITIONS else "")
+        te = f.get("throw_end", "")
+        if pos and te:
+            end_y = 0.0 if "bowler" in te else PL; start = (0.6, PL - 17.0) if bowler_direct else spot(pos, dl.hand)
+            stumps = (0.0, end_y, 0.4); tr["throw"] = _arc((start[0], start[1], 0.8), stumps, 1.6 if not bowler_direct else 0.8)
+            tr["bat"] = _arc(contact, (start[0], start[1], 0.2), 0.6 if bowler_direct else 3.0)
+            tr["field"] = dict(name=thrower, position=pos, start=start, catch=start, moved_m=0.0, exceptional=False, side="", approx=False)
+            tr["end"] = stumps; tr["stumps_break"] = stumps
+            lines += [(f"Direct hit by the bowler, {thrower}, at the {'keeper' if end_y else 'bowler'}'s end." if bowler_direct else f"Throw from {pos}{(' by ' + thrower) if thrower else ''} to the {'keeper' if end_y else 'bowler'}'s end; the stumps are broken.")]
+        else: lines += ["The commentary does not say where the throw came from, so no throw is drawn."]
         who = dl.out_batter + (" (non-striker)" if dl.out_batter != dl.batter else "")
         lines += [f"Out: {who}. How far he was short is not in our data."]
     elif k in ("six", "four"):
@@ -121,11 +123,14 @@ def situation(dl, tr):
         lines += [f"Chance put down{' by ' + who if who else ''}{' at ' + pos if pos else ''} (commentary)."]
         if f.get("edge"): lines += [f"It came off the {f['edge']}."]
     elif k == "runout_miss":
-        thrower = f.get("thrower", ""); pos = f.get("shot_to") if f.get("shot_to") in POSITIONS else "mid off"; start = spot(pos, dl.hand)
-        end_y = 0.0 if "bowler" in f.get("throw_end", "") else PL; stumps = (0.0, end_y, 0.4); miss = (0.7, end_y, 0.4)
-        tr["throw"] = _arc((start[0], start[1], 0.9), miss, 1.2); tr["bat"] = _arc(contact, (start[0], start[1], 0.2), 3.0); tr["end"] = miss
-        tr["field"] = dict(name=thrower, position=pos, start=start, catch=start, moved_m=0.0, exceptional=False, side="", approx=False); tr["missed_stumps"] = stumps
-        lines += [f"Throw from {pos} at the {'bowler' if end_y == 0 else 'keeper'}'s end misses the stumps; the batter is safe ({dl.runs} run{'' if dl.runs == 1 else 's'}).", "The batter's distance short of the crease is not in our data."]
+        thrower = f.get("thrower", ""); pos = f.get("shot_to") if f.get("shot_to") in POSITIONS else ""; te = f.get("throw_end", "")
+        if pos and te:
+            start = spot(pos, dl.hand); end_y = 0.0 if "bowler" in te else PL; stumps = (0.0, end_y, 0.4); miss = (0.7, end_y, 0.4)
+            tr["throw"] = _arc((start[0], start[1], 0.9), miss, 1.2); tr["bat"] = _arc(contact, (start[0], start[1], 0.2), 3.0); tr["end"] = miss
+            tr["field"] = dict(name=thrower, position=pos, start=start, catch=start, moved_m=0.0, exceptional=False, side="", approx=False); tr["missed_stumps"] = stumps
+            lines += [f"Throw from {pos} at the {'bowler' if end_y == 0 else 'keeper'}'s end misses the stumps; the batter is safe ({dl.runs} run{'' if dl.runs == 1 else 's'})."]
+        else: lines += ["A throw at the stumps missed (commentary); where it came from is not stated, so no throw is drawn."]
+        lines += ["The batter's distance short of the crease is not in our data."]
     elif k == "review":
         lines += ["A review was taken (commentary leads below). We have no ball-tracking data, so no tracking picture is drawn."]
     elif k == "leave":
@@ -141,6 +146,6 @@ def situation(dl, tr):
     elif k in ("handled", "obstruct", "timed_out", "retired"):
         lines += [{"handled": "Dismissed for handling the ball.", "obstruct": "Dismissed for obstructing the field.", "timed_out": "Timed out: the next batter was not ready to face a ball in time. No ball was bowled.", "retired": "Retired."}[k]]
     elif k == "ball":
-        lines += [f"Shot: {S['shot']}. Control: {S['control']}."]
+        lines += [(f"Shot: {S['shot']}. " if S['shot'] else "") + f"Control: {S['control']}."]
     tr["kind"] = k
     return dict(kind=k, big=big, lines=lines, tags=tags)

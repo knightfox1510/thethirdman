@@ -206,12 +206,13 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
     profile(d, P, dl, tr, X, 1110, 250)
     sm_ = summary(dl, tr); y0 = 1385
     d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3))
-    length = LEN_LABEL.get(tr["length_used"], tr["length_used"]).title(); sub = ""
+    cb_only = getattr(dl, "source", "") == "commentary"
+    length = ("Not stated" if getattr(dl, "length_guess", False) else LEN_LABEL.get(tr["length_used"], tr["length_used"]).title()); sub = "read from the commentary" if cb_only and not getattr(dl, "length_guess", False) else ""
     if tr["length_note"]:
         a = LEN_LABEL.get(dl.length_table or dl.length, "").title(); b = LEN_LABEL.get(dl.facts.get("length_text", ""), "").title()
         sub = f"Cricinfo: {a} · Cricbuzz: {b}" if tr["length_note"] == "conflict" else f"Table says {a}; fits {length}"
     res = (dl.how.upper() if dl.wicket else ("%d RUN%s" % (dl.runs, "" if dl.runs == 1 else "S")))
-    cols = [("LENGTH", length, sub), ("LINE", sm_["line"].title(), ""), ("RESULT", res, "")]
+    cols = [("LENGTH", length, sub), ("LINE", "Not stated" if getattr(dl, "line_guess", False) else sm_["line"].title(), "read from the commentary" if cb_only and not getattr(dl, "line_guess", False) else ""), ("RESULT", res, "")]
     cw = (W - 120) / 3
     for i, (k, v, s2) in enumerate(cols):
         x = 60 + i * cw
@@ -229,14 +230,17 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
         lines = wrap(sm_["where"][0].upper() + sm_["where"][1:] + ".", f_, 520)
         if sit["kind"] == "caught" and tr.get("field") and tr["field"].get("exceptional"): lines += wrap("A demanding catch: the commentary describes a dive.", f_, 520)
         if tr["stump_z"] is not None and sit["kind"] in ("bowled", "lbw"): lines += wrap(f"Model: {tr['stump_z']:.2f} m at the stumps, under their 0.71 m.", f_, 520)
-        lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
+        lines += [(f"Shot: {sm_['shot']}. " if sm_['shot'] else "") + f"Control: {sm_['control']}."]
     else:
         for ln in sit["lines"]: lines += wrap(ln, f_, 520)
-        if sit["kind"] not in ("ball", "wide", "no_ball"): lines += [f"Shot: {sm_['shot']}. Control: {sm_['control']}."]
+        if sit["kind"] not in ("ball", "wide", "no_ball"): lines += [(f"Shot: {sm_['shot']}. " if sm_['shot'] else "") + f"Control: {sm_['control']}."]
     for tg in sit["tags"]: lines += wrap(tg.capitalize() + ".", font("Inter-Medium.otf", 22), 540)
     small = len(lines) > 6; f2 = font("Inter-Medium.otf", 23 if small else 27)
     for j, ln in enumerate(lines[:10]): d.text((X(500), X(yb + 4 + j * (28 if small else 34))), ln, font=f2, fill=P["ink"], anchor="la")
     foot = [f"MOCK-UP · ILLUSTRATIVE: bounce, height, arcs and the fielder's move are modelled ({dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter).", "From the data: zones, shot, control, dismissal, catcher. From commentary (leads): fielding position, speed, how it behaved."]
+    if cb_only:
+        foot = [f"COMMENTARY ONLY · no Cricinfo ball table for this match: line, length and shot are read from the text (leads); the ball is drawn at a neutral spot where the text is silent. Modelled: {dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter.", "No control flag and no wagon-wheel spot exist for this ball."]
+        d.rounded_rectangle([X(W - 330), X(300), X(W - 60), X(332)], radius=X(4), fill=P["accent"]); d.text((X(W - 195), X(316)), "COMMENTARY ONLY", font=font("PlexMonoSB.ttf", 17), fill=P["bg"], anchor="mm")
     for i, ln in enumerate(foot): d.text((X(60), X(1846 + i * 26)), ln, font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
     if caption: d.text((X(W // 2), X(1290)), caption, font=font("OswaldBold.ttf", 34), fill=P["ink"], anchor="mm")
     im.resize((W, H), Image.LANCZOS).save(out)

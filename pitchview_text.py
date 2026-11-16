@@ -22,7 +22,7 @@ SPIN_RE = re.compile(r"turn(?:s|ed|ing)? (?:sharply|a lot|big|away|in)|spun|spin
 REVIEW_RE = re.compile(r"(umpire'?s call|ball-?tracking|three reds|hitting the stumps|missing the stumps|sonic|hotspot|review)", re.I)
 
 
-DROP_RE = re.compile(r"\b(dropped|drops|dropping|put down|grassed|spills?|spilled|burst through)\b", re.I)
+DROP_RE = re.compile(r"\b(put down|puts? (?:him )?down|dropped (?:the |a )?(?:catch|chance|it)|drops? (?:the |a )?(?:catch|chance)|grassed|spilled the catch|spills? the catch|lets? it slip through his hands)\b", re.I)   # strict: 'drops it short' and 'spills one down leg' are about the bowler
 MISFIELD_RE = re.compile(r"\b(fumbl\w*|misfield\w*|mis-field\w*|lets it through|through the legs|bobbled?)\b", re.I)
 OVERTHROW_RE = re.compile(r"over-?throw", re.I)
 DIRECT_RE = re.compile(r"direct[- ]hit", re.I)
@@ -111,9 +111,11 @@ def ball_text(comments_or_path, inning, over, nth=0):
         if m: out["edge"] = m.group(1).lower().replace("-", " ")
         if BODY_RE.search(t1): out["body"] = BODY_RE.search(t1).group(1).lower()
         if BOUNCER_RE.search(t1): out["bouncer"] = True
-        if "DROPPED" in ev or DROP_RE.search(t1):
+        if "DROPPED" in ev or (DROP_RE.search(t1) and not re.search(r"\bcaught\b", t1[:60], re.I)):
             m = DROPPER_RE.search(t1)
-            if m: out["dropper"] = next(g for g in m.groups() if g)
+            if m:
+                who = next(g for g in m.groups() if g)
+                if who not in ("Fielder", "Keeper", "Batter", "Batsman", "Bowler", "Wicketkeeper", "The"): out["dropper"] = who
             out["drop"] = True
         if "RUNOUT_MISS" in ev: out["runout_miss"] = True
         if "UDRS" in ev or re.search(r"\breview\b", t1, re.I):
