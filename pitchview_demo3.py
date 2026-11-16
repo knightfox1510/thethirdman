@@ -5,7 +5,7 @@ from multiprocessing import Pool
 from pitchview import *
 from pitchview_cb import from_commentary
 from pitchview_render import *
-OUT = "deliver/_pitchview_mockups/v5/"; os.makedirs(OUT, exist_ok=True)
+OUT = "deliver/_pitchview_mockups/v7/"; os.makedirs(OUT, exist_ok=True)
 T4 = ("data/cricinfo/nz_ind_4odi_balls.csv", "data/cricinfo/nz_ind_4odi.json"); CB4 = "data/cricbuzz/nz_ind_4odi.json"; M4 = "NZ v IND · 4th ODI"; P = PALS["swiss"]
 LABEL = {"nz_ind_1odi": "NZ v IND · 1st ODI", "nz_ind_2odi": "NZ v IND · 2nd ODI", "nz_ind_5odi": "NZ v IND · 5th ODI", "u19_uae": "U19 Asia Cup · v UAE", "u19_final": "U19 Asia Cup Final"}
 def cbd(f, inn, ov, force=None, **kw):
@@ -26,9 +26,10 @@ def posters():
 SPECS = [("bowled_kohli", (2, 0.5), None, "near"), ("lbw_iyer", (2, 0.6), None, "near"), ("stumped_kelly", (1, 14.2), None, "near"), ("four_seifert", (1, 2.2), None, "follow"), ("wide_jamieson", (1, 49.1), None, "near"),
          ("noball_seifert", (1, 1.3, 0), "no_ball", "near"), ("free_hit_six_seifert", (1, 1.3, 1), None, "follow"), ("dropped_kelly", (2, 5.4), None, "follow"), ("runout_missed_kohli", (1, 47.2), None, "follow"),
          ("runout_throw_fisher", (1, 49.6), None, "follow"), ("misfield_iyer", (1, 24.6), None, "follow"), ("leave_allen", None, None, "near"), ("leg_bye_seifert", (1, 9.1), None, "near"), ("review_young", (1, 33.3), None, "near"),
-         ("spin_kuldeep", (1, 25.4), "no_ball", "near"), ("bouncer_brar", (1, 11.3), None, "near"), ("swing_arshdeep", (1, 0.5), None, "near"), ("catch_allen_short_cover", (1, 30.2), None, "follow")]
+         ("spin_kuldeep", (1, 25.4), "no_ball", "near"), ("bouncer_brar", (1, 11.3), None, "near"), ("swing_arshdeep", (1, 0.5), None, "near"), ("catch_allen_short_cover", (1, 30.2), None, "follow"),
+         ("turf_runout_direct_hit", (1, 49.5), None, "follow", "turf_swiss"), ("turf_six_young", (1, 13.4), None, "follow", "turf_swiss"), ("turf_bowled_kohli", (2, 0.5), None, "near", "turf_swiss")]
 def one(spec):
-    name, key, force, cam = spec
+    name, key, force, cam = spec[:4]; pal = PALS[spec[4]] if len(spec) > 4 else P
     if key is None:
         d = pd.read_csv(T4[0]); lv = d[(d.shot == "LEFT_ALONE") & (d.runs == 0) & (d.wicket == False)].iloc[3]; key = (int(lv.inning), float(lv.overs))
     dl = from_table(*T4, key[0], key[1], cricbuzz=CB4, nth=(key[2] if len(key) > 2 else 0))
@@ -36,7 +37,7 @@ def one(spec):
     tr = trajectory(dl); out = OUT + "anim_" + name + ".mp4"
     if cam == "near": orbit = (-60, -25)
     else: orbit = (-64, -26)
-    animate(P, dl, tr, out, M4, seconds=5.0, fps=20, orbit=orbit); print("   anim", name, flush=True)
+    animate(pal, dl, tr, out, M4, seconds=5.0, fps=20, orbit=orbit); print("   anim", name, flush=True)
 def reveal():
     d = pd.read_csv(T4[0]); hen = d[(d.inning == 2) & (d.over_no == 1)].head(6); y = d[(d.inning == 1) & (d.batter == "Will Young")]; fr = OUT + "_rv/"; os.makedirs(fr, exist_ok=True)
     names = ["  ".join(dict.fromkeys(n.split()[-1].upper() for n in hen.batter))][0]

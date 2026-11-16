@@ -225,5 +225,5 @@ def height_label(z, H):
 def summary(dl, tr):
     """Plain facts for captions and the voiceover: data first, model clearly marked."""
     z = tr["gate_z"]
-    return dict(line=LINE_LABEL.get(dl.line, dl.line), length=LEN_LABEL.get(dl.length, dl.length), shot=dl.shot.replace("_", " ").lower(), control=("in control" if dl.control == 1 else "not in control") if dl.control else "not recorded (commentary only)",
+    return dict(line=LINE_LABEL.get(dl.line, dl.line), length=LEN_LABEL.get(dl.length, dl.length), shot=dl.shot.replace("_", " ").lower(), control=("in control" if dl.control == 1 else "not in control") if dl.control else "not recorded",
                 how=dl.how, fielder=dl.fielder, height_m=round(z, 2), height_text=height_label(z, dl.batter_h), keeper=dl.keeper_catch, where=where_text(dl, tr), stump_z=tr.get("stump_z"))

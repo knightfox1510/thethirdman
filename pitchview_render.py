@@ -2,7 +2,7 @@
     python3 pitchview_render.py            writes deliver/_pitchview_mockups/v2/*.png (+ an animated catch)
 Camera: Cam(target, yaw, elevation, distance). yaw 0 = behind the bowler looking down the pitch; 90 = side-on; 180 = behind the batter.
 Everything not in the data is labelled 'illustrative' on the poster (see pitchview.py: DATA vs MODEL)."""
-import math, os, subprocess, glob
+import math, os, subprocess, glob, json, re, random
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from pitchview import *
@@ -19,6 +19,11 @@ PALS = {
 }
 
 
+PALS["turf_swiss"] = dict(PALS["swiss"], name="Turf, Swiss layout", turf=True, sky1=(118, 174, 232), sky2=(216, 233, 246), grass1=(66, 126, 50), grass2=(82, 146, 62), pitch=(206, 180, 128), pitch_dark=(172, 142, 92), stand=(72, 80, 98),
+                          boards=[(200, 52, 52), (40, 92, 172), (232, 200, 40), (248, 248, 244), (40, 150, 92), (240, 132, 40)], crowd=[(220, 62, 62), (240, 240, 240), (62, 102, 200), (250, 200, 60), (120, 200, 120), (30, 30, 40)],
+                          ball_c=(250, 250, 250), lblbg=(250, 250, 245), smuted=(246, 250, 242), line=(252, 252, 250), stump=(238, 224, 184))
+
+
 class Cam:
     def __init__(s, target, yaw, el, R, F=1900, cx=W / 2, cy=500):
         y, e = math.radians(yaw), math.radians(el); t = np.array(target, float)
@@ -29,11 +34,46 @@ class Cam:
         v = np.array(pt, float) - s.C; z = v @ s.f
         return None if z < 0.3 else (s.cx + s.F * (v @ s.r) / z, s.cy - s.F * (v @ s.u) / z, z)
 
+    def project_poly(s, pts, near=0.3):
+        """A filled shape clipped against the camera's near plane (Sutherland-Hodgman), so a ground that wraps behind the camera still draws."""
+        cs = []
+        for p_ in pts:
+            v = np.array(p_, float) - s.C; cs.append((float(v @ s.r), float(v @ s.u), float(v @ s.f)))
+        out = []
+        for i in range(len(cs)):
+            a, b = cs[i], cs[(i + 1) % len(cs)]; ia, ib = a[2] >= near, b[2] >= near
+            if ia: out.append(a)
+            if ia != ib: t = (near - a[2]) / (b[2] - a[2]); out.append(tuple(a[j] + (b[j] - a[j]) * t for j in range(3)))
+        return [(s.cx + s.F * x / z, s.cy - s.F * y / z, z) for x, y, z in out] if len(out) >= 3 else None
+
 
 class LookCam(Cam):
     """A camera placed at an eye position looking at a target (batter's-eye and keeper's-eye views)."""
     def __init__(s, eye, target, F=1500, cx=W / 2, cy=380):
         s.C = np.array(eye, float); f = np.array(target, float) - s.C; s.f = f / np.linalg.norm(f); r = np.cross(s.f, [0, 0, 1.0]); s.r = r / np.linalg.norm(r); s.u = np.cross(s.r, s.f); s.F, s.cx, s.cy = F, cx, cy
+
+
+SRC_WORDS = re.compile(r"commentary|cricinfo|cricbuzz|from the data|our data|leads?\b|tracking data|not stated", re.I)
+
+
+def screen(lines):
+    """Everything drawn on the poster passes through here: no source names, no 'commentary', no data-provenance lines (owner rule). Returns (shown, hidden); hidden goes to the notes file."""
+    shown, hidden = [], []
+    for ln in lines:
+        c = re.sub(r"\s*\((?:commentary)[^)]*\)", "", ln).strip()
+        (hidden if SRC_WORDS.search(c) else shown).append(c if not SRC_WORDS.search(c) else ln)
+    return shown, hidden
+
+
+def write_notes(out, dl, tr, sit, hidden):
+    """Provenance lives beside the picture, never on it: data vs leads vs model, conflicts, and anything removed from the screen."""
+    f = tr.get("field") or {}
+    notes = dict(file=os.path.basename(out), ball=f"{dl.over:.1f}", bowler=dl.bowler, batter=dl.batter, kind=sit["kind"], source=getattr(dl, "source", "table"),
+                 data=dict(line=dl.line, length=dl.length, shot=dl.shot, control=dl.control, dismissal=dl.how, fielder=dl.fielder, wagon=list(dl.wagon)),
+                 commentary_leads=dl.facts, length_conflict=(dict(table=dl.length_table or dl.length, commentary=dl.facts.get("length_text"), used=tr["length_used"], note=tr["length_note"]) if tr["length_note"] else None),
+                 modelled=dict(pace_kmh=dl.pace_kmh, batter_height_m=dl.batter_h, catch_height_m=dl.catch_z, restitution=round(float(tr["e"]), 2), gate_height_m=round(float(tr["gate_z"]), 2),
+                               fielder_start=f.get("start"), fielder_moved_m=f.get("moved_m")), removed_from_screen=hidden)
+    json.dump(notes, open(out.rsplit(".", 1)[0] + ".notes.json", "w"), indent=1, ensure_ascii=False, default=str)
 
 
 def mix(a, b, t): return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
@@ -43,10 +83,11 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
     """The 3D picture. ball_xyz / fielder_xyz place the moving ball and the moving fielder (for the animation); trail < 1 draws only that fraction of the off-the-bat arc."""
     Wd, Hd = int(size[0] * S), int(size[1] * S); im = Image.new("RGB", (Wd, Hd), P["bg"]); d = ImageDraw.Draw(im)
     sc = lambda q: (q[0] * S, q[1] * S)
+    LB = P.get("lblbg", P["bg"]); SM = P.get("smuted", P["muted"])
 
     def poly(pts, **k):
-        q = [cam.p(p) for p in pts]
-        if all(q): d.polygon([sc(x) for x in q], **k)
+        q = cam.project_poly(pts)
+        if q: d.polygon([sc(x) for x in q], **k)
 
     def line3(pts, fill, w, dash=0):
         q = [cam.p(p) for p in pts]; q = [x for x in q if x]
@@ -66,45 +107,82 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
         if bg: bb = d.textbbox((x, y), text, font=f, anchor=anchor); d.rectangle([bb[0] - 6 * S, bb[1] - 3 * S, bb[2] + 6 * S, bb[3] + 3 * S], fill=bg)
         d.text((x, y), text, font=f, fill=fill, anchor=anchor)
 
-    poly([(-90, -40, 0), (90, -40, 0), (90, PL + 90, 0), (-90, PL + 90, 0)], fill=P["ground"])
-    for gx in range(-90, 91, 10): line3([(gx, -40, 0), (gx, PL + 90, 0)], P["grid"], 1)
-    for gy in range(-40, int(PL) + 91, 10): line3([(-90, gy, 0), (90, gy, 0)], P["grid"], 1)
-    ring = [(27.43 * math.cos(a / 90 * 2 * math.pi), PL / 2 + 27.43 * math.sin(a / 90 * 2 * math.pi), 0) for a in range(91)]
-    line3(ring, P["circle"], 3)                                                                                 # the 30-yard circle: one continuous line, clearly visible
+    if P.get("turf"):
+        for y in range(0, Hd, 4): d.rectangle([0, y, Wd, y + 4], fill=mix(P["sky1"], P["sky2"], min(1.0, y / (Hd * .55))))          # sky
+        cyg, R0 = PL / 2, 74.0; d0 = cam.p((0, PL / 2, 0)); dz = d0[2] if d0 else 30.0; rnd = random.Random(7); N = 96
+        pt = lambda a, r, z: (r * math.cos(a), cyg + r * math.sin(a), z)
+        for k in range(N):                                                                                                         # the stand wall behind the far side of the ground
+            a0, a1 = 2 * math.pi * k / N, 2 * math.pi * (k + 1) / N; mid = cam.p(pt((a0 + a1) / 2, R0, 0))
+            if not mid or mid[2] < dz: continue
+            poly([pt(a0, R0, 0), pt(a1, R0, 0), pt(a1, R0, 1.2), pt(a0, R0, 1.2)], fill=P["boards"][k % len(P["boards"])])        # plain colour advertising boards (no logos)
+            poly([pt(a0, R0, 1.2), pt(a1, R0, 1.2), pt(a1, R0 + 6, 11), pt(a0, R0 + 6, 11)], fill=P["stand"])
+            for _ in range(7):
+                aa = lerp(a0, a1, rnd.random()); zz = 1.6 + rnd.random() * 8.6; q = cam.p(pt(aa, R0 + (zz - 1.2) / 9.8 * 6, zz))
+                if q: r = max(2, 0.30 * cam.F / q[2]); d.ellipse([(q[0] - r) * S, (q[1] - r) * S, (q[0] + r) * S, (q[1] + r) * S], fill=P["crowd"][rnd.randrange(len(P["crowd"]))])
+        Rg = R0 - 1.0
+        poly([(Rg * math.cos(t / 120 * 2 * math.pi), cyg + Rg * math.sin(t / 120 * 2 * math.pi), 0) for t in range(120)], fill=P["grass1"])
+        for i, x0 in enumerate(range(-72, 72, 6)):                                                                                # mown stripes, clipped to the ground
+            x1 = x0 + 6
+            if i % 2 == 0: continue
+            top = [(x, cyg - math.sqrt(max(0.0, Rg * Rg - x * x)), 0) for x in np.linspace(max(x0, -Rg), min(x1, Rg), 8)]; bot = [(x, cyg + math.sqrt(max(0.0, Rg * Rg - x * x)), 0) for x in np.linspace(min(x1, Rg), max(x0, -Rg), 8)]
+            if abs(x0) < Rg: poly(top + bot, fill=P["grass2"])
+        poly([(-PW / 2, 0, 0), (PW / 2, 0, 0), (PW / 2, PL, 0), (-PW / 2, PL, 0)], fill=P["pitch"])                                # the pitch: worn tan clay with mowing bands and scuffs
+        for i in range(6):
+            xa, xb_ = -PW / 2 + PW * i / 6, -PW / 2 + PW * (i + 1) / 6
+            if i % 2: poly([(xa, 0, 0), (xb_, 0, 0), (xb_, PL, 0), (xa, PL, 0)], fill=mix(P["pitch"], (255, 255, 255), .10))
+        for yc, ry, rx, t_ in ((2.2, 2.0, 0.9, .85), (PL - 2.2, 2.0, 0.9, .85), (PL - 7.0, 2.6, 0.45, .55), (9.0, 2.2, 0.4, .35), (PL - 4.5, 1.6, 0.7, .6)):
+            poly([(rx * math.cos(a / 24 * 2 * math.pi), yc + ry * math.sin(a / 24 * 2 * math.pi), 0) for a in range(24)], fill=mix(P["pitch"], P["pitch_dark"], t_))
+        for _ in range(16):
+            x = rnd.uniform(-PW / 2 + .2, PW / 2 - .2); y = rnd.uniform(1, PL - 1); line3([(x, y, 0), (x + rnd.uniform(-.25, .25), y + rnd.uniform(.2, .7), 0)], mix(P["pitch"], P["pitch_dark"], .8), 1)
+        for yy in (1.22, PL - 1.22): line3([(-1.83, yy, 0), (1.83, yy, 0)], (252, 252, 250), 4)                                    # creases
+        for yy in (0, PL): line3([(-1.32, yy, 0), (1.32, yy, 0)], (252, 252, 250), 4)
+        for xx in (-1.32, 1.32):
+            line3([(xx, 0, 0), (xx, 1.22, 0)], (252, 252, 250), 4); line3([(xx, PL - 1.22, 0), (xx, PL, 0)], (252, 252, 250), 4)
+        for yy in (0, PL):
+            for xx in (-0.11, 0, 0.11): line3([(xx, yy, 0), (xx, yy, 0.71)], P["stump"], 6)
+            line3([(-0.11, yy, 0.71), (0.11, yy, 0.71)], (250, 244, 220), 4)
+        line3([(27.43 * math.cos(a / 90 * 2 * math.pi), PL / 2 + 27.43 * math.sin(a / 90 * 2 * math.pi), 0) for a in range(91)], (252, 252, 250), 4, dash=3)   # the 30-yard circle: white dashes on the grass
+        line3([(BOUNDARY_M * math.cos(a / 120 * 2 * math.pi), PL / 2 + BOUNDARY_M * math.sin(a / 120 * 2 * math.pi), 0) for a in range(121)], (252, 252, 250), 6)   # the rope
+    else:
+        poly([(-90, -40, 0), (90, -40, 0), (90, PL + 90, 0), (-90, PL + 90, 0)], fill=P["ground"])
+        for gx in range(-90, 91, 10): line3([(gx, -40, 0), (gx, PL + 90, 0)], P["grid"], 1)
+        for gy in range(-40, int(PL) + 91, 10): line3([(-90, gy, 0), (90, gy, 0)], P["grid"], 1)
+        ring = [(27.43 * math.cos(a / 90 * 2 * math.pi), PL / 2 + 27.43 * math.sin(a / 90 * 2 * math.pi), 0) for a in range(91)]
+        line3(ring, P["circle"], 3)                                                                                 # the 30-yard circle: one continuous line, clearly visible
     
-    poly([(-PW / 2, 0, 0), (PW / 2, 0, 0), (PW / 2, PL, 0), (-PW / 2, PL, 0)], fill=P["pitch"])
-    for i, (y0, y1) in enumerate([(PL - 2, PL), (PL - 4, PL - 2), (PL - 6, PL - 4), (PL - 8, PL - 6), (8.0, PL - 8)]):
-        poly([(-PW / 2, y0, 0), (PW / 2, y0, 0), (PW / 2, y1, 0), (-PW / 2, y1, 0)], fill=P["band"][i])
-    line3([(-PW / 2, 0, 0), (PW / 2, 0, 0), (PW / 2, PL, 0), (-PW / 2, PL, 0), (-PW / 2, 0, 0)], P["line"], 3)
-    for yy in (1.22, PL - 1.22): line3([(-1.3, yy, 0), (1.3, yy, 0)], P["line"], 3)
-    for yy in (0, PL):
-        for xx in (-0.11, 0, 0.11): line3([(xx, yy, 0), (xx, yy, 0.71)], P["ink"] if P["name"] == "Swiss mono" else P["line"], 6)
+        poly([(-PW / 2, 0, 0), (PW / 2, 0, 0), (PW / 2, PL, 0), (-PW / 2, PL, 0)], fill=P["pitch"])
+        for i, (y0, y1) in enumerate([(PL - 2, PL), (PL - 4, PL - 2), (PL - 6, PL - 4), (PL - 8, PL - 6), (8.0, PL - 8)]):
+            poly([(-PW / 2, y0, 0), (PW / 2, y0, 0), (PW / 2, y1, 0), (-PW / 2, y1, 0)], fill=P["band"][i])
+        line3([(-PW / 2, 0, 0), (PW / 2, 0, 0), (PW / 2, PL, 0), (-PW / 2, PL, 0), (-PW / 2, 0, 0)], P["line"], 3)
+        for yy in (1.22, PL - 1.22): line3([(-1.3, yy, 0), (1.3, yy, 0)], P["line"], 3)
+        for yy in (0, PL):
+            for xx in (-0.11, 0, 0.11): line3([(xx, yy, 0), (xx, yy, 0.71)], P["ink"] if P["name"] == "Swiss mono" else P["line"], 6)
     H_ = dl.batter_h; gy = PL - 1.22; hand = 1 if dl.hand == "R" else -1
     if show_gate:                                                    # the crease 'gate': a height ruler at the batter's crease, in the batter's own proportions
         gx0, gx1 = -1.7, 1.7
         for name, f in HEIGHT_MARKS + [("STUMPS", .71 / H_)]:
-            z = f * H_; line3([(gx0, gy, z), (gx1, gy, z)], mix(P["muted"], P["bg"], .35), 2)
+            z = f * H_; line3([(gx0, gy, z), (gx1, gy, z)], mix(SM, P["bg"], .35), 2)
             q = cam.p((gx0 - 0.15, gy, z))
-            if q: d.text(sc(q), name, font=font("PlexMonoSB.ttf", 19), fill=P["muted"], anchor="rm")
-        line3([(gx0, gy, 0), (gx0, gy, H_ + .1)], P["muted"], 2); line3([(gx1, gy, 0), (gx1, gy, H_ + .1)], P["muted"], 2)
+            if q: d.text(sc(q), name, font=font("PlexMonoSB.ttf", 19), fill=SM, anchor="rm")
+        line3([(gx0, gy, 0), (gx0, gy, H_ + .1)], SM, 2); line3([(gx1, gy, 0), (gx1, gy, H_ + .1)], SM, 2)
         bxx = 0.55 * hand; head = (bxx, gy - 0.1, H_ - 0.12)
         line3([(bxx, gy - 0.1, 0), (bxx, gy - 0.1, H_ - 0.3)], P["fig"], 9); line3([(bxx, gy - 0.1, 0.9), (bxx - 0.25 * hand, gy - 0.5, 0.55)], P["fig"], 7)
         dot(head, 0.12, outline=P["fig"], width=int(5 * S)); line3([(bxx + 0.05 * hand, gy - 0.4, 0.5), (bxx - 0.18 * hand, gy - 0.9, 0.25)], P["accent"], 6)
     if tr.get("rope"):                                               # boundary rope (assumed radius, labelled)
-        line3([(BOUNDARY_M * math.cos(a / 120 * 2 * math.pi), PL / 2 + BOUNDARY_M * math.sin(a / 120 * 2 * math.pi), 0) for a in range(121)], P["muted"], 4, dash=3)
+        line3([(BOUNDARY_M * math.cos(a / 120 * 2 * math.pi), PL / 2 + BOUNDARY_M * math.sin(a / 120 * 2 * math.pi), 0) for a in range(121)], SM, 4, dash=3)
     if tr.get("overstep"):                                           # the front foot over the bowler's crease (distance illustrative)
         line3([(-0.15, 1.22, 0.0), (0.25, 1.22 - 0.25, 0.0)], P["accent"], 14)
     if tr.get("batter_adv"):                                         # a batter who has come down the track
         ax = 0.55 * hand; ay = gy - tr["batter_adv"]
         line3([(ax, ay, 0), (ax, ay, H_ - 0.3)], P["fig"], 9); dot((ax, ay, H_ - 0.12), 0.12, outline=P["fig"], width=int(5 * S)); line3([(ax, ay + 0.2, 0.0), (ax + 0.3 * hand, ay - 0.35, 0.0)], P["fig"], 7)
-        label((ax, ay, H_ + 0.1), "BATTER (OUT OF HIS CREASE, ILLUSTRATIVE)", font("PlexMonoSB.ttf", 18), P["muted"], "la", dx=14, bg=P["bg"])
+        label((ax, ay, H_ + 0.1), "BATTER (OUT OF HIS CREASE, ILLUSTRATIVE)", font("PlexMonoSB.ttf", 18), SM, "la", dx=14, bg=LB)
     pre, post, bat = tr["pre"], tr["post"], tr["bat"]
     line3(pre + post, P["accent"], 7)
     if tr.get("throw"):
         th = tr["throw"]; line3(th[:max(2, int(len(th) * throw_trail))], P["field"], 6, dash=2); e = th[-1]; dot(e, 0.35, outline=P["accent"], width=int(6 * S))
-        if throw_trail >= 1.0: label((e[0], e[1], 0.0), "MISSED" if tr.get("kind") == "runout_miss" else "STUMPS BROKEN", font("PlexMonoSB.ttf", 20), P["accent"], "la", dx=16, dy=12, bg=P["bg"])
+        if throw_trail >= 1.0: label((e[0], e[1], 0.0), "MISSED" if tr.get("kind") == "runout_miss" else "STUMPS BROKEN", font("PlexMonoSB.ttf", 20), P["accent"], "la", dx=16, dy=12, bg=LB)
         if tr.get("missed_stumps"): ms_ = tr["missed_stumps"]; dot(ms_, 0.30, outline=P["field"], width=int(4 * S))
-    if tr.get("gloves"): dot(tr["gloves"], 0.30, outline=P["field"], width=int(6 * S)); label(tr["gloves"], "GLOVES", font("PlexMonoSB.ttf", 20), P["field"], "la", dx=16, dy=-6, bg=P["bg"])
+    if tr.get("gloves"): dot(tr["gloves"], 0.30, outline=P["field"], width=int(6 * S)); label(tr["gloves"], "GLOVES", font("PlexMonoSB.ttf", 20), P["field"], "la", dx=16, dy=-6, bg=LB)
     if tr["bounce"]:
         bx_, by_, _ = tr["bounce"]; line3([(bx_ + 0.9 * math.cos(a / 24 * 2 * math.pi), by_ + 0.9 * math.sin(a / 24 * 2 * math.pi), 0) for a in range(25)], P["accent"], 4)
     if show_gate: dot((tr["contact"][0], gy, tr["gate_z"]), 0.16, fill=P["accent"], outline=P["bg"], width=int(3 * S))
@@ -119,13 +197,13 @@ def scene(P, cam, dl, tr, S=1.5, size=(W, 760), show_gate=True, ball_xyz=None, f
         dot((sx, sy, 0.02), 0.45, outline=P["field"], width=int(5 * S))
         dot((cx_, cy_, 0.02), 0.28, fill=P["accent"], outline=P["field"], width=int(3 * S))
         q0 = cam.p((sx, sy, 0.02)); left_side = q0 and q0[0] < 380
-        label((sx, sy, 0.02), (f["name"] or "fielder").upper() + " · " + f["position"].upper(), font("PlexMonoSB.ttf", 22), P["ink"], "la" if left_side else "ra", dx=22 if left_side else -22, dy=-4, bg=P["bg"])
+        label((sx, sy, 0.02), (f["name"] or "fielder").upper() + " · " + f["position"].upper(), font("PlexMonoSB.ttf", 22), P["ink"], "la" if left_side else "ra", dx=22 if left_side else -22, dy=-4, bg=LB)
         kind_ = tr.get("kind", "caught")
-        if kind_ == "dropped": label((cx_, cy_, 0.02), "DROPPED", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
-        if kind_ == "caught": label((cx_, cy_, 0.02), "CATCH" if not f.get("approx") else "CATCH (APPROX.)", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=P["bg"])
+        if kind_ == "dropped": label((cx_, cy_, 0.02), "DROPPED", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=LB)
+        if kind_ == "caught": label((cx_, cy_, 0.02), "CATCH" if not f.get("approx") else "CATCH (APPROX.)", font("PlexMonoSB.ttf", 21), P["accent"], "la", dx=18, dy=34, bg=LB)
     if tr.get("cross"):                                              # a dropped chance: a cross where the ball went down
         cxm = tr["cross"]; line3([(cxm[0] - .5, cxm[1] - .5, cxm[2]), (cxm[0] + .5, cxm[1] + .5, cxm[2])], P["accent"], 8); line3([(cxm[0] - .5, cxm[1] + .5, cxm[2]), (cxm[0] + .5, cxm[1] - .5, cxm[2])], P["accent"], 8)
-    if ball_xyz: dot(ball_xyz, 0.17, fill=P["ink"])
+    if ball_xyz: dot(ball_xyz, 0.17, fill=P.get("ball_c", P["ink"]), outline=P["ink"], width=int(2 * S))
     if fielder_xyz: dot(fielder_xyz, 0.42, fill=P["field"])
     return im, cam
 
@@ -191,7 +269,7 @@ def wrap(text, f, width):
     return lines + [cur] if cur else lines
 
 
-def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.0, caption=None, match=None, throw_trail=1.0):
+def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.0, caption=None, match=None, throw_trail=1.0, notes=True):
     sit = situation(dl, tr)
     """Swiss layout: hairline rules, the ball number, a 3D picture, a side-on bounce panel, three facts, the result in words, and the 'illustrative' note."""
     sm, _ = scene(P, cam, dl, tr, S=S, size=(W, 760), show_gate=(sit["kind"] in ("bowled", "lbw", "ball", "wide", "no_ball", "dropped", "misfield") and cam.F > 1800), ball_xyz=ball_xyz, fielder_xyz=fielder_xyz, trail=trail, throw_trail=throw_trail)
@@ -206,13 +284,9 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
     profile(d, P, dl, tr, X, 1110, 250)
     sm_ = summary(dl, tr); y0 = 1385
     d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3))
-    cb_only = getattr(dl, "source", "") == "commentary"
-    length = ("Not stated" if getattr(dl, "length_guess", False) else LEN_LABEL.get(tr["length_used"], tr["length_used"]).title()); sub = "read from the commentary" if cb_only and not getattr(dl, "length_guess", False) else ""
-    if tr["length_note"]:
-        a = LEN_LABEL.get(dl.length_table or dl.length, "").title(); b = LEN_LABEL.get(dl.facts.get("length_text", ""), "").title()
-        sub = f"Cricinfo: {a} · Cricbuzz: {b}" if tr["length_note"] == "conflict" else f"Table says {a}; fits {length}"
+    length = ("Not stated" if getattr(dl, "length_guess", False) else LEN_LABEL.get(tr["length_used"], tr["length_used"]).title()); sub = ""
     res = (dl.how.upper() if dl.wicket else ("%d RUN%s" % (dl.runs, "" if dl.runs == 1 else "S")))
-    cols = [("LENGTH", length, sub), ("LINE", "Not stated" if getattr(dl, "line_guess", False) else sm_["line"].title(), "read from the commentary" if cb_only and not getattr(dl, "line_guess", False) else ""), ("RESULT", res, "")]
+    cols = [("LENGTH", length, sub), ("LINE", "Not stated" if getattr(dl, "line_guess", False) else sm_["line"].title(), ""), ("RESULT", res, "")]
     cw = (W - 120) / 3
     for i, (k, v, s2) in enumerate(cols):
         x = 60 + i * cw
@@ -228,7 +302,7 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
     f_ = font("Inter-Medium.otf", 27); lines = []
     if sit["kind"] in ("caught", "bowled", "lbw"):
         lines = wrap(sm_["where"][0].upper() + sm_["where"][1:] + ".", f_, 520)
-        if sit["kind"] == "caught" and tr.get("field") and tr["field"].get("exceptional"): lines += wrap("A demanding catch: the commentary describes a dive.", f_, 520)
+        if sit["kind"] == "caught" and tr.get("field") and tr["field"].get("exceptional"): lines += wrap("A demanding catch: a diving effort.", f_, 520)
         if tr["stump_z"] is not None and sit["kind"] in ("bowled", "lbw"): lines += wrap(f"Model: {tr['stump_z']:.2f} m at the stumps, under their 0.71 m.", f_, 520)
         lines += [(f"Shot: {sm_['shot']}. " if sm_['shot'] else "") + f"Control: {sm_['control']}."]
     else:
@@ -236,12 +310,10 @@ def poster(P, dl, tr, cam, out, S=1.5, ball_xyz=None, fielder_xyz=None, trail=1.
         if sit["kind"] not in ("ball", "wide", "no_ball"): lines += [(f"Shot: {sm_['shot']}. " if sm_['shot'] else "") + f"Control: {sm_['control']}."]
     for tg in sit["tags"]: lines += wrap(tg.capitalize() + ".", font("Inter-Medium.otf", 22), 540)
     small = len(lines) > 6; f2 = font("Inter-Medium.otf", 23 if small else 27)
-    for j, ln in enumerate(lines[:10]): d.text((X(500), X(yb + 4 + j * (28 if small else 34))), ln, font=f2, fill=P["ink"], anchor="la")
-    foot = [f"MOCK-UP · ILLUSTRATIVE: bounce, height, arcs and the fielder's move are modelled ({dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter).", "From the data: zones, shot, control, dismissal, catcher. From commentary (leads): fielding position, speed, how it behaved."]
-    if cb_only:
-        foot = [f"COMMENTARY ONLY · no Cricinfo ball table for this match: line, length and shot are read from the text (leads); the ball is drawn at a neutral spot where the text is silent. Modelled: {dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter.", "No control flag and no wagon-wheel spot exist for this ball."]
-        d.rounded_rectangle([X(W - 330), X(300), X(W - 60), X(332)], radius=X(4), fill=P["accent"]); d.text((X(W - 195), X(316)), "COMMENTARY ONLY", font=font("PlexMonoSB.ttf", 17), fill=P["bg"], anchor="mm")
-    for i, ln in enumerate(foot): d.text((X(60), X(1846 + i * 26)), ln, font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    shown_t, hid_t = screen([t.capitalize() + "." for t in sit["tags"]]); shown_l, hid_l = screen(lines)
+    for j, ln in enumerate(shown_l[:10]): d.text((X(500), X(yb + 4 + j * (28 if small else 34))), ln, font=f2, fill=P["ink"], anchor="la")
+    d.text((X(60), X(1862)), f"ILLUSTRATIVE · the ball's path, bounce and the fielder's move are modelled ({dl.pace_kmh:.0f} km/h, {dl.batter_h:.2f} m batter).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    if notes: write_notes(out, dl, tr, sit, hid_t + hid_l)
     if caption: d.text((X(W // 2), X(1290)), caption, font=font("OswaldBold.ttf", 34), fill=P["ink"], anchor="mm")
     im.resize((W, H), Image.LANCZOS).save(out)
 
@@ -263,7 +335,7 @@ def animate(P, dl, tr, out_mp4, match, seconds=6.0, fps=24, S=1.0, orbit=(-64, -
             a3 = min(1.0, (t - w_del - w_bat) / w_thr); ball = throw[int(a3 * (len(throw) - 1))]; thr = max(0.05, a3); trail = 1.0
         if t > w_del + w_bat + w_thr: trail, thr = 1.0, 1.0
         if t <= w_del: trail = 0.0 if bat else 1.0; thr = 0.0 if throw else 1.0
-        poster(P, dl, tr, cam, fr + f"f{i:03d}.png", S=S, ball_xyz=ball, fielder_xyz=fx, trail=max(trail, 0.02) if bat else 1.0, throw_trail=thr if throw else 1.0, match=match)
+        poster(P, dl, tr, cam, fr + f"f{i:03d}.png", S=S, ball_xyz=ball, fielder_xyz=fx, trail=max(trail, 0.02) if bat else 1.0, throw_trail=thr if throw else 1.0, match=match, notes=False)
         Image.open(fr + f"f{i:03d}.png").resize((720, 1280), Image.LANCZOS).save(fr + f"f{i:03d}.png")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(fps), "-i", fr + "f%03d.png", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", out_mp4], check=True)
     for f in glob.glob(fr + "*.png"): os.remove(f)
@@ -314,7 +386,6 @@ def wagon_poster(P, df, out, title, who, match, hand="R", S=1.5):
     d.line([X(60), X(y0 + 150), X(W - 60), X(y0 + 150)], fill=P["rule"], width=X(3)); f_ = font("Inter-Medium.otf", 29)
     d.text((X(60), X(y0 + 175)), f"Off side {side_off} runs · leg side {side_leg} runs (recorded shots).", font=f_, fill=P["ink"], anchor="la")
     d.text((X(60), X(y0 + 218)), "Red line = a boundary or a wicket. The line ends at the wagon-wheel spot; the rope radius is approximate.", font=font("Inter-Medium.otf", 24), fill=P["muted"], anchor="la")
-    d.text((X(60), X(1846)), "FROM THE DATA: Cricinfo capture (wagon wheel, runs, wickets). Positions are approximate (wagon grid scale assumed).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
     im.resize((W, H), Image.LANCZOS).save(out)
 
 
@@ -341,8 +412,7 @@ def over_poster(P, df, out, title, who, match, S=1.5):
         d.text((X(x0 + cw / 2), X(y1 + 66)), (str(r.shot).replace("_", " ").title() + (" · in control" if r.control == 1 else " · not in control")), font=font("PlexMono.ttf", 15), fill=P["muted"], anchor="ma")
     n = len(rows); wk = sum(bool(r.wicket) for r in rows); runs = sum(int(r.runs) for r in rows); short = sum(r.pitch_length in ("SHORT", "SHORT_OF_A_GOOD_LENGTH") for r in rows); nic = sum(int(r.control) == 2 for r in rows)
     y0 = 1400; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3)); f_ = font("Inter-Medium.otf", 30)
-    for j, ln in enumerate([f"{wk} wicket{'s' if wk != 1 else ''}, {runs} run{'s' if runs != 1 else ''} in {n} balls.", f"{short} of {n} balls were short of a good length or shorter; the batter was not in control of {nic}.", "Data only: where each ball pitched is the Cricinfo line and length zone; spots within a zone are drawn at its centre."]): d.text((X(60), X(y0 + 30 + j * 52)), ln, font=f_ if j < 2 else font("Inter-Medium.otf", 24), fill=P["ink"] if j < 2 else P["muted"], anchor="la")
-    d.text((X(60), X(1846)), "FROM THE DATA: Cricinfo capture (line, length, shot, control, runs, wickets).", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    for j, ln in enumerate([f"{wk} wicket{'s' if wk != 1 else ''}, {runs} run{'s' if runs != 1 else ''} in {n} balls.", f"{short} of {n} balls were short of a good length or shorter; the batter was not in control of {nic}.", "Each ball is drawn at the centre of its line and length zone."]): d.text((X(60), X(y0 + 30 + j * 52)), ln, font=f_ if j < 2 else font("Inter-Medium.otf", 24), fill=P["ink"] if j < 2 else P["muted"], anchor="la")
     im.resize((W, H), Image.LANCZOS).save(out)
 
 
@@ -365,9 +435,8 @@ def field_poster(P, comments, inning, over, df, out, title, who, match, hand="R"
         x, y = spot(pos, hand); px, py = cx + x * sc, cy + (y - PL / 2) * sc
         d.ellipse([X(px - 9), X(py - 9), X(px + 9), X(py + 9)], fill=P["ink"]); d.text((X(px + 14), X(py)), pos.upper(), font=font("PlexMonoSB.ttf", 17), fill=P["ink"], anchor="lm")
     y0 = 1330; d.line([X(60), X(y0), X(W - 60), X(y0)], fill=P["rule"], width=X(3))
-    d.text((X(60), X(y0 + 28)), f"{len(seen)} fielding position{'s' if len(seen) != 1 else ''} named by the commentary for this over.", font=font("Inter-Medium.otf", 30), fill=P["ink"], anchor="la")
-    d.text((X(60), X(y0 + 76)), "This is not the full field: only fielders the commentary mentions appear. Spots are typical for each position.", font=font("Inter-Medium.otf", 24), fill=P["muted"], anchor="la")
-    d.text((X(60), X(1846)), "LEADS: Cricbuzz commentary (positions named); DATA: Cricinfo wagon wheel (shot lines). Positions are typical spots, not measured.", font=font("PlexMono.ttf", 16), fill=P["muted"], anchor="la")
+    d.text((X(60), X(y0 + 28)), f"{len(seen)} fielding position{'s' if len(seen) != 1 else ''} named for this over.", font=font("Inter-Medium.otf", 30), fill=P["ink"], anchor="la")
+    d.text((X(60), X(y0 + 76)), "This is not the full field: only the fielders named for this over appear. Spots are typical for each position.", font=font("Inter-Medium.otf", 24), fill=P["muted"], anchor="la")
     im.resize((W, H), Image.LANCZOS).save(out)
 
 

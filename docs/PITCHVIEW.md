@@ -3,7 +3,13 @@
 `pitchview.py` (model) + `pitchview_text.py` (commentary leads) + `pitchview_render.py` (3D + poster + animation). One `Delivery` per ball, built from ANY captured match:
 `from_table(csv, capture_json, inning, over, cricbuzz=<cricbuzz capture>)`. Nothing is specific to one match or one bowler.
 
-## Data vs model (always labelled on screen)
+## On-screen text (owner rule: NO source lines on screen, ever)
+Nothing drawn names a source (no Cricinfo, Cricbuzz, "commentary", "from the data", "commentary only" badge). `screen()` in pitchview_render.py strips such text from every drawn line. Provenance goes beside the picture in `<poster>.notes.json`: data vs leads vs model, the length/event conflicts, and anything removed from the screen. The only on-screen caveat is the short word ILLUSTRATIVE (CLAUDE.md: label illustrative visuals).
+
+## Grounds
+`PALS['swiss']` is the flat editorial look; `PALS['turf_swiss']` is a realistic ground: mown green stripes, worn tan pitch, white creases and 30-yard dashes, rope, plain-colour boards and a crowd (no logos).
+
+## Data vs model (labelled `ILLUSTRATIVE` on screen; details in the notes file)
 | Thing shown | Source | Status |
 |---|---|---|
 | Line and length zone, shot, control flag, runs | Cricinfo ball table | data |
