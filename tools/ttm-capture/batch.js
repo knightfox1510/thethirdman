@@ -1,4 +1,4 @@
-// Batch + crawl mode (v1.6: auto-resume, keep-awake, stall watchdog): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Batch + crawl mode (v1.6.1: auto-resume, keep-awake, stall watchdog; commentary loads near the last item, the capture lives in extension storage, thin captures are retried and never marked done): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
 // Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
 // a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
 // Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
@@ -184,11 +184,18 @@
     const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
     if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
     let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
+    const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
+    const needs = mtn.hasCommentary !== false, have = T.count();
+    if (needs && have < 150) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
+      s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
+      if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
+    }
     const balls = T.saveJson();                                                        // one json per match
-    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary };
+    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && balls < 150 };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : mtn.hasCommentary && balls < 150 ? "  (LOW: check the commentary loaded)" : ""}`);
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && balls < 150 ? "  (STILL LOW after 3 tries: marked incomplete, use Redo low captures later)" : ""}`);
+    if (!(needs && balls < 150)) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
 
@@ -221,7 +228,7 @@
           <label style="display:block;margin-bottom:2px"><input id="tb-awake" type="checkbox"> Keep this computer awake while running</label>
           <div style="color:${C.mute};font-size:11px;margin:0 0 4px 20px">Keep the laptop plugged in and the lid open, and leave this tab in its own window.</div>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">${B("tb-page", "Save this page", C.card, "border:1px solid " + C.line)}${B("tb-known", "Import known ids", C.card, "border:1px solid " + C.line)}${B("tb-reset", "Forget done", C.card, "border:1px solid " + C.red + ";color:#fca5a5")}</div></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">${B("tb-page", "Save this page", C.card, "border:1px solid " + C.line)}${B("tb-known", "Import known ids", C.card, "border:1px solid " + C.line)}${B("tb-low", "Redo low captures", C.card, "border:1px solid " + C.line)}${B("tb-reset", "Forget done", C.card, "border:1px solid " + C.red + ";color:#fca5a5")}</div></div>
       <div id="tb-logt" style="margin:8px 0 4px;color:${C.mute};cursor:pointer;font-size:12px">▾ Activity</div>
       <pre id="tb-log" style="height:130px;overflow:auto;margin:0;padding:6px 8px;background:${C.card};border-radius:8px;font:11px/1.45 ui-monospace,monospace;white-space:pre-wrap;color:${C.text}"></pre>
       <div style="display:flex;justify-content:space-between;margin-top:4px"><span style="color:${C.mute};font-size:11px">One .json file is downloaded per match.</span><a id="tb-clog" href="#" style="color:${C.mute};font-size:11px">clear log</a></div>
@@ -266,6 +273,12 @@
     $("tb-page").onclick = async () => { const n = await savePage("page"); s = await get(); await log(s, `Saved this page (${n} tables).`); };
     $("tb-known").onclick = async () => { const txt = prompt("Paste the JSON printed by `python3 -m dataops.store known`"); if (!txt) return; s = await get();
       try { const j = JSON.parse(txt); let n = 0; for (const [site, ids] of Object.entries(j)) for (const id of ids) { s.done[`${site}:${id}`] = { at: "repo", schema: SCHEMA }; n++; } await log(s, `Imported ${n} ids we already hold: they will be skipped.`); } catch (e) { alert("That is not valid JSON."); } };
+    $("tb-low").onclick = async () => {                                                            // matches saved with too few balls (older versions marked them done): forget them and queue the ones whose link we kept
+      s = await get(); const low = Object.entries(s.done).filter(([k, v]) => v && v.balls !== undefined && v.balls < 150 && v.hasCommentary !== false && !v.missing && v.found === undefined && v.tables === undefined);
+      let queued = 0; const lost = [];
+      for (const [k, v] of low) { delete s.done[k]; if (v.url) { s.queue.push(v.url); queued++; } else lost.push(k.split(":")[1]); }
+      if (queued) { s.started = true; if (s.idx > s.queue.length) s.idx = s.queue.length - queued; }
+      await log(s, `Redo low captures: ${low.length} found, ${queued} queued again${lost.length ? `; add these links by hand (no link was kept): ${lost.join(", ")}` : ""}.`); $("tb-q").value = s.queue.slice(s.idx).join("\n"); render(s); };
     $("tb-reset").onclick = async () => { if (!confirm("Forget which matches are done in this browser? (the repo's own index is not affected)")) return; s = await get(); s.done = {}; await log(s, "Done-list cleared."); };
     $("tb-clog").onclick = async (e) => { e.preventDefault(); s = await get(); s.log = []; await set(s); render(s); };
     if (s.running) { stopFlag = false; step(); }                                                    // resume after a page load

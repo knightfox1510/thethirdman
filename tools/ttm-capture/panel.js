@@ -18,10 +18,27 @@
     : ((location.pathname.match(/^\/([a-z-]+)\//) || [])[1] || "home");
   const KEY = "ttm_capture_" + SITE + "_" + matchId;
 
-  let store;
-  try { store = JSON.parse(sessionStorage.getItem(KEY)) || null; } catch (e) { store = null; }
-  if (!store) store = { site: SITE, match_id: matchId, match_slug: matchSlug, series, pages: {}, api: [], comments: {} };
-  const save = () => { try { sessionStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* too big: kept in memory */ } };
+  // The capture is kept in IndexedDB, not sessionStorage: sessionStorage holds ~5 MB and its setItem failed silently once the scorecard / playing-XI pages and every API response
+  // had been stored, so the commentary was lost on the next page load ("SAVED match: 0 balls"). IndexedDB has a far larger quota and stores the object as it is.
+  const idb = () => new Promise((res, rej) => { const r = indexedDB.open("ttm_capture", 1); r.onupgradeneeded = () => r.result.createObjectStore("s"); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
+  const idbGet = async (k) => { try { const db = await idb(); return await new Promise((res) => { const q = db.transaction("s").objectStore("s").get(k); q.onsuccess = () => res(q.result || null); q.onerror = () => res(null); }); } catch (e) { return null; } };
+  const idbPut = async (k, v) => { try { const db = await idb(); await new Promise((res) => { const t = db.transaction("s", "readwrite"); t.objectStore("s").put(v, k); t.oncomplete = res; t.onerror = res; t.onabort = res; }); return true; } catch (e) { return false; } };
+  const idbDel = async (k) => { try { const db = await idb(); await new Promise((res) => { const t = db.transaction("s", "readwrite"); t.objectStore("s").delete(k); t.oncomplete = res; t.onerror = res; t.onabort = res; }); } catch (e) {} };
+  // chrome.storage.local belongs to the EXTENSION, so it is shared by www.cricinfo.com and www.espncricinfo.com alike (sessionStorage and IndexedDB are per origin: a redirect between the two lost the capture)
+  const hasExt = () => { try { return !!(chrome && chrome.storage && chrome.storage.local && chrome.runtime && chrome.runtime.id); } catch (e) { return false; } };
+  const extGet = (k) => new Promise((res) => { try { chrome.storage.local.get(k, (v) => res((!chrome.runtime.lastError && v && v[k]) || null)); } catch (e) { res(null); } });
+  const extPut = (k, v) => new Promise((res) => { try { chrome.storage.local.set({ [k]: v }, () => res(!chrome.runtime.lastError)); } catch (e) { res(false); } });
+  const extDel = (k) => new Promise((res) => { try { chrome.storage.local.remove(k, () => res()); } catch (e) { res(); } });
+  let mode = "memory", lastErr = "";
+  const kvGet = async (k) => { let v = hasExt() ? await extGet(k) : null; if (v) { mode = "extension"; return v; } v = await idbGet(k); if (v) mode = "indexeddb"; return v; };
+  const kvPut = async (k, v) => { if (hasExt() && await extPut(k, v)) { mode = "extension"; return true; } lastErr = "extension storage refused the write"; if (await idbPut(k, v)) { mode = "indexeddb"; return true; } mode = "memory"; lastErr = "no storage accepted the write"; return false; };
+  const kvDel = async (k) => { if (hasExt()) await extDel(k); await idbDel(k); };
+  let store = { site: SITE, match_id: matchId, match_slug: matchSlug, series, pages: {}, api: [], comments: {} };
+  let ready = false, dirty = false, saving = null; const pending = [];
+  const flush = async () => { if (!dirty && !saving) return; while (saving) await saving; if (!dirty) return; dirty = false; saving = kvPut(KEY, store).finally(() => { saving = null; }); await saving; };
+  const save = () => { dirty = true; };                                       // cheap: the actual write is debounced (below) and awaited by flush() before any navigation / download
+  setInterval(() => { if (dirty) flush(); }, 2000);
+  window.addEventListener("pagehide", () => { if (dirty) flush(); });
 
   // Ball-by-ball items can arrive in several responses; keep them unique.
   const harvest = (o, depth = 0) => {
@@ -59,6 +76,7 @@
     const d = ev.data;
     if (ev.source !== window || !d || !d.__ttm) return;
     if (!/cricinfo\.com|cricbuzz\.com/.test(new URL(d.url, location.href).hostname)) return;
+    if (!ready) { pending.push(d); return; }
     store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body });
     harvest(d.body); save(); render();
   });
@@ -80,21 +98,67 @@
     if (el) el.textContent = `${n} balls captured · tabs: ${tabs}`;
   };
 
-  const loadAll = async (btn) => {
-    let last = -1, still = 0;
-    while (still < 4 && !window.__ttmStop) {
-      window.scrollTo(0, document.body.scrollHeight);
-      const more = [...document.querySelectorAll("button, a, div[role=button], span")].find((b) => /^\s*(load|show|view) more/i.test(b.textContent || "") && b.offsetParent);
-      if (more) more.click();
-      await new Promise((r) => setTimeout(r, 1500));
-      const n = Object.keys(store.comments).length;
-      still = n === last ? still + 1 : 0; last = n;
-      if (btn) btn.textContent = `Loading… ${n} balls`;
+  // Infinite-scroll commentary loads the next batch when the end of the list scrolls into view. Jumping to the very bottom of the page skips straight past it into the ads feed, which loads
+  // nothing. So: find the LAST commentary item, bring it to the middle of the window (the end-of-list trigger is just below it), nudge down and up in small steps, and give up only after
+  // several tries with different positions. Never scroll beyond the list's end.
+  const AD = '[class*="sponsor" i], [class*="taboola" i], [class*="outbrain" i], [id*="taboola" i], [id*="outbrain" i], [class*="advert" i], [id*="google_ads" i], [class*="-ad-" i], [data-ad], aside, footer, iframe';
+  const lastItem = () => {
+    let best = null, bestTop = -1;
+    const w = document.createTreeWalker(document.querySelector("main") || document.body, NodeFilter.SHOW_TEXT);
+    for (let n = w.nextNode(); n; n = w.nextNode()) {
+      if (!/^\s*\d{1,2}\.\d\s*$/.test(n.nodeValue || "")) continue;                    // an over.ball label such as 12.3
+      const el = n.parentElement; if (!el || el.closest(AD)) continue;
+      const r = el.getBoundingClientRect(); if (r.height === 0) continue;
+      const top = r.top + window.scrollY; if (top > bestTop) { best = el; bestTop = top; }
     }
+    return best;
+  };
+  const repeatedItem = () => {                                                      // no over.ball labels found: the biggest run of look-alike siblings in the main column is the commentary list; its last child is the last item
+    const root = document.querySelector("main") || document.body; let best = null, bestN = 7;
+    for (const el of root.querySelectorAll("*")) {
+      if (el.closest(AD) || el.children.length <= bestN) continue;
+      const kids = [...el.children].filter((c) => c.getBoundingClientRect().height > 20), key = (c) => c.tagName + "." + (c.className || ""), counts = {};
+      for (const c of kids) counts[key(c)] = (counts[key(c)] || 0) + 1;
+      const top = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]; if (top && top[1] > bestN) { bestN = top[1]; best = [...kids].filter((c) => key(c) === top[0]).pop(); }
+    }
+    return best;
+  };
+  const sweep = async () => {                                                        // last resort: scroll the whole page slowly from the top, like a person, so the end-of-list trigger must pass through the window
+    const vh = window.innerHeight; const before = Object.keys(store.comments).length;
+    for (let y = 0; y < document.body.scrollHeight; y += vh * 0.7) { window.scrollTo(0, y); await pause(260); if (Object.keys(store.comments).length > before) return true; if (window.__ttmStop) return false; }
+    return false;
+  };
+  const moreButton = () => [...document.querySelectorAll("button, a, div[role=button], span")].find((b) => /^\s*(load|show|view) (more|older|previous)/i.test(b.textContent || "") && b.offsetParent && !b.closest(AD));
+  const pause = (ms) => new Promise((r) => setTimeout(r, ms));
+  const nudge = async (el, stuck = 0) => {                                         // small steps keep the end-of-list trigger inside the window for a moment
+    const vh = window.innerHeight;
+    if (el) el.scrollIntoView({ block: "center" });
+    else window.scrollTo(0, Math.max(0, document.body.scrollHeight - vh * (4 + 3 * stuck)));   // no recognisable last item: aim a few windows above the page bottom, further up each time we are stuck (the ads feed below the list can be many windows tall)
+    await pause(350);
+    for (let i = 0; i < 4; i++) { window.scrollBy(0, vh * 0.12); await pause(160); }
+    for (let i = 0; i < 2; i++) { window.scrollBy(0, -vh * 0.15); await pause(160); }
+  };
+  const loadAll = async (btn) => {
+    let last = -1, still = 0, tries = 0;
+    while (still < 6 && !window.__ttmStop) {
+      const more = moreButton(); if (more) more.click();
+      const el = window.__ttmNoLast ? null : (lastItem() || repeatedItem());
+      if (!el && still >= 1) { await sweep(); }
+      else await nudge(el, still);
+      if (still >= 2) {                                                           // stuck: wiggle further up and down around the end of the list
+        const vh = window.innerHeight; window.scrollBy(0, -vh * (0.4 + 0.2 * (still - 2))); await pause(500); window.scrollBy(0, vh * 0.3); await pause(500);
+      }
+      await pause(1200);
+      const n = Object.keys(store.comments).length;
+      still = n === last ? still + 1 : 0; last = n; tries++;
+      if (btn) btn.textContent = `Loading… ${n} balls`;
+      if (tries > 400) break;
+    }
+    await flush();
     return Object.keys(store.comments).length;
   };
   const saveJson = () => {
-    grabNext(); grabText();
+    grabNext(); grabText(); flush();
     store.saved_at = new Date().toISOString(); store.page_url = location.href;
     const out = { ...store, schema: 4, comments: Object.values(store.comments) };
     const blob = new Blob([JSON.stringify(out)], { type: "application/json" });
@@ -110,11 +174,19 @@
   box.querySelector("#ttm-save").onclick = saveJson;
   // batch.js (same content-script world) drives these in batch mode
   const meta = () => { for (const v of Object.values(store.pages)) { const d = v && v.props && v.props.appPageProps && v.props.appPageProps.data; if (d && d.match) return d.match; } return null; };
-  window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, render };
-
+  
   const start = () => { document.body.appendChild(box); let c = true; try { c = localStorage.getItem("ttm_manual_collapsed") !== "0"; } catch (e) {} collapse(c); grabNext(); save(); render(); };
-  // client-side tab switches do not reload the page: re-read on URL change
-  let lastPath = location.pathname;
-  setInterval(() => { if (location.pathname !== lastPath) { lastPath = location.pathname; setTimeout(() => { grabText(); save(); render(); }, 1500); } }, 1000);
-  if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
+  const boot = async () => {
+    let old = null; try { old = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}                         // a capture started by the previous version of this panel
+    const stored = await kvGet(KEY); if (stored) store = stored; else if (old) store = old;
+    store.comments = store.comments || {}; store.pages = store.pages || {}; store.api = store.api || [];
+    ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
+    window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
+      info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
+      clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
+    if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
+    let lastPath = location.pathname;                                           // client-side tab switches do not reload the page: re-read on URL change
+    setInterval(() => { if (location.pathname !== lastPath) { lastPath = location.pathname; setTimeout(() => { grabText(); save(); render(); }, 1500); } }, 1000);
+  };
+  boot();
 })();
