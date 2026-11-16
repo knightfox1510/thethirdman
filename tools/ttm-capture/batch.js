@@ -90,7 +90,8 @@
   };
   const download = (name, obj) => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(obj)], { type: "application/json" })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); };
   const savePage = async (prefix = "page") => {                          // tables, page data, text, links; stats pages: every format tab / filter too
-    const grab = () => ({ tables: [...document.querySelectorAll("table")].slice(0, 60).map((t) => [...t.rows].map((r) => [...r.cells].map((c) => c.innerText.trim()))), text: (document.querySelector("main") || document.body).innerText.slice(0, 600000) });
+    const panels = () => [...document.querySelectorAll("[data-ttm-panel]")], withPanelsHidden = (fn) => { const h = panels().map((e) => [e, e.style.display]); h.forEach(([e]) => (e.style.display = "none")); try { return fn(); } finally { h.forEach(([e, d]) => (e.style.display = d)); } };
+    const grab = () => ({ tables: [...document.querySelectorAll("table")].slice(0, 60).map((t) => [...t.rows].map((r) => [...r.cells].map((c) => c.innerText.trim()))), text: withPanelsHidden(() => (document.querySelector("main") || document.body).innerText.slice(0, 600000)) });
     let nd = null; try { const el = document.getElementById("__NEXT_DATA__"); nd = el ? JSON.parse(el.textContent) : null; } catch (e) {}
     const out = { site: SITE, schema: SCHEMA, page_url: location.href, title: document.title, saved_at: new Date().toISOString(), next_data: nd, ...grab(), links: links(), views: {} };
     if (/stats|records|statsguru|career/i.test(location.href)) {
@@ -179,7 +180,8 @@
         let n = await T.loadAll();
         const tm = await T.eachTeam();                                                   // the team dropdown ("SL v") switches the innings on Cricinfo: do every team
         await log(s, tm.found ? `  team control: ${tm.tried.join(" | ")}` : `  team control: none found (${T.diag()})`);
-        s.noctl = s.noctl || {}; if (!tm.found) s.noctl[key] = 1; else delete s.noctl[key];
+        s.noctl = s.noctl || {}; if (!tm.found || tm.stuck) s.noctl[key] = tm.found ? 2 : 1; else delete s.noctl[key];      // 1 = no control on the page, 2 = found but the page would not switch            // control missing, or found but the page would not switch: reloading cannot help, so no retries for the missing innings
+        if (tm.stuck) await log(s, `  switch diagnosis: ${T.lastDiag()}`);
         if (tm.found) n = T.count();
         else {
           const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
@@ -199,21 +201,21 @@
     const exp = T.expected(), seenInn = T.innings(), missingInn = exp.length ? exp.filter((n) => !seenInn.includes(n)) : (seenInn.length >= 2 ? [] : [2]);   // what the page itself lists (2 for an ODI, 4 for a Test) minus what we captured
     const twoInn = !needs || missingInn.length === 0;
     const noCtl = !!(s.noctl && s.noctl[key]);                                        // no team control on this page: reloading cannot add the other innings, so do not waste three loads on it
-    if (needs && (have < 150 || (!twoInn && !noCtl))) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
+    if (needs && !noCtl && (have < 150 || !twoInn)) {                               // reloading only helps when something can change (a slow load): never when the control is missing or will not switch                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
       s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
       if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls / innings ${T.innings().join(", ") || "?"}: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
     }
     const balls = T.saveJson();                                                        // one json per match
     s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || missingInn.length > 0), innings: T.innings(), expected: exp };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || missingInn.length) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + " of expected " + (exp.join(", ") || "?") + (noCtl ? "; no team control found, so the missing innings could not be switched to" : " after 3 tries") + ")" : ""}`);
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || missingInn.length) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + " of expected " + (exp.join(", ") || "?") + (noCtl ? (s.noctl[key] === 2 ? "; the team control was found but the page would not switch" : "; no team control found") + ", so the missing innings could not be switched to" : " after 3 tries") + ")" : ""}`);
     if (!(needs && (balls < 150 || missingInn.length))) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
 
   // ---------- panel (dark card, light text everywhere: nothing white-on-white)
   const C = { bg: "#0f172a", card: "#1e293b", line: "#334155", text: "#e2e8f0", mute: "#94a3b8", green: "#16a34a", red: "#dc2626", amber: "#d97706", blue: "#3b82f6" };
-  const box = document.createElement("div");
+  const box = document.createElement("div"); box.setAttribute("data-ttm-panel", "1");
   box.style.cssText = `position:fixed;left:16px;bottom:16px;z-index:2147483647;background:${C.bg};color:${C.text};font:13px/1.45 system-ui,sans-serif;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.45);width:330px;border:1px solid ${C.line}`;
   const B = (id, text, bg, extra = "") => `<button id="${id}" style="background:${bg};color:#fff;border:0;border-radius:8px;padding:8px 10px;font:600 13px system-ui;cursor:pointer;${extra}">${text}</button>`;
   const INP = `background:${C.card};color:${C.text};border:1px solid ${C.line};border-radius:6px;padding:4px 6px;font:13px system-ui`;

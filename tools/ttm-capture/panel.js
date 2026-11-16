@@ -69,7 +69,8 @@
   // Fallback if the structured data is missing: the visible commentary text.
   const grabText = () => {
     const main = document.querySelector("main") || document.body;
-    store.pages[tabNow() + "_text"] = main.innerText.slice(0, 2_000_000);
+    const hidden = []; for (const el of document.querySelectorAll("[data-ttm-panel]")) { hidden.push([el, el.style.display]); el.style.display = "none"; }          // our own panels are not page content (the Activity log was ending up in the saved text)
+    try { store.pages[tabNow() + "_text"] = main.innerText.slice(0, 2_000_000); } finally { for (const [el, d] of hidden) el.style.display = d; }
   };
 
   window.addEventListener("message", (ev) => {
@@ -78,11 +79,12 @@
     if (!/cricinfo\.com|cricbuzz\.com/.test(new URL(d.url, location.href).hostname)) return;
     if (!ready) { pending.push(d); return; }
     store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body });
+    { const m = /inningNumber=(\d+)/.exec(d.url || ""); if (m) { store.reqInnings = store.reqInnings || []; if (!store.reqInnings.includes(+m[1])) store.reqInnings.push(+m[1]); } }   // which innings the page itself asked for
     harvest(d.body); save(); render();
   });
 
   // ---- panel UI ----
-  const box = document.createElement("div");
+  const box = document.createElement("div"); box.setAttribute("data-ttm-panel", "1");
   box.style.cssText = "position:fixed;right:16px;bottom:16px;z-index:2147483647;background:#0d1b3e;color:#fff;font:13px/1.4 system-ui,sans-serif;padding:12px 14px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.35);width:230px";
   box.innerHTML = `<div id="ttm-head" style="font-weight:700;margin-bottom:6px;cursor:pointer">Manual capture · ${SITE} <span id="ttm-chev" style="float:right;opacity:.7">▾</span></div><div id="ttm-body">
     <div id="ttm-n" style="opacity:.85;margin-bottom:8px"></div>
@@ -195,26 +197,69 @@
     const lbl = (toolbarChips().lbl); const chips = lbl ? rowItems(lbl) : []; if (!lbl) return `no "Full Commentary" filter on this page; clickable text seen: ` + [...document.querySelectorAll("button, [role=button], [role=tab], select")].filter(vis).slice(0, 10).map((e) => `${e.tagName.toLowerCase()}:${ownText(e).slice(0, 18)}`).join(" | ");
     return `filter found; row items: ` + (chips.length ? chips : [lbl]).map((e) => `${e.tagName.toLowerCase()}${e.getAttribute("role") ? "[" + e.getAttribute("role") + "]" : ""}.${String(e.className).split(" ")[0].slice(0, 22)}:'${ownText(e).slice(0, 18)}'`).join(" | ");
   };
+  // A dropdown may ignore a plain element.click() (menus built on pointer or keyboard events), so each team switch is tried in several ways and VERIFIED each time:
+  // the control's label becomes the new team, or new innings' balls arrive, or the page itself requests another inningNumber. If nothing works the real markup goes to the log and the capture.
+  const html = (e, n = 420) => { try { return e.outerHTML.replace(/\s+/g, " ").slice(0, n); } catch (x) { return ""; } };
+  const realClick = (el) => {
+    el.scrollIntoView({ block: "center" }); const r = el.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+    const o = (b) => ({ bubbles: true, cancelable: true, composed: true, view: window, clientX: x, clientY: y, button: 0, buttons: b, pointerType: "mouse", pointerId: 1, isPrimary: true });
+    for (const t of ["pointerover", "pointerenter", "mouseover", "mousemove"]) el.dispatchEvent(new (t.startsWith("pointer") ? PointerEvent : MouseEvent)(t, o(0)));
+    el.dispatchEvent(new PointerEvent("pointerdown", o(1))); el.dispatchEvent(new MouseEvent("mousedown", o(1))); try { el.focus(); } catch (e) {}
+    el.dispatchEvent(new PointerEvent("pointerup", o(0))); el.dispatchEvent(new MouseEvent("mouseup", o(0))); el.dispatchEvent(new MouseEvent("click", o(0)));
+  };
+  const key = (el, k) => { for (const t of ["keydown", "keyup"]) el.dispatchEvent(new KeyboardEvent(t, { key: k, code: k, bubbles: true, cancelable: true, composed: true })); };
+  const wantedWords = () => new Set(teamList().flatMap((t) => [t.abbr, t.name]).filter(Boolean));
+  const findOption = (target, ctlEl) => [...document.querySelectorAll("body *")].filter((e) => vis(e) && ownText(e) === target && !ctlEl.contains(e) && !e.contains(ctlEl) && ![...e.children].some((c) => ownText(c) === target) && !e.closest("h1, h2, h3, h4, h5, h6, [role=tablist], nav")).sort((a, b) => b.getBoundingClientRect().top - a.getBoundingClientRect().top)[0];
+  const switched = (target, innBefore, reqBefore) => { const c = findTeamControl(); return (c && c.label === target) || innings().length > innBefore || (store.reqInnings || []).length > reqBefore; };
   const eachTeam = async (btn) => {
-    const done = [], info = { found: false, tried: [] }; let ctl = findTeamControl();
+    const done = [], info = { found: false, tried: [], stuck: false }; let ctl = findTeamControl();
     if (!ctl) return info; info.found = true; const first = ctl.label; done.push(first); info.tried.push(first + " (shown first)");
-    const teams = teamList(), words = new Set(teams.flatMap((t) => [t.abbr, t.name]).filter(Boolean)), names = teamNames();
-    const missing = () => expectedInnings().filter((n) => !innings().includes(n));
+    const words = wantedWords(), names = teamNames(); const missing = () => expectedInnings().filter((n) => !innings().includes(n));
     for (let round = 0; round < 5 && !window.__ttmStop; round++) {
       if (expectedInnings().length && !missing().length) break;                                   // every innings the page lists has been seen
       ctl = findTeamControl(); if (!ctl) break;
-      let target = null;
-      if (ctl.kind === "select") { const o = [...ctl.el.options].find((x) => !done.includes(x.text.trim())); if (!o) break; target = o.text.trim(); ctl.el.value = o.value; ctl.el.dispatchEvent(new Event("change", { bubbles: true })); }
-      else {
+      if (ctl.kind === "select") {
+        const o = [...ctl.el.options].find((x) => !done.includes(x.text.trim())); if (!o) break; const target = o.text.trim(); const innBefore = innings().length, reqBefore = (store.reqInnings || []).length;
+        ctl.el.value = o.value; ctl.el.dispatchEvent(new Event("change", { bubbles: true })); done.push(target); info.tried.push(target + " (select changed)");
+        for (let i = 0; i < 20 && !switched(target, innBefore, reqBefore) && !window.__ttmStop; i++) await pause(1000);
+      } else {
+        // which other team is next? read the options once the control is opened
         const before = new Set([...document.querySelectorAll("*")].filter(vis)); ctl.el.click(); await pause(600);
+        if (![...document.querySelectorAll("*")].some((e) => vis(e) && !before.has(e))) { realClick(ctl.el); await pause(600); }
         const opts = [...document.querySelectorAll("*")].filter((e) => vis(e) && !before.has(e) && (e.children.length === 0 || /^(option|menuitem|menuitemradio)$/.test(e.getAttribute("role") || "")));
         let cand = opts.map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && (words.has(x.t) || CODE_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
-        if (!cand.length) cand = [...document.querySelectorAll("[role=option], [role=menuitem], li")].filter(vis).map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && !done.includes(x.t) && x.t !== ctl.label);   // any option that is not the current one
-        if (!cand.length) { document.body.click(); if (missing().length) info.tried.push("dropdown opened but no other option found"); break; }
-        target = cand[0].t; (cand[0].e.closest("[role=option], [role=menuitem], li, button, a") || cand[0].e).click();
+        if (!cand.length) cand = [...document.querySelectorAll("[role=option], [role=menuitem], li")].filter(vis).map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && !done.includes(x.t) && x.t !== ctl.label);
+        if (!cand.length) { document.body.click(); if (missing().length) { info.tried.push("dropdown opened but no other option found"); info.stuck = true; store.diag = (store.diag || []).concat({ at: new Date().toISOString(), what: "no option found", control: html(ctl.el) }); } break; }
+        const target = cand[0].t, popup = cand[0].e.closest("[role=listbox], [role=menu], ul, ol") || cand[0].e.parentElement;
+        const strategies = [
+          ["click", (o) => o.click()],
+          ["pointer events", (o) => realClick(o)],
+          ["parent element", (o) => realClick(o.closest("[role=option], [role=menuitem], [role=menuitemradio], li, button, a, [tabindex]") || o.parentElement || o)],
+          ["keyboard: Down, Enter", async () => { ctl.el.focus(); key(ctl.el, "ArrowDown"); await pause(250); key(document.activeElement || ctl.el, "Enter"); }],
+          ["keyboard: Down, Down, Enter", async () => { ctl.el.focus(); key(ctl.el, "ArrowDown"); await pause(250); key(document.activeElement || ctl.el, "ArrowDown"); await pause(250); key(document.activeElement || ctl.el, "Enter"); }],
+          ["keyboard: Up, Enter", async () => { ctl.el.focus(); key(ctl.el, "ArrowUp"); await pause(250); key(document.activeElement || ctl.el, "Enter"); }],
+          ["keyboard: Enter, Down, Enter", async () => { ctl.el.focus(); key(ctl.el, "Enter"); await pause(300); key(document.activeElement || ctl.el, "ArrowDown"); await pause(250); key(document.activeElement || ctl.el, "Enter"); }],
+        ];
+        const innBefore = innings().length, reqBefore = (store.reqInnings || []).length; let worked = "", tried = [];
+        for (const [name, run] of strategies) {
+          if (window.__ttmStop) break;
+          let o = findOption(target, ctl.el);
+          if (!o && !name.startsWith("keyboard")) { ctl.el.click(); await pause(500); o = findOption(target, ctl.el); }       // the menu closed after the last attempt: open it again
+          if (!o && !name.startsWith("keyboard")) { tried.push(name + ": option not visible"); continue; }
+          await run(o); tried.push(name);
+          for (let i = 0; i < (name.startsWith("keyboard") ? 3 : 6) && !switched(target, innBefore, reqBefore); i++) await pause(1000);
+          if (switched(target, innBefore, reqBefore)) { worked = name; break; }
+          document.body.click(); await pause(300);                                          // close whatever is open before the next way
+        }
+        done.push(target);
+        if (!worked) {
+          info.stuck = true; info.tried.push(`${target}: the page did not switch (tried ${tried.join(", ")})`);
+          store.diag = (store.diag || []).concat({ at: new Date().toISOString(), what: "switch failed", target, tried, control: html(ctl.el), popup: html(popup, 700) }); save();
+          document.body.click(); break;                                                                // deterministic failure: do not repeat it
+        }
+        info.tried.push(`${target} (switched by ${worked})`);
+        for (let i = 0; i < 25 && innings().length <= innBefore && !window.__ttmStop; i++) await pause(1000);              // wait until the new innings' balls arrive
       }
-      const innBefore = innings().length; done.push(target); info.tried.push(target + " (switched)");
-      for (let i = 0; i < 25 && innings().length <= innBefore && !window.__ttmStop; i++) await pause(1000);                 // wait until new innings' balls arrive
       const n = await loadAll(btn); info.tried[info.tried.length - 1] += `: ${n} balls so far`;
     }
     info.expected = expectedInnings(); info.missing = missing();
@@ -267,7 +312,7 @@
     delete store.pages[matchSlug]; delete store.pages[matchSlug + "_text"];                                       // left behind by the old tab-naming bug (every tab shared this key)
     ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
     window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
-      eachTeam, innings, expected: expectedInnings, diag: describeToolbar, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), expected: expectedInnings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
+      eachTeam, innings, expected: expectedInnings, diag: describeToolbar, lastDiag: () => { const d = (store.diag || []).slice(-1)[0]; return d ? `${d.what}${d.target ? " -> " + d.target : ""}; control: ${d.control}${d.popup ? " | popup: " + d.popup : ""}` : ""; }, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), expected: expectedInnings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
       clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
     if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
     let lastPath = location.pathname;                                           // client-side tab switches do not reload the page: re-read on URL change
