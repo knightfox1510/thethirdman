@@ -386,6 +386,7 @@ function fRefreshUI(p, optsByKey){   // update the multi-select summaries and hi
 const T = {edit:false, rows:null, dirty:false, saving:false, msg:""};
 const chanOf = r => { const p = r.platform || ""; const o = []; if (/youtube/i.test(p)) o.push("YouTube"); if (/instagram|\bIG\b/i.test(p)) o.push("Instagram"); return o.length ? o : ["Other"]; };
 const kindOf = r => { const p = r.platform || "", o = []; if (/long/i.test(p)) o.push("Long video"); if (/short/i.test(p)) o.push("Short"); if (/reel/i.test(p)) o.push("Reel"); if (/carousel/i.test(p)) o.push("Carousel"); return o.length ? o : ["Other"]; };
+const SERIES_LIST = ["01 Myth or Data","02 The Replay Room","03 Tactics Board","04 The Lab","05 Stat Check","06 What If","07 Rising Star","08 Flip","09 Data Stories","10 Channel","11 Did You Know"];   // = the Drive folders
 function trkOpts(rows){
   return {
     month: optsFrom(countBy(rows, r => r.date ? r.date.slice(0,7) : "none"), null, monthName).sort((a,b) => (a.v==="none") - (b.v==="none") || b.v.localeCompare(a.v)),
@@ -394,6 +395,7 @@ function trkOpts(rows){
     kind: optsFrom(countBy(rows, kindOf)),
     status: optsFrom(countBy(rows, r => r.status || "(none)"), STATUSES),
     link: optsFrom(countBy(rows, r => r.link ? "Has link" : "No link"), ["Has link","No link"]),
+    series: optsFrom(countBy(rows, r => r.series || "(none)"), [...SERIES_LIST, "(none)"]),
   };
 }
 function trkMatch(r, F){
@@ -403,19 +405,19 @@ function trkMatch(r, F){
   if ((F.from || F.to) && !r.date) return false;
   if (F.from && r.date < F.from) return false;
   if (F.to && r.date > F.to) return false;
-  return has("month", r.date ? r.date.slice(0,7) : "none") && has("platform", r.platform || "(none)") && has("channel", chanOf(r)) && has("kind", kindOf(r)) && has("status", r.status || "(none)") && has("link", r.link ? "Has link" : "No link");
+  return has("month", r.date ? r.date.slice(0,7) : "none") && has("platform", r.platform || "(none)") && has("channel", chanOf(r)) && has("kind", kindOf(r)) && has("status", r.status || "(none)") && has("series", r.series || "(none)") && has("link", r.link ? "Has link" : "No link");
 }
 const TRK_CHIPS = [
   {k:"q",label:"Content",show:F=>F.q||null},{k:"notes",label:"Notes",show:F=>F.notes||null},
   {k:"date",label:"Date",show:F=>(F.from||F.to) ? `${F.from?fmtDate(F.from):"…"} to ${F.to?fmtDate(F.to):"…"}` : null},
   {k:"month",label:"Month",show:F=>setTxt(F.month||new Set(),null,{none:"No date"})},{k:"platform",label:"Platform",show:F=>setTxt(F.platform||new Set())},
   {k:"channel",label:"Channel",show:F=>setTxt(F.channel||new Set())},{k:"kind",label:"Kind",show:F=>setTxt(F.kind||new Set())},
-  {k:"status",label:"Status",show:F=>setTxt(F.status||new Set())},{k:"link",label:"Link",show:F=>setTxt(F.link||new Set())}];
+  {k:"status",label:"Status",show:F=>setTxt(F.status||new Set())},{k:"series",label:"Series",show:F=>setTxt(F.series||new Set())},{k:"link",label:"Link",show:F=>setTxt(F.link||new Set())}];
 function trkRows(){ const S = D.schedule, rows = T.edit ? T.rows : S.rows; return {rows, shown: (T.edit ? rows : rows.slice().sort(byDate)).filter(r => trkMatch(r, FS.trk))}; }
 function trkBody(shown){
   return shown.map(r => T.edit ? editRow(r) : `<tr${r.date===TODAY?' style="background:color-mix(in srgb,var(--accent) 14%,transparent)"':""}><td class="mono small" style="white-space:nowrap">${r.date?dow(r.date)+" "+fmtDate(r.date):"—"}</td>
     <td><b>${esc(r.content)}</b>${r.link?` <a class="lnk" href="${url(r.link)}" target="_blank" rel="noopener">watch ↗</a>`:""}<div class="muted small show-sm">${esc(r.platform||"")}</div></td>
-    <td class="hide-sm small">${esc(r.platform||"")}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("") || `<tr><td colspan="7" class="empty">Nothing matches these filters. <button class="lnkbtn" data-fclear="trk">Clear filters</button></td></tr>`;
+    <td class="hide-sm small">${esc(r.platform||"")}</td><td class="small" style="white-space:nowrap">${esc(r.series||"")}</td><td>${statusChip(r.status)}</td><td class="hide-sm small muted">${esc(r.notes||"")}</td></tr>`).join("") || `<tr><td colspan="8" class="empty">Nothing matches these filters. <button class="lnkbtn" data-fclear="trk">Clear filters</button></td></tr>`;
 }
 FAPPLY.trk = () => {
   const {rows, shown} = trkRows(), o = trkOpts(rows);
@@ -436,13 +438,13 @@ function tracker(){
           <button class="btn" onclick="exportRows()">Export JSON</button></div>
          ${!S.live?`<div class="note" style="margin-bottom:12px">First save moves the schedule into the site's own storage (from the ${fmtDate(S.synced)} snapshot of the sheet). After that, edit it here only.</div>`:""}`
       : `<div class="toolbar"><button class="btn primary" onclick="startEdit()">Edit tracker</button><span class="small muted">${esc(T.msg)}</span><span class="sp"></span><button class="btn" onclick="exportRows()">Export JSON</button></div>`;
-  const head = `<thead><tr><th>Date</th><th>Content</th><th${T.edit?"":' class="hide-sm"'}>Platform</th><th>Status</th><th${T.edit?"":' class="hide-sm"'}>${T.edit?"Link":"Notes"}</th>${T.edit?"<th>Notes</th><th></th>":""}</tr></thead>`;
+  const head = `<thead><tr><th>Date</th><th>Content</th><th${T.edit?"":' class="hide-sm"'}>Platform</th><th>Series</th><th>Status</th><th${T.edit?"":' class="hide-sm"'}>${T.edit?"Link":"Notes"}</th>${T.edit?"<th>Notes</th><th></th>":""}</tr></thead>`;
   return `<div class="kicker">Content schedule</div><h1>Tracker</h1>
   <p class="lede">${S.live ? `Lives on this site; last saved ${fmtDate(S.synced)}.` : `A snapshot of the schedule sheet from ${fmtDate(S.synced)}.`} ${S.editable ? "Edit it here: change a status, add a video, paste the link after posting." : ""}</p>
   ${tools}
   <div class="fbar">
     ${fText("trk","q","Content","Search titles")}${fDate("trk","Date")}${fMulti("trk","month","Month",o.month)}${fPresets("trk")}
-    ${fMulti("trk","status","Status",o.status)}${fMulti("trk","platform","Platform",o.platform)}${fMulti("trk","channel","Channel",o.channel)}${fMulti("trk","kind","Kind",o.kind)}${fMulti("trk","link","Link",o.link)}${fText("trk","notes","Notes","Search notes")}
+    ${fMulti("trk","status","Status",o.status)}${fMulti("trk","series","Series",o.series)}${fMulti("trk","platform","Platform",o.platform)}${fMulti("trk","channel","Channel",o.channel)}${fMulti("trk","kind","Kind",o.kind)}${fMulti("trk","link","Link",o.link)}${fText("trk","notes","Notes","Search notes")}
   </div>
   <div class="fchips"><span class="fcount" id="fcount">${shown.length} of ${rows.length} rows</span><span id="fchips">${fActive("trk", TRK_CHIPS)}</span> <button class="lnkbtn" data-fclear="trk">Clear all</button></div>
   <div class="tablewrap${T.edit?" edit":""}"><table>${head}<tbody id="fbody">${trkBody(shown)}</tbody></table></div>
@@ -452,6 +454,7 @@ function editRow(r){
   const f = (k, cls, type="text", extra="") => `<td class="${cls}"><input type="${type}" value="${esc(r[k]||"")}" data-id="${r.id}" data-f="${k}" oninput="onEdit(this)" ${extra}></td>`;
   return `<tr>${f("date","c-date","date")}${f("content","c-content","text",'placeholder="Title"')}
     <td class="c-plat"><input list="plats" value="${esc(r.platform||"")}" data-id="${r.id}" data-f="platform" oninput="onEdit(this)"></td>
+    <td class="c-stat"><select data-id="${r.id}" data-f="series" onchange="onEdit(this)"><option value=""></option>${SERIES_LIST.map(s=>`<option${s===r.series?" selected":""}>${esc(s)}</option>`).join("")}</select></td>
     <td class="c-stat"><select data-id="${r.id}" data-f="status" onchange="onEdit(this)"><option value=""></option>${STATUSES.map(s=>`<option${s===r.status?" selected":""}>${esc(s)}</option>`).join("")}</select></td>
     ${f("link","c-link","url",'placeholder="https://…"')}${f("notes","c-notes")}
     <td><button class="btn danger" title="Delete row" onclick="delRow('${r.id}')">✕</button></td></tr>`;
@@ -462,12 +465,12 @@ async function startEdit(){
   if (!getKey() && !await askKey("Password to edit the tracker.")) return;
   T.rows = structuredClone(D.schedule.rows).sort(byDate); T.edit = true; T.dirty = false; T.msg = ""; rerender();
 }
-function addRow(){ FS.trk = {}; T.rows.unshift({id: rid(), date: TODAY, platform: "YouTube long", content: "", status: "Idea", link: null, notes: null}); T.dirty = true; rerender(); setTimeout(() => { const i = $('tbody tr input[data-f="content"]'); if (i) i.focus(); }, 30); }
+function addRow(){ FS.trk = {}; T.rows.unshift({id: rid(), date: TODAY, platform: "YouTube long", series: null, content: "", status: "Idea", link: null, notes: null}); T.dirty = true; rerender(); setTimeout(() => { const i = $('tbody tr input[data-f="content"]'); if (i) i.focus(); }, 30); }
 function delRow(id){ const r = T.rows.find(x => x.id === id); if (r && confirm(`Delete "${r.content || "this row"}"?`)) { T.rows = T.rows.filter(x => x.id !== id); T.dirty = true; rerender(); } }
 function discardEdit(){ if (T.dirty && !confirm("Discard your changes?")) return; T.edit = false; T.dirty = false; T.rows = null; T.msg = ""; rerender(); }
 async function saveRows(){
   if (T.rows.some(r => !(r.content || "").trim())) { T.msg = "Every row needs a title."; return rerender(); }
-  const rows = T.rows.slice().sort(byDate).map(({id,date,platform,content,status,link,notes}) => ({id, date: date||null, platform: platform||null, content: content.trim(), status: status||null, link: link||null, notes: notes||null}));
+  const rows = T.rows.slice().sort(byDate).map(({id,date,platform,series,content,status,link,notes}) => ({id, date: date||null, platform: platform||null, series: series||null, content: content.trim(), status: status||null, link: link||null, notes: notes||null}));
   T.saving = true; rerender();
   const send = () => api("/api/schedule", {method: "PUT", body: JSON.stringify({rows, base: D.schedule.base || undefined})});
   let r = await send();
