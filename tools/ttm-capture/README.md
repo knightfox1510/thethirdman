@@ -89,3 +89,9 @@ What the 65208 capture and the 65210 sample page showed, and what changed:
 - **No more retrying a failure that cannot change:** a reload can only help when something can differ (a slow load). If the control is missing or will not switch, the match is saved ONCE as `incomplete` with the reason (`no team control found` vs `found but the page would not switch`). Reloads remain only for thin captures with a working control.
 - **The saved page text no longer contains our own panels** (the Activity log was ending up in `_text`, as seen in the statistics export).
 - Tested on simulated dropdowns that react only to click, only to pointer events, only to the keyboard, and to nothing.
+
+## Capturing every match (master index first)
+1. Find a list page whose rows link to matches (Statsguru "match results" per format, 200 rows per page; or a season archive). Copy its URL and replace the page number with `{page}`.
+2. `python3 -m dataops.index urls --template '<url with {page}>' --pages <N> --out data/index/urls_odi.txt`, paste the URLs into the batch box: each list page is saved as a page file (tables + links). From v1.7 the extension also runs on `stats.espncricinfo.com`.
+3. `python3 -m dataops.index build <folder of saved pages>` (master list: id, url, official number, date, teams) then `python3 -m dataops.index check` (the numbers and dates must agree with Cricsheet before you trust them).
+4. `python3 -m dataops.index queue --since 2003 --chunk 500`, paste `data/index/queue_001.txt` into the batch box, and repeat for each chunk. Already-complete matches are skipped.
