@@ -3,7 +3,7 @@
 //   - the ball-by-ball commentary is read through the same endpoint the page uses (/v1/pages/match/comments), innings by innings, following its own "nextInningOver" cursor to the end.
 // No tab switching, no scrolling, no team dropdown (which is why Tests with four innings no longer depend on clicking "ENG 2nd Innings"). Requests are paced like the page's own scrolling.
 // It never saves anything itself: it hands what it fetched to panel.js (window.__ttm.put / addApi), so the saved JSON has the same format as before. If anything fails, run() returns ok:false and
-// batch.js falls back to the old way for that match. window.__ttm.direct.run(opts) -> { ok, blocked, notes[], tabs[], innings:[{n, want, got, ended}] }.
+// batch.js falls back to the old way for that match. window.__ttm.direct.run(opts) -> { ok, blocked (HTTP 429), refused (the data API said 403: stop using direct fetch), notes[], tabs[], innings:[{n, want, got, ended}] }.
 (() => {
   if (/cricbuzz/.test(location.hostname)) return;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -21,11 +21,12 @@
       for (const cred of json ? ["omit", "include"] : ["same-origin"]) {
         try {
           const r = await fetch(url, { credentials: cred, headers: json ? { accept: "application/json" } : { accept: "text/html" } });
-          if (r.status === 403 || r.status === 429) throw Object.assign(new Error("HTTP " + r.status), { blocked: true });
+          if (r.status === 429) throw Object.assign(new Error("HTTP 429"), { blocked: true });                     // slow down: stop
+          if (r.status === 403) { let say = ""; try { say = (await r.text()).replace(/\s+/g, " ").slice(0, 120); } catch (e) {} throw Object.assign(new Error(`HTTP 403 (${(r.headers.get("content-type") || "").split(";")[0]}) ${say}`), { refused: true }); }   // the server says no to this way of asking: we do NOT try other ways round it, we stop using it and the old way takes over
           if (r.status === 404) return { status: 404 };
           if (!r.ok) { last = "HTTP " + r.status; break; }
           return { status: 200, body: json ? await r.json() : await r.text() };
-        } catch (e) { if (e.blocked || e.stopped) throw e; last = (e && e.message) || String(e); }
+        } catch (e) { if (e.blocked || e.refused || e.stopped) throw e; last = (e && e.message) || String(e); }
       }
       await sleep(1500 * (attempt + 1) + rnd([0, 800]));
     }
@@ -61,7 +62,7 @@
     try {
       if (!T || !T.put || !T.addApi || !T.check) { out.notes.push("panel too old for direct fetch"); return out; }
       const have = new Set((T.info().tabs) || []);
-      for (const slug of opts.tabs || []) { if (have.has(slug)) continue; try { await tab(T, slug, out); } catch (e) { if (e.blocked || e.stopped) throw e; out.notes.push(`${slug}: ${e.message}`); } await sleep(rnd([300, 800])); }
+      for (const slug of opts.tabs || []) { if (have.has(slug)) continue; try { await tab(T, slug, out); } catch (e) { if (e.blocked || e.stopped) throw e; out.notes.push(`${slug}: ${e.message}`); } await sleep(rnd([300, 800])); }   // (a tab the server refuses is skipped; the old way can still open it)
       if (opts.commentary) {
         const want = T.check(); if (!want.length) { out.notes.push("no innings listed on the page: cannot tell what to fetch"); return out; }
         let allEnded = true;
@@ -77,7 +78,7 @@
         const short = out.innings.filter((i) => i.got < i.want);
         if (short.length) out.notes.push("commentary is short of the scorecard's balls in innings " + short.map((i) => `${i.n} (${i.got}/${i.want})`).join(", ") + (allEnded ? ": the source ends there" : ""));
       } else { await T.flush(); out.ok = true; }
-    } catch (e) { out.blocked = !!e.blocked; out.stopped = !!e.stopped; out.notes.push(e.message); out.ok = false; }
+    } catch (e) { out.blocked = !!e.blocked; out.refused = !!e.refused; out.stopped = !!e.stopped; out.notes.push(e.message); out.ok = false; }
     return out;
   }
 

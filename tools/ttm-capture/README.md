@@ -107,3 +107,7 @@ What the 65208 capture and the 65210 sample page showed, and what changed:
 Nothing is saved by the module itself: it hands the data to panel.js, so the saved JSON has the same format. If anything fails (or "Direct fetch" is off), that match is done the old way. A 403/429 stops the run the same way a human-check page does (auto-resume backs off). Pace: 8-16 s between matches (5-10 s with "Quick pace"), ~0.5-1 s between API requests.
 Also: Test commentary controls labelled "ENG 2nd Innings" are now recognised by the old way too.
 Updating a run that is in progress: Stop, reload the extension at chrome://extensions, refresh the tab, Resume. The queue, the done list and any half-captured match live in the extension's storage and carry over.
+
+### v1.8.1
+- The commentary API answered **403** to the direct requests in a live run. That is the server refusing this way of asking, so the module does not retry it or try other routes: direct fetch switches itself OFF for the rest of the run (Start/Resume tries it once more) and the match is finished the old way. Only HTTP **429** (slow down) triggers the backoff/rest.
+- Tabs that were fetched as HTML (playing XI, statistics, summary) are still not opened again, so the old way needs fewer page loads even when the commentary API says no. Untick "Direct fetch" in Options to go back to exactly the 1.6.5 behaviour.

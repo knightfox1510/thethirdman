@@ -194,18 +194,19 @@
     const mtn = T.meta() || {};                                                        // what does this match have? (old matches: scorecard and players, no commentary)
     const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
     if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
-    let directOk = false;                                                              // direct.js: the other tabs + the whole commentary through the page's own JSON, no tab switching or scrolling; any failure = the old way below
-    if (idx === 0 && s.direct !== false && T.direct && !stopFlag) {
+    let directOk = false; const gotTabs = new Set();                                                              // direct.js: the other tabs + the whole commentary through the page's own JSON, no tab switching or scrolling; any failure = the old way below
+    if (idx === 0 && s.direct !== false && !s.directOff && T.direct && !stopFlag) {
       const r = await T.direct.run({ tabs: [mtn.hasMatchPlayers !== false ? "match-playing-xi" : null, "match-statistics", "live-cricket-score"].filter(Boolean), commentary: mtn.hasCommentary !== false });
       if (stopFlag) return;
       await log(s, `  direct fetch: ${r.ok ? "complete" : "NOT complete (falling back to the page tabs)"} · tabs ${r.tabs.join(", ") || "none"}${r.innings.length ? " · innings " + r.innings.map((i) => `${i.n}: ${i.got}/${i.want}${i.ended ? "" : " (cursor did not end)"}`).join(", ") : ""}${r.notes.length ? " · " + r.notes.join("; ") : ""}`);
-      if (r.blocked) {                                                                 // 403 / 429: the site is asking us to slow down: same handling as a human-check page
-        if (s.auto && (s.blockTries || 0) < (s.backoff || BACKOFF).length) { s.resumeUrl = location.href; return backOff(s, "Direct fetch was refused (HTTP 403/429)"); }
-        return stopped(s, "STOPPED: the site refused the direct requests (HTTP 403/429). Wait a while, then press Resume (nothing is lost).");
+      if (r.refused) { s.directOff = true; await set(s); await log(s, "  direct fetch: the site's data API answered 403 to these requests, so direct fetch is OFF for the rest of this run (matches continue the old way; Start/Resume tries it once more). Nothing was retried or worked around."); }
+      if (r.blocked) {                                                                 // HTTP 429: the site is asking us to slow down: same handling as a human-check page
+        if (s.auto && (s.blockTries || 0) < (s.backoff || BACKOFF).length) { s.resumeUrl = location.href; return backOff(s, "Direct fetch was told to slow down (HTTP 429)"); }
+        return stopped(s, "STOPPED: the site answered HTTP 429 (slow down) to the direct requests. Wait a while, then press Resume (nothing is lost).");
       }
-      directOk = r.ok;
+      directOk = r.ok; (r.tabs || []).forEach((x) => gotTabs.add(x));                    // tabs fetched as HTML are not opened again even when the commentary has to be done the old way
     }
-    let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
+    let nx = idx + 1; while (nx < s.plan.length && (!applies(s.plan[nx]) || (s.plan[nx] !== "comm" && gotTabs.has(TABS[s.plan[nx]])))) nx++;
     if (directOk) nx = s.plan.length;                                                  // everything is already in the capture: go straight to saving
     const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}; innings ${inf.innings.join(", ") || "?"}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
@@ -291,7 +292,7 @@
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
       const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
-      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
+      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, directOff: false, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
       await setOpts(s);
       if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }
       await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run${s.auto ? ", auto-resume ON" : ""}`); heartbeat(); step();
