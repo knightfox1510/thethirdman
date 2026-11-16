@@ -17,6 +17,7 @@ data/*
 !data/reference/
 !data/series/
 !data/models/
+!data/index/
 # secrets
 .env
 *.key

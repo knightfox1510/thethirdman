@@ -89,3 +89,25 @@ What the 65208 capture and the 65210 sample page showed, and what changed:
 - **No more retrying a failure that cannot change:** a reload can only help when something can differ (a slow load). If the control is missing or will not switch, the match is saved ONCE as `incomplete` with the reason (`no team control found` vs `found but the page would not switch`). Reloads remain only for thin captures with a working control.
 - **The saved page text no longer contains our own panels** (the Activity log was ending up in `_text`, as seen in the statistics export).
 - Tested on simulated dropdowns that react only to click, only to pointer events, only to the keyboard, and to nothing.
+
+## Capturing every match (master index first)
+1. Find a list page whose rows link to matches (Statsguru "match results" per format, 200 rows per page; or a season archive). Copy its URL and replace the page number with `{page}`.
+2. `python3 -m dataops.index urls --template '<url with {page}>' --pages <N> --out data/index/urls_odi.txt`, paste the URLs into the batch box: each list page is saved as a page file (tables + links). From v1.7 the extension also runs on `stats.espncricinfo.com`.
+3. `python3 -m dataops.index build <folder of saved pages>` (master list: id, url, official number, date, teams) then `python3 -m dataops.index check` (the numbers and dates must agree with Cricsheet before you trust them).
+4. `python3 -m dataops.index queue --since 2003 --chunk 500`, paste `data/index/queue_001.txt` into the batch box, and repeat for each chunk. Already-complete matches are skipped.
+
+### Easiest start: team series-results pages (v1.7.1)
+`https://www.cricinfo.com/records/team/team-series-results/<team>-<id>/<format>-<classId>` (e.g. `.../india-6/test-matches-1`) lists every series that team played in that format. Paste one per team and format into the batch box: the crawler goes list -> series -> matches by itself (a list may now hold up to 600 series; series seen from several teams are queued once). Turn on "save lists" to keep each series page, then `python3 -m dataops.index build <folder>` reads their match lists into the master index.
+
+## v1.8.0: direct fetch (faster, fewer requests)
+`direct.js` is an optional, separate module (Options → "Direct fetch", on by default). After the scorecard page of a match has loaded it
+- fetches the playing XI, statistics and summary tabs as plain HTML and stores their embedded data under the same keys as before (`match-playing-xi`, `match-statistics`, `live-cricket-score`);
+- reads the commentary through the endpoint the page itself uses (`/v1/pages/match/comments`), innings by innings (1-2 for an ODI, 1-4 for a Test), following its `nextInningOver` cursor to the end: no scrolling, no team dropdown;
+- checks the result against the scorecard (legal balls per innings); the log shows `innings 1: 689/689 ...`. A shortfall is reported, and the match is only treated as complete when the cursor reached its end for every innings.
+Nothing is saved by the module itself: it hands the data to panel.js, so the saved JSON has the same format. If anything fails (or "Direct fetch" is off), that match is done the old way. A 403/429 stops the run the same way a human-check page does (auto-resume backs off). Pace: 8-16 s between matches (5-10 s with "Quick pace"), ~0.5-1 s between API requests.
+Also: Test commentary controls labelled "ENG 2nd Innings" are now recognised by the old way too.
+Updating a run that is in progress: Stop, reload the extension at chrome://extensions, refresh the tab, Resume. The queue, the done list and any half-captured match live in the extension's storage and carry over.
+
+### v1.8.1
+- The commentary API answered **403** to the direct requests in a live run. That is the server refusing this way of asking, so the module does not retry it or try other routes: direct fetch switches itself OFF for the rest of the run (Start/Resume tries it once more) and the match is finished the old way. Only HTTP **429** (slow down) triggers the backoff/rest.
+- Tabs that were fetched as HTML (playing XI, statistics, summary) are still not opened again, so the old way needs fewer page loads even when the commentary API says no. Untick "Direct fetch" in Options to go back to exactly the 1.6.5 behaviour.

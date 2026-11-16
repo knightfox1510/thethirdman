@@ -29,20 +29,7 @@
    "as_of": "v  at Sinhalese Sports Club Cricket Ground, Colombo, 2nd Test, 23 August - 27 August 2026.",
    "source": "https://en.wikipedia.org/wiki/Template:India_Test_cricket_records_by_opponent (cites ESPNcricinfo results summaries)",
    "held_from": "2001-12-19",
-   "held_to": "2026-08-23",
-   "window": {
-    "since": "2024-07-27",
-    "matches": 21,
-    "by_event": {
-     "Bangladesh tour of India": "WW",
-     "New Zealand tour of India": "LLL",
-     "India tour of Australia": "WLDLL",
-     "India tour of England": "LWLDW",
-     "West Indies tour of India": "WW",
-     "South Africa tour of India": "LL",
-     "India tour of Sri Lanka": "WD"
-    }
-   }
+   "held_to": "2026-08-23"
   },
   "ODI": {
    "held": {
@@ -54,38 +41,24 @@
     "drawn": 0
    },
    "reference": {
-    "matches": 1088,
-    "won": 579,
+    "matches": 1089,
+    "won": 580,
     "lost": 454,
     "tied": 10,
     "no_result": 45
    },
    "gap": {
-    "matches": 559,
-    "won": 264,
+    "matches": 560,
+    "won": 265,
     "lost": 269,
     "tied": 4,
     "no_result": 22
    },
    "status": "GAPS",
-   "as_of": "v  at Bay Oval, Tauranga, 13 November 2026",
+   "as_of": "v  at Bay Oval, Tauranga, 15 November 2026",
    "source": "https://en.wikipedia.org/wiki/Template:India_ODI_cricket_records_by_opponent (cites ESPNcricinfo results summaries)",
    "held_from": "2002-06-29",
-   "held_to": "2026-10-03",
-   "window": {
-    "since": "2024-07-27",
-    "matches": 26,
-    "by_event": {
-     "India tour of Sri Lanka": "tLL",
-     "England tour of India": "WWW",
-     "ICC Champions Trophy": "WWWWW",
-     "India tour of Australia": "LLW",
-     "South Africa tour of India": "WLW",
-     "New Zealand tour of India": "WLL",
-     "India tour of England": "WLL",
-     "West Indies tour of India": "WWL"
-    }
-   }
+   "held_to": "2026-10-03"
   },
   "T20I": {
    "held": {
@@ -120,29 +93,7 @@
    "as_of": "v  at Seddon Park, Hamilton, New Zealand|Hamilton, 1 November 2026",
    "source": "https://en.wikipedia.org/wiki/Template:India_T20I_cricket_records_by_opponent (cites ESPNcricinfo results summaries)",
    "held_from": "2006-12-01",
-   "held_to": "2026-11-01",
-   "window": {
-    "since": "2024-07-27",
-    "matches": 68,
-    "by_event": {
-     "India tour of Sri Lanka": "WWt",
-     "Bangladesh tour of India": "WWW",
-     "India tour of South Africa": "WLWW",
-     "England tour of India": "WWLWW",
-     "Men's T20 Asia Cup": "WWWWWtW",
-     "India tour of Australia": "nLWWn",
-     "South Africa tour of India": "WLWW",
-     "New Zealand tour of India": "WWWLW",
-     "ICC Men's T20 World Cup": "WWWWLWWWW",
-     "India tour of Ireland": "LL",
-     "India tour of England": "nLLLL",
-     "India tour of Zimbabwe": "WWW",
-     "India tour of Japan": "W",
-     "Asian Games Men's Cricket Competition": "WW",
-     "West Indies tour of India": "WLWLn",
-     "India tour of New Zealand": "WWWLL"
-    }
-   }
+   "held_to": "2026-11-01"
   }
  }
 }
