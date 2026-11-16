@@ -1,6 +1,6 @@
 {
- "synced": "2026-11-15",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov)",
+ "synced": "2026-11-16",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs)",
  "items": [
   {
    "date": "2026-11-13",
@@ -15,7 +15,7 @@
    "event": "5th ODI",
    "teams": "NZ v India",
    "venue": "Mount Maunganui (Bay Oval)",
-   "status": "Today: series decider, India lead 2-1 (result pending at sync)",
+   "status": "India won by 22 runs (India 209; NZ 187). India win series 3-1",
    "format": "replay"
   },
   {
@@ -23,15 +23,23 @@
    "event": "IPL 2027 retention deadline",
    "teams": "IPL",
    "venue": "—",
-   "status": "Upcoming",
+   "status": "Tomorrow",
    "format": "statcheck"
+  },
+  {
+   "date": "2026-11-18",
+   "event": "3rd ODI",
+   "teams": "Australia v England",
+   "venue": "Hobart (Bellerive Oval)",
+   "status": "Upcoming (global interest)",
+   "format": "news"
   },
   {
    "date": "2026-11-19",
    "event": "1st Test (19–23 Nov)",
    "teams": "NZ v India",
    "venue": "Wellington (Basin Reserve)",
-   "status": "Upcoming: Pant subject to fitness clearance",
+   "status": "Upcoming: Pant cleared after simulation, travelled to NZ (~12 Nov)",
    "format": "tactics"
   },
   {
