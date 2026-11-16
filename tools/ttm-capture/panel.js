@@ -144,7 +144,7 @@
   // eachTeam() opens that control, switches to every other team and loads that innings' commentary completely. It reports what it found so the log shows it.
   const teamNames = () => { const m = (document.title + " " + ((document.querySelector('meta[property="og:title"]') || {}).content || "")).match(/([A-Z][\w .'-]+?) (?:vs|v) ([A-Z][\w .'-]+?)(?:,|\s-|\s\d|$)/); return m ? [m[1].trim(), m[2].trim()] : []; };
   const vis = (e) => !!(e && e.offsetParent !== null && e.getBoundingClientRect().height > 0);
-  const CODE_RE = /^[A-Z]{2,5}$/;
+  const CODE_RE = /^[A-Z]{2,5}$/, INN_RE = /^[A-Z]{2,5}\s+(?:1st|2nd|3rd|4th)\s+Innings$/i;     // a Test's control reads "ENG 2nd Innings"
   // The page's own data (present on every tab) says which teams played and which innings have balls: match.teams[].team.abbreviation / name / inningNumbers, content.innings[].inningNumber / balls.
   const pageData = () => { for (const v of Object.values(store.pages)) { const d = v && v.props && v.props.appPageProps && v.props.appPageProps.data; if (d && d.match) return d; } return null; };
   const teamList = () => { const d = pageData(); return ((d && d.match && d.match.teams) || []).map((t) => ({ abbr: (t.team && t.team.abbreviation) || "", name: (t.team && (t.team.longName || t.team.name)) || "", innings: t.inningNumbers || [] })); };
@@ -190,6 +190,7 @@
         .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top).pop();                      // the lowest such item is the one nearest the commentary (the header's team names sit higher up)
     }
     if (!hit) hit = chips.find((e) => CODE_RE.test(ownText(e)) || names.some((n) => ownText(e) === n || ownText(e).startsWith(n)));
+    if (!hit) hit = chips.find((e) => INN_RE.test(ownText(e)));
     if (!hit) { const rest = chips.filter((e) => !SORT.test(ownText(e))); if (rest.length === 1) hit = rest[0]; }
     return hit ? { kind: "button", el: clickable(hit), label: ownText(hit) } : null;
   };
@@ -227,7 +228,7 @@
         const before = new Set([...document.querySelectorAll("*")].filter(vis)); ctl.el.click(); await pause(600);
         if (![...document.querySelectorAll("*")].some((e) => vis(e) && !before.has(e))) { realClick(ctl.el); await pause(600); }
         const opts = [...document.querySelectorAll("*")].filter((e) => vis(e) && !before.has(e) && (e.children.length === 0 || /^(option|menuitem|menuitemradio)$/.test(e.getAttribute("role") || "")));
-        let cand = opts.map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && (words.has(x.t) || CODE_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
+        let cand = opts.map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && (words.has(x.t) || CODE_RE.test(x.t) || INN_RE.test(x.t) || names.some((n) => x.t === n || x.t.startsWith(n))) && !done.includes(x.t));
         if (!cand.length) cand = [...document.querySelectorAll("[role=option], [role=menuitem], li")].filter(vis).map((e) => ({ e, t: ownText(e) })).filter((x) => x.t && x.t.length <= 30 && !done.includes(x.t) && x.t !== ctl.label);
         if (!cand.length) { document.body.click(); if (missing().length) { info.tried.push("dropdown opened but no other option found"); info.stuck = true; store.diag = (store.diag || []).concat({ at: new Date().toISOString(), what: "no option found", control: html(ctl.el) }); } break; }
         const target = cand[0].t, popup = cand[0].e.closest("[role=listbox], [role=menu], ul, ol") || cand[0].e.parentElement;
@@ -311,7 +312,14 @@
     store.comments = store.comments || {}; store.pages = store.pages || {}; store.api = store.api || [];
     delete store.pages[matchSlug]; delete store.pages[matchSlug + "_text"];                                       // left behind by the old tab-naming bug (every tab shared this key)
     ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
-    window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
+    // direct.js (optional) stores what it fetches through these; they add to the capture exactly as the page's own requests and tab loads do
+    const put = (tab, data) => { store.pages[tab] = data; harvest(data); save(); render(); };
+    const addApi = (url, body) => { store.api.push({ url, at: new Date().toISOString(), body }); { const m = /inningNumber=(\d+)/.exec(url || ""); if (m) { store.reqInnings = store.reqInnings || []; if (!store.reqInnings.includes(+m[1])) store.reqInnings.push(+m[1]); } } harvest(body); save(); render(); };
+    const apiHost = () => { const u = (store.api.map((a) => a.url).find((x) => /\/\/hs-consumer-api\./.test(x || "")) || ""); const m = u.match(/^https:\/\/[^/]+/); return m ? m[0] : ""; };
+    const check = () => { const d = pageData(), inn = (d && d.content && d.content.innings) || [], got = {};     // per innings: legal balls the scorecard says were bowled vs balls we hold (wides / no-balls are extra items)
+      for (const c of Object.values(store.comments)) { const n = c.inningNumber ?? c.inning; if (n != null && !c.wides && !c.noballs) got[n] = (got[n] || 0) + 1; }
+      return inn.filter((i) => (i.balls || 0) > 0).map((i) => ({ n: i.inningNumber, want: i.balls, got: got[i.inningNumber] || 0 })); };
+    window.__ttm = { meta, put, addApi, apiHost, check, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
       eachTeam, innings, expected: expectedInnings, diag: describeToolbar, lastDiag: () => { const d = (store.diag || []).slice(-1)[0]; return d ? `${d.what}${d.target ? " -> " + d.target : ""}; control: ${d.control}${d.popup ? " | popup: " + d.popup : ""}` : ""; }, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), expected: expectedInnings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
       clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
     if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);

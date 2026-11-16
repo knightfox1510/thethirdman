@@ -98,3 +98,12 @@ What the 65208 capture and the 65210 sample page showed, and what changed:
 
 ### Easiest start: team series-results pages (v1.7.1)
 `https://www.cricinfo.com/records/team/team-series-results/<team>-<id>/<format>-<classId>` (e.g. `.../india-6/test-matches-1`) lists every series that team played in that format. Paste one per team and format into the batch box: the crawler goes list -> series -> matches by itself (a list may now hold up to 600 series; series seen from several teams are queued once). Turn on "save lists" to keep each series page, then `python3 -m dataops.index build <folder>` reads their match lists into the master index.
+
+## v1.8.0: direct fetch (faster, fewer requests)
+`direct.js` is an optional, separate module (Options → "Direct fetch", on by default). After the scorecard page of a match has loaded it
+- fetches the playing XI, statistics and summary tabs as plain HTML and stores their embedded data under the same keys as before (`match-playing-xi`, `match-statistics`, `live-cricket-score`);
+- reads the commentary through the endpoint the page itself uses (`/v1/pages/match/comments`), innings by innings (1-2 for an ODI, 1-4 for a Test), following its `nextInningOver` cursor to the end: no scrolling, no team dropdown;
+- checks the result against the scorecard (legal balls per innings); the log shows `innings 1: 689/689 ...`. A shortfall is reported, and the match is only treated as complete when the cursor reached its end for every innings.
+Nothing is saved by the module itself: it hands the data to panel.js, so the saved JSON has the same format. If anything fails (or "Direct fetch" is off), that match is done the old way. A 403/429 stops the run the same way a human-check page does (auto-resume backs off). Pace: 8-16 s between matches (5-10 s with "Quick pace"), ~0.5-1 s between API requests.
+Also: Test commentary controls labelled "ENG 2nd Innings" are now recognised by the old way too.
+Updating a run that is in progress: Stop, reload the extension at chrome://extensions, refresh the tab, Resume. The queue, the done list and any half-captured match live in the extension's storage and carry over.

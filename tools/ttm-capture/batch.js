@@ -1,4 +1,4 @@
-// Batch + crawl mode (v1.6.1: auto-resume, keep-awake, stall watchdog; commentary loads near the last item, the capture lives in extension storage, thin captures are retried and never marked done): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
+// Batch + crawl mode (v1.8: optional direct fetch via direct.js; v1.6.1: auto-resume, keep-awake, stall watchdog; commentary loads near the last item, the capture lives in extension storage, thin captures are retried and never marked done): works through a queue of links in YOUR browser tab, one at a time, at a human pace.
 // Queue items are detected by their link: a MATCH (opens scorecard, playing XI, commentary, statistics; saves ONE json per match), a SERIES page (queues its matches),
 // a LIST page such as a team's season view (queues its series), or any other page (player stats, records tables: saved as one json, with each stat tab).
 // Nothing is captured twice: finished matches/series are remembered in the browser; paste the ids the repo already holds with "Import known ids" (python3 -m dataops.store known).
@@ -10,14 +10,14 @@
     ? { score: "full-scorecard", xi: "match-playing-xi", comm: "ball-by-ball-commentary", stats: "match-statistics" }
     : { score: "live-cricket-scorecard", comm: "live-cricket-full-commentary" };       // tab slugs: adjust here if a site renames them
   const TAB_LABEL = { score: "scorecard", xi: "playing XI", comm: "commentary", stats: "statistics" };
-  const MAX_DEFAULT = 20, DELAY = [4000, 9000], BETWEEN = [12000, 25000];
+  const MAX_DEFAULT = 20, DELAY = [4000, 9000], BETWEEN = [12000, 25000], BETWEEN_DIRECT = [8000, 16000], BETWEEN_QUICK = [5000, 10000];   // direct fetch (direct.js) needs one page load per match, so the rest between matches can be shorter
   const rnd = ([a, b]) => a + Math.random() * (b - a);
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   let stopFlag = false;                                                 // set by Stop / Clear: every wait below checks it, so nothing keeps running after you press Stop
   const wait = async (ms) => { const end = Date.now() + ms; while (Date.now() < end) { if (stopFlag) return false; await sleep(Math.min(250, end - Date.now())); } return !stopFlag; };
   const BACKOFF = [20, 45, 90];                                         // minutes to wait after a human-check / access-denied page when auto-resume is on (3 tries, then it stops and waits for you)
-  const blank = () => ({ auto: false, cool: 20, keepAwake: true, backoff: null, blockTries: 0, navTries: 0, errs: 0, pausedUntil: 0, resumeUrl: null, running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
-  const OPTS = ["auto", "cool", "keepAwake", "backoff"];                // settings live in their own key so changing them mid-run is never overwritten by a running step
+  const blank = () => ({ direct: true, quick: false, auto: false, cool: 20, keepAwake: true, backoff: null, blockTries: 0, navTries: 0, errs: 0, pausedUntil: 0, resumeUrl: null, running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
+  const OPTS = ["auto", "cool", "keepAwake", "backoff", "direct", "quick"];                // settings live in their own key so changing them mid-run is never overwritten by a running step
   const get = () => new Promise((r) => chrome.storage.local.get(["ttm_batch", "ttm_opts"], (v) => r(Object.assign(blank(), v.ttm_batch || {}, v.ttm_opts || {}))));
   const setOpts = (s) => new Promise((r) => chrome.storage.local.set({ ttm_opts: Object.fromEntries(OPTS.map((k) => [k, s[k]])) }, r));
   const set = (s) => new Promise((r) => chrome.storage.local.set({ ttm_batch: s }, r));
@@ -116,7 +116,7 @@
     if (s.results.length >= s.max && s.auto) { s.resumeUrl = null; return coolDown(s, `Run limit reached (${s.max})`, (+s.cool || 20) * (0.8 + Math.random() * 0.4), true); }
     if (s.results.length >= s.max) return stopped(s, `Run limit reached (${s.max}). ${s.queue.length - s.idx} still queued: press Resume to continue.`);
     s.now = `next: ${label(s.queue[s.idx])}`; await set(s); render(s);
-    if (pause && !(await wait(rnd(BETWEEN)))) return;
+    if (pause && !(await wait(rnd(s.direct !== false && window.__ttm && window.__ttm.direct ? (s.quick ? BETWEEN_QUICK : BETWEEN_DIRECT) : BETWEEN)))) return;
     nav(s.queue[s.idx]);
   };
 
@@ -194,22 +194,34 @@
     const mtn = T.meta() || {};                                                        // what does this match have? (old matches: scorecard and players, no commentary)
     const applies = (nm) => nm === "xi" ? mtn.hasMatchPlayers !== false : nm === "comm" ? mtn.hasCommentary !== false : true;
     if (idx === 0) { if (mtn.hasCommentary === false) await log(s, "  no ball-by-ball exists for this match: commentary skipped (scorecard and players are still saved)"); if (mtn.hasMatchPlayers === false) await log(s, "  no playing-XI page for this match"); }
+    let directOk = false;                                                              // direct.js: the other tabs + the whole commentary through the page's own JSON, no tab switching or scrolling; any failure = the old way below
+    if (idx === 0 && s.direct !== false && T.direct && !stopFlag) {
+      const r = await T.direct.run({ tabs: [mtn.hasMatchPlayers !== false ? "match-playing-xi" : null, "match-statistics", "live-cricket-score"].filter(Boolean), commentary: mtn.hasCommentary !== false });
+      if (stopFlag) return;
+      await log(s, `  direct fetch: ${r.ok ? "complete" : "NOT complete (falling back to the page tabs)"} · tabs ${r.tabs.join(", ") || "none"}${r.innings.length ? " · innings " + r.innings.map((i) => `${i.n}: ${i.got}/${i.want}${i.ended ? "" : " (cursor did not end)"}`).join(", ") : ""}${r.notes.length ? " · " + r.notes.join("; ") : ""}`);
+      if (r.blocked) {                                                                 // 403 / 429: the site is asking us to slow down: same handling as a human-check page
+        if (s.auto && (s.blockTries || 0) < (s.backoff || BACKOFF).length) { s.resumeUrl = location.href; return backOff(s, "Direct fetch was refused (HTTP 403/429)"); }
+        return stopped(s, "STOPPED: the site refused the direct requests (HTTP 403/429). Wait a while, then press Resume (nothing is lost).");
+      }
+      directOk = r.ok;
+    }
     let nx = idx + 1; while (nx < s.plan.length && !applies(s.plan[nx])) nx++;
+    if (directOk) nx = s.plan.length;                                                  // everything is already in the capture: go straight to saving
     const inf = T.info(); await log(s, `  store: ${inf.balls} balls kept (${inf.storage}${inf.error ? ": " + inf.error : ""}) on ${inf.origin.replace("https://", "")}; innings ${inf.innings.join(", ") || "?"}`); await T.flush();   // where the balls are, tab by tab: a loss shows up here
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
     const needs = mtn.hasCommentary !== false, have = T.count();
     const exp = T.expected(), seenInn = T.innings(), missingInn = exp.length ? exp.filter((n) => !seenInn.includes(n)) : (seenInn.length >= 2 ? [] : [2]);   // what the page itself lists (2 for an ODI, 4 for a Test) minus what we captured
     const twoInn = !needs || missingInn.length === 0;
     const noCtl = !!(s.noctl && s.noctl[key]);                                        // no team control on this page: reloading cannot add the other innings, so do not waste three loads on it
-    if (needs && !noCtl && (have < 150 || !twoInn)) {                               // reloading only helps when something can change (a slow load): never when the control is missing or will not switch                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
+    if (needs && !noCtl && !directOk && (have < 150 || !twoInn)) {                               // reloading only helps when something can change (a slow load): never when the control is missing or will not switch                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
       s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
       if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls / innings ${T.innings().join(", ") || "?"}: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
     }
     const balls = T.saveJson();                                                        // one json per match
-    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || missingInn.length > 0), innings: T.innings(), expected: exp };
+    s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && !directOk && (balls < 150 || missingInn.length > 0), direct: directOk, check: directOk ? T.check() : undefined, innings: T.innings(), expected: exp };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || missingInn.length) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + " of expected " + (exp.join(", ") || "?") + (noCtl ? (s.noctl[key] === 2 ? "; the team control was found but the page would not switch" : "; no team control found") + ", so the missing innings could not be switched to" : " after 3 tries") + ")" : ""}`);
-    if (!(needs && (balls < 150 || missingInn.length))) await T.clear();                                      // the match is on disk: free its stored copy
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && !directOk && (balls < 150 || missingInn.length) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + " of expected " + (exp.join(", ") || "?") + (noCtl ? (s.noctl[key] === 2 ? "; the team control was found but the page would not switch" : "; no team control found") + ", so the missing innings could not be switched to" : " after 3 tries") + ")" : ""}`);
+    if (!(needs && !directOk && (balls < 150 || missingInn.length))) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
 
@@ -235,6 +247,9 @@
         <label style="display:block;margin-bottom:6px">Max matches per run <input id="tb-max" type="number" min="1" max="100" style="width:56px;${INP}"></label>
         <label style="display:block;margin-bottom:6px">Only from year <input id="tb-since" type="number" style="width:70px;${INP}"> <span style="color:${C.mute}">(0 = all)</span></label>
         <label style="display:block;margin-bottom:8px"><input id="tb-lists" type="checkbox"> also save series / list pages (for audits)</label>
+        <label style="display:block;margin-bottom:2px"><input id="tb-direct" type="checkbox"> <b>Direct fetch</b> (faster: one page load per match)</label>
+        <div style="color:${C.mute};font-size:11px;margin:0 0 6px 20px">Reads the commentary and the other tabs through the page's own data instead of clicking and scrolling. If it fails for a match, that match is done the old way.</div>
+        <label style="display:block;margin:0 0 8px 20px"><input id="tb-quick" type="checkbox"> Quick pace (5-10 s between matches instead of 8-16 s)</label>
         <div style="border-top:1px solid ${C.line};margin:2px 0 8px;padding-top:8px">
           <label style="display:block;margin-bottom:4px"><input id="tb-auto" type="checkbox"> <b>Auto-resume</b> (keeps going while you sleep)</label>
           <div style="color:${C.mute};font-size:11px;margin:0 0 6px 20px">After the run limit it rests, then carries on; after a human-check page it waits 20, 45 then 90 minutes and tries again, then stops for you.</div>
@@ -265,9 +280,9 @@
   };
   const start = async () => {
     document.body.appendChild(box); let s = await get();
-    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; render(s);
-    const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
-    $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = saveOpts;
+    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-direct").checked = s.direct !== false; $("tb-quick").checked = !!s.quick; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; render(s);
+    const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; t.direct = $("tb-direct").checked; t.quick = $("tb-quick").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
+    $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = $("tb-direct").onchange = $("tb-quick").onchange = saveOpts;
     setInterval(heartbeat, 45000); heartbeat();
     $("tb-q").oninput = () => render(s);
     const ui = async (k) => { s = await get(); s.ui[k] = !s.ui[k]; await set(s); render(s); };
@@ -276,7 +291,7 @@
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
       const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
-      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked });
+      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
       await setOpts(s);
       if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }
       await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run${s.auto ? ", auto-resume ON" : ""}`); heartbeat(); step();
