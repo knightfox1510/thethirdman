@@ -273,7 +273,9 @@ def animate(P, dl, tr, out_mp4, match, seconds=6.0, fps=24, S=1.0, orbit=(-64, -
 def _header(d, P, X, match, title_big, sub_right):
     d.line([X(60), X(96), X(W - 60), X(96)], fill=P["rule"], width=X(4))
     d.text((X(60), X(124)), "THE THIRD MAN · INSIGHTS", font=font("PlexMonoSB.ttf", 24), fill=P["muted"], anchor="la"); d.text((X(W - 60), X(124)), (match or "").upper(), font=font("PlexMonoSB.ttf", 24), fill=P["muted"], anchor="ra")
-    d.text((X(60), X(170)), title_big, font=font("OswaldBold.ttf", 150), fill=P["accent"], anchor="la")
+    rw = max([font("OswaldBold.ttf", 56).getlength(t) for t in sub_right] + [0]); size = 150          # shrink the big title until it clears the right-hand text
+    while size > 70 and font("OswaldBold.ttf", size).getlength(title_big) > (W - 120) - rw - 40: size -= 6
+    d.text((X(60), X(170)), title_big, font=font("OswaldBold.ttf", size), fill=P["accent"], anchor="la")
     for i, ln in enumerate(sub_right): d.text((X(W - 60), X(190 + i * 66)), ln, font=font("OswaldBold.ttf", 56), fill=P["ink"], anchor="ra")
 
 
