@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Third Man Match Capture",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Saves the match data of Cricinfo or Cricbuzz match pages you have open, one at a time or from a list you give it (batch mode, human pace), as JSON files for The Third Man analysis. Optional auto-resume and keep-awake for unattended runs.",
   "icons": {
     "16": "icons/i16.png",

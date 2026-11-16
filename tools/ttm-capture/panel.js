@@ -13,8 +13,8 @@
     if (!m) return;
     matchId = m[2]; matchSlug = m[3];
   }
-  const tabNow = () => SITE === "cricinfo"
-    ? ((location.pathname.match(/-\d+\/([^/]+)/) || [])[1] || "home")
+  const tabNow = () => SITE === "cricinfo"                                       // /series/<series-id>/<match-slug-id>/<tab>: the TAB is the 4th segment. (It used to be the match slug, identical for every tab, so scorecard / playing XI / statistics overwrote each other and only the last survived.)
+    ? (location.pathname.split("/").filter(Boolean)[3] || "home")
     : ((location.pathname.match(/^\/([a-z-]+)\//) || [])[1] || "home");
   const KEY = "ttm_capture_" + SITE + "_" + matchId;
 
@@ -143,16 +143,39 @@
   const teamNames = () => { const m = (document.title + " " + ((document.querySelector('meta[property="og:title"]') || {}).content || "")).match(/([A-Z][\w .'-]+?) (?:vs|v) ([A-Z][\w .'-]+?)(?:,|\s-|\s\d|$)/); return m ? [m[1].trim(), m[2].trim()] : []; };
   const vis = (e) => !!(e && e.offsetParent !== null && e.getBoundingClientRect().height > 0);
   const CODE_RE = /^[A-Z]{2,5}$/;
+  const ownText = (e) => (e.textContent || "").replace(/\s+/g, " ").trim();
+  const clickable = (e) => e.closest("button, [role=button], [role=combobox], [role=tab], [aria-haspopup], a") || e;
+  const rowItems = (lbl) => {                                                       // every short visible item on the filter's own visual row, left to right (not tied to any parent element)
+    const lr = lbl.getBoundingClientRect(), ly = lr.top + lr.height / 2, tol = Math.max(24, lr.height * 0.8);
+    const all = [...document.querySelectorAll("body *")].filter((e) => { if (!vis(e) || e.closest("h1, h2, h3, h4, h5, h6") || e.closest(AD)) return false; const r = e.getBoundingClientRect(); return Math.abs(r.top + r.height / 2 - ly) < tol && ownText(e).length >= 1 && ownText(e).length <= 24 && ![...e.children].some((c) => ownText(c) === ownText(e)); });
+    const uniq = all.filter((e) => !all.some((o) => o !== e && e.contains(o)));                       // keep the innermost items, not a wrapper whose text happens to be short
+    return uniq.sort((a, b) => a.getBoundingClientRect().left - b.getBoundingClientRect().left);
+  };
+  const toolbarChips = () => {                                                       // the row that holds "New", the team control and "Full Commentary": found through the filter label, whatever tags the page uses
+    const lbl = [...document.querySelectorAll("button, [role=button], div, span, a, li")].filter((e) => vis(e) && !e.closest(AD) && /^(full commentary|highlights|wickets|commentary)$/i.test(ownText(e))).filter((e) => ![...e.children].some((c) => /^(full commentary|highlights|wickets|commentary)$/i.test(ownText(c))))[0];
+    if (!lbl) return { lbl: null, chips: [] };
+    let anc = lbl;
+    for (let i = 0; i < 6 && anc.parentElement; i++) {
+      anc = anc.parentElement;
+      const lr = lbl.getBoundingClientRect(), ly = lr.top + lr.height / 2, tol = Math.max(24, lr.height * 0.8);                  // only items on the SAME visual row as the filter (the page header also contains team names)
+      const chips = [...anc.querySelectorAll("*")].filter((e) => { if (!vis(e) || /^H[1-6]$/.test(e.tagName) || e.closest("h1, h2, h3, h4, h5, h6")) return false; const r = e.getBoundingClientRect(); return Math.abs(r.top + r.height / 2 - ly) < tol && ownText(e).length >= 1 && ownText(e).length <= 24 && ![...e.children].some((c) => ownText(c) === ownText(e)) && !e.closest(AD); });
+      const uniq = chips.filter((e) => !chips.some((o) => o !== e && e.contains(o)));
+      if (uniq.length >= 3) return { lbl, chips: uniq };                           // sort + team + filter at least
+    }
+    const row = rowItems(lbl); return { lbl, chips: row.length >= 2 ? row : [] };                    // no common ancestor found: use the row scan
+  };
   const findTeamControl = () => {
     for (const sel of document.querySelectorAll("select")) {
       const o = [...sel.options].map((x) => x.text.trim()); if (vis(sel) && o.length >= 2 && o.length <= 4 && o.every((t) => CODE_RE.test(t) || teamNames().some((n) => t.includes(n) || n.includes(t)))) return { kind: "select", el: sel, label: o[sel.selectedIndex] };
     }
-    const btns = [...document.querySelectorAll("button, [role=button], [role=combobox], [aria-haspopup]")].filter((b) => vis(b) && !b.closest(AD));
-    const anchor = btns.find((b) => /^\s*(full commentary|highlights|commentary)\b/i.test(b.textContent || ""));             // the team control sits beside the "Full Commentary" filter
-    const near = anchor ? btns.filter((b) => b.parentElement === anchor.parentElement || (b.parentElement && b.parentElement.parentElement === anchor.parentElement)) : btns;
-    const names = teamNames();
-    const hit = near.find((b) => { const t = (b.textContent || "").trim(); return t.length <= 24 && (CODE_RE.test(t) || names.some((n) => t === n || t.startsWith(n))); });
-    return hit ? { kind: "button", el: hit, label: (hit.textContent || "").trim() } : null;
+    const { chips } = toolbarChips(); const names = teamNames(); const SORT = /^(new|old|newest|oldest|latest|full commentary|highlights|wickets|fours|sixes|commentary)$/i;
+    let hit = chips.find((e) => { const t = ownText(e); return CODE_RE.test(t) || names.some((n) => t === n || t.startsWith(n) || n.startsWith(t)); });
+    if (!hit) { const rest = chips.filter((e) => !SORT.test(ownText(e))); if (rest.length === 1) hit = rest[0]; }   // exactly one chip is neither the sort nor the filter: that is the team control
+    return hit ? { kind: "button", el: clickable(hit), label: ownText(hit) } : null;
+  };
+  const describeToolbar = () => {                                                  // what the page actually has near the filter, for the log when the control is not found
+    const lbl = (toolbarChips().lbl); const chips = lbl ? rowItems(lbl) : []; if (!lbl) return `no "Full Commentary" filter on this page; clickable text seen: ` + [...document.querySelectorAll("button, [role=button], [role=tab], select")].filter(vis).slice(0, 10).map((e) => `${e.tagName.toLowerCase()}:${ownText(e).slice(0, 18)}`).join(" | ");
+    return `filter found; row items: ` + (chips.length ? chips : [lbl]).map((e) => `${e.tagName.toLowerCase()}${e.getAttribute("role") ? "[" + e.getAttribute("role") + "]" : ""}.${String(e.className).split(" ")[0].slice(0, 22)}:'${ownText(e).slice(0, 18)}'`).join(" | ");
   };
   const eachTeam = async (btn) => {
     const done = [], info = { found: false, tried: [] }; let ctl = findTeamControl();
@@ -219,7 +242,7 @@
     store.comments = store.comments || {}; store.pages = store.pages || {}; store.api = store.api || [];
     ready = true; for (const d of pending.splice(0)) { store.api.push({ url: d.url, at: new Date().toISOString(), body: d.body }); harvest(d.body); }
     window.__ttm = { meta, site: SITE, matchId, matchSlug, series, loadAll, saveJson, count: () => Object.keys(store.comments).length, grabText, save, flush, render,
-      eachTeam, innings, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
+      eachTeam, innings, diag: describeToolbar, info: () => ({ origin: location.origin, balls: Object.keys(store.comments).length, innings: innings(), tabs: Object.keys(store.pages).filter((k) => !k.endsWith("_text")), storage: mode, error: lastErr }),
       clear: async () => { await kvDel(KEY); try { sessionStorage.removeItem(KEY); } catch (e) {} } };
     if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
     let lastPath = location.pathname;                                           // client-side tab switches do not reload the page: re-read on URL change

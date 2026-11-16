@@ -176,7 +176,8 @@
       if (name === "comm") {
         let n = await T.loadAll();
         const tm = await T.eachTeam();                                                   // the team dropdown ("SL v") switches the innings on Cricinfo: do every team
-        await log(s, tm.found ? `  team control: ${tm.tried.join(" | ")}` : "  team control: none found on this page (using innings tabs, if any)");
+        await log(s, tm.found ? `  team control: ${tm.tried.join(" | ")}` : `  team control: none found (${T.diag()})`);
+        s.noctl = s.noctl || {}; if (!tm.found) s.noctl[key] = 1; else delete s.noctl[key];
         if (tm.found) n = T.count();
         else {
           const inn = [...document.querySelectorAll("[role=tab], button")].filter((b) => b.offsetParent && /innings|\binn\b/i.test(b.textContent || "") && b.getAttribute("aria-selected") !== "true");
@@ -194,14 +195,15 @@
     if (nx < s.plan.length) { s.tab = nx; await set(s); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS[s.plan[nx]])); return; }
     const needs = mtn.hasCommentary !== false, have = T.count();
     const twoInn = T.innings().length >= 2 || !needs;
-    if (needs && (have < 150 || !twoInn)) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
+    const noCtl = !!(s.noctl && s.noctl[key]);                                        // no team control on this page: reloading cannot add the other innings, so do not waste three loads on it
+    if (needs && (have < 150 || (!twoInn && !noCtl))) {                                                         // thin commentary: do NOT save a near-empty file and do NOT mark the match done
       s.tries = s.tries || {}; s.tries[key] = (s.tries[key] || 0) + 1;
       if (s.tries[key] <= 2) { s.tab = Math.max(0, s.plan.indexOf("comm")); await set(s); await log(s, `  only ${have} balls / innings ${T.innings().join(", ") || "?"}: NOT saved, NOT marked done; loading the commentary again (try ${s.tries[key]}/2)`); if (!(await wait(rnd(DELAY)))) return; nav(tabUrl(job, TABS.comm)); return; }
     }
     const balls = T.saveJson();                                                        // one json per match
     s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, balls, url: job, state: mtn.state || null, hasMatchPlayers: !!mtn.hasMatchPlayers, hasCommentary: mtn.hasCommentary, incomplete: needs && (balls < 150 || T.innings().length < 2), innings: T.innings() };
     s.results.push({ id: key, balls });
-    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || T.innings().length < 2) ? "  (STILL INCOMPLETE after 3 tries: marked incomplete; innings seen " + (T.innings().join(", ") || "?") + ")" : ""}`);
+    await log(s, `  SAVED match ${target}: ${balls} balls${mtn.hasCommentary === false ? " (no commentary exists: scorecard + players)" : needs && (balls < 150 || T.innings().length < 2) ? "  (INCOMPLETE: innings seen " + (T.innings().join(", ") || "?") + (noCtl ? "; no team control found, so the other innings could not be switched to" : " after 3 tries") + ")" : ""}`);
     if (!(needs && (balls < 150 || T.innings().length < 2))) await T.clear();                                      // the match is on disk: free its stored copy
     await advance(s); return goNext(s);
   };
@@ -281,7 +283,7 @@
     $("tb-known").onclick = async () => { const txt = prompt("Paste the JSON printed by `python3 -m dataops.store known`"); if (!txt) return; s = await get();
       try { const j = JSON.parse(txt); let n = 0; for (const [site, ids] of Object.entries(j)) for (const id of ids) { s.done[`${site}:${id}`] = { at: "repo", schema: SCHEMA }; n++; } await log(s, `Imported ${n} ids we already hold: they will be skipped.`); } catch (e) { alert("That is not valid JSON."); } };
     $("tb-low").onclick = async () => {                                                            // matches saved with too few balls (older versions marked them done): forget them and queue the ones whose link we kept
-      s = await get(); const low = Object.entries(s.done).filter(([k, v]) => v && v.balls !== undefined && v.balls < 150 && v.hasCommentary !== false && !v.missing && v.found === undefined && v.tables === undefined);
+      s = await get(); const low = Object.entries(s.done).filter(([k, v]) => v && v.balls !== undefined && (v.balls < 150 || v.incomplete) && v.hasCommentary !== false && !v.missing && v.found === undefined && v.tables === undefined);
       let queued = 0; const lost = [];
       for (const [k, v] of low) { delete s.done[k]; if (v.url) { s.queue.push(v.url); queued++; } else lost.push(k.split(":")[1]); }
       if (queued) { s.started = true; if (s.idx > s.queue.length) s.idx = s.queue.length - queued; }
