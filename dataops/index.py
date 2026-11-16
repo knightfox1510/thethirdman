@@ -46,6 +46,14 @@ def build(folder):
     for p in files:
         try: d = json.load(open(p, encoding="utf-8"))
         except Exception: continue
+        try:                                                    # a saved series page: its own structured match list (id, title, date) is more reliable than row text
+            for m in d["next_data"]["props"]["appPageProps"]["data"]["content"]["matches"]:
+                if not (m and m.get("objectId") and m.get("slug") and m.get("series")): continue
+                i = str(m["objectId"]); txt = f'{m.get("title", "")} {m.get("startDate", "")} {m.get("format", "")} {m.get("status", "")}'
+                r = parse_row(txt, ""); r.update({"id": i, "url": f'https://www.espncricinfo.com/series/{m["series"]["slug"]}-{m["series"]["objectId"]}/{m["slug"]}-{i}/full-scorecard', "text": txt[:300], "source": os.path.basename(p)})
+                r["date"] = (m.get("startDate") or "")[:10] or r["date"]; r["format"] = r["format"] or ({"TEST": "Test", "ODI": "ODI", "T20I": "T20I"}.get(str(m.get("format", "")).upper()))
+                rows[i] = r
+        except Exception: pass
         srcs = [d] + list((d.get("views") or {}).values())
         for src in srcs:
             for l in src.get("links", []) or d.get("links", []):

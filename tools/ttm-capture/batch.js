@@ -156,7 +156,7 @@
       const st = k === "series" && SITE === "cricinfo" ? structured() : null;                       // authoritative list when the page has it, else the main-content links
       const sub = st && st.length ? st : links(k === "series" ? job : null).filter((x) => k === "list" ? x.kind === "series" : x.kind === "match");
       if (st) await log(s, `  series list from the page data: ${st.length} matches${st.filter((x) => x.state && x.state !== "POST").length ? ` (${st.filter((x) => x.state && x.state !== "POST").length} not finished: they will be skipped)` : ""}`);
-      if (sub.length > 150) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, refused: sub.length }; await log(s, `  ${k}: ${sub.length} links found, far more than expected: not queued (the page layout may have changed). Add this ${k}'s links by hand.`); await advance(s); return goNext(s); }
+      if (sub.length > (k === "list" ? 600 : 150)) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, refused: sub.length }; await log(s, `  ${k}: ${sub.length} links found, far more than expected: not queued (the page layout may have changed). Add this ${k}'s links by hand.`); await advance(s); return goNext(s); }
       const n = enqueue(s, sub, true); if (sub.length) await log(s, `  e.g. ${sub.slice(0, 2).map((x) => (x.text || x.id).slice(0, 50)).join(" | ")}`);
       if (s.saveLists) await savePage(k);
       s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, found: sub.length };

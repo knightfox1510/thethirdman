@@ -95,3 +95,6 @@ What the 65208 capture and the 65210 sample page showed, and what changed:
 2. `python3 -m dataops.index urls --template '<url with {page}>' --pages <N> --out data/index/urls_odi.txt`, paste the URLs into the batch box: each list page is saved as a page file (tables + links). From v1.7 the extension also runs on `stats.espncricinfo.com`.
 3. `python3 -m dataops.index build <folder of saved pages>` (master list: id, url, official number, date, teams) then `python3 -m dataops.index check` (the numbers and dates must agree with Cricsheet before you trust them).
 4. `python3 -m dataops.index queue --since 2003 --chunk 500`, paste `data/index/queue_001.txt` into the batch box, and repeat for each chunk. Already-complete matches are skipped.
+
+### Easiest start: team series-results pages (v1.7.1)
+`https://www.cricinfo.com/records/team/team-series-results/<team>-<id>/<format>-<classId>` (e.g. `.../india-6/test-matches-1`) lists every series that team played in that format. Paste one per team and format into the batch box: the crawler goes list -> series -> matches by itself (a list may now hold up to 600 series; series seen from several teams are queued once). Turn on "save lists" to keep each series page, then `python3 -m dataops.index build <folder>` reads their match lists into the master index.
