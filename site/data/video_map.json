@@ -190,5 +190,17 @@
   "kind": "short",
   "title": "What If Dhoni Never Became Captain",
   "format": "whatif"
+ },
+ "50i41yfp44U": {
+  "slug": "dhoni_captaincy_all",
+  "kind": "long",
+  "title": "dhoni_captaincy_all",
+  "format": "datastories"
+ },
+ "QFN0QE4CJGw": {
+  "slug": "dhoni_captaincy_all",
+  "kind": "short",
+  "title": "dhoni_captaincy_all",
+  "format": "datastories"
  }
 }
