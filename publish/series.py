@@ -61,6 +61,7 @@ EPISODES = {
     "dhoni_retires": ("channel", "01", "Dhoni Retires from the IPL"),
     "dhoni_ipl_story": ("data", "13", "Dhoni IPL Career, How He Finished"),
     "dhoni_captain_myth": ("myth", "04", "Did Dhoni CSK Just Win the Close Ones"),
+    "dhoni_captaincy_all": ("data", "14", "Dhoni IPL Captaincy, the Complete Record"),
     "channel_trailer": ("channel", "00", "Welcome to The Third Man"),
     "dyk_third_man": ("didyouknow", "01", "Third Man, Position and the Name Mystery"),
     "dyk_fielding_positions": ("didyouknow", "02", "Fielding Positions, Reading the Names"),
