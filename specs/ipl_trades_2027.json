@@ -201,7 +201,7 @@
      ]
     },
     "p1": {
-     "img": "data/licensed/cut/livingstone_edwards_srh.png",
+     "img": "data/licensed/cut/pair_livingstone_edwards.png",
      "lines": [
       "LIVINGSTONE",
       "& EDWARDS"
@@ -210,7 +210,7 @@
      "pair": true
     },
     "p2": {
-     "img": "data/licensed/cut/khaleel_ellis_csk.png",
+     "img": "data/licensed/cut/pair_khaleel_ellis.png",
      "lines": [
       "KHALEEL",
       "& ELLIS"
@@ -512,7 +512,7 @@
      ]
     },
     "p1": {
-     "img": "data/licensed/cut/livingstone_edwards_srh.png",
+     "img": "data/licensed/cut/pair_livingstone_edwards.png",
      "lines": [
       "LIVINGSTONE",
       "& EDWARDS"
@@ -521,7 +521,7 @@
      "pair": true
     },
     "p2": {
-     "img": "data/licensed/cut/khaleel_ellis_csk.png",
+     "img": "data/licensed/cut/pair_khaleel_ellis.png",
      "lines": [
       "KHALEEL",
       "& ELLIS"
