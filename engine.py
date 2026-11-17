@@ -552,7 +552,7 @@ def sc_tradesplit(c, g, t, D, s):
     txt_old = 1 - eo(prog(t, D * .44, D * .52)); txt_new = eo(prog(t, D * .70, D * .82)); NAVY_ = (9, 14, 30)
     if long:
         sl = 150; PA = [(0, 0), (W / 2 + sl, 0), (W / 2 - sl * .15, H), (0, H)]; BAND = [(W / 2 + sl, 0), (W / 2 + sl + 150, 0), (W / 2 - sl * .15 + 150, H), (W / 2 - sl * .15, H)]
-        PB = [(W / 2 + sl + 150, 0), (W, 0), (W, H), (W / 2 - sl * .15 + 150, H)]; CXA, CXB = 480, W - 480
+        PB = [(W / 2 + sl + 150, 0), (W, 0), (W, H), (W / 2 - sl * .15 + 150, H)]; CXA, CXB = 545, W - 545
     else:
         PA = [(0, 0), (W, 0), (W, 800), (0, 905)]; BAND = [(0, 905), (W, 800), (W, 1010), (0, 1115)]; PB = [(0, 1115), (W, 1010), (W, H), (0, H)]
     def poly(pts, pnt, dx=0, dy=0):
@@ -567,12 +567,12 @@ def sc_tradesplit(c, g, t, D, s):
     def box(pl, slot):                                                     # where a player stands: (image, x, y, w, h)
         im = _tsimg(pl["img"]); ar = im.width() / im.height(); pair = pl.get("pair")
         if long:
-            hh = 560 if not pair else 520; ww = hh * ar
-            if ww > 860: ww = 860; hh = ww / ar
+            hh = 930 if not pair else 800; ww = hh * ar                              # poster-size portraits, bottom-anchored, one per half
+            if ww > (800 if not pair else 880): ww = 800 if not pair else 880; hh = ww / ar
             return im, (CXA if slot == "a" else CXB) - ww / 2, H - hh, ww, hh
-        hh = 640 if not pair else 560; ww = hh * ar
+        hh = (700 if slot == "a" else 880) if not pair else (600 if slot == "a" else 720); ww = hh * ar
         if ww > (640 if not pair else 760): ww = 640 if not pair else 760; hh = ww / ar
-        return im, ((W - ww) - 20 if slot == "a" else 20), ((885 - hh) if slot == "a" else (1570 - hh + 190)), ww, hh
+        return im, ((W - ww) + 10 if slot == "a" else -10), ((890 - hh) if slot == "a" else (H + 40 - hh)), ww, hh
     def draw_pl(pl, frm, to, k):
         if not pl: return
         im, x0, y0, w0, h0 = box(pl, frm); _, x1, y1, w1, h1 = box(pl, to)
@@ -580,21 +580,32 @@ def sc_tradesplit(c, g, t, D, s):
         off = ((1 - pin) * sg * W * .5, 0) if long else (0, (1 - pin) * sg * H * .35)
         c.drawImageRect(im, skia.Rect.MakeXYWH(x + off[0], y + off[1], w, h), skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear), skia.Paint(Alphaf=clamp(pin)))
     draw_pl(p1, "a", "b", swp); draw_pl(p2, "b", "a", swp)
+    if long:
+        for x_, w_ in ((0, W / 2), (W / 2, W / 2)):
+            sp = skia.Paint(); sp.setShader(skia.GradientShader.MakeLinear([(0, 680), (0, H)], [skia.Color(0, 0, 0, 0), skia.Color(0, 0, 0, int(190 * pin))])); c.drawRect(skia.Rect.MakeXYWH(x_, 680, w_, H - 680), sp)
     def words(pl, side, a, joins):
         if not pl or a <= 0: return
         T = A if side == "a" else B; big = 104 if not long else 112
-        if long: x = CXA if side == "a" else CXB; al = "c"; y0 = 112; maxw = 820
-        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 342 if side == "a" else 1140; maxw = 470 if pl.get("pair") else 520
+        if long: x = 70 if side == "a" else W - 70; al = "l" if side == "a" else "r"; y0 = 0; maxw = 800
+        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 342 if side == "a" else 1140; maxw = 330 if pl.get("pair") else 420
         yy = y0
-        for k, ln in enumerate(pl["lines"]):
-            z = fit(ln, maxw, big, "bebas", 3); yy += z * .9
-            text(c, ln, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=3); text(c, ln, x, yy, z, "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3)
-        tag = ("JOINS " if joins else "LEAVES ") + T["team"]; yy += 62 if not long else 66
-        text(c, tag, x, yy, 56, "bebas", GOLD, a, al, track=7, glow=8)
+        if long:                                                                   # name: big, across the bottom of the portrait
+            nl = pl["lines"]; zs = [fit(ln, maxw, 150, "bebas", 3) for ln in nl]; yb = H - 44
+            for k in range(len(nl) - 1, -1, -1):
+                text(c, nl[k], x + 4, yb + 4, zs[k], "bebas", (0, 0, 0), a * .6, al, track=3); text(c, nl[k], x, yb, zs[k], "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3); yb -= zs[k] * .92
+            yy = 215
+        else:
+            for k, ln in enumerate(pl["lines"]):
+                z = fit(ln, maxw, big, "bebas", 3); yy += z * .9
+                text(c, ln, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=3); text(c, ln, x, yy, z, "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3)
+        tag = ("JOINS " if joins else "LEAVES ") + T["team"]; yy += 62 if not long else 0
+        text(c, tag, x + (2 if long else 0), yy + (2 if long else 0), 70 if long else 56, "bebas", (0, 0, 0), a * .5, al, track=7) if long else None
+        text(c, tag, x, yy, 70 if long else 56, "bebas", GOLD, a, al, track=7, glow=8)
         if joins and pl.get("stat"):
             if long:
-                st = "  ·  ".join(pl["stat"][:3]); z = fit(st, maxw, 54, "bebas", 2); yy += 62; text(c, st, x, yy, z, "bebas", (255, 255, 255), a, al, track=2)
-                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 36, 22, "interB", (225, 230, 245), a * .85, al, track=4)
+                for k, st in enumerate(pl["stat"][:3]):
+                    yy += 60; z = fit(st, 380, 54 if k == 0 else 44, "bebas", 2); text(c, st, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=2); text(c, st, x, yy, z, "bebas", (255, 255, 255), a, al, track=2)
+                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 40, 24, "interB", (235, 240, 250), a * .9, al, track=4)
             else:
                 for k, st in enumerate(pl["stat"][:3]): yy += 56 if k == 0 else 44; text(c, st, x, yy, 50 if k == 0 else 40, "bebas", (255, 255, 255), a * .95, al, track=2)
                 text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 40, 22, "interB", (225, 230, 245), a * .85, al, track=4)
@@ -606,12 +617,12 @@ def sc_tradesplit(c, g, t, D, s):
         else: text(c, T["name"], 40 if side == "a" else W - 40, 318 if side == "a" else 1135, 30, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6)
     if s.get("label"):
         z = 40; lw = twidth(s["label"], z, "bebas", 4) + 50
-        lx, ly = ((W - lw) / 2, H - 100) if long else (40, 215)
+        lx, ly = ((W - lw) / 2, 22) if long else (40, 215)
         rrect(c, lx, ly, lw, 62, 31, GOLD, pin); text(c, s["label"], lx + lw / 2, ly + 46, z, "bebas", NAVY_, pin, "c", track=4)
     if stamp_in > 0 and stamp_out > 0:
         z = 230 * (1.25 - .25 * stamp_in); text(c, s.get("stamp", "SWAP"), W / 2 + (30 if long else 0), H / 2 + (80 if long else 20), z, "bebas", GOLD, stamp_in * stamp_out, "c", track=8, glow=24)
     if s.get("fee") and txt_new > 0:
-        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = ((W - fw) / 2, 22) if long else ((W - fw) / 2, 918)
+        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = ((W - fw) / 2, 100) if long else ((W - fw) / 2, 918)
         rrect(c, fx, fy, fw, 84, 30, GOLD, txt_new); text(c, s["fee"], fx + fw / 2, fy + 60, fz, "bebas", NAVY_, txt_new, "c", track=3)
 
 
