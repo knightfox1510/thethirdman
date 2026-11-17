@@ -1,0 +1,101 @@
+{
+ "Hardik Pandya": {
+  "team": "Mumbai Indians",
+  "bat_inn": 10,
+  "runs": 206,
+  "balls": 149,
+  "sr": 138.3,
+  "wkts": 4,
+  "overs": 22.7,
+  "econ": 11.43,
+  "bowl_matches": 9
+ },
+ "Arshdeep Singh": {
+  "team": "Punjab Kings",
+  "bat_inn": 1,
+  "runs": 1,
+  "balls": 1,
+  "sr": 100.0,
+  "wkts": 14,
+  "overs": 51.0,
+  "econ": 10.29,
+  "bowl_matches": 13
+ },
+ "Rishabh Pant": {
+  "team": "Lucknow Super Giants",
+  "bat_inn": 13,
+  "runs": 312,
+  "balls": 226,
+  "sr": 138.1,
+  "wkts": 0,
+  "overs": 0.0,
+  "econ": 0,
+  "bowl_matches": 0
+ },
+ "Kuldeep Yadav": {
+  "team": "Delhi Capitals",
+  "bat_inn": 4,
+  "runs": 9,
+  "balls": 21,
+  "sr": 42.9,
+  "wkts": 10,
+  "overs": 37.0,
+  "econ": 10.3,
+  "bowl_matches": 11
+ },
+ "Liam Livingstone": {
+  "team": "Sunrisers Hyderabad",
+  "bat_inn": 2,
+  "runs": 15,
+  "balls": 25,
+  "sr": 60.0,
+  "wkts": 0,
+  "overs": 0.0,
+  "econ": 0,
+  "bowl_matches": 0
+ },
+ "Khaleel Ahmed": {
+  "team": "Chennai Super Kings",
+  "bat_inn": 0,
+  "runs": 0,
+  "balls": 0,
+  "sr": 0,
+  "wkts": 2,
+  "overs": 16.8,
+  "econ": 8.67,
+  "bowl_matches": 5
+ },
+ "Thangarasu Natarajan": {
+  "team": "Delhi Capitals",
+  "bat_inn": 1,
+  "runs": 1,
+  "balls": 2,
+  "sr": 50.0,
+  "wkts": 5,
+  "overs": 31.8,
+  "econ": 11.18,
+  "bowl_matches": 10
+ },
+ "Harshal Patel": {
+  "team": "Sunrisers Hyderabad",
+  "bat_inn": 3,
+  "runs": 10,
+  "balls": 9,
+  "sr": 111.1,
+  "wkts": 0,
+  "overs": 13.7,
+  "econ": 10.83,
+  "bowl_matches": 5
+ },
+ "Mohammed Shami": {
+  "team": "Lucknow Super Giants",
+  "bat_inn": 7,
+  "runs": 31,
+  "balls": 22,
+  "sr": 140.9,
+  "wkts": 12,
+  "overs": 51.0,
+  "econ": 9.0,
+  "bowl_matches": 13
+ }
+}
