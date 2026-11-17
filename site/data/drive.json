@@ -3133,6 +3133,28 @@
     }
    ]
   },
+  "rohit_mumbai_cha_raja": {
+   "state": "not posted",
+   "series": "10 Channel",
+   "episode": "Ep03 - Mumbai cha Raja",
+   "folder": "https://drive.google.com/drive/folders/1SRzn6YRMpSk-CgCmkl4ZTQsA9u0NlNDG",
+   "files": [
+    {
+     "name": "Channel_Ep03_Mumbai_cha_Raja_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.4,
+     "url": "https://drive.google.com/file/d/1UmyiXCbUTNdC0CKa12zXrCqXCdvTJR54/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep03_Mumbai_cha_Raja_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 26.9,
+     "url": "https://drive.google.com/file/d/1h4u2S8uhedjc1oFZWdakhoH8DRnf4n1L/view?usp=drivesdk"
+    }
+   ]
+  },
   "dyk_third_man": {
    "state": "posted",
    "series": "11 Did You Know",
@@ -3410,7 +3432,8 @@
    "episodes": [
     "channel_trailer",
     "dhoni_retires",
-    "ipl_trades_2027"
+    "ipl_trades_2027",
+    "rohit_mumbai_cha_raja"
    ]
   },
   "11 Did You Know": {
