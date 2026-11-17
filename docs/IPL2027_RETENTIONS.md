@@ -33,7 +33,7 @@ The IPL news page had trades only at the time of reading. Released lists below a
 - **DC**: Mitchell Starc, Nitish Rana, Ben Duckett, Karun Nair, Dushmantha Chameera, Pathum Nissanka and others.
 - **SRH**: Travis Head (a tracker puts his price at ₹14 cr), Kamindu Mendis, Jaydev Unadkat, Shivam Mavi, Gerald Coetzee and others (nine).
 - **PBKS**: Lockie Ferguson, Mitch Owen, Nehal Wadhera and others.
-- **KKR**: Ajinkya Rahane, Rachin Ravindra, Mustafizur Rahman, Matheesha Pathirana, Umran Malik, Rahul Tripathi, Navdeep Saini and others (twelve). One outlet says Rahane "retired in July": conflicts with him being listed as released. Unverified.
+- **KKR**: Ajinkya Rahane, Rachin Ravindra, Mustafizur Rahman, Matheesha Pathirana, Umran Malik, Rahul Tripathi, Navdeep Saini and others (twelve). Cricinfo also lists Rahane as released; one outlet's "retired in July" claim is not supported (see the Cricinfo update).
 - **LSG**: Anrich Nortje, Wanindu Hasaranga, Matthew Breetzke and others. **RCB**: Jacob Bethell, Richard Gleeson and others. **GT**: Ishant Sharma, Mark Wood, Shahrukh Khan and others. **RR**: Shimron Hetmyer, Adam Milne, Kwena Maphaka, Tushar Deshpande and others.
 
 ## Remaining purse and slots after retentions (UNVERIFIED: one outlet, no timestamp; outlets disagree)
@@ -52,9 +52,25 @@ Context from our own 2026 data: RCB won the 2026 final (v GT, 31 May) and the 20
 5. **Auction preview (12 Dec row)**: after the registration list (~3 Dec) and official purses: who needs what (slots, overseas slots), a Tactics Board style gap map.
 6. **Captaincy watch**: hold until MI, KKR, LSG and SRH announce; then a Myth or Data on a returning captain.
 
+## Update 17 Nov (evening): what Cricinfo has posted
+Cricinfo's own pages return 403 to our page reader (cricinfo.com and espncricinfo.com, stories and the live blog alike), so nothing below was read on the page itself: it comes from excerpts the search tool returns from Cricinfo's pages, which can be cut short.
+To read the full lists, the owner can capture the pages with tools/ttm-capture, or paste the live blog text, and we will use it as the Tier A source.
+Cricinfo pieces found: the retention live blog ("IPL 2027 retention - MS Dhoni steps away to become CSK mentor", /live-blog/...-1562922; its headline kept changing during the day), the story "Mitchell Starc, Travis Head, Jacob Bethell released by DC, SRH, RCB ahead of auction" (/story/...-1562958), "MS Dhoni ends IPL career, joins CSK as mentor" (-1562938), "Travis Head set to miss IPL 2027", the pre-season trades story (-1562175), the Hardik-Arshdeep swap (-1562157), and MI's coaching changes (Kieron Pollard promoted to head coach; Malinga, Mhambrey and Hopkinson part ways).
+Reported by Cricinfo (excerpts), with corrections to the sections above:
+- **CSK**: "MS Dhoni has ended his 19-year IPL career" and becomes team mentor. Prashant Veer (bought for ₹14.2 cr) released: the most expensive release; Travis Head (₹14 cr) is second.
+- **SRH**: Head told the franchise he is opting out of IPL 2027 to manage workload, so he is released (a decision by the player, not a performance release). Retained, per Cricinfo's SRH section: Pat Cummins, Abhishek Sharma, Ishan Kishan, Salil Arora, Aniket Verma, R Smaran, Heinrich Klaasen, Nitish Kumar Reddy (list cut off).
+- **DC**: Mitchell Starc released (also reported as unavailable for 2027: workload), with Nitish Rana, Pathum Nissanka and Ben Duckett. Retained: Axar Patel, KL Rahul, plus Rishabh Pant by trade.
+- **KKR**: Cameron Green (bought at ₹25.2 cr in the 2026 auction, then the most expensive overseas buy in IPL history) is understood to be retained. Released: Rahane, Akash Deep, Blessing Muzarabani, Daksh Kamra, Luvnith Sisodia, Matheesha Pathirana, Mustafizur Rahman, Navdeep Saini, Rachin Ravindra, Rahul Tripathi, Tejasvi Singh, Umran Malik. This corrects the earlier note: Rahane is on KKR's release list, so the "retired in July" claim is not supported.
+- **PBKS**: Marcus Stoinis RETAINED (the pre-deadline predictions had him released: wrong). Released: Lockie Ferguson, Mitch Owen, Nehal Wadhera, Pyla Avinash, Praveen Dubey, Vishal Nishad. Retained include Shreyas Iyer and Yuzvendra Chahal. Hardik Pandya arrived by swap.
+- **LSG**: retained Mitchell Marsh, Aiden Markram, Nicholas Pooran, Kuldeep Yadav (trade), Sam Curran (trade). Releases per Cricinfo include Avesh Khan and Anrich Nortje (Oneindia's list differs: it has Nortje, Hasaranga, Breetzke and others, not Avesh).
+- **RR**: retained Riyan Parag, Yashasvi Jaiswal, Vaibhav Sooryavanshi; Hetmyer released (confirmed in a later live-blog entry). **RCB**: retained Rajat Patidar, Virat Kohli, Phil Salt; Jacob Bethell released (recovering from knee surgery).
+- **GT** (complete on Cricinfo): retained Shubman Gill, Sai Sudharsan, Rahul Tewatia, Kumar Kushagra, Anuj Rawat, Jos Buttler, Tom Banton, Glenn Phillips, Washington Sundar, R Sai Kishore, Manav Suthar, Rashid Khan, Jayant Yadav, Jason Holder, Kagiso Rabada, Mohammed Siraj, Prasidh Krishna, Gurnoor Brar, Ashok Sharma, Arshad Khan. Released: Ishant Sharma, Luke Wood (Oneindia says Mark Wood: check), Kulwant Khejroliya, Shahrukh Khan, Connor Esterhuizen. Harshal Patel arrived from SRH at half his ₹8 cr auction price (₹4 cr).
+- **MI**: Hardik-Arshdeep swap completed (Cricinfo: Mumbai now need a captain); Boult and Chahar among the releases; the full MI list was not in any excerpt. Rohit Sharma as captain: not confirmed anywhere we could read.
+Still missing from Cricinfo excerpts: complete retained lists for CSK, MI, KKR (apart from Green), DC, LSG, RR and RCB, plus purses and slots. Until we have them, build the news Short on the confirmed trades and the named releases above, and hold the purse chart.
+
 ## To verify next (do these before building anything)
 - [ ] iplt20.com/news: official retained and released lists per team (and purse table) after the deadline passes.
-- [ ] Rahane status (released by KKR or retired?), Head's price, Zaheer Khan's appointment, Impact Player decision.
+- [ ] Zaheer Khan's appointment, Impact Player decision, the full retained lists, and MI's captain (Rahane is released per Cricinfo; Head opted out).
 - [ ] Cricinfo / BCCI circular for the auction rules and registration dates (cricinfo.com and bcci.tv were not readable from here).
 - [ ] Trade fees: confirm from the IPL releases, not the tracker.
 
