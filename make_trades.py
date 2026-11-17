@@ -69,10 +69,10 @@ long = [
     {"vo": "Which trade changes the most? Tell us in the comments, and subscribe for more.", "scene": {"type": "cta", "lines": [{"t": "WHICH TRADE"}, {"t": "CHANGES MOST?", "c": "gold"}]}},
 ]
 short = [
-    {"vo": "Six trades, fourteen players. The IPL window is wild.", "scene": {"type": "statement", "lines": [{"t": "6 DEALS."}, {"t": "14 PLAYERS.", "c": "gold"}], "sub": "IPL 2027 TRADE WINDOW"}},
-    deal("DEAL 4 OF 6 · 11 NOV", "MI", "PBKS", D4["scene"]["p1"], D4["scene"]["p2"], "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंह goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.", fee="₹18 CR EACH"),
-    deal("DEAL 1 OF 6 · 23 JUN", "LSG", "DC", D1["scene"]["p1"], D1["scene"]["p2"], "ऋषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.", fee="₹15 CR  ↔  ₹13.5 CR"),
-    deal("DEAL 3 OF 6 · 5 NOV", "SRH", "CSK", D3["scene"]["p1"], D3["scene"]["p2"], "Four players between चेन्नई and हैदराबाद: Livingstone, Edwards, ख़लील and Ellis.", fee="₹9 CR  ↔  ₹6.8 CR"),
+    {"vo": "Six trades, fourteen players. Here are three big ones.", "scene": {"type": "statement", "lines": [{"t": "6 DEALS."}, {"t": "14 PLAYERS.", "c": "gold"}], "sub": "IPL 2027 TRADE WINDOW"}},
+    deal("DEAL 1 OF 3 · 11 NOV", "MI", "PBKS", D4["scene"]["p1"], D4["scene"]["p2"], "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंह goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.", fee="₹18 CR EACH"),
+    deal("DEAL 2 OF 3 · 23 JUN", "LSG", "DC", D1["scene"]["p1"], D1["scene"]["p2"], "ऋषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.", fee="₹15 CR  ↔  ₹13.5 CR"),
+    deal("DEAL 3 OF 3 · 5 NOV", "SRH", "CSK", D3["scene"]["p1"], D3["scene"]["p2"], "Four players between चेन्नई and हैदराबाद: Livingstone, Edwards, ख़लील and Ellis.", fee="₹9 CR  ↔  ₹6.8 CR"),
     {"vo": YT_CTA["vo"], "scene": YT_CTA["scene"]},
 ]
 SRC = ["The deals: the IPL's own press releases, https://www.iplt20.com/news (Pant and Kuldeep 23 Jun, https://www.iplt20.com/news/4379/rishabh-pant-and-kuldeep-yadav-complete-high-profile-trade-between-dc-and-lsg ; Natarajan and Ansari 14 Oct; CSK and SRH 5 Nov; Hardik and Arshdeep; Harshal Patel 15 Nov; Shami, Siddharth and Curran 17 Nov), read 17 Nov 2026; Cricinfo trade stories (CSK-SRH https://www.cricinfo.com/story/ipl-2027-csk-trade-khaleel-ahmed-and-nathan-ellis-to-srh-in-exchange-for-liam-livingstone-and-jack-edwards-1561531 ; Hardik-Arshdeep https://www.cricinfo.com/story/ipl-2027-mumbai-indians-and-punjab-kings-complete-hardik-pandya-and-arshdeep-singh-swap-1562157 ; Harshal https://www.cricinfo.com/story/sunrisers-hyderabad-set-to-trade-harshal-patel-to-gujarat-titans-1562498), read through search excerpts because the pages return 403 to us.",

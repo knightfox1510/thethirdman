@@ -386,7 +386,7 @@
  ],
  "short": [
   {
-   "vo": "Six trades, fourteen players. The IPL window is wild.",
+   "vo": "Six trades, fourteen players. Here are three big ones.",
    "scene": {
     "type": "statement",
     "lines": [
@@ -405,7 +405,7 @@
    "vo": "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंह goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.",
    "scene": {
     "type": "tradesplit",
-    "label": "DEAL 4 OF 6 · 11 NOV",
+    "label": "DEAL 1 OF 3 · 11 NOV",
     "a": {
      "team": "MI",
      "name": "MUMBAI INDIANS",
@@ -453,7 +453,7 @@
    "vo": "ऋषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.",
    "scene": {
     "type": "tradesplit",
-    "label": "DEAL 1 OF 6 · 23 JUN",
+    "label": "DEAL 2 OF 3 · 23 JUN",
     "a": {
      "team": "LSG",
      "name": "LUCKNOW SUPER GIANTS",
@@ -501,7 +501,7 @@
    "vo": "Four players between चेन्नई and हैदराबाद: Livingstone, Edwards, ख़लील and Ellis.",
    "scene": {
     "type": "tradesplit",
-    "label": "DEAL 3 OF 6 · 5 NOV",
+    "label": "DEAL 3 OF 3 · 5 NOV",
     "a": {
      "team": "SRH",
      "name": "SUNRISERS HYDERABAD",
