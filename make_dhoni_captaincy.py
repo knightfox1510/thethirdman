@@ -81,6 +81,33 @@ short = [
      "scene": {"type": "lab_big_text", "lines": ["THE MOST", "[SUCCESSFUL CAPTAIN]", "[IN IPL HISTORY.]"]}},
     {"vo": YT_CTA["vo"], "scene": YT_CTA["scene"]},
 ]
+
+# ---- vertical full version for Instagram (variants.py igfull): the whole long narration in 9:16 stage scenes (CSK avatar, tribute energy), then its own end card
+VENUE = {"time": "night", "crowd": [[250, 200, 20], [240, 240, 240], [25, 100, 200], [20, 60, 140]], "boards": [[250, 200, 20], [25, 100, 200]]}
+def full_scene(i, panel, pose="stand", cam="push", fx=("vignette", "spot"), **kw):
+    sc = {"type": "stage", "panel": dict(panel, at=0.05), "avatars": [{"kit": "CSK", "pose": pose, "x": 0.5}], "cam": cam, "fx": list(fx)}; sc.update(kw)
+    return {"vo": long[i]["vo"], "scene": sc}
+G_ = lambda v, l, c="gold": {"v": v, "l": l, "c": c}
+T_ = lambda kick, rows: {"kind": "table", "kicker": kick, "rows": rows}
+SIDE_ = dict(view="side", stumps=[0.2, 0.93])
+full = [
+    full_scene(0, {"kind": "versus", "kicker": "MS DHONI · IPL CAPTAIN · " + DATA, "left": G_("235", "Matches"), "right": G_("136", "Wins"), "sep": "→"}, pose="raise", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.3),
+    full_scene(1, T_("CSK WINS, SEASON BY SEASON · SUSPENDED 2016-17", [["2008, the first season", str(WIKI_W[2008])], ["2011 (title)", str(WIKI_W[2011]), "gold"], ["2013", str(WIKI_W[2013])], ["2018 (title)", str(WIKI_W[2018]), "gold"], ["2023 (title)", str(WIKI_W[2023]), "gold"], ["2022 / 2024 / 2025", f"{WIKI_W[2022]} / {WIKI_W[2024]} / {WIKI_W[2025]}"]]),
+               pose="walk", cam="drift", fx=("vignette", "spot")),
+    full_scene(2, {"kind": "bignum", "kicker": "CSK IN THE FINAL · " + DATA, "label": "FINALS IN 16 SEASONS · 5 TITLES", "value": 10, "count_dur": 0.8, "color": "gold"},
+               pose="celebrate", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.4),
+    full_scene(3, T_("CSK VS MUMBAI · " + DATA, [["Playoff seasons", f'{CSK["playoff_seasons"]} of {CSK["n_seasons"]} vs {MI["playoff_seasons"]} of {MI["n_seasons"]}', "gold"], ["Finals", f'{CSK["finals"]} vs {MI["finals"]}', "gold"], ["Titles", f'{CSK["titles"]} vs {MI["titles"]}']]),
+               pose="stance", cam="pull", fx=("vignette", "spot"), **SIDE_),
+    full_scene(4, T_("WIN RATE, DECIDED MATCHES · " + DATA, [["Chennai (CSK)", pc(CSK["win_pct"]), "gold"], ["Mumbai", pc(MI["win_pct"])], ["Kolkata", pc(FR["Kolkata Knight Riders"]["win_pct"])], ["Everyone else", "50% or below"]]),
+               pose="drive", hit="drive", ghost=True, cam="drift", ball={"at": 0.5, "shot": "four"}, fx=("vignette", "speed", "flash"), **SIDE_),
+    full_scene(5, {"kind": "versus", "kicker": "MS DHONI · CSK + RISING PUNE SUPERGIANT", "left": G_("136", "Wins"), "right": G_("5", "Titles"), "sep": "&"}, pose="raise", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.4),
+    full_scene(6, {"kind": "headline", "kicker": "OUR VERDICT", "lines": [{"t": "THE MOST SUCCESSFUL"}, {"t": "CAPTAIN IN", "c": "gold"}, {"t": "IPL HISTORY.", "c": "gold"}]}, pose="celebrate", cam="wide", fx=("vignette", "spot", "confetti"), fx_at=0.4),
+]
+reel_cta = {"vo": "Thank you, MSD. Who is the greatest IPL captain? Tell us in the comments. For the full data story, follow The Third Man on YouTube. Link in bio.",
+            "scene": {"type": "cta", "lines": [{"t": "THANK YOU,"}, {"t": "MSD.", "c": "gold"}], "yt": {"label": "THE THIRD MAN", "handle": "YOUTUBE @thethirdman_angle", "bio": "LINK IN BIO"}}}
+reel_caption = ("MS Dhoni's IPL captaincy, every season. 💛\n\n235 matches as captain. 136 wins, more than any captain in IPL history. Ten finals in sixteen seasons with CSK, five titles, and the playoffs in 12 of those 16 seasons. Against Mumbai, the next best franchise: 12 of 16 playoff seasons vs 11 of 18, finals 10 vs 6.\n\n"
+                "Thank you, MSD. Who is the greatest IPL captain? Tell us below.\n\nFull data story on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\nOur data: every IPL season 2008-2025.\n\n"
+                "#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #IPLCaptains #cricket #cricketanalysis #TheThirdMan")
 SRC = ["Captaincy totals (235 matches, 136 wins, 97 losses, 2 no results, CSK and Rising Pune Supergiant): Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains (page last edited 19 September 2026), Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ and Insidesport; ESPNcricinfo's records page (supplied by the channel owner) could not be opened by us. Five titles level with Rohit Sharma: Wikipedia and India TV.",
        "CSK season results 2008-2025: Wikipedia, 'Chennai Super Kings' season table https://en.wikipedia.org/wiki/Chennai_Super_Kings and the Cricsheet IPL ball-by-ball archive https://cricsheet.org/downloads/ipl_json.zip (wins agree in every season; Cricsheet lacks a few abandoned matches, so we state wins, finals, titles and playoff seasons, not losses).",
        "Franchise comparison (playoff seasons, finals, titles, win rate on decided matches), every IPL season 2008-2025: Cricsheet IPL archive, shown as 'our data'. Mumbai Indians' six finals and five titles: myKhel https://www.mykhel.com/cricket/ms-dhoni-vs-rohit-sharma-ipl-stats-and-record-best-captain-in-indian-premier-league-215101.html . Captaincy changes (Jadeja in 2022, Gaikwad's injury in 2025): Wikipedia, 'Chennai Super Kings'.",
@@ -95,7 +122,7 @@ DS = ("MS Dhoni as IPL captain: 136 wins (no one has won more), ten finals in si
       "Our data: every IPL season 2008-2025 (Cricsheet ball-by-ball, checked against Wikipedia's season tables).\n\n#MSDhoni #CSK #IPL #Shorts")
 spec = {"slug": "dhoni_captaincy_all", "theme": "lab", "theme_long": "whites", "captions": "lab", "captions_long": False, "series": "data", "tag": "DATA STORY", "tagsub": "MSD'S IPL CAPTAINCY, THE COMPLETE RECORD",
         "files": {"long": "x", "short": "x"}, "thumb": {"kicker": "MS DHONI · EVERY IPL SEASON", "lines": [{"t": "THE COMPLETE"}, {"t": "CAPTAINCY RECORD", "c": "gold"}], "hero": "136", "herosize": 520},
-        "sources": SRC, "long": long, "short": short,
+        "sources": SRC, "venue": VENUE, "long": long, "short": short, "full": full, "full_theme": "stadium", "full_captions": "v2", "reel_cta": reel_cta, "reel_caption": reel_caption,
         "yt": {"long": {"title": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14", "description": DL, "tags": TAGS},
                "short": {"title": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts", "description": DS, "tags": TAGS}}}
 c.save(spec); voice_lint.fix_spec(spec)
