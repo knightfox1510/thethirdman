@@ -232,9 +232,9 @@
    "date": "2026-12-19",
    "platform": "YouTube long",
    "content": "What If Dhoni Never Became Captain",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/8KIKP2KPV84",
+   "notes": "Uploaded private 17 Nov; set Public in Studio",
    "series": "06 What If"
   },
   {
@@ -548,27 +548,27 @@
    "platform": "YouTube Short + IG Reel",
    "content": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
    "series": "10 Channel",
-   "status": "Ready",
-   "link": null,
-   "notes": "Tribute; post first (news is hours old). Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/Yvtkgm3NUac",
+   "notes": "Tribute; Uploaded private 17 Nov; set Public in Studio"
   },
   {
    "date": "2026-11-19",
    "platform": "YouTube long",
    "content": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
    "series": "09 Data Stories",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive. Archive figures labelled 'in our archive'; narration says MSD; data window shown on screen (IPL 2013-2026)"
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/WiTCSH9vsfM",
+   "notes": "Built 2026-11-17; Uploaded private 17 Nov; set Public in Studio"
   },
   {
    "date": "2026-11-19",
    "platform": "YouTube Short + IG Reel",
    "content": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts",
    "series": "09 Data Stories",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/bLYAfDuK3no",
+   "notes": "Built 2026-11-17; Uploaded private 17 Nov; set Public in Studio"
   },
   {
    "date": "2026-11-19",
@@ -584,18 +584,18 @@
    "platform": "YouTube long",
    "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
    "series": "01 Myth or Data",
-   "status": "Ready",
-   "link": null,
-   "notes": "Verdict: busted. Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/17GxKfWvk4Y",
+   "notes": "Verdict: busted. Built 2026-11-17; Uploaded private 17 Nov; set Public in Studio"
   },
   {
    "date": "2026-11-21",
    "platform": "YouTube Short + IG Reel",
    "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4 #Shorts",
    "series": "01 Myth or Data",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/f8MnibrcFZ0",
+   "notes": "Built 2026-11-17; Uploaded private 17 Nov; set Public in Studio"
   },
   {
    "date": "2026-11-19",
@@ -605,6 +605,15 @@
    "status": "Ready",
    "link": null,
    "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card"
+  },
+  {
+   "date": "2026-11-17",
+   "platform": "YouTube Short + IG Reel",
+   "content": "What If Dhoni Never Became Captain? | What If Ep 3 #Shorts",
+   "series": "06 What If",
+   "status": "Uploaded (private)",
+   "link": "https://youtu.be/rZhGj13fGx4",
+   "notes": "Uploaded private 17 Nov; set Public in Studio"
   }
  ]
 }

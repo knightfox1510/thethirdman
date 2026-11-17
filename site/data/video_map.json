@@ -148,5 +148,47 @@
   "kind": "short",
   "title": "The IPL Powerplay Revolution",
   "format": "datastories"
+ },
+ "Yvtkgm3NUac": {
+  "slug": "dhoni_retires",
+  "kind": "short",
+  "title": "dhoni_retires",
+  "format": "news"
+ },
+ "WiTCSH9vsfM": {
+  "slug": "dhoni_ipl_story",
+  "kind": "long",
+  "title": "dhoni_ipl_story",
+  "format": "datastories"
+ },
+ "bLYAfDuK3no": {
+  "slug": "dhoni_ipl_story",
+  "kind": "short",
+  "title": "dhoni_ipl_story",
+  "format": "datastories"
+ },
+ "17GxKfWvk4Y": {
+  "slug": "dhoni_captain_myth",
+  "kind": "long",
+  "title": "dhoni_captain_myth",
+  "format": "myth"
+ },
+ "f8MnibrcFZ0": {
+  "slug": "dhoni_captain_myth",
+  "kind": "short",
+  "title": "dhoni_captain_myth",
+  "format": "myth"
+ },
+ "8KIKP2KPV84": {
+  "slug": "dhoni_captain",
+  "kind": "long",
+  "title": "What If Dhoni Never Became Captain",
+  "format": "whatif"
+ },
+ "rZhGj13fGx4": {
+  "slug": "dhoni_captain",
+  "kind": "short",
+  "title": "What If Dhoni Never Became Captain",
+  "format": "whatif"
  }
 }
