@@ -80,7 +80,8 @@
   "kinetic",
   "fieldmap",
   "stumps",
-  "flip"
+  "flip",
+  "kinetic"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -163,6 +164,7 @@
   "dhoni_captaincy_all": "kinetic",
   "dhoni_captaincy_all__igshort": "fieldmap",
   "dhoni_captaincy_all__igfull": "stumps",
-  "ipl_trades_2027": "flip"
+  "ipl_trades_2027": "flip",
+  "ipl_trades_2027__igshort": "kinetic"
  }
 }

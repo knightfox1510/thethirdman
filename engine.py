@@ -587,7 +587,7 @@ def sc_tradesplit(c, g, t, D, s):
         if not pl or a <= 0: return
         T = A if side == "a" else B; big = 104 if not long else 112
         if long: x = 70 if side == "a" else W - 70; al = "l" if side == "a" else "r"; y0 = 0; maxw = 800
-        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 342 if side == "a" else 1140; maxw = 330 if pl.get("pair") else 420
+        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 336 if side == "a" else 1140; maxw = 330 if pl.get("pair") else 420
         yy = y0
         if long:                                                                   # name: big, across the bottom of the portrait
             nl = pl["lines"]; zs = [fit(ln, maxw, 150, "bebas", 3) for ln in nl]; yb = H - 44
@@ -614,10 +614,10 @@ def sc_tradesplit(c, g, t, D, s):
         T = A; text(c, s.get("one_way_text", "NOTHING BACK · A CASH DEAL"), CXA if long else 40, 260 if long else 330, 70, "bebas", (255, 255, 255), txt_new, "c" if long else "l", track=4)
     for side, T in (("a", A), ("b", B)):                                   # team names: top corner of each half (vertical: inside the safe area)
         if long: text(c, T["name"], 60 if side == "a" else W - 60, 52, 34, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6) if False else None
-        else: text(c, T["name"], 40 if side == "a" else W - 40, 318 if side == "a" else 1135, 30, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6)
+        else: text(c, T["name"], 40 if side == "a" else W - 40, 306 if side == "a" else 1135, 30, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6)
     if s.get("label"):
-        z = 40; lw = twidth(s["label"], z, "bebas", 4) + 50
-        lx, ly = ((W - lw) / 2, 22) if long else (40, 215)
+        z = 40 if long else 34; lw = twidth(s["label"], z, "bebas", 4) + 50
+        lx, ly = ((W - lw) / 2, 22) if long else (36, 962)
         rrect(c, lx, ly, lw, 62, 31, GOLD, pin); text(c, s["label"], lx + lw / 2, ly + 46, z, "bebas", NAVY_, pin, "c", track=4)
     if stamp_in > 0 and stamp_out > 0:
         z = 230 * (1.25 - .25 * stamp_in); text(c, s.get("stamp", "SWAP"), W / 2 + (30 if long else 0), H / 2 + (80 if long else 20), z, "bebas", GOLD, stamp_in * stamp_out, "c", track=8, glow=24)
