@@ -6,7 +6,7 @@
 // batch.js falls back to the old way for that match. window.__ttm.direct.run(opts) -> { ok, blocked (HTTP 429), refused (the data API said 403: stop using direct fetch), notes[], tabs[], innings:[{n, want, got, ended}] }.
 (() => {
   if (/cricbuzz/.test(location.hostname)) return;
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  const sleep = (ms) => (window.__ttmSleep ? window.__ttmSleep(ms) : new Promise((r) => setTimeout(r, ms)));    // batch.js's timer: not throttled while the window is hidden
   const rnd = ([a, b]) => a + Math.random() * (b - a);
   const GAP = [450, 1000], LONG_EVERY = 20, LONG = [2000, 4000], MAX_PAGES = 400;
   const NEXT = /<script[^>]*id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/;
