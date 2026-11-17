@@ -622,7 +622,7 @@ def sc_tradesplit(c, g, t, D, s):
     if stamp_in > 0 and stamp_out > 0:
         z = 230 * (1.25 - .25 * stamp_in); text(c, s.get("stamp", "SWAP"), W / 2 + (30 if long else 0), H / 2 + (80 if long else 20), z, "bebas", GOLD, stamp_in * stamp_out, "c", track=8, glow=24)
     if s.get("fee") and txt_new > 0:
-        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = ((W - fw) / 2, 100) if long else ((W - fw) / 2, 918)
+        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = ((W - fw) / 2, 100) if long else (W - 36 - fw, 920)
         rrect(c, fx, fy, fw, 84, 30, GOLD, txt_new); text(c, s["fee"], fx + fw / 2, fy + 60, fz, "bebas", NAVY_, txt_new, "c", track=3)
 
 
