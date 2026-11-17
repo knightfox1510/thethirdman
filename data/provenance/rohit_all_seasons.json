@@ -1,0 +1,341 @@
+{
+ "seasons": {
+  "2008": {
+   "team": "Deccan Chargers",
+   "inn": 12,
+   "runs": 404,
+   "balls": 273,
+   "sr": 148.0,
+   "sixes": 19,
+   "fifties": 4,
+   "hundreds": 0,
+   "pp_sr": 84.2,
+   "league_pp_sr": 118.0,
+   "league_sr": 129.0
+  },
+  "2009": {
+   "team": "Deccan Chargers",
+   "inn": 16,
+   "runs": 362,
+   "balls": 315,
+   "sr": 114.9,
+   "sixes": 18,
+   "fifties": 1,
+   "hundreds": 0,
+   "pp_sr": 71.7,
+   "league_pp_sr": 111.3,
+   "league_sr": 116.6
+  },
+  "2010": {
+   "team": "Deccan Chargers",
+   "inn": 16,
+   "runs": 404,
+   "balls": 302,
+   "sr": 133.8,
+   "sixes": 14,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 43.8,
+   "league_pp_sr": 121.1,
+   "league_sr": 126.8
+  },
+  "2011": {
+   "team": "Mumbai Indians",
+   "inn": 13,
+   "runs": 372,
+   "balls": 297,
+   "sr": 125.3,
+   "sixes": 13,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 105.3,
+   "league_pp_sr": 109.7,
+   "league_sr": 120.7
+  },
+  "2012": {
+   "team": "Mumbai Indians",
+   "inn": 16,
+   "runs": 433,
+   "balls": 342,
+   "sr": 126.6,
+   "sixes": 18,
+   "fifties": 3,
+   "hundreds": 1,
+   "pp_sr": 117.8,
+   "league_pp_sr": 113.1,
+   "league_sr": 123.5
+  },
+  "2013": {
+   "team": "Mumbai Indians",
+   "inn": 19,
+   "runs": 538,
+   "balls": 409,
+   "sr": 131.5,
+   "sixes": 28,
+   "fifties": 4,
+   "hundreds": 0,
+   "pp_sr": 65.9,
+   "league_pp_sr": 108.1,
+   "league_sr": 121.2
+  },
+  "2014": {
+   "team": "Mumbai Indians",
+   "inn": 15,
+   "runs": 390,
+   "balls": 302,
+   "sr": 129.1,
+   "sixes": 16,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 78.8,
+   "league_pp_sr": 116.7,
+   "league_sr": 129.0
+  },
+  "2015": {
+   "team": "Mumbai Indians",
+   "inn": 16,
+   "runs": 482,
+   "balls": 333,
+   "sr": 144.7,
+   "sixes": 21,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 150.8,
+   "league_pp_sr": 120.7,
+   "league_sr": 132.0
+  },
+  "2016": {
+   "team": "Mumbai Indians",
+   "inn": 14,
+   "runs": 489,
+   "balls": 368,
+   "sr": 132.9,
+   "sixes": 17,
+   "fifties": 5,
+   "hundreds": 0,
+   "pp_sr": 138.3,
+   "league_pp_sr": 121.2,
+   "league_sr": 131.4
+  },
+  "2017": {
+   "team": "Mumbai Indians",
+   "inn": 16,
+   "runs": 333,
+   "balls": 273,
+   "sr": 122.0,
+   "sixes": 9,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 96.4,
+   "league_pp_sr": 131.1,
+   "league_sr": 133.4
+  },
+  "2018": {
+   "team": "Mumbai Indians",
+   "inn": 14,
+   "runs": 286,
+   "balls": 215,
+   "sr": 133.0,
+   "sixes": 12,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 87.2,
+   "league_pp_sr": 134.4,
+   "league_sr": 137.9
+  },
+  "2019": {
+   "team": "Mumbai Indians",
+   "inn": 15,
+   "runs": 405,
+   "balls": 315,
+   "sr": 128.6,
+   "sixes": 10,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 129.7,
+   "league_pp_sr": 129.3,
+   "league_sr": 133.7
+  },
+  "2020": {
+   "team": "Mumbai Indians",
+   "inn": 12,
+   "runs": 332,
+   "balls": 260,
+   "sr": 127.7,
+   "sixes": 19,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 115.8,
+   "league_pp_sr": 121.5,
+   "league_sr": 131.6
+  },
+  "2021": {
+   "team": "Mumbai Indians",
+   "inn": 13,
+   "runs": 381,
+   "balls": 299,
+   "sr": 127.4,
+   "sixes": 14,
+   "fifties": 1,
+   "hundreds": 0,
+   "pp_sr": 130.0,
+   "league_pp_sr": 122.2,
+   "league_sr": 127.0
+  },
+  "2022": {
+   "team": "Mumbai Indians",
+   "inn": 14,
+   "runs": 268,
+   "balls": 223,
+   "sr": 120.2,
+   "sixes": 13,
+   "fifties": 0,
+   "hundreds": 0,
+   "pp_sr": 124.0,
+   "league_pp_sr": 121.5,
+   "league_sr": 133.9
+  },
+  "2023": {
+   "team": "Mumbai Indians",
+   "inn": 16,
+   "runs": 332,
+   "balls": 250,
+   "sr": 132.8,
+   "sixes": 17,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 130.7,
+   "league_pp_sr": 137.0,
+   "league_sr": 141.7
+  },
+  "2024": {
+   "team": "Mumbai Indians",
+   "inn": 14,
+   "runs": 417,
+   "balls": 278,
+   "sr": 150.0,
+   "sixes": 23,
+   "fifties": 1,
+   "hundreds": 1,
+   "pp_sr": 152.0,
+   "league_pp_sr": 148.6,
+   "league_sr": 150.6
+  },
+  "2025": {
+   "team": "Mumbai Indians",
+   "inn": 15,
+   "runs": 418,
+   "balls": 280,
+   "sr": 149.3,
+   "sixes": 22,
+   "fifties": 4,
+   "hundreds": 0,
+   "pp_sr": 150.9,
+   "league_pp_sr": 151.5,
+   "league_sr": 152.5
+  },
+  "2026": {
+   "team": "Mumbai Indians",
+   "inn": 9,
+   "runs": 283,
+   "balls": 180,
+   "sr": 157.2,
+   "sixes": 21,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 152.5,
+   "league_pp_sr": 159.1,
+   "league_sr": 156.3
+  }
+ },
+ "career_2008_2026": {
+  "inn": 275,
+  "runs": 7329,
+  "balls": 5514,
+  "sixes": 324,
+  "fifties": 49,
+  "hundreds": 2
+ },
+ "titles_by_player": {
+  "AT Rayudu": 6,
+  "RG Sharma": 6,
+  "KH Pandya": 5,
+  "MS Dhoni": 5,
+  "KA Pollard": 5,
+  "HH Pandya": 5,
+  "RA Jadeja": 4,
+  "SL Malinga": 4
+ },
+ "rohit_titles": {
+  "2017": "Mumbai Indians",
+  "2009": "Deccan Chargers",
+  "2013": "Mumbai Indians",
+  "2019": "Mumbai Indians",
+  "2020": "Mumbai Indians",
+  "2015": "Mumbai Indians"
+ },
+ "runs_through_2025_top": [
+  [
+   "V Kohli",
+   8661
+  ],
+  [
+   "RG Sharma",
+   7046
+  ],
+  [
+   "S Dhawan",
+   6769
+  ],
+  [
+   "DA Warner",
+   6565
+  ],
+  [
+   "SK Raina",
+   5528
+  ],
+  [
+   "MS Dhoni",
+   5439
+  ]
+ ],
+ "sixes_through_2025_top": [
+  [
+   "CH Gayle",
+   357
+  ],
+  [
+   "RG Sharma",
+   303
+  ],
+  [
+   "V Kohli",
+   292
+  ],
+  [
+   "MS Dhoni",
+   264
+  ],
+  [
+   "AB de Villiers",
+   251
+  ],
+  [
+   "DA Warner",
+   236
+  ],
+  [
+   "KA Pollard",
+   223
+  ],
+  [
+   "AD Russell",
+   223
+  ]
+ ],
+ "rohit_runs_through_2024": 6628,
+ "rohit_runs_through_2025": 7046,
+ "rohit_sixes_through_2024": 281,
+ "rohit_sixes_through_2025": 303
+}
