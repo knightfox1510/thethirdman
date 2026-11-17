@@ -221,6 +221,7 @@ def write_cover(spec_path):
     sys.path.insert(0, ROOT); import covers, engine as E
     spec = json.load(open(spec_path)); base = (spec.get("files") or {}).get("short")
     if not base or "unused" in base.lower() or not (spec.get("thumb") or spec["slug"] in covers.FLIP_COVER): return None
+    if spec.get("ig_cover"): spec = dict(spec, thumb={**(spec.get("thumb") or {}), **spec["ig_cover"]})        # Instagram-only cover text (the YouTube thumbnail keeps spec["thumb"])
     E.apply_theme("stadium"); a = covers.render(spec); d = f"{ROOT}/deliver/{spec['slug']}"; os.makedirs(d, exist_ok=True)
     p = f"{d}/{base}_IG_cover.jpg"; skia_img = __import__("skia").Image.fromarray(a, colorType=__import__("skia").kRGBA_8888_ColorType); skia_img.save(p, __import__("skia").kJPEG, 92); return p
 

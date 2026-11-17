@@ -55,7 +55,7 @@ def render_panel(spec, W=1080, H=1920):
     return arr
 
 
-KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "rcb_back_to_back": "RCB", "hardik_arshdeep": "MI", "flip_mi_captains": "MI", "dhoni_captain": "CSK", "dhoni_retires": "CSK", "dhoni_ipl_story": "CSK", "dhoni_captain_myth": "CSK",
+KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "rcb_back_to_back": "RCB", "hardik_arshdeep": "MI", "flip_mi_captains": "MI", "dhoni_captain": "CSK", "dhoni_retires": "CSK", "dhoni_ipl_story": "CSK", "dhoni_captain_myth": "CSK", "dhoni_captaincy_all": "CSK",
        "replay_4odi": "NZ", "replay_4odi_young": "NZ", "henry_6balls": "NZ", "santner_problem": "NZ", "bradman_ipl": "AUS", "flip_root_same_point": "ENG"}
 POSE = {"myth_ep1_kohli_knockouts": "point", "myth_ep2_kohli_reinvention": "helmet", "myth_ep3_aaryavir": "raise", "replay_u19_final": "celebrate", "hardik_arshdeep": "stand",
         "replay_4odi": "celebrate", "replay_4odi_young": "raise", "replay_4odi_dots": "dejected", "henry_6balls": "arms_wide", "santner_problem": "point", "abhishek_plan": "point",
@@ -115,7 +115,8 @@ def render_avatar(spec, W=1080, H=1920):
     th, inf, sid, acc, arr, sf, c = _base(spec, W, H)
     _navy(c, W, H, acc, 1160)
     _pill(c, W, inf, sid, acc)
-    _hook(c, W, th, acc, 460, 175)
+    y_ = _hook(c, W, th, acc, 460, 175)
+    if th.get("sub"): text(c, th["sub"], W / 2, y_ + 60, 52, "bebas", (255, 255, 255), 0.9, "c", track=6)       # optional line under the hook (e.g. the data window)
     slug = spec["slug"]; kit, pose = KIT.get(slug, "IND"), POSE.get(slug, "stand")
     if slug == "channel_trailer":                                              # the brand mark stands in for the player
         c.drawCircle(W / 2, 1190, 330, paint(acc, .10)); gfx.logo_lockup(c, W / 2, 1230, 250, 1, "c")

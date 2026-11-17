@@ -815,5 +815,18 @@
    ]
   }
  },
- "provenance_required": true
+ "provenance_required": true,
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "DHONI'S IPL"
+   },
+   {
+    "t": "CAPTAINCY RECORD",
+    "c": "gold"
+   }
+  ],
+  "sub": "EVERY SEASON · 2008-2025",
+  "hero": "136"
+ }
 }

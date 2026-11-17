@@ -122,7 +122,7 @@ DS = ("MS Dhoni as IPL captain: 136 wins (no one has won more), ten finals in si
       "Our data: every IPL season 2008-2025 (Cricsheet ball-by-ball, checked against Wikipedia's season tables).\n\n#MSDhoni #CSK #IPL #Shorts")
 spec = {"slug": "dhoni_captaincy_all", "theme": "lab", "theme_long": "whites", "captions": "lab", "captions_long": False, "series": "data", "tag": "DATA STORY", "tagsub": "MSD'S IPL CAPTAINCY, THE COMPLETE RECORD",
         "files": {"long": "x", "short": "x"}, "thumb": {"kicker": "MS DHONI · EVERY IPL SEASON", "lines": [{"t": "THE COMPLETE"}, {"t": "CAPTAINCY RECORD", "c": "gold"}], "hero": "136", "herosize": 520},
-        "sources": SRC, "venue": VENUE, "long": long, "short": short, "full": full, "full_theme": "stadium", "full_captions": "v2", "reel_cta": reel_cta, "reel_caption": reel_caption,
+        "ig_cover": {"lines": [{"t": "DHONI'S IPL"}, {"t": "CAPTAINCY RECORD", "c": "gold"}], "sub": "EVERY SEASON · 2008-2025", "hero": "136"}, "sources": SRC, "venue": VENUE, "long": long, "short": short, "full": full, "full_theme": "stadium", "full_captions": "v2", "reel_cta": reel_cta, "reel_caption": reel_caption,
         "yt": {"long": {"title": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14", "description": DL, "tags": TAGS},
                "short": {"title": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts", "description": DS, "tags": TAGS}}}
 c.save(spec); voice_lint.fix_spec(spec)

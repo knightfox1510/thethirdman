@@ -195,7 +195,7 @@ reel_caption = ("MS Dhoni has retired from the IPL, and the numbers say what the
                 "#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #cricket #cricketanalysis #TheThirdMan")
 s_spec = {"slug": "dhoni_ipl_story", "theme": "lab", "theme_long": "whites", "captions": "lab", "captions_long": False, "series": "data", "tag": "DATA STORY", "tagsub": "DHONI'S IPL IN NUMBERS",
           "files": {"long": "x", "short": "x"}, "thumb": {"kicker": "MS DHONI · IPL", "lines": [{"t": "THE FINISHER"}, {"t": "IN NUMBERS", "c": "gold"}], "hero": "98", "herosize": 520},
-          "sources": SRC_COMMON, "venue": VENUE, "long": story_long, "short": story_short, "carousel": carousel, "full": full, "full_theme": "stadium", "full_captions": "v2", "reel_cta": reel_cta, "reel_caption": reel_caption,
+          "ig_cover": {"lines": [{"t": "DHONI'S IPL:"}, {"t": "THE FINISHER", "c": "gold"}], "sub": "BY THE NUMBERS", "hero": "98"}, "sources": SRC_COMMON, "venue": VENUE, "long": story_long, "short": story_short, "carousel": carousel, "full": full, "full_theme": "stadium", "full_captions": "v2", "reel_cta": reel_cta, "reel_caption": reel_caption,
           "yt": {"long": {"title": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13", "description": DESC_L_, "tags": TAGS},
                  "short": {"title": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts", "description": DESC_S_, "tags": TAGS}}}
 c_story.save(s_spec)

@@ -887,5 +887,18 @@
  },
  "provenance_required": true,
  "full_theme": "stadium",
- "full_captions": "v2"
+ "full_captions": "v2",
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "DHONI'S IPL:"
+   },
+   {
+    "t": "THE FINISHER",
+    "c": "gold"
+   }
+  ],
+  "sub": "BY THE NUMBERS",
+  "hero": "98"
+ }
 }
