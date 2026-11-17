@@ -194,8 +194,8 @@
    "ep": "03",
    "long": "2:20",
    "short": "0:27",
-   "status": "Uploaded (private)",
-   "link": null,
+   "status": "Posted",
+   "link": "https://youtu.be/8KIKP2KPV84",
    "planned": "2026-11-17",
    "recheck": null,
    "sources": [
@@ -210,8 +210,8 @@
    "ep": "04",
    "long": "1:40",
    "short": "0:39",
-   "status": "Uploaded (private)",
-   "link": null,
+   "status": "Posted",
+   "link": "https://youtu.be/17GxKfWvk4Y",
    "planned": "2026-11-21",
    "recheck": null,
    "sources": [
@@ -222,6 +222,25 @@
    ]
   },
   {
+   "slug": "dhoni_captaincy_all",
+   "title": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
+   "format": "datastories",
+   "series": "Data Stories",
+   "ep": "14",
+   "long": "1:57",
+   "short": "0:30",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-18",
+   "recheck": null,
+   "sources": [
+    "Captaincy totals (235 matches, 136 wins, 97 losses, 2 no results, CSK and Rising Pune Supergiant): Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains (page last edited 19 September 2026), Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ and Insidesport; ESPNcricinfo's records page (supplied by the channel owner) could not be opened by us. Five titles level with Rohit Sharma: Wikipedia and India TV.",
+    "CSK season results 2008-2025: Wikipedia, 'Chennai Super Kings' season table https://en.wikipedia.org/wiki/Chennai_Super_Kings and the Cricsheet IPL ball-by-ball archive https://cricsheet.org/downloads/ipl_json.zip (wins agree in every season; Cricsheet lacks a few abandoned matches, so we state wins, finals, titles and playoff seasons, not losses).",
+    "Franchise comparison (playoff seasons, finals, titles, win rate on decided matches), every IPL season 2008-2025: Cricsheet IPL archive, shown as 'our data'. Mumbai Indians' six finals and five titles: myKhel https://www.mykhel.com/cricket/ms-dhoni-vs-rohit-sharma-ipl-stats-and-record-best-captain-in-indian-premier-league-215101.html . Captaincy changes (Jadeja in 2022, Gaikwad's injury in 2025): Wikipedia, 'Chennai Super Kings'.",
+    "Retirement from the IPL as a player and the mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye, Khel Now, Kalinga TV and Cricket Times. Figures: analysis/dhoni_captaincy_all.py."
+   ]
+  },
+  {
    "slug": "dhoni_ipl_story",
    "title": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
    "format": "datastories",
@@ -229,8 +248,8 @@
    "ep": "13",
    "long": "2:02",
    "short": "0:33",
-   "status": "Uploaded (private)",
-   "link": null,
+   "status": "Posted",
+   "link": "https://youtu.be/WiTCSH9vsfM",
    "planned": "2026-11-19",
    "recheck": null,
    "sources": [
@@ -248,8 +267,8 @@
    "ep": "01",
    "long": null,
    "short": "0:50",
-   "status": "Uploaded (private)",
-   "link": null,
+   "status": "Posted",
+   "link": "https://youtu.be/Yvtkgm3NUac",
    "planned": "2026-11-17",
    "recheck": null,
    "sources": [

@@ -614,6 +614,24 @@
    "status": "Posted",
    "link": "https://youtu.be/rZhGj13fGx4",
    "notes": "Posted on YouTube 17 Nov; Instagram by hand"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube long",
+   "content": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive. All IPL seasons 2008-2025 (Cricsheet + Wikipedia); on-screen label 'our data'"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube Short + IG Reel",
+   "content": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive"
   }
  ]
 }

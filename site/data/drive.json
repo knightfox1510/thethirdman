@@ -2835,6 +2835,84 @@
     }
    ]
   },
+  "dhoni_captaincy_all": {
+   "state": "not posted",
+   "series": "09 Data Stories",
+   "episode": "Ep14 - Dhoni IPL Captaincy, the Complete Record",
+   "folder": "https://drive.google.com/drive/folders/1GxraW2A_axeME1qulZgWJMlbVxj5WKmX",
+   "files": [
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/19Co2pbV2f5bT2zWLmqqKiSSaii--t-IO/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1-OXugvriQrn5l3RY5nd5nP9jBM47Bsc_/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1_cXjjkUCk5jUtgSFKIVQOqRs7_awiBTR/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 3.3,
+     "url": "https://drive.google.com/file/d/17ZnGOcswKJhOqVD8Z5o2eebESnlEQxd3/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/16h629VASnR-SKJx6_CEZudV2UxOLGvRt/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1S2l3gYJ1r_zEuFPpQSnFYlU1WwOmTLW2/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 3.3,
+     "url": "https://drive.google.com/file/d/1hFiS-DS-TMQPik2dtAj51qzsc60QzIEq/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1NiMD-Y2tw7Dbl8LVVJ7Y1pOgl4PoF-je/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1BUk-O9ue8r9_AOE876hVF5RdPcNZ3pRW/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 12.5,
+     "url": "https://drive.google.com/file/d/16PSfXVuAQPElw_6-z_5r1SC86y06VS3i/view?usp=drivesdk"
+    }
+   ]
+  },
   "channel_trailer": {
    "state": "posted",
    "series": "10 Channel",
@@ -3224,7 +3302,8 @@
     "kohli_2000_nz",
     "gambhir_player_coach",
     "data_nz_ind_series",
-    "dhoni_ipl_story"
+    "dhoni_ipl_story",
+    "dhoni_captaincy_all"
    ]
   },
   "10 Channel": {
