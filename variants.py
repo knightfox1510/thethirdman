@@ -102,7 +102,7 @@ def igfull(spec_path):
     for f in os.listdir(src):
         if f.startswith(base) and f.endswith((".mp4", ".srt")): shutil.move(os.path.join(src, f), os.path.join(dst, f))
     shutil.rmtree(src, ignore_errors=True)
-    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(caption_text(spec))
+    open(f"{dst}/{base}_caption.txt", "w", encoding="utf-8").write(spec.get("reel_caption") or caption_text(spec))     # the Instagram caption written for the vertical cut, else the generic one
     print("IG full vertical:", f"{dst}/{base}.mp4")
 
 

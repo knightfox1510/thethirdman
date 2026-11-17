@@ -91,14 +91,14 @@ G_ = lambda v, l, c="gold": {"v": v, "l": l, "c": c}
 T_ = lambda kick, rows: {"kind": "table", "kicker": kick, "rows": rows}
 SIDE_ = dict(view="side", stumps=[0.2, 0.93])
 full = [
-    full_scene(0, {"kind": "versus", "kicker": "MS DHONI · IPL CAPTAIN · " + DATA, "left": G_("235", "Matches"), "right": G_("136", "Wins"), "sep": "→"}, pose="raise", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.3),
-    full_scene(1, T_("CSK WINS, SEASON BY SEASON · SUSPENDED 2016-17", [["2008, the first season", str(WIKI_W[2008])], ["2011 (title)", str(WIKI_W[2011]), "gold"], ["2013", str(WIKI_W[2013])], ["2018 (title)", str(WIKI_W[2018]), "gold"], ["2023 (title)", str(WIKI_W[2023]), "gold"], ["2022 / 2024 / 2025", f"{WIKI_W[2022]} / {WIKI_W[2024]} / {WIKI_W[2025]}"]]),
+    full_scene(0, {"kind": "versus", "kicker": "IPL CAPTAIN · OUR DATA 2008-2025", "left": G_("235", "Matches"), "right": G_("136", "Wins"), "sep": "→"}, pose="raise", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.3),
+    full_scene(1, T_("CSK WINS PER SEASON · NONE 2016-17", [["2008, the first season", str(WIKI_W[2008])], ["2011 (title)", str(WIKI_W[2011]), "gold"], ["2013", str(WIKI_W[2013])], ["2018 (title)", str(WIKI_W[2018]), "gold"], ["2023 (title)", str(WIKI_W[2023]), "gold"], ["2022 / 2024 / 2025", f"{WIKI_W[2022]} / {WIKI_W[2024]} / {WIKI_W[2025]}"]]),
                pose="walk", cam="drift", fx=("vignette", "spot")),
-    full_scene(2, {"kind": "bignum", "kicker": "CSK IN THE FINAL · " + DATA, "label": "FINALS IN 16 SEASONS · 5 TITLES", "value": 10, "count_dur": 0.8, "color": "gold"},
+    full_scene(2, {"kind": "bignum", "kicker": "CSK FINALS · OUR DATA 2008-2025", "label": "FINALS IN 16 SEASONS · 5 TITLES", "value": 10, "count_dur": 0.8, "color": "gold"},
                pose="celebrate", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.4),
-    full_scene(3, T_("CSK VS MUMBAI · " + DATA, [["Playoff seasons", f'{CSK["playoff_seasons"]} of {CSK["n_seasons"]} vs {MI["playoff_seasons"]} of {MI["n_seasons"]}', "gold"], ["Finals", f'{CSK["finals"]} vs {MI["finals"]}', "gold"], ["Titles", f'{CSK["titles"]} vs {MI["titles"]}']]),
+    full_scene(3, T_("CSK VS MUMBAI · OUR DATA 2008-25", [["Playoff seasons", f'{CSK["playoff_seasons"]} of {CSK["n_seasons"]} vs {MI["playoff_seasons"]} of {MI["n_seasons"]}', "gold"], ["Finals", f'{CSK["finals"]} vs {MI["finals"]}', "gold"], ["Titles", f'{CSK["titles"]} vs {MI["titles"]}']]),
                pose="stance", cam="pull", fx=("vignette", "spot"), **SIDE_),
-    full_scene(4, T_("WIN RATE, DECIDED MATCHES · " + DATA, [["Chennai (CSK)", pc(CSK["win_pct"]), "gold"], ["Mumbai", pc(MI["win_pct"])], ["Kolkata", pc(FR["Kolkata Knight Riders"]["win_pct"])], ["Everyone else", "50% or below"]]),
+    full_scene(4, T_("WIN RATE · OUR DATA 2008-2025", [["Chennai (CSK)", pc(CSK["win_pct"]), "gold"], ["Mumbai", pc(MI["win_pct"])], ["Kolkata", pc(FR["Kolkata Knight Riders"]["win_pct"])], ["Everyone else", "50% or below"]]),
                pose="drive", hit="drive", ghost=True, cam="drift", ball={"at": 0.5, "shot": "four"}, fx=("vignette", "speed", "flash"), **SIDE_),
     full_scene(5, {"kind": "versus", "kicker": "MS DHONI · CSK + RISING PUNE SUPERGIANT", "left": G_("136", "Wins"), "right": G_("5", "Titles"), "sep": "&"}, pose="raise", cam="push", fx=("vignette", "spot", "confetti"), fx_at=0.4),
     full_scene(6, {"kind": "headline", "kicker": "OUR VERDICT", "lines": [{"t": "THE MOST SUCCESSFUL"}, {"t": "CAPTAIN IN", "c": "gold"}, {"t": "IPL HISTORY.", "c": "gold"}]}, pose="celebrate", cam="wide", fx=("vignette", "spot", "confetti"), fx_at=0.4),

@@ -470,7 +470,7 @@
     "type": "stage",
     "panel": {
      "kind": "versus",
-     "kicker": "MS DHONI · IPL CAPTAIN · OUR DATA: EVERY IPL SEASON, 2008-2025",
+     "kicker": "IPL CAPTAIN · OUR DATA 2008-2025",
      "left": {
       "v": "235",
       "l": "Matches",
@@ -506,7 +506,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "CSK WINS, SEASON BY SEASON · SUSPENDED 2016-17",
+     "kicker": "CSK WINS PER SEASON · NONE 2016-17",
      "rows": [
       [
        "2008, the first season",
@@ -558,7 +558,7 @@
     "type": "stage",
     "panel": {
      "kind": "bignum",
-     "kicker": "CSK IN THE FINAL · OUR DATA: EVERY IPL SEASON, 2008-2025",
+     "kicker": "CSK FINALS · OUR DATA 2008-2025",
      "label": "FINALS IN 16 SEASONS · 5 TITLES",
      "value": 10,
      "count_dur": 0.8,
@@ -587,7 +587,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "CSK VS MUMBAI · OUR DATA: EVERY IPL SEASON, 2008-2025",
+     "kicker": "CSK VS MUMBAI · OUR DATA 2008-25",
      "rows": [
       [
        "Playoff seasons",
@@ -631,7 +631,7 @@
     "type": "stage",
     "panel": {
      "kind": "table",
-     "kicker": "WIN RATE, DECIDED MATCHES · OUR DATA: EVERY IPL SEASON, 2008-2025",
+     "kicker": "WIN RATE · OUR DATA 2008-2025",
      "rows": [
       [
        "Chennai (CSK)",
