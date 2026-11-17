@@ -71,7 +71,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -145,6 +146,7 @@
   "data_nz_ind_series__iglab": "flip",
   "dyk_third_man__igreel": "kinetic",
   "dhoni_retires": "fieldmap",
-  "dhoni_ipl_story": "stumps"
+  "dhoni_ipl_story": "stumps",
+  "dhoni_captain_myth": "flip"
  }
 }
