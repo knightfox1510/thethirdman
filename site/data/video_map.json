@@ -136,5 +136,17 @@
   "kind": "short",
   "title": "dyk_third_man",
   "format": "didyouknow"
+ },
+ "_cX_F8LbjfU": {
+  "slug": "powerplay_revolution",
+  "kind": "long",
+  "title": "The IPL Powerplay Revolution",
+  "format": "datastories"
+ },
+ "J9EHp4rAxLA": {
+  "slug": "powerplay_revolution",
+  "kind": "short",
+  "title": "The IPL Powerplay Revolution",
+  "format": "datastories"
  }
 }

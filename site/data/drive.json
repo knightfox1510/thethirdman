@@ -1,6 +1,6 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-15",
+ "synced": "2026-11-17",
  "videos": {
   "myth_ep1_kohli_knockouts": {
    "state": "posted",
@@ -261,6 +261,84 @@
      "platform": "Instagram",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/1NYCab14jEXnH93sVg6S36QUmCtE9ZjpK/view?usp=drivesdk"
+    }
+   ]
+  },
+  "dhoni_captain_myth": {
+   "state": "not posted",
+   "series": "01 Myth or Data",
+   "episode": "Ep04 - Did Dhoni CSK Just Win the Close Ones",
+   "folder": "https://drive.google.com/drive/folders/1BhhIifpUzySdoLRDyiVCIAcIcgexvgrU",
+   "files": [
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1C6Vk50zBZDuOd0JqNDTJj_1Y6jj2suEN/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1JYHov02nXDyfTPJH5CDBzpUU3F__tCbX/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1tqywbANC154f5BV8eG4EpFKrtqZDuivk/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 62.5,
+     "url": "https://drive.google.com/file/d/1ojtQarCUjXkLMlor1SV6QCi6GIgFNBkg/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1cP7NJ23g9tFjaPqFOUa1FmW8YLTbyMPR/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1iiFPjhvtl7fwzreDkHzhWmR30pXZt_fc/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 64.2,
+     "url": "https://drive.google.com/file/d/1hdmbW1W497r_M9LEKLd7Is2j3yNM7yo-/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/11ZtXLDowSL1MoXQ98vctmc9fzWLTz9B9/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1eiPKF_xEx3UnxucYk-DyTmtePgIg1fZ0/view?usp=drivesdk"
+    },
+    {
+     "name": "Myth_or_Data_Ep04_Did_Dhoni_CSK_Just_Win_the_Close_Ones_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 4.7,
+     "url": "https://drive.google.com/file/d/1qW_XNbOwFYYwqWClG2CnvRyS61lhXk5U/view?usp=drivesdk"
     }
    ]
   },
@@ -1808,9 +1886,9 @@
    ]
   },
   "powerplay_revolution": {
-   "state": "not posted",
+   "state": "posted",
    "series": "09 Data Stories",
-   "episode": "Ep02 - The Powerplay Revolution",
+   "episode": "Ep02 - The Powerplay Revolution [posted]",
    "folder": "https://drive.google.com/drive/folders/1OgnoyVFLim4_3F47cgMu5s7XfWR6cA-G",
    "files": [
     {
@@ -2658,6 +2736,84 @@
     }
    ]
   },
+  "dhoni_ipl_story": {
+   "state": "not posted",
+   "series": "09 Data Stories",
+   "episode": "Ep13 - Dhoni IPL Career, How He Finished",
+   "folder": "https://drive.google.com/drive/folders/1hcJX4dWny3ypiJX4fBTlNW7IIAifhwcy",
+   "files": [
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1YWiseE8wc9oXjwbgwGpe2qvK1SQmqJt2/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1rd1l6J-ZU3Ta9eIELj5yM0GwG1SydIN6/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1SS8XSQk_S3G5fZ1q1vIYGd_yClXvlX7X/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 3.4,
+     "url": "https://drive.google.com/file/d/1cecsPpTOJfakHe8BNS6ltLggWFKtBIpK/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1zme2SWqmit7zZEAmLM78rh9YYkQKbAeD/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/11EBpKFfAb6AIkHDvHTSmYGv7-KczPOOA/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 3.4,
+     "url": "https://drive.google.com/file/d/1cCfWxBtnXosinFFRR8rt2aeDobv3TZik/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1txlF4cPpKAFmmCxGKWpQVWT5pGqUkdGv/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1f_7MmXmnj93-fRuluzLijUIApTN481Jj/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 11.8,
+     "url": "https://drive.google.com/file/d/13OaT6abAGMHynHdWg6W2UISnnu7tzi59/view?usp=drivesdk"
+    }
+   ]
+  },
   "channel_trailer": {
    "state": "posted",
    "series": "10 Channel",
@@ -2719,6 +2875,63 @@
      "platform": "Instagram",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/18qBZnDvyKJP-dfG0K_usSdyTbVWNczMc/view?usp=drivesdk"
+    }
+   ]
+  },
+  "dhoni_retires": {
+   "state": "not posted",
+   "series": "10 Channel",
+   "episode": "Ep01 - Dhoni Retires from the IPL",
+   "folder": "https://drive.google.com/drive/folders/1hytkUEubT3qwm4dDEHsmiZ4LiAKVuQ48",
+   "files": [
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1MHhldPOZwJBIJNaVYrkMxi5ODnNXkhmh/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1DN3cYAyrz33kuTDnGRgajBIYPzciC9yy/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1rcg4U_XgyfaXi2JCQgqLD4dGCUFotf9n/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 85.7,
+     "url": "https://drive.google.com/file/d/1mQqhzvVdWtHo_besxFC--O430OuvCc-D/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/16jebGvQGDOGZos0g7-SjLrpIdGKcxsqL/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1K3hVu1WIg7NXhjYW3yBjtFyPzr2HMiX4/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 87.0,
+     "url": "https://drive.google.com/file/d/1RqAgP-Oo0ke908Cv87Mx0yxZP9187awf/view?usp=drivesdk"
     }
    ]
   },
@@ -2913,7 +3126,8 @@
    "episodes": [
     "myth_ep1_kohli_knockouts",
     "myth_ep2_kohli_reinvention",
-    "myth_ep3_aaryavir"
+    "myth_ep3_aaryavir",
+    "dhoni_captain_myth"
    ]
   },
   "02 The Replay Room": {
@@ -2988,13 +3202,15 @@
     "hardik_arshdeep",
     "kohli_2000_nz",
     "gambhir_player_coach",
-    "data_nz_ind_series"
+    "data_nz_ind_series",
+    "dhoni_ipl_story"
    ]
   },
   "10 Channel": {
    "folder": "https://drive.google.com/drive/folders/1JKROR0oeLvN990uUdl3HP1qCZRraEOTZ",
    "episodes": [
-    "channel_trailer"
+    "channel_trailer",
+    "dhoni_retires"
    ]
   },
   "11 Did You Know": {

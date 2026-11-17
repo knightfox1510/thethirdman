@@ -13,6 +13,7 @@ from gfx import text, rrect, paint, twidth
 ACCENT = {"myth": (255, 200, 40), "replay": (255, 92, 92), "tactics": (92, 190, 255), "lab": (110, 225, 170), "statcheck": (190, 150, 255),
           "whatif": (255, 160, 70), "rising": (255, 130, 205), "flip": (70, 225, 225), "data": (255, 236, 150), "channel": (255, 200, 40), "didyouknow": (190, 235, 70)}
 NAVY, NAVY2 = (9, 14, 30), (22, 36, 72)
+PILL_OVERRIDE = {"dhoni_retires": "TRIBUTE"}      # a per-video pill when the series label does not fit (Channel = "WELCOME", the trailer)
 SERIES_SHORT = {"myth": "MYTH OR DATA?", "replay": "THE REPLAY ROOM", "tactics": "TACTICS BOARD", "lab": "THE LAB", "statcheck": "STAT CHECK", "whatif": "WHAT IF?",
                 "rising": "RISING STAR", "flip": "FLIP", "data": "DATA STORY", "channel": "WELCOME", "didyouknow": "DID YOU KNOW?"}
 
@@ -31,6 +32,7 @@ def render_panel(spec, W=1080, H=1920):
     ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip", "didyouknow") else ""
     pill = SERIES_SHORT.get(sid, "") + ep
     if sid == "replay" and inf and inf["ep"][-1:].isalpha(): pill = "THE REPLAY ROOM · EXTRA"
+    pill = PILL_OVERRIDE.get(spec["slug"], pill)
     pw = twidth(pill, 56, "bebas", 3) + 70
     rrect(c, W / 2 - pw / 2, 330, pw, 84, 42, acc, 1); text(c, pill, W / 2, 391, 56, "bebas", NAVY, 1, "c", track=3)
     # hook: two lines, white then accent
@@ -53,7 +55,7 @@ def render_panel(spec, W=1080, H=1920):
     return arr
 
 
-KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "rcb_back_to_back": "RCB", "hardik_arshdeep": "MI", "flip_mi_captains": "MI", "dhoni_captain": "CSK",
+KIT = {"myth_ep2_kohli_reinvention": "RCB", "anchor": "RCB", "rcb_back_to_back": "RCB", "hardik_arshdeep": "MI", "flip_mi_captains": "MI", "dhoni_captain": "CSK", "dhoni_retires": "CSK", "dhoni_ipl_story": "CSK", "dhoni_captain_myth": "CSK",
        "replay_4odi": "NZ", "replay_4odi_young": "NZ", "henry_6balls": "NZ", "santner_problem": "NZ", "bradman_ipl": "AUS", "flip_root_same_point": "ENG"}
 POSE = {"myth_ep1_kohli_knockouts": "point", "myth_ep2_kohli_reinvention": "helmet", "myth_ep3_aaryavir": "raise", "replay_u19_final": "celebrate", "hardik_arshdeep": "stand",
         "replay_4odi": "celebrate", "replay_4odi_young": "raise", "replay_4odi_dots": "dejected", "henry_6balls": "arms_wide", "santner_problem": "point", "abhishek_plan": "point",
@@ -76,6 +78,7 @@ def thumb_of(spec):
 
 def _base(spec, W, H, light=False):
     th = thumb_of(spec); inf = series.info(spec["slug"]); sid = inf["sid"] if inf else "data"; acc = ACCENT.get(sid, (255, 200, 40))
+    if inf and spec["slug"] in PILL_OVERRIDE: inf = dict(inf, pill=PILL_OVERRIDE[spec["slug"]])
     arr = np.zeros((H, W, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
     return th, inf, sid, acc, arr, sf, c
 
@@ -84,6 +87,7 @@ def _pill(c, W, inf, sid, acc, y=330, dark=False):
     ep = f" · EP. {int(inf['ep'])}" if inf and inf["ep"].isdigit() and int(inf["ep"]) > 0 and sid in ("myth", "lab", "statcheck", "replay", "tactics", "whatif", "rising", "flip", "didyouknow") else ""
     pill = SERIES_SHORT.get(sid, "") + ep
     if sid == "replay" and inf and inf["ep"][-1:].isalpha(): pill = "THE REPLAY ROOM · EXTRA"
+    if inf and inf.get("pill"): pill = inf["pill"]
     pw = twidth(pill, 56, "bebas", 3) + 70
     rrect(c, W / 2 - pw / 2, y, pw, 84, 42, (14, 14, 18) if dark else acc, 1); text(c, pill, W / 2, y + 61, 56, "bebas", acc if dark else NAVY, 1, "c", track=3)
 

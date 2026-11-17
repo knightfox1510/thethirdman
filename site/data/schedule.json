@@ -542,6 +542,60 @@
    "status": "Uploaded (private)",
    "link": "https://youtu.be/J9EHp4rAxLA",
    "notes": "Uploaded private 16 Nov; set Public in Studio"
+  },
+  {
+   "date": "2026-11-17",
+   "platform": "YouTube Short + IG Reel",
+   "content": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
+   "series": "10 Channel",
+   "status": "Ready",
+   "link": null,
+   "notes": "Tribute; post first (news is hours old). Built 2026-11-17; on Drive"
+  },
+  {
+   "date": "2026-11-19",
+   "platform": "YouTube long",
+   "content": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive. Archive figures labelled 'in our archive'"
+  },
+  {
+   "date": "2026-11-19",
+   "platform": "YouTube Short + IG Reel",
+   "content": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive"
+  },
+  {
+   "date": "2026-11-19",
+   "platform": "Instagram carousel",
+   "content": "Dhoni: The Finisher in Numbers (8 slides)",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive (carousel + caption)"
+  },
+  {
+   "date": "2026-11-21",
+   "platform": "YouTube long",
+   "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
+   "series": "01 Myth or Data",
+   "status": "Ready",
+   "link": null,
+   "notes": "Verdict: busted. Built 2026-11-17; on Drive"
+  },
+  {
+   "date": "2026-11-21",
+   "platform": "YouTube Short + IG Reel",
+   "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4 #Shorts",
+   "series": "01 Myth or Data",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive"
   }
  ]
 }

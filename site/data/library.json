@@ -192,14 +192,71 @@
    "format": "whatif",
    "series": "What If",
    "ep": "03",
-   "long": null,
-   "short": null,
+   "long": "2:20",
+   "short": "0:27",
    "status": "Ready",
    "link": null,
    "planned": "2026-12-19",
    "recheck": null,
    "sources": [
     "Settled history (2007 WT20, 2011 WC, 2013 CT, CSK titles); RCB won IPL 2025 and 2026 (mykhel)"
+   ]
+  },
+  {
+   "slug": "dhoni_captain_myth",
+   "title": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
+   "format": "myth",
+   "series": "Myth or Data",
+   "ep": "04",
+   "long": "1:40",
+   "short": "0:38",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-21",
+   "recheck": null,
+   "sources": [
+    "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
+    "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
+    "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
+    "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+   ]
+  },
+  {
+   "slug": "dhoni_ipl_story",
+   "title": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
+   "format": "datastories",
+   "series": "Data Stories",
+   "ep": "13",
+   "long": "1:55",
+   "short": "0:34",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-19",
+   "recheck": null,
+   "sources": [
+    "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
+    "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
+    "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
+    "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+   ]
+  },
+  {
+   "slug": "dhoni_retires",
+   "title": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK",
+   "format": "news",
+   "series": "Channel",
+   "ep": "01",
+   "long": null,
+   "short": "0:50",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-17",
+   "recheck": null,
+   "sources": [
+    "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
+    "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
+    "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
+    "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
    ]
   },
   {
@@ -553,8 +610,8 @@
    "format": "datastories",
    "series": "Data Stories",
    "ep": "02",
-   "long": null,
-   "short": null,
+   "long": "2:09",
+   "short": "0:27",
    "status": "Ready",
    "link": null,
    "planned": "2026-11-16",

@@ -108,8 +108,8 @@ def video_folder(slug, root_id):
     (Videos/<slug> or Published_YT/<slug>) is still found, until drive_migrate.py moves it."""
     f = by_slug(slug)
     if f: return f["id"]
-    pub = find_child("Published_YT", root_id)
-    legacy = (pub and find_child(slug, pub)) or find_child(slug, find_child("Videos", root_id) or "")
+    pub = find_child("Published_YT", root_id); vids = find_child("Videos", root_id)        # the legacy folders no longer exist once migrated: never query with an empty parent
+    legacy = (pub and find_child(slug, pub)) or (vids and find_child(slug, vids))
     if legacy: return legacy
     import series
     inf = series.info(slug)
