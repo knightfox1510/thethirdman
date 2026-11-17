@@ -9,7 +9,7 @@ usage:
   engine.py outro  long|short                             render the logo outro clip
   engine.py thumb  specs/<slug>.json                      cover images only
 """
-import os, sys, json, math, hashlib, base64, subprocess, urllib.request
+import os, sys, shutil, json, math, hashlib, base64, subprocess, urllib.request
 import numpy as np, skia
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -690,6 +690,19 @@ def captions(c, g, t, grps):
 
 
 # ------------------------------------------------------------------ voice
+def _vo_pool():
+    """hash -> (vo dir, paragraph index, meta entry) over every narration already generated under out/*/*/vo."""
+    import glob
+    pool = {}
+    for mp in glob.glob(f"{ROOT}/out/*/*/vo/meta.json") + glob.glob(f"{ROOT}/out/*/vo/meta.json"):
+        d = os.path.dirname(mp)
+        try: ms = json.load(open(mp))
+        except Exception: continue
+        for j, e in enumerate(ms):
+            if e.get("hash") and os.path.exists(f"{d}/p{j}.mp3"): pool.setdefault(e["hash"], (d, j, e))
+    return pool
+
+
 def tts(paras, outdir, fmt):
     os.makedirs(outdir, exist_ok=True)
     mpath = f"{outdir}/meta.json"
@@ -699,6 +712,10 @@ def tts(paras, outdir, fmt):
         h = hashlib.md5((p + VOICE + str(TEMPO[fmt])).encode()).hexdigest()
         if i < len(old) and old[i].get("hash") == h and os.path.exists(f"{outdir}/p{i}.mp3"):
             meta.append(old[i]); continue
+        hit = _vo_pool().get(h)                      # same text, voice and tempo already narrated in another video: copy it (saves ElevenLabs credits)
+        if hit and os.path.abspath(hit[0]) != os.path.abspath(outdir):
+            shutil.copyfile(f"{hit[0]}/p{hit[1]}.mp3", f"{outdir}/p{i}.mp3"); meta.append(hit[2])
+            json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice reused for paragraph {i} (from {hit[0]})"); continue
         body = {"text": p, "model_id": "eleven_multilingual_v2",
                 "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True},
                 "previous_text": paras[i - 1] if i else None, "next_text": paras[i + 1] if i + 1 < len(paras) else None}

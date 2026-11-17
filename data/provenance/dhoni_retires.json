@@ -1,0 +1,112 @@
+{
+ "slug": "dhoni_retires",
+ "claims": [
+  {
+   "claim": "matches",
+   "value": 278,
+   "sources": {
+    "etvbharat": 278,
+    "easterneye": 278,
+    "khelnow": 278
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "runs",
+   "value": 5439,
+   "sources": {
+    "etvbharat": 5439,
+    "easterneye": 5439,
+    "khelnow": 5439
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "titles",
+   "value": 5,
+   "sources": {
+    "etvbharat": 5,
+    "cricketaddictor": 5,
+    "easterneye": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "finals",
+   "value": 10,
+   "sources": {
+    "etvbharat": 10,
+    "cricketaddictor": 10
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "captain matches",
+   "value": 235,
+   "sources": {
+    "cricketaddictor": 235,
+    "insidesport": 235
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "captain wins",
+   "value": 136,
+   "sources": {
+    "cricketaddictor": 136,
+    "insidesport": 136
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Champions League T20 titles",
+   "value": 2,
+   "sources": {
+    "etvbharat": 2,
+    "khelnow": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "retirement as a player, mentor role from 2027 (CSK announcement, 17 Nov 2026)",
+   "value": "retired, team mentor",
+   "sources": {
+    "easterneye": "retired, team mentor",
+    "khelnow": "retired, team mentor",
+    "kalingatv": "retired, team mentor",
+    "crickettimes": "retired, team mentor"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: sixes in the last two overs",
+   "value": 98,
+   "sources": {
+    "sportmonks": 98
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 8,
+  "LABELLED": 1
+ }
+}

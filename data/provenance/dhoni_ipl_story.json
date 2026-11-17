@@ -1,0 +1,345 @@
+{
+ "slug": "dhoni_ipl_story",
+ "claims": [
+  {
+   "claim": "IPL matches (career)",
+   "value": 278,
+   "sources": {
+    "etvbharat": 278,
+    "easterneye": 278,
+    "khelnow": 278,
+    "cricketaddictor": 278
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL runs (career)",
+   "value": 5439,
+   "sources": {
+    "etvbharat": 5439,
+    "easterneye": 5439,
+    "khelnow": 5439,
+    "cricketaddictor": 5439
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL titles as captain (2010, 2011, 2018, 2021, 2023)",
+   "value": 5,
+   "sources": {
+    "etvbharat": 5,
+    "cricketaddictor": 5,
+    "easterneye": 5,
+    "khelnow": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL finals as captain",
+   "value": 10,
+   "sources": {
+    "etvbharat": 10,
+    "cricketaddictor": 10
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Champions League T20 titles",
+   "value": 2,
+   "sources": {
+    "etvbharat": 2,
+    "khelnow": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "matches as IPL captain (CSK + Rising Pune Supergiant)",
+   "value": 235,
+   "sources": {
+    "cricketaddictor": 235,
+    "insidesport": 235
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "wins as IPL captain",
+   "value": 136,
+   "sources": {
+    "cricketaddictor": 136,
+    "insidesport": 136
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "losses as IPL captain",
+   "value": 97,
+   "sources": {
+    "cricketaddictor": 97,
+    "insidesport": 97
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "no results / ties as IPL captain",
+   "value": 2,
+   "sources": {
+    "cricketaddictor": 2,
+    "insidesport": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "five titles level with Rohit Sharma, the most by an IPL captain",
+   "value": "joint-most",
+   "sources": {
+    "wikipedia": "joint-most",
+    "indiatv": "joint-most"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: strike rate overs 1-6",
+   "value": 80,
+   "sources": {
+    "sportmonks": 80
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: league strike rate overs 1-6",
+   "value": 128,
+   "sources": {
+    "sportmonks": 128
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: strike rate overs 7-15",
+   "value": 93,
+   "sources": {
+    "sportmonks": 93
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: league strike rate overs 7-15",
+   "value": 128,
+   "sources": {
+    "sportmonks": 128
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: strike rate overs 16-20",
+   "value": 174,
+   "sources": {
+    "sportmonks": 174
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: league strike rate overs 16-20",
+   "value": 160,
+   "sources": {
+    "sportmonks": 160
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: balls faced overs 16-20",
+   "value": 1475,
+   "sources": {
+    "sportmonks": 1475
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: most runs in overs 16-20",
+   "value": 2573,
+   "sources": {
+    "sportmonks": 2573
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: most balls faced in overs 16-20",
+   "value": "Mahendra Singh Dhoni",
+   "sources": {
+    "sportmonks": "Mahendra Singh Dhoni"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: strike rate last two overs",
+   "value": 218,
+   "sources": {
+    "sportmonks": 218
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: league strike rate last two overs",
+   "value": 174,
+   "sources": {
+    "sportmonks": 174
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: sixes in the last two overs",
+   "value": 98,
+   "sources": {
+    "sportmonks": 98
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: next best sixes in the last two overs (Hardik Pandya)",
+   "value": 59,
+   "sources": {
+    "sportmonks": 59
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: most runs in the last two overs",
+   "value": 1270,
+   "sources": {
+    "sportmonks": 1270
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: strike rate in the 20th over",
+   "value": 252,
+   "sources": {
+    "sportmonks": 252
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: league strike rate in the 20th over",
+   "value": 182,
+   "sources": {
+    "sportmonks": 182
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2013 death-over strike rate",
+   "value": 203,
+   "sources": {
+    "sportmonks": 203
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2018 death-over strike rate",
+   "value": 201,
+   "sources": {
+    "sportmonks": 201
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2023 death-over strike rate",
+   "value": 186,
+   "sources": {
+    "sportmonks": 186
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2024 death-over strike rate",
+   "value": 220,
+   "sources": {
+    "sportmonks": 220
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2025 death-over strike rate",
+   "value": 152,
+   "sources": {
+    "sportmonks": 152
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: 2025 league death-over strike rate",
+   "value": 172,
+   "sources": {
+    "sportmonks": 172
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 10,
+  "LABELLED": 22
+ }
+}

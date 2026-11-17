@@ -1,0 +1,146 @@
+{
+ "slug": "dhoni_captain_myth",
+ "claims": [
+  {
+   "claim": "matches as IPL captain",
+   "value": 235,
+   "sources": {
+    "cricketaddictor": 235,
+    "insidesport": 235
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "wins as IPL captain",
+   "value": 136,
+   "sources": {
+    "cricketaddictor": 136,
+    "insidesport": 136
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "titles",
+   "value": 5,
+   "sources": {
+    "etvbharat": 5,
+    "cricketaddictor": 5,
+    "easterneye": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "finals",
+   "value": 10,
+   "sources": {
+    "etvbharat": 10,
+    "cricketaddictor": 10
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Champions League T20 titles",
+   "value": 2,
+   "sources": {
+    "etvbharat": 2,
+    "khelnow": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "five titles level with Rohit Sharma",
+   "value": "joint-most",
+   "sources": {
+    "wikipedia": "joint-most",
+    "indiatv": "joint-most"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: decided CSK matches in the eight seasons",
+   "value": 129,
+   "sources": {
+    "sportmonks": 129
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: CSK wins in those matches",
+   "value": 80,
+   "sources": {
+    "sportmonks": 80
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: close finishes (<=10 runs or <=2 wickets)",
+   "value": 16,
+   "sources": {
+    "sportmonks": 16
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: close finishes won",
+   "value": 9,
+   "sources": {
+    "sportmonks": 9
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: every other match",
+   "value": 113,
+   "sources": {
+    "sportmonks": 113
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: every other match won",
+   "value": 71,
+   "sources": {
+    "sportmonks": 71
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Mumbai Indians win rate, same seasons",
+   "value": 59,
+   "sources": {
+    "sportmonks": 59
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 6,
+  "LABELLED": 7
+ }
+}
