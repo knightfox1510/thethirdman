@@ -1,0 +1,128 @@
+{
+ "date": "2026-11-17",
+ "by": "Daily ideas task",
+ "news": [
+  {
+   "title": "IPL 2027 retention lists due today, 17 Nov (deadline moved from 15 Nov for the 5th ODI); predicted lists only so far",
+   "url": "https://www.newsbytesapp.com/news/sports/ipl-2027-retention-deadline-moved-to-november-17/story",
+   "note": "Official lists land today or tomorrow: trigger for the scheduled 19 Nov retentions video and a releases Short. Build only from the official IPL release."
+  },
+  {
+   "title": "Hardik Pandya traded to Punjab Kings (₹18 cr), Arshdeep Singh to Mumbai Indians (₹18 cr): IPL statement, 11 Nov",
+   "url": "https://www.republicworld.com/sports/hardik-pandya-traded-to-pbks-arshdeep-singh-joins-mumbai-indians-ahead-of-ipl-2027-auction-2026-11-11-140805",
+   "note": "Already covered by our trade video; new angle is MI's death-bowling pairing (Bumrah + Arshdeep) and the captaincy gap."
+  },
+  {
+   "title": "MI captaincy: reports (31 Oct) that Rohit Sharma will be reappointed; MI source says no decision until retentions are done",
+   "url": "https://www.wionews.com/sports/rohit-sharma-reappointed-mumbai-indians-captain-ipl-2027-hardik-pandya-1793416275783",
+   "note": "Unconfirmed. If announced after retentions, the 'Every MI captain vs Rohit' Flip becomes time-sensitive; re-check before posting."
+  },
+  {
+   "title": "Pant–Kuldeep swap (DC/LSG) earlier in the window: Pant took ₹15 cr, down from ₹27 cr",
+   "url": "https://www.crictracker.com/cricket-news/csk-join-race-for-hardik-pandya-as-trade-window-heats-up-after-pant-kuldeep-swapn/",
+   "note": "Price-vs-value context for a retention/auction Lab."
+  },
+  {
+   "title": "NZ v India 1st Test, Basin Reserve, starts 19 Nov; NZ squad has Conway and Ravindra back",
+   "url": "https://www.newcastleherald.com.au/story/9389735/conway-ravindra-in-kiwis-squad-for-india-test-series/",
+   "note": "Series in two days: Tactics Board trigger. Our 'Can India Win a Test Series in NZ?' long is Ready for 18 Nov."
+  },
+  {
+   "title": "Pant injury/fitness update ahead of the NZ Tests",
+   "url": "https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-2026-rishabh-pant-injury-update",
+   "note": "Schedule check item for today: Pant cleared; keep the Test preview as is unless the XI news changes."
+  },
+  {
+   "title": "Australia v England, 3rd ODI, Hobart, 18 Nov (2:30 pm local)",
+   "url": "https://www.wisden.com/match/68574617-b295-4afb-a9c2-d225766b97a2",
+   "note": "Global-audience item only; no India angle."
+  },
+  {
+   "title": "Ranji Trophy round four (2 Nov): Salil Arora (Punjab) fourth hundred in six innings; Harsh Dubey 9-53 v Madhya Pradesh",
+   "url": "https://www.wisden.com/cricket-news/ranji-trophy-202627-round-four-day-one-srh-batter-salil-arora-slams-fourth-ton-in-four-games-harsh-dubey-takes-nine-for",
+   "note": "Domestic breakouts ahead of the auction (registration deadline 23 Nov, auction 16 Dec): Rising Star candidates."
+  }
+ ],
+ "ideas": [
+  {
+   "title": "News Short: retention day, the five biggest releases",
+   "format": "news",
+   "why": "Open on the total purse freed by releases, then the five biggest names let go. Hook is the number, not the names.",
+   "timing": "Within hours of the official lists (tonight or 18 Nov), before the 19 Nov long video",
+   "data": "Official IPL retention release; prices from franchise/IPL statements; career numbers from Sportmonks IPL 2013–2026",
+   "priority": "High"
+  },
+  {
+   "title": "Stat Check: the Released XI, the best team you could build from today's released players",
+   "format": "statcheck",
+   "why": "Pick an XI from released players only, by IPL 2025–26 impact (runs above par strike rate, death economy). Is it better than the worst retained XI?",
+   "timing": "18–19 Nov, folds into or follows the scheduled IPL 2027 retentions video",
+   "data": "Sportmonks IPL 2025–2026 ball-by-ball (exclude super overs S3/S4); official released lists",
+   "priority": "High"
+  },
+  {
+   "title": "Tactics Board: how India should bowl to Conway and Ravindra at the Basin Reserve",
+   "format": "tactics",
+   "why": "Both are back for NZ. Show their Test dismissal zones and the lengths that got them out, as illustrative field plans for Bumrah's opening spells.",
+   "timing": "18 Nov, the eve of the 1st Test (pairs with the Ready Test preview)",
+   "data": "Cricsheet Tests (Conway, Ravindra, all Tests), cross-checked with official career records; fields labelled Illustrative",
+   "priority": "High"
+  },
+  {
+   "title": "Replay Short series: the Wellington Test, one number per day",
+   "format": "replay",
+   "why": "A daily Short with the number that explains the day's play, feeding the 24 Nov Test breakdown and the daily-Short habit.",
+   "timing": "Each evening 19–23 Nov",
+   "data": "Cricinfo + Cricbuzz captures via tools/ttm-capture after each day; checked against the official scorecard",
+   "priority": "High"
+  },
+  {
+   "title": "Myth or Data?: 'At the Basin Reserve, bat first or lose'",
+   "format": "myth",
+   "why": "Test the toss-and-bat-first lore at Wellington with results by toss decision and first-innings runs by day.",
+   "timing": "Morning of 19 Nov, before the toss",
+   "data": "Cricsheet Tests at Basin Reserve (state the years covered); results verified against official records",
+   "priority": "Medium"
+  },
+  {
+   "title": "Flip: Arshdeep vs every bowler who has partnered Bumrah at the death for MI",
+   "format": "flip",
+   "why": "MI just paid ₹18 crore for Arshdeep. Flip his overs-16–20 economy and wicket rate against each of Bumrah's past death partners.",
+   "timing": "This week, while the trade and the retention news are live",
+   "data": "Sportmonks IPL 2013–2026, overs 16–20, super overs excluded",
+   "priority": "Medium"
+  },
+  {
+   "title": "The Lab: runs per crore, every retained player valued",
+   "format": "lab",
+   "why": "A value model: each retained player's IPL 2026 impact divided by retention price, with lab_dots for bargains vs overpays and Pant's ₹15 crore reset as a reference point.",
+   "timing": "Long form, 22–28 Nov, the gap between the retentions and the auction preview",
+   "data": "Sportmonks IPL 2026 ball-by-ball; official retention prices; every claim asserted in code",
+   "priority": "Medium"
+  },
+  {
+   "title": "Rising Star: Salil Arora, four Ranji hundreds in six innings",
+   "format": "rising",
+   "why": "A trading-card flip (front: illustrated batter; back: verified 2026–27 Ranji numbers) for a domestic run-machine heading into the auction.",
+   "timing": "Before the 23 Nov auction registration deadline; re-check his latest scores first",
+   "data": "BCCI domestic scorecards (Ranji 2026–27), Sportmonks IPL for any appearances",
+   "priority": "Medium"
+  },
+  {
+   "title": "Rising Star Short: Harsh Dubey's 9-53",
+   "format": "rising",
+   "why": "A nine-wicket Ranji innings is rare. Hook: '9 for 53'. Then where it sits among the best Ranji figures.",
+   "timing": "This week (quiet day during the Test build-up)",
+   "data": "BCCI scorecard; historical Ranji best figures from official records (verify before building)",
+   "priority": "Low"
+  },
+  {
+   "title": "What If?: MI had kept Hardik and still signed Arshdeep",
+   "format": "whatif",
+   "why": "Model MI's 2026 death overs with Bumrah, Boult and Arshdeep together, and estimate the runs saved. Clearly labelled a model.",
+   "timing": "Any quiet day before the 16 Dec auction",
+   "data": "Sportmonks IPL 2026 (MI death overs, Arshdeep's PBKS death overs); model assumptions stated on screen",
+   "priority": "Low"
+  }
+ ]
+}
