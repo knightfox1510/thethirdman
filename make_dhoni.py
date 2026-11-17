@@ -218,5 +218,6 @@ c_myth.save(m_spec)
 
 for sp in (t_spec, s_spec, m_spec):
     voice_lint.fix_spec(sp)
+    sp["files"].setdefault("long", "_unused")          # Short-only spec: engine.thumb() still wants a long name (files starting _unused are deleted after the build)
     json.dump(sp, open(f"specs/{sp['slug']}.json", "w"), ensure_ascii=False, indent=1)
     print("wrote specs/%s.json" % sp["slug"], voice_lint.check_spec(sp, ("long", "short")) or "voice lint clean")
