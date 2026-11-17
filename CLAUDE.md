@@ -31,6 +31,7 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 - Facts must be current: check the web for anything that can change (squads, trades, records, results).
 - Every spec carries `sources[]`. Data claims cite the Sportmonks ball-by-ball cache and how they were filtered.
 - No broadcast footage, player photos, or team/league logos. Label illustrative visuals (e.g. field plans).
+- Exception (owner, 17 Nov 2026): the owner has obtained image rights for the player photos they hand over in chat (kept in data/licensed/in, backed up with `datasync push raw`); use ONLY those, cut out with `cutout.py` onto our own backgrounds, in the `tradesplit` scene (IPL trades format). Never fetch other photos. Images that carry another outlet's watermark are used only if the owner confirms the rights.
 - Men's ODIs/Tests ball-by-ball: the owner captures Cricinfo + Cricbuzz match pages with tools/ttm-capture (Chrome extension) after the match; `python3 cricinfo_import.py data/cricinfo/<f>.json data/cricbuzz/<f>.json` builds the ball table (Cricinfo: line/length/shot/control/wagon) and checks Cricbuzz over by over. Cricbuzz notes are leads to verify, never text to copy; show only our own graphics; credit both in sources; headline numbers still checked against the official scorecard.
 - The Sportmonks plan covers IPL 2013-2026 plus T20Is/T20 World Cups. It has NO men's ODIs or Tests, so take those numbers from the web.
 

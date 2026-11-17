@@ -1,0 +1,247 @@
+{
+ "slug": "ipl_trades_2027",
+ "claims": [
+  {
+   "claim": "Pant to DC at 15 crore (down from the 27 crore LSG paid in 2025)",
+   "value": 15,
+   "sources": {
+    "ipl_official": 15,
+    "outlook": 15
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant's 2025 auction price (crore)",
+   "value": 27,
+   "sources": {
+    "ipl_official": 27,
+    "outlook": 27
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Kuldeep to LSG at 13.5 crore",
+   "value": 13.5,
+   "sources": {
+    "ipl_official": 13.5,
+    "iplretention": 13.5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Natarajan to SRH at 5 crore",
+   "value": 5,
+   "sources": {
+    "owner_graphic": 5,
+    "iplretention": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Ansari to DC at 40 lakh",
+   "value": 40,
+   "sources": {
+    "owner_graphic": 40,
+    "iplretention": 40
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Livingstone 6 crore",
+   "value": 6,
+   "sources": {
+    "owner_graphic": 6,
+    "iplretention": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Edwards 3 crore",
+   "value": 3,
+   "sources": {
+    "owner_graphic": 3,
+    "iplretention": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Khaleel 4.8 crore",
+   "value": 4.8,
+   "sources": {
+    "owner_graphic": 4.8,
+    "iplretention": 4.8
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Ellis 2 crore",
+   "value": 2,
+   "sources": {
+    "owner_graphic": 2,
+    "iplretention": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK-SRH four-player trade",
+   "value": "Livingstone, Edwards to CSK; Khaleel, Ellis to SRH",
+   "sources": {
+    "ipl_official": "Livingstone, Edwards to CSK; Khaleel, Ellis to SRH",
+    "cricinfo": "Livingstone, Edwards to CSK; Khaleel, Ellis to SRH"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Hardik to PBKS and Arshdeep to MI at 18 crore each",
+   "value": 18,
+   "sources": {
+    "owner_graphic": 18,
+    "iplretention": 18
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Hardik was Mumbai's captain",
+   "value": "yes",
+   "sources": {
+    "cricinfo": "yes",
+    "yahoo": "yes"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Harshal Patel to GT at 4 crore (half his 8 crore auction price)",
+   "value": 4,
+   "sources": {
+    "owner_graphic": 4,
+    "cricinfo": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "17 Nov deal: Shami and Siddharth to RR, Curran to LSG",
+   "value": "traded",
+   "sources": {
+    "ipl_official": "traded",
+    "oneindia": "traded"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "auction on 16 December in Goa",
+   "value": "16 Dec, Goa",
+   "sources": {
+    "cricinfo": "16 Dec, Goa",
+    "iplretention": "16 Dec, Goa",
+    "yahoo": "16 Dec, Goa"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "six deals",
+   "value": 6,
+   "sources": {
+    "ipl_official": 6,
+    "oneindia": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "fourteen players moved",
+   "value": 14,
+   "sources": {
+    "ipl_official": 14,
+    "oneindia": 14
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Pant 2026 runs (LSG)",
+   "value": 312,
+   "sources": {
+    "sportmonks": 312
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Kuldeep 2026 wickets (DC)",
+   "value": 10,
+   "sources": {
+    "sportmonks": 10
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Hardik 2026 runs (MI)",
+   "value": 206,
+   "sources": {
+    "sportmonks": 206
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Arshdeep 2026 wickets (PBKS)",
+   "value": 14,
+   "sources": {
+    "sportmonks": 14
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: Natarajan 2026 wickets (DC)",
+   "value": 5,
+   "sources": {
+    "sportmonks": 5
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 17,
+  "LABELLED": 5
+ }
+}

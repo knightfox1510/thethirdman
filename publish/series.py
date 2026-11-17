@@ -62,6 +62,7 @@ EPISODES = {
     "dhoni_ipl_story": ("data", "13", "Dhoni IPL Career, How He Finished"),
     "dhoni_captain_myth": ("myth", "04", "Did Dhoni CSK Just Win the Close Ones"),
     "dhoni_captaincy_all": ("data", "14", "Dhoni IPL Captaincy, the Complete Record"),
+    "ipl_trades_2027": ("channel", "02", "IPL 2027 Trades, Every Deal"),
     "channel_trailer": ("channel", "00", "Welcome to The Third Man"),
     "dyk_third_man": ("didyouknow", "01", "Third Man, Position and the Name Mystery"),
     "dyk_fielding_positions": ("didyouknow", "02", "Fielding Positions, Reading the Names"),

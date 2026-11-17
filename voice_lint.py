@@ -8,6 +8,8 @@ import json, os, re, sys, glob
 
 # Latin -> Devanagari (longest first when applied). Add new names here AND their parts to engine.SHOW (done automatically below).
 NAMES = {
+    "T Natarajan": "टी नटराजन", "Natarajan": "नटराजन", "Zeeshan Ansari": "ज़ीशान अंसारी", "Zeeshan": "ज़ीशान", "Ansari": "अंसारी", "Khaleel Ahmed": "ख़लील अहमद", "Khaleel": "ख़लील",
+    "Harshal Patel": "हर्षल पटेल", "Harshal": "हर्षल", "M Siddharth": "एम सिद्धार्थ", "Siddharth": "सिद्धार्थ",
     "Virat Kohli": "विराट कोहली", "Kohli": "कोहली", "Virat": "विराट", "Rohit Sharma": "रोहित शर्मा", "Rohit": "रोहित",
     "Abhishek Sharma": "अभिषेक शर्मा", "Abhishek": "अभिषेक", "Jasprit Bumrah": "जसप्रीत बुमराह", "Jasprit": "जसप्रीत", "Bumrah": "बुमराह",
     "Sachin Tendulkar": "सचिन तेंदुलकर", "Sachin": "सचिन", "Tendulkar": "तेंदुलकर", "MS Dhoni": "एम एस धोनी", "Dhoni": "धोनी",
@@ -103,7 +105,7 @@ def show_map():
     for k, v in NAMES.items():
         for lw, dw in zip(k.split(), v.split()):
             m.setdefault(dw, lw)
-    m["ख़ान"] = "Khan"; m["एम"] = "M"; m["एस"] = "S"; m["के"] = "K"; m["एल"] = "L"
+    m["ख़ान"] = "Khan"; m["एम"] = "M"; m["एस"] = "S"; m["के"] = "K"; m["एल"] = "L"; m["टी"] = "T"
     return m
 
 

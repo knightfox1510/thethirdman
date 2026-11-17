@@ -528,6 +528,93 @@ def sc_swap(c, g, t, D, s):
         c.drawLine(g.cx + 220, y1 - 10, g.cx + 220, lerp(y1 - 10, y0 + 10, pa), paint(C(R_.get("color")), 1, stroke=6))
 
 
+_TS_IMG = {}
+
+
+def _tsimg(path):
+    if path not in _TS_IMG: _TS_IMG[path] = skia.Image.open(path if os.path.isabs(path) else os.path.join(ROOT, path))
+    return _TS_IMG[path]
+
+
+def _ts_grad(c1, c2, x0, y0, x1, y1):
+    p = skia.Paint(); p.setAntiAlias(True)
+    p.setShader(skia.GradientShader.MakeLinear([(x0, y0), (x1, y1)], [skia.Color(*c1), skia.Color(*c2)])); return p
+
+
+def sc_tradesplit(c, g, t, D, s):
+    """The trade format (owner pick, 17 Nov 2026): the screen splits on a diagonal into the two teams' colours. Each player stands in his OLD team's half, then they cross over
+    (SWAP), and the incoming player's name and numbers appear in each half. spec: a / b = {team, name, color}; p1 = the player who goes a -> b, p2 = b -> a (None for a one-way deal);
+    each player = {img (transparent PNG), lines [first, last], stat [..], pair (True for a two-player image)}; label, fee, stamp, one_way_text.
+    Vertical: content stays inside y 190-1570 (Shorts/Reels buttons cover the top and the bottom ~350 px). Photos are the owner's licensed images (cut out with cutout.py)."""
+    W, H = g.W, g.H; long = g.fmt == "long"; A, B = s["a"], s["b"]; p1, p2 = s["p1"], s.get("p2")
+    ca, cb = tuple(A["color"]), tuple(B["color"]); dark = lambda col, k: tuple(int(v * k) for v in col)
+    pin = eo(prog(t, 0, D * .14)); swp = eio(prog(t, D * .46, D * .74)); stamp_in = eo(prog(t, D * .44, D * .52)); stamp_out = 1 - eo(prog(t, D * .70, D * .80))
+    txt_old = 1 - eo(prog(t, D * .44, D * .52)); txt_new = eo(prog(t, D * .70, D * .82)); NAVY_ = (9, 14, 30)
+    if long:
+        sl = 150; PA = [(0, 0), (W / 2 + sl, 0), (W / 2 - sl * .15, H), (0, H)]; BAND = [(W / 2 + sl, 0), (W / 2 + sl + 150, 0), (W / 2 - sl * .15 + 150, H), (W / 2 - sl * .15, H)]
+        PB = [(W / 2 + sl + 150, 0), (W, 0), (W, H), (W / 2 - sl * .15 + 150, H)]; CXA, CXB = 480, W - 480
+    else:
+        PA = [(0, 0), (W, 0), (W, 800), (0, 905)]; BAND = [(0, 905), (W, 800), (W, 1010), (0, 1115)]; PB = [(0, 1115), (W, 1010), (W, H), (0, H)]
+    def poly(pts, pnt, dx=0, dy=0):
+        pa = skia.Path(); pa.moveTo(pts[0][0] + dx, pts[0][1] + dy)
+        for x_, y_ in pts[1:]: pa.lineTo(x_ + dx, y_ + dy)
+        pa.close(); c.drawPath(pa, pnt)
+    c.drawRect(skia.Rect.MakeWH(W, H), paint(NAVY_))
+    offa = (-(1 - pin) * W * .6, 0) if long else (0, -(1 - pin) * H * .6); offb = (-offa[0], -offa[1])
+    poly(PA, _ts_grad(ca, dark(ca, .55), 0, 0, W / 2, H) if long else _ts_grad(ca, dark(ca, .55), 0, 0, 0, 900), *offa)
+    poly(PB, _ts_grad(dark(cb, .55), cb, W / 2, 0, W, H) if long else _ts_grad(cb, dark(cb, .55), 0, 1115, 0, H), *offb)
+    poly(BAND, paint(NAVY_, pin))
+    def box(pl, slot):                                                     # where a player stands: (image, x, y, w, h)
+        im = _tsimg(pl["img"]); ar = im.width() / im.height(); pair = pl.get("pair")
+        if long:
+            hh = 560 if not pair else 520; ww = hh * ar
+            if ww > 860: ww = 860; hh = ww / ar
+            return im, (CXA if slot == "a" else CXB) - ww / 2, H - hh, ww, hh
+        hh = 640 if not pair else 560; ww = hh * ar
+        if ww > (640 if not pair else 760): ww = 640 if not pair else 760; hh = ww / ar
+        return im, ((W - ww) - 20 if slot == "a" else 20), ((885 - hh) if slot == "a" else (1570 - hh + 190)), ww, hh
+    def draw_pl(pl, frm, to, k):
+        if not pl: return
+        im, x0, y0, w0, h0 = box(pl, frm); _, x1, y1, w1, h1 = box(pl, to)
+        x, y, w, h = lerp(x0, x1, k), lerp(y0, y1, k), lerp(w0, w1, k), lerp(h0, h1, k); sg = -1 if frm == "a" else 1
+        off = ((1 - pin) * sg * W * .5, 0) if long else (0, (1 - pin) * sg * H * .35)
+        c.drawImageRect(im, skia.Rect.MakeXYWH(x + off[0], y + off[1], w, h), skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear), skia.Paint(Alphaf=clamp(pin)))
+    draw_pl(p1, "a", "b", swp); draw_pl(p2, "b", "a", swp)
+    def words(pl, side, a, joins):
+        if not pl or a <= 0: return
+        T = A if side == "a" else B; big = 104 if not long else 112
+        if long: x = CXA if side == "a" else CXB; al = "c"; y0 = 60; maxw = 820
+        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 312 if side == "a" else 1140; maxw = 470 if pl.get("pair") else 520
+        yy = y0
+        for k, ln in enumerate(pl["lines"]):
+            z = fit(ln, maxw, big, "bebas", 3); yy += z * .9
+            text(c, ln, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=3); text(c, ln, x, yy, z, "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3)
+        tag = ("JOINS " if joins else "LEAVES ") + T["team"]; yy += 62 if not long else 66
+        text(c, tag, x, yy, 56, "bebas", GOLD, a, al, track=7, glow=8)
+        if joins and pl.get("stat"):
+            if long:
+                st = "  ·  ".join(pl["stat"][:3]); z = fit(st, maxw, 54, "bebas", 2); yy += 62; text(c, st, x, yy, z, "bebas", (255, 255, 255), a, al, track=2)
+                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 36, 22, "interB", (225, 230, 245), a * .85, al, track=4)
+            else:
+                for k, st in enumerate(pl["stat"][:3]): yy += 56 if k == 0 else 44; text(c, st, x, yy, 50 if k == 0 else 40, "bebas", (255, 255, 255), a * .95, al, track=2)
+                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 40, 22, "interB", (225, 230, 245), a * .85, al, track=4)
+    words(p1, "a", txt_old * pin, False); words(p2, "b", txt_old * pin, False); words(p2, "a", txt_new, True); words(p1, "b", txt_new, True)
+    if not p2 and txt_new > 0:                                           # one-way deal: nothing comes back to the sending side
+        T = A; text(c, s.get("one_way_text", "NOTHING BACK · A CASH DEAL"), CXA if long else 40, 260 if long else 330, 70, "bebas", (255, 255, 255), txt_new, "c" if long else "l", track=4)
+    for side, T in (("a", A), ("b", B)):                                   # team names: top corner of each half (vertical: inside the safe area)
+        if long: text(c, T["name"], 60 if side == "a" else W - 60, 52, 34, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6) if False else None
+        else: text(c, T["name"], 40 if side == "a" else W - 40, 282 if side == "a" else 1135, 30, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6)
+    if s.get("label"):
+        z = 40; lw = twidth(s["label"], z, "bebas", 4) + 50
+        lx, ly = ((W - lw) / 2, H - 100) if long else (40, 165)
+        rrect(c, lx, ly, lw, 62, 31, GOLD, pin); text(c, s["label"], lx + lw / 2, ly + 46, z, "bebas", NAVY_, pin, "c", track=4)
+    if stamp_in > 0 and stamp_out > 0:
+        z = 230 * (1.25 - .25 * stamp_in); text(c, s.get("stamp", "SWAP"), W / 2 + (30 if long else 0), H / 2 + (80 if long else 20), z, "bebas", GOLD, stamp_in * stamp_out, "c", track=8, glow=24)
+    if s.get("fee") and txt_new > 0:
+        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = (W - 60 - fw, H - 100) if long else ((W - fw) / 2, 918)
+        rrect(c, fx, fy, fw, 84, 30, GOLD, txt_new); text(c, s["fee"], fx + fw / 2, fy + 60, fz, "bebas", NAVY_, txt_new, "c", track=3)
+
+
 def sc_field(c, g, t, D, s):
     head(c, g, t, s)
     c.save()
