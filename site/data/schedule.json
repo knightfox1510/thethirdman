@@ -550,7 +550,7 @@
    "series": "10 Channel",
    "status": "Ready",
    "link": null,
-   "notes": "Tribute; post first (news is hours old). Built 2026-11-17; on Drive"
+   "notes": "Tribute; post first (news is hours old). Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
   },
   {
    "date": "2026-11-19",
@@ -559,7 +559,7 @@
    "series": "09 Data Stories",
    "status": "Ready",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive. Archive figures labelled 'in our archive'"
+   "notes": "Built 2026-11-17; on Drive. Archive figures labelled 'in our archive'; narration says MSD; data window shown on screen (IPL 2013-2026)"
   },
   {
    "date": "2026-11-19",
@@ -568,7 +568,7 @@
    "series": "09 Data Stories",
    "status": "Ready",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive"
+   "notes": "Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
   },
   {
    "date": "2026-11-19",
@@ -586,7 +586,7 @@
    "series": "01 Myth or Data",
    "status": "Ready",
    "link": null,
-   "notes": "Verdict: busted. Built 2026-11-17; on Drive"
+   "notes": "Verdict: busted. Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
   },
   {
    "date": "2026-11-21",
@@ -595,7 +595,16 @@
    "series": "01 Myth or Data",
    "status": "Ready",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive"
+   "notes": "Built 2026-11-17; on Drive; narration says MSD; data window shown on screen (IPL 2013-2026)"
+  },
+  {
+   "date": "2026-11-19",
+   "platform": "Instagram long video (vertical)",
+   "content": "Dhoni: How He Finished, in Numbers (IG full vertical, 1:57) | Data Story Ep 13",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card"
   }
  ]
 }
