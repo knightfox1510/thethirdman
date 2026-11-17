@@ -2743,6 +2743,13 @@
    "folder": "https://drive.google.com/drive/folders/1hcJX4dWny3ypiJX4fBTlNW7IIAifhwcy",
    "files": [
     {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Full_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1RPD4z_ua0zWeyfnH--qCfREkxyEnaVvR/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG.srt",
      "kind": "subtitles",
      "platform": "Instagram",
@@ -2755,13 +2762,6 @@
      "platform": "Instagram",
      "mb": 3.4,
      "url": "https://drive.google.com/file/d/1G6qSwppy0DetlhwwVybJ4PV2KyR4_Dy-/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Full_9x16_IG_caption.txt",
-     "kind": "text",
-     "platform": "Instagram",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1X_SoUBOwUAhKD-kUjiEzCGmM0fiyrDn9/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Full_9x16_IG.srt",
@@ -2841,6 +2841,27 @@
    "episode": "Ep14 - Dhoni IPL Captaincy, the Complete Record",
    "folder": "https://drive.google.com/drive/folders/1GxraW2A_axeME1qulZgWJMlbVxj5WKmX",
    "files": [
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Full_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1i6EEhMqbh1eu-1vV_BKw-2J6RLqs6VT8/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Full_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1PBGZVRwCtVlUYg0YgalZv9ay2M6VxkMG/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Full_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 184.7,
+     "url": "https://drive.google.com/file/d/1qH5wjOpsm4fmNwYGkht7oF_aLqt8W8cA/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_cover.jpg",
      "kind": "cover",
