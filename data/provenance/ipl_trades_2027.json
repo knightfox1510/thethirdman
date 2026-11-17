@@ -238,10 +238,20 @@
    "scope": "archive",
    "status": "LABELLED",
    "conflicts": []
+  },
+  {
+   "claim": "archive: Shami 2026 wickets (LSG)",
+   "value": 12,
+   "sources": {
+    "sportmonks": 12
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
   }
  ],
  "summary": {
   "OK": 17,
-  "LABELLED": 5
+  "LABELLED": 6
  }
 }

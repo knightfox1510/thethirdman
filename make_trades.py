@@ -28,10 +28,10 @@ c.check("17 Nov deal: Shami and Siddharth to RR, Curran to LSG", "traded", {IPL:
 c.check("auction on 16 December in Goa", "16 Dec, Goa", {CI: "16 Dec, Goa", TRK: "16 Dec, Goa", YH: "16 Dec, Goa"})
 c.check("six deals", 6, {IPL: 6, OI: 6}); c.check("fourteen players moved", 14, {IPL: 14, OI: 14})
 for nm, key, val in (("Pant 2026 runs (LSG)", "Rishabh Pant", F["Rishabh Pant"]["runs"]), ("Kuldeep 2026 wickets (DC)", "Kuldeep Yadav", F["Kuldeep Yadav"]["wkts"]), ("Hardik 2026 runs (MI)", "Hardik Pandya", F["Hardik Pandya"]["runs"]),
-                     ("Arshdeep 2026 wickets (PBKS)", "Arshdeep Singh", F["Arshdeep Singh"]["wkts"]), ("Natarajan 2026 wickets (DC)", "Thangarasu Natarajan", F["Thangarasu Natarajan"]["wkts"])):
+                     ("Arshdeep 2026 wickets (PBKS)", "Arshdeep Singh", F["Arshdeep Singh"]["wkts"]), ("Natarajan 2026 wickets (DC)", "Thangarasu Natarajan", F["Thangarasu Natarajan"]["wkts"]), ("Shami 2026 wickets (LSG)", "Mohammed Shami", F["Mohammed Shami"]["wkts"])):
     c.check("archive: " + nm, val, {"sportmonks": val}, scope="archive")
 assert c.summary().get("UNVERIFIED", 0) == 0 and c.summary().get("CONFLICT", 0) == 0, c.summary()
-assert (F["Rishabh Pant"]["runs"], F["Kuldeep Yadav"]["wkts"], F["Hardik Pandya"]["runs"], F["Arshdeep Singh"]["wkts"], F["Thangarasu Natarajan"]["wkts"]) == (312, 10, 206, 14, 5)
+assert (F["Rishabh Pant"]["runs"], F["Kuldeep Yadav"]["wkts"], F["Hardik Pandya"]["runs"], F["Arshdeep Singh"]["wkts"], F["Thangarasu Natarajan"]["wkts"], F["Mohammed Shami"]["wkts"]) == (312, 10, 206, 14, 5, 12)
 
 COL = {"MI": [0, 80, 190], "PBKS": [205, 35, 45], "DC": [30, 80, 190], "LSG": [0, 140, 185], "CSK": [215, 160, 0], "SRH": [235, 105, 20], "GT": [28, 45, 100], "RR": [220, 55, 145]}
 NAME = {"MI": "MUMBAI INDIANS", "PBKS": "PUNJAB KINGS", "DC": "DELHI CAPITALS", "LSG": "LUCKNOW SUPER GIANTS", "CSK": "CHENNAI SUPER KINGS", "SRH": "SUNRISERS HYDERABAD", "GT": "GUJARAT TITANS", "RR": "RAJASTHAN ROYALS"}
@@ -58,8 +58,8 @@ D4 = deal("DEAL 4 OF 6 · 11 NOV", "MI", "PBKS", P("hardik_mi", ["HARDIK", "PAND
           "The big one. हार्दिक पंड्या goes from मुंबई to पंजाब, and अर्शदीप सिंह comes the other way, for eighteen crore each. मुंबई lose their captain. पंड्या made two hundred and six runs last season, and अर्शदीप took fourteen wickets.", fee="₹18 CR EACH")
 D5 = deal("DEAL 5 OF 6 · 15 NOV", "SRH", "GT", P("harshal_gt_portrait", ["HARSHAL", "PATEL"], None), None,
           "Then, हर्षल पटेल moves from हैदराबाद to गुजरात for four crore, half of what he cost at the auction.", fee="₹4 CR", one_way="NOTHING BACK")
-D6 = deal("DEAL 6 OF 6 · 17 NOV", "LSG", "RR", P("shami_india", ["MOHAMMED SHAMI", "& M SIDDHARTH"], None), None,
-          "And today. मोहम्मद शमी and एम सिद्धार्थ go to राजस्थान, while Sam Curran goes to लखनऊ.", one_way="FOR SAM CURRAN")
+D6 = deal("DEAL 6 OF 6 · 17 NOV", "LSG", "RR", P("pair_shami_siddharth", ["MOHAMMED SHAMI", "& M SIDDHARTH"], ["SHAMI: 12 WICKETS · ECON 9.0"], True), P("curran_lsg", ["SAM", "CURRAN"], None),
+          "And today. मोहम्मद शमी and एम सिद्धार्थ go to राजस्थान, while Sam Curran goes to लखनऊ. शमी took twelve wickets for लखनऊ last season.")
 long = [
     {"vo": "The IPL twenty twenty-seven trade window has already moved fourteen players, in six deals. Here is every one of them.",
      "scene": {"type": "statement", "lines": [{"t": "6 DEALS."}, {"t": "14 PLAYERS.", "c": "gold"}], "sub": "IPL 2027 TRADE WINDOW · EVERY DEAL"}},

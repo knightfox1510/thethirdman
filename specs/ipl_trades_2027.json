@@ -307,7 +307,7 @@
    }
   },
   {
-   "vo": "And today. मोहम्मद शमी and एम सिद्धार्थ go to राजस्थान, while Sam Curran goes to लखनऊ.",
+   "vo": "And today. मोहम्मद शमी and एम सिद्धार्थ go to राजस्थान, while Sam Curran goes to लखनऊ. शमी took twelve wickets for लखनऊ last season.",
    "scene": {
     "type": "tradesplit",
     "label": "DEAL 6 OF 6 · 17 NOV",
@@ -330,16 +330,25 @@
      ]
     },
     "p1": {
-     "img": "data/licensed/cut/shami_india.png",
+     "img": "data/licensed/cut/pair_shami_siddharth.png",
      "lines": [
       "MOHAMMED SHAMI",
       "& M SIDDHARTH"
      ],
+     "stat": [
+      "SHAMI: 12 WICKETS · ECON 9.0"
+     ],
+     "pair": true
+    },
+    "p2": {
+     "img": "data/licensed/cut/curran_lsg.png",
+     "lines": [
+      "SAM",
+      "CURRAN"
+     ],
      "stat": null,
      "pair": false
-    },
-    "p2": null,
-    "one_way_text": "FOR SAM CURRAN"
+    }
    }
   },
   {
