@@ -48,14 +48,14 @@ def deal(label, a, b, p1, p2, vo, fee=None, one_way=None, sfx=True):
 
 # the deals, in date order. a = the team whose half is on top / left; p1 goes a -> b, p2 goes b -> a
 D1 = deal("DEAL 1 OF 6 · 23 JUN", "LSG", "DC", P("pant_dc", ["RISHABH", "PANT"], ["312 RUNS · SR 138"]), P("kuldeep_lsg", ["KULDEEP", "YADAV"], ["10 WICKETS · ECON 10.3"]),
-         "June, and the first blockbuster. ऋषभ पंत goes back to दिल्ली at fifteen crore, down from the record twenty-seven that लखनऊ paid. कुलदीप यादव goes the other way, at thirteen and a half. Last season, पंत made three hundred and twelve runs, and कुलदीप took ten wickets.",
+         "June, and the first blockbuster. रिषभ पंत goes back to दिल्ली at fifteen crore, down from the record twenty-seven that लखनऊ paid. कुलदीप यादव goes the other way, at thirteen and a half. Last season, पंत made three hundred and twelve runs, and कुलदीप took ten wickets.",
          fee="₹15 CR  ↔  ₹13.5 CR")
 D2 = deal("DEAL 2 OF 6 · 14 OCT", "DC", "SRH", P("ansari_dc", ["ZEESHAN", "ANSARI"], None), P("natarajan_srh", ["T NATARAJAN"], ["5 WICKETS · 2026"]),
           "October. टी नटराजन returns to हैदराबाद for five crore, and ज़ीशान अंसारी moves to दिल्ली, for forty lakh. नटराजन took five wickets for दिल्ली last season.", fee="₹40 L  ↔  ₹5 CR")
 D3 = deal("DEAL 3 OF 6 · 5 NOV", "SRH", "CSK", P("pair_livingstone_edwards", ["LIVINGSTONE", "& EDWARDS"], None, True), P("pair_khaleel_ellis", ["KHALEEL", "& ELLIS"], None, True),
           "November, and a four-player deal. Liam Livingstone and Jack Edwards go to चेन्नई, for six crore and three. ख़लील अहमद and Nathan Ellis go to हैदराबाद, for four point eight crore and two.", fee="₹9 CR  ↔  ₹6.8 CR")
 D4 = deal("DEAL 4 OF 6 · 11 NOV", "MI", "PBKS", P("hardik_mi", ["HARDIK", "PANDYA"], ["206 RUNS · SR 138"]), P("arshdeep_pbks", ["ARSHDEEP", "SINGH"], ["14 WICKETS · ECON 10.3"]),
-          "The big one. हार्दिक पंड्या goes from मुंबई to पंजाब, and अर्शदीप सिंह comes the other way, for eighteen crore each. मुंबई lose their captain. पंड्या made two hundred and six runs last season, and अर्शदीप took fourteen wickets.", fee="₹18 CR EACH")
+          "The big one. हार्दिक पंड्या goes from मुंबई to पंजाब, and अर्शदीप सिंघ comes the other way, for eighteen crore each. मुंबई lose their captain. पंड्या made two hundred and six runs last season, and अर्शदीप took fourteen wickets.", fee="₹18 CR EACH")
 D5 = deal("DEAL 5 OF 6 · 15 NOV", "SRH", "GT", P("harshal_gt_portrait", ["HARSHAL", "PATEL"], None), None,
           "Then, हर्षल पटेल moves from हैदराबाद to गुजरात for four crore, half of what he cost at the auction.", fee="₹4 CR", one_way="NOTHING BACK")
 D6 = deal("DEAL 6 OF 6 · 17 NOV", "LSG", "RR", P("pair_shami_siddharth", ["MOHAMMED SHAMI", "& M SIDDHARTH"], ["SHAMI: 12 WICKETS · ECON 9.0"], True), P("curran_lsg", ["SAM", "CURRAN"], None),
@@ -70,8 +70,8 @@ long = [
 ]
 short = [
     {"vo": "Six trades, fourteen players. Here are three big ones.", "scene": {"type": "statement", "lines": [{"t": "6 DEALS."}, {"t": "14 PLAYERS.", "c": "gold"}], "sub": "IPL 2027 TRADE WINDOW"}},
-    deal("DEAL 1 OF 3 · 11 NOV", "MI", "PBKS", D4["scene"]["p1"], D4["scene"]["p2"], "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंह goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.", fee="₹18 CR EACH"),
-    deal("DEAL 2 OF 3 · 23 JUN", "LSG", "DC", D1["scene"]["p1"], D1["scene"]["p2"], "ऋषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.", fee="₹15 CR  ↔  ₹13.5 CR"),
+    deal("DEAL 1 OF 3 · 11 NOV", "MI", "PBKS", D4["scene"]["p1"], D4["scene"]["p2"], "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंघ goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.", fee="₹18 CR EACH"),
+    deal("DEAL 2 OF 3 · 23 JUN", "LSG", "DC", D1["scene"]["p1"], D1["scene"]["p2"], "रिषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.", fee="₹15 CR  ↔  ₹13.5 CR"),
     deal("DEAL 3 OF 3 · 5 NOV", "SRH", "CSK", D3["scene"]["p1"], D3["scene"]["p2"], "Four players between चेन्नई and हैदराबाद: Livingstone, Edwards, ख़लील and Ellis.", fee="₹9 CR  ↔  ₹6.8 CR"),
     {"vo": YT_CTA["vo"], "scene": YT_CTA["scene"]},
 ]
