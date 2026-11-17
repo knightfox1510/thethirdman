@@ -29,7 +29,7 @@
   "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
   "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
   "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
-  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2026 (2008-2012 are not in our plan; MSD's figures cover the seasons he played, 2013-2025, as he missed 2026), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
  ],
  "venue": {
   "time": "night",
@@ -70,7 +70,7 @@
  },
  "long": [
   {
-   "vo": "महेंद्र सिंह धोनी. Five titles, ten finals. But some say चेन्नई just won the close ones. Is that true?",
+   "vo": "MSD. Five titles, ten finals. But some say चेन्नई just won the close ones. Is that true?",
    "scene": {
     "type": "lab_title",
     "kicker": "MYTH OR DATA? · EP. 4",
@@ -96,7 +96,7 @@
    "vo": "The myth: चेन्नई got through on nail-biters. So we looked at every decided CSK match in the eight seasons he was captain: twenty thirteen to fifteen, twenty eighteen to twenty twenty-one, and twenty twenty-three. In our archive.",
    "scene": {
     "type": "lab_big_text",
-    "kicker": "THE MYTH",
+    "kicker": "THE MYTH · OUR DATA: IPL 2013-2026",
     "lines": [
      "CSK just won",
      "[the close ones.]"
@@ -107,7 +107,7 @@
    "vo": "A close finish is ten runs or fewer, or two wickets or fewer. There were sixteen. चेन्नई won nine. Fifty-six percent, not far from a coin flip. In every other match, they won sixty-three percent.",
    "scene": {
     "type": "lab_compare",
-    "kicker": "CSK · THE EIGHT SEASONS",
+    "kicker": "CSK · EIGHT SEASONS · OUR DATA: IPL 2013-2026",
     "title": "Close games: nothing special.",
     "a": {
      "t": "CSK",
@@ -145,7 +145,7 @@
    "vo": "Across all one hundred and twenty-nine decided matches, चेन्नई won eighty. Sixty-two percent. The best of any franchise that played all eight seasons, ahead of मुंबई at fifty-nine.",
    "scene": {
     "type": "lab_dots",
-    "kicker": "WIN RATE · THE SAME EIGHT SEASONS · IN OUR ARCHIVE",
+    "kicker": "WIN RATE · THE SAME EIGHT SEASONS · OUR DATA: IPL 2013-2026",
     "title": "The best record in the league.",
     "domain": [
      30,
@@ -214,7 +214,7 @@
    }
   },
   {
-   "vo": "Is धोनी the greatest IPL captain? Tell us in the comments, and follow for more Myth or Data.",
+   "vo": "Is MSD the greatest IPL captain? Tell us in the comments, and follow for more Myth or Data.",
    "scene": {
     "type": "cta",
     "lines": [
@@ -232,7 +232,7 @@
  ],
  "short": [
   {
-   "vo": "The story goes that धोनी's चेन्नई just got lucky in close finishes. We checked every one.",
+   "vo": "The story goes that MSD's चेन्नई just got lucky in close finishes. We checked every one.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -269,7 +269,7 @@
     "type": "stage",
     "panel": {
      "kind": "versus",
-     "kicker": "CSK · IN OUR ARCHIVE",
+     "kicker": "CSK · OUR DATA: IPL 2013-2026",
      "left": {
       "v": "56%",
       "l": "Close finishes (9 of 16)",
@@ -308,7 +308,7 @@
      "value": 62,
      "count_dur": 0.7,
      "color": "gold",
-     "note": "Mumbai Indians: 59% · in our archive",
+     "note": "Mumbai Indians: 59% · our data: IPL 2013-2026",
      "at": 0.05
     },
     "avatars": [
@@ -377,7 +377,7 @@
  "yt": {
   "long": {
    "title": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
-   "description": "MS Dhoni's Chennai Super Kings won five IPL titles and played ten finals. Did CSK just win the close ones? We checked every decided match in the eight seasons he was captain (2013, 2014, 2015, 2018, 2019, 2020, 2021, 2023, in our archive): in close finishes (10 runs or fewer, or 2 wickets or fewer) CSK won 9 of 16 (56%); in every other match 71 of 113 (63%). Overall 80 of 129 decided matches, 62%, the best of any franchise across those seasons (Mumbai Indians 59%). Verdict: busted.\n\nCaptaincy: 235 IPL matches, 136 wins, 97 losses, 2 no results (CSK and Rising Pune Supergiant); five titles, level with Rohit Sharma as the most by a captain. CSK announced his retirement from the IPL as a player on 17 November 2026.\n\nMethod: Sportmonks ball-by-ball and results, IPL 2013-2025; seasons attributed to him as captain (2016-17 CSK were suspended; 2022, 2024 and 2025 had other captains for part or all of the season, so are left out); super overs excluded.\n\n#MSDhoni #CSK #IPL #MythOrData",
+   "description": "MS Dhoni's Chennai Super Kings won five IPL titles and played ten finals. Did CSK just win the close ones? We checked every decided match in the eight seasons he was captain (2013, 2014, 2015, 2018, 2019, 2020, 2021, 2023, in our archive): in close finishes (10 runs or fewer, or 2 wickets or fewer) CSK won 9 of 16 (56%); in every other match 71 of 113 (63%). Overall 80 of 129 decided matches, 62%, the best of any franchise across those seasons (Mumbai Indians 59%). Verdict: busted.\n\nCaptaincy: 235 IPL matches, 136 wins, 97 losses, 2 no results (CSK and Rising Pune Supergiant); five titles, level with Rohit Sharma as the most by a captain. CSK announced his retirement from the IPL as a player on 17 November 2026.\n\nMethod: Sportmonks ball-by-ball and results, IPL 2013-2026; seasons attributed to him as captain (2016-17 CSK were suspended; 2022, 2024 and 2025 had other captains for part or all of the season, so are left out); super overs excluded.\n\n#MSDhoni #CSK #IPL #MythOrData",
    "tags": [
     "MS Dhoni",
     "Dhoni IPL",

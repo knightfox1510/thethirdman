@@ -712,7 +712,18 @@ def tts(paras, outdir, fmt):
         h = hashlib.md5((p + VOICE + str(TEMPO[fmt])).encode()).hexdigest()
         if i < len(old) and old[i].get("hash") == h and os.path.exists(f"{outdir}/p{i}.mp3"):
             meta.append(old[i]); continue
-        hit = _vo_pool().get(h)                      # same text, voice and tempo already narrated in another video: copy it (saves ElevenLabs credits)
+        pool = _vo_pool()
+        for t_old in sorted({t for t in TEMPO.values() if t != TEMPO[fmt]}):     # same text and voice narrated for the other format (other tempo): reuse the raw audio, re-time it
+            h2 = hashlib.md5((p + VOICE + str(t_old)).encode()).hexdigest(); hit2 = pool.get(h2)
+            if hit2 and os.path.exists(f"{hit2[0]}/raw{hit2[1]}.mp3") and os.path.abspath(hit2[0]) != os.path.abspath(outdir):
+                shutil.copyfile(f"{hit2[0]}/raw{hit2[1]}.mp3", f"{outdir}/raw{i}.mp3")
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{outdir}/raw{i}.mp3", "-af", f"atempo={TEMPO[fmt]}", "-b:a", "192k", f"{outdir}/p{i}.mp3"], check=True)
+                k = t_old / TEMPO[fmt]; dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f"{outdir}/p{i}.mp3"]))
+                meta.append({"hash": h, "dur": dur, "words": [{"w": w["w"], "s": w["s"] * k, "e": w["e"] * k} for w in hit2[2]["words"]]})
+                json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice re-timed for paragraph {i} (from {hit2[0]}, tempo {t_old} -> {TEMPO[fmt]})"); break
+        else: hit2 = None
+        if hit2: continue
+        hit = pool.get(h)                      # same text, voice and tempo already narrated in another video: copy it (saves ElevenLabs credits)
         if hit and os.path.abspath(hit[0]) != os.path.abspath(outdir):
             shutil.copyfile(f"{hit[0]}/p{hit[1]}.mp3", f"{outdir}/p{i}.mp3"); meta.append(hit[2])
             json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice reused for paragraph {i} (from {hit[0]})"); continue

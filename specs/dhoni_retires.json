@@ -27,7 +27,7 @@
   "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
   "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
   "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
-  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2026 (2008-2012 are not in our plan; MSD's figures cover the seasons he played, 2013-2025, as he missed 2026), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
  ],
  "venue": {
   "time": "night",
@@ -68,7 +68,7 @@
  },
  "short": [
   {
-   "vo": "चेन्नई have announced it. महेंद्र सिंह धोनी has retired from the IPL, and will become the team's mentor.",
+   "vo": "चेन्नई have announced it. MSD has retired from the IPL, and will become the team's mentor.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -244,7 +244,7 @@
      "value": 98,
      "count_dur": 0.7,
      "color": "gold",
-     "note": "IPL 2013-2025 · in our archive",
+     "note": "OUR DATA: IPL 2013-2026 · HE PLAYED 2013-2025",
      "at": 0.05
     },
     "avatars": [
@@ -271,7 +271,7 @@
    }
   },
   {
-   "vo": "Thank you, धोनी.",
+   "vo": "Thank you, MSD.",
    "scene": {
     "type": "stage",
     "panel": {
@@ -330,7 +330,7 @@
  "yt": {
   "short": {
    "title": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
-   "description": "MS Dhoni has retired from the IPL as a player and becomes Chennai Super Kings' team mentor, CSK announced on 17 November 2026. His IPL in numbers: 278 matches, 5,439 runs, five titles as captain (2010, 2011, 2018, 2021, 2023), ten finals, two Champions League T20 titles, and 136 wins in 235 matches as captain. In our archive (2013-2025), no one hit more sixes in the last two overs of an innings than his 98.\n\nSources: Eastern Eye, Khel Now, ETV Bharat, Cricketaddictor, Cricinfo records, Sportmonks ball-by-ball (our own analysis). Illustrated avatar, not a likeness.\n\n#MSDhoni #CSK #IPL #Shorts",
+   "description": "MS Dhoni has retired from the IPL as a player and becomes Chennai Super Kings' team mentor, CSK announced on 17 November 2026. His IPL in numbers: 278 matches, 5,439 runs, five titles as captain (2010, 2011, 2018, 2021, 2023), ten finals, two Champions League T20 titles, and 136 wins in 235 matches as captain. In our data (IPL 2013-2026), no one hit more sixes in the last two overs of an innings than his 98.\n\nSources: Eastern Eye, Khel Now, ETV Bharat, Cricketaddictor, Cricinfo records, Sportmonks ball-by-ball (our own analysis). Illustrated avatar, not a likeness.\n\n#MSDhoni #CSK #IPL #Shorts",
    "tags": [
     "MS Dhoni",
     "Dhoni IPL",

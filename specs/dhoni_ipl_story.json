@@ -29,11 +29,48 @@
   "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
   "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
   "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
-  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our plan), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2026 (2008-2012 are not in our plan; MSD's figures cover the seasons he played, 2013-2025, as he missed 2026), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
  ],
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
  "long": [
   {
-   "vo": "Two hundred and seventy-eight IPL matches, and five titles. We went through every ball धोनी faced since twenty thirteen, and his story is not really about runs. It's about the last two overs.",
+   "vo": "Two hundred and seventy-eight IPL matches. Five titles. MSD has retired, so we went through every ball he faced since twenty thirteen to see what made him MSD. And the answer is not in the first fifteen overs. It's in the last two.",
    "scene": {
     "type": "statement",
     "lines": [
@@ -45,16 +82,16 @@
       "c": "gold"
      }
     ],
-    "sub": "MS DHONI · IPL CAREER"
+    "sub": "MS DHONI · IPL CAREER · OUR DATA: IPL 2013-2026 (HE PLAYED 2013-2025)"
    }
   },
   {
-   "vo": "For fifteen overs, he was slower than the league. A strike rate of eighty in the powerplay, and ninety-three in the middle overs, against one twenty-eight for everyone else. In our archive, since twenty thirteen.",
+   "vo": "For fifteen overs, he was quieter than the league. A strike rate of eighty in the powerplay, and ninety-three in the middle overs, against one twenty-eight for everyone else. Then the game came to him.",
    "scene": {
     "type": "compare",
     "head": {
      "t": "OVERS 1 TO 15",
-     "sub": "STRIKE RATE · IPL 2013-2025"
+     "sub": "STRIKE RATE · OUR DATA: IPL 2013-2026"
     },
     "a": {
      "name": "THE LEAGUE",
@@ -81,12 +118,12 @@
    }
   },
   {
-   "vo": "Then, from the sixteenth over, it flipped. One seventy-four, against one sixty for the league, across one thousand, four hundred and seventy-five balls. No one has faced more death-over balls. No one has scored more runs there: two thousand, five hundred and seventy-three.",
+   "vo": "From the sixteenth over, it flipped. One seventy-four, against one sixty for the league. One thousand, four hundred and seventy-five balls faced, more than anyone in our data. Two thousand, five hundred and seventy-three runs, more than anyone.",
    "scene": {
     "type": "stats",
     "head": {
      "t": "OVERS 16 TO 20",
-     "sub": "STRIKE RATE · IPL 2013-2025"
+     "sub": "STRIKE RATE · OUR DATA: IPL 2013-2026"
     },
     "tiles": [
      {
@@ -108,7 +145,7 @@
    }
   },
   {
-   "vo": "And the last two overs were his. One thousand, two hundred and seventy runs, more than anyone, and ninety-eight sixes. The next best has fifty-nine.",
+   "vo": "And the last two overs? Those were his. One thousand, two hundred and seventy runs. Ninety-eight sixes. The next best has fifty-nine.",
    "scene": {
     "type": "bignum",
     "head": {
@@ -117,11 +154,11 @@
     "value": 98,
     "label": "SIXES, MORE THAN ANYONE",
     "color": "gold",
-    "note": "Next best: 59 (Hardik Pandya) · in our archive"
+    "note": "Next best: 59 (Hardik Pandya) · our data: IPL 2013-2026"
    }
   },
   {
-   "vo": "In the twentieth over itself, he scored at two fifty-two. The rest of the league managed one eighty-two.",
+   "vo": "In the final over itself, he scored at two fifty-two. The rest of the league managed one eighty-two. That's not a finish. That's a signature.",
    "scene": {
     "type": "bars",
     "head": {
@@ -147,7 +184,7 @@
    }
   },
   {
-   "vo": "He kept doing it for a decade. Two hundred and three in twenty thirteen, and two hundred and one in twenty eighteen. In twenty twenty-three, the title year, one eighty-six. In twenty twenty-four, two twenty-one. In twenty twenty-five, one fifty-two, below the league's one seventy-two.",
+   "vo": "He kept doing it for a decade. Two hundred and three in twenty thirteen. Two hundred and one in twenty eighteen. In twenty twenty-three, the title year, one eighty-six. In twenty twenty-four, two twenty-one. And in twenty twenty-five, one fifty-two, below the league's one seventy-two.",
    "scene": {
     "type": "line",
     "head": {
@@ -310,7 +347,7 @@
    }
   },
   {
-   "vo": "Our verdict? धोनी was not an accumulator. A slow build, then no one has scored more in the last two overs. The finisher was the whole career.",
+   "vo": "Our verdict? MSD was never an accumulator. He built slowly, and then no one in our data scored more in the last two overs. Five titles. Two hundred and seventy-eight matches. One job: finish.",
    "scene": {
     "type": "statement",
     "kicker": "OUR VERDICT",
@@ -330,24 +367,25 @@
    }
   },
   {
-   "vo": "Is he the greatest finisher in IPL history? Tell us in the comments, and subscribe for more data stories.",
+   "vo": "Thank you, MSD. Is he the greatest finisher in IPL history? Tell us in the comments, and subscribe for more data stories.",
    "scene": {
     "type": "cta",
     "lines": [
      {
-      "t": "THE GREATEST"
+      "t": "THANK YOU,"
      },
      {
-      "t": "FINISHER?",
+      "t": "MSD.",
       "c": "gold"
      }
-    ]
+    ],
+    "pill": "THE GREATEST FINISHER? TELL US BELOW"
    }
   }
  ],
  "short": [
   {
-   "vo": "Ninety-eight sixes in the last two overs of an innings. More than anyone in our data. धोनी.",
+   "vo": "Ninety-eight sixes in the last two overs of an innings. More than anyone in our data. That is MSD.",
    "scene": {
     "type": "lab_big",
     "title": "",
@@ -356,11 +394,11 @@
     "label": "Sixes in the last two overs",
     "color": "red",
     "count_dur": 0.8,
-    "kicker": "MS Dhoni · IPL 2013-2025"
+    "kicker": "MS Dhoni · our data: IPL 2013-2026"
    }
   },
   {
-   "vo": "In overs sixteen to twenty, a strike rate of one seventy-four, against one sixty for the league.",
+   "vo": "In overs sixteen to twenty, one seventy-four, against one sixty for the league.",
    "scene": {
     "type": "lab_vs",
     "kicker": "THE NUMBERS",
@@ -385,7 +423,7 @@
    }
   },
   {
-   "vo": "In the twentieth over itself, two fifty-two.",
+   "vo": "And in the final over, two fifty-two.",
    "scene": {
     "type": "lab_big",
     "title": "",
@@ -398,11 +436,11 @@
    }
   },
   {
-   "vo": "But for fifteen overs he was slower than the league. A slow start, and then no one scored more.",
+   "vo": "Quieter than the league for fifteen overs. Then, no one scored more. Thank you, MSD.",
    "scene": {
     "type": "lab_big_text",
     "lines": [
-     "SLOW START.",
+     "QUIET START.",
      "[NO ONE]",
      "[SCORED MORE.]"
     ]
@@ -482,12 +520,339 @@
    ],
    "pill": "FULL BREAKDOWN ON YOUTUBE · LINK IN BIO"
   },
-  "caption": "MS Dhoni has retired from the IPL. 💛\n\nWe went through every ball he faced since 2013. For 15 overs he was slower than the league. From the 16th over: 174 against 160. In the last two overs: 1,270 runs and 98 sixes, more than anyone in our data.\n\nSwipe through the numbers ➡️ Full breakdown on YouTube (link in bio).\n\nData: Sportmonks ball-by-ball, IPL 2013-2025, in our archive.\n\n#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #cricket #cricketanalysis #TheThirdMan"
+  "caption": "MS Dhoni has retired from the IPL. 💛\n\nWe went through every ball he faced since 2013. For 15 overs he was slower than the league. From the 16th over: 174 against 160. In the last two overs: 1,270 runs and 98 sixes, more than anyone in our data.\n\nSwipe through the numbers ➡️ Full breakdown on YouTube (link in bio).\n\nData: Sportmonks ball-by-ball, IPL 2013-2026 (MSD played 2013-2025), in our archive.\n\n#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #cricket #cricketanalysis #TheThirdMan"
  },
+ "full": [
+  {
+   "vo": "Two hundred and seventy-eight IPL matches. Five titles. MSD has retired, so we went through every ball he faced since twenty thirteen to see what made him MSD. And the answer is not in the first fifteen overs. It's in the last two.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "MS DHONI · IPL · OUR DATA: 2013-2026",
+     "left": {
+      "v": "278",
+      "l": "Matches",
+      "c": "gold"
+     },
+     "right": {
+      "v": "5",
+      "l": "Titles",
+      "c": "gold"
+     },
+     "sep": "&",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.3
+   }
+  },
+  {
+   "vo": "For fifteen overs, he was quieter than the league. A strike rate of eighty in the powerplay, and ninety-three in the middle overs, against one twenty-eight for everyone else. Then the game came to him.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "OVERS 1-15 · STRIKE RATE · DHONI VS THE LEAGUE",
+     "rows": [
+      [
+       "Powerplay (overs 1-6)",
+       "80 vs 128"
+      ],
+      [
+       "Middle overs (7-15)",
+       "93 vs 128"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stance",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ],
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "From the sixteenth over, it flipped. One seventy-four, against one sixty for the league. One thousand, four hundred and seventy-five balls faced, more than anyone in our data. Two thousand, five hundred and seventy-three runs, more than anyone.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "OVERS 16-20 · THE FLIP",
+     "rows": [
+      [
+       "Dhoni, strike rate",
+       "174",
+       "gold"
+      ],
+      [
+       "The league, strike rate",
+       "160"
+      ],
+      [
+       "Balls faced (most in our data)",
+       "1,475"
+      ],
+      [
+       "Runs (most in our data)",
+       "2,573",
+       "gold"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "loft",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "shake",
+     "sparks"
+    ],
+    "hit": "loft",
+    "ghost": true,
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    },
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "And the last two overs? Those were his. One thousand, two hundred and seventy runs. Ninety-eight sixes. The next best has fifty-nine.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "THE LAST TWO OVERS",
+     "label": "SIXES · NEXT BEST: 59",
+     "value": 98,
+     "count_dur": 0.8,
+     "color": "gold",
+     "note": "OUR DATA: IPL 2013-2026",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "loft",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "flash",
+     "sparks",
+     "confetti"
+    ],
+    "hit": "loft",
+    "ghost": true,
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    },
+    "fx_at": 0.5,
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "In the final over itself, he scored at two fifty-two. The rest of the league managed one eighty-two. That's not a finish. That's a signature.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "THE 20TH OVER · STRIKE RATE",
+     "left": {
+      "v": "252",
+      "l": "Dhoni",
+      "c": "gold"
+     },
+     "right": {
+      "v": "182",
+      "l": "The league",
+      "c": "white"
+     },
+     "sep": "vs",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "drive",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette",
+     "speed",
+     "flash"
+    ],
+    "hit": "drive",
+    "ghost": true,
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "He kept doing it for a decade. Two hundred and three in twenty thirteen. Two hundred and one in twenty eighteen. In twenty twenty-three, the title year, one eighty-six. In twenty twenty-four, two twenty-one. And in twenty twenty-five, one fifty-two, below the league's one seventy-two.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "DEATH-OVER STRIKE RATE · DHONI VS THE LEAGUE",
+     "rows": [
+      [
+       "2013",
+       "203 vs 152",
+       "gold"
+      ],
+      [
+       "2018",
+       "201 vs 159",
+       "gold"
+      ],
+      [
+       "2023",
+       "186 vs 162",
+       "gold"
+      ],
+      [
+       "2024",
+       "220 vs 174",
+       "gold"
+      ],
+      [
+       "2025",
+       "152 vs 172"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "walk",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? MSD was never an accumulator. He built slowly, and then no one in our data scored more in the last two overs. Five titles. Two hundred and seventy-eight matches. One job: finish.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "OUR VERDICT",
+     "lines": [
+      {
+       "t": "A SLOW BUILD."
+      },
+      {
+       "t": "THEN NO ONE",
+       "c": "gold"
+      },
+      {
+       "t": "SCORED MORE.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.4
+   }
+  }
+ ],
+ "reel_cta": {
+  "vo": "Thank you, MSD. Is he the greatest finisher in IPL history? Tell us in the comments. For the full data story, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "THANK YOU,"
+    },
+    {
+     "t": "MSD.",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ },
+ "reel_caption": "MS Dhoni has retired from the IPL, and the numbers say what the highlights always did. 💛\n\nFor 15 overs he was quieter than the league. From the 16th over: 174 against 160. In the last two overs: 1,270 runs and 98 sixes, more than anyone in our data. In the final over, 252 against 182.\n\nThank you, MSD. Is he the greatest finisher in IPL history? Tell us below.\n\nFull data story on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\nData: Sportmonks ball-by-ball, IPL 2013-2026 (he played 2013-2025), in our archive.\n\n#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #cricket #cricketanalysis #TheThirdMan",
  "yt": {
   "long": {
    "title": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
-   "description": "MS Dhoni's IPL in numbers: we went through every ball he faced in the IPL since 2013. For fifteen overs he was slower than the league (strike rate 80 in the powerplay, 93 in overs 7-15, against 128). Then from the 16th over: 174 against 160, across 1,475 balls and 2,573 runs, both more than anyone in our archive. In the last two overs, 1,270 runs and 98 sixes (next best: 59). In the 20th over, a strike rate of 252 against 182 for the league. A slow build, then no one scored more.\n\nCareer: 278 IPL matches, 5,439 runs, five titles as captain (2010, 2011, 2018, 2021, 2023). CSK announced his retirement from the IPL as a player on 17 November 2026; he becomes team mentor.\n\nMethod: Sportmonks ball-by-ball, every IPL match 2013-2025 (2008-2012 are not in our data), super overs excluded; death overs = 16-20. All archive figures are 'in our archive'. Career totals: Eastern Eye, Khel Now, ETV Bharat, Cricketaddictor.\n\n#MSDhoni #CSK #IPL #DataStory",
+   "description": "MS Dhoni's IPL in numbers: we went through every ball he faced in the IPL since 2013. For fifteen overs he was slower than the league (strike rate 80 in the powerplay, 93 in overs 7-15, against 128). Then from the 16th over: 174 against 160, across 1,475 balls and 2,573 runs, both more than anyone in our archive. In the last two overs, 1,270 runs and 98 sixes (next best: 59). In the 20th over, a strike rate of 252 against 182 for the league. A slow build, then no one scored more.\n\nCareer: 278 IPL matches, 5,439 runs, five titles as captain (2010, 2011, 2018, 2021, 2023). CSK announced his retirement from the IPL as a player on 17 November 2026; he becomes team mentor.\n\nMethod: Sportmonks ball-by-ball, every IPL match 2013-2026 (2008-2012 are not in our data; MSD played 2013-2025 within it), super overs excluded; death overs = 16-20. All archive figures are 'in our archive'. Career totals: Eastern Eye, Khel Now, ETV Bharat, Cricketaddictor.\n\n#MSDhoni #CSK #IPL #DataStory",
    "tags": [
     "MS Dhoni",
     "Dhoni IPL",
@@ -504,7 +869,7 @@
   },
   "short": {
    "title": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts",
-   "description": "MS Dhoni's IPL, in numbers: 98 sixes in the last two overs of an innings (more than anyone in our data), a death-overs strike rate of 174 against 160 for the league, and 252 in the 20th over. A slow start, then no one scored more. Full breakdown on the channel.\n\nIn our archive: Sportmonks ball-by-ball, IPL 2013-2025, overs 16-20, super overs excluded.\n\n#MSDhoni #CSK #IPL #Shorts",
+   "description": "MS Dhoni's IPL, in numbers: 98 sixes in the last two overs of an innings (more than anyone in our data), a death-overs strike rate of 174 against 160 for the league, and 252 in the 20th over. A slow start, then no one scored more. Full breakdown on the channel.\n\nIn our archive: Sportmonks ball-by-ball, IPL 2013-2026 (MSD played 2013-2025), overs 16-20, super overs excluded.\n\n#MSDhoni #CSK #IPL #Shorts",
    "tags": [
     "MS Dhoni",
     "Dhoni IPL",
