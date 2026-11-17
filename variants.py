@@ -91,6 +91,8 @@ def igfull(spec_path):
     spec = json.load(open(spec_path)); slug = spec["slug"]
     v = copy.deepcopy(spec); v["slug"] = f"{slug}__igfull"
     v["short"] = spec["full"] + [spec.get("reel_cta") or IG_REEL_CTA]
+    if spec.get("full_theme"): v["theme"] = spec["full_theme"]                       # e.g. a lab-look Data Story whose vertical long is stadium-stage scenes
+    if spec.get("full_captions"): v["captions"] = spec["full_captions"]
     base = spec["files"]["long"].replace("_Long", "") + "_Full_9x16_IG"
     v["files"] = {"short": base, "long": "_unused"}; v.pop("long", None); v.pop("burn_captions", None)
     os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)

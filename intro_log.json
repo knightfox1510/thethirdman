@@ -75,7 +75,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -153,6 +154,7 @@
   "dhoni_captain_myth": "flip",
   "dhoni_retires__igshort": "kinetic",
   "dhoni_ipl_story__igshort": "fieldmap",
-  "dhoni_captain_myth__igshort": "stumps"
+  "dhoni_captain_myth__igshort": "stumps",
+  "dhoni_ipl_story__igfull": "flip"
  }
 }

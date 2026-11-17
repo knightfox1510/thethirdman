@@ -885,5 +885,7 @@
    ]
   }
  },
- "provenance_required": true
+ "provenance_required": true,
+ "full_theme": "stadium",
+ "full_captions": "v2"
 }
