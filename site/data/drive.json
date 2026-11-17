@@ -2743,6 +2743,13 @@
    "folder": "https://drive.google.com/drive/folders/1hcJX4dWny3ypiJX4fBTlNW7IIAifhwcy",
    "files": [
     {
+     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1T80I2AuQ8gKFLxtpcqdha-7s60HJprNr/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Full_9x16_IG_caption.txt",
      "kind": "text",
      "platform": "Instagram",
@@ -2776,13 +2783,6 @@
      "platform": "Instagram",
      "mb": 187.7,
      "url": "https://drive.google.com/file/d/1t6wL6PfGjkaNq_-QgHDTXSljPFhOQxk0/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG_cover.jpg",
-     "kind": "cover",
-     "platform": "Instagram",
-     "mb": 0.1,
-     "url": "https://drive.google.com/file/d/1YWiseE8wc9oXjwbgwGpe2qvK1SQmqJt2/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep13_Dhoni_IPL_Career_How_He_Finished_Short_9x16_IG_caption.txt",
@@ -2842,6 +2842,13 @@
    "folder": "https://drive.google.com/drive/folders/1GxraW2A_axeME1qulZgWJMlbVxj5WKmX",
    "files": [
     {
+     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1kthLW6Tb1E4LigarvfttxG6FwKQDlFT7/view?usp=drivesdk"
+    },
+    {
      "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Full_9x16_IG_caption.txt",
      "kind": "text",
      "platform": "Instagram",
@@ -2861,13 +2868,6 @@
      "platform": "Instagram",
      "mb": 184.7,
      "url": "https://drive.google.com/file/d/1qH5wjOpsm4fmNwYGkht7oF_aLqt8W8cA/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_cover.jpg",
-     "kind": "cover",
-     "platform": "Instagram",
-     "mb": 0.1,
-     "url": "https://drive.google.com/file/d/19Co2pbV2f5bT2zWLmqqKiSSaii--t-IO/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16_IG_caption.txt",
@@ -3052,6 +3052,84 @@
      "platform": "YouTube",
      "mb": 0.1,
      "url": "https://drive.google.com/file/d/16jebGvQGDOGZos0g7-SjLrpIdGKcxsqL/view?usp=drivesdk"
+    }
+   ]
+  },
+  "ipl_trades_2027": {
+   "state": "not posted",
+   "series": "10 Channel",
+   "episode": "Ep02 - IPL 2027 Trades, Every Deal",
+   "folder": "https://drive.google.com/drive/folders/1zL-zAdczWVHrHxvKg9exRlHLAxsOG2iy",
+   "files": [
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1bYgE4-DwN-zbd3qMWJ-VFw8TRZDvwXyw/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1pS8K_A-6DV850vhRLOHNlYxa3H-xNzyT/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1oHo6-cnaP99co4G7U4frIyNevw0LyF02/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 50.4,
+     "url": "https://drive.google.com/file/d/1r3LBK9eUIwx2ysb-QrtHeg_Nv6iEhJYO/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1c1aqvgcSzb-9LtzC-ISWkOmWSiPEdqiB/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1Hbr7lmhoSPyN35dM3JQhxkqVSn4xgYDz/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 51.9,
+     "url": "https://drive.google.com/file/d/1H-myf83D961gvW_yGtZnIWgyDoXuwX4N/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1CFQgAsSieGsLVorVmOci2k1LEGxSe8ot/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1dyDPEWWlAmLUnRnR0tmJmA3y3U8okMHK/view?usp=drivesdk"
+    },
+    {
+     "name": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 165.2,
+     "url": "https://drive.google.com/file/d/1Rwggjt_YDt1ktvtN_nwnkM1oKgDWHJS9/view?usp=drivesdk"
     }
    ]
   },
@@ -3331,7 +3409,8 @@
    "folder": "https://drive.google.com/drive/folders/1JKROR0oeLvN990uUdl3HP1qCZRraEOTZ",
    "episodes": [
     "channel_trailer",
-    "dhoni_retires"
+    "dhoni_retires",
+    "ipl_trades_2027"
    ]
   },
   "11 Did You Know": {

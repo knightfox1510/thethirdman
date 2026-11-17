@@ -641,6 +641,24 @@
    "status": "Posted",
    "link": null,
    "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube long",
+   "content": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
+   "series": "10 Channel",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive. Trade-split format with licensed player images; all six deals, 2026 numbers labelled 'our data'"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube Short + IG Reel",
+   "content": "IPL 2027 Trades: Hardik for Arshdeep, Pant Back to Delhi #Shorts",
+   "series": "10 Channel",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-17; on Drive. Three deals, numbered in the order told; spellings checked by the owner"
   }
  ]
 }

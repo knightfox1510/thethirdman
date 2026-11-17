@@ -496,6 +496,24 @@
    ]
   },
   {
+   "slug": "ipl_trades_2027",
+   "title": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
+   "format": "news",
+   "series": "Channel",
+   "ep": "02",
+   "long": "1:51",
+   "short": "0:38",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-18",
+   "recheck": null,
+   "sources": [
+    "The deals: the IPL's own press releases, https://www.iplt20.com/news (Pant and Kuldeep 23 Jun, https://www.iplt20.com/news/4379/rishabh-pant-and-kuldeep-yadav-complete-high-profile-trade-between-dc-and-lsg ; Natarajan and Ansari 14 Oct; CSK and SRH 5 Nov; Hardik and Arshdeep; Harshal Patel 15 Nov; Shami, Siddharth and Curran 17 Nov), read 17 Nov 2026; Cricinfo trade stories (CSK-SRH https://www.cricinfo.com/story/ipl-2027-csk-trade-khaleel-ahmed-and-nathan-ellis-to-srh-in-exchange-for-liam-livingstone-and-jack-edwards-1561531 ; Hardik-Arshdeep https://www.cricinfo.com/story/ipl-2027-mumbai-indians-and-punjab-kings-complete-hardik-pandya-and-arshdeep-singh-swap-1562157 ; Harshal https://www.cricinfo.com/story/sunrisers-hyderabad-set-to-trade-harshal-patel-to-gujarat-titans-1562498), read through search excerpts because the pages return 403 to us.",
+    "Fees: the IPL's statement on Pant (INR 15 crore, down from INR 27 crore at the 2025 auction) and Kuldeep (INR 13.5 crore), also reported by Outlook https://www.outlookindia.com/sports/cricket/ipl-2027-player-trade-rishabh-pant-kuldeep-yadav-swap-between-delhi-capitals-and-lucknow-super-giants ; the other fees from the IPL and outlet graphics supplied by the channel owner and the iplretention.in tracker https://iplretention.in/ . The 17 Nov deal's fees are not stated (no second source yet).",
+    "2026 numbers: Sportmonks ball-by-ball (our archive), IPL 2026, super overs excluded; wickets exclude run-outs. Figures: data/provenance/trades_2026_figures.json. Player photos: licensed images supplied by the channel owner."
+   ]
+  },
+  {
    "slug": "kohli_2000_nz",
    "title": "Kohli: 22 runs from 2,000 vs NZ",
    "format": "datastories",
