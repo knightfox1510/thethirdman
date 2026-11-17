@@ -12,12 +12,18 @@
   const TAB_LABEL = { score: "scorecard", xi: "playing XI", comm: "commentary", stats: "statistics" };
   const MAX_DEFAULT = 20, DELAY = [4000, 9000], BETWEEN = [12000, 25000], BETWEEN_DIRECT = [8000, 16000], BETWEEN_QUICK = [5000, 10000];   // direct fetch (direct.js) needs one page load per match, so the rest between matches can be shorter
   const rnd = ([a, b]) => a + Math.random() * (b - a);
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  // A hidden page (screen locked, window minimised or covered) gets its timers throttled by Chrome (down to about one tick a minute after a few minutes). While hidden, waits are timed by the
+  // extension's background worker instead, which Chrome does not throttle; the answer arrives as a message, not as a timer.
+  const bgSleep = (ms) => new Promise((r) => { let done = false; const fin = () => { if (!done) { done = true; r(); } }; setTimeout(fin, ms + 5000);
+    try { chrome.runtime.sendMessage({ ttm: "sleep", ms }, (resp) => { if (chrome.runtime.lastError || !resp) setTimeout(fin, ms); else fin(); }); } catch (e) { setTimeout(fin, ms); } });
+  const hidden = () => document.visibilityState === "hidden";
+  const sleep = (ms) => (hidden() ? bgSleep(ms) : new Promise((r) => setTimeout(r, ms)));
+  window.__ttmSleep = sleep;
   let stopFlag = false;                                                 // set by Stop / Clear: every wait below checks it, so nothing keeps running after you press Stop
-  const wait = async (ms) => { const end = Date.now() + ms; while (Date.now() < end) { if (stopFlag) return false; await sleep(Math.min(250, end - Date.now())); } return !stopFlag; };
+  const wait = async (ms) => { const end = Date.now() + ms; while (Date.now() < end) { if (stopFlag) return false; await sleep(Math.min(hidden() ? 1000 : 250, end - Date.now())); } return !stopFlag; };
   const BACKOFF = [20, 45, 90];                                         // minutes to wait after a human-check / access-denied page when auto-resume is on (3 tries, then it stops and waits for you)
-  const blank = () => ({ direct: true, quick: false, auto: false, cool: 20, keepAwake: true, backoff: null, blockTries: 0, navTries: 0, errs: 0, pausedUntil: 0, resumeUrl: null, running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
-  const OPTS = ["auto", "cool", "keepAwake", "backoff", "direct", "quick"];                // settings live in their own key so changing them mid-run is never overwritten by a running step
+  const blank = () => ({ screen: false, direct: true, quick: false, auto: false, cool: 20, keepAwake: true, backoff: null, blockTries: 0, navTries: 0, errs: 0, pausedUntil: 0, resumeUrl: null, running: false, queue: [], idx: 0, tab: 0, plan: null, max: MAX_DEFAULT, since: 0, saveLists: false, log: [], results: [], done: {}, now: "", ui: { min: false, opts: false, log: true } });
+  const OPTS = ["auto", "cool", "keepAwake", "backoff", "direct", "quick", "screen"];                // settings live in their own key so changing them mid-run is never overwritten by a running step
   const get = () => new Promise((r) => chrome.storage.local.get(["ttm_batch", "ttm_opts"], (v) => r(Object.assign(blank(), v.ttm_batch || {}, v.ttm_opts || {}))));
   const setOpts = (s) => new Promise((r) => chrome.storage.local.set({ ttm_opts: Object.fromEntries(OPTS.map((k) => [k, s[k]])) }, r));
   const set = (s) => new Promise((r) => chrome.storage.local.set({ ttm_batch: s }, r));
@@ -36,8 +42,13 @@
   const notFound = () => /page not found|404|can't find|couldn't find/i.test(document.title);
   const yearOf = (t) => { const m = (t || "").match(/\b(19\d\d|20\d\d)\b/); return m ? +m[1] : 0; };
   // ---- keep the computer awake while running (background.js uses chrome.power; it lets go by itself if this tab stops sending a heartbeat)
-  const awake = (on) => { try { chrome.runtime.sendMessage({ ttm: "awake", on }, () => void chrome.runtime.lastError); } catch (e) {} };
-  const heartbeat = () => get().then((s) => awake(!!(s.running && s.keepAwake !== false))).catch(() => {});
+  const awake = (on, screen) => { try { chrome.runtime.sendMessage({ ttm: "awake", on, screen: !!screen }, () => void chrome.runtime.lastError); } catch (e) {} };
+  const heartbeat = () => get().then((s) => awake(!!(s.running && s.keepAwake !== false), s.screen)).catch(() => {});
+  const whenVisible = async (s, what) => {                                   // clicking and scrolling need a window that is being drawn: a locked screen / minimised window is not
+    if (!hidden()) return true; await log(s, `  window is hidden (screen locked or minimised): ${what} needs it visible, waiting`);
+    for (let n = 1; hidden() && !stopFlag; n++) { await sleep(5000); if (n % 120 === 0) await log(s, `  still hidden after ${n / 12} min: unlock the screen (or see Options: keep screen on)`); }
+    return !stopFlag;
+  };
   // ---- navigation with a stall watchdog: if the page has not replaced this one after 2 minutes, try again (3 times)
   let navTimer = null;
   const nav = (url) => {
@@ -177,6 +188,7 @@
       const mt0 = T.meta();
       if (mt0 && mt0.state && mt0.state !== "POST") { await log(s, `  match is ${mt0.state === "PRE" ? "upcoming" : "not finished"}: skipped, nothing saved`); await advance(s); return goNext(s); }
       if (name === "comm") {
+        if (!(await whenVisible(s, "loading the commentary"))) return;
         let n = await T.loadAll();
         const tm = await T.eachTeam();                                                   // the team dropdown ("SL v") switches the innings on Cricinfo: do every team
         await log(s, tm.found ? `  team control: ${tm.tried.join(" | ")}` : `  team control: none found (${T.diag()})`);
@@ -256,6 +268,8 @@
           <div style="color:${C.mute};font-size:11px;margin:0 0 6px 20px">After the run limit it rests, then carries on; after a human-check page it waits 20, 45 then 90 minutes and tries again, then stops for you.</div>
           <label style="display:block;margin:0 0 6px 20px">Rest between runs <input id="tb-cool" type="number" min="5" max="240" style="width:56px;${INP}"> min</label>
           <label style="display:block;margin-bottom:2px"><input id="tb-awake" type="checkbox"> Keep this computer awake while running</label>
+          <label style="display:block;margin:0 0 2px 20px"><input id="tb-screen" type="checkbox"> also keep the screen on (stops auto-lock on many systems)</label>
+          <div style="color:${C.mute};font-size:11px;margin:0 0 4px 20px">A LOCKED screen hides the window: Chrome stops drawing it and slows its timers, so the commentary cannot load until you unlock. Turn off auto-lock in your system settings (see README).</div>
           <div style="color:${C.mute};font-size:11px;margin:0 0 4px 20px">Keep the laptop plugged in and the lid open, and leave this tab in its own window.</div>
         </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap">${B("tb-page", "Save this page", C.card, "border:1px solid " + C.line)}${B("tb-known", "Import known ids", C.card, "border:1px solid " + C.line)}${B("tb-low", "Redo low captures", C.card, "border:1px solid " + C.line)}${B("tb-reset", "Forget done", C.card, "border:1px solid " + C.red + ";color:#fca5a5")}</div></div>
@@ -281,9 +295,9 @@
   };
   const start = async () => {
     document.body.appendChild(box); let s = await get();
-    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-direct").checked = s.direct !== false; $("tb-quick").checked = !!s.quick; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; render(s);
-    const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; t.direct = $("tb-direct").checked; t.quick = $("tb-quick").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
-    $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = $("tb-direct").onchange = $("tb-quick").onchange = saveOpts;
+    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-direct").checked = s.direct !== false; $("tb-quick").checked = !!s.quick; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; $("tb-screen").checked = !!s.screen; render(s);
+    const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; t.screen = $("tb-screen").checked; t.direct = $("tb-direct").checked; t.quick = $("tb-quick").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
+    $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = $("tb-screen").onchange = $("tb-direct").onchange = $("tb-quick").onchange = saveOpts;
     setInterval(heartbeat, 45000); heartbeat();
     $("tb-q").oninput = () => render(s);
     const ui = async (k) => { s = await get(); s.ui[k] = !s.ui[k]; await set(s); render(s); };
@@ -292,7 +306,7 @@
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
       const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
-      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, directOff: false, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
+      Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, directOff: false, screen: $("tb-screen").checked, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
       await setOpts(s);
       if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }
       await log(s, `${same ? "RESUME" : "START"}: ${q.length - s.idx} to capture, up to ${s.max} this run${s.auto ? ", auto-resume ON" : ""}`); heartbeat(); step();

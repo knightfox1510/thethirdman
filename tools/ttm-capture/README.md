@@ -111,3 +111,12 @@ Updating a run that is in progress: Stop, reload the extension at chrome://exten
 ### v1.8.1
 - The commentary API answered **403** to the direct requests in a live run. That is the server refusing this way of asking, so the module does not retry it or try other routes: direct fetch switches itself OFF for the rest of the run (Start/Resume tries it once more) and the match is finished the old way. Only HTTP **429** (slow down) triggers the backoff/rest.
 - Tabs that were fetched as HTML (playing XI, statistics, summary) are still not opened again, so the old way needs fewer page loads even when the commentary API says no. Untick "Direct fetch" in Options to go back to exactly the 1.6.5 behaviour.
+
+### v1.8.2: running while the screen is locked
+Why a locked laptop stops it: when the session is locked (Win+L, Cmd+Ctrl+Q, or an automatic lock) Chrome treats its windows as hidden. A hidden page is not drawn, so the commentary's scroll-to-load never fires, and Chrome slows the page's timers to about one tick a minute after a few minutes. Keep-awake only stops the computer from SLEEPING; it cannot stop a lock.
+What 1.8.2 does about it: waits are timed by the extension's background worker while the page is hidden (not throttled); the capture waits patiently ("window is hidden ... waiting") instead of timing out on the commentary and picks up when you unlock; Options → "also keep the screen on" holds the display awake, which stops the automatic lock on many systems; pages that need no scrolling (scorecard, playing XI, statistics, and direct fetch when the site allows it) keep working while hidden.
+What it cannot do: load the commentary by scrolling in a window that is locked or minimised. For unattended runs, stop the lock itself:
+- Windows: Settings → Accounts → Sign-in options → "If you've been away, when should Windows require you to sign in again?" = Never; Settings → Personalization → Lock screen → Screen saver: "On resume, display logon screen" unticked; Power: screen/sleep timers long, "closing the lid" = Do nothing. (Win+L locks on demand: do not press it.)
+- macOS: System Settings → Lock Screen → "Require password after screen saver begins or display is turned off" = Never (or the longest); Battery/Power → prevent automatic sleeping; keep the lid open; `caffeinate -dimsu` in a terminal is a good extra.
+- Leave the capture tab in its own Chrome window that is not minimised (covered by other windows is fine on most systems; minimised is not).
+A display that is simply turned off (not locked) is fine on most systems.
