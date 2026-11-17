@@ -234,7 +234,7 @@
    "content": "What If Dhoni Never Became Captain",
    "status": "Posted",
    "link": "https://youtu.be/8KIKP2KPV84",
-   "notes": "Posted on YouTube 17 Nov (What If Ep 3)",
+   "notes": "(What If Ep 3); Public on YouTube",
    "series": "06 What If"
   },
   {
@@ -550,7 +550,7 @@
    "series": "10 Channel",
    "status": "Posted",
    "link": "https://youtu.be/Yvtkgm3NUac",
-   "notes": "Tribute; Posted on YouTube 17 Nov; Instagram by hand"
+   "notes": "Tribute; Public on YouTube; posted on Instagram"
   },
   {
    "date": "2026-11-19",
@@ -559,7 +559,7 @@
    "series": "09 Data Stories",
    "status": "Posted",
    "link": "https://youtu.be/WiTCSH9vsfM",
-   "notes": "Built 2026-11-17; Posted on YouTube 17 Nov"
+   "notes": "Built 2026-11-17; Public on YouTube"
   },
   {
    "date": "2026-11-19",
@@ -568,16 +568,16 @@
    "series": "09 Data Stories",
    "status": "Posted",
    "link": "https://youtu.be/bLYAfDuK3no",
-   "notes": "Built 2026-11-17; Posted on YouTube 17 Nov; Instagram by hand"
+   "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
   },
   {
    "date": "2026-11-19",
    "platform": "Instagram carousel",
    "content": "Dhoni: The Finisher in Numbers (8 slides)",
    "series": "09 Data Stories",
-   "status": "Ready",
+   "status": "Posted",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive (carousel + caption)"
+   "notes": "Built 2026-11-17; on Drive (carousel + caption); Posted on Instagram"
   },
   {
    "date": "2026-11-21",
@@ -586,7 +586,7 @@
    "series": "01 Myth or Data",
    "status": "Posted",
    "link": "https://youtu.be/17GxKfWvk4Y",
-   "notes": "Verdict: busted. Built 2026-11-17; Posted on YouTube 17 Nov"
+   "notes": "Verdict: busted. Built 2026-11-17; Public on YouTube"
   },
   {
    "date": "2026-11-21",
@@ -595,16 +595,16 @@
    "series": "01 Myth or Data",
    "status": "Posted",
    "link": "https://youtu.be/f8MnibrcFZ0",
-   "notes": "Built 2026-11-17; Posted on YouTube 17 Nov; Instagram by hand"
+   "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
   },
   {
    "date": "2026-11-19",
    "platform": "Instagram long video (vertical)",
    "content": "Dhoni: How He Finished, in Numbers (IG full vertical, 1:57) | Data Story Ep 13",
    "series": "09 Data Stories",
-   "status": "Ready",
+   "status": "Posted",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card"
+   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
   },
   {
    "date": "2026-11-17",
@@ -613,34 +613,34 @@
    "series": "06 What If",
    "status": "Posted",
    "link": "https://youtu.be/rZhGj13fGx4",
-   "notes": "Posted on YouTube 17 Nov; Instagram by hand"
+   "notes": "Public on YouTube; posted on Instagram"
   },
   {
    "date": "2026-11-18",
    "platform": "YouTube long",
    "content": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
    "series": "09 Data Stories",
-   "status": "Uploaded (private)",
+   "status": "Posted",
    "link": "https://youtu.be/50i41yfp44U",
-   "notes": "Uploaded private 17 Nov; set Public in Studio"
+   "notes": "Public on YouTube"
   },
   {
    "date": "2026-11-18",
    "platform": "YouTube Short + IG Reel",
    "content": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts",
    "series": "09 Data Stories",
-   "status": "Uploaded (private)",
+   "status": "Posted",
    "link": "https://youtu.be/QFN0QE4CJGw",
-   "notes": "Uploaded private 17 Nov; set Public in Studio; Instagram by hand"
+   "notes": "Public on YouTube; posted on Instagram"
   },
   {
    "date": "2026-11-18",
    "platform": "Instagram long video (vertical)",
    "content": "Dhoni IPL Captaincy: The Complete Record (IG full vertical, 1:52) | Data Story Ep 14",
    "series": "09 Data Stories",
-   "status": "Ready",
+   "status": "Posted",
    "link": null,
-   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; post by hand"
+   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
   }
  ]
 }
