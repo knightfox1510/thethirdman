@@ -2,7 +2,7 @@
 Bowling type is not in Cricsheet: spinners are tagged by name below (everyone else counts as pace)."""
 import json, glob, os, collections
 
-D = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "cricsheet", "test")
+D = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "cricsheet", "tests")
 NZ_CITIES = {"Wellington", "Christchurch", "Hamilton", "Auckland", "Napier", "Dunedin", "Mount Maunganui", "Nelson"}
 IND_CITIES = {"Mumbai", "Chennai", "Kolkata", "Delhi", "Bangalore", "Bengaluru", "Ahmedabad", "Nagpur", "Mohali", "Chandigarh",
               "Kanpur", "Hyderabad", "Rajkot", "Visakhapatnam", "Pune", "Ranchi", "Indore", "Dharamsala", "Lucknow", "Guwahati", "Cuttack"}
@@ -86,3 +86,38 @@ if __name__ == "__main__":
         if "India" in d["info"]["teams"]: played |= set(d["info"]["players"]["India"])
     print("  ", sorted(p for p in squad if p in played), f"({sum(p in played for p in squad)} of {len(squad)})")
     print("  all India players in NZ Tests:", sorted(played))
+
+
+def figures():
+    """Numbers for the preview that need ball-by-ball detail (Cricsheet men's Tests, archive): Bumrah in New Zealand vs career, Bumrah v Latham, Jamieson v India."""
+    out = {}
+    def bowler_line(pred, who):
+        runs = balls = wk = 0
+        for d in (json.load(open(f)) for f in sorted(glob.glob(f"{D}/*.json"))):
+            if not pred(d): continue
+            for inn in d.get("innings", []):
+                for ov in inn.get("overs", []):
+                    for dl in ov["deliveries"]:
+                        if dl["bowler"] != who: continue
+                        ex = dl.get("extras", {}); runs += dl["runs"]["batter"] + ex.get("wides", 0) + ex.get("noballs", 0)
+                        if "wides" not in ex and "noballs" not in ex: balls += 1
+                        wk += sum(w["kind"] not in ("run out", "retired hurt", "retired out", "obstructing the field") for w in dl.get("wickets", []))
+        return runs, balls, wk
+    r, b, w = bowler_line(lambda d: d["info"].get("city") in NZ_CITIES and "India" in d["info"]["teams"], "JJ Bumrah"); out["bumrah_nz"] = {"runs": r, "balls": b, "wkts": w, "avg": round(r / w, 1)}
+    r, b, w = bowler_line(lambda d: True, "JJ Bumrah"); out["bumrah_career"] = {"runs": r, "balls": b, "wkts": w, "avg": round(r / w, 1)}
+    lr = lb = lo = 0
+    for f in sorted(glob.glob(f"{D}/*.json")):
+        d = json.load(open(f))
+        for inn in d.get("innings", []):
+            for ov in inn.get("overs", []):
+                for dl in ov["deliveries"]:
+                    if dl["bowler"] == "JJ Bumrah" and dl["batter"] == "TWM Latham":
+                        lr += dl["runs"]["batter"]; lb += "wides" not in dl.get("extras", {})
+                        lo += sum(x["player_out"] == "TWM Latham" and x["kind"] not in ("run out",) for x in dl.get("wickets", []))
+    out["bumrah_latham"] = {"runs": lr, "balls": lb, "outs": lo}
+    return out
+
+
+if __name__ == "__main__" and "--figures" in __import__("sys").argv:
+    f = figures(); print(f)
+    json.dump(f, open(os.path.join(os.path.dirname(D), "..", "provenance", "nz_test_preview_figures.json"), "w"), indent=1)
