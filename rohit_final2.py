@@ -7,6 +7,12 @@ import trades_mockups as T
 import rohit_storyboard2 as B
 from rohit_storyboard2 import deva, pill, strip, score, S, MI, M, THRONE, YRS, MIB, DCY, RED, GOLD, WHITE, MUTED, W, H, O, BEB, INT
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
+
+
+def strip(*a, **k):                                   # owner (18 Nov 2026): no "OUR DATA" line on any frame: this video uses every IPL season, and sources stay off screen
+    return None
+
+
 IN = "data/licensed/in/"; CUT = "data/licensed/cut/"; NAVY = (9, 14, 30)
 IMG = lambda n: Image.open(IN + n + ".png").convert("RGB")
 TILE = {2009: "deccan_left_confetti", 2013: "title_tile_TL", 2015: "title_tile_TR", 2017: "title_tile_ML", 2019: "title_tile_MR", 2020: "rohit_2020_trophy"}     # 2013-2019 order from the ribbon sponsors: OWNER TO CONFIRM
@@ -80,7 +86,7 @@ def f4():                                                           # from Decca
     c = bgc((20, 18, 6), (4, 10, 30)); pill(c, "HOW IT STARTED", (60, 200)); T.txt(c, "DECCAN CHARGERS · 2008 TO 2010", (W / 2, 330), BEB(60), DCY, "mm", 6)
     put(c, IMG("deccan_left_confetti"), (40, 390, 520, 900), 20, DCY, 5, 0.5, 0.3); put(c, IMG("deccan_right_trophy"), (560, 390, 1040, 900), 20, DCY, 5, 0.3, 0.3); T.txt(c, "2009: A TITLE WITH DECCAN", (W / 2, 975), BEB(50), WHITE, "mm", 5)
     ImageDraw.Draw(c).polygon([(500, 1040), (580, 1040), (540, 1100)], fill=GOLD); banner(c, "2011 · MI WIN THE BID", 1130, 70); T.txt(c, "$2 MILLION · AGAINST PUNJAB AND DECCAN", (W / 2, 1310), BEB(56), WHITE, "mm", 5)
-    T.txt(c, "FROM THEN ON, HE NEVER LEFT", (W / 2, 1420), BEB(70), GOLD, "mm", 8); T.txt(c, "2011 AUCTION: WIKIPEDIA, MUMBAI INDIANS · OUR DATA: DECCAN 2008-10, MI 2011-26", (W / 2, 1560), INT(20), MUTED, "mm", 2); return _save(c, "G4_deccan_to_mumbai.png")
+    T.txt(c, "FROM THEN ON, HE NEVER LEFT", (W / 2, 1420), BEB(70), GOLD, "mm", 8); return _save(c, "G4_deccan_to_mumbai.png")
 
 
 def f5(p=1.0):                                                           # ribbon: 2013, with Ricky Ponting
