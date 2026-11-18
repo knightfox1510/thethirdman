@@ -1,4 +1,4 @@
-"""Scenes for the IPL 2027 'What every IPL team needs' Data Story (lab look, official mono team icons from data/licensed/logos):
+"""Scenes for the IPL 2027 'What every IPL team needs' Data Story (lab look, official colour round team badges (scores.iplt20.com/ipl/teamlogos, data/licensed/logos/color)):
 needs_hook, needs_purse, needs_map, needs_team, needs_pool, needs_bids. Installed by looks.install."""
 import os, math
 import skia
@@ -11,7 +11,7 @@ AMB = (226, 150, 24); GRN = (40, 150, 90)
 
 def _logo(code):
     if code not in _IMG:
-        _IMG[code] = skia.Image.open(f"{ROOT}/data/licensed/logos/{code}_{'light' if code == 'RR' else 'dark'}.png")
+        _IMG[code] = skia.Image.open(f"{ROOT}/data/licensed/logos/color/{code}.png")
     return _IMG[code]
 
 
