@@ -765,7 +765,7 @@
    }
   },
   {
-   "vo": "We measured every squad from two seasons of ball-by-ball data. A hundred percent is an average squad. Below seventy is a hole, and it shows in red. Pace is the league's biggest gap, with the new ball and at the death. Spin is thin at मुंबई and हैदराबाद. And कोलकाता are thin almost everywhere.",
+   "vo": "A hundred percent is an average squad, from two seasons of ball-by-ball data. Red is a hole. Pace is the biggest gap, and कोलकाता are thin almost everywhere.",
    "scene": {
     "type": "needs_map",
     "kicker": "CAPACITY VS AN AVERAGE SQUAD (1.00) · OUR MODEL, IPL 2025-26",
@@ -895,7 +895,7 @@
    }
   },
   {
-   "vo": "कोलकाता first. Batting at forty-six percent in the powerplay, sixty-one in the middle overs, sixty-five at the death. Only one wicketkeeper, and pace at sixty percent. forty-one point six five crore to fix it, and three overseas slots.",
+   "vo": "कोलकाता first. Batting at forty-six percent in the powerplay, sixty-one in the middle overs, sixty-five at the death. Only one keeper. forty-one point six five crore to fix it.",
    "scene": {
     "type": "needs_team",
     "code": "KKR",
@@ -935,7 +935,7 @@
    }
   },
   {
-   "vo": "चेन्नई. Pace is the hole: forty-eight percent with the new ball, forty-nine at the death. Death batting is thin too, at sixty-seven. twenty-eight point zero five crore for six slots.",
+   "vo": "चेन्नई. Pace is the hole: forty-eight percent with the new ball, forty-nine at the death. twenty-eight point zero five crore for six slots.",
    "scene": {
     "type": "needs_team",
     "code": "CSK",
@@ -1055,7 +1055,7 @@
    }
   },
   {
-   "vo": "हैदराबाद. Spin is at forty-five percent, and the powerplay batting, which drives their whole approach, is at sixty. Forty crore says they can fix both.",
+   "vo": "हैदराबाद. Spin is at forty-five percent, and the powerplay batting, which drives their whole approach, is at sixty. ",
    "scene": {
     "type": "needs_team",
     "code": "SRH",
@@ -1175,7 +1175,7 @@
    }
   },
   {
-   "vo": "राजस्थान and बेंगलुरु are balanced. गुजरात are the deepest squad of all, with three slots and under nine crore. They will be watching, not shopping.",
+   "vo": "राजस्थान, बेंगलुरु and गुजरात are balanced. They will be watching, not shopping.",
    "scene": {
     "type": "needs_map",
     "kicker": "THE BALANCED THREE · OUR MODEL",
@@ -1221,7 +1221,7 @@
    }
   },
   {
-   "vo": "Now, who is out there? Only the players the teams released, until the official list lands around the third of December. Pace is rich: Trent Boult, मथीशा पथिराना, दीपक चाहर. Spin is thin: वानिन्दु हसरंगा, then very little. पथुम निसंका is the opener. Finishers are the scarcest of all.",
+   "vo": "Who is out there? Pace is rich: Trent Boult, मथीशा पथिराना, दीपक चाहर. Spin is thin: वानिन्दु हसरंगा, then very little. पथुम निसंका is the opener. Finishers are scarce.",
    "scene": {
     "type": "needs_pool",
     "kicker": "THE POOL · RELEASED PLAYERS ONLY",
@@ -1251,7 +1251,7 @@
    }
   },
   {
-   "vo": "So who could draw the biggest bids? Our model says Boult, पथिराना, हसरंगा, चाहर and निसंका, because the most teams need what they offer. That is an opinion, not a price prediction.",
+   "vo": "The biggest bids? Our model says Boult, पथिराना, हसरंगा, चाहर and निसंका. An opinion, not a price.",
    "scene": {
     "type": "needs_bids",
     "kicker": "WHO COULD GO BIG · OUR MODEL, NOT A PRICE PREDICTION",
