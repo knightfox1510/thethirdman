@@ -129,6 +129,7 @@ DL = ("IPL 2027 auction preview: what every IPL team needs. Ten squads, ₹298 c
       "Purses and slots as of 17 November 2026, not yet official. The registered list is due around 3 December; Starc and Head are reported unavailable. Capacity: 100% is an average squad. Our model, in our archive (Sportmonks IPL 2025-26).\n\n#IPL2027 #IPLAuction #IPL")
 DS = ("What every IPL team needs before the 2027 auction: Kolkata thin everywhere, Chennai, Delhi and Lucknow need pace, Hyderabad and Mumbai need spin. Our model, IPL 2025-26 data. Full breakdown on the channel.\n\n#IPL2027 #IPLAuction #Shorts")
 spec = {"slug": "ipl_needs_2027", "theme": "lab", "theme_long": "lab", "captions": "lab", "captions_long": False, "series": "data", "tag": "DATA STORY", "tagsub": "WHAT EVERY IPL TEAM NEEDS",
+        "short_gap": {".": .95, "?": 1.0, "!": .95, "default": .6}, "short_lead": .35, "short_duck": {"ratio": 3, "attack": 80, "release": 1500},
         "files": {"long": "x", "short": "x"}, "thumb": {"kicker": "IPL 2027 AUCTION · EVERY TEAM", "lines": [{"t": "WHAT EVERY"}, {"t": "IPL TEAM NEEDS", "c": "gold"}], "hero": "298", "herosize": 520},
         "ig_cover": {"lines": [{"t": "WHAT EVERY"}, {"t": "IPL TEAM NEEDS", "c": "gold"}], "sub": "IPL 2027 AUCTION", "hero": "298"}, "sources": SRC, "long": long, "short": short,
         "yt": {"long": {"title": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15", "description": DL, "tags": TAGS},

@@ -7,6 +7,18 @@
  "series": "data",
  "tag": "DATA STORY",
  "tagsub": "WHAT EVERY IPL TEAM NEEDS",
+ "short_gap": {
+  ".": 0.95,
+  "?": 1.0,
+  "!": 0.95,
+  "default": 0.6
+ },
+ "short_lead": 0.35,
+ "short_duck": {
+  "ratio": 3,
+  "attack": 80,
+  "release": 1500
+ },
  "files": {
   "long": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long",
   "short": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16"

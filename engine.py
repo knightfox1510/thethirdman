@@ -923,11 +923,11 @@ SCENE_GAP = {"long": {".": .55, "!": .55, "?": .75, "default": .3}, "short": {".
 def plan(spec, fmt, base):
     meta = json.load(open(f"{base}/vo/meta.json"))
     n = len(meta)
-    lead = [(.5 if fmt == "long" else .12)] + [(.12 if fmt == "long" else .08)] * (n - 1)
+    lead = [(.5 if fmt == "long" else .12)] + [spec.get(fmt + "_lead", (.12 if fmt == "long" else .08))] * (n - 1)       # spec "<fmt>_lead": the new scene shows this long before its voice starts
     tail = []
     for i in range(n - 1):
         last = meta[i]["words"][-1]["w"].rstrip("\"'”’")[-1:]
-        want = SCENE_GAP[fmt].get(last, SCENE_GAP[fmt]["default"])
+        want = {**SCENE_GAP[fmt], **spec.get(fmt + "_gap", {})}.get(last) or {**SCENE_GAP[fmt], **spec.get(fmt + "_gap", {})}["default"]       # spec "<fmt>_gap": {".": s, "default": s} overrides the scene gaps
         edges = (meta[i]["dur"] - meta[i]["words"][-1]["e"]) + meta[i + 1]["words"][0]["s"]
         tail.append(max(.03, want - edges - lead[i + 1]))
     tail.append(2.4 if fmt == "long" else 1.8)
@@ -1071,7 +1071,8 @@ def mix(spec, fmt, base, total, lead, starts, n):
     flt.append("[vo]asplit=2[vo1][vosc]")
     trim = "atrim=start=9,asetpts=PTS-STARTPTS," if fmt == "short" else ""
     flt.append(f"[{n}:a]{trim}volume=0.13[mus]")
-    flt.append("[mus][vosc]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=550[duck]")
+    dk = spec.get(fmt + "_duck", {})                  # spec "<fmt>_duck": {"ratio","attack","release"}: gentler ducking stops the music pumping between scenes
+    flt.append(f"[mus][vosc]sidechaincompress=threshold=0.03:ratio={dk.get('ratio', 6)}:attack={dk.get('attack', 40)}:release={dk.get('release', 550)}[duck]")
     extra, mixin = [], ["[vo1]", "[duck]"]
     if sfx:
         ms = int(starts[1] * 1000)
