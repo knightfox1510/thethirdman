@@ -668,6 +668,33 @@
    "status": "Hold",
    "link": null,
    "notes": "Prepared 2026-11-17, silent (no audio, no music) 99 s vertical; post ONLY if MI announce Rohit as captain, else discard. Add ElevenLabs VO + music then. On Drive"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube long",
+   "content": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-18; on Drive"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "YouTube Short",
+   "content": "What Every IPL Team Needs | IPL 2027 Auction Data Story Ep 15 #Shorts",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-18; on Drive"
+  },
+  {
+   "date": "2026-11-18",
+   "platform": "Instagram Reel",
+   "content": "What Every IPL Team Needs (IG, 2 min 19 s)",
+   "series": "09 Data Stories",
+   "status": "Ready",
+   "link": null,
+   "notes": "Built 2026-11-18; on Drive"
   }
  ]
 }

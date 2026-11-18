@@ -496,6 +496,25 @@
    ]
   },
   {
+   "slug": "ipl_needs_2027",
+   "title": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15",
+   "format": "datastories",
+   "series": "Data Stories",
+   "ep": "15",
+   "long": "4:49",
+   "short": "2:21",
+   "status": "To build",
+   "link": null,
+   "planned": "2026-12-12",
+   "recheck": null,
+   "sources": [
+    "Squads, purses and slots after retentions and trades, 17-18 Nov 2026: Yahoo Sports/Willow retained and released lists; purses agree across Sportskeeda, M9 and cricketnews.com (https://www.cricketnews.com/en/cricket/news/ipl-2027-mini-auction-remaining-purse-budget/c9b5bc94e78e3e790531ef50). Purses move with the trade window and are not yet official.",
+    "Capacity index per role (batting in the powerplay, middle overs and death; pace in the powerplay and at the death; spin in the middle overs): our own model on the Sportmonks ball-by-ball cache, IPL 2025 and 2026, super overs excluded (analysis/ipl2027_needs.py). 'Our model, in our archive'.",
+    "Pool names and numbers: released players per franchise; Sportmonks 2025-26 (docs/IPL2027_POOL_LEADS.md). Starc and Head reported unavailable by Cricinfo (live blog); the official registered list is due around 3 December 2026.",
+    "Team icons: official iplt20.com team assets, used to identify each franchise."
+   ]
+  },
+  {
    "slug": "ipl_trades_2027",
    "title": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
    "format": "news",
