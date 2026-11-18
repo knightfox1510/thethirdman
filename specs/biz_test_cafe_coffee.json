@@ -1,0 +1,158 @@
+{
+ "slug": "biz_test_cafe_coffee",
+ "theme": "lab",
+ "captions": "lab",
+ "series": "lab",
+ "tag": "PAISA KAHAN GAYA",
+ "tagsub": "TEST · CAFE COFFEE",
+ "files": {
+  "long": "_unused",
+  "short": "Test_Cafe_Coffee_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "TEST",
+  "lines": [
+   {
+    "t": "₹300 KI COFFEE"
+   },
+   {
+    "t": "OWNER KO ₹42",
+    "c": "gold"
+   }
+  ],
+  "hero": "₹42",
+  "herosize": 420
+ },
+ "sources": [
+  "Typical Indian cafe cost split (raw materials 30-35, staff 22-25, rent 15-20, utilities and misc 8-10, marketing 3-5, net 10-15 per Rs 100 of sales): Petpooja, cafe business model revenue profit explained, https://blog.petpooja.com/growth-scaling/cafe-business-model-revenue-profit-explained/",
+  "Benchmarks (food and beverage cost under 35%, labour under 30%, occupancy under 20%): Restaurant India via Prockured, https://blog.prockured.com/?p=228",
+  "Net margin ranges differ by source (10-15% Petpooja model; 20-35% claimed for well-run cafes by Prockured): shown as one illustrative model, not any brand",
+  "STATUS: TEST RENDER. All rupee figures are an illustrative split of a Rs 300 coffee using the midpoints of one vendor model. Verify with a second Tier A source before publishing."
+ ],
+ "short": [
+  {
+   "vo": "तीन सौ रुपये की coffee। लगता है café वाला लूट रहा है, है ना? लेकिन owner के हाथ में बचते हैं, बस बयालीस रुपये।",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "ILLUSTRATIVE · TYPICAL CAFÉ",
+    "vert": true,
+    "lines": [
+     "₹300 ki coffee.",
+     "Owner ko bachte hain",
+     "[sirf ₹42.]"
+    ]
+   }
+  },
+  {
+   "vo": "पहले, कच्चा माल: coffee, दूध, cup, सब मिलाकर लगभग निन्यानवे रुपये। फिर staff की तनख़्वाह, उनहत्तर रुपये। और rent, इक्यावन रुपये।",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "WHERE ₹300 GOES · 1/2",
+    "title": "Teen bade kharche.",
+    "max": 120,
+    "items": [
+     {
+      "label": "Coffee, doodh, cup",
+      "v": 99,
+      "text": "₹99",
+      "c": "ink",
+      "word": "निन्यानवे"
+     },
+     {
+      "label": "Staff ki tankhwah",
+      "v": 69,
+      "text": "₹69",
+      "c": "ink",
+      "word": "उनहत्तर"
+     },
+     {
+      "label": "Rent",
+      "v": 51,
+      "text": "₹51",
+      "c": "ink",
+      "word": "इक्यावन"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "अब बिजली, पानी और बाकी खर्चे, सत्ताईस रुपये। Marketing, बारह रुपये। और बचा क्या? बयालीस रुपये, यानी लगभग चौदह परसेंट।",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "WHERE ₹300 GOES · 2/2",
+    "title": "Aur phir, bachat.",
+    "max": 120,
+    "items": [
+     {
+      "label": "Bijli, paani, baaki",
+      "v": 27,
+      "text": "₹27",
+      "c": "ink",
+      "word": "सत्ताईस"
+     },
+     {
+      "label": "Marketing",
+      "v": 12,
+      "text": "₹12",
+      "c": "ink",
+      "word": "बारह"
+     },
+     {
+      "label": "Owner ka profit",
+      "v": 42,
+      "text": "₹42",
+      "c": "red",
+      "word": "बचा"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "तो अगली बार coffee महंगी लगे, तो याद रखिए। आप सिर्फ़ coffee नहीं खरीद रहे। आप बैठने की जगह, AC और staff भी खरीद रहे हैं।",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE TWIST",
+    "vert": true,
+    "lines": [
+     "Aap sirf coffee",
+     "nahi, [jagah, AC]",
+     "aur staff bhi."
+    ]
+   }
+  },
+  {
+   "vo": "और ये अच्छे महीने की बात है। कई café इससे भी कम कमाते हैं। ये एक typical मॉडल है, किसी एक brand का हिसाब नहीं।",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "ILLUSTRATIVE · ONE INDUSTRY MODEL",
+    "title": "Profit, achhe mahine mein.",
+    "value": 14,
+    "suffix": "%",
+    "color": "red",
+    "label": "Typical model, not any one brand. Many cafés earn less."
+   }
+  },
+  {
+   "vo": "ऐसी और कहानियाँ चाहिए, कि आपका पैसा असल में जाता कहाँ है? Follow कीजिए।",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "NEXT",
+    "vert": true,
+    "lines": [
+     "Aapka paisa",
+     "[jaata kahan hai?]",
+     "Follow karein."
+    ]
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "₹300 Ki Coffee, Owner Ko Sirf ₹42? #Shorts",
+   "description": "TEST render. Illustrative split of a ₹300 café coffee using one industry model.",
+   "tags": []
+  }
+ },
+ "brand": "",
+ "outro": false
+}

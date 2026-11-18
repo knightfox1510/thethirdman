@@ -1149,9 +1149,10 @@ def build(spec_path, fmt):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{base}/video.mp4", "-i", f"{base}/mix.m4a", "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "copy", "-shortest", f"{base}/main.mp4"], check=True)
     outro = f"{ROOT}/out/outro_{fmt}_{gfx.THEME}.mp4"
-    if not os.path.exists(outro): render_outro(fmt)
+    use_outro = spec.get("outro", True)      # a spec for another channel sets "outro": false (the logo outro is The Third Man's)
+    if use_outro and not os.path.exists(outro): render_outro(fmt)
     with open(f"{base}/final.txt", "w") as f:
-        f.write(f"file '{base}/main.mp4'\nfile '{outro}'\n")
+        f.write(f"file '{base}/main.mp4'\n" + (f"file '{outro}'\n" if use_outro else ""))
     name = spec["files"][fmt]
     final = f"{ROOT}/deliver/{slug}/{name}.mp4"; os.makedirs(os.path.dirname(final), exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{base}/final.txt", "-c", "copy", "-movflags", "+faststart", final], check=True)
