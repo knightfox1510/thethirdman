@@ -53,4 +53,16 @@ Which team wins this auction? Tell us in the comments. And subscribe, for the br
 ## Checks before generation
 - Add to voice_lint.NAMES: मथीशा पथिराना (Pathirana), वानिन्दु हसरंगा (Hasaranga), दीपक चाहर (Chahar), पथुम निसंका (Nissanka), गोवा; also लखनऊ / Kolkata etc. stay English except LSG city (flagged: say "Lucknow" in English instead?).
 - Claims to run through `Claims.check`: purses, slots, overseas slots (squads.json vs a second source e.g. Cricinfo/Sportskeeda), all capacity percentages (our model, single source: say "in our archive"), PBKS economies, RR PP strike rate 187, Boult 156 crore buyers sum (47.45+41.65+39.5+28.05=156.65, so say "over a hundred and fifty crore").
-- Short (vertical, ~90 s): scenes 1, 4, 5/6/7 (top 3 gaps), 14, 16.
+- Vertical cut (owner: ~150 s, about 400 words; YouTube Shorts allow up to 3 min, and 150 s is under Instagram's 3-min Reel limit). Same script, trimmed, all ten teams kept:
+  | Beat | Source | Time |
+  |---|---|---|
+  | Hook | 1 | 10 s |
+  | Method + purse (one line each, top 3 and bottom 2 only) | 2, 3 | 20 s |
+  | Need map | 4 | 12 s |
+  | KKR, CSK, DC, LSG, SRH (two numbers each) | 5-9 | 50 s |
+  | PBKS, MI | 10-11 | 18 s |
+  | RR, RCB, GT | 12 | 8 s |
+  | Pool | 13 | 10 s |
+  | Bids (Boult, Pathirana, Hasaranga, Chahar, Nissanka) | 14 | 16 s |
+  | Starc/Head caveat + close | 15-16 | 10 s |
+  Vertical frames re-laid out 1080x1920 inside the grid-safe band; logos kept.
