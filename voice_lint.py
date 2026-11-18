@@ -45,6 +45,8 @@ NAMES = {
     "Yashbardhan": "यशवर्धन", "Chauhan": "चौहान", "VK Vineeth": "वी के विनीत", "Vineeth": "विनीत", "Arjun Rajput": "अर्जुन राजपूत", "Arjun": "अर्जुन", "Rajput": "राजपूत",
     "Aryan Savsani": "आर्यन सावसानी", "Aryan": "आर्यन", "Savsani": "सावसानी", "Chigurupati Venkata": "चिगुरुपति वेंकट", "Chigurupati": "चिगुरुपति", "Venkata": "वेंकट",
     "Lakshya": "लक्ष्य", "Raichandani": "रायचंदानी",
+    "Matheesha Pathirana": "मथीशा पथिराना", "Pathirana": "पथिराना", "Wanindu Hasaranga": "वानिन्दु हसरंगा", "Hasaranga": "हसरंगा", "Deepak Chahar": "दीपक चाहर", "Chahar": "चाहर",
+    "Pathum Nissanka": "पथुम निसंका", "Nissanka": "निसंका", "Goa": "गोवा",
     # places
     "Hyderabad": "हैदराबाद", "Gujarat": "गुजरात", "Mumbai": "मुंबई", "Delhi": "दिल्ली", "Chennai": "चेन्नई", "Bengaluru": "बेंगलुरु",
     "Bangalore": "बेंगलुरु", "Ranchi": "रांची", "Rajkot": "राजकोट", "Kolkata": "कोलकाता", "Lucknow": "लखनऊ", "Ahmedabad": "अहमदाबाद",

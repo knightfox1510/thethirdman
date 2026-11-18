@@ -4,7 +4,7 @@
   retro   - "What If?": sepia film look with newspaper-style clippings (scene "film": true works on any theme)
   card    - "Rising Star": a trading card that flips from front (player) to back (stats)
 Captions: spec "captions": "lab" (grey words turn black as spoken, numbers boxed) or "serif" (italic, highlighted)."""
-import math, random
+import math, random, sys
 import skia
 import gfx
 from gfx import text, rrect, paint, prog, eo, eio, eback, clamp, twidth
@@ -891,6 +891,7 @@ def install(engine):
                      "lab_big": sc_lab_big, "lab_radial": sc_lab_radial, "lab_score": sc_lab_score, "lab_rings": sc_lab_rings,
                      "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "lab_wagon": sc_lab_wagon, "lab_pitch": sc_lab_pitch, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
     import plate; plate.install(engine)
+    import needs_scenes; needs_scenes.install(engine, sys.modules[__name__])
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 
