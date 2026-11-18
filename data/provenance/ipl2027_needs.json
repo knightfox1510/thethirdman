@@ -1,0 +1,1330 @@
+{
+ "league": {
+  "bat_powerplay": [
+   1040,
+   155.67
+  ],
+  "bat_middle": [
+   1535,
+   146.18
+  ],
+  "bat_death": [
+   720,
+   170.78
+  ],
+  "pace_pp": [
+   896,
+   9.35
+  ],
+  "spin_mid": [
+   820,
+   8.58
+  ],
+  "pace_death": [
+   579,
+   10.39
+  ]
+ },
+ "teams": {
+  "CSK": {
+   "players_with_data": 18,
+   "of": 19,
+   "bat_powerplay": [
+    0.76,
+    155.9
+   ],
+   "bat_middle": [
+    0.78,
+    138.8
+   ],
+   "bat_death": [
+    0.67,
+    165.4
+   ],
+   "pace_pp": [
+    0.48,
+    9.24,
+    2
+   ],
+   "spin_mid": [
+    0.75,
+    7.98,
+    2
+   ],
+   "pace_death": [
+    0.49,
+    10.23,
+    2
+   ],
+   "keepers": 2,
+   "purse_cr": 28.05,
+   "slots": 6,
+   "overseas_slots": 2,
+   "cr_per_slot": 4.7
+  },
+  "MI": {
+   "players_with_data": 16,
+   "of": 16,
+   "bat_powerplay": [
+    1.07,
+    147.1
+   ],
+   "bat_middle": [
+    1.0,
+    149.0
+   ],
+   "bat_death": [
+    0.93,
+    176.6
+   ],
+   "pace_pp": [
+    0.84,
+    8.94,
+    3
+   ],
+   "spin_mid": [
+    0.42,
+    7.12,
+    2
+   ],
+   "pace_death": [
+    1.0,
+    9.58,
+    3
+   ],
+   "keepers": 2,
+   "purse_cr": 32.6,
+   "slots": 9,
+   "overseas_slots": 2,
+   "cr_per_slot": 3.6
+  },
+  "RCB": {
+   "players_with_data": 17,
+   "of": 20,
+   "bat_powerplay": [
+    0.97,
+    160.3
+   ],
+   "bat_middle": [
+    1.01,
+    152.9
+   ],
+   "bat_death": [
+    0.95,
+    181.1
+   ],
+   "pace_pp": [
+    1.17,
+    8.61,
+    5
+   ],
+   "spin_mid": [
+    1.2,
+    8.4,
+    2
+   ],
+   "pace_death": [
+    1.13,
+    10.16,
+    4
+   ],
+   "keepers": 3,
+   "purse_cr": 14.15,
+   "slots": 5,
+   "overseas_slots": 1,
+   "cr_per_slot": 2.8
+  },
+  "KKR": {
+   "players_with_data": 16,
+   "of": 17,
+   "bat_powerplay": [
+    0.46,
+    154.5
+   ],
+   "bat_middle": [
+    0.61,
+    137.5
+   ],
+   "bat_death": [
+    0.65,
+    164.8
+   ],
+   "pace_pp": [
+    0.6,
+    9.54,
+    4
+   ],
+   "spin_mid": [
+    1.08,
+    7.37,
+    3
+   ],
+   "pace_death": [
+    0.66,
+    9.88,
+    3
+   ],
+   "keepers": 1,
+   "purse_cr": 41.65,
+   "slots": 8,
+   "overseas_slots": 3,
+   "cr_per_slot": 5.2
+  },
+  "SRH": {
+   "players_with_data": 16,
+   "of": 18,
+   "bat_powerplay": [
+    0.6,
+    163.2
+   ],
+   "bat_middle": [
+    0.86,
+    160.2
+   ],
+   "bat_death": [
+    0.84,
+    184.2
+   ],
+   "pace_pp": [
+    0.98,
+    9.49,
+    6
+   ],
+   "spin_mid": [
+    0.45,
+    9.64,
+    2
+   ],
+   "pace_death": [
+    0.97,
+    10.01,
+    5
+   ],
+   "keepers": 3,
+   "purse_cr": 40.15,
+   "slots": 7,
+   "overseas_slots": 3,
+   "cr_per_slot": 5.7
+  },
+  "RR": {
+   "players_with_data": 18,
+   "of": 19,
+   "bat_powerplay": [
+    0.9,
+    187.1
+   ],
+   "bat_middle": [
+    0.9,
+    147.1
+   ],
+   "bat_death": [
+    0.95,
+    164.4
+   ],
+   "pace_pp": [
+    1.15,
+    8.65,
+    5
+   ],
+   "spin_mid": [
+    1.11,
+    9.0,
+    4
+   ],
+   "pace_death": [
+    0.98,
+    10.6,
+    4
+   ],
+   "keepers": 2,
+   "purse_cr": 27.05,
+   "slots": 6,
+   "overseas_slots": 3,
+   "cr_per_slot": 4.5
+  },
+  "DC": {
+   "players_with_data": 15,
+   "of": 16,
+   "bat_powerplay": [
+    0.46,
+    127.5
+   ],
+   "bat_middle": [
+    0.88,
+    140.9
+   ],
+   "bat_death": [
+    1.05,
+    183.4
+   ],
+   "pace_pp": [
+    0.56,
+    9.4,
+    4
+   ],
+   "spin_mid": [
+    0.78,
+    9.35,
+    3
+   ],
+   "pace_death": [
+    0.45,
+    10.93,
+    2
+   ],
+   "keepers": 3,
+   "purse_cr": 39.5,
+   "slots": 9,
+   "overseas_slots": 4,
+   "cr_per_slot": 4.4
+  },
+  "PBKS": {
+   "players_with_data": 18,
+   "of": 19,
+   "bat_powerplay": [
+    0.92,
+    164.8
+   ],
+   "bat_middle": [
+    0.86,
+    152.6
+   ],
+   "bat_death": [
+    1.07,
+    193.7
+   ],
+   "pace_pp": [
+    0.63,
+    10.62,
+    3
+   ],
+   "spin_mid": [
+    0.78,
+    8.59,
+    2
+   ],
+   "pace_death": [
+    0.78,
+    11.85,
+    4
+   ],
+   "keepers": 2,
+   "purse_cr": 18.6,
+   "slots": 6,
+   "overseas_slots": 2,
+   "cr_per_slot": 3.1
+  },
+  "GT": {
+   "players_with_data": 22,
+   "of": 22,
+   "bat_powerplay": [
+    1.09,
+    149.3
+   ],
+   "bat_middle": [
+    1.02,
+    152.0
+   ],
+   "bat_death": [
+    0.98,
+    159.1
+   ],
+   "pace_pp": [
+    1.25,
+    9.08,
+    5
+   ],
+   "spin_mid": [
+    1.04,
+    8.84,
+    3
+   ],
+   "pace_death": [
+    1.12,
+    10.13,
+    5
+   ],
+   "keepers": 4,
+   "purse_cr": 8.75,
+   "slots": 3,
+   "overseas_slots": 2,
+   "cr_per_slot": 2.9
+  },
+  "LSG": {
+   "players_with_data": 17,
+   "of": 18,
+   "bat_powerplay": [
+    1.09,
+    158.3
+   ],
+   "bat_middle": [
+    1.0,
+    145.1
+   ],
+   "bat_death": [
+    0.77,
+    165.9
+   ],
+   "pace_pp": [
+    0.46,
+    8.52,
+    3
+   ],
+   "spin_mid": [
+    1.13,
+    8.81,
+    4
+   ],
+   "pace_death": [
+    0.43,
+    10.35,
+    1
+   ],
+   "keepers": 2,
+   "purse_cr": 47.45,
+   "slots": 7,
+   "overseas_slots": 3,
+   "cr_per_slot": 6.8
+  }
+ },
+ "pool_released": [
+  {
+   "player": "Matt Henry",
+   "from": "CSK",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 5,
+   "death_sr": 40.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 36,
+   "pp_pace_econ": 12.83,
+   "death_pace_balls": 6,
+   "death_pace_econ": 12.0
+  },
+  {
+   "player": "Matt Short",
+   "from": "CSK",
+   "pp_balls": 25,
+   "pp_sr": 124.0,
+   "death_balls": 1,
+   "death_sr": 0.0,
+   "mid_spin_balls": 1,
+   "mid_spin_econ": 6.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Kuldip Yadav",
+   "from": "CSK",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Prashant Veer",
+   "from": "CSK",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 39,
+   "death_sr": 123.1,
+   "mid_spin_balls": 6,
+   "mid_spin_econ": 7.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Spencer Johnson",
+   "from": "CSK",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 2,
+   "death_sr": 50.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 90,
+   "pp_pace_econ": 10.47,
+   "death_pace_balls": 20,
+   "death_pace_econ": 11.4
+  },
+  {
+   "player": "Akash Madhwal",
+   "from": "CSK",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 4,
+   "death_sr": 50.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 6,
+   "pp_pace_econ": 13.0,
+   "death_pace_balls": 42,
+   "death_pace_econ": 10.86
+  },
+  {
+   "player": "AM Ghazanfar",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 3,
+   "death_sr": 66.7,
+   "mid_spin_balls": 138,
+   "mid_spin_econ": 8.78,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Danish Malewar",
+   "from": "MI",
+   "pp_balls": 5,
+   "pp_sr": 40.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Deepak Chahar",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 39,
+   "death_sr": 143.6,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 300,
+   "pp_pace_econ": 8.34,
+   "death_pace_balls": 51,
+   "death_pace_econ": 12.0
+  },
+  {
+   "player": "Keshav Maharaj",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Krish Bhagat",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 13,
+   "death_sr": 46.2,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 18,
+   "pp_pace_econ": 9.33,
+   "death_pace_balls": 18,
+   "death_pace_econ": 11.67
+  },
+  {
+   "player": "Mahipal Lomror",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Mayank Markande",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 30,
+   "mid_spin_econ": 15.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Mayank Rawat",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Robin Minz",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 4,
+   "death_sr": 150.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Trent Boult",
+   "from": "MI",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 5,
+   "death_sr": 180.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 228,
+   "pp_pace_econ": 9.29,
+   "death_pace_balls": 119,
+   "death_pace_econ": 9.13
+  },
+  {
+   "player": "Mangesh Yadav",
+   "from": "RCB",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 5,
+   "death_sr": 100.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 42,
+   "pp_pace_econ": 10.14,
+   "death_pace_balls": 30,
+   "death_pace_econ": 10.2
+  },
+  {
+   "player": "Jacob Bethell",
+   "from": "RCB",
+   "pp_balls": 90,
+   "pp_sr": 152.2,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Swapnil Singh",
+   "from": "RCB",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Richard Gleeson",
+   "from": "RCB",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 6,
+   "pp_pace_econ": 10.0,
+   "death_pace_balls": 9,
+   "death_pace_econ": 11.33
+  },
+  {
+   "player": "Matheesha Pathirana",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 8,
+   "pp_pace_econ": 5.25,
+   "death_pace_balls": 143,
+   "death_pace_econ": 9.69
+  },
+  {
+   "player": "Mustafizur Rahman",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 1,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 36,
+   "pp_pace_econ": 7.83,
+   "death_pace_balls": 24,
+   "death_pace_econ": 7.75
+  },
+  {
+   "player": "Tejasvi Singh Dahiya",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 12,
+   "death_sr": 91.7,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Rachin Ravindra",
+   "from": "KKR",
+   "pp_balls": 90,
+   "pp_sr": 117.8,
+   "death_balls": 9,
+   "death_sr": 266.7,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Ajinkya Rahane",
+   "from": "KKR",
+   "pp_balls": 277,
+   "pp_sr": 156.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Akash Deep",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 2,
+   "death_sr": 300.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 72,
+   "pp_pace_econ": 10.92,
+   "death_pace_balls": 18,
+   "death_pace_econ": 11.67
+  },
+  {
+   "player": "Blessing Muzarabani",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 18,
+   "pp_pace_econ": 13.33,
+   "death_pace_balls": 12,
+   "death_pace_econ": 12.0
+  },
+  {
+   "player": "Navdeep Saini",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 6,
+   "pp_pace_econ": 17.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Rahul Tripathi",
+   "from": "KKR",
+   "pp_balls": 33,
+   "pp_sr": 109.1,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Umran Malik",
+   "from": "KKR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Travis Head",
+   "from": "SRH",
+   "pp_balls": 358,
+   "pp_sr": 167.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Gerald Coetzee",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 6,
+   "death_sr": 200.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 30,
+   "death_pace_econ": 13.0
+  },
+  {
+   "player": "David Payne",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 5,
+   "death_sr": 120.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 12,
+   "pp_pace_econ": 21.5,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Jaydev Unadkat",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 3,
+   "death_sr": 133.3,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 102,
+   "pp_pace_econ": 10.0,
+   "death_pace_balls": 46,
+   "death_pace_econ": 8.61
+  },
+  {
+   "player": "Shivam Mavi",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Kamindu Mendis",
+   "from": "SRH",
+   "pp_balls": 9,
+   "pp_sr": 55.6,
+   "death_balls": 25,
+   "death_sr": 104.0,
+   "mid_spin_balls": 42,
+   "mid_spin_econ": 8.57,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Dilshan Madushanka",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 12,
+   "pp_pace_econ": 7.5,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Amit Kumar",
+   "from": "SRH",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 6,
+   "death_sr": 16.7,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 36,
+   "pp_pace_econ": 11.0,
+   "death_pace_balls": 45,
+   "death_pace_econ": 13.87
+  },
+  {
+   "player": "Tushar Deshpande",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 21,
+   "death_sr": 157.1,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 114,
+   "pp_pace_econ": 10.53,
+   "death_pace_balls": 102,
+   "death_pace_econ": 11.29
+  },
+  {
+   "player": "Adam Milne",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 2,
+   "death_sr": 100.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 12,
+   "pp_pace_econ": 11.0,
+   "death_pace_balls": 8,
+   "death_pace_econ": 12.75
+  },
+  {
+   "player": "Kuldeep Sen",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Yudhvir Singh",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Kwena Maphaka",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 2,
+   "death_sr": 400.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 18,
+   "pp_pace_econ": 9.0,
+   "death_pace_balls": 6,
+   "death_pace_econ": 16.0
+  },
+  {
+   "player": "Vignesh Puthur",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 12,
+   "death_pace_econ": 11.5
+  },
+  {
+   "player": "Shimron Hetmyer",
+   "from": "RR",
+   "pp_balls": 11,
+   "pp_sr": 72.7,
+   "death_balls": 119,
+   "death_sr": 138.7,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Ravi Singh",
+   "from": "RR",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Mitchell Starc",
+   "from": "DC",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 11,
+   "death_sr": 45.5,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 192,
+   "pp_pace_econ": 10.03,
+   "death_pace_balls": 90,
+   "death_pace_econ": 9.4
+  },
+  {
+   "player": "Nitish Rana",
+   "from": "DC",
+   "pp_balls": 115,
+   "pp_sr": 135.7,
+   "death_balls": 16,
+   "death_sr": 250.0,
+   "mid_spin_balls": 24,
+   "mid_spin_econ": 11.5,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Abhishek Porel",
+   "from": "DC",
+   "pp_balls": 159,
+   "pp_sr": 146.5,
+   "death_balls": 5,
+   "death_sr": 220.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Pathum Nissanka",
+   "from": "DC",
+   "pp_balls": 139,
+   "pp_sr": 169.1,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Karun Nair",
+   "from": "DC",
+   "pp_balls": 72,
+   "pp_sr": 159.7,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Sahil Parakh",
+   "from": "DC",
+   "pp_balls": 14,
+   "pp_sr": 171.4,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Dushmantha Chameera",
+   "from": "DC",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 16,
+   "death_sr": 56.2,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 36,
+   "pp_pace_econ": 11.67,
+   "death_pace_balls": 36,
+   "death_pace_econ": 10.5
+  },
+  {
+   "player": "Nehal Wadhera",
+   "from": "PBKS",
+   "pp_balls": 29,
+   "pp_sr": 110.3,
+   "death_balls": 35,
+   "death_sr": 157.1,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Mitchell Owen",
+   "from": "PBKS",
+   "pp_balls": 2,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Lockie Ferguson",
+   "from": "PBKS",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 1,
+   "death_sr": 400.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 50,
+   "pp_pace_econ": 10.56,
+   "death_pace_balls": 42,
+   "death_pace_econ": 11.29
+  },
+  {
+   "player": "Praveen Dubey",
+   "from": "PBKS",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 12,
+   "mid_spin_econ": 10.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Shahrukh Khan",
+   "from": "GT",
+   "pp_balls": 4,
+   "pp_sr": 0.0,
+   "death_balls": 51,
+   "death_sr": 180.4,
+   "mid_spin_balls": 6,
+   "mid_spin_econ": 13.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Ishant Sharma",
+   "from": "GT",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 48,
+   "pp_pace_econ": 11.0,
+   "death_pace_balls": 26,
+   "death_pace_econ": 10.15
+  },
+  {
+   "player": "Luke Wood",
+   "from": "GT",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Kulwant Khejroliya",
+   "from": "GT",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Prithviraj Yarra",
+   "from": "GT",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Avesh Khan",
+   "from": "LSG",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 18,
+   "death_sr": 150.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 107,
+   "pp_pace_econ": 12.73,
+   "death_pace_balls": 151,
+   "death_pace_econ": 10.33
+  },
+  {
+   "player": "Anrich Nortje",
+   "from": "LSG",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 1,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 18,
+   "pp_pace_econ": 11.0,
+   "death_pace_balls": 18,
+   "death_pace_econ": 12.33
+  },
+  {
+   "player": "Wanindu Hasaranga",
+   "from": "LSG",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 4,
+   "death_sr": 25.0,
+   "mid_spin_balls": 216,
+   "mid_spin_econ": 8.83,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "Matthew Breetzke",
+   "from": "LSG",
+   "pp_balls": 12,
+   "pp_sr": 116.7,
+   "death_balls": 0,
+   "death_sr": 0.0,
+   "mid_spin_balls": 0,
+   "mid_spin_econ": 0.0,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  },
+  {
+   "player": "George Linde",
+   "from": "LSG",
+   "pp_balls": 0,
+   "pp_sr": 0.0,
+   "death_balls": 21,
+   "death_sr": 147.6,
+   "mid_spin_balls": 36,
+   "mid_spin_econ": 8.5,
+   "pp_pace_balls": 0,
+   "pp_pace_econ": 0.0,
+   "death_pace_balls": 0,
+   "death_pace_econ": 0.0
+  }
+ ]
+}

@@ -82,3 +82,7 @@ Still missing from Cricinfo excerpts: complete retained lists for CSK, MI, KKR (
 - Yahoo Sports, predicted retentions (8 Nov) and captains (7 Nov): https://sports.yahoo.com/articles/ipl-retained-players-2027-list-023001537.html , https://sports.yahoo.com/articles/ipl-2027-captains-full-list-165444684.html
 - IPL 2027 dates (BCCI secretary, June): https://www.outlookindia.com/sports/cricket/ipl-2027-new-window-weather-solution-bcci-indian-premier-league-report-devajit-saikia
 - Dhoni retirement and mentor role: https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611
+
+## Update 18 Nov: full lists and purses now found
+Yahoo Sports / Willow (17 Nov 21:06 UTC) carries complete retained and released lists for all ten teams; the purses match Sportskeeda, M9 and cricketnews.com. The data and the squad check are in `data/ipl2027/squads.json` and `docs/IPL2027_NEEDS.md`.
+Rahane: Wikipedia's personnel-changes page records his retirement on 30 July 2026, and Yahoo's captains article agrees, so the earlier note calling the "retired in July" claim unsupported is superseded.
