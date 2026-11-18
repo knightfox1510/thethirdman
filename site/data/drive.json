@@ -2935,11 +2935,25 @@
    ]
   },
   "ipl_needs_2027": {
-   "state": "not posted",
+   "state": "posted",
    "series": "09 Data Stories",
-   "episode": "Ep15 - What Every IPL Team Needs",
+   "episode": "Ep15 - What Every IPL Team Needs [posted]",
    "folder": "https://drive.google.com/drive/folders/15KGfTSS46jyZWLy3b7e_QlikPyDZYuug",
    "files": [
+    {
+     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1yMO2jfGaCPatC6Yiauz4Nh7hHOP-BhLQ/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 16.3,
+     "url": "https://drive.google.com/file/d/1NZLmQmpqDQy6dH7xlLFAMWricOp9kPMM/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_IG_cover.jpg",
      "kind": "cover",
@@ -2955,18 +2969,25 @@
      "url": "https://drive.google.com/file/d/1bsK1om4_EuGfxgLQCbbu7QtcLpdrP7JF/view?usp=drivesdk"
     },
     {
-     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_IG.srt",
+     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16.srt",
      "kind": "subtitles",
-     "platform": "Instagram",
+     "platform": "YouTube",
      "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1C7OrRWwDsKrTvM1eWYPTjxdrJT_jrRLp/view?usp=drivesdk"
+     "url": "https://drive.google.com/file/d/1LPJS4eUiwUpjIQReil-MAaBgxC70oiG5/view?usp=drivesdk"
     },
     {
-     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_IG.mp4",
+     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16.mp4",
      "kind": "short",
-     "platform": "Instagram",
-     "mb": 15.5,
-     "url": "https://drive.google.com/file/d/1HB9jXkuT05uXncTm4T7WEE3YcVEt0xrx/view?usp=drivesdk"
+     "platform": "YouTube",
+     "mb": 16.6,
+     "url": "https://drive.google.com/file/d/1gucZrp65ykeAOHBgQo9OJ8FgSV3lLsbY/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 23.7,
+     "url": "https://drive.google.com/file/d/15MwkthiZrxp1-tdmaXg5K1Wqj2dlE6GZ/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16_cover.jpg",
@@ -2974,20 +2995,6 @@
      "platform": "YouTube",
      "mb": 0.1,
      "url": "https://drive.google.com/file/d/1ASKDQWePLxNDSZRIS10QYxJhMWAsh91d/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16.srt",
-     "kind": "subtitles",
-     "platform": "YouTube",
-     "mb": 0.0,
-     "url": "https://drive.google.com/file/d/1ZGZff1M6urBIhJnQSTMxydVqxBhe28-m/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16.mp4",
-     "kind": "short",
-     "platform": "YouTube",
-     "mb": 15.9,
-     "url": "https://drive.google.com/file/d/1ysfxo2uAJhPBb7yGJs1oD6ShcI6Ej2GH/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long_thumbnail.jpg",
@@ -3002,13 +3009,6 @@
      "platform": "YouTube",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/1S78DC6jGFpbfs7iqMSt1S2Zwhgn9TfQu/view?usp=drivesdk"
-    },
-    {
-     "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long.mp4",
-     "kind": "long",
-     "platform": "YouTube",
-     "mb": 23.6,
-     "url": "https://drive.google.com/file/d/1OeXvaZV1jaik4l8fkwHsEorlKVbQv-cy/view?usp=drivesdk"
     },
     {
      "name": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long.chapters.txt",
