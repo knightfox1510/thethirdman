@@ -1,6 +1,6 @@
 {
- "synced": "2026-11-17",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad)",
+ "synced": "2026-11-18",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming)",
  "items": [
   {
    "date": "2026-11-15",
@@ -15,7 +15,7 @@
    "event": "IPL 2027 retention deadline",
    "teams": "IPL",
    "venue": "—",
-   "status": "Today: lists due (Hardik to PBKS / Arshdeep to MI trade already announced 11 Nov)",
+   "status": "Done: ~80 players released (Head, Starc, Pathirana, Boult); Dhoni released from playing squad, reported mentor role; MI captain TBA",
    "format": "statcheck"
   },
   {
@@ -31,7 +31,7 @@
    "event": "1st Test (19–23 Nov)",
    "teams": "NZ v India",
    "venue": "Wellington (Basin Reserve)",
-   "status": "Upcoming: Pant cleared and in NZ; Conway and Ravindra back for NZ",
+   "status": "Upcoming: India to play four seamers (Gill); Pant in; Conway and Ravindra back for NZ",
    "format": "tactics"
   },
   {
