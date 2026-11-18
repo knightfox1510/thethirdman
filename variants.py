@@ -48,7 +48,8 @@ def igshort(spec_path):
     base = spec["files"]["short"]; v["files"] = {"short": base + "_IG", "long": "_unused"}
     v.pop("long", None); v.pop("burn_captions", None)
     src_vo, dst_vo = f"{ROOT}/out/{slug}/short/vo", f"{ROOT}/out/{slug}__igshort/short/vo"
-    if os.path.isdir(src_vo) and not os.path.isdir(dst_vo): shutil.copytree(src_vo, dst_vo)
+    if os.path.isdir(src_vo):                               # always start from the main video's CURRENT narration: a stale copy (older text/timings) made two clips overlap
+        shutil.rmtree(dst_vo, ignore_errors=True); shutil.copytree(src_vo, dst_vo)
     os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
     vp = f"{ROOT}/out/_variants/{slug}__igshort.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
     subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "short"], check=True)
@@ -145,7 +146,8 @@ def iglong(spec_path):
     else: sc.append(IG_LONG_CTA)
     v["files"] = {"long": base + "_IG", "short": "_unused"}; v.pop("short", None); v.pop("burn_captions", None)
     src_vo, dst_vo = f"{ROOT}/out/{slug}/long/vo", f"{ROOT}/out/{slug}__iglong/long/vo"
-    if os.path.isdir(src_vo) and not os.path.isdir(dst_vo): shutil.copytree(src_vo, dst_vo)
+    if os.path.isdir(src_vo):                               # always start from the main video's CURRENT narration: a stale copy (older text/timings) made two clips overlap
+        shutil.rmtree(dst_vo, ignore_errors=True); shutil.copytree(src_vo, dst_vo)
     os.makedirs(f"{ROOT}/out/_variants", exist_ok=True)
     vp = f"{ROOT}/out/_variants/{slug}__iglong.json"; json.dump(v, open(vp, "w"), ensure_ascii=False)
     subprocess.run(["python3", f"{ROOT}/engine.py", "build", vp, "long"], check=True)
