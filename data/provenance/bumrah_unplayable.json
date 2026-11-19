@@ -1,0 +1,305 @@
+{
+ "slug": "bumrah_unplayable",
+ "claims": [
+  {
+   "claim": "Test career: 52 Tests, 234 wickets, average 19.79",
+   "value": [
+    52,
+    234,
+    19.79
+   ],
+   "sources": {
+    "cricsheet": [
+     52,
+     234,
+     19.79
+    ],
+    "cricketcomau": [
+     52,
+     234,
+     19.79
+    ],
+    "wikipedia": [
+     52,
+     234,
+     19.79
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "first bowler to 200 Test wickets at an average under 20",
+   "value": true,
+   "sources": {
+    "wisden": true,
+    "icc": true,
+    "espncricinfo": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "other pace bowlers (50+ wkts since 2018) average 26.1",
+   "value": 26.1,
+   "sources": {
+    "cricsheet": 26.1
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "bowled or lbw: Bumrah 52%, other quicks 33%",
+   "value": [
+    52,
+    33
+   ],
+   "sources": {
+    "cricsheet": [
+     52,
+     33
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "average 23.9 in the first 20 overs, 18.2 after",
+   "value": [
+    23.9,
+    18.2
+   ],
+   "sources": {
+    "cricsheet": [
+     23.9,
+     18.2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "about 70-75% of the match average on every type of pitch",
+   "value": [
+    69,
+    75
+   ],
+   "sources": {
+    "cricsheet": [
+     69,
+     75
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL death overs economy 7.87 vs 9.60 (same seasons)",
+   "value": [
+    7.87,
+    9.6
+   ],
+   "sources": {
+    "sportmonks": [
+     7.87,
+     9.6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "T20 World Cup 2024: 15 wickets, Player of the Tournament",
+   "value": [
+    15,
+    true
+   ],
+   "sources": {
+    "wikipedia": [
+     15,
+     true
+    ],
+    "wisden": [
+     15,
+     true
+    ],
+    "outlook": [
+     15,
+     true
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "T20 World Cup 2026 final: 4/15, Player of the Match",
+   "value": [
+    4,
+    15,
+    true
+   ],
+   "sources": {
+    "indiatv": [
+     4,
+     15,
+     true
+    ],
+    "latestly": [
+     4,
+     15,
+     true
+    ],
+    "outlook": [
+     4,
+     15,
+     true
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "stress fracture 2019; stress fracture 2022 (out of the T20 World Cup)",
+   "value": true,
+   "sources": {
+    "wisden": true,
+    "espncricinfo": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "back surgery March 2023",
+   "value": true,
+   "sources": {
+    "espn": true,
+    "mykhel": true,
+    "wikipedia": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "back spasm in Sydney, January 2025",
+   "value": true,
+   "sources": {
+    "theprint": true,
+    "mykhel": true,
+    "wisden": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "England 2025: three Tests of five planned",
+   "value": true,
+   "sources": {
+    "icc": true,
+    "espncricinfo": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "played 52 of India's 81 men's Tests since his debut",
+   "value": [
+    52,
+    81
+   ],
+   "sources": {
+    "cricsheet": [
+     52,
+     81
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India won 42% of Tests with him, 69% without",
+   "value": [
+    42,
+    69
+   ],
+   "sources": {
+    "cricsheet": [
+     42,
+     69
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "without him India played 17 of 29 Tests at home; with him 16 of 52",
+   "value": [
+    17,
+    29,
+    16,
+    52
+   ],
+   "sources": {
+    "cricsheet": [
+     17,
+     29,
+     16,
+     52
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "release about 48 cm closer than Kemar Roach",
+   "value": 48,
+   "sources": {
+    "cricketcom": 48,
+    "cricketcomau": 48
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "ICC: more than 15 degrees of straightening is illegal; hyperextension discounted",
+   "value": 15,
+   "sources": {
+    "icc": 15,
+    "theprint": 15
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "48 cm at 140 km/h is about 12 ms (our arithmetic)",
+   "value": 12,
+   "sources": {
+    "arithmetic": 12
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 10,
+  "LABELLED": 9
+ }
+}

@@ -8,7 +8,7 @@ rows = []; kinds = collections.Counter(); lines = {"all": [0, 0, 0]}; by = colle
 matches = []
 for f in sorted(glob.glob(f"{D}/*.json")):
     d = json.load(open(f)); i = d["info"]
-    if "India" not in i["teams"]: continue
+    if i.get("gender") != "male" or "India" not in i["teams"]: continue
     date = i["dates"][0]
     if date < "2018-01-01": continue
     opp = [t for t in i["teams"] if t != "India"][0]; played = B in sum(i["players"].values(), [])
@@ -50,6 +50,8 @@ def rec(sel):
     m = [x for x in matches if sel(x)]; return {"matches": len(m), "won": sum(x["won"] for x in m), "lost": sum(x["lost"] for x in m), "drawn": len(m) - sum(x["won"] for x in m) - sum(x["lost"] for x in m), "win_pct": round(100 * sum(x["won"] for x in m) / max(1, len(m)), 1)}
 OUT["india_with"] = rec(lambda x: x["played"]); OUT["india_without"] = rec(lambda x: not x["played"])
 OUT["india_with_away"] = rec(lambda x: x["played"] and not x["home"]); OUT["india_without_away"] = rec(lambda x: not x["played"] and not x["home"]); OUT["india_with_home"] = rec(lambda x: x["played"] and x["home"]); OUT["india_without_home"] = rec(lambda x: not x["played"] and x["home"])
+SENA_ = {"South Africa", "England", "New Zealand", "Australia"}
+OUT["india_with_sena_away"] = rec(lambda x: x["played"] and not x["home"] and not x["neutral"] and x["opp"] in SENA_); OUT["india_without_sena_away"] = rec(lambda x: not x["played"] and not x["home"] and not x["neutral"] and x["opp"] in SENA_)
 OUT["share_of_his_tests_away"] = round(100 * sum(1 for x in rows if x[3] != "home") / len(rows), 1)
 # availability gaps (days between consecutive India Tests that he missed in a row)
 gaps = []; run = 0; start = None

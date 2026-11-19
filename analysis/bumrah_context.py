@@ -7,7 +7,7 @@ BAD = ("run out", "retired hurt", "retired out", "obstructing the field"); B = "
 st = collections.defaultdict(lambda: collections.Counter()); inn = collections.defaultdict(lambda: [0, 0, 0]); rel = []
 for f in sorted(glob.glob(f"{R}/data/cricsheet/tests/*.json")):
     d = json.load(open(f)); i = d["info"]
-    if i["dates"][0] < "2018-01-01": continue
+    if i.get("gender") != "male" or i["dates"][0] < "2018-01-01": continue
     mr = mw = 0; per = collections.defaultdict(lambda: [0, 0])
     for n, x in enumerate(d["innings"]):
         for ov in x["overs"]:

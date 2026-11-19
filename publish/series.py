@@ -64,6 +64,7 @@ EPISODES = {
     "dhoni_captain_myth": ("myth", "04", "Did Dhoni CSK Just Win the Close Ones"),
     "dhoni_captaincy_all": ("data", "14", "Dhoni IPL Captaincy, the Complete Record"),
     "ipl_needs_2027": ("data", "15", "What Every IPL Team Needs"),
+    "bumrah_unplayable": ("data", "16", "Bumrah Why He Is Unplayable"),
     "ipl_trades_2027": ("channel", "02", "IPL 2027 Trades, Every Deal"),
     "rohit_mumbai_cha_raja": ("channel", "03", "Mumbai cha Raja"),
     "channel_trailer": ("channel", "00", "Welcome to The Third Man"),

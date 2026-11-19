@@ -1,0 +1,196 @@
+{
+ "slug": "bumrah_unplayable",
+ "theme": "lab",
+ "captions": "lab",
+ "series": "data",
+ "tag": "DATA STORY",
+ "tagsub": "BUMRAH: WHY HE IS UNPLAYABLE",
+ "files": {
+  "short": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16",
+  "long": "_unused"
+ },
+ "outro": false,
+ "sources": [
+  "Cricsheet men's Test ball-by-ball (cricsheet.org, ODC-BY), 'our archive': analysis/bumrah_tests.py, analysis/bumrah_context.py. IPL: our Sportmonks cache 2013-2026.",
+  "Career figures: https://en.wikipedia.org/wiki/Jasprit_Bumrah (Cricinfo figures to 5 Oct 2026) and https://www.cricket.com.au/players/CA:10982",
+  "Action: https://theprint.in/sport/from-his-biomechanics-anatomy-to-hypermobility-what-makes-jasprit-bumrah-unique/2432437/ ; ICC illegal bowling action regulations https://www.icc-cricket.com/about/cricket/rules-and-regulations/illegal-bowling-actions ; release point analysis: cricket.com 'Decoded: Jasprit Bumrah' (48 cm vs Kemar Roach)",
+  "Injuries and workload: https://www.wisden.com/series/sri-lanka-in-india-2022-23/cricket-news/back-and-forth-a-timeline-of-jasprit-bumrahs-back-injuries ; https://www.icc-cricket.com/news/gambhir-reveals-bumrah-plan-for-remaining-england-tests ; with-and-without analysis: https://www.wisden.com/series/england-vs-india-m-2025/cricket-news/explained-why-india-win-more-tests-without-bumrah-than-with-him",
+  "T20 World Cups: Wisden / Outlook (2024), Outlook / IndiaTV (2026 final)"
+ ],
+ "short": [
+  {
+   "vo": "Over one, in Wellington. Tom Latham leaves a ball from जसप्रीत बुमराह. It comes back, and hits off stump. How does a man with the wrong action get the best Test average of any bowler with two hundred wickets?",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "COLD OPEN"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "A short, stuttering run-up. An elbow that bends the wrong way. A back that has already fractured. By the old textbook, this should not work.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "THE WRONG ACTION"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Two hundred and thirty-four Test wickets, at nineteen point seven nine. The other quicks since twenty eighteen, in our archive: twenty-six. He was the first to two hundred wickets with an average under twenty.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "NUMBERS"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Here is why. One delivery, four frames: the load, the leap, the bound, and the release.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "FOUR FRAMES"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The elbow hyperextends, which the rules discount. One analysis has him releasing about half a metre closer than Kemar Roach: twelve milliseconds less to react, by our arithmetic. And the backspin makes it a heavy ball: it bounces more than batters expect.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "CALLOUTS"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Closer, lower than most quicks, and hard to read: the leave that comes back.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "RELEASE"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So he hits the stumps. In our archive, fifty-two per cent of his Test wickets are bowled or lbw. For other quicks, thirty-three.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "STUMPS"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "He is better with the old ball: twenty-four runs a wicket early, eighteen after. And on any pitch, about seventy to seventy-five per cent of the match average.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "OLD BALL"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In T-twenty, it is the yorker. IPL death overs, in our archive: seven point eight seven an over, against nine point six. Fifteen wickets and Player of the Tournament at the twenty twenty-four World Cup, and four for fifteen in the twenty twenty-six final.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "SHORT FORMAT"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The price: a stress fracture in twenty nineteen. Another in twenty twenty-two. Surgery in March twenty twenty-three. A spasm in Sydney in twenty twenty-five. Of India's eighty-one Tests, he has played fifty-two. Action or workload, nobody outside has seen the scans.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "THE BACK"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India win more without him: forty-two per cent with him, sixty-nine without. But without him, India played seventeen of their twenty-nine Tests at home. It is not a fair fight.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "MANAGED"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Unplayable when fit. The price is the body.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "VERDICT"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So, the best fast bowler ever? One, yes. Two, top three. Three, not yet.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "POLL"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe to The Third Man for the full breakdown.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "END"
+     }
+    ]
+   }
+  }
+ ],
+ "short_ig_end": "Full breakdown on YouTube. Link in bio.",
+ "yt": {
+  "short": {
+   "title": "Jasprit Bumrah: Why He Is Unplayable | Data Story Ep 16 #Shorts",
+   "description": "Jasprit Bumrah: why he is unplayable. The short run-up, the hyperextended elbow, the release; 52% of his Test wickets bowled or lbw; better with the old ball; and the cost: the back. Best fast bowler ever? Comment 1 yes, 2 top three, 3 not yet.\n\nOur archive: Cricsheet men's Tests since 2018 and IPL 2013-2026. Career figures: Cricinfo via Wikipedia and cricket.com.au. The action: ICC rules, Ian Pont and Dr Kumar Satish Ravi (ThePrint), cricket.com analysis (48 cm vs Kemar Roach). Injury timeline: Wisden, ESPNcricinfo.\n\n#Bumrah #JaspritBumrah #Cricket #Shorts",
+   "tags": [
+    "Jasprit Bumrah",
+    "Bumrah bowling action",
+    "Bumrah why unplayable",
+    "Bumrah injury",
+    "Bumrah stats",
+    "best fast bowler",
+    "India cricket",
+    "Test cricket",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

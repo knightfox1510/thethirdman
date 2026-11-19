@@ -221,11 +221,11 @@
   "win_pct": 42.3
  },
  "india_without": {
-  "matches": 36,
-  "won": 24,
-  "lost": 6,
-  "drawn": 6,
-  "win_pct": 66.7
+  "matches": 29,
+  "won": 20,
+  "lost": 5,
+  "drawn": 4,
+  "win_pct": 69.0
  },
  "india_with_away": {
   "matches": 36,
@@ -235,11 +235,11 @@
   "win_pct": 33.3
  },
  "india_without_away": {
-  "matches": 17,
-  "won": 9,
-  "lost": 4,
-  "drawn": 4,
-  "win_pct": 52.9
+  "matches": 12,
+  "won": 7,
+  "lost": 3,
+  "drawn": 2,
+  "win_pct": 58.3
  },
  "india_with_home": {
   "matches": 16,
@@ -249,11 +249,25 @@
   "win_pct": 62.5
  },
  "india_without_home": {
-  "matches": 19,
-  "won": 15,
+  "matches": 17,
+  "won": 13,
   "lost": 2,
   "drawn": 2,
-  "win_pct": 78.9
+  "win_pct": 76.5
+ },
+ "india_with_sena_away": {
+  "matches": 34,
+  "won": 10,
+  "lost": 19,
+  "drawn": 5,
+  "win_pct": 29.4
+ },
+ "india_without_sena_away": {
+  "matches": 6,
+  "won": 3,
+  "lost": 3,
+  "drawn": 0,
+  "win_pct": 50.0
  },
  "share_of_his_tests_away": 69.2,
  "missed_runs_3plus": [
@@ -268,10 +282,10 @@
    9
   ]
  ],
- "india_tests_since_debut": 88,
+ "india_tests_since_debut": 81,
  "played_of": [
   52,
-  88
+  81
  ],
  "first_test": [
   "2018-01-05",
