@@ -884,7 +884,10 @@ def breathe(outdir, i, m, fmt):
     least a natural pause, and cut hesitations inside phrases (e.g. after a Devanagari name) down to a normal gap.
     Silence is only removed where the audio really is quiet, so no part of a word is ever cut."""
     out = f"{outdir}/b{i}.wav"
-    if m.get("bv") == BREATH_V and os.path.exists(out): return m
+    if m.get("bv") == BREATH_V and os.path.exists(out):
+        import wave as _w
+        with _w.open(out) as _f: _d = _f.getnframes() / _f.getframerate()
+        if abs(_d - m["dur"]) < .08: return m          # cached clip belongs to this paragraph (a clip left over from another paragraph at the same index has a different length)
     raw_words = m.get("words_raw", m["words"]); raw_dur = m.get("dur_raw", m["dur"])
     pcm = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", f"{outdir}/p{i}.mp3", "-f", "f32le", "-ac", "1", "-ar", "44100", "-"])
     a = np.frombuffer(pcm, np.float32); SR = 44100
