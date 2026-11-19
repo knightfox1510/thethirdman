@@ -2,6 +2,24 @@
  "slug": "nz_ind_1st_test_day1",
  "claims": [
   {
+   "claim": "Bumrah, first innings of the 2020 Wellington Test: 1 for 88 in 26 overs",
+   "value": [
+    1,
+    88,
+    26
+   ],
+   "sources": {
+    "cricsheet": [
+     1,
+     88,
+     26
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
    "claim": "score at tea: 140/5; Nicholls 66*, Phillips 42*",
    "value": [
     140,
@@ -383,7 +401,7 @@
   }
  ],
  "summary": {
-  "OK": 6,
-  "LABELLED": 12
+  "LABELLED": 13,
+  "OK": 6
  }
 }

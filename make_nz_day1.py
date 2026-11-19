@@ -49,7 +49,22 @@ BALL1, BALL2, BALL3 = seg(0, 19), seg(20, 79), seg(80, 81); assert (BALL1, BALL2
 OVERS = [tuple(v) for v in ov.values()]; assert len(OVERS) == 82 and sum(r for r, _ in OVERS) == 243 and sum(wk for _, wk in OVERS) == 5
 SESS = (23, 48)                                                     # lunch after 22.5 overs, tea after 47.6
 
+def bumrah_2020():
+    import glob
+    for f in sorted(glob.glob("data/cricsheet/tests/*.json")):
+        d = json.load(open(f)); i = d["info"]
+        if i["dates"][0] == "2020-02-21" and "India" in i["teams"]: break
+    r = b = k = 0
+    for ov in d["innings"][1]["overs"]:
+        for dl in ov["deliveries"]:
+            if dl["bowler"] == "JJ Bumrah":
+                ex = dl.get("extras", {}); r += dl["runs"]["batter"] + ex.get("wides", 0) + ex.get("noballs", 0); b += ("wides" not in ex and "noballs" not in ex); k += sum(w_["kind"] not in ("run out", "retired hurt", "retired out") for w_ in dl.get("wickets", []))
+    return r, b, k
+
+
+B20 = bumrah_2020(); assert B20 == (88, 156, 1), B20                     # Wellington 2020, NZ's first innings: 26 overs, 88 runs, 1 wicket
 c = V.Claims("nz_ind_1st_test_day1")
+c.check("Bumrah, first innings of the 2020 Wellington Test: 1 for 88 in 26 overs", (1, 88, 26), {CSH: (B20[2], B20[0], B20[1] // 6)}, scope="archive")
 c.check("score at tea: 140/5; Nicholls 66*, Phillips 42*", (140, 5, 66, 42), {CB: (140, 5, 66, 42), TT: (140, 5, 66, 42), OP: (140, 5, 66, 42)})
 c.check("figures at tea: Bumrah 3/31, Akash Deep 1/22, Kamboj 1/39", ((3, 31), (1, 22), (1, 39)), {CB: ((3, 31), (1, 22), (1, 39)), TT: ((3, 31), (1, 22), (1, 39))})
 c.check("wickets: Latham, Mitchell, Blundell to Bumrah; Conway to Kamboj; Ravindra to Akash Deep", 5, {CB: 5, OP: 5})
@@ -98,10 +113,23 @@ STAND = {"type": "stats", "head": {"t": "173 UNBROKEN", "sub": "NICHOLLS AND PHI
 BOWLERS = {"type": "bars", "head": {"t": "THE BOWLERS", "sub": "ECONOMY RATE · RUNS PER OVER"}, "max": 4.5, "dec": 2, "items": [{"label": "AKASH DEEP · 15-5-33-1", "value": round(33 / 15, 2), "color": "gold"}, {"label": "SUNDAR · 16-2-38-0", "value": round(38 / 16, 2), "color": "ink"}, {"label": "BUMRAH · 17-5-52-3", "value": round(52 / 17, 2), "color": "ink"}, {"label": "KAMBOJ · 18-4-57-1", "value": round(57 / 18, 2), "color": "ink"}, {"label": "PRASIDH · 16-2-58-0", "value": round(58 / 16, 2), "color": "red"}]}
 END = {"type": "timeline", "head": {"t": "THE LAST HALF HOUR"}, "events": [{"y": "73.3", "t": "Nicholls dropped on 102", "c": "red"}, {"y": "80", "t": "second new ball taken", "hl": True}, {"y": "80.6", "t": "Bumrah's toe-crusher: survived", "c": "red"}, {"y": "82", "t": "stumps: 243/5", "hl": True}]}
 CTA_L = {"type": "cta", "lines": [{"t": "WHO WON"}, {"t": "DAY ONE?", "c": "gold"}], "pill": "SUBSCRIBE · MATCH BREAKDOWNS"}
+IN, CT = "data/licensed/in/", "data/licensed/cut/"
+COLD = {"type": "photohero", "kicker": "BUMRAH'S LAST BALL OF THE DAY · OVER 81", "lines": [{"t": "ONE INSWINGER."}, {"t": "ONE TOE.", "c": "gold"}], "img": CT + "nz_day1_bumrah_appeal_crop.png", "sub": ["Nicholls jammed his bat down in time.", "Earlier that day: 70 for 5."]}
+TRAJ = {"type": "photocard", "kicker": "OVER ONE", "title": "Bowled.", "img": IN + "nz_day1_latham_bowled.jpg", "tag": "BOWLED · 0.3 OV", "name": "LATHAM b BUMRAH", "mono": "FULL · 4TH-STUMP LINE · SEAM UPRIGHT", "caption": "Latham left it, expecting it to go away. It came back.", "chip": "2/1", "chip_sub": "NEW ZEALAND"}
+THENNOW = {"type": "photovs", "kicker": "SAME GROUND · SIX YEARS APART", "lines": [{"t": "Wellington:"}, {"t": "then and now.", "c": "gold"}], "items": [
+    {"img": CT + "bumrah_wellington_2020_crop.png", "h": 600, "h_long": 420, "ttl": "WELLINGTON 2020", "big": "1/88", "sub": "FIRST INNINGS · 26 OVERS", "ink": True}, {"img": CT + "nz_day1_bumrah_appeal_crop.png", "h": 470, "h_long": 350, "ttl": "WELLINGTON 2026", "big": "3/52", "sub": "DAY 1 · 17 OVERS", "ink": False}],
+    "foot": ["Bumrah, in the first innings of each Wellington Test.", "OUR ARCHIVE (2020) · DAY 1 OF 2026 SO FAR"]}
+THENNOW_VO = "Bumrah has been here before. In the first innings of the Wellington Test in twenty twenty, he took one wicket for eighty-eight, in twenty-six overs. This time, his first over had Latham."
+STANDP = {"type": "photostand", "kicker": "NEW ZEALAND'S SIXTH-WICKET STAND", "title": "173 unbroken.", "items": [{"img": IN + "nz_day1_nicholls_hundred.jpg", "big": "113*", "name": "NICHOLLS · 221 BALLS"}, {"img": IN + "nz_day1_phillips_fifty.jpg", "big": "94*", "name": "PHILLIPS · 182 BALLS"}], "chips": [("54", "SINGLES"), ("7", "TWOS"), ("7", "THREES"), ("21", "FOURS")]}
+POLL = {"type": "photopoll", "kicker": "YOUR CALL · COMMENT 1, 2 OR 3", "items": [
+    {"h": "NICHOLLS", "d": "113* · the fifth Basin hundred", "img": IN + "nz_day1_nicholls_hundred.jpg", "crop_short": (400, 63, 760, 537), "crop_long": (440, 40, 800, 400)},
+    {"h": "PHILLIPS", "d": "94* · 173 together", "img": IN + "nz_day1_phillips_fifty.jpg", "crop_short": (255, 0, 615, 474), "crop_long": (260, 0, 620, 360)},
+    {"h": "BUMRAH", "d": "3 for 52 · all before the 29th over", "img": IN + "nz_day1_bumrah_appeal.jpg", "crop_short": (215, 0, 575, 474), "crop_long": (215, 0, 575, 360), "c": "gold"}]}
 long = [
     {"vo": "The last over of the day. Jasprit Bumrah has the second new ball. He bowls an inswinger at Henry Nicholls' toes, and Nicholls jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?", "chapter": "Intro", "scene": COLD},
     {"vo": "Rewind to the toss. Shubman Gill chose to bowl, and the pitch gave him every reason: fifteen millimetres of grass, and moisture on top. Everything you're about to hear comes from our ball-by-ball of the day.", "chapter": "Act one: the morning India owned", "scene": COND},
     {"vo": "Over one. Bumrah, full, on the fourth-stump line, the seam bolt upright. Tom Latham, sure it would leave, left it. It came back. Two for one, and the day had barely begun.", "scene": TRAJ},
+    {"vo": THENNOW_VO, "chapter": "Then and now", "scene": THENNOW},
     {"vo": "Devon Conway lasted three more overs, and one review. He was given out caught behind, and the replay showed the noise came before the ball reached the bat. Not out. Then Anshul Kamboj bowled the ball he'd been waiting for: full, angled in, seaming away. Conway edged. Twelve for two.", "scene": TL1},
     {"vo": "Then the luck swung back and forth. Rachin Ravindra survived an edge India did not review, and a direct hit that missed. Akash Deep got him anyway: extra bounce, short of a length. The next over, Bumrah's good-length nipbacker found Daryl Mitchell's inside edge, and Yashasvi Jaiswal took it at short leg. Fifty-two for four.", "scene": TWO},
     {"vo": "At lunch, sixty for four. New Zealand were playing and missing, or edging, at one ball in four. India had the match by the throat.", "chapter": "Lunch: 60 for 4", "scene": LUNCH},
@@ -114,7 +142,7 @@ long = [
     {"vo": "And the ball itself. The new ball did the damage: three wickets for fifty-two in twenty overs. Over the next sixty, the old ball took two more, and cost a hundred and eighty-four runs.", "chapter": "The ball", "scene": BALLAGE},
     {"vo": "Act three. The stand that would not break.", "chapter": "Act three: the stand", "scene": ACT(3, ("THE STAND THAT", "WOULD NOT BREAK"), "Overs 29 to 82")},
     {"vo": "Henry Nicholls played the innings his record promised. A hundred and thirteen not out, off two hundred and twenty-one balls, his fifth Test hundred at the Basin Reserve. In our archive, he had four here before today. Playing late, behind the line. Cricbuzz had his control at ninety per cent.", "chapter": "Nicholls", "scene": NICH},
-    {"vo": "With Glenn Phillips, ninety-four not out, he built a stand of one hundred and seventy-three. Fifty-four singles. Seven twos. Seven threes. Twenty-one fours. Seventy-three per cent of the balls were dots, but they never let India settle.", "scene": STAND},
+    {"vo": "With Glenn Phillips, ninety-four not out, he built a stand of one hundred and seventy-three. Fifty-four singles. Seven twos. Seven threes. Twenty-one fours. Seventy-three per cent of the balls were dots, but they never let India settle.", "scene": STANDP},
     {"vo": "Put the whole day on one strip. Five wickets in the first twenty-eight overs. None in the next fifty-three.", "chapter": "The whole day", "scene": STRIP},
     {"vo": "The bowlers. Bumrah, three for fifty-two, and in the forty-eight balls after Blundell, thirty-five runs and no wicket. Akash Deep, one for thirty-three. Washington Sundar, none for thirty-eight in sixteen overs. Kamboj, one for fifty-seven. Prasidh Krishna, none for fifty-eight, with nine fours.", "chapter": "The bowlers", "scene": BOWLERS},
     {"vo": "India also dropped a chance. Nicholls, on a hundred and two, top-edged a pull, and Pant and Padikkal both stopped, each waiting for the other. At eighty overs, India took the second new ball. Bumrah's first ball went for four. Then five dots, the last one that toe-crusher. Nicholls jammed his bat down just in time. Two hundred and forty-three for five. That is the ball we started with.", "chapter": "The last half hour", "scene": END},
@@ -123,7 +151,9 @@ long = [
 ]
 short = [
     {"vo": "Bumrah's last ball of the day. An inswinger at Nicholls' toes, and he jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?", "scene": COLD},
-    {"vo": "Rewind. India won the toss and bowled. Fifteen millimetres of grass, moisture on top. Over one: Bumrah, full, fourth-stump line, seam upright. Latham left it. It came back.", "scene": COND},
+    {"vo": "Rewind. India won the toss and bowled. Fifteen millimetres of grass, moisture on top.", "scene": COND},
+    {"vo": "Over one. Bumrah, full, fourth-stump line, seam upright. Latham left it, expecting it to go away. It came back.", "scene": TRAJ},
+    {"vo": THENNOW_VO, "scene": THENNOW},
     {"vo": "Conway reviewed a caught-behind, and survived. Two overs later Kamboj seamed one away, and Conway edged to Pant. Twelve for two.", "scene": TL1},
     {"vo": "Ravindra survived an edge nobody reviewed. Then Akash Deep's bounce had him, and Bumrah's nipbacker took Mitchell at short leg. Sixty for four at lunch.", "scene": TWO},
     {"vo": "After lunch, Blundell edged to Gill. Seventy for five. Two full balls, one good length, two short of a length: all five found something in the surface. If you had stopped here, it was India's day.", "scene": WM},
@@ -132,9 +162,8 @@ short = [
     {"vo": "Then it turned. Phillips, on six, survived an lbw review, and India lost it. Inside edges rolled past the stumps. A catch was dropped.", "scene": LIFE},
     {"vo": "And the sun came out. False shots fell from twenty-five per cent before lunch to fourteen after. On good-length balls, from thirty to thirteen.", "scene": EASE},
     {"vo": "India drifted shorter, too. Nineteen per cent of their seam balls were short before lunch. After lunch, thirty-six.", "scene": DRIFT},
-    {"vo": "Henry Nicholls: a hundred and thirteen not out, his fifth hundred at the Basin Reserve. Glenn Phillips: ninety-four not out. Together, one seventy-three.", "scene": {"type": "stats", "head": {"t": "NEW ZEALAND'S SIXTH-WICKET STAND", "sub": "UNBROKEN · 173 OFF 327 BALLS"}, "tiles": [{"v": "113*", "l": "NICHOLLS · 221 BALLS", "c": "gold"}, {"v": "94*", "l": "PHILLIPS · 182 BALLS", "c": "gold"}]}},
+    {"vo": "Henry Nicholls: a hundred and thirteen not out, his fifth hundred at the Basin Reserve. Glenn Phillips: ninety-four not out. Together, one seventy-three.", "scene": STANDP},
     {"vo": "Five wickets in the first twenty-eight overs. None in the next fifty-three.", "scene": STRIP},
-    {"vo": "Bumrah finished with three for fifty-two. After Blundell, forty-eight balls, thirty-five runs, and no wicket. His work was done by the twenty-ninth over.", "scene": {"type": "bignum", "head": {"t": "JASPRIT BUMRAH"}, "value": 3, "suffix": "/52", "label": "17 OVERS · ALL THREE WICKETS BEFORE THE 29TH OVER", "color": "gold", "note": "after Blundell: 48 balls, 35 runs, no wicket"}},
     {"vo": "Which brings us back to Bumrah's last ball. Two hundred and forty-three for five at stumps. That toe-crusher was the one that got away.", "scene": {"type": "statement", "kicker": "STUMPS · DAY 1", "lines": [{"t": "243 FOR 5."}, {"t": "NZ ON TOP.", "c": "gold"}], "sub": "Second new ball taken at 80 overs"}},
     {"vo": "So who won day one? Nicholls, Phillips, or Bumrah? Comment one, two or three, and tell us what India should do first on day two.", "scene": POLL},
     dict(YT_CTA, vo="Subscribe, and we'll break down day two the same way."),

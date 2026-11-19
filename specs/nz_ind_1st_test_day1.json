@@ -85,7 +85,7 @@
    "vo": "The last over of the day. जसप्रीत बुमराह has the second new ball. He bowls an inswinger at Henry Nicholls' toes, and Nicholls jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?",
    "chapter": "Intro",
    "scene": {
-    "type": "statement",
+    "type": "photohero",
     "kicker": "BUMRAH'S LAST BALL OF THE DAY · OVER 81",
     "lines": [
      {
@@ -96,7 +96,11 @@
       "c": "gold"
      }
     ],
-    "sub": "Nicholls jammed his bat down in time. Earlier that day: 70 for 5."
+    "img": "data/licensed/cut/nz_day1_bumrah_appeal_crop.png",
+    "sub": [
+     "Nicholls jammed his bat down in time.",
+     "Earlier that day: 70 for 5."
+    ]
    }
   },
   {
@@ -130,25 +134,57 @@
   {
    "vo": "Over one. बुमराह, full, on the fourth-stump line, the seam bolt upright. Tom Latham, sure it would leave, left it. It came back. Two for one, and the day had barely begun.",
    "scene": {
-    "type": "trajectory",
-    "head": {
-     "t": "BUMRAH'S FIRST OVER",
-     "sub": "ILLUSTRATIVE · SIDE-ON · LATHAM B BUMRAH"
-    },
-    "hl": [
-     "FULL"
-    ],
-    "bowler_c": "ink",
-    "balls": [
+    "type": "photocard",
+    "kicker": "OVER ONE",
+    "title": "Bowled.",
+    "img": "data/licensed/in/nz_day1_latham_bowled.jpg",
+    "tag": "BOWLED · 0.3 OV",
+    "name": "LATHAM b BUMRAH",
+    "mono": "FULL · 4TH-STUMP LINE · SEAM UPRIGHT",
+    "caption": "Latham left it, expecting it to go away. It came back.",
+    "chip": "2/1",
+    "chip_sub": "NEW ZEALAND"
+   }
+  },
+  {
+   "vo": "बुमराह has been here before. In the first innings of the Wellington Test in twenty twenty, he took one wicket for eighty-eight, in twenty-six overs. This time, his first over had Latham.",
+   "chapter": "Then and now",
+   "scene": {
+    "type": "photovs",
+    "kicker": "SAME GROUND · SIX YEARS APART",
+    "lines": [
      {
-      "length": 3.2,
-      "end": 0.4,
-      "label": "FULL · 4TH-STUMP LINE",
-      "c": "gold",
-      "at": 0.3
+      "t": "Wellington:"
+     },
+     {
+      "t": "then and now.",
+      "c": "gold"
      }
     ],
-    "note": "seam upright: Latham left it, it came back in"
+    "items": [
+     {
+      "img": "data/licensed/cut/bumrah_wellington_2020_crop.png",
+      "h": 600,
+      "h_long": 420,
+      "ttl": "WELLINGTON 2020",
+      "big": "1/88",
+      "sub": "FIRST INNINGS · 26 OVERS",
+      "ink": true
+     },
+     {
+      "img": "data/licensed/cut/nz_day1_bumrah_appeal_crop.png",
+      "h": 470,
+      "h_long": 350,
+      "ttl": "WELLINGTON 2026",
+      "big": "3/52",
+      "sub": "DAY 1 · 17 OVERS",
+      "ink": false
+     }
+    ],
+    "foot": [
+     "Bumrah, in the first innings of each Wellington Test.",
+     "OUR ARCHIVE (2020) · DAY 1 OF 2026 SO FAR"
+    ]
    }
   },
   {
@@ -505,32 +541,38 @@
   {
    "vo": "With Glenn Phillips, ninety-four not out, he built a stand of one hundred and seventy-three. Fifty-four singles. Seven twos. Seven threes. Twenty-one fours. Seventy-three per cent of the balls were dots, but they never let India settle.",
    "scene": {
-    "type": "stats",
-    "head": {
-     "t": "173 UNBROKEN",
-     "sub": "NICHOLLS AND PHILLIPS · 327 BALLS"
-    },
-    "tiles": [
+    "type": "photostand",
+    "kicker": "NEW ZEALAND'S SIXTH-WICKET STAND",
+    "title": "173 unbroken.",
+    "items": [
      {
-      "v": "54",
-      "l": "SINGLES",
-      "c": "ink"
+      "img": "data/licensed/in/nz_day1_nicholls_hundred.jpg",
+      "big": "113*",
+      "name": "NICHOLLS · 221 BALLS"
      },
      {
-      "v": "7",
-      "l": "TWOS",
-      "c": "gold"
-     },
-     {
-      "v": "7",
-      "l": "THREES",
-      "c": "gold"
-     },
-     {
-      "v": "21",
-      "l": "FOURS",
-      "c": "red"
+      "img": "data/licensed/in/nz_day1_phillips_fifty.jpg",
+      "big": "94*",
+      "name": "PHILLIPS · 182 BALLS"
      }
+    ],
+    "chips": [
+     [
+      "54",
+      "SINGLES"
+     ],
+     [
+      "7",
+      "TWOS"
+     ],
+     [
+      "7",
+      "THREES"
+     ],
+     [
+      "21",
+      "FOURS"
+     ]
     ]
    }
   },
@@ -967,24 +1009,60 @@
    "vo": "So who won day one? New Zealand, the sun, and a catch nobody took. India's reply is on day two. As Cricbuzz's commentators said at tea, anything over two hundred and fifty could hurt India later, and that is only fifty runs away. Your call: who won day one? Nicholls, Phillips, or बुमराह? Comment one, two or three, and tell us what India should do first.",
    "chapter": "Day two",
    "scene": {
-    "type": "list",
-    "head": {
-     "t": "YOUR CALL",
-     "sub": "WHO WON DAY ONE? COMMENT 1, 2 OR 3"
-    },
+    "type": "photopoll",
+    "kicker": "YOUR CALL · COMMENT 1, 2 OR 3",
     "items": [
      {
       "h": "NICHOLLS",
-      "d": "113 not out, the fifth hundred at the Basin",
-      "c": "gold"
+      "d": "113* · the fifth Basin hundred",
+      "img": "data/licensed/in/nz_day1_nicholls_hundred.jpg",
+      "crop_short": [
+       400,
+       63,
+       760,
+       537
+      ],
+      "crop_long": [
+       440,
+       40,
+       800,
+       400
+      ]
      },
      {
       "h": "PHILLIPS",
-      "d": "94 not out, 173 together"
+      "d": "94* · 173 together",
+      "img": "data/licensed/in/nz_day1_phillips_fifty.jpg",
+      "crop_short": [
+       255,
+       0,
+       615,
+       474
+      ],
+      "crop_long": [
+       260,
+       0,
+       620,
+       360
+      ]
      },
      {
       "h": "BUMRAH",
-      "d": "3 for 52, all before the 29th over"
+      "d": "3 for 52 · all before the 29th over",
+      "img": "data/licensed/in/nz_day1_bumrah_appeal.jpg",
+      "crop_short": [
+       215,
+       0,
+       575,
+       474
+      ],
+      "crop_long": [
+       215,
+       0,
+       575,
+       360
+      ],
+      "c": "gold"
      }
     ]
    }
@@ -1010,7 +1088,7 @@
   {
    "vo": "बुमराह's last ball of the day. An inswinger at Nicholls' toes, and he jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?",
    "scene": {
-    "type": "statement",
+    "type": "photohero",
     "kicker": "BUMRAH'S LAST BALL OF THE DAY · OVER 81",
     "lines": [
      {
@@ -1021,11 +1099,15 @@
       "c": "gold"
      }
     ],
-    "sub": "Nicholls jammed his bat down in time. Earlier that day: 70 for 5."
+    "img": "data/licensed/cut/nz_day1_bumrah_appeal_crop.png",
+    "sub": [
+     "Nicholls jammed his bat down in time.",
+     "Earlier that day: 70 for 5."
+    ]
    }
   },
   {
-   "vo": "Rewind. India won the toss and bowled. Fifteen millimetres of grass, moisture on top. Over one: बुमराह, full, fourth-stump line, seam upright. Latham left it. It came back.",
+   "vo": "Rewind. India won the toss and bowled. Fifteen millimetres of grass, moisture on top.",
    "scene": {
     "type": "stats",
     "head": {
@@ -1048,6 +1130,61 @@
       "l": "INDIA WON THE TOSS",
       "c": "red"
      }
+    ]
+   }
+  },
+  {
+   "vo": "Over one. बुमराह, full, fourth-stump line, seam upright. Latham left it, expecting it to go away. It came back.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "OVER ONE",
+    "title": "Bowled.",
+    "img": "data/licensed/in/nz_day1_latham_bowled.jpg",
+    "tag": "BOWLED · 0.3 OV",
+    "name": "LATHAM b BUMRAH",
+    "mono": "FULL · 4TH-STUMP LINE · SEAM UPRIGHT",
+    "caption": "Latham left it, expecting it to go away. It came back.",
+    "chip": "2/1",
+    "chip_sub": "NEW ZEALAND"
+   }
+  },
+  {
+   "vo": "बुमराह has been here before. In the first innings of the Wellington Test in twenty twenty, he took one wicket for eighty-eight, in twenty-six overs. This time, his first over had Latham.",
+   "scene": {
+    "type": "photovs",
+    "kicker": "SAME GROUND · SIX YEARS APART",
+    "lines": [
+     {
+      "t": "Wellington:"
+     },
+     {
+      "t": "then and now.",
+      "c": "gold"
+     }
+    ],
+    "items": [
+     {
+      "img": "data/licensed/cut/bumrah_wellington_2020_crop.png",
+      "h": 600,
+      "h_long": 420,
+      "ttl": "WELLINGTON 2020",
+      "big": "1/88",
+      "sub": "FIRST INNINGS · 26 OVERS",
+      "ink": true
+     },
+     {
+      "img": "data/licensed/cut/nz_day1_bumrah_appeal_crop.png",
+      "h": 470,
+      "h_long": 350,
+      "ttl": "WELLINGTON 2026",
+      "big": "3/52",
+      "sub": "DAY 1 · 17 OVERS",
+      "ink": false
+     }
+    ],
+    "foot": [
+     "Bumrah, in the first innings of each Wellington Test.",
+     "OUR ARCHIVE (2020) · DAY 1 OF 2026 SO FAR"
     ]
    }
   },
@@ -1335,22 +1472,38 @@
   {
    "vo": "Henry Nicholls: a hundred and thirteen not out, his fifth hundred at the Basin Reserve. Glenn Phillips: ninety-four not out. Together, one seventy-three.",
    "scene": {
-    "type": "stats",
-    "head": {
-     "t": "NEW ZEALAND'S SIXTH-WICKET STAND",
-     "sub": "UNBROKEN · 173 OFF 327 BALLS"
-    },
-    "tiles": [
+    "type": "photostand",
+    "kicker": "NEW ZEALAND'S SIXTH-WICKET STAND",
+    "title": "173 unbroken.",
+    "items": [
      {
-      "v": "113*",
-      "l": "NICHOLLS · 221 BALLS",
-      "c": "gold"
+      "img": "data/licensed/in/nz_day1_nicholls_hundred.jpg",
+      "big": "113*",
+      "name": "NICHOLLS · 221 BALLS"
      },
      {
-      "v": "94*",
-      "l": "PHILLIPS · 182 BALLS",
-      "c": "gold"
+      "img": "data/licensed/in/nz_day1_phillips_fifty.jpg",
+      "big": "94*",
+      "name": "PHILLIPS · 182 BALLS"
      }
+    ],
+    "chips": [
+     [
+      "54",
+      "SINGLES"
+     ],
+     [
+      "7",
+      "TWOS"
+     ],
+     [
+      "7",
+      "THREES"
+     ],
+     [
+      "21",
+      "FOURS"
+     ]
     ]
    }
   },
@@ -1711,20 +1864,6 @@
    }
   },
   {
-   "vo": "बुमराह finished with three for fifty-two. After Blundell, forty-eight balls, thirty-five runs, and no wicket. His work was done by the twenty-ninth over.",
-   "scene": {
-    "type": "bignum",
-    "head": {
-     "t": "JASPRIT BUMRAH"
-    },
-    "value": 3,
-    "suffix": "/52",
-    "label": "17 OVERS · ALL THREE WICKETS BEFORE THE 29TH OVER",
-    "color": "gold",
-    "note": "after Blundell: 48 balls, 35 runs, no wicket"
-   }
-  },
-  {
    "vo": "Which brings us back to बुमराह's last ball. Two hundred and forty-three for five at stumps. That toe-crusher was the one that got away.",
    "scene": {
     "type": "statement",
@@ -1744,24 +1883,60 @@
   {
    "vo": "So who won day one? Nicholls, Phillips, or बुमराह? Comment one, two or three, and tell us what India should do first on day two.",
    "scene": {
-    "type": "list",
-    "head": {
-     "t": "YOUR CALL",
-     "sub": "WHO WON DAY ONE? COMMENT 1, 2 OR 3"
-    },
+    "type": "photopoll",
+    "kicker": "YOUR CALL · COMMENT 1, 2 OR 3",
     "items": [
      {
       "h": "NICHOLLS",
-      "d": "113 not out, the fifth hundred at the Basin",
-      "c": "gold"
+      "d": "113* · the fifth Basin hundred",
+      "img": "data/licensed/in/nz_day1_nicholls_hundred.jpg",
+      "crop_short": [
+       400,
+       63,
+       760,
+       537
+      ],
+      "crop_long": [
+       440,
+       40,
+       800,
+       400
+      ]
      },
      {
       "h": "PHILLIPS",
-      "d": "94 not out, 173 together"
+      "d": "94* · 173 together",
+      "img": "data/licensed/in/nz_day1_phillips_fifty.jpg",
+      "crop_short": [
+       255,
+       0,
+       615,
+       474
+      ],
+      "crop_long": [
+       260,
+       0,
+       620,
+       360
+      ]
      },
      {
       "h": "BUMRAH",
-      "d": "3 for 52, all before the 29th over"
+      "d": "3 for 52 · all before the 29th over",
+      "img": "data/licensed/in/nz_day1_bumrah_appeal.jpg",
+      "crop_short": [
+       215,
+       0,
+       575,
+       474
+      ],
+      "crop_long": [
+       215,
+       0,
+       575,
+       360
+      ],
+      "c": "gold"
      }
     ]
    }
