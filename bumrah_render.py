@@ -77,15 +77,15 @@ def s_cold(t, D):
 def s_wrong(t, D):
     im = backdrop("bumrah_load_brisbane.jpg"); card(im, "bumrah_load_brisbane.jpg", (40, 330, 1000, 600), t, D, crop=(.45, .4))
     txt(im, (70, 1000), "THE WRONG ACTION.", BS(150), WH, seg(t, .4, 1.0)); txt(im, (70, 1140), "THE BEST AVERAGE.", BS(150), AM, seg(t, 1.2, 1.8))
-    for i, s_ in enumerate(("A SHORT, STUTTERING RUN-UP", "AN ELBOW THAT BENDS THE 'WRONG' WAY", "A BACK THAT HAS FRACTURED")): a = seg(t, 3.0 + i * 1.2, 3.6 + i * 1.2); rect(im, (70, 1350 + i * 110, 1010, 1440 + i * 110), (10, 14, 26), a * .85, 16, AM, 2); txt(im, (100, 1410 + i * 110), s_, MB(30), WH, a)
+    for i, s_ in enumerate(("A SHORT, STUTTERING RUN-UP", "AN ELBOW THAT BENDS THE 'WRONG' WAY", "A BACK THAT HAS FRACTURED")): a = seg(t, 3.0 + i * 1.2, 3.6 + i * 1.2); rect(im, (70, 1330 + i * 130, 1010, 1426 + i * 130), (10, 14, 26), a * .85, 16, AM, 2); txt(im, (104, 1378 + i * 130), s_, MB(30), WH, a, "lm")
     return im
 def s_numbers(t, D):
     im = plain(); c = Image.open(CUT + "nz_day1_bumrah_appeal_crop.png").convert("RGBA"); k = 640 / c.height; c = c.resize((int(c.width * k), 640), Image.LANCZOS); a = seg(t, .2, 1.0)
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(glow).ellipse((330, 1180, 1050, 1900), fill=(255, 200, 80, 60)); im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(70))); im.alpha_composite(Image.blend(Image.new("RGBA", c.size, (0, 0, 0, 0)), c, a), (560, 1230))
-    wk = int(234 * seg(t, .3, 2.2)); txt(im, (70, 140), "TEST CAREER · 52 MATCHES", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), f"{wk}", BS(330), WH); txt(im, (70, 500), "WICKETS", BS(100), WH, seg(t, .5, 1.0))
-    av = 19.79 * seg(t, 1.2, 3.2); txt(im, (70, 610), f"{av:.2f}", BS(330), AM, seg(t, 1.0, 1.5)); txt(im, (70, 920), "RUNS PER WICKET", BS(100), AM, seg(t, 1.6, 2.1))
-    bar(im, 70, 1070, 700, 19.79 / 30, AM, "BUMRAH", "19.8", 4.0, t); bar(im, 70, 1230, 700, 26.1 / 30, (90, 190, 255), "47 OTHER QUICKS SINCE 2018", "26.1", 5.0, t)
-    txt(im, (70, 1450), "THE FIRST BOWLER TO 200 TEST WICKETS", IB(32), WH, seg(t, 7, 7.6)); txt(im, (70, 1495), "AT AN AVERAGE UNDER 20", IB(32), WH, seg(t, 7.4, 8.0)); txt(im, (70, 1560), "TESTS SINCE 2018 · IN OUR ARCHIVE", MO(22), MU, seg(t, 8, 8.6)); return im
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(glow).ellipse((330, 1180, 1050, 1900), fill=(255, 200, 80, 60)); im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(70))); im.alpha_composite(Image.blend(Image.new("RGBA", c.size, (0, 0, 0, 0)), c, a), (W - c.width - 10, 1290))
+    wk = int(234 * seg(t, .3, 2.2)); txt(im, (70, 140), "TEST CAREER · 52 MATCHES", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), f"{wk}", BS(330), WH); txt(im, (70, 530), "WICKETS", BS(100), WH, seg(t, .5, 1.0))
+    av = 19.79 * seg(t, 1.2, 3.2); txt(im, (70, 670), f"{av:.2f}", BS(330), AM, seg(t, 1.0, 1.5)); txt(im, (70, 990), "RUNS PER WICKET", BS(100), AM, seg(t, 1.6, 2.1))
+    bar(im, 70, 1150, 700, 19.79 / 30, AM, "BUMRAH", "19.8", 4.0, t); bar(im, 70, 1310, 700, 26.1 / 30, (90, 190, 255), "47 OTHER QUICKS SINCE 2018", "26.1", 5.0, t)
+    paras(im, 70, 1530, "THE FIRST BOWLER TO 200 TEST WICKETS AT AN AVERAGE UNDER 20", IB(32), WH, seg(t, 7, 7.8), 520, 44); txt(im, (70, 1710), "TESTS SINCE 2018 · IN OUR ARCHIVE", MO(22), MU, seg(t, 8.2, 8.8)); return im
 def s_frames(t, D):
     im = plain(); txt(im, (70, 140), "THE ACTION", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), "ONE DELIVERY.", BS(150), WH, seg(t, .2, .9)); txt(im, (70, 330), "FOUR FRAMES.", BS(150), AM, seg(t, .6, 1.3))
     items = (("bumrah_load_brisbane.jpg", "1 · LOAD", (.45, .4)), ("bumrah_side_jump_clean.jpg", "2 · LEAP", (.3, .3)), ("bumrah_side_jump_leeds.jpg", "3 · BOUND", (.3, .3)), ("bumrah_high_arm_closeup.jpg", "4 · RELEASE", (.85, .3)))
@@ -94,33 +94,44 @@ def s_frames(t, D):
     paras(im, 70, 1560, "A short run-up, a leap, a bound, and a release from a hyperextended arm.", IB(38), WH, seg(t, 9.5, 10.2), 940, 52); return im
 def s_callouts(t, D):
     im = backdrop("bumrah_high_arm_closeup.jpg"); card(im, "bumrah_high_arm_closeup.jpg", (40, 300, 1000, 640), t, D, crop=(.8, .3))
-    for i, (x, y, w, s_, s2) in enumerate(((60, 980, 940, "ELBOW HYPEREXTENDS", "The arm bends the other way. ICC allows 15° of straightening."), (60, 1170, 940, "RELEASE ~HALF A METRE CLOSER", "Less time for the batter. About 12 ms at 140 km/h (our arithmetic)."), (60, 1360, 940, "BACKSPIN FROM THE WRIST", "About 5 cm more bounce off a good length."))):
-        a = seg(t, 1.5 + i * 3.0, 2.2 + i * 3.0); rect(im, (x, y, x + w, y + 160), (10, 14, 26), a * .9, 18, AM, 3); txt(im, (x + 30, y + 22), s_, BS(56), AM, a); paras(im, x + 30, y + 90, s2, IM(26), WH, a, w - 60, 34)
+    for i, (x, y, w, s_, s2) in enumerate(((60, 960, 940, "ELBOW HYPEREXTENDS", "The arm bends the other way. ICC allows 15° of straightening."), (60, 1190, 940, "RELEASE ~HALF A METRE CLOSER", "Less time for the batter. About 12 ms at 140 km/h (our arithmetic)."), (60, 1420, 940, "BACKSPIN FROM THE WRIST", "About 5 cm more bounce off a good length."))):
+        a = seg(t, 1.5 + i * 3.0, 2.2 + i * 3.0); rect(im, (x, y, x + w, y + 196), (10, 14, 26), a * .9, 18, AM, 3); txt(im, (x + 34, y + 24), s_, BS(56), AM, a); paras(im, x + 34, y + 100, s2, IM(26), WH, a, w - 68, 36)
     return im
 def s_release(t, D):
-    im = plain(); txt(im, (70, 140), "WHY HE IS HARD TO READ", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), "THE SAME RELEASE", BS(140), WH, seg(t, .2, .9)); txt(im, (70, 320), "FOR EVERY LENGTH.", BS(140), AM, seg(t, .6, 1.3))
-    gy = 1500; rel = (150, 800); d = ImageDraw.Draw(im); rect(im, (70, gy, 1010, gy + 6), (120, 160, 220), 1.0)
-    for k in range(0, 9): x = 960 - k * 100; d.line((x, gy, x, gy + 18), fill=(120, 160, 220, 255), width=2); txt(im, (x, gy + 52), f"{k}", MO(22), MU, 1, "ms")
-    rect(im, (960, gy - 90, 972, gy), WH, 1.0)
-    p = seg(t, 1.5, 6.0)
-    for L in (2, 5, 8):
-        tx = 960 - L * 100; pts = [(rel[0] + (tx - rel[0]) * u, rel[1] + (gy - rel[1]) * u) for u in np.linspace(0, p, 40)]; d.line(pts, fill=(90, 190, 255, 255), width=4)
-    d.ellipse((rel[0] - 18, rel[1] - 18, rel[0] + 18, rel[1] + 18), fill=AM + (255,)); txt(im, (rel[0] - 40, rel[1] - 60), "RELEASE · ~1.96 M", MB(26), AM, seg(t, 1.0, 1.6))
-    paras(im, 70, 1700, "Lengths 2, 5 and 8 metres from the stumps: the ball leaves the hand from the same height.", IM(32), WH, seg(t, 6.5, 7.2), 940, 44); return im
+    im = plain(); txt(im, (70, 140), "WHY HE IS HARD TO READ", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), "THE SAME RELEASE", BS(140), WH, seg(t, .2, .9)); txt(im, (70, 330), "FOR EVERY LENGTH.", BS(140), AM, seg(t, .6, 1.3))
+    d = ImageDraw.Draw(im, "RGBA"); gy = 1300; px = 100; sx_ = 1000 - 110; ppm = 96; vy = 230                     # ground line, horizontal px per metre, vertical px per metre (exaggerated x2.4)
+    stx = 940; rel = (150, gy - int(1.96 * vy))
+    pitch = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ImageDraw.Draw(pitch).rectangle((110, gy - 4, stx + 60, gy + 34), fill=(120, 96, 60, 150)); im.alpha_composite(pitch)         # the strip
+    d.line((70, gy, 1010, gy), fill=(150, 190, 245, 255), width=5)
+    for k in range(0, 9): x = stx - k * ppm; d.line((x, gy, x, gy + 22), fill=(150, 190, 245, 255), width=3); txt(im, (x, gy + 64), f"{k}", MO(26), MU, 1, "ms")
+    txt(im, (stx - 4 * ppm, gy + 108), "METRES FROM THE STUMPS", MB(22), MU, 1, "ms")
+    for k, xx in enumerate((stx - 14, stx, stx + 14)): d.rectangle((xx - 5, gy - int(.71 * vy), xx + 5, gy), fill=WH + (255,))
+    d.rectangle((stx - 20, gy - int(.71 * vy) - 8, stx + 20, gy - int(.71 * vy) - 2), fill=AM + (255,))                       # bails
+    d.line((rel[0], rel[1], rel[0], gy), fill=(255, 200, 80, 120), width=2); txt(im, (rel[0] + 16, (rel[1] + gy) // 2), "1.96 M", MB(28), AM, seg(t, 1.0, 1.6))
+    p = seg(t, 1.8, 6.5)
+    for L, nm in ((2, "FULL"), (5, "GOOD"), (8, "SHORT")):
+        tx = stx - L * ppm; n = 40
+        for u in range(n):
+            f0, f1 = u / n * p, (u + 1) / n * p; q0 = (rel[0] + (tx - rel[0]) * f0, rel[1] + (gy - rel[1]) * f0); q1 = (rel[0] + (tx - rel[0]) * f1, rel[1] + (gy - rel[1]) * f1); d.line((q0, q1), fill=(90, 190, 255, 255), width=5)
+        if p > .98:
+            hb = {2: .55, 5: .8, 8: 1.05}[L]; pts = [(tx + (stx - tx) * u, gy - hb * vy * math.sin(math.pi * u * .5) * .9) for u in np.linspace(0, 1, 30)]; d.line(pts, fill=(90, 190, 255, 140), width=3)
+            txt(im, (tx, gy - 30), nm, MB(24), WH, seg(t, 6.5, 7.0), "ms")
+    d.ellipse((rel[0] - 20, rel[1] - 20, rel[0] + 20, rel[1] + 20), fill=AM + (255,)); txt(im, (rel[0] - 40, rel[1] - 70), "RELEASE POINT", MB(26), AM, seg(t, 1.0, 1.6))
+    paras(im, 70, 1560, "Whether it pitches full, good or short, it leaves the hand from the same height. Schematic: the height is exaggerated.", IM(32), WH, seg(t, 7.5, 8.2), 940, 44); return im
 def s_stumps(t, D):
     im = backdrop("bumrah_bowls_brook_lords.jpg"); card(im, "bumrah_bowls_brook_lords.jpg", (160, 300, 760, 560), t, D, crop=(.5, .55), tag="BOWLED")
-    v = 52 * seg(t, .8, 2.6); txt(im, (70, 920), f"{int(v)}%", BS(420), AM, seg(t, .5, 1.0)); txt(im, (70, 1320), "OF HIS TEST WICKETS", BS(90), WH, seg(t, 1.6, 2.2)); txt(im, (70, 1410), "ARE BOWLED OR LBW", BS(90), WH, seg(t, 2.0, 2.6))
-    txt(im, (70, 1550), "33% for the other 47 pace bowlers since 2018.", IB(38), MU, seg(t, 5, 5.6)); txt(im, (70, 1610), "HE HITS THE STUMPS.", BS(80), AM, seg(t, 7, 7.6)); txt(im, (70, 1710), "TESTS SINCE 2018 · IN OUR ARCHIVE", MO(22), MU, seg(t, 8, 8.6)); return im
+    v = 52 * seg(t, .8, 2.6); txt(im, (70, 880), f"{int(v)}%", BS(420), AM, seg(t, .5, 1.0)); txt(im, (70, 1340), "OF HIS TEST WICKETS", BS(90), WH, seg(t, 1.6, 2.2)); txt(im, (70, 1440), "ARE BOWLED OR LBW", BS(90), WH, seg(t, 2.0, 2.6))
+    txt(im, (70, 1590), "33% for the other 47 pace bowlers since 2018.", IB(38), MU, seg(t, 5, 5.6)); txt(im, (70, 1670), "HE HITS THE STUMPS.", BS(80), AM, seg(t, 7, 7.6)); txt(im, (70, 1790), "TESTS SINCE 2018 · IN OUR ARCHIVE", MO(22), MU, seg(t, 8, 8.6)); return im
 def s_oldball(t, D):
     im = backdrop("bumrah_side_jump_leeds.jpg"); card(im, "bumrah_side_jump_leeds.jpg", (40, 300, 1000, 560), t, D, crop=(.35, .3)); txt(im, (70, 930), "BETTER WITH", BS(130), WH, seg(t, .3, .9)); txt(im, (70, 1050), "THE OLD BALL.", BS(130), AM, seg(t, .8, 1.4))
-    bar(im, 70, 1230, 900, 23.9 / 30, (90, 190, 255), "NEW BALL · FIRST 20 OVERS", "23.9", 2.4, t, 70); bar(im, 70, 1390, 900, 18.2 / 30, AM, "OLD BALL · AFTER OVER 20", "18.2", 3.4, t, 70)
-    paras(im, 70, 1590, "And on any pitch: about 70-75% of the match average, seaming or flat.", IB(34), WH, seg(t, 6.5, 7.2), 940, 46); txt(im, (70, 1750), "RUNS PER WICKET · TESTS SINCE 2018 · IN OUR ARCHIVE", MO(20), MU, seg(t, 7.5, 8.1)); return im
+    bar(im, 70, 1260, 900, 23.9 / 30, (90, 190, 255), "NEW BALL · FIRST 20 OVERS", "23.9", 2.4, t, 70); bar(im, 70, 1420, 900, 18.2 / 30, AM, "OLD BALL · AFTER OVER 20", "18.2", 3.4, t, 70)
+    paras(im, 70, 1620, "And on any pitch: about 70-75% of the match average, seaming or flat.", IB(34), WH, seg(t, 6.5, 7.2), 940, 46); txt(im, (70, 1790), "RUNS PER WICKET · TESTS SINCE 2018 · IN OUR ARCHIVE", MO(20), MU, seg(t, 7.5, 8.1)); return im
 def s_t20(t, D):
     im = plain((12, 14, 30), (2, 3, 8)); txt(im, (70, 140), "THE SHORT FORMAT", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), "THE YORKER", BS(150), WH, seg(t, .2, .9)); txt(im, (70, 330), "NOBODY HITS.", BS(150), AM, seg(t, .6, 1.3))
     bar(im, 70, 560, 900, 7.87 / 11, AM, "IPL DEATH OVERS · BUMRAH", "7.87", 1.5, t, 60); bar(im, 70, 700, 900, 9.6 / 11, (90, 190, 255), "THE LEAGUE, SAME SEASONS", "9.60", 2.3, t, 60)
     bar(im, 70, 880, 900, 6.35 / 11, AM, "VS LEFT-HANDERS · BUMRAH", "6.35", 3.4, t, 60); bar(im, 70, 1020, 900, 8.31 / 11, (90, 190, 255), "THE LEAGUE", "8.31", 4.2, t, 60)
     a = seg(t, 6, 6.7); rect(im, (70, 1230, 1010, 1420), (14, 20, 40), a, 18, AM, 3); txt(im, (100, 1290), "T20 WORLD CUP 2024", MB(26), AM, a); txt(im, (100, 1400), "15 WKTS AT 8.27", BS(100), WH, a, "ls")
-    a = seg(t, 8, 8.7); rect(im, (70, 1450, 1010, 1640), (14, 20, 40), a, 18, AM, 3); txt(im, (100, 1510), "T20 WORLD CUP 2026 FINAL", MB(26), AM, a); txt(im, (100, 1620), "4/15 · PLAYER OF THE MATCH", BS(80), WH, a, "ls"); txt(im, (70, 1780), "IPL 2013-2026 · IN OUR ARCHIVE", MO(22), MU, seg(t, 9, 9.6)); return im
+    a = seg(t, 8, 8.7); rect(im, (70, 1470, 1010, 1670), (14, 20, 40), a, 18, AM, 3); txt(im, (100, 1522), "T20 WORLD CUP 2026 FINAL", MB(26), AM, a); txt(im, (100, 1640), "4/15 · PLAYER OF THE MATCH", BS(80), WH, a, "ls"); txt(im, (70, 1790), "IPL 2013-2026 · IN OUR ARCHIVE", MO(22), MU, seg(t, 9, 9.6)); return im
 def s_cost(t, D):
     im = plain((20, 8, 12), (3, 2, 4)); txt(im, (70, 140), "THE COST", MB(26), AM, seg(t, 0, .5)); txt(im, (70, 190), "THE BACK.", BS(240), WH, seg(t, .2, .9))
     ev = (("2019", "Lower-back stress fracture. About four months out."), ("2022", "Back spasms, then a stress fracture: out of the T20 World Cup."), ("MARCH 2023", "Back surgery."), ("JANUARY 2025", "Back spasm in Sydney: no bowling in the second innings."), ("2025", "England: three Tests of five."))
