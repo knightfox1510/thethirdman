@@ -1,745 +1,862 @@
-{
- "source": "The Third Man · Content Schedule (Sheets artifact)",
- "sheet_url": "https://claude.ai/artifact/W2S945TTf7fCL2htKDMfLy",
- "synced": "2026-11-13",
- "rows": [
-  {
-   "date": "2026-11-12",
-   "platform": "YouTube long",
-   "content": "Channel trailer",
-   "status": "Posted",
-   "link": "https://youtu.be/c54t8HvXwMU",
-   "notes": "Set as channel trailer (Customization → Home tab)",
-   "series": "10 Channel"
-  },
-  {
-   "date": "2026-11-12",
-   "platform": "YouTube long",
-   "content": "Hardik–Arshdeep trade: who won?",
-   "status": "Posted",
-   "link": "https://youtu.be/zaPe7_3Wbd4",
-   "notes": "Re-uploaded 12 Nov with pronunciation fixes; old upload deleted",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-12",
-   "platform": "YouTube Short",
-   "content": "Kohli: 22 runs from 2,000 vs NZ",
-   "status": "Uploaded (private)",
-   "link": "https://youtu.be/yO-XGUHNPYU",
-   "notes": "Must go out before the 4th ODI (13 Nov, 7:30 am IST)",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-12",
-   "platform": "Instagram Reel",
-   "content": "Kohli: 22 runs from 2,000 vs NZ",
-   "status": "Ready",
-   "link": null,
-   "notes": "Same file as the Short; turn on auto-captions",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-13",
-   "platform": "YouTube long",
-   "content": "How India won the Wellington ODI",
-   "status": "Ready",
-   "link": null,
-   "notes": "While the ODI series is live",
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-13",
-   "platform": "YouTube Short",
-   "content": "Hardik–Arshdeep trade",
-   "status": "Posted",
-   "link": "https://youtu.be/k583jqs5KVw",
-   "notes": "Uploaded private 13 Nov; set Public in Studio",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short + IG carousel",
-   "content": "India vs New Zealand - 5th ODI Preview | Surviving the New Ball at Bay Oval",
-   "status": "Posted",
-   "link": "https://youtu.be/kDMPpYDYlns",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio before the match (15 Nov). Chapters, captions and thumbnail attached",
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube long",
-   "content": "The Santner Problem",
-   "status": "Ready",
-   "link": null,
-   "notes": "Figures corrected 12 Nov",
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube Short",
-   "content": "Santner",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube long",
-   "content": "How the IPL Changed T20 Batting Forever",
-   "status": "Ready",
-   "link": null,
-   "notes": "Flagship. Chapters in description. Retention deadline buzz",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube Short",
-   "content": "IPL batting changed (4 → 65)",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "Instagram carousel + Reel",
-   "content": "Powerplay Revolution",
-   "status": "Ready",
-   "link": null,
-   "notes": "8 slides + caption.txt; 1:46 deep-cut Reel",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-17",
-   "platform": "Check",
-   "content": "Re-check Pant fitness + WTC table",
-   "status": "To do",
-   "link": null,
-   "notes": "Update the Test preview if anything changed",
-   "series": null
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube long",
-   "content": "Can India Win a Test Series in New Zealand?",
-   "status": "Ready",
-   "link": null,
-   "notes": "Day before the Wellington Test",
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube Short",
-   "content": "India's NZ Test problem",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube long + Short",
-   "content": "IPL 2027 retentions",
-   "status": "To build",
-   "link": null,
-   "notes": "Scheduled build on 18 Nov, after lists are out",
-   "series": null
-  },
-  {
-   "date": "2026-11-21",
-   "platform": "YouTube long",
-   "content": "Who Should Bowl to Abhishek Sharma?",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "03 Tactics Board"
-  },
-  {
-   "date": "2026-11-24",
-   "platform": "YouTube long",
-   "content": "1st Test breakdown (Wellington)",
-   "status": "To build",
-   "link": null,
-   "notes": "Day after the Test; data from scorecards",
-   "series": null
-  },
-  {
-   "date": "2026-11-25",
-   "platform": "YouTube long",
-   "content": "Who Rules the Death Overs (IPL)",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-28",
-   "platform": "YouTube long",
-   "content": "How RCB Won Back-to-Back",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-12-02",
-   "platform": "YouTube long",
-   "content": "2nd Test breakdown (Christchurch)",
-   "status": "To build",
-   "link": null,
-   "notes": null,
-   "series": null
-  },
-  {
-   "date": "2026-12-05",
-   "platform": "YouTube long",
-   "content": "Bumrah vs 90s Sachin & Lara",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "06 What If"
-  },
-  {
-   "date": "2026-12-09",
-   "platform": "YouTube long",
-   "content": "What If Sachin Played in the T20 Era",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "06 What If"
-  },
-  {
-   "date": "2026-12-12",
-   "platform": "YouTube long + Shorts",
-   "content": "IPL 2027 auction preview",
-   "status": "To build",
-   "link": null,
-   "notes": "Auction 16 Dec",
-   "series": null
-  },
-  {
-   "date": "2026-12-16",
-   "platform": "YouTube long",
-   "content": "What If Bradman Played in the IPL",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "06 What If"
-  },
-  {
-   "date": "2026-12-19",
-   "platform": "YouTube long",
-   "content": "What If Dhoni Never Became Captain",
-   "status": "Posted",
-   "link": "https://youtu.be/8KIKP2KPV84",
-   "notes": "(What If Ep 3); Public on YouTube",
-   "series": "06 What If"
-  },
-  {
-   "date": "2026-12-23",
-   "platform": "YouTube long",
-   "content": "Why No Indian Has Bowled 160",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-12-26",
-   "platform": "YouTube long",
-   "content": "Is the T20 Anchor Dead?",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-12-30",
-   "platform": "YouTube long",
-   "content": "Bumrah's Economy Makes No Sense",
-   "status": "Ready",
-   "link": null,
-   "notes": null,
-   "series": "09 Data Stories"
-  },
-  {
-   "date": null,
-   "platform": "YouTube long",
-   "content": "Why 200 Is the New 160",
-   "status": "Hold",
-   "link": null,
-   "notes": "Overlaps the IPL batting video; Shorts only?",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-13",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Flip: Every MI captain vs Rohit",
-   "status": "Posted",
-   "link": "https://youtu.be/rnFvvukHfTM",
-   "notes": "Uploaded private 13 Nov (YouTube Short); set Public in Studio. No narration; IG Reel by hand",
-   "series": "08 Flip"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Flip: Abhishek vs the world's T20I openers",
-   "status": "Posted",
-   "link": "https://youtu.be/iis64YP-g-o",
-   "notes": " | Uploaded PRIVATE 15 Nov (YT). IG version + caption on Drive",
-   "series": "08 Flip"
-  },
-  {
-   "date": "2026-11-20",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Flip: Bumrah vs the best fast bowlers after 52 Tests",
-   "status": "Ready",
-   "link": null,
-   "notes": "During the Wellington Test",
-   "series": "08 Flip"
-  },
-  {
-   "date": "2026-11-23",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Flip: Joe Root vs everyone at the same point",
-   "status": "Ready",
-   "link": null,
-   "notes": "Global audience",
-   "series": "08 Flip"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short",
-   "content": "Virat Kohli: Is He Too Slow for T20? | Myth or Data Ep 2",
-   "status": "Posted",
-   "link": "https://youtu.be/3WQid2DRgwE",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1). IG version + caption on Drive",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short",
-   "content": "3 Wickets In 6 Balls! Matt Henry vs India",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 13 Nov; on Drive (Videos). Not uploaded yet. Illustrated 2D version; 3D version in progress",
-   "series": "02 The Replay Room"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube long",
-   "content": "India vs Pakistan - U19 Asia Cup Final Analysis | 338 Chased Off the Last Ball",
-   "status": "Posted",
-   "link": "https://youtu.be/UEvmwDqCTsg",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio. Chapters, captions and thumbnail attached",
-   "series": "02 The Replay Room"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short + IG Reel",
-   "content": "3 Needed Off the Last Ball! | India vs Pakistan U19 Asia Cup Final",
-   "status": "Posted",
-   "link": "https://youtu.be/52FPh7UbtHk",
-   "notes": "Uploaded PRIVATE 14 Nov (YT). IG version with 'full breakdown on YouTube, link in bio' end card: *_IG.mp4 (on Drive). IG Reel by hand",
-   "series": "02 The Replay Room"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube long",
-   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3",
-   "status": "Posted",
-   "link": "https://youtu.be/PZJsdDzMROQ",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1 and Ep 2). IG long version on Drive",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Is Aaryavir Sehwag the Next Sehwag? | Myth or Data Ep 3",
-   "status": "Posted",
-   "link": "https://youtu.be/ENh6XkG-z9g",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1 and Ep 2). IG version + caption on Drive",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-14",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Virat Kohli: Does He Fail in Knockouts? | Myth or Data Ep 1",
-   "status": "Posted",
-   "link": "https://youtu.be/ueFtSganrNo",
-   "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (publish before Ep 2 and Ep 3). IG version + caption on Drive",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "Instagram long video",
-   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG full-length)",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 14 Nov; 5:13; end card: follow YouTube for more detailed breakdowns, link in bio; caption on Drive (Instagram/)",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "Instagram Reel (extended)",
-   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG 2:20 Reel)",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 14 Nov; 2:20 vertical (under the 3 min Reels recommendation limit); end card: full breakdown on YouTube, link in bio; caption on Drive (Instagram/)",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "Instagram video (full detail, vertical)",
-   "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG full vertical, 4:56)",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 14 Nov; whole long-video story in 9:16; over 3 min so post as a regular video, not a Reel; end card: full breakdown on YouTube, link in bio; caption on Drive (Instagram/)",
-   "series": "01 Myth or Data"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube long",
-   "content": "Gautam Gambhir: Player vs Coach | The Full Data Story",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 15 Nov; 4:25; on Drive (Series/09 Data Stories/Ep11). Not uploaded; verify coach record vs ESPNcricinfo first",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Gautam Gambhir: Player vs Coach | Who Did It Better? #Shorts",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 15 Nov; YT + IG versions and caption on Drive. Not uploaded",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "Instagram long video",
-   "content": "Gautam Gambhir: Player vs Coach (IG full-length)",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 15 Nov; end card: follow YouTube, link in bio; caption on Drive (Instagram/)",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-17",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Fielding Positions Explained: Where Is Third Man? | Did You Know Ep 1 #Shorts",
-   "status": "Cancelled",
-   "link": null,
-   "notes": "SUPERSEDED 15 Nov: replaced by the Ep 2 plate-look Short (row: How to Read Any Field). Not uploaded",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube long",
-   "content": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1",
-   "status": "Uploaded (private)",
-   "link": "https://youtu.be/rt1PDv6tpzs",
-   "notes": "Uploaded PRIVATE 15 Nov; set Public in Studio. Chapters, captions and thumbnail attached",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Why Is It Called Third Man? The Unsolved Mystery | Did You Know Ep 1 #Shorts",
-   "status": "Uploaded (private)",
-   "link": "https://youtu.be/5xidfs5Gpo4",
-   "notes": "Uploaded PRIVATE 15 Nov; set Public in Studio. IG Short + extended Reel on Drive",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "Instagram long video",
-   "content": "Third Man Explained (IG full-length) | Did You Know Ep 1",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 15 Nov; end card follow YouTube, link in bio; caption on Drive (Instagram/)",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "Data / analysis",
-   "content": "NZ v IND ODI series 2026: 4th and 5th ODI ball-by-ball dataset, win-probability analysis and report",
-   "status": "Ready",
-   "link": null,
-   "notes": "Updated 15 Nov: now all four played matches (1, 2, 4, 5; 3rd washed out) + SERIES.md; 26 validation checks; on Drive (Data/NZ v IND ODIs 2026)",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube long",
-   "content": "India vs New Zealand - 5th ODI Analysis | How India Won at 22%",
-   "status": "Posted",
-   "notes": "Built 2026-11-15; on Drive",
-   "link": "https://youtu.be/9Iu25SLhXGg",
-   "series": "02 The Replay Room"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube Short",
-   "content": "How India Won at 22% | India vs New Zealand 5th ODI #Shorts",
-   "status": "Posted",
-   "notes": "Built 2026-11-15; on Drive; IG Short + Reel",
-   "link": "https://youtu.be/Ty2LP-UQV1c",
-   "series": "02 The Replay Room"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube long",
-   "content": "India vs New Zealand - ODI Series Analysis | Eight Dropped Catches, 3-1",
-   "status": "Posted",
-   "notes": "Built 2026-11-15; on Drive",
-   "link": "https://youtu.be/UAlk7dwMfjw",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube Short",
-   "content": "Eight Drops and Still 3-1 | India vs New Zealand ODI Series #Shorts",
-   "status": "Posted",
-   "notes": "Built 2026-11-15; on Drive; IG Short + Reel",
-   "link": "https://youtu.be/SLTOXJ6CQqw",
-   "series": "09 Data Stories"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "YouTube Short",
-   "content": "Fielding Positions Explained: How to Read Any Field | Did You Know Ep 2 #Shorts",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-15; on Drive (Series/11 Did You Know/Ep02); plate look, 1:42; IG Short on Drive. Check Law 28.4 numbering vs MCC 2026 edition before publishing. Not uploaded",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-15",
-   "platform": "Instagram Reel (extended)",
-   "content": "Why Is It Called Third Man? The Name Theories | Did You Know Ep 1 (IG Reel, 2:25 vertical)",
-   "status": "Posted",
-   "link": null,
-   "notes": "Posted on Instagram 15 Nov (extended Reel, vertical 2:25). Built 2026-11-15; on Drive",
-   "series": "11 Did You Know"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube long",
-   "content": "IPL Powerplay Revolution: From 6.9 to 10.1 an Over | Data Story Ep 2",
-   "series": "09 Data Stories",
-   "status": "Uploaded (private)",
-   "link": "https://youtu.be/_cX_F8LbjfU",
-   "notes": "Uploaded private 16 Nov; set Public in Studio"
-  },
-  {
-   "date": "2026-11-16",
-   "platform": "YouTube Short",
-   "content": "IPL Powerplay Now Scores 10 an Over | Data Story Ep 2 #Shorts",
-   "series": "09 Data Stories",
-   "status": "Uploaded (private)",
-   "link": "https://youtu.be/J9EHp4rAxLA",
-   "notes": "Uploaded private 16 Nov; set Public in Studio"
-  },
-  {
-   "date": "2026-11-17",
-   "platform": "YouTube Short + IG Reel",
-   "content": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
-   "series": "10 Channel",
-   "status": "Posted",
-   "link": "https://youtu.be/Yvtkgm3NUac",
-   "notes": "Tribute; Public on YouTube; posted on Instagram"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube long",
-   "content": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/WiTCSH9vsfM",
-   "notes": "Built 2026-11-17; Public on YouTube"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/bLYAfDuK3no",
-   "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "Instagram carousel",
-   "content": "Dhoni: The Finisher in Numbers (8 slides)",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive (carousel + caption); Posted on Instagram"
-  },
-  {
-   "date": "2026-11-21",
-   "platform": "YouTube long",
-   "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
-   "series": "01 Myth or Data",
-   "status": "Posted",
-   "link": "https://youtu.be/17GxKfWvk4Y",
-   "notes": "Verdict: busted. Built 2026-11-17; Public on YouTube"
-  },
-  {
-   "date": "2026-11-21",
-   "platform": "YouTube Short + IG Reel",
-   "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4 #Shorts",
-   "series": "01 Myth or Data",
-   "status": "Posted",
-   "link": "https://youtu.be/f8MnibrcFZ0",
-   "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "Instagram long video (vertical)",
-   "content": "Dhoni: How He Finished, in Numbers (IG full vertical, 1:57) | Data Story Ep 13",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
-  },
-  {
-   "date": "2026-11-17",
-   "platform": "YouTube Short + IG Reel",
-   "content": "What If Dhoni Never Became Captain? | What If Ep 3 #Shorts",
-   "series": "06 What If",
-   "status": "Posted",
-   "link": "https://youtu.be/rZhGj13fGx4",
-   "notes": "Public on YouTube; posted on Instagram"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube long",
-   "content": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/50i41yfp44U",
-   "notes": "Public on YouTube"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube Short + IG Reel",
-   "content": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/QFN0QE4CJGw",
-   "notes": "Public on YouTube; posted on Instagram"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "Instagram long video (vertical)",
-   "content": "Dhoni IPL Captaincy: The Complete Record (IG full vertical, 1:52) | Data Story Ep 14",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube long",
-   "content": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
-   "series": "10 Channel",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive. Trade-split format with licensed player images; all six deals, 2026 numbers labelled 'our data'"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube Short + IG Reel",
-   "content": "IPL 2027 Trades: Hardik for Arshdeep, Pant Back to Delhi #Shorts",
-   "series": "10 Channel",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-17; on Drive. Three deals, numbered in the order told; spellings checked by the owner"
-  },
-  {
-   "date": null,
-   "platform": "Instagram Reel (silent)",
-   "content": "Mumbai cha Raja: Rohit Sharma, MI captain (silent cut, prepared)",
-   "series": "10 Channel",
-   "status": "Hold",
-   "link": null,
-   "notes": "Prepared 2026-11-17, silent (no audio, no music) 99 s vertical; post ONLY if MI announce Rohit as captain, else discard. Add ElevenLabs VO + music then. On Drive"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube long",
-   "content": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/UK_PRyG5uUI",
-   "notes": "Uploaded 2026-11-18 (private until published in Studio); on Drive"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "YouTube Short",
-   "content": "What Every IPL Team Needs | IPL 2027 Auction Data Story Ep 15 #Shorts",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/Fw-m9pUm-fI",
-   "notes": "Uploaded 2026-11-18 (private until published in Studio); on Drive"
-  },
-  {
-   "date": "2026-11-18",
-   "platform": "Instagram Reel",
-   "content": "What Every IPL Team Needs (IG, 2 min 19 s)",
-   "series": "09 Data Stories",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-18; on Drive"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube long",
-   "content": "India vs New Zealand - 1st Test Day 1 Analysis | How 70/5 Became 243/5",
-   "series": "02 The Replay Room",
-   "status": "Posted",
-   "link": "https://youtu.be/MO83fPkq3qI",
-   "notes": "Uploaded 2026-11-19 (private until published in Studio); on Drive"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube Short",
-   "content": "How 70/5 Became 243/5 | India vs New Zealand 1st Test Day 1 #Shorts",
-   "series": "02 The Replay Room",
-   "status": "Posted",
-   "link": "https://youtu.be/-SNqC4wA_-8",
-   "notes": "Uploaded 2026-11-19 (private until published in Studio); on Drive"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "Instagram Reel",
-   "content": "How 70/5 Became 243/5 (IG, 2 min 58 s)",
-   "series": "02 The Replay Room",
-   "status": "Ready",
-   "link": null,
-   "notes": "Rebuilt 2026-11-19 with photos; on Drive"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "YouTube Short",
-   "content": "Jasprit Bumrah: Why He Is Unplayable | Data Story Ep 16 #Shorts",
-   "series": "09 Data Stories",
-   "status": "Posted",
-   "link": "https://youtu.be/UM5788F3ZKY",
-   "notes": "Built 2026-11-19; on Drive; cover in grid style (19 Nov); uploaded private 19 Nov"
-  },
-  {
-   "date": "2026-11-19",
-   "platform": "Instagram Reel",
-   "content": "Jasprit Bumrah: Why He Is Unplayable (IG, 2 min 33 s)",
-   "series": "09 Data Stories",
-   "status": "Ready",
-   "link": null,
-   "notes": "Built 2026-11-19; on Drive; cover in grid style (19 Nov)"
-  }
- ]
-}
+[
+ {
+  "id": "1j6gtg8b",
+  "date": "2026-11-12",
+  "platform": "YouTube long",
+  "series": "10 Channel",
+  "content": "Channel trailer",
+  "status": "Posted",
+  "link": "https://youtu.be/c54t8HvXwMU",
+  "notes": "Set as channel trailer (Customization → Home tab)"
+ },
+ {
+  "id": "snn3fs65",
+  "date": "2026-11-12",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Hardik–Arshdeep trade: who won?",
+  "status": "Posted",
+  "link": "https://youtu.be/zaPe7_3Wbd4",
+  "notes": "Re-uploaded 12 Nov with pronunciation fixes; old upload deleted"
+ },
+ {
+  "id": "s2v71qu6",
+  "date": "2026-11-12",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "Kohli: 22 runs from 2,000 vs NZ",
+  "status": "Posted",
+  "link": "https://youtu.be/yO-XGUHNPYU",
+  "notes": "Must go out before the 4th ODI (13 Nov, 7:30 am IST)"
+ },
+ {
+  "id": "gx54lzfp",
+  "date": "2026-11-12",
+  "platform": "Instagram Reel",
+  "series": "09 Data Stories",
+  "content": "Kohli: 22 runs from 2,000 vs NZ",
+  "status": "Hold",
+  "link": null,
+  "notes": "Same file as the Short; turn on auto-captions"
+ },
+ {
+  "id": "rhgjhvsf",
+  "date": "2026-11-13",
+  "platform": "YouTube long",
+  "series": "03 Tactics Board",
+  "content": "How India won the Wellington ODI",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "While the ODI series is live"
+ },
+ {
+  "id": "ppyyjw8z",
+  "date": "2026-11-13",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "Hardik–Arshdeep trade",
+  "status": "Posted",
+  "link": "https://youtu.be/k583jqs5KVw",
+  "notes": "Uploaded private 13 Nov; set Public in Studio"
+ },
+ {
+  "id": "8sckn1ub",
+  "date": "2026-11-13",
+  "platform": "YouTube Short + IG Reel",
+  "series": "08 Flip",
+  "content": "Flip: Every MI captain vs Rohit",
+  "status": "Posted",
+  "link": "https://youtu.be/rnFvvukHfTM",
+  "notes": "Uploaded private 13 Nov (YouTube Short); set Public in Studio. No narration; IG Reel by hand"
+ },
+ {
+  "id": "d1yq3fbx",
+  "date": "2026-11-13",
+  "platform": "YouTube Short + IG Reel",
+  "series": "02 The Replay Room",
+  "content": "Replay Room: 0 for 3, Henry's first over",
+  "status": "Posted",
+  "link": "https://youtu.be/qj3O8VV8UuM",
+  "notes": "Uploaded private; post today"
+ },
+ {
+  "id": "oh3e0ru4",
+  "date": "2026-11-14",
+  "platform": "YouTube Short + IG carousel",
+  "series": "03 Tactics Board",
+  "content": "India vs New Zealand - 5th ODI Preview | Surviving the New Ball at Bay Oval",
+  "status": "Posted",
+  "link": "https://youtu.be/kDMPpYDYlns",
+  "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio before the match (15 Nov). Chapters, captions and thumbnail attached"
+ },
+ {
+  "id": "g682eiec",
+  "date": "2026-11-14",
+  "platform": "YouTube Short + IG Reel",
+  "series": "08 Flip",
+  "content": "Flip: Abhishek vs the world's T20I openers",
+  "status": "Posted",
+  "link": "https://youtu.be/iis64YP-g-o",
+  "notes": null
+ },
+ {
+  "id": "58jx588t",
+  "date": "2026-11-14",
+  "platform": "YouTube long",
+  "series": "02 The Replay Room",
+  "content": "Replay Room Ep.1: 333 and 89 (NZ v IND 4th ODI)",
+  "status": "Posted",
+  "link": "https://youtu.be/7rq2iG31XzA",
+  "notes": "Uploaded private 13 Nov; set Public in Studio within 24h of the match"
+ },
+ {
+  "id": "6jjs2w25",
+  "date": "2026-11-14",
+  "platform": "YouTube Short + IG Reel",
+  "series": "02 The Replay Room",
+  "content": "Replay Room: Will Young, two innings in one",
+  "status": "Posted",
+  "link": "https://youtu.be/lUG6cKDhctg",
+  "notes": "Uploaded private"
+ },
+ {
+  "id": "5omhssro",
+  "date": "2026-11-14",
+  "platform": "YouTube Short",
+  "series": "01 Myth or Data",
+  "content": "Virat Kohli: Is He Too Slow for T20? | Myth or Data Ep 2",
+  "status": "Posted",
+  "link": "https://youtu.be/3WQid2DRgwE",
+  "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (after Ep 1). IG version + caption on Drive"
+ },
+ {
+  "id": "a9vbxjce",
+  "date": "2026-11-14",
+  "platform": "YouTube Short",
+  "series": "02 The Replay Room",
+  "content": "3 Wickets In 6 Balls! Matt Henry vs India",
+  "status": "Posted",
+  "link": null,
+  "notes": "Built 13 Nov; on Drive (Videos). Not uploaded yet. Illustrated 2D version; 3D version in progress"
+ },
+ {
+  "id": "tpj1nn9s",
+  "date": "2026-11-14",
+  "platform": "YouTube long",
+  "series": "02 The Replay Room",
+  "content": "India vs Pakistan - U19 Asia Cup Final Analysis | 338 Chased Off the Last Ball",
+  "status": "Posted",
+  "link": "https://youtu.be/UEvmwDqCTsg",
+  "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio. Chapters, captions and thumbnail attached"
+ },
+ {
+  "id": "bvphtslt",
+  "date": "2026-11-14",
+  "platform": "YouTube Short + IG Reel",
+  "series": "02 The Replay Room",
+  "content": "3 Needed Off the Last Ball! | India vs Pakistan U19 Asia Cup Final",
+  "status": "Posted",
+  "link": "https://youtu.be/52FPh7UbtHk",
+  "notes": "Uploaded PRIVATE 14 Nov (YT). IG version with 'full breakdown on YouTube, link in bio' end card: deliver/replay_u19_final/*_IG.mp4 (on Drive). IG Reel by hand"
+ },
+ {
+  "id": "ud4zstz6",
+  "date": "2026-11-14",
+  "platform": "YouTube Short + IG Reel",
+  "series": "01 Myth or Data",
+  "content": "Virat Kohli: Does He Fail in Knockouts? | Myth or Data Ep 1",
+  "status": "Posted",
+  "link": "https://youtu.be/ueFtSganrNo",
+  "notes": "Uploaded PRIVATE 14 Nov; set Public in Studio (publish before Ep 2 and Ep 3). IG version + caption on Drive"
+ },
+ {
+  "id": "1wflemjg",
+  "date": "2026-11-15",
+  "platform": "YouTube long",
+  "series": "03 Tactics Board",
+  "content": "The Santner Problem",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Figures corrected 12 Nov"
+ },
+ {
+  "id": "esdz4olf",
+  "date": "2026-11-15",
+  "platform": "YouTube Short",
+  "series": "03 Tactics Board",
+  "content": "Santner",
+  "status": "Cancelled",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "pxg79ocj",
+  "date": "2026-11-15",
+  "platform": "YouTube Short + IG Reel",
+  "series": "02 The Replay Room",
+  "content": "Replay Room: 74% dot balls, India out defending",
+  "status": "Posted",
+  "link": "https://youtu.be/xXcqw651rGM",
+  "notes": "Uploaded private"
+ },
+ {
+  "id": "pa7qvdu3",
+  "date": "2026-11-15",
+  "platform": "YouTube long",
+  "series": "01 Myth or Data",
+  "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3",
+  "status": "Posted",
+  "link": "https://youtu.be/PZJsdDzMROQ",
+  "notes": "Built 14 Nov; 5:12; on Drive (Series/01 Myth or Data/Ep03). Not uploaded yet. Post after Ep 1 and Ep 2"
+ },
+ {
+  "id": "6l0basjd",
+  "date": "2026-11-15",
+  "platform": "YouTube Short + IG Reel",
+  "series": "01 Myth or Data",
+  "content": "Is Aaryavir Sehwag the Next Sehwag? | Myth or Data Ep 3",
+  "status": "Posted",
+  "link": "https://youtu.be/ENh6XkG-z9g",
+  "notes": "Built 14 Nov; 1:13; YT + IG versions on Drive. Not uploaded yet"
+ },
+ {
+  "id": "shoq5f7p",
+  "date": "2026-11-15",
+  "platform": "Instagram long video",
+  "series": "01 Myth or Data",
+  "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG full-length)",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Built 14 Nov; 5:13; end card: follow YouTube for more detailed breakdowns, link in bio; caption on Drive (Instagram/)"
+ },
+ {
+  "id": "7m344ip6",
+  "date": "2026-11-15",
+  "platform": "Instagram Reel (extended)",
+  "series": "01 Myth or Data",
+  "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG 2:20 Reel)",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Built 14 Nov; 2:20 vertical (under the 3 min Reels recommendation limit); end card: full breakdown on YouTube, link in bio; caption on Drive (Instagram/)"
+ },
+ {
+  "id": "ougggbod",
+  "date": "2026-11-15",
+  "platform": "Instagram video (full detail, vertical)",
+  "series": "01 Myth or Data",
+  "content": "Aaryavir Sehwag: Like Father, Like Son? | Myth or Data Ep 3 (IG full vertical, 4:56)",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Built 14 Nov; whole long-video story in 9:16; over 3 min so post as a regular video, not a Reel; end card: full breakdown on YouTube, link in bio; caption on Drive (Instagram/)"
+ },
+ {
+  "id": "xle4d04c",
+  "date": "2026-11-15",
+  "platform": "YouTube long",
+  "series": "02 The Replay Room",
+  "content": "India vs New Zealand - 5th ODI Analysis | How India Won at 22%",
+  "status": "Posted",
+  "link": "https://youtu.be/9Iu25SLhXGg",
+  "notes": "Built 2026-11-15; on Drive"
+ },
+ {
+  "id": "9u2nv659",
+  "date": "2026-11-15",
+  "platform": "YouTube Short",
+  "series": "02 The Replay Room",
+  "content": "How India Won at 22% | India vs New Zealand 5th ODI #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/Ty2LP-UQV1c",
+  "notes": "Built 2026-11-15; on Drive; IG Short + 2:15 Reel"
+ },
+ {
+  "id": "hdganvs7",
+  "date": "2026-11-15",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "India vs New Zealand - ODI Series Analysis | Eight Dropped Catches, 3-1",
+  "status": "Posted",
+  "link": "https://youtu.be/UAlk7dwMfjw",
+  "notes": "Built 2026-11-15; on Drive"
+ },
+ {
+  "id": "jpa7i0te",
+  "date": "2026-11-15",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "Eight Drops and Still 3-1 | India vs New Zealand ODI Series #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/SLTOXJ6CQqw",
+  "notes": "Built 2026-11-15; on Drive; IG Short + 2:00 Reel"
+ },
+ {
+  "id": "dbbrivov",
+  "date": "2026-11-15",
+  "platform": "YouTube Short",
+  "series": "11 Did You Know",
+  "content": "Fielding Positions Explained: How to Read Any Field | Did You Know Ep 2 #Shorts",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 2026-11-15; on Drive; plate look; IG Short on Drive; check Law 28.4 numbering vs MCC 2026 edition before publishing"
+ },
+ {
+  "id": "dn55y95h",
+  "date": "2026-11-15",
+  "platform": "Instagram Reel (extended)",
+  "series": "11 Did You Know",
+  "content": "Why Is It Called Third Man? The Name Theories | Did You Know Ep 1 (IG Reel, 2:25 vertical)",
+  "status": "Posted",
+  "link": null,
+  "notes": "Posted on Instagram 15 Nov (extended Reel, vertical 2:25). Built 2026-11-15; on Drive"
+ },
+ {
+  "id": "7knp2efw",
+  "date": "2026-11-16",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "How the IPL Changed T20 Batting Forever",
+  "status": "Ready",
+  "link": null,
+  "notes": "Flagship. Chapters in description. Retention deadline buzz"
+ },
+ {
+  "id": "nrpnu9i4",
+  "date": "2026-11-16",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "IPL batting changed (4 → 65)",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "lmkmafgp",
+  "date": "2026-11-16",
+  "platform": "Instagram carousel + Reel",
+  "series": "09 Data Stories",
+  "content": "Powerplay Revolution",
+  "status": "Ready",
+  "link": null,
+  "notes": "8 slides + caption.txt; 1:46 deep-cut Reel"
+ },
+ {
+  "id": "01bdujb9",
+  "date": "2026-11-16",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Gautam Gambhir: Player vs Coach",
+  "status": "Hold",
+  "link": null,
+  "notes": " The Full Data Story|notes=Built 15 Nov; 4:25; on Drive (Series/09 Data Stories/Ep11). Not uploaded; verify coach record vs ESPNcricinfo first"
+ },
+ {
+  "id": "phw8gweb",
+  "date": "2026-11-16",
+  "platform": "YouTube Short + IG Reel",
+  "series": "09 Data Stories",
+  "content": "Gautam Gambhir: Player vs Coach",
+  "status": "Hold",
+  "link": null,
+  "notes": " Who Did It Better? #Shorts|notes=Built 15 Nov; YT + IG versions and caption on Drive. Not uploaded"
+ },
+ {
+  "id": "ayj30ijl",
+  "date": "2026-11-16",
+  "platform": "Instagram long video",
+  "series": "09 Data Stories",
+  "content": "Gautam Gambhir: Player vs Coach (IG full-length)",
+  "status": "Hold",
+  "link": null,
+  "notes": "Built 15 Nov; end card: follow YouTube, link in bio; caption on Drive (Instagram/)"
+ },
+ {
+  "id": "oksgqgxe",
+  "date": "2026-11-17",
+  "platform": "Check",
+  "series": null,
+  "content": "Re-check Pant fitness + WTC table",
+  "status": "To do",
+  "link": null,
+  "notes": "Update the Test preview if anything changed"
+ },
+ {
+  "id": "sei01d9z",
+  "date": "2026-11-17",
+  "platform": "YouTube Short + IG Reel",
+  "series": "11 Did You Know",
+  "content": "Fielding Positions Explained: Where Is Third Man? | Did You Know Ep 1 #Shorts",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "SUPERSEDED 15 Nov: replaced by the Ep 2 plate-look Short (row: How to Read Any Field). Not uploaded"
+ },
+ {
+  "id": "kqjzcmpl",
+  "date": "2026-11-18",
+  "platform": "YouTube long",
+  "series": "03 Tactics Board",
+  "content": "Can India Win a Test Series in New Zealand?",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Dropped 2026-11-18: too late to post (Test starts 19 Nov). Rebuilt files in deliver/nz_test_preview, not on Drive"
+ },
+ {
+  "id": "46k500be",
+  "date": "2026-11-18",
+  "platform": "YouTube Short",
+  "series": "03 Tactics Board",
+  "content": "India's NZ Test problem",
+  "status": "Cancelled",
+  "link": null,
+  "notes": "Dropped 2026-11-18: too late to post (Test starts 19 Nov). Rebuilt files in deliver/nz_test_preview, not on Drive"
+ },
+ {
+  "id": "mf0h724n",
+  "date": "2026-11-18",
+  "platform": "YouTube long",
+  "series": "11 Did You Know",
+  "content": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1",
+  "status": "Posted",
+  "link": "https://youtu.be/rt1PDv6tpzs",
+  "notes": "Uploaded PRIVATE 15 Nov; set Public in Studio. Chapters, captions and thumbnail attached"
+ },
+ {
+  "id": "my7x4y93",
+  "date": "2026-11-18",
+  "platform": "YouTube Short + IG Reel",
+  "series": "11 Did You Know",
+  "content": "Why Is It Called Third Man? The Unsolved Mystery | Did You Know Ep 1 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/5xidfs5Gpo4",
+  "notes": "Uploaded PRIVATE 15 Nov; set Public in Studio. IG Short + extended Reel on Drive"
+ },
+ {
+  "id": "7wxm3rny",
+  "date": "2026-11-18",
+  "platform": "Instagram long video",
+  "series": "11 Did You Know",
+  "content": "Third Man Explained (IG full-length) | Did You Know Ep 1",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 15 Nov; end card follow YouTube, link in bio; caption on Drive (Instagram/)"
+ },
+ {
+  "id": "wrfxaxle",
+  "date": "2026-11-18",
+  "platform": "Data / analysis",
+  "series": "09 Data Stories",
+  "content": "NZ v IND ODI series 2026: 4th and 5th ODI ball-by-ball dataset, win-probability analysis and report",
+  "status": "Ready",
+  "link": null,
+  "notes": "Updated 15 Nov: now all four played matches (1, 2, 4, 5; 3rd washed out) + SERIES.md; 26 validation checks; on Drive (Data/NZ v IND ODIs 2026)"
+ },
+ {
+  "id": "xdgoxj9g",
+  "date": "2026-11-19",
+  "platform": "YouTube long + Short",
+  "series": null,
+  "content": "IPL 2027 retentions",
+  "status": "To build",
+  "link": null,
+  "notes": "Scheduled build on 18 Nov, after lists are out"
+ },
+ {
+  "id": "8vp23awo",
+  "date": "2026-11-20",
+  "platform": "YouTube Short + IG Reel",
+  "series": "08 Flip",
+  "content": "Flip: Bumrah vs the best fast bowlers after 52 Tests",
+  "status": "Ready",
+  "link": null,
+  "notes": "During the Wellington Test"
+ },
+ {
+  "id": "egp91ube",
+  "date": "2026-11-21",
+  "platform": "YouTube long",
+  "series": "03 Tactics Board",
+  "content": "Who Should Bowl to Abhishek Sharma?",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "kr7go9c4",
+  "date": "2026-11-23",
+  "platform": "YouTube Short + IG Reel",
+  "series": "08 Flip",
+  "content": "Flip: Joe Root vs everyone at the same point",
+  "status": "Ready",
+  "link": null,
+  "notes": "Global audience"
+ },
+ {
+  "id": "68q5hcjh",
+  "date": "2026-11-24",
+  "platform": "YouTube long",
+  "series": null,
+  "content": "1st Test breakdown (Wellington)",
+  "status": "To build",
+  "link": null,
+  "notes": "Day after the Test; data from scorecards"
+ },
+ {
+  "id": "2d6cj682",
+  "date": "2026-11-25",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Who Rules the Death Overs (IPL)",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "jqws629k",
+  "date": "2026-11-28",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "How RCB Won Back-to-Back",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "aql6kiuo",
+  "date": "2026-12-02",
+  "platform": "YouTube long",
+  "series": null,
+  "content": "2nd Test breakdown (Christchurch)",
+  "status": "To build",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "ckk6yeun",
+  "date": "2026-12-05",
+  "platform": "YouTube long",
+  "series": "06 What If",
+  "content": "Bumrah vs 90s Sachin & Lara",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "osm6ph4g",
+  "date": "2026-12-09",
+  "platform": "YouTube long",
+  "series": "06 What If",
+  "content": "What If Sachin Played in the T20 Era",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "9tw7snlc",
+  "date": "2026-12-12",
+  "platform": "YouTube long + Shorts",
+  "series": null,
+  "content": "IPL 2027 auction preview",
+  "status": "To build",
+  "link": null,
+  "notes": "Auction 16 Dec"
+ },
+ {
+  "id": "mtgsh0wn",
+  "date": "2026-12-16",
+  "platform": "YouTube long",
+  "series": "06 What If",
+  "content": "What If Bradman Played in the IPL",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "f0z7wcm8",
+  "date": "2026-12-19",
+  "platform": "YouTube long",
+  "series": "06 What If",
+  "content": "What If Dhoni Never Became Captain",
+  "status": "Posted",
+  "link": "https://youtu.be/8KIKP2KPV84",
+  "notes": "(What If Ep 3); Public on YouTube"
+ },
+ {
+  "id": "6gqfeykw",
+  "date": "2026-12-23",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Why No Indian Has Bowled 160",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "d693dttz",
+  "date": "2026-12-26",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Is the T20 Anchor Dead?",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "6aahqawg",
+  "date": "2026-12-30",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Bumrah's Economy Makes No Sense",
+  "status": "Ready",
+  "link": null,
+  "notes": null
+ },
+ {
+  "id": "1sf17576",
+  "date": null,
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "Why 200 Is the New 160",
+  "status": "Hold",
+  "link": null,
+  "notes": "Overlaps the IPL batting video; Shorts only?"
+ },
+ {
+  "id": "7gp52czk",
+  "date": "2026-11-16",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "IPL Powerplay Revolution: From 6.9 to 10.1 an Over | Data Story Ep 2",
+  "status": "Uploaded (private)",
+  "link": "https://youtu.be/_cX_F8LbjfU",
+  "notes": "Uploaded private 16 Nov; set Public in Studio"
+ },
+ {
+  "id": "dgeu7g4w",
+  "date": "2026-11-16",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "IPL Powerplay Now Scores 10 an Over | Data Story Ep 2 #Shorts",
+  "status": "Uploaded (private)",
+  "link": "https://youtu.be/J9EHp4rAxLA",
+  "notes": "Uploaded private 16 Nov; set Public in Studio"
+ },
+ {
+  "id": "0tgblpiy",
+  "date": "2026-11-17",
+  "platform": "YouTube Short + IG Reel",
+  "series": "10 Channel",
+  "content": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/Yvtkgm3NUac",
+  "notes": "Tribute; Public on YouTube; posted on Instagram"
+ },
+ {
+  "id": "iyzxwqk3",
+  "date": "2026-11-19",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "MS Dhoni IPL Career: How He Finished, in Numbers | Data Story Ep 13",
+  "status": "Posted",
+  "link": "https://youtu.be/WiTCSH9vsfM",
+  "notes": "Built 2026-11-17; Public on YouTube"
+ },
+ {
+  "id": "3xme38sq",
+  "date": "2026-11-19",
+  "platform": "YouTube Short + IG Reel",
+  "series": "09 Data Stories",
+  "content": "Dhoni: 98 Sixes in the Last Two Overs | Data Story Ep 13 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/bLYAfDuK3no",
+  "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
+ },
+ {
+  "id": "c4qbbx5l",
+  "date": "2026-11-19",
+  "platform": "Instagram carousel",
+  "series": "09 Data Stories",
+  "content": "Dhoni: The Finisher in Numbers (8 slides)",
+  "status": "Posted",
+  "link": null,
+  "notes": "Built 2026-11-17; on Drive (carousel + caption); Posted on Instagram"
+ },
+ {
+  "id": "c8f73k6g",
+  "date": "2026-11-21",
+  "platform": "YouTube long",
+  "series": "01 Myth or Data",
+  "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4",
+  "status": "Posted",
+  "link": "https://youtu.be/17GxKfWvk4Y",
+  "notes": "Verdict: busted. Built 2026-11-17; Public on YouTube"
+ },
+ {
+  "id": "9wgj78kq",
+  "date": "2026-11-21",
+  "platform": "YouTube Short + IG Reel",
+  "series": "01 Myth or Data",
+  "content": "MS Dhoni: Did CSK Just Win the Close Ones? | Myth or Data Ep 4 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/f8MnibrcFZ0",
+  "notes": "Built 2026-11-17; Public on YouTube; posted on Instagram"
+ },
+ {
+  "id": "l86ttdwd",
+  "date": "2026-11-19",
+  "platform": "Instagram long video (vertical)",
+  "series": "09 Data Stories",
+  "content": "Dhoni: How He Finished, in Numbers (IG full vertical, 1:57) | Data Story Ep 13",
+  "status": "Posted",
+  "link": null,
+  "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
+ },
+ {
+  "id": "d3q5p0u1",
+  "date": "2026-11-17",
+  "platform": "YouTube Short + IG Reel",
+  "series": "06 What If",
+  "content": "What If Dhoni Never Became Captain? | What If Ep 3 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/rZhGj13fGx4",
+  "notes": "Public on YouTube; posted on Instagram"
+ },
+ {
+  "id": "b111fx7j",
+  "date": "2026-11-18",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
+  "status": "Posted",
+  "link": "https://youtu.be/50i41yfp44U",
+  "notes": "Public on YouTube"
+ },
+ {
+  "id": "jp5qwlz5",
+  "date": "2026-11-18",
+  "platform": "YouTube Short + IG Reel",
+  "series": "09 Data Stories",
+  "content": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/QFN0QE4CJGw",
+  "notes": "Public on YouTube; posted on Instagram"
+ },
+ {
+  "id": "5rro7v6h",
+  "date": "2026-11-18",
+  "platform": "Instagram long video (vertical)",
+  "series": "09 Data Stories",
+  "content": "Dhoni IPL Captaincy: The Complete Record (IG full vertical, 1:52) | Data Story Ep 14",
+  "status": "Posted",
+  "link": null,
+  "notes": "Built 2026-11-17; on Drive. Vertical version of the long video, stadium look, Instagram end card; Posted on Instagram"
+ },
+ {
+  "id": "srpn6gd4",
+  "date": "2026-11-18",
+  "platform": "YouTube long",
+  "series": "10 Channel",
+  "content": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 2026-11-17; on Drive. Trade-split format with licensed player images; all six deals, 2026 numbers labelled 'our data'"
+ },
+ {
+  "id": "xp9soums",
+  "date": "2026-11-18",
+  "platform": "YouTube Short + IG Reel",
+  "series": "10 Channel",
+  "content": "IPL 2027 Trades: Hardik for Arshdeep, Pant Back to Delhi #Shorts",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 2026-11-17; on Drive. Three deals, numbered in the order told; spellings checked by the owner"
+ },
+ {
+  "id": "fieqpr8o",
+  "date": null,
+  "platform": "Instagram Reel (silent)",
+  "series": "10 Channel",
+  "content": "Mumbai cha Raja: Rohit Sharma, MI captain (silent cut, prepared)",
+  "status": "Hold",
+  "link": null,
+  "notes": "Prepared 2026-11-17, silent (no audio, no music) 99 s vertical; post ONLY if MI announce Rohit as captain, else discard. Add ElevenLabs VO + music then. On Drive"
+ },
+ {
+  "id": "9yfgtbpk",
+  "date": "2026-11-18",
+  "platform": "YouTube long",
+  "series": "09 Data Stories",
+  "content": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15",
+  "status": "Posted",
+  "link": "https://youtu.be/UK_PRyG5uUI",
+  "notes": "Uploaded 2026-11-18 (private until published in Studio); on Drive"
+ },
+ {
+  "id": "4isg9jvj",
+  "date": "2026-11-18",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "What Every IPL Team Needs | IPL 2027 Auction Data Story Ep 15 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/Fw-m9pUm-fI",
+  "notes": "Uploaded 2026-11-18 (private until published in Studio); on Drive"
+ },
+ {
+  "id": "467iiefl",
+  "date": "2026-11-18",
+  "platform": "Instagram Reel",
+  "series": "09 Data Stories",
+  "content": "What Every IPL Team Needs (IG, 2 min 19 s)",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 2026-11-18; on Drive"
+ },
+ {
+  "id": "9v4zvb1u",
+  "date": "2026-11-19",
+  "platform": "YouTube long",
+  "series": "02 The Replay Room",
+  "content": "India vs New Zealand - 1st Test Day 1 Analysis | How 70/5 Became 243/5",
+  "status": "Posted",
+  "link": "https://youtu.be/MO83fPkq3qI",
+  "notes": "Uploaded 2026-11-19 (private until published in Studio); on Drive"
+ },
+ {
+  "id": "mq4pxme5",
+  "date": "2026-11-19",
+  "platform": "YouTube Short",
+  "series": "02 The Replay Room",
+  "content": "How 70/5 Became 243/5 | India vs New Zealand 1st Test Day 1 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/-SNqC4wA_-8",
+  "notes": "Uploaded 2026-11-19 (private until published in Studio); on Drive"
+ },
+ {
+  "id": "vzcfg4be",
+  "date": "2026-11-19",
+  "platform": "Instagram Reel",
+  "series": "02 The Replay Room",
+  "content": "How 70/5 Became 243/5 (IG, 2 min 58 s)",
+  "status": "Ready",
+  "link": null,
+  "notes": "Rebuilt 2026-11-19 with photos; on Drive"
+ },
+ {
+  "id": "ydbk1koi",
+  "date": "2026-11-19",
+  "platform": "YouTube Short",
+  "series": "09 Data Stories",
+  "content": "Jasprit Bumrah: Why He Is Unplayable | Data Story Ep 16 #Shorts",
+  "status": "Posted",
+  "link": "https://youtu.be/UM5788F3ZKY",
+  "notes": "Built 2026-11-19; on Drive; cover in grid style; uploaded private 19 Nov. Delete duplicate private upload yxIfNTAegBg in Studio"
+ },
+ {
+  "id": "n1izk3vy",
+  "date": "2026-11-19",
+  "platform": "Instagram Reel",
+  "series": "09 Data Stories",
+  "content": "Jasprit Bumrah: Why He Is Unplayable (IG, 2 min 33 s)",
+  "status": "Ready",
+  "link": null,
+  "notes": "Built 2026-11-19; on Drive; cover in grid style; caption on Drive"
+ }
+]

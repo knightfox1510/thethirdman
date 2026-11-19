@@ -3105,11 +3105,18 @@
    ]
   },
   "bumrah_unplayable": {
-   "state": "not posted",
+   "state": "posted",
    "series": "09 Data Stories",
-   "episode": "Ep16 - Bumrah Why He Is Unplayable",
+   "episode": "Ep16 - Bumrah Why He Is Unplayable [posted]",
    "folder": "https://drive.google.com/drive/folders/1dwpi_RpyWDFxVet560XTxBS8yzQyBdrv",
    "files": [
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1aHSWVNQCc-JujOLOAuIRszpPz0QJyMQ6/view?usp=drivesdk"
+    },
     {
      "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_IG_cover.jpg",
      "kind": "cover",
