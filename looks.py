@@ -806,9 +806,11 @@ def chrome(c, g, spec, T_, total, last):
     dark = gfx.THEME in ("board", "card")
     ink = (245, 242, 232) if dark else (20, 20, 22)
     c.drawRect(skia.Rect.MakeXYWH(0, 0, g.W * clamp(T_ / max(1, total)), 5), paint(RED if not dark else HL, .9))
+    brand = spec.get("brand", "THE THIRD MAN")     # a spec for another channel sets "brand": "" (hidden) or its own name
+    if not brand: return
     x, y = (g.W - 80, 96) if g.fmt == "short" else (g.W - 140, 1040)
-    c.drawCircle(x - twidth("THE THIRD MAN", 20, "monoSB", 2) - 18, y - 7, 6, paint(RED, 1))
-    text(c, "THE THIRD MAN", x, y, 20, "monoSB", ink, .85, "r", track=2)
+    c.drawCircle(x - twidth(brand, 20, "monoSB", 2) - 18, y - 7, 6, paint(RED, 1))
+    text(c, brand, x, y, 20, "monoSB", ink, .85, "r", track=2)
 
 
 
