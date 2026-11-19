@@ -1,0 +1,286 @@
+{
+ "tests": 52,
+ "runs": 4631,
+ "balls": 10031,
+ "wkts": 234,
+ "avg": 19.79,
+ "sr": 42.9,
+ "econ": 2.77,
+ "match_wkts_5plus": [
+  [
+   "2018-08-18",
+   "England",
+   "Nottingham",
+   7
+  ],
+  [
+   "2018-01-24",
+   "South Africa",
+   "Johannesburg",
+   7
+  ],
+  [
+   "2018-12-06",
+   "Australia",
+   null,
+   6
+  ],
+  [
+   "2018-12-14",
+   "Australia",
+   null,
+   5
+  ],
+  [
+   "2018-12-26",
+   "Australia",
+   "Melbourne",
+   9
+  ],
+  [
+   "2020-02-29",
+   "New Zealand",
+   "Christchurch",
+   5
+  ],
+  [
+   "2019-08-22",
+   "West Indies",
+   "North Sound",
+   6
+  ],
+  [
+   "2019-08-30",
+   "West Indies",
+   "Kingston",
+   7
+  ],
+  [
+   "2020-12-26",
+   "Australia",
+   "Melbourne",
+   6
+  ],
+  [
+   "2021-08-04",
+   "England",
+   "Nottingham",
+   9
+  ],
+  [
+   "2021-12-26",
+   "South Africa",
+   "Centurion",
+   5
+  ],
+  [
+   "2022-01-11",
+   "South Africa",
+   "Cape Town",
+   6
+  ],
+  [
+   "2022-03-12",
+   "Sri Lanka",
+   "Bengaluru",
+   8
+  ],
+  [
+   "2022-07-01",
+   "England",
+   "Birmingham",
+   5
+  ],
+  [
+   "2024-01-03",
+   "South Africa",
+   "Cape Town",
+   8
+  ],
+  [
+   "2024-01-25",
+   "England",
+   "Hyderabad",
+   6
+  ],
+  [
+   "2024-02-02",
+   "England",
+   "Visakhapatnam",
+   9
+  ],
+  [
+   "2024-11-22",
+   "Australia",
+   "Perth",
+   8
+  ],
+  [
+   "2024-12-14",
+   "Australia",
+   "Brisbane",
+   9
+  ],
+  [
+   "2024-12-26",
+   "Australia",
+   "Melbourne",
+   9
+  ],
+  [
+   "2024-09-19",
+   "Bangladesh",
+   "Chennai",
+   5
+  ],
+  [
+   "2024-09-27",
+   "Bangladesh",
+   "Kanpur",
+   6
+  ],
+  [
+   "2025-06-20",
+   "England",
+   "Leeds",
+   5
+  ],
+  [
+   "2025-07-10",
+   "England",
+   "London",
+   7
+  ],
+  [
+   "2025-11-14",
+   "South Africa",
+   "Kolkata",
+   6
+  ]
+ ],
+ "dismissals": {
+  "caught": 110,
+  "lbw": 49,
+  "bowled": 72,
+  "caught and bowled": 3
+ },
+ "innings": {
+  "3rd/4th innings": 132,
+  "1st/2nd innings": 102
+ },
+ "batting_position": {
+  "top 4 (1-4)": 104,
+  "middle (5-7)": 57,
+  "tail (8-11)": 73
+ },
+ "ball_age_wkts": {
+  "overs 1-20 (new ball)": 64,
+  "overs 21-80 (old ball)": 121,
+  "80+ (second new ball)": 49
+ },
+ "new_ball_overs1_20": {
+  "runs": 1529,
+  "balls": 3532,
+  "wkts": 64,
+  "avg": 23.9
+ },
+ "old_ball_overs21plus": {
+  "runs": 3102,
+  "balls": 6499,
+  "wkts": 170,
+  "avg": 18.2
+ },
+ "by_venue_type": {
+  "SENA away": {
+   "tests": 34,
+   "wkts": 159,
+   "avg": 21.5,
+   "sr": 46.4,
+   "econ": 2.77
+  },
+  "other away": {
+   "tests": 2,
+   "wkts": 13,
+   "avg": 9.2,
+   "sr": 22.7,
+   "econ": 2.44
+  },
+  "home": {
+   "tests": 16,
+   "wkts": 62,
+   "avg": 17.7,
+   "sr": 38.0,
+   "econ": 2.8
+  }
+ },
+ "india_with": {
+  "matches": 52,
+  "won": 22,
+  "lost": 25,
+  "drawn": 5,
+  "win_pct": 42.3
+ },
+ "india_without": {
+  "matches": 36,
+  "won": 24,
+  "lost": 6,
+  "drawn": 6,
+  "win_pct": 66.7
+ },
+ "india_with_away": {
+  "matches": 36,
+  "won": 12,
+  "lost": 19,
+  "drawn": 5,
+  "win_pct": 33.3
+ },
+ "india_without_away": {
+  "matches": 17,
+  "won": 9,
+  "lost": 4,
+  "drawn": 4,
+  "win_pct": 52.9
+ },
+ "india_with_home": {
+  "matches": 16,
+  "won": 10,
+  "lost": 6,
+  "drawn": 0,
+  "win_pct": 62.5
+ },
+ "india_without_home": {
+  "matches": 19,
+  "won": 15,
+  "lost": 2,
+  "drawn": 2,
+  "win_pct": 78.9
+ },
+ "share_of_his_tests_away": 69.2,
+ "missed_runs_3plus": [
+  [
+   "2018-10-04",
+   "2020-02-21",
+   7
+  ],
+  [
+   "2022-12-14",
+   "2023-12-26",
+   9
+  ]
+ ],
+ "india_tests_since_debut": 88,
+ "played_of": [
+  52,
+  88
+ ],
+ "first_test": [
+  "2018-01-05",
+  "South Africa",
+  "Cape Town"
+ ],
+ "last_test": [
+  "2025-11-22",
+  "South Africa",
+  "Guwahati"
+ ]
+}
