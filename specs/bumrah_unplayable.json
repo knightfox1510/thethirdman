@@ -1,5 +1,32 @@
 {
  "slug": "bumrah_unplayable",
+ "thumb": {
+  "kicker": "DATA STORY · EP 16",
+  "lines": [
+   {
+    "t": "BUMRAH:"
+   },
+   {
+    "t": "UNPLAYABLE WHEN FIT",
+    "c": "gold"
+   }
+  ],
+  "hero": "19.79",
+  "herosize": 480
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "BUMRAH:"
+   },
+   {
+    "t": "UNPLAYABLE WHEN FIT",
+    "c": "gold"
+   }
+  ],
+  "sub": "52 TESTS · 234 WICKETS",
+  "hero": "19.79"
+ },
  "theme": "lab",
  "captions": "lab",
  "series": "data",

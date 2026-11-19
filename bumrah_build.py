@@ -52,7 +52,7 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", full], check=True)
         out = f"{OUT}/{NAME}{suffix}.mp4"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", full, "-i", f"{base}/mix.m4a", "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "copy", "-shortest", "-movflags", "+faststart", out], check=True)
-        E.srt(meta, lead, starts, f"{OUT}/{NAME}{suffix}.srt"); B.cover().save(f"{OUT}/{NAME}{'_IG' if suffix else ''}_cover.jpg", quality=92) if True else None
+        E.srt(meta, lead, starts, f"{OUT}/{NAME}{suffix}.srt"); None
         print(variant, "->", out, round(total, 1), "s", flush=True)
 
 
