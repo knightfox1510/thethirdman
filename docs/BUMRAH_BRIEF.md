@@ -31,6 +31,17 @@ He should not work: a stuttering short run-up, a bent-the-wrong-way arm, a back 
 - Action or workload? Singh blames workload and long series, others link the hyperextended, whip-like action to spine stress: show both. General research on fast bowlers: lumbar stress fractures in 24-55% of adult fast bowlers; mixed action, a hyperextended side-bent lumbar spine and shoulder counter-rotation are risk factors; under 3.5 days' recovery tripled injury risk in juniors **GENERAL**. We do not claim Bumrah has a "mixed action" (not established) and do not diagnose.
 - Availability (OURS): he played 52 of India's 88 Tests since his debut (Jan 2018); two long absences (7 Tests in 2018-20, 9 Tests Dec 2022 to Dec 2023). India won 42% of Tests with him and 67% without (OURS, to Nov 2025); Wisden (to July 2025): 43.5% vs 70.4%, and its reading: mostly home Tests without him, weaker away opposition, and he is saved for tough tours (73.9% of his Tests away). Counting only tough away Tests, the gap flips. This is the honest "con" and a good surprise.
 
+## 2b. Full career records (cross-checked; Cricsheet is partial outside Tests, so these come from published tables)
+| Format | Matches | Wickets | Average | Economy | Best | 5-wkt hauls |
+|---|---|---|---|---|---|---|
+| Tests | 52 | 234 | 19.79 | 2.77 | 6/27 (match 9/86) | 16 |
+| ODIs | 91 | 151 | 23.74 | 4.58 | 6/19 | 2 |
+| T20Is | 100 | 126 | 18.21 | 6.52 | 4/15 | 0 |
+Sources: Wikipedia (Cricinfo figures as of 5 Oct 2026) and cricket.com.au agree on every number above (**2 SRC**); our Cricsheet Tests match them (52 Tests, 234 wkts, 19.79, 2.77). Strike rates are derived (balls per wicket: Tests 42.9, ODIs 31.1, T20Is 16.7). Debuts: ODI 23 Jan 2016, T20I 26 Jan 2016, Test 5 Jan 2018.
+- **IPL career totals conflict** (Wikipedia: 170 wkts in 138 matches, avg 22.78, econ 7.32; the same page elsewhere 181 in 142; our Sportmonks cache gives about 187 credited wickets and 158 matches, and looks inconsistent for 2026): **we avoid IPL career totals** and quote only phase economy and left-hander splits, labelled "in our archive".
+- **Milestones** (**2 SRC** unless noted): No. 1 in the ICC Test bowling rankings, first Indian pacer there (Feb 2024, 881 pts), career-best 908 in Jan 2025, the highest by any Indian bowler (ICC, ESPN) · 200 Test wickets at an average under 20 (first ever) · 32 wickets in Border-Gavaskar 2024-25, most by an Indian bowler in an overseas series · Player of the Tournament, T20 World Cup 2024 (15 wkts at 8.27) · **Player of the Match in the T20 World Cup 2026 final (4/15 v New Zealand, Ahmedabad, 8 March 2026; India won by 96 runs)**: IndiaTV, Latestly, Outlook; "most wickets by a pacer in T20 World Cups, 40" is **1 SRC**: attribute or drop · Wikipedia also lists: ICC Test Cricketer of the Year 2024 (Sobers Trophy), first Indian to 100 wickets in all three formats, Polly Umrigar three times.
+- Not verified: "first bowler No. 1 in all three formats" (the search found no confirmation): leave out.
+
 ## 3. Pros and cons (the scene)
 Pros: late, close release; same release for every length; backspin bounce and skid; hits the stumps; yorker; new ball and old ball; stable and compact. Cons: back stress history and workload; cannot play every Test; flat pitches lift his average to 34; needs wicket-takers at the other end (Root faced only 21 of 72 balls with Bumrah bowling in the 2025 Test, ESPN: attack the other end); relies on one body.
 
@@ -39,6 +50,7 @@ Pros: late, close release; same release for every length; backspin bounce and sk
 Vertical (~160 s): hook, action, numbers, stumps, old ball and any pitch, short format, the back, poll + end card.
 
 ## 5. Images and videos: what to send (rights are yours; I cut them out and build them in)
+**Photos received 19 Nov (saved in data/licensed/in, cut-outs in data/licensed/cut):** side-on leap (Leeds), clean side-on leap, loading at the Gabba, high-arm release close-up, a batter bowled at Lord's, plus the earlier Latham-bowled, arms-wide and 2020 action shots. **Still useful:** a front-on release; the run-up/gather; a wrist-and-seam close-up; a yorker to the stumps; debut and rehab shots.
 **Photos we need** (best first; high resolution, ideally 1500 px+):
 1. **Front-on release** (face to camera at the point of release): shows the arm and the release point. Scene 3 and the vertical hook.
 2. **Side-on release / delivery stride** (one clean frame): scene 3 callouts and scene 4.
