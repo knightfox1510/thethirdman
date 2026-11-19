@@ -214,5 +214,17 @@
   "kind": "short",
   "title": "ipl_needs_2027",
   "format": "datastories"
+ },
+ "MO83fPkq3qI": {
+  "slug": "nz_ind_1st_test_day1",
+  "kind": "long",
+  "title": "nz_ind_1st_test_day1",
+  "format": "replay"
+ },
+ "-SNqC4wA_-8": {
+  "slug": "nz_ind_1st_test_day1",
+  "kind": "short",
+  "title": "nz_ind_1st_test_day1",
+  "format": "replay"
  }
 }
