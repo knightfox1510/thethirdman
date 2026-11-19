@@ -83,6 +83,25 @@
    ]
   },
   {
+   "slug": "biz_test_cafe_coffee",
+   "title": "₹300 Ki Coffee, Owner Ko Sirf ₹42?",
+   "format": "news",
+   "series": null,
+   "ep": null,
+   "long": null,
+   "short": null,
+   "status": "Not scheduled",
+   "link": null,
+   "planned": null,
+   "recheck": null,
+   "sources": [
+    "Typical Indian cafe cost split (raw materials 30-35, staff 22-25, rent 15-20, utilities and misc 8-10, marketing 3-5, net 10-15 per Rs 100 of sales): Petpooja, cafe business model revenue profit explained, https://blog.petpooja.com/growth-scaling/cafe-business-model-revenue-profit-explained/",
+    "Benchmarks (food and beverage cost under 35%, labour under 30%, occupancy under 20%): Restaurant India via Prockured, https://blog.prockured.com/?p=228",
+    "Net margin ranges differ by source (10-15% Petpooja model; 20-35% claimed for well-run cafes by Prockured): shown as one illustrative model, not any brand",
+    "STATUS: TEST RENDER. All rupee figures are an illustrative split of a Rs 300 coffee using the midpoints of one vendor model. Verify with a second Tier A source before publishing."
+   ]
+  },
+  {
    "slug": "bradman_ipl",
    "title": "What If Bradman Played in the IPL",
    "format": "whatif",
@@ -640,24 +659,41 @@
    ]
   },
   {
+   "slug": "nz_ind_1st_test_day1",
+   "title": "India vs New Zealand - 1st Test Day 1 Analysis | How 70/5 Became 243/5",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "04",
+   "long": "5:51",
+   "short": "2:53",
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "Ball-by-ball for day one: Cricbuzz full commentary for New Zealand v India, 1st Test, 19 November 2026 (owner's capture; Cricbuzz's own session tables for control, false shots and length). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+    "Tea-time state and the five dismissals corroborated by Telangana Today https://telanganatoday.com/1st-test-new-zealand-recover-to-140-5-at-tea-despite-bumrahs-three-wickets and The Open Press https://theopenpress.in/article/india-vs-new-zealand-1st-test-nicholls-phillips-century-partnership-19-november",
+    "Nicholls' four earlier Test hundreds at the Basin Reserve: Cricsheet men's Test ball-by-ball archive (cricsheet.org, ODC-BY) and Cricbuzz. Figures: analysis/nz_day1.py, analysis/nz_tests.py"
+   ]
+  },
+  {
    "slug": "nz_test_preview",
    "title": "Can India Win a Test Series in New Zealand?",
    "format": "tactics",
    "series": "Tactics Board",
    "ep": "04",
-   "long": null,
-   "short": null,
+   "long": "4:09",
+   "short": "0:45",
    "status": "Ready",
    "link": null,
    "planned": "2026-11-18",
    "recheck": "Pant fitness, WTC table",
    "sources": [
-    "Cricsheet men's Test ball-by-ball data (cricsheet.org, ODC-BY). Figures: analysis/nz_tests.py",
-    "https://scroll.in/field/953699/data-check-a-look-at-key-numbers-from-indias-previous-test-tours-of-new-zealand",
-    "https://www.icc-cricket.com/news/key-takeaways-from-india-s-squad-for-new-zealand-test-series",
-    "https://www.crictracker.com/cricket-news/new-zealand-announce-14-member-squad-for-test-series-against-india-duffy-ravindra-returns-6609/",
-    "https://en.wikipedia.org/wiki/2025%E2%80%932027_World_Test_Championship",
-    "https://www.espn.com.au/cricket/scores/series/24469"
+    "Cricsheet men's Test ball-by-ball (cricsheet.org, ODC-BY), shown as 'our archive'; spinners are tagged by name because bowling type is not in the data. Figures: analysis/nz_tests.py",
+    "India's Test record in New Zealand: Scroll data check https://scroll.in/field/953699/data-check-a-look-at-key-numbers-from-indias-previous-test-tours-of-new-zealand (to 2020; 2020 series from Cricsheet)",
+    "India squad (14 Nov 2026): https://www.icc-cricket.com/tournaments/world-test-championship/news/india-release-spinner-for-pacer-in-test-squad-to-face-kiwis ; https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-test-series-2026-gurnoor-brar-rishabh-pant-added-squad",
+    "New Zealand squad (11 Nov 2026): https://www.qatar-tribune.com/article/263936/sports/new-zealand-announce-squad-for-home-test-series-vs-india ; https://arynews.tv/seamer-duffy-back-in-new-zealand-squad-for-india-tests",
+    "Schedule: https://www.outlookindia.com/sports/cricket/indias-tour-of-new-zealand-schedule-2026-ind-vs-nz-12-match-series-100-years-of-sporting-ties ; https://en.wikipedia.org/wiki/2021_ICC_World_Test_Championship_final"
    ]
   },
   {
