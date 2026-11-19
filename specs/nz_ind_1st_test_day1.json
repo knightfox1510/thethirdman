@@ -1,0 +1,1789 @@
+{
+ "slug": "nz_ind_1st_test_day1",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DAY 1",
+ "files": {
+  "long": "Replay_Room_Ep04_India_vs_New_Zealand_1st_Test_Day_1_Long",
+  "short": "Replay_Room_Ep04_India_vs_New_Zealand_1st_Test_Day_1_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 1",
+  "lines": [
+   {
+    "t": "70/5 TO"
+   },
+   {
+    "t": "243/5",
+    "c": "gold"
+   }
+  ],
+  "hero": "173",
+  "herosize": 420
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "HOW 70/5"
+   },
+   {
+    "t": "BECAME 243/5",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 1",
+  "hero": "173"
+ },
+ "sources": [
+  "Ball-by-ball for day one: Cricbuzz full commentary for New Zealand v India, 1st Test, 19 November 2026 (owner's capture; Cricbuzz's own session tables for control, false shots and length). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Tea-time state and the five dismissals corroborated by Telangana Today https://telanganatoday.com/1st-test-new-zealand-recover-to-140-5-at-tea-despite-bumrahs-three-wickets and The Open Press https://theopenpress.in/article/india-vs-new-zealand-1st-test-nicholls-phillips-century-partnership-19-november",
+  "Nicholls' four earlier Test hundreds at the Basin Reserve: Cricsheet men's Test ball-by-ball archive (cricsheet.org, ODC-BY) and Cricbuzz. Figures: analysis/nz_day1.py, analysis/nz_tests.py"
+ ],
+ "long": [
+  {
+   "vo": "Seventy for five. India had won the toss, the conditions and the morning. By stumps, New Zealand were two hundred and forty-three for five. This is how day one in Wellington turned, and the stretch of overs where it slipped away.",
+   "chapter": "Intro",
+   "scene": {
+    "type": "statement",
+    "kicker": "NEW ZEALAND V INDIA · 1ST TEST · DAY 1",
+    "lines": [
+     {
+      "t": "70 FOR 5."
+     },
+     {
+      "t": "THEN 243 FOR 5.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Everything here comes from our ball-by-ball of the day. India won the toss, and शुभमन गिल chose to bowl. The pitch had fifteen millimetres of grass, and moisture on top in the morning. Helpful conditions, and in the first hour the seamers made them count.",
+   "chapter": "The conditions",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE CONDITIONS",
+     "sub": "BASIN RESERVE · MORNING"
+    },
+    "tiles": [
+     {
+      "v": "15 MM",
+      "l": "GRASS ON THE PITCH",
+      "c": "gold"
+     },
+     {
+      "v": "MOISTURE",
+      "l": "ON TOP IN THE MORNING",
+      "c": "ink"
+     },
+     {
+      "v": "BOWL",
+      "l": "INDIA WON THE TOSS",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "जसप्रीत बुमराह's first over told the story. Full, on the fourth-stump line, the seam bolt upright. Tom Latham left it, expecting it to go away. It came back late, and hit off stump. Two for one.",
+   "chapter": "The new ball",
+   "scene": {
+    "type": "trajectory",
+    "head": {
+     "t": "BUMRAH'S FIRST OVER",
+     "sub": "ILLUSTRATIVE · SIDE-ON · LATHAM B BUMRAH"
+    },
+    "hl": [
+     "FULL"
+    ],
+    "bowler_c": "ink",
+    "balls": [
+     {
+      "length": 3.2,
+      "end": 0.4,
+      "label": "FULL · 4TH-STUMP LINE",
+      "c": "gold",
+      "at": 0.3
+     }
+    ],
+    "note": "seam upright: Latham left it, it came back in"
+   }
+  },
+  {
+   "vo": "Then a review that went New Zealand's way. Devon Conway was given out caught behind off बुमराह, and reviewed at once: the noise came before the ball reached the bat. Not out. Two overs later अंशुल कंबोज bowled full and angled in, it seamed away, and Conway edged to पंत. Twelve for two.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE FIRST FOUR OVERS"
+    },
+    "events": [
+     {
+      "y": "0.3",
+      "t": "Latham bowled by Bumrah · 2/1",
+      "hl": true
+     },
+     {
+      "y": "2.5",
+      "t": "Conway reviews: not out",
+      "c": "red"
+     },
+     {
+      "y": "3.2",
+      "t": "Conway c Pant b Kamboj · 12/2",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "रचिन रवींद्र rode his luck. India did not review an edge behind, and a direct hit from कंबोज missed. Then आकाश दीप found extra bounce, short of a length outside off, and the edge went to पंत. Fifty-one for three. The last ball of the next over was बुमराह, a good-length ball that nipped back. Daryl Mitchell, who had been walking at him, got an inside edge to short leg, where यशस्वी जायसवाल held it. Fifty-two for four.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "TWO IN TWO OVERS",
+     "sub": "OVERS 19 AND 20"
+    },
+    "items": [
+     {
+      "h": "RAVINDRA C PANT B AKASH DEEP",
+      "d": "short of a length, extra bounce · 51/3",
+      "c": "gold"
+     },
+     {
+      "h": "MITCHELL C JAISWAL B BUMRAH",
+      "d": "good-length nipbacker, inside edge to short leg · 52/4",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Sixty for four at lunch. New Zealand were rattled: Cricbuzz has them playing and missing or edging on twenty-five per cent of balls in that session.",
+   "chapter": "Lunch: 60 for 4",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "BEFORE LUNCH"
+    },
+    "value": 25,
+    "suffix": "%",
+    "label": "OF BALLS DREW A FALSE SHOT · CRICBUZZ'S OWN FIGURE",
+    "color": "red",
+    "note": "60 for 4 at lunch"
+   }
+  },
+  {
+   "vo": "After lunch, बुमराह struck again. Tom Blundell, short of a length, angled back into the fifth-stump line; he left his bat hanging out and edged to गिल at first slip, who hung on. Seventy for five, in twenty-eight overs. Here is where all five wickets came from.",
+   "chapter": "Five wickets, 70 runs",
+   "scene": {
+    "type": "wicketmap",
+    "head": {
+     "t": "WHERE THE FIVE WICKETS CAME FROM"
+    },
+    "footnote": "ILLUSTRATIVE · PLACEMENT READ FROM THE BALL-BY-BALL COMMENTARY · LINES MEASURED FROM THE OFF STUMP",
+    "items": [
+     {
+      "n": 1,
+      "who": "LATHAM",
+      "by": "BUMRAH",
+      "x": 0.34,
+      "len": 2.6,
+      "move": "in",
+      "note": "FULL · 4TH-STUMP LINE · SEAM UPRIGHT, CAME BACK",
+      "over": "0.3",
+      "score": "2/1"
+     },
+     {
+      "n": 2,
+      "who": "CONWAY",
+      "by": "KAMBOJ",
+      "x": 0.11,
+      "len": 3.6,
+      "move": "out",
+      "note": "FULL, ANGLED IN, SEAMED AWAY · EDGE TO PANT",
+      "over": "3.2",
+      "score": "12/2",
+      "kind": "c",
+      "catcher": "PANT"
+     },
+     {
+      "n": 3,
+      "who": "RAVINDRA",
+      "by": "AKASH DEEP",
+      "x": 0.57,
+      "len": 6.5,
+      "note": "SHORT OF A LENGTH, EXTRA BOUNCE · EDGE TO PANT",
+      "over": "19.1",
+      "score": "51/3",
+      "kind": "c",
+      "catcher": "PANT"
+     },
+     {
+      "n": 4,
+      "who": "MITCHELL",
+      "by": "BUMRAH",
+      "x": 0.0,
+      "len": 5.0,
+      "move": "in",
+      "note": "GOOD-LENGTH NIPBACKER · INSIDE EDGE TO SHORT LEG",
+      "over": "20.6",
+      "score": "52/4",
+      "kind": "c",
+      "catcher": "JAISWAL"
+     },
+     {
+      "n": 5,
+      "who": "BLUNDELL",
+      "by": "BUMRAH",
+      "x": 0.57,
+      "len": 6.4,
+      "move": "in",
+      "note": "SHORT OF A LENGTH, ANGLED BACK · EDGE TO GILL",
+      "over": "28.2",
+      "score": "70/5",
+      "kind": "c",
+      "catcher": "GILL"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And here is what worked. India's seamers bowled two hundred and two balls on a good length, for just one point four eight an over, and three wickets. The full balls took two wickets but cost over five an over. The short balls cost nearly four an over, and took none.",
+   "chapter": "What worked",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WHAT WORKED",
+     "sub": "INDIA'S SEAMERS · RUNS PER OVER BY LENGTH · CRICBUZZ'S TABLE"
+    },
+    "max": 6,
+    "dec": 2,
+    "items": [
+     {
+      "label": "GOOD LENGTH · 202 BALLS · 3 WKTS",
+      "value": 1.48,
+      "color": "gold"
+     },
+     {
+      "label": "SHORT · 122 BALLS · 0 WKTS",
+      "value": 3.78,
+      "color": "ink"
+     },
+     {
+      "label": "FULL · 78 BALLS · 2 WKTS",
+      "value": 5.15,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The ball told the same story. The new ball did the work: three wickets for fifty-two in the first twenty overs. The old ball took two wickets in the next sixty overs, and cost a hundred and eighty-four runs. The second new ball had two overs before stumps: seven runs, no wicket.",
+   "chapter": "The ball",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE BALL",
+     "sub": "NEW ZEALAND'S RUNS AND WICKETS BY AGE OF THE BALL"
+    },
+    "tiles": [
+     {
+      "v": "52 / 3",
+      "l": "FIRST 20 OVERS · NEW BALL",
+      "c": "gold"
+     },
+     {
+      "v": "184 / 2",
+      "l": "OVERS 21-80 · OLD BALL",
+      "c": "red"
+     },
+     {
+      "v": "7 / 0",
+      "l": "OVERS 81-82 · SECOND NEW BALL",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So where did it turn? Over thirty. बुमराह nips one back, गिल reviews an lbw against Glenn Phillips, who was on six, and the third umpire sees an inside edge. India lose the review. Five overs later, another inside edge rolls past the stumps. And it kept happening.",
+   "chapter": "Where it turned",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE LIFELINES",
+     "sub": "NEW ZEALAND'S ESCAPES"
+    },
+    "items": [
+     {
+      "h": "30.3 · PHILLIPS ON 6",
+      "d": "lbw review lost: the third umpire gave an inside edge",
+      "c": "gold"
+     },
+     {
+      "h": "35.4 · PHILLIPS ON 19",
+      "d": "inside edge rolls past the stumps"
+     },
+     {
+      "h": "50.3 · PHILLIPS ON 51",
+      "d": "edge wide of where a third slip would stand"
+     },
+     {
+      "h": "73.3 · NICHOLLS ON 102",
+      "d": "top edge dropped: Pant and Padikkal both left it"
+     },
+     {
+      "h": "79.3 · PHILLIPS ON 91",
+      "d": "edge past the stumps to the keeper"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the pitch eased. At lunch the pitch report said it was browning off as the sun came out, with not the kind of movement we saw before lunch. The numbers agree. Cricbuzz has New Zealand's false shots at twenty-five per cent before lunch, and thirteen and a half in the next session. On good-length balls, thirty per cent before lunch, and about thirteen after.",
+   "chapter": "The sun comes out",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "THE PITCH EASES",
+     "sub": "FALSE SHOTS · CRICBUZZ · AFTER-LUNCH SPLIT DERIVED"
+    },
+    "a": {
+     "name": "BEFORE LUNCH",
+     "color": "gold"
+    },
+    "b": {
+     "name": "AFTER LUNCH",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "ALL BALLS",
+      "25%",
+      "14%",
+      "a"
+     ],
+     [
+      "GOOD-LENGTH BALLS",
+      "30%",
+      "13%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "And India's lengths slipped. Before lunch, nineteen per cent of their seam balls were short. After lunch, thirty-six. Good-length balls fell from fifty-seven per cent to forty-seven. The pitch asked for a fuller length, and India drifted shorter.",
+   "chapter": "Lengths",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "INDIA'S LENGTHS DRIFTED",
+     "sub": "SHARE OF SEAM BALLS · DERIVED FROM CRICBUZZ'S TABLES"
+    },
+    "a": {
+     "name": "BEFORE LUNCH",
+     "color": "gold"
+    },
+    "b": {
+     "name": "AFTER LUNCH",
+     "color": "red"
+    },
+    "rows": [
+     [
+      "SHORT",
+      "19%",
+      "36%",
+      "b"
+     ],
+     [
+      "GOOD LENGTH",
+      "57%",
+      "47%",
+      "a"
+     ],
+     [
+      "FULL",
+      "24%",
+      "17%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Henry Nicholls made the most of it. A hundred and thirteen not out, off two hundred and twenty-one balls, his fifth Test hundred at the Basin Reserve: in our archive he had four here before today. Playing late, behind the line. Cricbuzz had his control at ninety per cent, against seventy for the other New Zealand batters.",
+   "chapter": "Nicholls",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "HENRY NICHOLLS"
+    },
+    "value": 113,
+    "suffix": "*",
+    "label": "OFF 221 BALLS · 14 FOURS · CONTROL 90%",
+    "color": "gold",
+    "note": "fifth Test hundred at the Basin Reserve"
+   }
+  },
+  {
+   "vo": "And Glenn Phillips, ninety-four not out, off a hundred and eighty-two. Together, one hundred and seventy-three, unbroken. They ran everything: fifty-four singles, seven twos, seven threes, and twenty-one fours. Still seventy-three per cent dot balls, but India could never make that count.",
+   "chapter": "The stand",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "173 UNBROKEN",
+     "sub": "NICHOLLS AND PHILLIPS · 327 BALLS"
+    },
+    "tiles": [
+     {
+      "v": "54",
+      "l": "SINGLES",
+      "c": "ink"
+     },
+     {
+      "v": "7",
+      "l": "TWOS",
+      "c": "gold"
+     },
+     {
+      "v": "7",
+      "l": "THREES",
+      "c": "gold"
+     },
+     {
+      "v": "21",
+      "l": "FOURS",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Put the whole day on one strip. Five wickets in the first twenty-eight overs. None in the next fifty-three.",
+   "chapter": "The whole day",
+   "scene": {
+    "type": "overstrip",
+    "head": {
+     "t": "THE WHOLE DAY, OVER BY OVER",
+     "sub": "RUNS IN EACH OVER · RED = WICKET · GREEN = MAIDEN"
+    },
+    "overs": [
+     [
+      4,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      1,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      true
+     ],
+     [
+      0,
+      true
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      4,
+      true
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      3,
+      false
+     ]
+    ],
+    "session_cuts": [
+     23,
+     48
+    ],
+    "legal_lines": null,
+    "legend_lines": [
+     [
+      "FIRST 28.2 OVERS: 5 WICKETS, 70 RUNS",
+      "red"
+     ],
+     [
+      "NEXT 53.4 OVERS: 0 WICKETS, 173 RUNS",
+      "ink"
+     ]
+    ],
+    "footnote": "OUR BALL-BY-BALL · LUNCH AFTER 22.5 OVERS, TEA AFTER 47.6"
+   }
+  },
+  {
+   "vo": "The bowlers. बुमराह, seventeen overs, three for fifty-two. After Blundell, forty-eight balls, thirty-five runs and no wicket. आकाश दीप, fifteen overs, one for thirty-three. कंबोज, eighteen, one for fifty-seven. प्रसिद्ध कृष्णा, sixteen overs, none for fifty-eight, with nine fours. And वॉशिंगटन सुंदर, sixteen overs for thirty-eight.",
+   "chapter": "The bowlers",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE BOWLERS",
+     "sub": "ECONOMY RATE · RUNS PER OVER"
+    },
+    "max": 4.5,
+    "dec": 2,
+    "items": [
+     {
+      "label": "AKASH DEEP · 15-5-33-1",
+      "value": 2.2,
+      "color": "gold"
+     },
+     {
+      "label": "SUNDAR · 16-2-38-0",
+      "value": 2.38,
+      "color": "ink"
+     },
+     {
+      "label": "BUMRAH · 17-5-52-3",
+      "value": 3.06,
+      "color": "ink"
+     },
+     {
+      "label": "KAMBOJ · 18-4-57-1",
+      "value": 3.17,
+      "color": "ink"
+     },
+     {
+      "label": "PRASIDH · 16-2-58-0",
+      "value": 3.62,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India took the second new ball at eighty overs. बुमराह's first ball went for four, then five dots, one of them a toe-crusher that Nicholls only just jammed his bat down on. कंबोज bowled the last over. Two hundred and forty-three for five.",
+   "chapter": "The second new ball",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE LAST HALF HOUR"
+    },
+    "events": [
+     {
+      "y": "73.3",
+      "t": "Nicholls dropped on 102",
+      "c": "red"
+     },
+     {
+      "y": "80",
+      "t": "second new ball taken",
+      "hl": true
+     },
+     {
+      "y": "80.6",
+      "t": "Bumrah's toe-crusher: survived",
+      "c": "red"
+     },
+     {
+      "y": "82",
+      "t": "stumps: 243/5",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So what now? As Cricbuzz's commentators said at tea, anything over two hundred and fifty could hurt India later. That is fifty more runs. Day two starts with the new ball, and five wickets to take. Now your call: who won day one? Nicholls, Phillips or बुमराह? Comment one, two or three, and tell us what India should do first.",
+   "chapter": "Day two",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "WHO WON DAY ONE? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "NICHOLLS",
+      "d": "113 not out, the fifth hundred at the Basin",
+      "c": "gold"
+     },
+     {
+      "h": "PHILLIPS",
+      "d": "94 not out, 173 together"
+     },
+     {
+      "h": "BUMRAH",
+      "d": "3 for 52, all before the 29th over"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down day two the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO WON"
+     },
+     {
+      "t": "DAY ONE?",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE · MATCH BREAKDOWNS"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Seventy for five. Then two hundred and forty-three for five, and nobody could break the stand. Here is how day one in Wellington turned.",
+   "scene": {
+    "type": "statement",
+    "kicker": "NEW ZEALAND V INDIA · 1ST TEST · DAY 1",
+    "lines": [
+     {
+      "t": "70 FOR 5."
+     },
+     {
+      "t": "THEN 243 FOR 5.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India won the toss and bowled. Fifteen millimetres of grass, moisture on top. बुमराह's first over: full, fourth-stump line, seam upright. Latham left it, expecting it to go away. It came back.",
+   "scene": {
+    "type": "trajectory",
+    "head": {
+     "t": "BUMRAH'S FIRST OVER",
+     "sub": "ILLUSTRATIVE · SIDE-ON · LATHAM B BUMRAH"
+    },
+    "hl": [
+     "FULL"
+    ],
+    "bowler_c": "ink",
+    "balls": [
+     {
+      "length": 3.2,
+      "end": 0.4,
+      "label": "FULL · 4TH-STUMP LINE",
+      "c": "gold",
+      "at": 0.3
+     }
+    ],
+    "note": "seam upright: Latham left it, it came back in"
+   }
+  },
+  {
+   "vo": "Conway reviewed a caught-behind, and won. Two overs later कंबोज, full and angled in, seamed it away, and Conway edged to पंत. Twelve for two.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE FIRST FOUR OVERS"
+    },
+    "events": [
+     {
+      "y": "0.3",
+      "t": "Latham bowled by Bumrah · 2/1",
+      "hl": true
+     },
+     {
+      "y": "2.5",
+      "t": "Conway reviews: not out",
+      "c": "red"
+     },
+     {
+      "y": "3.2",
+      "t": "Conway c Pant b Kamboj · 12/2",
+      "hl": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "रवींद्र was reprieved, twice. Then आकाश दीप found extra bounce and पंत took the edge. बुमराह's nipbacker took Mitchell at short leg. Sixty for four at lunch.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "TWO IN TWO OVERS",
+     "sub": "OVERS 19 AND 20"
+    },
+    "items": [
+     {
+      "h": "RAVINDRA C PANT B AKASH DEEP",
+      "d": "short of a length, extra bounce · 51/3",
+      "c": "gold"
+     },
+     {
+      "h": "MITCHELL C JAISWAL B BUMRAH",
+      "d": "good-length nipbacker, inside edge to short leg · 52/4",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "After lunch, Blundell edged to गिल. Seventy for five. Two full balls, one good length, two short of a length: all five found something in the surface.",
+   "scene": {
+    "type": "wicketmap",
+    "head": {
+     "t": "WHERE THE FIVE WICKETS CAME FROM"
+    },
+    "footnote": "ILLUSTRATIVE · PLACEMENT READ FROM THE BALL-BY-BALL COMMENTARY · LINES MEASURED FROM THE OFF STUMP",
+    "items": [
+     {
+      "n": 1,
+      "who": "LATHAM",
+      "by": "BUMRAH",
+      "x": 0.34,
+      "len": 2.6,
+      "move": "in",
+      "note": "FULL · 4TH-STUMP LINE · SEAM UPRIGHT, CAME BACK",
+      "over": "0.3",
+      "score": "2/1"
+     },
+     {
+      "n": 2,
+      "who": "CONWAY",
+      "by": "KAMBOJ",
+      "x": 0.11,
+      "len": 3.6,
+      "move": "out",
+      "note": "FULL, ANGLED IN, SEAMED AWAY · EDGE TO PANT",
+      "over": "3.2",
+      "score": "12/2",
+      "kind": "c",
+      "catcher": "PANT"
+     },
+     {
+      "n": 3,
+      "who": "RAVINDRA",
+      "by": "AKASH DEEP",
+      "x": 0.57,
+      "len": 6.5,
+      "note": "SHORT OF A LENGTH, EXTRA BOUNCE · EDGE TO PANT",
+      "over": "19.1",
+      "score": "51/3",
+      "kind": "c",
+      "catcher": "PANT"
+     },
+     {
+      "n": 4,
+      "who": "MITCHELL",
+      "by": "BUMRAH",
+      "x": 0.0,
+      "len": 5.0,
+      "move": "in",
+      "note": "GOOD-LENGTH NIPBACKER · INSIDE EDGE TO SHORT LEG",
+      "over": "20.6",
+      "score": "52/4",
+      "kind": "c",
+      "catcher": "JAISWAL"
+     },
+     {
+      "n": 5,
+      "who": "BLUNDELL",
+      "by": "BUMRAH",
+      "x": 0.57,
+      "len": 6.4,
+      "move": "in",
+      "note": "SHORT OF A LENGTH, ANGLED BACK · EDGE TO GILL",
+      "over": "28.2",
+      "score": "70/5",
+      "kind": "c",
+      "catcher": "GILL"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Look at what worked. Good-length balls cost one point four eight an over, and took three wickets. The full balls took two, but cost over five. The short balls cost nearly four an over, and took none.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WHAT WORKED",
+     "sub": "RUNS PER OVER BY LENGTH · CRICBUZZ"
+    },
+    "max": 6,
+    "dec": 2,
+    "items": [
+     {
+      "label": "GOOD · 202 BALLS · 3 WKTS",
+      "value": 1.48,
+      "color": "gold"
+     },
+     {
+      "label": "SHORT · 122 BALLS · 0 WKTS",
+      "value": 3.78,
+      "color": "ink"
+     },
+     {
+      "label": "FULL · 78 BALLS · 2 WKTS",
+      "value": 5.15,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The new ball did the work: three wickets for fifty-two in twenty overs. The old ball: two wickets in sixty overs, and a hundred and eighty-four runs.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE BALL",
+     "sub": "NEW ZEALAND'S RUNS AND WICKETS BY AGE OF THE BALL"
+    },
+    "tiles": [
+     {
+      "v": "52 / 3",
+      "l": "FIRST 20 OVERS · NEW BALL",
+      "c": "gold"
+     },
+     {
+      "v": "184 / 2",
+      "l": "OVERS 21-80 · OLD BALL",
+      "c": "red"
+     },
+     {
+      "v": "7 / 0",
+      "l": "OVERS 81-82 · SECOND NEW BALL",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then it turned. Phillips, on six, survived an lbw review, and India lost it. Inside edges rolled past the stumps. A catch was dropped.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE LIFELINES",
+     "sub": "NEW ZEALAND'S ESCAPES"
+    },
+    "items": [
+     {
+      "h": "30.3 · PHILLIPS ON 6",
+      "d": "lbw review lost: the third umpire gave an inside edge",
+      "c": "gold"
+     },
+     {
+      "h": "35.4 · PHILLIPS ON 19",
+      "d": "inside edge rolls past the stumps"
+     },
+     {
+      "h": "50.3 · PHILLIPS ON 51",
+      "d": "edge wide of where a third slip would stand"
+     },
+     {
+      "h": "73.3 · NICHOLLS ON 102",
+      "d": "top edge dropped: Pant and Padikkal both left it"
+     },
+     {
+      "h": "79.3 · PHILLIPS ON 91",
+      "d": "edge past the stumps to the keeper"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And the pitch eased as the sun came out. False shots fell from twenty-five per cent before lunch to fourteen after. On good-length balls, from thirty to thirteen.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "THE PITCH EASES",
+     "sub": "FALSE SHOTS · CRICBUZZ · DERIVED SPLIT"
+    },
+    "a": {
+     "name": "BEFORE LUNCH",
+     "color": "gold"
+    },
+    "b": {
+     "name": "AFTER LUNCH",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "ALL BALLS",
+      "25%",
+      "14%",
+      "a"
+     ],
+     [
+      "GOOD LENGTH",
+      "30%",
+      "13%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "India drifted shorter, too. Nineteen per cent of their seam balls were short before lunch. After lunch, thirty-six. The pitch wanted a fuller length.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "LENGTHS DRIFTED",
+     "sub": "SHARE OF SEAM BALLS · DERIVED"
+    },
+    "a": {
+     "name": "BEFORE LUNCH",
+     "color": "gold"
+    },
+    "b": {
+     "name": "AFTER LUNCH",
+     "color": "red"
+    },
+    "rows": [
+     [
+      "SHORT",
+      "19%",
+      "36%",
+      "b"
+     ],
+     [
+      "GOOD LENGTH",
+      "57%",
+      "47%",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "बुमराह finished with three for fifty-two. After Blundell, forty-eight balls, thirty-five runs, and no wicket. His work was done by the twenty-ninth over.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "JASPRIT BUMRAH"
+    },
+    "value": 3,
+    "suffix": "/52",
+    "label": "17 OVERS · ALL THREE WICKETS BEFORE THE 29TH OVER",
+    "color": "gold",
+    "note": "after Blundell: 48 balls, 35 runs, no wicket"
+   }
+  },
+  {
+   "vo": "Henry Nicholls: a hundred and thirteen not out, his fifth hundred at the Basin Reserve. Glenn Phillips: ninety-four not out. Together, one seventy-three.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "NEW ZEALAND'S SIXTH-WICKET STAND",
+     "sub": "UNBROKEN · 173 OFF 327 BALLS"
+    },
+    "tiles": [
+     {
+      "v": "113*",
+      "l": "NICHOLLS · 221 BALLS",
+      "c": "gold"
+     },
+     {
+      "v": "94*",
+      "l": "PHILLIPS · 182 BALLS",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "They ran seven twos and seven threes, and hit twenty-one fours. India went fifty-three overs without a wicket.",
+   "scene": {
+    "type": "overstrip",
+    "head": {
+     "t": "THE WHOLE DAY, OVER BY OVER",
+     "sub": "RUNS IN EACH OVER · RED = WICKET · GREEN = MAIDEN"
+    },
+    "overs": [
+     [
+      4,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      1,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      true
+     ],
+     [
+      0,
+      true
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      4,
+      true
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      3,
+      false
+     ]
+    ],
+    "session_cuts": [
+     23,
+     48
+    ],
+    "legal_lines": null,
+    "legend_lines": [
+     [
+      "FIRST 28.2 OVERS: 5 WICKETS, 70 RUNS",
+      "red"
+     ],
+     [
+      "NEXT 53.4 OVERS: 0 WICKETS, 173 RUNS",
+      "ink"
+     ]
+    ],
+    "footnote": "OUR BALL-BY-BALL · LUNCH AFTER 22.5 OVERS, TEA AFTER 47.6"
+   }
+  },
+  {
+   "vo": "India took the second new ball at eighty overs. बुमराह's first ball went for four, then five dots, one a toe-crusher that Nicholls only just survived. Two hundred and forty-three for five at stumps.",
+   "scene": {
+    "type": "statement",
+    "kicker": "STUMPS · DAY 1",
+    "lines": [
+     {
+      "t": "243 FOR 5."
+     },
+     {
+      "t": "NZ ON TOP.",
+      "c": "gold"
+     }
+    ],
+    "sub": "Second new ball taken at 80 overs"
+   }
+  },
+  {
+   "vo": "So who won day one? Nicholls, Phillips, or बुमराह? Comment one, two or three, and tell us what India should do first on day two.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "WHO WON DAY ONE? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "NICHOLLS",
+      "d": "113 not out, the fifth hundred at the Basin",
+      "c": "gold"
+     },
+     {
+      "h": "PHILLIPS",
+      "d": "94 not out, 173 together"
+     },
+     {
+      "h": "BUMRAH",
+      "d": "3 for 52, all before the 29th over"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down day two the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "India vs New Zealand - 1st Test Day 1 Analysis | How 70/5 Became 243/5",
+   "description": "India vs New Zealand, 1st Test day one analysis at the Basin Reserve, Wellington (19 November 2026): how 70 for 5 became 243 for 5. Where India's five wickets came from (line, length and movement), why the pitch eased as the sun came out, how India's lengths drifted shorter after lunch, and the unbroken 173 between Henry Nicholls (113*) and Glenn Phillips (94*).\n\nYOUR CALL: who won day one? Comment 1 (Nicholls), 2 (Phillips) or 3 (Bumrah), and tell us what India should do first on day two.\n\nMethod: our ball-by-ball of the day (Cricbuzz commentary); Cricbuzz's own session tables for control, false-shot and length figures, with the after-lunch splits derived by subtracting the lunch table from the day table. Placement of the wicket balls is read from the commentary and is illustrative.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Day1",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Jasprit Bumrah",
+    "Henry Nicholls",
+    "Glenn Phillips",
+    "Shubman Gill",
+    "Basin Reserve",
+    "Wellington Test",
+    "Day 1 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "How 70/5 Became 243/5 | India vs New Zealand 1st Test Day 1 #Shorts",
+   "description": "India vs New Zealand, 1st Test day one: 70 for 5 became 243 for 5. Where the five wickets came from, how the sun and pitch changed the game, and the 173 stand. Who won day one? Comment 1 Nicholls, 2 Phillips, 3 Bumrah. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Jasprit Bumrah",
+    "Henry Nicholls",
+    "Glenn Phillips",
+    "Shubman Gill",
+    "Basin Reserve",
+    "Wellington Test",
+    "Day 1 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

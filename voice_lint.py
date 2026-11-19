@@ -47,6 +47,7 @@ NAMES = {
     "Lakshya": "लक्ष्य", "Raichandani": "रायचंदानी",
     "Matheesha Pathirana": "मथीशा पथिराना", "Pathirana": "पथिराना", "Wanindu Hasaranga": "वानिन्दु हसरंगा", "Hasaranga": "हसरंगा", "Deepak Chahar": "दीपक चाहर", "Chahar": "चाहर",
     "Washington Sundar": "वॉशिंगटन सुंदर", "Sundar": "सुंदर", "Akash Deep": "आकाश दीप",
+    "Devdutt Padikkal": "देवदत्त पडिक्कल", "Padikkal": "पडिक्कल", "Prasidh": "प्रसिद्ध", "Akash": "आकाश", "Ravindra": "रवींद्र",
     "Pathum Nissanka": "पथुम निसंका", "Nissanka": "निसंका", "Goa": "गोवा",
     # places
     "Hyderabad": "हैदराबाद", "Gujarat": "गुजरात", "Mumbai": "मुंबई", "Delhi": "दिल्ली", "Chennai": "चेन्नई", "Bengaluru": "बेंगलुरु",

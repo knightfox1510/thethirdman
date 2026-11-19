@@ -892,6 +892,7 @@ def install(engine):
                      "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "lab_wagon": sc_lab_wagon, "lab_pitch": sc_lab_pitch, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
     import plate; plate.install(engine)
     import needs_scenes; needs_scenes.install(engine, sys.modules[__name__])
+    import day1_scenes; day1_scenes.install(engine, sys.modules[__name__])
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 
