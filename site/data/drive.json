@@ -3104,6 +3104,56 @@
     }
    ]
   },
+  "bumrah_unplayable": {
+   "state": "not posted",
+   "series": "09 Data Stories",
+   "episode": "Ep16 - Bumrah Why He Is Unplayable",
+   "folder": "https://drive.google.com/drive/folders/1dwpi_RpyWDFxVet560XTxBS8yzQyBdrv",
+   "files": [
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1tDccPwgJV_3X2ynijsPPV0uDcMFshVj6/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1PY2Dg_hXm02KBhpV7InEO_xnqLjOUQ2s/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 14.4,
+     "url": "https://drive.google.com/file/d/1eB59PfsWcAzdsg3qp97X4cmhYnzV7XlG/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.2,
+     "url": "https://drive.google.com/file/d/1PBKYB2rPiat7iWlgG0lfTMTeVMG6zz-X/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1cqcmUpurtZ0mnQPrfDRRz62yh6OK44iZ/view?usp=drivesdk"
+    },
+    {
+     "name": "Data_Story_Ep16_Bumrah_Why_He_Is_Unplayable_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 14.4,
+     "url": "https://drive.google.com/file/d/1Y-_BU3a4OOy_XCnrmkfx3tlMZHturSvz/view?usp=drivesdk"
+    }
+   ]
+  },
   "channel_trailer": {
    "state": "posted",
    "series": "10 Channel",
@@ -3596,7 +3646,8 @@
     "data_nz_ind_series",
     "dhoni_ipl_story",
     "dhoni_captaincy_all",
-    "ipl_needs_2027"
+    "ipl_needs_2027",
+    "bumrah_unplayable"
    ]
   },
   "10 Channel": {

@@ -138,6 +138,26 @@
    ]
   },
   {
+   "slug": "bumrah_unplayable",
+   "title": "Jasprit Bumrah: Why He Is Unplayable | Data Story Ep 16",
+   "format": "datastories",
+   "series": "Data Stories",
+   "ep": "16",
+   "long": null,
+   "short": "2:32",
+   "status": "Ready",
+   "link": null,
+   "planned": "2026-11-19",
+   "recheck": null,
+   "sources": [
+    "Cricsheet men's Test ball-by-ball (cricsheet.org, ODC-BY), 'our archive': analysis/bumrah_tests.py, analysis/bumrah_context.py. IPL: our Sportmonks cache 2013-2026.",
+    "Career figures: https://en.wikipedia.org/wiki/Jasprit_Bumrah (Cricinfo figures to 5 Oct 2026) and https://www.cricket.com.au/players/CA:10982",
+    "Action: https://theprint.in/sport/from-his-biomechanics-anatomy-to-hypermobility-what-makes-jasprit-bumrah-unique/2432437/ ; ICC illegal bowling action regulations https://www.icc-cricket.com/about/cricket/rules-and-regulations/illegal-bowling-actions ; release point analysis: cricket.com 'Decoded: Jasprit Bumrah' (48 cm vs Kemar Roach)",
+    "Injuries and workload: https://www.wisden.com/series/sri-lanka-in-india-2022-23/cricket-news/back-and-forth-a-timeline-of-jasprit-bumrahs-back-injuries ; https://www.icc-cricket.com/news/gambhir-reveals-bumrah-plan-for-remaining-england-tests ; with-and-without analysis: https://www.wisden.com/series/england-vs-india-m-2025/cricket-news/explained-why-india-win-more-tests-without-bumrah-than-with-him",
+    "T20 World Cups: Wisden / Outlook (2024), Outlook / IndiaTV (2026 final)"
+   ]
+  },
+  {
    "slug": "bumrah_vs_90s",
    "title": "Bumrah vs 90s Sachin & Lara",
    "format": "whatif",
