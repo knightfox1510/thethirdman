@@ -1,0 +1,407 @@
+{
+ "slug": "nz_ind_1st_test_day1",
+ "claims": [
+  {
+   "claim": "Bumrah, first innings of the 2020 Wellington Test: 1 for 88 in 26 overs",
+   "value": [
+    1,
+    88,
+    26
+   ],
+   "sources": {
+    "cricsheet": [
+     1,
+     88,
+     26
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "score at tea: 140/5; Nicholls 66*, Phillips 42*",
+   "value": [
+    140,
+    5,
+    66,
+    42
+   ],
+   "sources": {
+    "cricbuzz": [
+     140,
+     5,
+     66,
+     42
+    ],
+    "telanganatoday": [
+     140,
+     5,
+     66,
+     42
+    ],
+    "openpress": [
+     140,
+     5,
+     66,
+     42
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "figures at tea: Bumrah 3/31, Akash Deep 1/22, Kamboj 1/39",
+   "value": [
+    [
+     3,
+     31
+    ],
+    [
+     1,
+     22
+    ],
+    [
+     1,
+     39
+    ]
+   ],
+   "sources": {
+    "cricbuzz": [
+     [
+      3,
+      31
+     ],
+     [
+      1,
+      22
+     ],
+     [
+      1,
+      39
+     ]
+    ],
+    "telanganatoday": [
+     [
+      3,
+      31
+     ],
+     [
+      1,
+      22
+     ],
+     [
+      1,
+      39
+     ]
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "wickets: Latham, Mitchell, Blundell to Bumrah; Conway to Kamboj; Ravindra to Akash Deep",
+   "value": 5,
+   "sources": {
+    "cricbuzz": 5,
+    "openpress": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "lunch 60/4 (after 22.5 overs)",
+   "value": [
+    60,
+    4
+   ],
+   "sources": {
+    "cricbuzz": [
+     60,
+     4
+    ],
+    "telanganatoday": [
+     60,
+     4
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "pitch easing after lunch: browning off as the sun came out",
+   "value": true,
+   "sources": {
+    "cricbuzz": true,
+    "telanganatoday": true,
+    "openpress": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "stumps 243/5 after 81.6 overs",
+   "value": [
+    243,
+    5
+   ],
+   "sources": {
+    "cricbuzz": [
+     243,
+     5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls 113 (221), Phillips 94 (182), 6th-wicket stand 173 off 327 balls",
+   "value": [
+    113,
+    221,
+    94,
+    182,
+    173,
+    327
+   ],
+   "sources": {
+    "cricbuzz": [
+     113,
+     221,
+     94,
+     182,
+     173,
+     327
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "full bowling figures (Bumrah 17-5-52-3, Kamboj 18-4-57-1, Akash 15-5-33-1, Prasidh 16-2-58-0, Sundar 16-2-38-0)",
+   "value": 243,
+   "sources": {
+    "cricbuzz": 243
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "stand: 54 singles, 7 twos, 7 threes, 21 fours; 238 dots of 327 (73%)",
+   "value": [
+    54,
+    7,
+    7,
+    21,
+    238,
+    327
+   ],
+   "sources": {
+    "cricbuzz": [
+     54,
+     7,
+     7,
+     21,
+     238,
+     327
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "after Blundell: Bumrah 48 balls, 35 runs, no wicket",
+   "value": [
+    48,
+    35,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     48,
+     35,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "5 wickets in the first 28.2 overs (171 balls, 70 runs); none in the next 53.4 overs (327 balls, 173 runs)",
+   "value": [
+    171,
+    70,
+    5,
+    327,
+    173,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     171,
+     70,
+     5,
+     327,
+     173,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "false shots 25.1% before lunch vs 13.6% in session 2 (Cricbuzz's own figures)",
+   "value": [
+    25.1,
+    13.6
+   ],
+   "sources": {
+    "cricbuzz": [
+     25.1,
+     13.6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "seam length table, day: full 2/67 78b, good 3/50 202b, short 0/77 122b",
+   "value": [
+    [
+     2,
+     67,
+     78
+    ],
+    [
+     3,
+     50,
+     202
+    ],
+    [
+     0,
+     77,
+     122
+    ]
+   ],
+   "sources": {
+    "cricbuzz": [
+     [
+      2,
+      67,
+      78
+     ],
+     [
+      3,
+      50,
+      202
+     ],
+     [
+      0,
+      77,
+      122
+     ]
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "derived split after lunch: short share 19% -> 36%, good-length false shots 30% -> 13%",
+   "value": [
+    19,
+    36,
+    30,
+    13
+   ],
+   "sources": {
+    "cricbuzz": [
+     19,
+     36,
+     30,
+     13
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls had four hundreds at the Basin Reserve before today",
+   "value": 4,
+   "sources": {
+    "cricsheet": 4,
+    "cricbuzz": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "ball age: first 20 overs 52/3, overs 21-80 184/2, second new ball (overs 81-82) 7/0",
+   "value": [
+    52,
+    3,
+    184,
+    2,
+    7,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     3,
+     184,
+     2,
+     7,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India won the toss and bowled; 15 mm of grass, moisture on top in the morning",
+   "value": true,
+   "sources": {
+    "cricbuzz": true
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "lifelines: Phillips lbw review lost on 6 (30.3); Nicholls dropped on 102 (73.3)",
+   "value": [
+    6,
+    102
+   ],
+   "sources": {
+    "cricbuzz": [
+     6,
+     102
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 13,
+  "OK": 6
+ }
+}

@@ -48,7 +48,7 @@
  },
  "files": {
   "long": "_unused",
-  "short": "Aaryavir_Sehwag_160_Short_9x16"
+  "short": "Rising_Star_Ep01_Aaryavir_Sehwag_160_Short_9x16"
  },
  "thumb": {
   "kicker": "FATHER VS SON",
@@ -362,5 +362,25 @@
    ]
   }
  },
- "series": "rising"
+ "series": "rising",
+ "reel_cta": {
+  "vo": "Will आर्यवीर सहवाग play for India like his father did? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "FULL BREAKDOWN"
+    },
+    {
+     "t": "ON YOUTUBE",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ }
 }

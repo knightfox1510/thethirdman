@@ -9,36 +9,228 @@
   "slug": "kohli_2000_nz",
   "kind": "short",
   "title": "Kohli: 22 runs from 2,000 vs NZ",
-  "format": "news"
+  "format": "datastories"
  },
  "zaPe7_3Wbd4": {
   "slug": "hardik_arshdeep",
   "kind": "long",
   "title": "Hardik–Arshdeep trade: who won?",
-  "format": "news"
+  "format": "datastories"
  },
  "7rq2iG31XzA": {
   "slug": "replay_4odi",
   "kind": "long",
   "title": "replay_4odi",
-  "format": "news"
+  "format": "replay"
  },
  "qj3O8VV8UuM": {
   "slug": "replay_4odi",
   "kind": "short",
   "title": "replay_4odi",
-  "format": "news"
+  "format": "replay"
  },
  "lUG6cKDhctg": {
   "slug": "replay_4odi_young",
   "kind": "short",
   "title": "replay_4odi_young",
-  "format": "news"
+  "format": "replay"
  },
  "xXcqw651rGM": {
   "slug": "replay_4odi_dots",
   "kind": "short",
   "title": "replay_4odi_dots",
+  "format": "replay"
+ },
+ "k583jqs5KVw": {
+  "slug": "hardik_arshdeep",
+  "kind": "short",
+  "title": "Hardik–Arshdeep trade: who won?",
+  "format": "datastories"
+ },
+ "rnFvvukHfTM": {
+  "slug": "flip_mi_captains",
+  "kind": "short",
+  "title": "Flip: Every MI captain vs Rohit",
+  "format": "flip"
+ },
+ "kDMPpYDYlns": {
+  "slug": "bay_oval_new_ball",
+  "kind": "long",
+  "title": "bay_oval_new_ball",
+  "format": "tactics"
+ },
+ "UEvmwDqCTsg": {
+  "slug": "replay_u19_final",
+  "kind": "long",
+  "title": "replay_u19_final",
+  "format": "replay"
+ },
+ "52FPh7UbtHk": {
+  "slug": "replay_u19_final",
+  "kind": "short",
+  "title": "replay_u19_final",
+  "format": "replay"
+ },
+ "ueFtSganrNo": {
+  "slug": "myth_ep1_kohli_knockouts",
+  "kind": "short",
+  "title": "Myth or Data? Ep. 1: Kohli in knockouts",
+  "format": "myth"
+ },
+ "3WQid2DRgwE": {
+  "slug": "myth_ep2_kohli_reinvention",
+  "kind": "short",
+  "title": "myth_ep2_kohli_reinvention",
+  "format": "myth"
+ },
+ "PZJsdDzMROQ": {
+  "slug": "myth_ep3_aaryavir",
+  "kind": "long",
+  "title": "myth_ep3_aaryavir",
+  "format": "myth"
+ },
+ "ENh6XkG-z9g": {
+  "slug": "myth_ep3_aaryavir",
+  "kind": "short",
+  "title": "myth_ep3_aaryavir",
+  "format": "myth"
+ },
+ "iis64YP-g-o": {
+  "slug": "flip_abhishek_openers",
+  "kind": "short",
+  "title": "Flip: Abhishek vs the world's T20I openers",
+  "format": "flip"
+ },
+ "9Iu25SLhXGg": {
+  "slug": "replay_5odi",
+  "kind": "long",
+  "title": "replay_5odi",
+  "format": "replay"
+ },
+ "Ty2LP-UQV1c": {
+  "slug": "replay_5odi",
+  "kind": "short",
+  "title": "replay_5odi",
+  "format": "replay"
+ },
+ "UAlk7dwMfjw": {
+  "slug": "data_nz_ind_series",
+  "kind": "long",
+  "title": "data_nz_ind_series",
+  "format": "datastories"
+ },
+ "SLTOXJ6CQqw": {
+  "slug": "data_nz_ind_series",
+  "kind": "short",
+  "title": "data_nz_ind_series",
+  "format": "datastories"
+ },
+ "rt1PDv6tpzs": {
+  "slug": "dyk_third_man",
+  "kind": "long",
+  "title": "dyk_third_man",
+  "format": "didyouknow"
+ },
+ "5xidfs5Gpo4": {
+  "slug": "dyk_third_man",
+  "kind": "short",
+  "title": "dyk_third_man",
+  "format": "didyouknow"
+ },
+ "_cX_F8LbjfU": {
+  "slug": "powerplay_revolution",
+  "kind": "long",
+  "title": "The IPL Powerplay Revolution",
+  "format": "datastories"
+ },
+ "J9EHp4rAxLA": {
+  "slug": "powerplay_revolution",
+  "kind": "short",
+  "title": "The IPL Powerplay Revolution",
+  "format": "datastories"
+ },
+ "Yvtkgm3NUac": {
+  "slug": "dhoni_retires",
+  "kind": "short",
+  "title": "dhoni_retires",
   "format": "news"
+ },
+ "WiTCSH9vsfM": {
+  "slug": "dhoni_ipl_story",
+  "kind": "long",
+  "title": "dhoni_ipl_story",
+  "format": "datastories"
+ },
+ "bLYAfDuK3no": {
+  "slug": "dhoni_ipl_story",
+  "kind": "short",
+  "title": "dhoni_ipl_story",
+  "format": "datastories"
+ },
+ "17GxKfWvk4Y": {
+  "slug": "dhoni_captain_myth",
+  "kind": "long",
+  "title": "dhoni_captain_myth",
+  "format": "myth"
+ },
+ "f8MnibrcFZ0": {
+  "slug": "dhoni_captain_myth",
+  "kind": "short",
+  "title": "dhoni_captain_myth",
+  "format": "myth"
+ },
+ "8KIKP2KPV84": {
+  "slug": "dhoni_captain",
+  "kind": "long",
+  "title": "What If Dhoni Never Became Captain",
+  "format": "whatif"
+ },
+ "rZhGj13fGx4": {
+  "slug": "dhoni_captain",
+  "kind": "short",
+  "title": "What If Dhoni Never Became Captain",
+  "format": "whatif"
+ },
+ "50i41yfp44U": {
+  "slug": "dhoni_captaincy_all",
+  "kind": "long",
+  "title": "dhoni_captaincy_all",
+  "format": "datastories"
+ },
+ "QFN0QE4CJGw": {
+  "slug": "dhoni_captaincy_all",
+  "kind": "short",
+  "title": "dhoni_captaincy_all",
+  "format": "datastories"
+ },
+ "UK_PRyG5uUI": {
+  "slug": "ipl_needs_2027",
+  "kind": "long",
+  "title": "ipl_needs_2027",
+  "format": "datastories"
+ },
+ "Fw-m9pUm-fI": {
+  "slug": "ipl_needs_2027",
+  "kind": "short",
+  "title": "ipl_needs_2027",
+  "format": "datastories"
+ },
+ "MO83fPkq3qI": {
+  "slug": "nz_ind_1st_test_day1",
+  "kind": "long",
+  "title": "nz_ind_1st_test_day1",
+  "format": "replay"
+ },
+ "-SNqC4wA_-8": {
+  "slug": "nz_ind_1st_test_day1",
+  "kind": "short",
+  "title": "nz_ind_1st_test_day1",
+  "format": "replay"
+ },
+ "UM5788F3ZKY": {
+  "slug": "bumrah_unplayable",
+  "kind": "short",
+  "title": "bumrah_unplayable",
+  "format": "datastories"
  }
 }

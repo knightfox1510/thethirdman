@@ -1,0 +1,95 @@
+{
+ "slug": "gambhir_player_coach",
+ "claims": [
+  {
+   "claim": "India Tests since 27 Jul 2024 W-L-D",
+   "value": [
+    8,
+    10,
+    3
+   ],
+   "sources": {
+    "cricsheet": [
+     8,
+     10,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India ODIs since 27 Jul 2024 W-L-T",
+   "value": [
+    15,
+    10,
+    1
+   ],
+   "sources": {
+    "cricsheet": [
+     15,
+     10,
+     1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India T20Is since 27 Jul 2024 W-L-NR (super-over wins counted as wins)",
+   "value": [
+    48,
+    16,
+    4
+   ],
+   "sources": {
+    "cricsheet": [
+     48,
+     16,
+     4
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Player career: Tests 4154 runs",
+   "value": 4154,
+   "sources": {
+    "wikipedia": 4154,
+    "cricsheet": null
+   },
+   "scope": "career",
+   "status": "UNVERIFIED",
+   "conflicts": []
+  },
+  {
+   "claim": "Player career: ODIs 5238 runs",
+   "value": 5238,
+   "sources": {
+    "wikipedia": 5238,
+    "cricsheet": null
+   },
+   "scope": "career",
+   "status": "UNVERIFIED",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL 2013-17 runs",
+   "value": 2068,
+   "sources": {
+    "sportmonks": 2068
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 4,
+  "UNVERIFIED": 2
+ }
+}

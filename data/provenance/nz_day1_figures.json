@@ -1,0 +1,168 @@
+{
+ "deliveries": 498,
+ "bowling_final": {
+  "Jasprit Bumrah": {
+   "ov": 17,
+   "m": 5,
+   "r": 52,
+   "w": 3
+  },
+  "Anshul Kamboj": {
+   "ov": 18,
+   "m": 4,
+   "r": 57,
+   "w": 1
+  },
+  "Akash Deep": {
+   "ov": 15,
+   "m": 5,
+   "r": 33,
+   "w": 1
+  },
+  "Prasidh Krishna": {
+   "ov": 16,
+   "m": 2,
+   "r": 58,
+   "w": 0
+  },
+  "Washington Sundar": {
+   "ov": 16,
+   "m": 2,
+   "r": 38,
+   "w": 0
+  }
+ },
+ "stumps": {
+  "over": 81.6,
+  "score": 243
+ },
+ "Henry Nicholls": {
+  "batRuns": 113,
+  "batBalls": 221,
+  "batFours": 14,
+  "batDots": 167,
+  "batStrikeRate": 51.13
+ },
+ "Glenn Phillips": {
+  "batRuns": 94,
+  "batBalls": 182,
+  "batFours": 13,
+  "batDots": 136,
+  "batStrikeRate": 51.65
+ },
+ "lunch_over": 22.5,
+ "tea_over": 47.6,
+ "lunch_score": 60,
+ "tea_score": 140,
+ "length_by_session": {
+  "1": {
+   "short_of_length": 16,
+   "full": 60,
+   "short": 37,
+   "good": 17
+  },
+  "day": {
+   "short_of_length": 51,
+   "full": 111,
+   "short": 131,
+   "good": 57,
+   "yorker": 2
+  },
+  "2": {
+   "short": 44,
+   "short_of_length": 12,
+   "good": 27,
+   "full": 29
+  },
+  "3": {
+   "short": 50,
+   "short_of_length": 23,
+   "good": 13,
+   "full": 22,
+   "yorker": 2
+  }
+ },
+ "wickets": [
+  {
+   "over": 0.3,
+   "bowler": "Jasprit Bumrah",
+   "bat": "Tom Latham",
+   "len": "full",
+   "score": 2,
+   "text": "Jasprit Bumrah to Tom Latham, out Bowled!! What a bad leave. Jasprit Bumrah strikes in his first over. What a start for India. Tom Latham has left a delivery that he expected to angle away, but it comes in late and knocks back off-stump. Bumrah got that full a"
+  },
+  {
+   "over": 3.2,
+   "bowler": "Anshul Kamboj",
+   "bat": "Devon Conway",
+   "len": null,
+   "score": 12,
+   "text": "Anshul Kamboj to Devon Conway, out Caught by Rishabh Pant!! This time no doubts at all. Anshul Kamboj punches the air as he roars. Devon Conway walks off gesturing to Henry Nicholls that it angled in and then seamed away. Full and angled in on off, hint of mov"
+  },
+  {
+   "over": 19.1,
+   "bowler": "Akash Deep",
+   "bat": "Rachin Ravindra",
+   "len": null,
+   "score": 51,
+   "text": "Akash Deep to Rachin Ravindra, out Caught by Rishabh Pant!! Loose shot and Rachin Ravindra puts his head back in disappointment. Short of a length outside off, there for the cut but Ravindra edges it behind. He closes his eyes as he walks off. Akash Deep has a"
+  },
+  {
+   "over": 20.6,
+   "bowler": "Jasprit Bumrah",
+   "bat": "Daryl Mitchell",
+   "len": null,
+   "score": 52,
+   "text": "Jasprit Bumrah to Daryl Mitchell, out Caught by Yashasvi Jaiswal!! Sharp catch at forward short-leg and Jaiswal is thrilled as Gill hugs him. Daryl Mitchell was batting well outside his crease and was walking at Jasprit Bumrah. He does the same to this good le"
+  },
+  {
+   "over": 28.2,
+   "bowler": "Jasprit Bumrah",
+   "bat": "Blundell",
+   "len": null,
+   "score": 70,
+   "text": "Jasprit Bumrah to Blundell, out Caught by Shubman Gill!! Edged and gone. Who just about hangs on at 1st slip. On a short of length and angled back into the fifth-stump line, Tom Blundell is indecisive as hangs his bat out, that causes his downfall and the ball"
+  }
+ ],
+ "speed": {
+  "Prasidh Krishna": {
+   "n": 9,
+   "avg": 134.1,
+   "max": 137.3
+  },
+  "Jasprit Bumrah": {
+   "n": 14,
+   "avg": 135.6,
+   "max": 138.1
+  },
+  "Washington Sundar": {
+   "n": 18,
+   "avg": 89.1,
+   "max": 92.9
+  },
+  "Akash Deep": {
+   "n": 8,
+   "avg": 135.0,
+   "max": 138.8
+  },
+  "Anshul Kamboj": {
+   "n": 1,
+   "avg": 126.8,
+   "max": 126.8
+  }
+ },
+ "runs_by_length_seam": {
+  "full": 59,
+  "good": 19,
+  "short_of_length": 23,
+  "short": 66,
+  "yorker": 0
+ },
+ "balls_by_length_seam": {
+  "full": 111,
+  "good": 57,
+  "short_of_length": 51,
+  "short": 131,
+  "yorker": 2
+ }
+}

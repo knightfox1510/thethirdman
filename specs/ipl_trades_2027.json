@@ -1,0 +1,601 @@
+{
+ "slug": "ipl_trades_2027",
+ "theme": "stadium",
+ "theme_long": "stadium",
+ "captions": "v2",
+ "captions_long": false,
+ "series": "channel",
+ "tag": "THE THIRD MAN",
+ "tagsub": "IPL 2027 TRADES, EVERY DEAL",
+ "files": {
+  "long": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Long",
+  "short": "Channel_Ep02_IPL_2027_Trades_Every_Deal_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "IPL 2027 TRADE WINDOW",
+  "lines": [
+   {
+    "t": "EVERY TRADE"
+   },
+   {
+    "t": "SO FAR",
+    "c": "gold"
+   }
+  ],
+  "hero": "6",
+  "herosize": 520
+ },
+ "sources": [
+  "The deals: the IPL's own press releases, https://www.iplt20.com/news (Pant and Kuldeep 23 Jun, https://www.iplt20.com/news/4379/rishabh-pant-and-kuldeep-yadav-complete-high-profile-trade-between-dc-and-lsg ; Natarajan and Ansari 14 Oct; CSK and SRH 5 Nov; Hardik and Arshdeep; Harshal Patel 15 Nov; Shami, Siddharth and Curran 17 Nov), read 17 Nov 2026; Cricinfo trade stories (CSK-SRH https://www.cricinfo.com/story/ipl-2027-csk-trade-khaleel-ahmed-and-nathan-ellis-to-srh-in-exchange-for-liam-livingstone-and-jack-edwards-1561531 ; Hardik-Arshdeep https://www.cricinfo.com/story/ipl-2027-mumbai-indians-and-punjab-kings-complete-hardik-pandya-and-arshdeep-singh-swap-1562157 ; Harshal https://www.cricinfo.com/story/sunrisers-hyderabad-set-to-trade-harshal-patel-to-gujarat-titans-1562498), read through search excerpts because the pages return 403 to us.",
+  "Fees: the IPL's statement on Pant (INR 15 crore, down from INR 27 crore at the 2025 auction) and Kuldeep (INR 13.5 crore), also reported by Outlook https://www.outlookindia.com/sports/cricket/ipl-2027-player-trade-rishabh-pant-kuldeep-yadav-swap-between-delhi-capitals-and-lucknow-super-giants ; the other fees from the IPL and outlet graphics supplied by the channel owner and the iplretention.in tracker https://iplretention.in/ . The 17 Nov deal's fees are not stated (no second source yet).",
+  "2026 numbers: Sportmonks ball-by-ball (our archive), IPL 2026, super overs excluded; wickets exclude run-outs. Figures: data/provenance/trades_2026_figures.json. Player photos: licensed images supplied by the channel owner."
+ ],
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    250,
+    150,
+    30
+   ],
+   [
+    230,
+    230,
+    240
+   ],
+   [
+    0,
+    120,
+    75
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "The IPL twenty twenty-seven trade window has already moved fourteen players, in six deals. Here is every one of them.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "6 DEALS."
+     },
+     {
+      "t": "14 PLAYERS.",
+      "c": "gold"
+     }
+    ],
+    "sub": "IPL 2027 TRADE WINDOW · EVERY DEAL"
+   }
+  },
+  {
+   "vo": "June, and the first blockbuster. रिषभ पंत goes back to दिल्ली at fifteen crore, down from the record twenty-seven that लखनऊ paid. कुलदीप यादव goes the other way, at thirteen and a half. Last season, पंत made three hundred and twelve runs, and कुलदीप took ten wickets.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 1 OF 6 · 23 JUN",
+    "a": {
+     "team": "LSG",
+     "name": "LUCKNOW SUPER GIANTS",
+     "color": [
+      0,
+      140,
+      185
+     ]
+    },
+    "b": {
+     "team": "DC",
+     "name": "DELHI CAPITALS",
+     "color": [
+      30,
+      80,
+      190
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/pant_dc.png",
+     "lines": [
+      "RISHABH",
+      "PANT"
+     ],
+     "stat": [
+      "312 RUNS · SR 138"
+     ],
+     "pair": false
+    },
+    "p2": {
+     "img": "data/licensed/cut/kuldeep_lsg.png",
+     "lines": [
+      "KULDEEP",
+      "YADAV"
+     ],
+     "stat": [
+      "10 WICKETS · ECON 10.3"
+     ],
+     "pair": false
+    },
+    "fee": "₹15 CR  ↔  ₹13.5 CR"
+   }
+  },
+  {
+   "vo": "October. टी नटराजन returns to हैदराबाद for five crore, and ज़ीशान अंसारी moves to दिल्ली, for forty lakh. नटराजन took five wickets for दिल्ली last season.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 2 OF 6 · 14 OCT",
+    "a": {
+     "team": "DC",
+     "name": "DELHI CAPITALS",
+     "color": [
+      30,
+      80,
+      190
+     ]
+    },
+    "b": {
+     "team": "SRH",
+     "name": "SUNRISERS HYDERABAD",
+     "color": [
+      235,
+      105,
+      20
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/ansari_dc.png",
+     "lines": [
+      "ZEESHAN",
+      "ANSARI"
+     ],
+     "stat": null,
+     "pair": false
+    },
+    "p2": {
+     "img": "data/licensed/cut/natarajan_srh.png",
+     "lines": [
+      "T NATARAJAN"
+     ],
+     "stat": [
+      "5 WICKETS · 2026"
+     ],
+     "pair": false
+    },
+    "fee": "₹40 L  ↔  ₹5 CR"
+   }
+  },
+  {
+   "vo": "November, and a four-player deal. Liam Livingstone and Jack Edwards go to चेन्नई, for six crore and three. ख़लील अहमद and Nathan Ellis go to हैदराबाद, for four point eight crore and two.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 3 OF 6 · 5 NOV",
+    "a": {
+     "team": "SRH",
+     "name": "SUNRISERS HYDERABAD",
+     "color": [
+      235,
+      105,
+      20
+     ]
+    },
+    "b": {
+     "team": "CSK",
+     "name": "CHENNAI SUPER KINGS",
+     "color": [
+      215,
+      160,
+      0
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/pair_livingstone_edwards.png",
+     "lines": [
+      "LIVINGSTONE",
+      "& EDWARDS"
+     ],
+     "stat": null,
+     "pair": true
+    },
+    "p2": {
+     "img": "data/licensed/cut/pair_khaleel_ellis.png",
+     "lines": [
+      "KHALEEL",
+      "& ELLIS"
+     ],
+     "stat": null,
+     "pair": true
+    },
+    "fee": "₹9 CR  ↔  ₹6.8 CR"
+   }
+  },
+  {
+   "vo": "The big one. हार्दिक पंड्या goes from मुंबई to पंजाब, and अर्शदीप सिंघ comes the other way, for eighteen crore each. मुंबई lose their captain. पंड्या made two hundred and six runs last season, and अर्शदीप took fourteen wickets.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 4 OF 6 · 11 NOV",
+    "a": {
+     "team": "MI",
+     "name": "MUMBAI INDIANS",
+     "color": [
+      0,
+      80,
+      190
+     ]
+    },
+    "b": {
+     "team": "PBKS",
+     "name": "PUNJAB KINGS",
+     "color": [
+      205,
+      35,
+      45
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/hardik_mi.png",
+     "lines": [
+      "HARDIK",
+      "PANDYA"
+     ],
+     "stat": [
+      "206 RUNS · SR 138"
+     ],
+     "pair": false
+    },
+    "p2": {
+     "img": "data/licensed/cut/arshdeep_pbks.png",
+     "lines": [
+      "ARSHDEEP",
+      "SINGH"
+     ],
+     "stat": [
+      "14 WICKETS · ECON 10.3"
+     ],
+     "pair": false
+    },
+    "fee": "₹18 CR EACH"
+   }
+  },
+  {
+   "vo": "Then, हर्षल पटेल moves from हैदराबाद to गुजरात for four crore, half of what he cost at the auction.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 5 OF 6 · 15 NOV",
+    "a": {
+     "team": "SRH",
+     "name": "SUNRISERS HYDERABAD",
+     "color": [
+      235,
+      105,
+      20
+     ]
+    },
+    "b": {
+     "team": "GT",
+     "name": "GUJARAT TITANS",
+     "color": [
+      28,
+      45,
+      100
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/harshal_gt_portrait.png",
+     "lines": [
+      "HARSHAL",
+      "PATEL"
+     ],
+     "stat": null,
+     "pair": false
+    },
+    "p2": null,
+    "fee": "₹4 CR",
+    "one_way_text": "NOTHING BACK"
+   }
+  },
+  {
+   "vo": "And today. मोहम्मद शमी and एम सिद्धार्थ go to राजस्थान, while Sam Curran goes to लखनऊ. शमी took twelve wickets for लखनऊ last season.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 6 OF 6 · 17 NOV",
+    "a": {
+     "team": "LSG",
+     "name": "LUCKNOW SUPER GIANTS",
+     "color": [
+      0,
+      140,
+      185
+     ]
+    },
+    "b": {
+     "team": "RR",
+     "name": "RAJASTHAN ROYALS",
+     "color": [
+      220,
+      55,
+      145
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/pair_shami_siddharth.png",
+     "lines": [
+      "MOHAMMED SHAMI",
+      "& M SIDDHARTH"
+     ],
+     "stat": [
+      "SHAMI: 12 WICKETS · ECON 9.0"
+     ],
+     "pair": true
+    },
+    "p2": {
+     "img": "data/licensed/cut/curran_lsg.png",
+     "lines": [
+      "SAM",
+      "CURRAN"
+     ],
+     "stat": null,
+     "pair": false
+    }
+   }
+  },
+  {
+   "vo": "Six deals, fourteen players, and more could still come before the auction on the sixteenth of December, in Goa.",
+   "scene": {
+    "type": "statement",
+    "kicker": "WHAT NEXT",
+    "lines": [
+     {
+      "t": "AUCTION"
+     },
+     {
+      "t": "16 DEC · GOA",
+      "c": "gold"
+     }
+    ],
+    "sub": "THE TRADE WINDOW IS STILL OPEN"
+   }
+  },
+  {
+   "vo": "Which trade changes the most? Tell us in the comments, and subscribe for more.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHICH TRADE"
+     },
+     {
+      "t": "CHANGES MOST?",
+      "c": "gold"
+     }
+    ]
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Six trades, fourteen players. Here are three big ones.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "6 DEALS."
+     },
+     {
+      "t": "14 PLAYERS.",
+      "c": "gold"
+     }
+    ],
+    "sub": "IPL 2027 TRADE WINDOW"
+   }
+  },
+  {
+   "vo": "हार्दिक पंड्या goes to पंजाब. अर्शदीप सिंघ goes to मुंबई. Eighteen crore each, and मुंबई lose their captain.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 1 OF 3 · 11 NOV",
+    "a": {
+     "team": "MI",
+     "name": "MUMBAI INDIANS",
+     "color": [
+      0,
+      80,
+      190
+     ]
+    },
+    "b": {
+     "team": "PBKS",
+     "name": "PUNJAB KINGS",
+     "color": [
+      205,
+      35,
+      45
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/hardik_mi.png",
+     "lines": [
+      "HARDIK",
+      "PANDYA"
+     ],
+     "stat": [
+      "206 RUNS · SR 138"
+     ],
+     "pair": false
+    },
+    "p2": {
+     "img": "data/licensed/cut/arshdeep_pbks.png",
+     "lines": [
+      "ARSHDEEP",
+      "SINGH"
+     ],
+     "stat": [
+      "14 WICKETS · ECON 10.3"
+     ],
+     "pair": false
+    },
+    "fee": "₹18 CR EACH"
+   }
+  },
+  {
+   "vo": "रिषभ पंत goes back to दिल्ली, at fifteen crore. कुलदीप यादव goes to लखनऊ, at thirteen and a half.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 2 OF 3 · 23 JUN",
+    "a": {
+     "team": "LSG",
+     "name": "LUCKNOW SUPER GIANTS",
+     "color": [
+      0,
+      140,
+      185
+     ]
+    },
+    "b": {
+     "team": "DC",
+     "name": "DELHI CAPITALS",
+     "color": [
+      30,
+      80,
+      190
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/pant_dc.png",
+     "lines": [
+      "RISHABH",
+      "PANT"
+     ],
+     "stat": [
+      "312 RUNS · SR 138"
+     ],
+     "pair": false
+    },
+    "p2": {
+     "img": "data/licensed/cut/kuldeep_lsg.png",
+     "lines": [
+      "KULDEEP",
+      "YADAV"
+     ],
+     "stat": [
+      "10 WICKETS · ECON 10.3"
+     ],
+     "pair": false
+    },
+    "fee": "₹15 CR  ↔  ₹13.5 CR"
+   }
+  },
+  {
+   "vo": "Four players between चेन्नई and हैदराबाद: Livingstone, Edwards, ख़लील and Ellis.",
+   "scene": {
+    "type": "tradesplit",
+    "label": "DEAL 3 OF 3 · 5 NOV",
+    "a": {
+     "team": "SRH",
+     "name": "SUNRISERS HYDERABAD",
+     "color": [
+      235,
+      105,
+      20
+     ]
+    },
+    "b": {
+     "team": "CSK",
+     "name": "CHENNAI SUPER KINGS",
+     "color": [
+      215,
+      160,
+      0
+     ]
+    },
+    "p1": {
+     "img": "data/licensed/cut/pair_livingstone_edwards.png",
+     "lines": [
+      "LIVINGSTONE",
+      "& EDWARDS"
+     ],
+     "stat": null,
+     "pair": true
+    },
+    "p2": {
+     "img": "data/licensed/cut/pair_khaleel_ellis.png",
+     "lines": [
+      "KHALEEL",
+      "& ELLIS"
+     ],
+     "stat": null,
+     "pair": true
+    },
+    "fee": "₹9 CR  ↔  ₹6.8 CR"
+   }
+  },
+  {
+   "vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "IPL 2027 Trades: Every Deal So Far | Hardik, Pant, Shami, Curran",
+   "description": "IPL 2027 trades: every deal of the trade window so far. Six deals, fourteen players: Rishabh Pant back to Delhi Capitals (INR 15 crore) for Kuldeep Yadav to Lucknow Super Giants (INR 13.5 crore); T Natarajan to Sunrisers Hyderabad and Zeeshan Ansari to Delhi; Liam Livingstone and Jack Edwards to Chennai Super Kings for Khaleel Ahmed and Nathan Ellis to Sunrisers; Hardik Pandya to Punjab Kings for Arshdeep Singh to Mumbai Indians (INR 18 crore each); Harshal Patel to Gujarat Titans (INR 4 crore); and Mohammed Shami and M Siddharth to Rajasthan Royals for Sam Curran to Lucknow.\n\nThe IPL 2027 auction is on 16 December in Goa. 2026 numbers are from our own archive (Sportmonks ball-by-ball). Fees as announced by the IPL where it published them; the 17 November deal's fees are not stated.\n\n#IPL2027 #IPLTrades #IPL",
+   "tags": [
+    "IPL 2027 trades",
+    "IPL trade window",
+    "Hardik Pandya Arshdeep Singh trade",
+    "Rishabh Pant Delhi Capitals",
+    "Kuldeep Yadav LSG",
+    "Mohammed Shami Rajasthan Royals",
+    "IPL 2027",
+    "IPL trades explained",
+    "IPL news",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "IPL 2027 Trades: Hardik for Arshdeep, Pant Back to Delhi #Shorts",
+   "description": "IPL 2027 trade window: six deals, fourteen players. Hardik Pandya to Punjab for Arshdeep Singh to Mumbai (INR 18 crore each), Pant back to Delhi, Kuldeep to Lucknow, and a four-player deal between Chennai and Hyderabad. Full breakdown on the channel.\n\n#IPL2027 #IPLTrades #Shorts",
+   "tags": [
+    "IPL 2027 trades",
+    "IPL trade window",
+    "Hardik Pandya Arshdeep Singh trade",
+    "Rishabh Pant Delhi Capitals",
+    "Kuldeep Yadav LSG",
+    "Mohammed Shami Rajasthan Royals",
+    "IPL 2027",
+    "IPL trades explained",
+    "IPL news",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

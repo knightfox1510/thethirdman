@@ -1,0 +1,1211 @@
+{
+ "slug": "replay_5odi",
+ "theme": "stadium",
+ "theme_long": "lab",
+ "captions": "v2",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "EP. 3 · 5TH ODI · INDIA V NEW ZEALAND",
+ "files": {
+  "long": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Long",
+  "short": "Replay_Room_Ep03_India_vs_New_Zealand_5th_ODI_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "5TH ODI · REPLAY ROOM",
+  "lines": [
+   {
+    "t": "INDIA'S"
+   },
+   {
+    "t": "22% WIN",
+    "c": "gold"
+   }
+  ],
+  "hero": "22%",
+  "herosize": 360
+ },
+ "sources": [
+  "Ball-by-ball: Cricbuzz full-commentary capture of the 5th ODI (match 161282), parsed into one row per delivery (data/series/nz_ind_2026); innings totals and individual figures checked against Wikipedia's match box ('Indian cricket team in New Zealand in 2026-27', citing Cricinfo) and Cricbuzz's own pace/spin summary line.",
+  "Win probability, swings, 'win probability added' and the hidden winner: our own model, fitted on 1,719 men's 50-over ODIs in the Cricsheet archive (2009 onwards, no rain method), validated on held-out matches (accuracy 83%); an indication, not a fact. Drops: the runs a batter scored after a dropped chance (descriptive, not a counterfactual).",
+  "4th ODI comparison: Cricbuzz capture of the 4th ODI, with an independent Cricinfo capture agreeing over by over. Figures: analysis/nz_ind_*.py, make_replay_5odi.py."
+ ],
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    20,
+    20,
+    20
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    250,
+    150,
+    30
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "India made two hundred and nine. Our model gave them twenty-two per cent to defend it. They won by twenty-two runs. Here is how it happened, from our own ball-by-ball data.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "INDIA V NEW ZEALAND · 5TH ODI · BAY OVAL",
+    "title": "India's chance of defending 209.",
+    "value": 22,
+    "suffix": "%",
+    "label": "our model, before the chase began · India won by 22 runs",
+    "color": "red",
+    "word": "twenty-two"
+   }
+  },
+  {
+   "vo": "This is The Replay Room. The fifth and final one-day international of the series, at Bay Oval, ball by ball.",
+   "scene": {
+    "type": "lab_title",
+    "kicker": "THE REPLAY ROOM · EP. 3",
+    "lines": [
+     "The 22%",
+     "[win]"
+    ],
+    "teaser": "India v New Zealand · 5th ODI · 15 November 2026"
+   }
+  },
+  {
+   "vo": "First, India's innings. All out for two hundred and nine in forty-two overs. रोहित शर्मा, विराट कोहली and ऋतुराज गायकवाड़ were gone with thirty-four on the board. Two forty-sixes, from अक्षर पटेल and इशान किशन, kept them alive.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA · EVERY INNINGS · 5TH ODI",
+    "title": "209 all out.",
+    "domain": [
+     0,
+     50
+    ],
+    "ticks": [
+     0,
+     25,
+     50
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "Rohit Sharma",
+      "v": 7,
+      "text": "7 (13)"
+     },
+     {
+      "label": "Virat Kohli",
+      "v": 5,
+      "text": "5 (7)"
+     },
+     {
+      "label": "Ruturaj Gaikwad",
+      "v": 18,
+      "text": "18 (27)"
+     },
+     {
+      "label": "Shreyas Iyer",
+      "v": 22,
+      "text": "22 (26)"
+     },
+     {
+      "label": "Axar Patel",
+      "v": 46,
+      "text": "46 (55)",
+      "hl": true
+     },
+     {
+      "label": "Naman Dhir",
+      "v": 22,
+      "text": "22 (31)"
+     },
+     {
+      "label": "Ishan Kishan",
+      "v": 46,
+      "text": "46 (58)",
+      "hl": true
+     },
+     {
+      "label": "Arshdeep Singh",
+      "v": 14,
+      "text": "14 (4)"
+     },
+     {
+      "label": "Mohammed Siraj",
+      "v": 14,
+      "text": "14* (20)"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The powerplay was the problem. Thirty-seven for three off the first sixty balls. Seven balls in every ten were dots.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "INDIA · POWERPLAY · OVERS 1 TO 10",
+    "title": "Three down, almost nothing scored.",
+    "value": 37,
+    "suffix": " / 3",
+    "label": "off 60 balls · 70% dot balls · 5% boundary balls",
+    "color": "red"
+   }
+  },
+  {
+   "vo": "A last-wicket flurry added twenty-six runs off the final ten balls, with two sixes from अर्शदीप सिंह. It lifted the total. But it moved India's chances by only seven points. They were still the underdogs.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "INDIA · LAST-WICKET STAND",
+    "title": "Twenty-six off ten balls.",
+    "value": 26,
+    "label": "183/9 to 209/10 · India's win probability +7 points (our model)",
+    "color": "red",
+    "word": "twenty-six"
+   }
+  },
+  {
+   "vo": "New Zealand needed four point two runs an over, and they never got ahead of it. Four point one in the powerplay, three point eight through the middle overs. By the fortieth over, they were scoring three point nine and needed five and a half.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "NEW ZEALAND'S CHASE · SCORING v REQUIRED",
+    "title": "Never ahead of the rate.",
+    "a": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "SCORING RATE"
+    },
+    "b": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "REQUIRED RATE"
+    },
+    "rows": [
+     [
+      "After 10 overs · 41/1",
+      "4.10",
+      "4.22",
+      "b"
+     ],
+     [
+      "After 30 overs · 116/4",
+      "3.87",
+      "4.70",
+      "b"
+     ],
+     [
+      "After 40 overs · 155/6",
+      "3.88",
+      "5.50",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Here is India's chance of winning, over by over. Never above twenty-five per cent in the first twenty overs. Then the wickets: it climbs, falls back, and finally crosses fifty per cent for good at one fifty-eight for seven.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "INDIA'S WIN PROBABILITY DURING NZ'S CHASE · OUR MODEL",
+    "title": "From 13% to 98%.",
+    "domain": [
+     0,
+     100
+    ],
+    "ticks": [
+     0,
+     50,
+     100
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "After over 5 · 24/0",
+      "v": 13,
+      "text": "13%",
+      "hl": false
+     },
+     {
+      "label": "After over 10 · 41/1",
+      "v": 18,
+      "text": "18%",
+      "hl": false
+     },
+     {
+      "label": "After over 20 · 80/2",
+      "v": 16,
+      "text": "16%",
+      "hl": false
+     },
+     {
+      "label": "After over 25 · 89/4",
+      "v": 46,
+      "text": "46%",
+      "hl": false
+     },
+     {
+      "label": "After over 30 · 116/4",
+      "v": 27,
+      "text": "27%",
+      "hl": false
+     },
+     {
+      "label": "After over 35 · 131/6",
+      "v": 58,
+      "text": "58%",
+      "hl": false
+     },
+     {
+      "label": "After over 40 · 155/6",
+      "v": 40,
+      "text": "40%",
+      "hl": true
+     },
+     {
+      "label": "After over 45 · 173/8",
+      "v": 81,
+      "text": "81%",
+      "hl": false
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The biggest swing: over forty point four. नमन धीर, in his second over, gets Mitchell Santner to hole out to अर्शदीप सिंह. Twenty-seven points, in one ball. Just over nine overs earlier, a double: आक़िब नबी gets Bracewell, and the debutant यश ठाकुर bowls Foxcroft next ball. Together, thirty-nine points.",
+   "scene": {
+    "type": "lab_dots",
+    "kicker": "BIGGEST SWINGS · POINTS OF WIN PROBABILITY · OUR MODEL",
+    "title": "Three wickets turned it.",
+    "domain": [
+     0,
+     30
+    ],
+    "ticks": [
+     0,
+     15,
+     30
+    ],
+    "tick_labels": false,
+    "rows": [
+     {
+      "label": "40.4 Santner c Arshdeep b Dhir",
+      "v": 27,
+      "text": "27",
+      "hl": true
+     },
+     {
+      "label": "31.1 Foxcroft b Thakur",
+      "v": 20,
+      "text": "20",
+      "hl": true
+     },
+     {
+      "label": "21.3 Allen b Siraj",
+      "v": 19,
+      "text": "19"
+     },
+     {
+      "label": "30.6 Bracewell c Dhir b Nabi",
+      "v": 18,
+      "text": "18",
+      "hl": true
+     },
+     {
+      "label": "42.4 Clarke c Kishan b Arshdeep",
+      "v": 14,
+      "text": "14"
+     },
+     {
+      "label": "20.4 Kelly b Arshdeep",
+      "v": 14,
+      "text": "14"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the let-offs. New Zealand dropped अक्षर पटेल on two, and श्रेयस अय्यर on five. Those two batters scored sixty-one more runs. India dropped Foxcroft on five, and Bracewell on eight. They scored thirty-seven. A net twenty-four runs: more than the margin of twenty-two.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "DROPPED CATCHES · RUNS SCORED AFTER THE LET-OFF",
+    "title": "The drops were worth the match.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA'S LET-OFFS"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND'S LET-OFFS"
+    },
+    "rows": [
+     [
+      "First let-off",
+      "44 · Axar, on 2",
+      "26 · Foxcroft, on 5",
+      "level"
+     ],
+     [
+      "Second let-off",
+      "17 · Iyer, on 5",
+      "11 · Bracewell, on 8",
+      "level"
+     ],
+     [
+      "Runs after the let-offs",
+      "61",
+      "37",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "The hidden winner: नमन धीर. Two overs, four runs, one wicket. By our measure, he was the second most valuable player of the match, behind अर्शदीप सिंह, the Player of the Match, who took three for thirty. And the hidden loser: Jacob Duffy, three wickets, but sixty runs in eight overs.",
+   "scene": {
+    "type": "lab_big",
+    "kicker": "HIDDEN WINNER · WIN PROBABILITY ADDED · OUR MODEL",
+    "title": "Naman Dhir's two overs.",
+    "value": 26,
+    "suffix": " POINTS",
+    "label": "2-0-4-1 · the Santner wicket · second to Arshdeep Singh (+37) · hidden loser: Duffy 3/60 (-20)",
+    "color": "red"
+   }
+  },
+  {
+   "vo": "India leaned on pace: forty overs, at three point eight eight an over. New Zealand's seamers went at five point six four, but their two spinners, Santner and Bracewell, at four point one.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "PACE v SPIN · 5TH ODI",
+    "title": "The attacks.",
+    "a": {
+     "t": "IND",
+     "kit": "IND",
+     "name": "INDIA"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "NEW ZEALAND"
+    },
+    "rows": [
+     [
+      "Pace · overs",
+      "40.0 (155/7)",
+      "22.1 (125/6)",
+      "level"
+     ],
+     [
+      "Pace · economy",
+      "3.88",
+      "5.64",
+      "a"
+     ],
+     [
+      "Spin · economy",
+      "3.92",
+      "4.10",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Two days earlier, on the same ground, New Zealand had scored three thirty-three, at six point six six an over. In the fifth, three point eight eight. Their powerplay: seven point two, then four point one. अर्शदीप सिंह's ten overs cost fifty-five runs in the fourth, and thirty in the fifth.",
+   "scene": {
+    "type": "lab_compare",
+    "kicker": "SAME GROUND, TWO DAYS APART · NZ BATTING",
+    "title": "What changed at Bay Oval.",
+    "a": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "4TH ODI"
+    },
+    "b": {
+     "t": "NZ",
+     "kit": "NZ",
+     "name": "5TH ODI"
+    },
+    "rows": [
+     [
+      "Run rate",
+      "6.66",
+      "3.88",
+      "level"
+     ],
+     [
+      "Powerplay run rate",
+      "7.20",
+      "4.10",
+      "level"
+     ],
+     [
+      "Dot balls",
+      "47%",
+      "61%",
+      "level"
+     ],
+     [
+      "Arshdeep Singh, 10 overs",
+      "55 runs, 1 wkt",
+      "30 runs, 3 wkts",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "So how does a twenty-two per cent chance win? A collapse in the middle overs, two let-offs worth more than the margin, and an attack that never let New Zealand get going. Our model says that match goes the other way four times in five.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "THE VERDICT",
+    "lines": [
+     "22% to win.",
+     "[Won by 22 runs.]"
+    ]
+   }
+  },
+  {
+   "vo": "Which moment turned it for you? Tell us in the comments, and follow for more from The Replay Room.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THE REPLAY ROOM"
+     },
+     {
+      "t": "EVERY BALL, DECODED",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "India made two hundred and nine. Our model gave them twenty-two per cent to defend it. They won by twenty-two runs.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "5TH ODI · INDIA v NEW ZEALAND",
+     "left": {
+      "v": "22%",
+      "l": "India's chance (our model)",
+      "c": "gold"
+     },
+     "right": {
+      "v": "22",
+      "l": "runs: the margin",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.3
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.5
+   }
+  },
+  {
+   "vo": "India were thirty-seven for three after sixty balls, and bowled out for two hundred and nine. Then New Zealand needed four point two an over, and scored three point nine.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "THE SETUP",
+     "rows": [
+      [
+       "India · powerplay",
+       "37 / 3",
+       "red"
+      ],
+      [
+       "India · all out",
+       "209",
+       "ink"
+      ],
+      [
+       "NZ · needed",
+       "4.22 an over",
+       "gold"
+      ],
+      [
+       "NZ · scored",
+       "3.88 an over",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The turning point: Mitchell Santner holes out to अर्शदीप सिंह off नमन धीर. Twenty-seven points of win probability in one ball. India never fell below fifty per cent again.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "OVER 40.4 · 158 FOR 7",
+     "lines": [
+      {
+       "t": "27 POINTS."
+      },
+      {
+       "t": "ONE BALL.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5,
+      "hit": null
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "flash"
+    ]
+   }
+  },
+  {
+   "vo": "Then the drops. New Zealand put down two chances: those batters scored sixty-one more. India dropped two: thirty-seven. A net twenty-four runs, more than the margin.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "RUNS AFTER THE LET-OFF",
+     "left": {
+      "v": "61",
+      "l": "after NZ's drops",
+      "c": "gold"
+     },
+     "right": {
+      "v": "37",
+      "l": "after India's drops",
+      "c": "ink"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "point",
+      "x": 0.3
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The hidden winner: नमन धीर. Two overs, four runs, and the Santner wicket. Second most valuable player of the match, behind अर्शदीप सिंह.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "NAMAN DHIR · 2-0-4-1",
+     "label": "POINTS OF WIN PROBABILITY ADDED",
+     "value": 26,
+     "count_dur": 0.7,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "Two days earlier, on the same ground, New Zealand had scored three thirty-three. अर्शदीप सिंह's ten overs cost fifty-five runs then. In the fifth, thirty runs and three wickets.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "BAY OVAL · NZ BATTING",
+     "left": {
+      "v": "333",
+      "l": "4th ODI",
+      "c": "gold"
+     },
+     "right": {
+      "v": "187",
+      "l": "5th ODI",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "reel": [
+  {
+   "vo": "India made two hundred and nine. Our model gave them twenty-two per cent to defend it. They won by twenty-two runs.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "5TH ODI · INDIA v NEW ZEALAND",
+     "left": {
+      "v": "22%",
+      "l": "India's chance (our model)",
+      "c": "gold"
+     },
+     "right": {
+      "v": "22",
+      "l": "runs: the margin",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.3
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.5
+   }
+  },
+  {
+   "vo": "India were thirty-seven for three after sixty balls, and bowled out for two hundred and nine. Then New Zealand needed four point two an over, and scored three point nine.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "THE SETUP",
+     "rows": [
+      [
+       "India · powerplay",
+       "37 / 3",
+       "red"
+      ],
+      [
+       "India · all out",
+       "209",
+       "ink"
+      ],
+      [
+       "NZ · needed",
+       "4.22 an over",
+       "gold"
+      ],
+      [
+       "NZ · scored",
+       "3.88 an over",
+       "red"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Here is India's chance, over by over, during the chase. Thirteen per cent after five overs. Sixteen after twenty. Fifty-eight after thirty-five. Eighty-one after forty-five.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "INDIA'S WIN PROBABILITY · OUR MODEL",
+     "rows": [
+      [
+       "After 5 overs",
+       "13%",
+       "red"
+      ],
+      [
+       "After 20 overs",
+       "16%",
+       "red"
+      ],
+      [
+       "After 35 overs",
+       "58%",
+       "gold"
+      ],
+      [
+       "After 45 overs",
+       "81%",
+       "gold"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "stance",
+      "x": 0.4
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The turning point: Mitchell Santner holes out to अर्शदीप सिंह off नमन धीर. Twenty-seven points of win probability in one ball. India never fell below fifty per cent again.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "OVER 40.4 · 158 FOR 7",
+     "lines": [
+      {
+       "t": "27 POINTS."
+      },
+      {
+       "t": "ONE BALL.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "celebrate",
+      "x": 0.5,
+      "hit": null
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "flash"
+    ]
+   }
+  },
+  {
+   "vo": "Nine overs earlier, a double. आक़िब नबी gets Bracewell caught, and the debutant यश ठाकुर bowls Foxcroft with the very next ball. Thirty-nine points between them.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "OVERS 30.6 AND 31.1",
+     "left": {
+      "v": "18",
+      "l": "Bracewell, c Dhir",
+      "c": "gold"
+     },
+     "right": {
+      "v": "20",
+      "l": "Foxcroft, b Thakur",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "shake"
+    ]
+   }
+  },
+  {
+   "vo": "Then the drops. New Zealand put down two chances: those batters scored sixty-one more. India dropped two: thirty-seven. A net twenty-four runs, more than the margin.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "RUNS AFTER THE LET-OFF",
+     "left": {
+      "v": "61",
+      "l": "after NZ's drops",
+      "c": "gold"
+     },
+     "right": {
+      "v": "37",
+      "l": "after India's drops",
+      "c": "ink"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "point",
+      "x": 0.3
+     },
+     {
+      "kit": "NZ",
+      "pose": "dejected",
+      "x": 0.74
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "The hidden winner: नमन धीर. Two overs, four runs, and the Santner wicket. Second most valuable player of the match, behind अर्शदीप सिंह.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "NAMAN DHIR · 2-0-4-1",
+     "label": "POINTS OF WIN PROBABILITY ADDED",
+     "value": 26,
+     "count_dur": 0.7,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "sparks"
+    ]
+   }
+  },
+  {
+   "vo": "India's seamers bowled forty overs at three point eight eight. New Zealand's seamers went at five point six four. Their spinners did better, at four point one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "ECONOMY · 5TH ODI",
+     "rows": [
+      [
+       "India pace",
+       "3.88",
+       "gold"
+      ],
+      [
+       "India spin",
+       "3.92",
+       "ink"
+      ],
+      [
+       "NZ pace",
+       "5.64",
+       "red"
+      ],
+      [
+       "NZ spin",
+       "4.10",
+       "ink"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "defend",
+      "x": 0.34
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "Two days earlier, on the same ground, New Zealand had scored three thirty-three. अर्शदीप सिंह's ten overs cost fifty-five runs then. In the fifth, thirty runs and three wickets.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "BAY OVAL · NZ BATTING",
+     "left": {
+      "v": "333",
+      "l": "4th ODI",
+      "c": "gold"
+     },
+     "right": {
+      "v": "187",
+      "l": "5th ODI",
+      "c": "gold"
+     },
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "bowl",
+      "x": 0.62,
+      "dir": -1
+     }
+    ],
+    "view": "side",
+    "cam": "push",
+    "fx": [
+     "vignette"
+    ]
+   }
+  },
+  {
+   "vo": "So how does a twenty-two per cent chance win? A collapse in the middle overs, two let-offs worth more than the margin, and a bowling attack that never let New Zealand get going.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE VERDICT",
+     "lines": [
+      {
+       "t": "22% TO WIN."
+      },
+      {
+       "t": "WON BY 22.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "IND",
+      "pose": "arms_wide",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.5
+   }
+  },
+  {
+   "vo": "Which moment turned it for you? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "FULL BREAKDOWN"
+     },
+     {
+      "t": "ON YOUTUBE",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "YOUTUBE @thethirdman_angle",
+     "bio": "LINK IN BIO"
+    }
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "India vs New Zealand - 5th ODI Analysis | How India Won at 22%",
+   "description": "India vs New Zealand, 5th ODI analysis: how India won at 22%. India made 209; our model gave New Zealand a 78% chance to chase it, and India won by 22 runs. The powerplay collapse, the 27-point turning point at 158/7, the drops worth more than the margin, the hidden winner (Naman Dhir) and what changed at Bay Oval in two days. Ball-by-ball data: Cricbuzz; win-probability model fitted on the Cricsheet archive (our own analysis).\n\n#INDvNZ #IndiaVsNewZealand #5thODI",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 5th ODI",
+    "IND vs NZ 5th ODI",
+    "New Zealand vs India ODI",
+    "Arshdeep Singh",
+    "Naman Dhir",
+    "Mitchell Santner",
+    "Bay Oval",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "How India Won at 22% | India vs New Zealand 5th ODI #Shorts",
+   "description": "How India won the 5th ODI against New Zealand at 22%: 209 all out, a 27-point turning point, drops worth more than the margin, and the hidden winner. Cricbuzz ball-by-ball; our own model.\n\n#INDvNZ #5thODI #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 5th ODI",
+    "IND vs NZ 5th ODI",
+    "New Zealand vs India ODI",
+    "Arshdeep Singh",
+    "Naman Dhir",
+    "Mitchell Santner",
+    "Bay Oval",
+    "cricket analysis",
+    "The Replay Room",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true,
+ "lab_reel": [
+  0,
+  3,
+  5,
+  7,
+  8,
+  9,
+  12
+ ],
+ "reel_cta": {
+  "vo": "Was India's win luckier than it looked? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "FULL BREAKDOWN"
+    },
+    {
+     "t": "ON YOUTUBE",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ }
+}

@@ -1,0 +1,1388 @@
+{
+ "slug": "ipl_needs_2027",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "data",
+ "tag": "DATA STORY",
+ "tagsub": "WHAT EVERY IPL TEAM NEEDS",
+ "short_gap": {
+  ".": 0.95,
+  "?": 1.0,
+  "!": 0.95,
+  "default": 0.6
+ },
+ "short_lead": 0.35,
+ "short_duck": {
+  "ratio": 3,
+  "attack": 80,
+  "release": 1500
+ },
+ "files": {
+  "long": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Long",
+  "short": "Data_Story_Ep15_What_Every_IPL_Team_Needs_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "IPL 2027 AUCTION · EVERY TEAM",
+  "lines": [
+   {
+    "t": "WHAT EVERY"
+   },
+   {
+    "t": "IPL TEAM NEEDS",
+    "c": "gold"
+   }
+  ],
+  "hero": "298",
+  "herosize": 520
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "WHAT EVERY"
+   },
+   {
+    "t": "IPL TEAM NEEDS",
+    "c": "gold"
+   }
+  ],
+  "sub": "IPL 2027 AUCTION",
+  "hero": "298"
+ },
+ "sources": [
+  "Squads, purses and slots after retentions and trades, 17-18 Nov 2026: Yahoo Sports/Willow retained and released lists; purses agree across Sportskeeda, M9 and cricketnews.com (https://www.cricketnews.com/en/cricket/news/ipl-2027-mini-auction-remaining-purse-budget/c9b5bc94e78e3e790531ef50). Purses move with the trade window and are not yet official.",
+  "Capacity index per role (batting in the powerplay, middle overs and death; pace in the powerplay and at the death; spin in the middle overs): our own model on the Sportmonks ball-by-ball cache, IPL 2025 and 2026, super overs excluded (analysis/ipl2027_needs.py). 'Our model, in our archive'.",
+  "Pool names and numbers: released players per franchise; Sportmonks 2025-26 (docs/IPL2027_POOL_LEADS.md). Starc and Head reported unavailable by Cricinfo (live blog); the official registered list is due around 3 December 2026.",
+  "Team icons: official iplt20.com team assets, used to identify each franchise."
+ ],
+ "long": [
+  {
+   "vo": "Two hundred and ninety-eight crore rupees. Sixty-six slots. Ten teams. One auction, on the sixteenth of December, in गोवा. Before a single bid, we looked at what each squad is missing.",
+   "chapter": "Intro",
+   "scene": {
+    "type": "needs_hook",
+    "kicker": "IPL 2027 AUCTION · GOA · 16 DEC",
+    "codes": [
+     "KKR",
+     "CSK",
+     "DC",
+     "LSG",
+     "SRH",
+     "PBKS",
+     "MI",
+     "RR",
+     "RCB",
+     "GT"
+    ],
+    "tagline": "What every IPL team still needs"
+   }
+  },
+  {
+   "vo": "Here is how. We took every squad as it stands today: retained players, plus trades. Then we measured, from two seasons of ball-by-ball data, how many balls those players face and bowl in each phase. A hundred percent is an average squad. Below seventy is a hole.",
+   "chapter": "How we measured",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "OUR MODEL · IPL 2025-26 · IN OUR ARCHIVE",
+    "lines": [
+     "100% is",
+     "[an average squad.]",
+     "Under 70% is a hole."
+    ]
+   }
+  },
+  {
+   "vo": "First, the money. लखनऊ have the most, forty-seven point four five crore, for seven slots. कोलकाता, forty-one. हैदराबाद, forty. दिल्ली, thirty-nine, with nine slots to fill. Then मुंबई, चेन्नई, राजस्थान. पंजाब have eighteen. बेंगलुरु, fourteen. And गुजरात, under nine crore, for three slots.",
+   "chapter": "Who has the money",
+   "scene": {
+    "type": "needs_purse",
+    "kicker": "PURSE LEFT · AS OF 17 NOV 2026",
+    "title": "Who has the money.",
+    "items": [
+     {
+      "code": "LSG",
+      "cr": 47.45,
+      "slots": 7,
+      "ovs": 3,
+      "low": false
+     },
+     {
+      "code": "KKR",
+      "cr": 41.65,
+      "slots": 8,
+      "ovs": 3,
+      "low": false
+     },
+     {
+      "code": "SRH",
+      "cr": 40.15,
+      "slots": 7,
+      "ovs": 3,
+      "low": false
+     },
+     {
+      "code": "DC",
+      "cr": 39.5,
+      "slots": 9,
+      "ovs": 4,
+      "low": false
+     },
+     {
+      "code": "MI",
+      "cr": 32.6,
+      "slots": 9,
+      "ovs": 2,
+      "low": false
+     },
+     {
+      "code": "CSK",
+      "cr": 28.05,
+      "slots": 6,
+      "ovs": 2,
+      "low": false
+     },
+     {
+      "code": "RR",
+      "cr": 27.05,
+      "slots": 6,
+      "ovs": 3,
+      "low": false
+     },
+     {
+      "code": "PBKS",
+      "cr": 18.6,
+      "slots": 6,
+      "ovs": 2,
+      "low": false
+     },
+     {
+      "code": "RCB",
+      "cr": 14.15,
+      "slots": 5,
+      "ovs": 1,
+      "low": true
+     },
+     {
+      "code": "GT",
+      "cr": 8.75,
+      "slots": 3,
+      "ovs": 2,
+      "low": true
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Put it all in one grid, and the picture is clear. Pace is the league's biggest hole, at the death and with the new ball. Spin is thin at मुंबई and हैदराबाद. And कोलकाता are thin almost everywhere. Let's go through them, most needy first.",
+   "chapter": "The need map",
+   "scene": {
+    "type": "needs_map",
+    "kicker": "CAPACITY VS AN AVERAGE SQUAD (1.00) · OUR MODEL, IPL 2025-26",
+    "title": "The need map.",
+    "rows": [
+     {
+      "code": "KKR",
+      "v": [
+       0.46,
+       0.61,
+       0.65,
+       0.6,
+       1.08,
+       0.66
+      ],
+      "k": 1
+     },
+     {
+      "code": "CSK",
+      "v": [
+       0.76,
+       0.78,
+       0.67,
+       0.48,
+       0.75,
+       0.49
+      ],
+      "k": 2
+     },
+     {
+      "code": "DC",
+      "v": [
+       0.46,
+       0.88,
+       1.05,
+       0.56,
+       0.78,
+       0.45
+      ],
+      "k": 3
+     },
+     {
+      "code": "LSG",
+      "v": [
+       1.09,
+       1.0,
+       0.77,
+       0.46,
+       1.13,
+       0.43
+      ],
+      "k": 2
+     },
+     {
+      "code": "SRH",
+      "v": [
+       0.6,
+       0.86,
+       0.84,
+       0.98,
+       0.45,
+       0.97
+      ],
+      "k": 3
+     },
+     {
+      "code": "PBKS",
+      "v": [
+       0.92,
+       0.86,
+       1.07,
+       0.63,
+       0.78,
+       0.78
+      ],
+      "k": 2
+     },
+     {
+      "code": "MI",
+      "v": [
+       1.07,
+       1.0,
+       0.93,
+       0.84,
+       0.42,
+       1.0
+      ],
+      "k": 2
+     },
+     {
+      "code": "RR",
+      "v": [
+       0.9,
+       0.9,
+       0.95,
+       1.15,
+       1.11,
+       0.98
+      ],
+      "k": 2
+     },
+     {
+      "code": "RCB",
+      "v": [
+       0.97,
+       1.01,
+       0.95,
+       1.17,
+       1.2,
+       1.13
+      ],
+      "k": 3
+     },
+     {
+      "code": "GT",
+      "v": [
+       1.09,
+       1.02,
+       0.98,
+       1.25,
+       1.04,
+       1.12
+      ],
+      "k": 4
+     }
+    ]
+   }
+  },
+  {
+   "vo": "कोलकाता. Batting is thin in every phase. Powerplay, forty-six percent of average. Middle overs, sixty-one. Death overs, sixty-five. Only one wicketkeeper, and pace at sixty percent. forty-one point six five crore, three overseas slots, and a long list.",
+   "chapter": "Kolkata",
+   "scene": {
+    "type": "needs_team",
+    "code": "KKR",
+    "cr": 41.65,
+    "slots": 8,
+    "ovs": 3,
+    "head": "Thin in every phase",
+    "fits": "Fits: Nissanka (opener) · Pathirana (death pace)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.46
+     ],
+     [
+      "BAT · MIDDLE",
+      0.61
+     ],
+     [
+      "BAT · DEATH",
+      0.65
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.6
+     ],
+     [
+      "SPIN · MIDDLE",
+      1.08
+     ],
+     [
+      "PACE · DEATH",
+      0.66
+     ]
+    ],
+    "kicker": "WHAT KKR NEED · OUR MODEL",
+    "title": "Kolkata Knight Riders"
+   }
+  },
+  {
+   "vo": "चेन्नई. Pace is the hole. forty-eight percent in the powerplay, forty-nine at the death. Death batting is thin too, at sixty-seven. twenty-eight point zero five crore, six slots, two overseas.",
+   "chapter": "Chennai",
+   "scene": {
+    "type": "needs_team",
+    "code": "CSK",
+    "cr": 28.05,
+    "slots": 6,
+    "ovs": 2,
+    "head": "Pace is the hole",
+    "fits": "Fits: Boult · Pathirana · Chahar",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.76
+     ],
+     [
+      "BAT · MIDDLE",
+      0.78
+     ],
+     [
+      "BAT · DEATH",
+      0.67
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.48
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.75
+     ],
+     [
+      "PACE · DEATH",
+      0.49
+     ]
+    ],
+    "kicker": "WHAT CSK NEED · OUR MODEL",
+    "title": "Chennai Super Kings"
+   }
+  },
+  {
+   "vo": "दिल्ली. Their openers are at forty-six percent. Pace is the problem in both phases: fifty-six in the powerplay, forty-five at the death. thirty-nine point five crore, and the most overseas slots in the league, four.",
+   "chapter": "Delhi",
+   "scene": {
+    "type": "needs_team",
+    "code": "DC",
+    "cr": 39.5,
+    "slots": 9,
+    "ovs": 4,
+    "head": "Openers and pace",
+    "fits": "Fits: Boult (pace) · Nissanka (opener)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.46
+     ],
+     [
+      "BAT · MIDDLE",
+      0.88
+     ],
+     [
+      "BAT · DEATH",
+      1.05
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.56
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.78
+     ],
+     [
+      "PACE · DEATH",
+      0.45
+     ]
+    ],
+    "kicker": "WHAT DC NEED · OUR MODEL",
+    "title": "Delhi Capitals"
+   }
+  },
+  {
+   "vo": "लखनऊ have the biggest purse, and the clearest need. Pace, at both ends. forty-six percent with the new ball, forty-three at the death. Batting at the death is a little short too, at seventy-seven.",
+   "chapter": "Lucknow",
+   "scene": {
+    "type": "needs_team",
+    "code": "LSG",
+    "cr": 47.45,
+    "slots": 7,
+    "ovs": 3,
+    "head": "Pace at both ends",
+    "fits": "Fits: Boult · Pathirana · Chahar",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      1.09
+     ],
+     [
+      "BAT · MIDDLE",
+      1.0
+     ],
+     [
+      "BAT · DEATH",
+      0.77
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.46
+     ],
+     [
+      "SPIN · MIDDLE",
+      1.13
+     ],
+     [
+      "PACE · DEATH",
+      0.43
+     ]
+    ],
+    "kicker": "WHAT LSG NEED · OUR MODEL",
+    "title": "Lucknow Super Giants"
+   }
+  },
+  {
+   "vo": "हैदराबाद. Spin is at forty-five percent, and the powerplay batting, which drives their whole approach, is at sixty. forty point one five crore says they can fix both.",
+   "chapter": "Hyderabad",
+   "scene": {
+    "type": "needs_team",
+    "code": "SRH",
+    "cr": 40.15,
+    "slots": 7,
+    "ovs": 3,
+    "head": "Spin and the powerplay",
+    "fits": "Fits: Hasaranga (spin) · Nissanka (opener)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.6
+     ],
+     [
+      "BAT · MIDDLE",
+      0.86
+     ],
+     [
+      "BAT · DEATH",
+      0.84
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.98
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.45
+     ],
+     [
+      "PACE · DEATH",
+      0.97
+     ]
+    ],
+    "kicker": "WHAT SRH NEED · OUR MODEL",
+    "title": "Sunrisers Hyderabad"
+   }
+  },
+  {
+   "vo": "पंजाब. The issue is not how much, but how well. Their pace bowlers go for ten point six runs an over in the powerplay, and eleven point eight at the death. The league's are nine point three, and ten point four. eighteen point six crore, six slots.",
+   "chapter": "Punjab",
+   "scene": {
+    "type": "needs_team",
+    "code": "PBKS",
+    "cr": 18.6,
+    "slots": 6,
+    "ovs": 2,
+    "head": "Pace quality, not quantity",
+    "fits": "Fits: Boult · Chahar (pace)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.92
+     ],
+     [
+      "BAT · MIDDLE",
+      0.86
+     ],
+     [
+      "BAT · DEATH",
+      1.07
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.63
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.78
+     ],
+     [
+      "PACE · DEATH",
+      0.78
+     ]
+    ],
+    "kicker": "WHAT PBKS NEED · OUR MODEL",
+    "title": "Punjab Kings"
+   }
+  },
+  {
+   "vo": "मुंबई. A strong squad with one hole: spin, at forty-two percent of average. A wrist-spinner is the missing piece, and thirty-two point six crore can buy one.",
+   "chapter": "Mumbai",
+   "scene": {
+    "type": "needs_team",
+    "code": "MI",
+    "cr": 32.6,
+    "slots": 9,
+    "ovs": 2,
+    "head": "One hole: spin",
+    "fits": "Fits: Hasaranga (wrist-spin)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      1.07
+     ],
+     [
+      "BAT · MIDDLE",
+      1.0
+     ],
+     [
+      "BAT · DEATH",
+      0.93
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.84
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.42
+     ],
+     [
+      "PACE · DEATH",
+      1.0
+     ]
+    ],
+    "kicker": "WHAT MI NEED · OUR MODEL",
+    "title": "Mumbai Indians"
+   }
+  },
+  {
+   "vo": "राजस्थान are balanced. Their powerplay batting strikes at one eighty-seven, the best in the league. बेंगलुरु are balanced too, with fourteen crore and five slots. And गुजरात are the deepest squad of all, with three slots and under nine crore. They will be watching, not shopping.",
+   "chapter": "The balanced three",
+   "scene": {
+    "type": "needs_map",
+    "kicker": "THE BALANCED THREE · OUR MODEL",
+    "title": "Rajasthan, Bengaluru, Gujarat.",
+    "rows": [
+     {
+      "code": "RR",
+      "v": [
+       0.9,
+       0.9,
+       0.95,
+       1.15,
+       1.11,
+       0.98
+      ],
+      "k": 2
+     },
+     {
+      "code": "RCB",
+      "v": [
+       0.97,
+       1.01,
+       0.95,
+       1.17,
+       1.2,
+       1.13
+      ],
+      "k": 3
+     },
+     {
+      "code": "GT",
+      "v": [
+       1.09,
+       1.02,
+       0.98,
+       1.25,
+       1.04,
+       1.12
+      ],
+      "k": 4
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Now, who is out there? The registered list comes around the third of December, so this is only the players the teams released. Pace is rich: Trent Boult, मथीशा पथिराना, दीपक चाहर. Spin is thin: वानिन्दु हसरंगा, then very little. Openers: पथुम निसंका. And finishers are the thinnest market of all.",
+   "chapter": "The pool",
+   "scene": {
+    "type": "needs_pool",
+    "kicker": "THE POOL · RELEASED PLAYERS ONLY",
+    "title": "What's in the market.",
+    "boxes": [
+     {
+      "h": "PACE",
+      "d": "Boult · Pathirana · Chahar",
+      "c": "g"
+     },
+     {
+      "h": "SPIN",
+      "d": "Hasaranga, then very little",
+      "c": "r"
+     },
+     {
+      "h": "OPENERS",
+      "d": "Nissanka. Head is reported out",
+      "c": "a"
+     },
+     {
+      "h": "FINISHERS",
+      "d": "The thinnest market of all",
+      "c": "r"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So who could draw the biggest bids? This is our model, an opinion, not a price prediction. Trent Boult: good in the powerplay and the death, and four teams with over a hundred and fifty crore between them could want him. मथीशा पथिराना: the best death bowler on the market. वानिन्दु हसरंगा: the only proven wrist-spinner, and both मुंबई and हैदराबाद need spin. दीपक चाहर: an Indian new-ball bowler, no overseas slot needed. पथुम निसंका: the best realistic opener.",
+   "chapter": "Who could go big",
+   "scene": {
+    "type": "needs_bids",
+    "kicker": "WHO COULD GO BIG · OUR MODEL, NOT A PRICE PREDICTION",
+    "title": "Demand vs supply.",
+    "items": [
+     {
+      "name": "Trent Boult",
+      "why": "pace in both phases",
+      "buyers": [
+       "LSG",
+       "KKR",
+       "DC",
+       "CSK"
+      ]
+     },
+     {
+      "name": "Matheesha Pathirana",
+      "why": "best death bowler on the market",
+      "buyers": [
+       "LSG",
+       "KKR",
+       "DC",
+       "CSK"
+      ]
+     },
+     {
+      "name": "Wanindu Hasaranga",
+      "why": "only proven wrist-spinner",
+      "buyers": [
+       "MI",
+       "SRH",
+       "DC"
+      ]
+     },
+     {
+      "name": "Deepak Chahar",
+      "why": "Indian powerplay pace, no overseas slot",
+      "buyers": [
+       "LSG",
+       "DC",
+       "KKR",
+       "PBKS"
+      ]
+     },
+     {
+      "name": "Pathum Nissanka",
+      "why": "best realistic opener",
+      "buyers": [
+       "DC",
+       "KKR",
+       "SRH"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "vo": "One warning. Mitchell Starc and Travis Head are reported unavailable, and the official list is not out. We will update this on the third of December.",
+   "scene": {
+    "type": "lab_big_text",
+    "kicker": "BEFORE YOU QUOTE THIS",
+    "lines": [
+     "Official list",
+     "[due ~3 December.]"
+    ]
+   }
+  },
+  {
+   "vo": "Which team wins this auction? Tell us in the comments, and subscribe for the breakdown when the list drops.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WHO WINS"
+     },
+     {
+      "t": "THE AUCTION?",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Two hundred and ninety-eight crore rupees. Sixty-six slots. Ten teams. One auction, on the sixteenth of December, in गोवा. Here is what every IPL team still needs.",
+   "scene": {
+    "type": "needs_hook",
+    "kicker": "IPL 2027 AUCTION · GOA · 16 DEC",
+    "codes": [
+     "KKR",
+     "CSK",
+     "DC",
+     "LSG",
+     "SRH",
+     "PBKS",
+     "MI",
+     "RR",
+     "RCB",
+     "GT"
+    ],
+    "tagline": "What every IPL team still needs"
+   }
+  },
+  {
+   "vo": "A hundred percent is an average squad, from two seasons of ball-by-ball data. Red is a hole. Pace is the biggest gap, and कोलकाता are thin almost everywhere.",
+   "scene": {
+    "type": "needs_map",
+    "kicker": "CAPACITY VS AN AVERAGE SQUAD (1.00) · OUR MODEL, IPL 2025-26",
+    "title": "The need map.",
+    "rows": [
+     {
+      "code": "KKR",
+      "v": [
+       0.46,
+       0.61,
+       0.65,
+       0.6,
+       1.08,
+       0.66
+      ],
+      "k": 1
+     },
+     {
+      "code": "CSK",
+      "v": [
+       0.76,
+       0.78,
+       0.67,
+       0.48,
+       0.75,
+       0.49
+      ],
+      "k": 2
+     },
+     {
+      "code": "DC",
+      "v": [
+       0.46,
+       0.88,
+       1.05,
+       0.56,
+       0.78,
+       0.45
+      ],
+      "k": 3
+     },
+     {
+      "code": "LSG",
+      "v": [
+       1.09,
+       1.0,
+       0.77,
+       0.46,
+       1.13,
+       0.43
+      ],
+      "k": 2
+     },
+     {
+      "code": "SRH",
+      "v": [
+       0.6,
+       0.86,
+       0.84,
+       0.98,
+       0.45,
+       0.97
+      ],
+      "k": 3
+     },
+     {
+      "code": "PBKS",
+      "v": [
+       0.92,
+       0.86,
+       1.07,
+       0.63,
+       0.78,
+       0.78
+      ],
+      "k": 2
+     },
+     {
+      "code": "MI",
+      "v": [
+       1.07,
+       1.0,
+       0.93,
+       0.84,
+       0.42,
+       1.0
+      ],
+      "k": 2
+     },
+     {
+      "code": "RR",
+      "v": [
+       0.9,
+       0.9,
+       0.95,
+       1.15,
+       1.11,
+       0.98
+      ],
+      "k": 2
+     },
+     {
+      "code": "RCB",
+      "v": [
+       0.97,
+       1.01,
+       0.95,
+       1.17,
+       1.2,
+       1.13
+      ],
+      "k": 3
+     },
+     {
+      "code": "GT",
+      "v": [
+       1.09,
+       1.02,
+       0.98,
+       1.25,
+       1.04,
+       1.12
+      ],
+      "k": 4
+     }
+    ]
+   }
+  },
+  {
+   "vo": "कोलकाता first. Batting at forty-six percent in the powerplay, sixty-one in the middle overs, sixty-five at the death. Only one keeper. forty-one point six five crore to fix it.",
+   "scene": {
+    "type": "needs_team",
+    "code": "KKR",
+    "cr": 41.65,
+    "slots": 8,
+    "ovs": 3,
+    "head": "Thin in every phase",
+    "fits": "Fits: Nissanka (opener) · Pathirana (death pace)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.46
+     ],
+     [
+      "BAT · MIDDLE",
+      0.61
+     ],
+     [
+      "BAT · DEATH",
+      0.65
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.6
+     ],
+     [
+      "SPIN · MIDDLE",
+      1.08
+     ],
+     [
+      "PACE · DEATH",
+      0.66
+     ]
+    ],
+    "kicker": "WHAT KKR NEED · OUR MODEL",
+    "title": "Kolkata Knight Riders"
+   }
+  },
+  {
+   "vo": "चेन्नई. Pace is the hole: forty-eight percent with the new ball, forty-nine at the death. twenty-eight point zero five crore for six slots.",
+   "scene": {
+    "type": "needs_team",
+    "code": "CSK",
+    "cr": 28.05,
+    "slots": 6,
+    "ovs": 2,
+    "head": "Pace is the hole",
+    "fits": "Fits: Boult · Pathirana · Chahar",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.76
+     ],
+     [
+      "BAT · MIDDLE",
+      0.78
+     ],
+     [
+      "BAT · DEATH",
+      0.67
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.48
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.75
+     ],
+     [
+      "PACE · DEATH",
+      0.49
+     ]
+    ],
+    "kicker": "WHAT CSK NEED · OUR MODEL",
+    "title": "Chennai Super Kings"
+   }
+  },
+  {
+   "vo": "दिल्ली. Their openers are at forty-six percent, and pace is short in both phases, fifty-six and forty-five. They have the most overseas slots in the league, four.",
+   "scene": {
+    "type": "needs_team",
+    "code": "DC",
+    "cr": 39.5,
+    "slots": 9,
+    "ovs": 4,
+    "head": "Openers and pace",
+    "fits": "Fits: Boult (pace) · Nissanka (opener)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.46
+     ],
+     [
+      "BAT · MIDDLE",
+      0.88
+     ],
+     [
+      "BAT · DEATH",
+      1.05
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.56
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.78
+     ],
+     [
+      "PACE · DEATH",
+      0.45
+     ]
+    ],
+    "kicker": "WHAT DC NEED · OUR MODEL",
+    "title": "Delhi Capitals"
+   }
+  },
+  {
+   "vo": "लखनऊ have the biggest purse, forty-seven point four five crore, and the clearest need. Pace, at both ends: forty-six percent with the new ball, forty-three at the death.",
+   "scene": {
+    "type": "needs_team",
+    "code": "LSG",
+    "cr": 47.45,
+    "slots": 7,
+    "ovs": 3,
+    "head": "Pace at both ends",
+    "fits": "Fits: Boult · Pathirana · Chahar",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      1.09
+     ],
+     [
+      "BAT · MIDDLE",
+      1.0
+     ],
+     [
+      "BAT · DEATH",
+      0.77
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.46
+     ],
+     [
+      "SPIN · MIDDLE",
+      1.13
+     ],
+     [
+      "PACE · DEATH",
+      0.43
+     ]
+    ],
+    "kicker": "WHAT LSG NEED · OUR MODEL",
+    "title": "Lucknow Super Giants"
+   }
+  },
+  {
+   "vo": "हैदराबाद. Spin is at forty-five percent, and the powerplay batting, which drives their whole approach, is at sixty. ",
+   "scene": {
+    "type": "needs_team",
+    "code": "SRH",
+    "cr": 40.15,
+    "slots": 7,
+    "ovs": 3,
+    "head": "Spin and the powerplay",
+    "fits": "Fits: Hasaranga (spin) · Nissanka (opener)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.6
+     ],
+     [
+      "BAT · MIDDLE",
+      0.86
+     ],
+     [
+      "BAT · DEATH",
+      0.84
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.98
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.45
+     ],
+     [
+      "PACE · DEATH",
+      0.97
+     ]
+    ],
+    "kicker": "WHAT SRH NEED · OUR MODEL",
+    "title": "Sunrisers Hyderabad"
+   }
+  },
+  {
+   "vo": "पंजाब. The issue is quality, not quantity. Their pace bowlers go for ten point six runs an over in the powerplay, and eleven point eight at the death. The league's are nine point three, and ten point four.",
+   "scene": {
+    "type": "needs_team",
+    "code": "PBKS",
+    "cr": 18.6,
+    "slots": 6,
+    "ovs": 2,
+    "head": "Pace quality, not quantity",
+    "fits": "Fits: Boult · Chahar (pace)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      0.92
+     ],
+     [
+      "BAT · MIDDLE",
+      0.86
+     ],
+     [
+      "BAT · DEATH",
+      1.07
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.63
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.78
+     ],
+     [
+      "PACE · DEATH",
+      0.78
+     ]
+    ],
+    "kicker": "WHAT PBKS NEED · OUR MODEL",
+    "title": "Punjab Kings"
+   }
+  },
+  {
+   "vo": "मुंबई. A strong squad with one hole: spin, at forty-two percent of average. A wrist-spinner is the missing piece.",
+   "scene": {
+    "type": "needs_team",
+    "code": "MI",
+    "cr": 32.6,
+    "slots": 9,
+    "ovs": 2,
+    "head": "One hole: spin",
+    "fits": "Fits: Hasaranga (wrist-spin)",
+    "bars": [
+     [
+      "BAT · POWERPLAY",
+      1.07
+     ],
+     [
+      "BAT · MIDDLE",
+      1.0
+     ],
+     [
+      "BAT · DEATH",
+      0.93
+     ],
+     [
+      "PACE · POWERPLAY",
+      0.84
+     ],
+     [
+      "SPIN · MIDDLE",
+      0.42
+     ],
+     [
+      "PACE · DEATH",
+      1.0
+     ]
+    ],
+    "kicker": "WHAT MI NEED · OUR MODEL",
+    "title": "Mumbai Indians"
+   }
+  },
+  {
+   "vo": "राजस्थान, बेंगलुरु and गुजरात are balanced. They will be watching, not shopping.",
+   "scene": {
+    "type": "needs_map",
+    "kicker": "THE BALANCED THREE · OUR MODEL",
+    "title": "RR · RCB · GT",
+    "rows": [
+     {
+      "code": "RR",
+      "v": [
+       0.9,
+       0.9,
+       0.95,
+       1.15,
+       1.11,
+       0.98
+      ],
+      "k": 2
+     },
+     {
+      "code": "RCB",
+      "v": [
+       0.97,
+       1.01,
+       0.95,
+       1.17,
+       1.2,
+       1.13
+      ],
+      "k": 3
+     },
+     {
+      "code": "GT",
+      "v": [
+       1.09,
+       1.02,
+       0.98,
+       1.25,
+       1.04,
+       1.12
+      ],
+      "k": 4
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who is out there? Pace is rich: Trent Boult, मथीशा पथिराना, दीपक चाहर. Spin is thin: वानिन्दु हसरंगा, then very little. पथुम निसंका is the opener. Finishers are scarce.",
+   "scene": {
+    "type": "needs_pool",
+    "kicker": "THE POOL · RELEASED PLAYERS ONLY",
+    "title": "What's in the market.",
+    "boxes": [
+     {
+      "h": "PACE",
+      "d": "Boult · Pathirana · Chahar",
+      "c": "g"
+     },
+     {
+      "h": "SPIN",
+      "d": "Hasaranga, then very little",
+      "c": "r"
+     },
+     {
+      "h": "OPENERS",
+      "d": "Nissanka. Head is reported out",
+      "c": "a"
+     },
+     {
+      "h": "FINISHERS",
+      "d": "The thinnest market of all",
+      "c": "r"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The biggest bids? Our model says Boult, पथिराना, हसरंगा, चाहर and निसंका. An opinion, not a price.",
+   "scene": {
+    "type": "needs_bids",
+    "kicker": "WHO COULD GO BIG · OUR MODEL, NOT A PRICE PREDICTION",
+    "title": "Demand vs supply.",
+    "items": [
+     {
+      "name": "Trent Boult",
+      "why": "pace in both phases",
+      "buyers": [
+       "LSG",
+       "KKR",
+       "DC",
+       "CSK"
+      ]
+     },
+     {
+      "name": "Matheesha Pathirana",
+      "why": "best death bowler on the market",
+      "buyers": [
+       "LSG",
+       "KKR",
+       "DC",
+       "CSK"
+      ]
+     },
+     {
+      "name": "Wanindu Hasaranga",
+      "why": "only proven wrist-spinner",
+      "buyers": [
+       "MI",
+       "SRH",
+       "DC"
+      ]
+     },
+     {
+      "name": "Deepak Chahar",
+      "why": "Indian powerplay pace, no overseas slot",
+      "buyers": [
+       "LSG",
+       "DC",
+       "KKR",
+       "PBKS"
+      ]
+     },
+     {
+      "name": "Pathum Nissanka",
+      "why": "best realistic opener",
+      "buyers": [
+       "DC",
+       "KKR",
+       "SRH"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Which team wins this auction? Tell us in the comments, and subscribe to The Third Man for the full breakdown.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "long": {
+   "title": "IPL 2027 Auction Preview: What Every Team Needs | Data Story Ep 15",
+   "description": "IPL 2027 auction preview: what every IPL team needs. Ten squads, ₹298 crore, 66 slots, one auction on 16 December 2026 in Goa. We measured each squad's batting by phase and its pace and spin from IPL 2025-26 ball-by-ball data, then matched the gaps to the players the franchises released.\n\nIn our model Kolkata are thin in every phase; Chennai, Delhi and Lucknow need pace; Hyderabad and Mumbai need spin; Punjab's pace is expensive; Rajasthan, Bengaluru and Gujarat are balanced. Boult, Pathirana, Hasaranga, Chahar and Nissanka could draw the biggest bids (opinion, not a price prediction).\n\nPurses and slots as of 17 November 2026, not yet official. The registered list is due around 3 December; Starc and Head are reported unavailable. Capacity: 100% is an average squad. Our model, in our archive (Sportmonks IPL 2025-26).\n\n#IPL2027 #IPLAuction #IPL",
+   "tags": [
+    "IPL 2027",
+    "IPL 2027 auction",
+    "IPL auction",
+    "IPL mini auction 2026",
+    "what every IPL team needs",
+    "IPL purse",
+    "IPL retention",
+    "IPL released players",
+    "Trent Boult",
+    "Matheesha Pathirana",
+    "Wanindu Hasaranga",
+    "IPL data",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "What Every IPL Team Needs | IPL 2027 Auction Data Story Ep 15 #Shorts",
+   "description": "What every IPL team needs before the 2027 auction: Kolkata thin everywhere, Chennai, Delhi and Lucknow need pace, Hyderabad and Mumbai need spin. Our model, IPL 2025-26 data. Full breakdown on the channel.\n\n#IPL2027 #IPLAuction #Shorts",
+   "tags": [
+    "IPL 2027",
+    "IPL 2027 auction",
+    "IPL auction",
+    "IPL mini auction 2026",
+    "what every IPL team needs",
+    "IPL purse",
+    "IPL retention",
+    "IPL released players",
+    "Trent Boult",
+    "Matheesha Pathirana",
+    "Wanindu Hasaranga",
+    "IPL data",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

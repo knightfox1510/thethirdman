@@ -1,0 +1,263 @@
+{
+ "slug": "dhoni_captaincy_all",
+ "claims": [
+  {
+   "claim": "matches as IPL captain (CSK + Rising Pune Supergiant)",
+   "value": 235,
+   "sources": {
+    "wikipedia": 235,
+    "cricketaddictor": 235,
+    "insidesport": 235
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "wins as IPL captain",
+   "value": 136,
+   "sources": {
+    "wikipedia": 136,
+    "cricketaddictor": 136,
+    "insidesport": 136
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "most matches as IPL captain: MS Dhoni",
+   "value": "Dhoni",
+   "sources": {
+    "wikipedia": "Dhoni",
+    "mykhel": "Dhoni"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "most wins as IPL captain: MS Dhoni",
+   "value": "Dhoni",
+   "sources": {
+    "wikipedia": "Dhoni",
+    "mykhel": "Dhoni"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "titles as captain",
+   "value": 5,
+   "sources": {
+    "wikipedia": 5,
+    "cricketaddictor": 5,
+    "etvbharat": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "five titles level with Rohit Sharma",
+   "value": "joint-most",
+   "sources": {
+    "wikipedia": "joint-most",
+    "indiatv": "joint-most"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL seasons with CSK (2008-2015, 2018-2025)",
+   "value": 16,
+   "sources": {
+    "wikipedia": 16,
+    "cricsheet": 16
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK finals",
+   "value": 10,
+   "sources": {
+    "etvbharat": 10,
+    "cricketaddictor": 10,
+    "cricsheet": 10
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK titles",
+   "value": 5,
+   "sources": {
+    "etvbharat": 5,
+    "cricketaddictor": 5,
+    "cricsheet": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK playoff seasons (2008-15, 2018, 2019, 2021, 2023)",
+   "value": 12,
+   "sources": {
+    "wikipedia": 12,
+    "cricsheet": 12
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2008",
+   "value": 9,
+   "sources": {
+    "wikipedia": 9,
+    "cricsheet": 9
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2011",
+   "value": 11,
+   "sources": {
+    "wikipedia": 11,
+    "cricsheet": 11
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2013",
+   "value": 12,
+   "sources": {
+    "wikipedia": 12,
+    "cricsheet": 12
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2018",
+   "value": 11,
+   "sources": {
+    "wikipedia": 11,
+    "cricsheet": 11
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2022",
+   "value": 4,
+   "sources": {
+    "wikipedia": 4,
+    "cricsheet": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2024",
+   "value": 7,
+   "sources": {
+    "wikipedia": 7,
+    "cricsheet": 7
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK wins 2025",
+   "value": 4,
+   "sources": {
+    "wikipedia": 4,
+    "cricsheet": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "MI finals",
+   "value": 6,
+   "sources": {
+    "mykhel": 6,
+    "cricsheet": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "MI titles",
+   "value": 5,
+   "sources": {
+    "mykhel": 5,
+    "cricsheet": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: MI playoff seasons",
+   "value": 11,
+   "sources": {
+    "cricsheet": 11
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: MI seasons",
+   "value": 18,
+   "sources": {
+    "cricsheet": 18
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: CSK win rate on decided matches (%)",
+   "value": 57,
+   "sources": {
+    "cricsheet": 57
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: MI win rate on decided matches (%)",
+   "value": 55,
+   "sources": {
+    "cricsheet": 55
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 19,
+  "LABELLED": 4
+ }
+}

@@ -1,0 +1,350 @@
+{
+ "slug": "dhoni_retires",
+ "theme": "stadium",
+ "captions": "v2",
+ "series": "channel",
+ "tag": "THE THIRD MAN",
+ "tagsub": "DHONI RETIRES FROM THE IPL",
+ "files": {
+  "short": "Channel_Ep01_Dhoni_Retires_from_the_IPL_Short_9x16",
+  "long": "_unused"
+ },
+ "thumb": {
+  "kicker": "CSK ANNOUNCE",
+  "lines": [
+   {
+    "t": "DHONI RETIRES"
+   },
+   {
+    "t": "FROM THE IPL",
+    "c": "gold"
+   }
+  ],
+  "hero": "5",
+  "herosize": 640
+ },
+ "sources": [
+  "Retirement and mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye https://www.easterneye.biz/ms-dhoni-retires-ipl-csk-mentor-2027-records/ , Khel Now https://khelnow.com/cricket/ms-dhoni-ipl-appointed-as-csk-mentor-202611 , Kalinga TV https://kalingatv.com/sports/ms-dhoni-announces-retirement-from-ipl/ and Cricket Times https://crickettimes.com/2026/11/fans-get-emotional-as-ms-dhoni-announces-retirement-ahead-of-ipl-2027/ (we could not read the franchise's own post).",
+  "Career totals (278 matches, 5,439 runs, average 38.30, strike rate 137.45, 24 fifties, 5 titles, 10 finals, 2 Champions League T20 titles): ETV Bharat https://www.etvbharat.com/en/sports/ms-dhoni-retirement-ipl-career-achievements-records-chennai-super-kings-enn26111704201 , Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ , Eastern Eye, Khel Now.",
+  "Captaincy (235 matches, 136 wins, 97 losses, 2 no results; CSK and Rising Pune Supergiant): ESPNcricinfo records, most matches as captain https://www.cricinfo.com/records/trophy/individual-most-matches-as-captain/indian-premier-league-117 (page supplied by the channel owner; we could not open it), Cricketaddictor and Insidesport https://www.insidesport.in/ms-dhoni-captaincy-records-in-all-formats-and-ipl/ . ETV Bharat's '226 matches' is the figure before 2025. Five titles level with Rohit Sharma: Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains and India TV.",
+  "In our archive: Sportmonks ball-by-ball, every IPL match 2013-2026 (2008-2012 are not in our plan; MSD's figures cover the seasons he played, 2013-2025, as he missed 2026), super overs excluded; powerplay = overs 1-6, middle 7-15, death 16-20. Figures: analysis/dhoni_ipl.py (data/provenance/dhoni_ipl_figures.json)."
+ ],
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "short": [
+  {
+   "vo": "चेन्नई have announced it. MSD has retired from the IPL, and will become the team's mentor.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "CSK ANNOUNCE · 17 NOV 2026",
+     "lines": [
+      {
+       "t": "DHONI RETIRES"
+      },
+      {
+       "t": "FROM THE IPL",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Two hundred and seventy-eight matches. Five thousand, four hundred and thirty-nine runs.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "MS DHONI · IPL CAREER",
+     "left": {
+      "v": "278",
+      "l": "Matches",
+      "c": "gold"
+     },
+     "right": {
+      "v": "5,439",
+      "l": "Runs",
+      "c": "gold"
+     },
+     "sep": "&",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stance",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Five titles as captain: twenty ten, twenty eleven, twenty eighteen, twenty twenty-one, and twenty twenty-three.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "AS CAPTAIN",
+     "label": "IPL TITLES",
+     "value": 5,
+     "count_dur": 0.6,
+     "color": "gold",
+     "note": "2010 · 2011 · 2018 · 2021 · 2023",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.4
+   }
+  },
+  {
+   "vo": "Ten IPL finals. And two Champions League titles.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "AS CAPTAIN",
+     "left": {
+      "v": "10",
+      "l": "IPL finals",
+      "c": "gold"
+     },
+     "right": {
+      "v": "2",
+      "l": "Champions League T20 titles",
+      "c": "gold"
+     },
+     "sep": "&",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.3
+   }
+  },
+  {
+   "vo": "Two hundred and thirty-five matches as IPL captain. One hundred and thirty-six wins.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "MS DHONI · IPL CAPTAIN",
+     "left": {
+      "v": "235",
+      "l": "Matches",
+      "c": "gold"
+     },
+     "right": {
+      "v": "136",
+      "l": "Wins",
+      "c": "gold"
+     },
+     "sep": "→",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stand",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "And in the last two overs of an innings, no one in our data has hit more sixes: ninety-eight.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "THE FINISHER",
+     "label": "SIXES IN THE LAST TWO OVERS",
+     "value": 98,
+     "count_dur": 0.7,
+     "color": "gold",
+     "note": "OUR DATA: IPL 2013-2026 · HE PLAYED 2013-2025",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stance",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "sparks"
+    ],
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ],
+    "ball": {
+     "at": 0.5,
+     "shot": "six"
+    }
+   }
+  },
+  {
+   "vo": "Thank you, MSD.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "THE THIRD MAN",
+     "lines": [
+      {
+       "t": "THANK YOU,"
+      },
+      {
+       "t": "DHONI.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.3
+   }
+  },
+  {
+   "vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "long": [],
+ "yt": {
+  "short": {
+   "title": "MS Dhoni Retires From the IPL: 5 Titles, 278 Matches | CSK #Shorts",
+   "description": "MS Dhoni has retired from the IPL as a player and becomes Chennai Super Kings' team mentor, CSK announced on 17 November 2026. His IPL in numbers: 278 matches, 5,439 runs, five titles as captain (2010, 2011, 2018, 2021, 2023), ten finals, two Champions League T20 titles, and 136 wins in 235 matches as captain. In our data (IPL 2013-2026), no one hit more sixes in the last two overs of an innings than his 98.\n\nSources: Eastern Eye, Khel Now, ETV Bharat, Cricketaddictor, Cricinfo records, Sportmonks ball-by-ball (our own analysis). Illustrated avatar, not a likeness.\n\n#MSDhoni #CSK #IPL #Shorts",
+   "tags": [
+    "MS Dhoni",
+    "Dhoni IPL",
+    "Dhoni retirement",
+    "Dhoni IPL retirement",
+    "CSK",
+    "Chennai Super Kings",
+    "IPL 2027",
+    "Dhoni captain",
+    "IPL records",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

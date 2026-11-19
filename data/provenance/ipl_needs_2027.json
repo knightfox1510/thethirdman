@@ -1,0 +1,1121 @@
+{
+ "slug": "ipl_needs_2027",
+ "claims": [
+  {
+   "claim": "KKR purse remaining (cr)",
+   "value": 41.65,
+   "sources": {
+    "sportskeeda": 41.65,
+    "m9": 41.65,
+    "cricketnews": 41.65
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR slots",
+   "value": 8,
+   "sources": {
+    "sportskeeda": 8,
+    "cricketnews": 8
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR overseas slots",
+   "value": 3,
+   "sources": {
+    "sportskeeda": 3,
+    "cricketnews": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK purse remaining (cr)",
+   "value": 28.05,
+   "sources": {
+    "sportskeeda": 28.05,
+    "m9": 28.05,
+    "cricketnews": 28.05
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK slots",
+   "value": 6,
+   "sources": {
+    "sportskeeda": 6,
+    "cricketnews": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK overseas slots",
+   "value": 2,
+   "sources": {
+    "sportskeeda": 2,
+    "cricketnews": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC purse remaining (cr)",
+   "value": 39.5,
+   "sources": {
+    "sportskeeda": 39.5,
+    "m9": 39.5,
+    "cricketnews": 39.5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "DC slots",
+   "value": 9,
+   "sources": {
+    "sportskeeda": 9,
+    "cricketnews": 9
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "DC overseas slots",
+   "value": 4,
+   "sources": {
+    "sportskeeda": 4,
+    "cricketnews": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "DC squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG purse remaining (cr)",
+   "value": 47.45,
+   "sources": {
+    "sportskeeda": 47.45,
+    "m9": 47.45,
+    "cricketnews": 47.45
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG slots",
+   "value": 7,
+   "sources": {
+    "sportskeeda": 7,
+    "cricketnews": 7
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG overseas slots",
+   "value": 3,
+   "sources": {
+    "sportskeeda": 3,
+    "cricketnews": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH purse remaining (cr)",
+   "value": 40.15,
+   "sources": {
+    "sportskeeda": 40.15,
+    "m9": 40.15,
+    "cricketnews": 40.15
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH slots",
+   "value": 7,
+   "sources": {
+    "sportskeeda": 7,
+    "cricketnews": 7
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH overseas slots",
+   "value": 3,
+   "sources": {
+    "sportskeeda": 3,
+    "cricketnews": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS purse remaining (cr)",
+   "value": 18.6,
+   "sources": {
+    "sportskeeda": 18.6,
+    "m9": 18.6,
+    "cricketnews": 18.6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS slots",
+   "value": 6,
+   "sources": {
+    "sportskeeda": 6,
+    "cricketnews": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS overseas slots",
+   "value": 2,
+   "sources": {
+    "sportskeeda": 2,
+    "cricketnews": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI purse remaining (cr)",
+   "value": 32.6,
+   "sources": {
+    "sportskeeda": 32.6,
+    "m9": 32.6,
+    "cricketnews": 32.6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "MI slots",
+   "value": 9,
+   "sources": {
+    "sportskeeda": 9,
+    "cricketnews": 9
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "MI overseas slots",
+   "value": 2,
+   "sources": {
+    "sportskeeda": 2,
+    "cricketnews": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "MI squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR purse remaining (cr)",
+   "value": 27.05,
+   "sources": {
+    "sportskeeda": 27.05,
+    "m9": 27.05,
+    "cricketnews": 27.05
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RR slots",
+   "value": 6,
+   "sources": {
+    "sportskeeda": 6,
+    "cricketnews": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RR overseas slots",
+   "value": 3,
+   "sources": {
+    "sportskeeda": 3,
+    "cricketnews": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RR squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB purse remaining (cr)",
+   "value": 14.15,
+   "sources": {
+    "sportskeeda": 14.15,
+    "m9": 14.15,
+    "cricketnews": 14.15
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB slots",
+   "value": 5,
+   "sources": {
+    "sportskeeda": 5,
+    "cricketnews": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB overseas slots",
+   "value": 1,
+   "sources": {
+    "sportskeeda": 1,
+    "cricketnews": 1
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT purse remaining (cr)",
+   "value": 8.75,
+   "sources": {
+    "sportskeeda": 8.75,
+    "m9": 8.75,
+    "cricketnews": 8.75
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "GT slots",
+   "value": 3,
+   "sources": {
+    "sportskeeda": 3,
+    "cricketnews": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "GT overseas slots",
+   "value": 2,
+   "sources": {
+    "sportskeeda": 2,
+    "cricketnews": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "GT squad + slots = 25 (internal consistency of Yahoo/Willow lists)",
+   "value": 25,
+   "sources": {
+    "yahoo": 25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "total purse (cr, rounded)",
+   "value": 298,
+   "sources": {
+    "sportskeeda": 298,
+    "cricketnews": 298
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "total slots",
+   "value": 66,
+   "sources": {
+    "sportskeeda": 66,
+    "cricketnews": 66
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.46,
+   "sources": {
+    "sportmonks": 0.46
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.61,
+   "sources": {
+    "sportmonks": 0.61
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.65,
+   "sources": {
+    "sportmonks": 0.65
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.6,
+   "sources": {
+    "sportmonks": 0.6
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 1.08,
+   "sources": {
+    "sportmonks": 1.08
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "KKR pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.66,
+   "sources": {
+    "sportmonks": 0.66
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.76,
+   "sources": {
+    "sportmonks": 0.76
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.78,
+   "sources": {
+    "sportmonks": 0.78
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.67,
+   "sources": {
+    "sportmonks": 0.67
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.48,
+   "sources": {
+    "sportmonks": 0.48
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 0.75,
+   "sources": {
+    "sportmonks": 0.75
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "CSK pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.49,
+   "sources": {
+    "sportmonks": 0.49
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.46,
+   "sources": {
+    "sportmonks": 0.46
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.88,
+   "sources": {
+    "sportmonks": 0.88
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC bat_death capacity index (our model, IPL 2025-26)",
+   "value": 1.05,
+   "sources": {
+    "sportmonks": 1.05
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.56,
+   "sources": {
+    "sportmonks": 0.56
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 0.78,
+   "sources": {
+    "sportmonks": 0.78
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "DC pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.45,
+   "sources": {
+    "sportmonks": 0.45
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 1.09,
+   "sources": {
+    "sportmonks": 1.09
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 1.0,
+   "sources": {
+    "sportmonks": 1.0
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.77,
+   "sources": {
+    "sportmonks": 0.77
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.46,
+   "sources": {
+    "sportmonks": 0.46
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 1.13,
+   "sources": {
+    "sportmonks": 1.13
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "LSG pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.43,
+   "sources": {
+    "sportmonks": 0.43
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.6,
+   "sources": {
+    "sportmonks": 0.6
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.86,
+   "sources": {
+    "sportmonks": 0.86
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.84,
+   "sources": {
+    "sportmonks": 0.84
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.98,
+   "sources": {
+    "sportmonks": 0.98
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 0.45,
+   "sources": {
+    "sportmonks": 0.45
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "SRH pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.97,
+   "sources": {
+    "sportmonks": 0.97
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.92,
+   "sources": {
+    "sportmonks": 0.92
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.86,
+   "sources": {
+    "sportmonks": 0.86
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS bat_death capacity index (our model, IPL 2025-26)",
+   "value": 1.07,
+   "sources": {
+    "sportmonks": 1.07
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.63,
+   "sources": {
+    "sportmonks": 0.63
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 0.78,
+   "sources": {
+    "sportmonks": 0.78
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.78,
+   "sources": {
+    "sportmonks": 0.78
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 1.07,
+   "sources": {
+    "sportmonks": 1.07
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 1.0,
+   "sources": {
+    "sportmonks": 1.0
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.93,
+   "sources": {
+    "sportmonks": 0.93
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 0.84,
+   "sources": {
+    "sportmonks": 0.84
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 0.42,
+   "sources": {
+    "sportmonks": 0.42
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "MI pace_death capacity index (our model, IPL 2025-26)",
+   "value": 1.0,
+   "sources": {
+    "sportmonks": 1.0
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.9,
+   "sources": {
+    "sportmonks": 0.9
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 0.9,
+   "sources": {
+    "sportmonks": 0.9
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.95,
+   "sources": {
+    "sportmonks": 0.95
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 1.15,
+   "sources": {
+    "sportmonks": 1.15
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 1.11,
+   "sources": {
+    "sportmonks": 1.11
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR pace_death capacity index (our model, IPL 2025-26)",
+   "value": 0.98,
+   "sources": {
+    "sportmonks": 0.98
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 0.97,
+   "sources": {
+    "sportmonks": 0.97
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 1.01,
+   "sources": {
+    "sportmonks": 1.01
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.95,
+   "sources": {
+    "sportmonks": 0.95
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 1.17,
+   "sources": {
+    "sportmonks": 1.17
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 1.2,
+   "sources": {
+    "sportmonks": 1.2
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RCB pace_death capacity index (our model, IPL 2025-26)",
+   "value": 1.13,
+   "sources": {
+    "sportmonks": 1.13
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT bat_powerplay capacity index (our model, IPL 2025-26)",
+   "value": 1.09,
+   "sources": {
+    "sportmonks": 1.09
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT bat_middle capacity index (our model, IPL 2025-26)",
+   "value": 1.02,
+   "sources": {
+    "sportmonks": 1.02
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT bat_death capacity index (our model, IPL 2025-26)",
+   "value": 0.98,
+   "sources": {
+    "sportmonks": 0.98
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT pace_pp capacity index (our model, IPL 2025-26)",
+   "value": 1.25,
+   "sources": {
+    "sportmonks": 1.25
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT spin_mid capacity index (our model, IPL 2025-26)",
+   "value": 1.04,
+   "sources": {
+    "sportmonks": 1.04
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "GT pace_death capacity index (our model, IPL 2025-26)",
+   "value": 1.12,
+   "sources": {
+    "sportmonks": 1.12
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "league pace economy powerplay",
+   "value": 9.35,
+   "sources": {
+    "sportmonks": 9.35
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "league pace economy death",
+   "value": 10.39,
+   "sources": {
+    "sportmonks": 10.39
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS pace economy powerplay",
+   "value": 10.62,
+   "sources": {
+    "sportmonks": 10.62
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "PBKS pace economy death",
+   "value": 11.85,
+   "sources": {
+    "sportmonks": 11.85
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "RR powerplay batting strike rate",
+   "value": 187.1,
+   "sources": {
+    "sportmonks": 187.1
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 32,
+  "LABELLED": 75
+ }
+}

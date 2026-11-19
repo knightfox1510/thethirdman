@@ -1,0 +1,1312 @@
+{
+ "slug": "dyk_third_man",
+ "theme": "plate",
+ "theme_long": "plate",
+ "captions": "serif",
+ "captions_long": false,
+ "series": "didyouknow",
+ "tag": "DID YOU KNOW?",
+ "tagsub": "EP. 1 · THIRD MAN",
+ "files": {
+  "long": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Long",
+  "short": "Did_You_Know_Ep01_Third_Man_Position_and_the_Name_Mystery_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "DID YOU KNOW? · EP. 1",
+  "lines": [
+   {
+    "t": "WHY IS IT CALLED"
+   },
+   {
+    "t": "THIRD MAN?",
+    "c": "gold"
+   }
+  ],
+  "hero": "?",
+  "herosize": 420
+ },
+ "sources": [
+  "Position and job: Wikipedia, 'Glossary of cricket terms' (third man: behind the wicket-keeper on the off side, beyond the slip and gully areas) https://en.wikipedia.org/wiki/Glossary_of_cricket_terms and 'Fielding (cricket)' https://en.wikipedia.org/wiki/Fielding_(cricket); SportPlan, 'Cricket Fielding Positions Explained' https://www.sportplan.net/drills/Cricket/guides/cricket-fielding-positions-explained.jsp; cricketwriter.com, 'Third Man' https://www.cricketwriter.com/cricket-fielding-positions-third-man/.",
+  "Who stands there: Wikipedia 'Fielding (cricket)' and PitchVision, 'Specialist fielding: fine leg and third man' https://cdn0.pitchvision.com/specialist-fielding-fine-leg-and-third-man.",
+  "The four theories are repeated on cricket websites (Cricket Lounge https://thecricketlounge.com/read-the-story-behind-the-third-man-position-in-cricket/ ; Idiom Origins https://idiomorigins.org/origin/third-man ; cricketwriter.com; the History of Cricket blog); none cites a source. We found no document that settles the origin; the video shows each as unproven.",
+  "The 1884 text: James Lillywhite's Cricketers' Companion 1884, 'Diagrams of the Field', ACS online library https://archive.acscricket.com/online_library/jlcc/lillywhite_companion_1884/55/ : \"It is the fashion now ... to dispense with long-stop, thereby getting a 'third man' as well as 'mid-on'\". The earliest mention we found, not necessarily the earliest.",
+  "India v Pakistan, ICC World Cup, SuperSport Park, Centurion, 1 March 2003: Cricsheet ball-by-ball (Tendulkar 98 off 75 balls, first six off Shoaib Akhtar in the second over; India 276/4 chasing Pakistan's 273/7, won by six wickets) and Wikipedia, 'India at the Cricket World Cup'. The shot's direction (an upper cut over third man) is as reported by ESPNcricinfo and Sportskeeda. Field plans are illustrative: right-handed batter, bowler at the top."
+ ],
+ "venue": {
+  "time": "dusk",
+  "crowd": [
+   [
+    190,
+    235,
+    70
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    190,
+    235,
+    70
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "Third man. The fielder who stands far behind the wicket, on the off side, usually down near the boundary. Everyone knows where he is. Hardly anyone knows why he is called that.",
+   "scene": {
+    "type": "plate",
+    "plate": "I",
+    "title": "THE THIRD MAN",
+    "sub": "a fielder of the off side, far behind the wicket",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "DID YOU",
+     "KNOW?"
+    ],
+    "stamp_at": 0.7
+   }
+  },
+  {
+   "vo": "His job is simple. When a thick edge, or a deliberate steer, beats the slips and races away, third man is the one who stops it from becoming four.",
+   "scene": {
+    "type": "plate",
+    "plate": "II",
+    "title": "His job",
+    "sub": "to stop what gets past the slips",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "paths": [
+     {
+      "from": "slip",
+      "to": "third man",
+      "at": 0.35,
+      "label": "the edge",
+      "lx": -60,
+      "ly": 90
+     }
+    ],
+    "note": [
+     "saves the boundary",
+     "the slips could not"
+    ]
+   }
+  },
+  {
+   "vo": "To see where he fits, count outwards from the keeper. First slip, second slip, third slip. Then the gully. And then, far beyond all of them, third man.",
+   "scene": {
+    "type": "plate",
+    "plate": "II-b",
+    "title": "Counting outwards",
+    "sub": "slips are numbered from the wicket-keeper",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "2nd slip",
+      "fig": 3,
+      "name": "Second slip",
+      "side": 1,
+      "dy": -40
+     },
+     {
+      "p": "gully",
+      "fig": 5,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 6,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "slips are numbered outwards",
+     "from the keeper"
+    ]
+   }
+  },
+  {
+   "vo": "And who stands there? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he has time to recover.",
+   "scene": {
+    "type": "plate",
+    "plate": "III",
+    "title": "Who stands there?",
+    "sub": "often a fast bowler, between his overs",
+    "figures": [
+     {
+      "p": "bowler",
+      "fig": null,
+      "xy": [
+       0.06,
+       -0.42
+      ]
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man (a bowler resting)",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "the quiet corner of the field"
+    ]
+   }
+  },
+  {
+   "vo": "So why is it called third? You will hear four explanations. Not one of them comes with a source.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THE NAME",
+    "title": "Why \"third\"?",
+    "body": "Cricket websites repeat four explanations. We looked for a document behind each of them, and did not find one.",
+    "margin": "Four stories. No proof.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": null,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "FOUR",
+     "THEORIES"
+    ],
+    "stamp_angle": -8
+   }
+  },
+  {
+   "vo": "Theory one: overarm bowling. When bowlers began to deliver overarm, a fielder was added to the slip and the point, and he became the third man.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 1 OF 4",
+    "title": "Overarm bowling",
+    "body": "When overarm bowling arrived, a fielder was added to the slip and the point. He became the third man.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "point",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": -10
+   }
+  },
+  {
+   "vo": "Theory two: the gap. A fielder was needed to cover the gap between the slips and the gully, and so he was third.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 2 OF 4",
+    "title": "The gap",
+    "body": "A fielder was needed to cover the gap between the slips and the gully, and so he became the third man.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "gully",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": 8
+   }
+  },
+  {
+   "vo": "Theory three: a slip pushed back. One site says a slip was moved back to this spot, leaving two slips, and dates the name to the nineteenth century.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 3 OF 4",
+    "title": "A slip pushed back",
+    "body": "A slip was moved back to this spot, leaving two slips. The new fielder was the third man.",
+    "margin": "Dated to the nineteenth century by one website. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "2nd slip",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": -6
+   }
+  },
+  {
+   "vo": "Theory four: the boundary. In the early days, only two fielders stood on the boundary. When batting grew bolder, a third was sent out behind the keeper.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 4 OF 4",
+    "title": "The third on the boundary",
+    "body": "Early on, only two fielders stood near the boundary. As batting grew bolder, a third was sent out behind the keeper.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "deep square leg",
+      "fig": null
+     },
+     {
+      "p": "long-on",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": 9
+   }
+  },
+  {
+   "vo": "Here is something solid. James Lillywhite's Cricketers' Companion, printed in eighteen eighty-four, says: it is the fashion now to dispense with the long-stop, thereby getting a third man as well as a mid-on.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "A PRINTED SOURCE",
+    "title": "Lillywhite's Companion, 1884",
+    "body": "\"It is the fashion now ... to dispense with long-stop, thereby getting a 'third man' as well as 'mid-on', but great care should be used in this matter.\"",
+    "margin": "So the name was in print by 1884. That is the earliest mention we found.",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "IN PRINT",
+     "1884"
+    ],
+    "stamp_angle": -9
+   }
+  },
+  {
+   "vo": "So the name is at least that old. Where it came from before eighteen eighty-four, we could not find in any source.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THE ANSWER SO FAR",
+    "title": "At least 1884",
+    "body": "The name was already in use in print in 1884. Its origin before that is not documented in anything we could find.",
+    "margin": "If you know a document, tell us.",
+    "figures": [
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "ORIGIN",
+     "UNKNOWN"
+    ],
+    "stamp_angle": 7
+   }
+  },
+  {
+   "vo": "Now, a moment when third man could only watch. The first of March, two thousand three. World Cup, Centurion. Pakistan have made two seventy-three. In India's second over, सचिन तेंदुलकर hits शोएब अख़्तर for six, an upper cut over third man.",
+   "scene": {
+    "type": "plate_list",
+    "plate": "IV",
+    "title": "A famous six",
+    "sub": "India v Pakistan, World Cup, Centurion, 1 March 2003",
+    "rows": [
+     [
+      "2003",
+      "An upper cut over third man",
+      "Tendulkar off Shoaib Akhtar, the second over of India's chase"
+     ],
+     [
+      "",
+      "Pakistan 273 for 7",
+      "India needed 274"
+     ]
+    ],
+    "stamp": [
+     "CHECKED"
+    ],
+    "stamp_at": 0.75
+   }
+  },
+  {
+   "vo": "सचिन तेंदुलकर made ninety-eight, off seventy-five balls. India chased down the target and won by six wickets.",
+   "scene": {
+    "type": "plate_list",
+    "plate": "IV",
+    "title": "The result",
+    "sub": "India v Pakistan, Centurion, 1 March 2003",
+    "rows": [
+     [
+      "98",
+      "Tendulkar, off 75 balls",
+      "Top scorer in the chase"
+     ],
+     [
+      "6",
+      "wickets in hand",
+      "India 276 for 4 beat Pakistan 273 for 7"
+     ]
+    ],
+    "stamp": [
+     "INDIA WON"
+    ],
+    "stamp_at": 0.6
+   }
+  },
+  {
+   "vo": "So the next time the ball flies off the edge and past the slips, look for him. Third man. Standing far behind the wicket, with a name nobody can explain, and a job that is still simple.",
+   "scene": {
+    "type": "plate",
+    "plate": "V",
+    "title": "Third man",
+    "sub": "far behind the wicket, with a name nobody can explain",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "SEE YOU",
+     "NEXT PLATE"
+    ],
+    "stamp_at": 0.7
+   }
+  },
+  {
+   "vo": "What other fielding positions have strange names? Tell us in the comments, and follow for more Did You Know.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "DID YOU KNOW?"
+     },
+     {
+      "t": "FOLLOW FOR MORE",
+      "c": "gold"
+     }
+    ],
+    "pill": "SUBSCRIBE FOR MORE"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "Third man. Picture the field from above. The bowler is at the top, the batter at the bottom, the wicket-keeper just behind the stumps. Now look far behind the wicket, on the off side, near the boundary. That lonely fielder is third man.",
+   "scene": {
+    "type": "plate",
+    "plate": "I",
+    "title": "THE THIRD MAN",
+    "sub": "far behind the wicket, off side",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "DID YOU",
+     "KNOW?"
+    ],
+    "stamp_at": 0.8
+   }
+  },
+  {
+   "vo": "Why stand all the way back there? Because bats have edges. A thick edge, or a deliberate steer, can beat the slips and race away. Third man is the last line of defence, turning a certain four into a few runs, or none.",
+   "scene": {
+    "type": "plate",
+    "plate": "II",
+    "title": "His job",
+    "sub": "stop what beats the slips",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "paths": [
+     {
+      "from": "slip",
+      "to": "third man",
+      "at": 0.35,
+      "label": "the edge",
+      "lx": -60,
+      "ly": 90
+     }
+    ],
+    "note": [
+     "the last line of defence"
+    ]
+   }
+  },
+  {
+   "vo": "And who is he? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he gets a moment to recover.",
+   "scene": {
+    "type": "plate",
+    "plate": "III",
+    "title": "Who stands there?",
+    "sub": "often a fast bowler, between his overs",
+    "figures": [
+     {
+      "p": "bowler",
+      "fig": null,
+      "xy": [
+       0.06,
+       -0.42
+      ]
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man (a bowler resting)",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "the quiet corner of the field"
+    ]
+   }
+  },
+  {
+   "vo": "So why is he called third? Four explanations circulate: overarm bowling, the gap beside the gully, a slip pushed back, or the third fielder on the boundary. Plausible. But none cites a source.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THE NAME",
+    "title": "Four theories",
+    "body": "Overarm bowling. The gap beside the gully. A slip pushed back. The third fielder on the boundary.",
+    "margin": "Plausible. None has a source.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": null,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": -8
+   }
+  },
+  {
+   "vo": "What we can prove: James Lillywhite's Cricketers' Companion, printed in eighteen eighty-four, says it is the fashion to dispense with the long-stop, thereby getting a third man as well as a mid-on. So the name is at least that old.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "A PRINTED SOURCE",
+    "title": "In print by 1884",
+    "body": "\"...to dispense with long-stop, thereby getting a 'third man' as well as 'mid-on'...\"  James Lillywhite's Cricketers' Companion, 1884",
+    "margin": "The earliest mention we found.",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "IN PRINT",
+     "1884"
+    ],
+    "stamp_angle": -9
+   }
+  },
+  {
+   "vo": "And a famous moment: the World Cup, Centurion, two thousand three. In India's second over, सचिन तेंदुलकर upper-cuts शोएब अख़्तर over third man for six. He makes ninety-eight, and India beat Pakistan by six wickets.",
+   "scene": {
+    "type": "plate_list",
+    "plate": "IV",
+    "title": "A famous six",
+    "sub": "World Cup, Centurion, 1 March 2003",
+    "rows": [
+     [
+      "2003",
+      "Tendulkar, upper cut over third man",
+      "Off Shoaib Akhtar, the second over of the chase"
+     ],
+     [
+      "98",
+      "his score, off 75 balls",
+      "India won by six wickets"
+     ]
+    ],
+    "stamp": [
+     "CHECKED"
+    ],
+    "stamp_at": 0.7
+   }
+  },
+  {
+   "vo": "Next time the ball flies past the slips, look for him: a simple job, and a name nobody can explain. Subscribe to The Third Man on YouTube for more Did You Know.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "STORY?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "reel": [
+  {
+   "vo": "Third man. Picture the field from above. The bowler is at the top, the batter at the bottom. Now look far behind the wicket, on the off side, near the boundary. That lonely fielder is third man.",
+   "scene": {
+    "type": "plate",
+    "plate": "I",
+    "title": "THE THIRD MAN",
+    "sub": "a fielder of the off side, far behind the wicket",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "DID YOU",
+     "KNOW?"
+    ],
+    "stamp_at": 0.7
+   }
+  },
+  {
+   "vo": "His job is simple. When a thick edge, or a deliberate steer, beats the slips and races away, third man is the one who stops it from becoming four.",
+   "scene": {
+    "type": "plate",
+    "plate": "II",
+    "title": "His job",
+    "sub": "stop what beats the slips",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "paths": [
+     {
+      "from": "slip",
+      "to": "third man",
+      "at": 0.35,
+      "label": "the edge",
+      "lx": -60,
+      "ly": 90
+     }
+    ],
+    "note": [
+     "the last line of defence"
+    ]
+   }
+  },
+  {
+   "vo": "And who is he? Often a fast bowler, resting between his own overs. The ball rarely reaches that corner quickly, so he gets a moment to recover.",
+   "scene": {
+    "type": "plate",
+    "plate": "III",
+    "title": "Who stands there?",
+    "sub": "often a fast bowler, between his overs",
+    "figures": [
+     {
+      "p": "bowler",
+      "fig": null,
+      "xy": [
+       0.06,
+       -0.42
+      ]
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man (a bowler resting)",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "note": [
+     "the quiet corner of the field"
+    ]
+   }
+  },
+  {
+   "vo": "So why is he called third? Not first, not second, not tenth. You will hear four explanations, and they all sound sensible. But none of them comes with a source.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THE NAME",
+    "title": "Why \"third\"?",
+    "body": "Cricket websites repeat four explanations. We looked for a document behind each of them, and did not find one.",
+    "margin": "Four stories. No proof.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": null,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "FOUR",
+     "THEORIES"
+    ],
+    "stamp_angle": -8
+   }
+  },
+  {
+   "vo": "Theory one: overarm bowling. When bowlers began to deliver overarm, a fielder was added to the slip and the point, and he became the third man.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 1 OF 4",
+    "title": "Overarm bowling",
+    "body": "When overarm bowling arrived, a fielder was added to the slip and the point. He became the third man.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "point",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": -10
+   }
+  },
+  {
+   "vo": "Theory two: the gap. A fielder was needed to cover the gap between the slips and the gully, and so he was third.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 2 OF 4",
+    "title": "The gap",
+    "body": "A fielder was needed to cover the gap between the slips and the gully, and so he became the third man.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "gully",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": 8
+   }
+  },
+  {
+   "vo": "Theory three: a slip pushed back. One site says a slip was moved back to this spot, leaving two slips, and dates the name to the nineteenth century.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 3 OF 4",
+    "title": "A slip pushed back",
+    "body": "A slip was moved back to this spot, leaving two slips. The new fielder was the third man.",
+    "margin": "Dated to the nineteenth century by one website. Unproven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "2nd slip",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": -6
+   }
+  },
+  {
+   "vo": "Theory four: the boundary. In the early days, only two fielders stood on the boundary. When batting grew bolder, a third was sent out behind the keeper.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "THEORY 4 OF 4",
+    "title": "The third on the boundary",
+    "body": "Early on, only two fielders stood near the boundary. As batting grew bolder, a third was sent out behind the keeper.",
+    "margin": "Plausible. Unproven.",
+    "figures": [
+     {
+      "p": "deep square leg",
+      "fig": null
+     },
+     {
+      "p": "long-on",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "UNPROVEN"
+    ],
+    "stamp_angle": 9
+   }
+  },
+  {
+   "vo": "Notice what the four have in common. Each is a good story, and each is repeated by websites that do not say where they got it. A neat story is not evidence.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "WEIGHING THEM UP",
+    "title": "Good stories",
+    "body": "Every theory is plausible. Not one cites a source we could check.",
+    "margin": "Plausible is not proven.",
+    "figures": [
+     {
+      "p": "slip",
+      "fig": null
+     },
+     {
+      "p": "gully",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "NO SOURCE",
+     "NO PROOF"
+    ],
+    "stamp_angle": 8
+   }
+  },
+  {
+   "vo": "Here is something solid. James Lillywhite's Cricketers' Companion, printed in eighteen eighty-four, says: it is the fashion now to dispense with the long-stop, thereby getting a third man as well as a mid-on.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "A PRINTED SOURCE",
+    "title": "Lillywhite's Companion, 1884",
+    "body": "\"It is the fashion now ... to dispense with long-stop, thereby getting a 'third man' as well as 'mid-on', but great care should be used in this matter.\"",
+    "margin": "So the name was in print by 1884. That is the earliest mention we found.",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": null
+     },
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "IN PRINT",
+     "1884"
+    ],
+    "stamp_angle": -9
+   }
+  },
+  {
+   "vo": "Look closely at that line. In the passage we found, the book does not explain the name. It simply uses it, as a term its readers already knew. So the name is at least that old, and the story behind it is older still.",
+   "scene": {
+    "type": "plate_page",
+    "kicker": "WHAT IT TELLS US",
+    "title": "Already familiar",
+    "body": "The 1884 text uses \"third man\" without explaining it: the name was already in use. Its origin before that is not documented in anything we could find.",
+    "margin": "If you know a document, tell us.",
+    "figures": [
+     {
+      "p": "third man",
+      "fig": null,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "ORIGIN",
+     "UNKNOWN"
+    ],
+    "stamp_angle": 7
+   }
+  },
+  {
+   "vo": "So next time the ball flies past the slips, look for him. A simple job, and a name nobody can explain.",
+   "scene": {
+    "type": "plate",
+    "plate": "V",
+    "title": "Third man",
+    "sub": "far behind the wicket, with a name nobody can explain",
+    "figures": [
+     {
+      "p": "keeper",
+      "fig": 1,
+      "name": "Wicket-keeper",
+      "side": -1,
+      "dy": 48
+     },
+     {
+      "p": "slip",
+      "fig": 2,
+      "name": "First slip",
+      "side": 1,
+      "dy": 54
+     },
+     {
+      "p": "gully",
+      "fig": 3,
+      "name": "Gully",
+      "side": 1,
+      "dy": -34
+     },
+     {
+      "p": "third man",
+      "fig": 4,
+      "name": "Third man",
+      "hl": true,
+      "side": -1,
+      "dy": -44
+     }
+    ],
+    "stamp": [
+     "SEE YOU",
+     "NEXT PLATE"
+    ],
+    "stamp_at": 0.7
+   }
+  }
+ ],
+ "reel_cta": {
+  "vo": "Which of the four theories do you believe? Tell us in the comments. For the full breakdown, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "FULL BREAKDOWN"
+    },
+    {
+     "t": "ON YOUTUBE",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ },
+ "reel_caption": "Why is it called third man?\nDid You Know Ep 1\n\nThe fielder far behind the wicket has a name nobody can explain. Four popular theories, none with a source, and one printed clue from 1884. Which one do you believe? Tell us in the comments.\n\nFull breakdown on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\n#ThirdMan #DidYouKnow #ThirdManCricket #WhyIsItCalledThirdMan #FieldingPositions #CricketExplained #cricket #cricketanalysis #TheThirdMan",
+ "yt": {
+  "long": {
+   "title": "Third Man Explained: Position, Purpose and the Name Mystery | Did You Know Ep 1",
+   "description": "Third man explained: where the fielder stands, what he does, and the mystery of his name. Four popular theories about why it is called third man, none with a source; the 1884 book that already uses the name; and Sachin Tendulkar's upper cut over third man off Shoaib Akhtar at the 2003 World Cup. Sources: Wikipedia, SportPlan, cricketwriter.com, PitchVision, James Lillywhite's Cricketers' Companion (1884, ACS library), Cricsheet ball-by-ball (our own analysis).\n\n#ThirdMan #CricketExplained #FieldingPositions #DidYouKnow",
+   "tags": [
+    "third man",
+    "third man cricket",
+    "why is it called third man",
+    "fielding positions",
+    "cricket fielding positions explained",
+    "Tendulkar upper cut",
+    "Did You Know",
+    "cricket explained",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "Why Is It Called Third Man? The Unsolved Mystery | Did You Know Ep 1 #Shorts",
+   "description": "Why is it called third man? Four theories, none with a source, and one printed clue from 1884. Plus Tendulkar's upper cut over third man in the 2003 World Cup. Sources: Wikipedia, SportPlan, Lillywhite's Cricketers' Companion (1884), Cricsheet.\n\n#ThirdMan #DidYouKnow #Shorts",
+   "tags": [
+    "third man",
+    "third man cricket",
+    "why is it called third man",
+    "fielding positions",
+    "cricket fielding positions explained",
+    "Tendulkar upper cut",
+    "Did You Know",
+    "cricket explained",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

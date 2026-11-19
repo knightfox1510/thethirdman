@@ -1,0 +1,71 @@
+{
+ "pace_bowlers_50plus_wkts_since_2018": 47,
+ "baseline_bowled_lbw_pct": 32.9,
+ "baseline_avg": 26.1,
+ "baseline_sr": 49.7,
+ "bumrah_bowled_lbw_pct": 51.7,
+ "bumrah_wkts": 234,
+ "innings": {
+  "3rd/4th": {
+   "wkts": 132,
+   "avg": 19.6,
+   "sr": 42.3
+  },
+  "1st/2nd": {
+   "wkts": 102,
+   "avg": 20.1,
+   "sr": 43.6
+  }
+ },
+ "by_pitch_type": {
+  "balanced (28-38)": {
+   "tests": 16,
+   "bumrah_avg": 21.0,
+   "match_avg_all_bowlers": 30.5,
+   "bumrah_wkts": 74
+  },
+  "bowler-friendly (match avg under 28)": {
+   "tests": 29,
+   "bumrah_avg": 16.9,
+   "match_avg_all_bowlers": 22.6,
+   "bumrah_wkts": 138
+  },
+  "flat (38+)": {
+   "tests": 7,
+   "bumrah_avg": 34.0,
+   "match_avg_all_bowlers": 47.0,
+   "bumrah_wkts": 22
+  }
+ },
+ "ipl_phases": {
+  "powerplay": {
+   "balls": 1266,
+   "econ": 6.51,
+   "league_econ_same_seasons_weighted": 7.96,
+   "dot_pct": 50.2
+  },
+  "middle": {
+   "balls": 942,
+   "econ": 6.34,
+   "league_econ_same_seasons_weighted": 7.8,
+   "dot_pct": 39.4
+  },
+  "death": {
+   "balls": 1423,
+   "econ": 7.87,
+   "league_econ_same_seasons_weighted": 9.6,
+   "dot_pct": 31.2
+  }
+ },
+ "ipl_seasons": "2013-2026",
+ "ipl_vs_left_handers": {
+  "balls": 1144,
+  "econ": 6.35,
+  "league_econ": 8.31
+ },
+ "ipl_vs_right_handers": {
+  "balls": 2474,
+  "econ": 7.29,
+  "league_econ": 8.17
+ }
+}

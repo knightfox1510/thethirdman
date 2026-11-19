@@ -142,12 +142,24 @@ def music(path, dur, cuts):
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((st * 32767).astype(np.int16).tobytes())
 
 
-def build(spec_path):
+IGEND = 4.5
+
+
+def ig_end_card(c, spec, t):
+    """Instagram end card (same as variants.IG_CTA_MORE): logo, YouTube logo, handle, LINK IN BIO."""
+    import variants
+    gfx.apply_theme("floodlights"); gfx.background(c, t + 3)
+    E.sc_cta(c, E.G("short"), t, IGEND, spec.get("ig_cta", variants.IG_CTA_MORE)["scene"])
+
+
+def build(spec_path, ig=False):
     spec = json.load(open(spec_path)); slug = spec["slug"]
     base = f"{ROOT}/out/{slug}/flip"; os.makedirs(base, exist_ok=True)
     outdir = f"{ROOT}/deliver/{slug}"; os.makedirs(outdir, exist_ok=True)
     E.apply_theme("floodlights")
-    segs = timeline(spec); total = sum(s[1] for s in segs)
+    segs = timeline(spec)
+    if ig: segs.append(("igend", IGEND, None))
+    total = sum(s[1] for s in segs)
     bench_col = panel_color(spec["bench"], (200, 30, 40))
     tmp = f"{base}/video.tmp.mp4"
     p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{W}x{H}", "-r", str(FPS),
@@ -163,6 +175,7 @@ def build(spec_path):
             t = f / FPS; c.clear(skia.ColorBLACK)
             if kind == "title": title_card(c, spec, t)
             elif kind == "end": end_card(c, spec, t)
+            elif kind == "igend": ig_end_card(c, spec, t)
             elif kind == "bench":
                 panel(c, spec, spec["bench"], pr["bench"], pr["n"], bench_col, t, bench=True)
             else:
@@ -177,14 +190,19 @@ def build(spec_path):
     main = f"{base}/main.mp4"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp, "-i", wav, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
                     "-ar", "48000", "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-shortest", main], check=True)
-    outro = f"{ROOT}/out/outro_short.mp4"
-    lst = f"{base}/final.txt"; open(lst, "w").write(f"file '{main}'\nfile '{outro}'\n")
-    final = f"{outdir}/{spec['files']['short']}.mp4"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", "-movflags", "+faststart", final], check=True)
+    sfx_ = "_IG" if ig else ""
+    final = f"{outdir}/{spec['files']['short']}{sfx_}.mp4"
+    if ig:      # the Instagram version ends on its own end card instead of the channel outro
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", main, "-c", "copy", "-movflags", "+faststart", final], check=True)
+    else:
+        outro = f"{ROOT}/out/outro_short.mp4"
+        lst = f"{base}/final.txt"; open(lst, "w").write(f"file '{main}'\nfile '{outro}'\n")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", "-movflags", "+faststart", final], check=True)
+    if ig: print(final); return
     from PIL import Image
     Image.fromarray(cover).save(f"{outdir}/{spec['files']['short']}_cover.jpg", quality=92)
     print(final)
 
 
 if __name__ == "__main__":
-    build(sys.argv[1])
+    build(sys.argv[1], ig="--ig" in sys.argv)

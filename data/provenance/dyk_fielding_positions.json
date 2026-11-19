@@ -1,0 +1,151 @@
+{
+ "slug": "dyk_fielding_positions",
+ "claims": [
+  {
+   "claim": "names work as two parts: an angle word (leg, cover, mid-wicket, point) and a distance word (silly, short, deep, long)",
+   "value": "angle word + distance word",
+   "sources": {
+    "wikipedia": "angle word + distance word",
+    "sportplan_guide": "angle word + distance word"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "short = closer to the batter; deep or long = farther",
+   "value": "short closer, deep/long farther",
+   "sources": {
+    "wikipedia": "short closer, deep/long farther",
+    "sportplan_guide": "short closer, deep/long farther"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "silly = so close to the batter that it is dangerous",
+   "value": "very close, dangerous",
+   "sources": {
+    "wikipedia": "very close, dangerous",
+    "sportplan_guide": "very close, dangerous"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "square = level with the batter, across the pitch",
+   "value": "level with the batter",
+   "sources": {
+    "wikipedia": "level with the batter",
+    "sportplan_guide": "level with the batter"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "fine = behind the batter, closer to the line of the pitch (the opposite of square)",
+   "value": "behind, near the line of the pitch",
+   "sources": {
+    "wikipedia_glossary": "behind, near the line of the pitch",
+    "sportplan_guide": "behind, near the line of the pitch"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "point, cover, mid-off are off-side positions",
+   "value": "off side",
+   "sources": {
+    "sportplan_guide": "off side",
+    "wikipedia_glossary": "off side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "mid-on, mid-wicket, square leg are leg-side positions",
+   "value": "leg side",
+   "sources": {
+    "sportplan_guide": "leg side",
+    "wikipedia_glossary": "leg side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "fine leg is behind square on the leg side; third man is its off-side counterpart",
+   "value": "fine leg / third man",
+   "sources": {
+    "sportplan_guide": "fine leg / third man",
+    "wikipedia": "fine leg / third man"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "slips are numbered outwards from the wicket-keeper; together the slip cordon",
+   "value": "numbered outwards from the keeper",
+   "sources": {
+    "wikipedia": "numbered outwards from the keeper",
+    "sportplan_guide": "numbered outwards from the keeper"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "gully is squarer than the slips, on the off side",
+   "value": "squarer than the slips, off side",
+   "sources": {
+    "sportplan_guide": "squarer than the slips, off side",
+    "wikipedia_glossary": "squarer than the slips, off side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Law 28.4: no more than two fielders, other than the wicket-keeper, behind the popping crease on the on side",
+   "value": "two behind the popping crease on the on side",
+   "sources": {
+    "mcc_laws": "two behind the popping crease on the on side",
+    "icc_playing_conditions": "two behind the popping crease on the on side"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "a breach is a no ball, called by the striker's end umpire",
+   "value": "no ball",
+   "sources": {
+    "mcc_laws": "no ball",
+    "icc_playing_conditions": "no ball"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "positions are neither fixed nor precisely defined (captain's choice; left-handers reverse the sides)",
+   "value": "not fixed",
+   "sources": {
+    "wikipedia": "not fixed",
+    "sportplan_guide": "not fixed"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 13
+ }
+}

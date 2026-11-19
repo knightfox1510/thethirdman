@@ -1,0 +1,236 @@
+{
+ "slug": "data_nz_ind_series",
+ "claims": [
+  {
+   "claim": "results: India won 3-1 (1st, 2nd, 5th), NZ won the 4th by 244, 3rd washed out",
+   "value": "3-1",
+   "sources": {
+    "wikipedia": "3-1",
+    "cricbuzz_ball_by_ball": "3-1"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "scores 185/143, 134/113, 333/89, 209/187 and the margins",
+   "value": {
+    "nz_ind_1odi": [
+     185,
+     143
+    ],
+    "nz_ind_2odi": [
+     134,
+     113
+    ],
+    "nz_ind_4odi": [
+     333,
+     89
+    ],
+    "nz_ind_5odi": [
+     209,
+     187
+    ]
+   },
+   "sources": {
+    "wikipedia": {
+     "nz_ind_1odi": [
+      185,
+      143
+     ],
+     "nz_ind_2odi": [
+      134,
+      113
+     ],
+     "nz_ind_4odi": [
+      333,
+      89
+     ],
+     "nz_ind_5odi": [
+      209,
+      187
+     ]
+    },
+    "cricbuzz_ball_by_ball": {
+     "nz_ind_1odi": [
+      185,
+      143
+     ],
+     "nz_ind_2odi": [
+      134,
+      113
+     ],
+     "nz_ind_4odi": [
+      333,
+      89
+     ],
+     "nz_ind_5odi": [
+      209,
+      187
+     ]
+    }
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "series leaders: Young 162, Kohli 86, Brar 9 wkts, Duffy 9 wkts",
+   "value": [
+    162,
+    86,
+    9,
+    9
+   ],
+   "sources": {
+    "wikipedia": [
+     162,
+     86,
+     9,
+     9
+    ],
+    "cricbuzz_ball_by_ball": [
+     162,
+     86,
+     9,
+     9
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "both DLS wins: 1st (target 143 from 32 overs), 2nd (113/7, 4 runs ahead of par 109)",
+   "value": [
+    "1st",
+    "2nd"
+   ],
+   "sources": {
+    "wikipedia": [
+     "1st",
+     "2nd"
+    ],
+    "cricbuzz_ball_by_ball": [
+     "1st",
+     "2nd"
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India dropped eight chances in the series (ours) / Cricbuzz's own note says eight",
+   "value": 8,
+   "sources": {
+    "cricbuzz_ball_by_ball": 8,
+    "cricbuzz_editorial_note": 8
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "runs after first let-offs: 244 (India's drops), 96 (NZ's); Will Young 120 after the first",
+   "value": [
+    244,
+    96,
+    120
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     244,
+     96,
+     120
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "attack averages: India 37 wkts at 22.3 v NZ 32 at 17.2; without the 4th, 17.3 v 21.0",
+   "value": [
+    [
+     37,
+     22.3,
+     32,
+     17.2
+    ],
+    [
+     17.3,
+     21.0
+    ]
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     [
+      37,
+      22.3,
+      32,
+      17.2
+     ],
+     [
+      17.3,
+      21.0
+     ]
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's third wicket fell at 124, 39, 0, 34; Kohli 74, 7, 0, 5",
+   "value": [
+    [
+     124,
+     39,
+     0,
+     34
+    ],
+    [
+     74,
+     7,
+     0,
+     5
+    ]
+   ],
+   "sources": {
+    "cricbuzz_ball_by_ball": [
+     [
+      124,
+      39,
+      0,
+      34
+     ],
+     [
+      74,
+      7,
+      0,
+      5
+     ]
+    ],
+    "wikipedia": null
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "win probability added: Arshdeep +0.34, Naman Dhir +0.24, Axar +0.21, Brar +0.18; Rohit -0.31 (our model)",
+   "value": "ranking",
+   "sources": {
+    "our_model_cricsheet_archive": "ranking"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 5,
+  "LABELLED": 4
+ }
+}

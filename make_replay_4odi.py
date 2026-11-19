@@ -161,26 +161,26 @@ SRC = ["ESPNcricinfo match capture, NZ v IND 4th ODI, Mount Maunganui (match 153
        "Cricbuzz match capture (match 161271): over-by-over cross-check; dropped-catch events. Notes used as leads and verified against the ball data.",
        "Official result in both sources: New Zealand won by 244 runs; Player of the Match Matt Henry. Series: India led 2-0 before this match (Cricbuzz match preview).",
        "All figures computed in make_replay_4odi.py from data/cricinfo/nz_ind_4odi_balls.csv (legal balls unless stated; 'not in control' = Cricinfo shot-control flag)."]
-DESC_L = ("New Zealand 333. India 89 all out. A 244-run defeat at Mount Maunganui. We took every ball of the 4th ODI (line, length, shot played, and whether the batter was in control) "
+DESC_L = ("India vs New Zealand, 4th ODI analysis at Bay Oval, Mount Maunganui: New Zealand 333. India 89 all out. A 244-run defeat at Mount Maunganui. We took every ball of the 4th ODI (line, length, shot played, and whether the batter was in control) "
           "to work out who decided it and why: Matt Henry's triple-wicket first over, Will Young's 125 and the two lives that started it, and the middle overs where India lost the grip.\n\n"
           "Sources: ball-by-ball data from ESPNcricinfo and Cricbuzz match pages (captured with our own tool, cross-checked over by over); result and Player of the Match from both. "
           "All numbers are computed by us from the ball data; 'not in control' is the Cricinfo shot-control flag. All graphics are original, not broadcast footage.")
-DESC_S = "The Replay Room: a ball-by-ball breakdown of NZ v India, 4th ODI, Mount Maunganui. Data: ESPNcricinfo and Cricbuzz match pages, analysis by The Third Man. Full video on the channel."
+DESC_S = "India vs New Zealand, 4th ODI analysis (Bay Oval, Mount Maunganui). The Replay Room: a ball-by-ball breakdown of NZ v India, 4th ODI, Mount Maunganui. Data: ESPNcricinfo and Cricbuzz match pages, analysis by The Third Man. Full video on the channel.\n#INDvNZ #IndiaVsNewZealand #4thODI"
 def meta(slug, tag, sub, lf, sf, kick, l1, l2, hero, ytl, yts, tags, **kw):
     d = {"slug": slug, "theme": "stadium", "theme_long": "lab", "captions": "serif", "captions_long": False, "series": "replay", "tag": tag, "tagsub": sub,
          "files": {"long": lf, "short": sf}, "thumb": {"kicker": kick, "lines": [{"t": l1}, {"t": l2, "c": "gold"}], "hero": hero, "herosize": 420}, "sources": SRC, "venue": VEN,
          "yt": {"long": {"title": ytl, "description": DESC_L, "tags": tags}, "short": {"title": yts, "description": DESC_S, "tags": tags}}}
     d.update(kw); return d
-TAGS = ["India vs New Zealand", "Matt Henry", "Will Young", "4th ODI", "cricket analysis", "The Replay Room", "The Third Man"]
+TAGS = ["India vs New Zealand", "India vs New Zealand 4th ODI", "IND vs NZ 4th ODI", "New Zealand vs India ODI", "Matt Henry", "Will Young", "4th ODI", "cricket analysis", "The Replay Room", "The Third Man"]
 main = meta("replay_4odi", "THE REPLAY ROOM", "NZ V IND · 4TH ODI", "Replay_Room_333_and_89_NZ_v_India_4th_ODI", "Replay_Room_0_for_3_Short_9x16", "THE REPLAY ROOM", "333 AND", "89", "244", 
-            "333 and 89: how New Zealand beat India by 244 runs (every ball analysed)", "0 for 3 after one over: India's chase in 6 balls #Shorts", TAGS)
+            "India vs New Zealand - 4th ODI Analysis | How 333 Became 89 (Every Ball)", "0 for 3 After One Over: India's Chase in 6 Balls | India vs New Zealand 4th ODI #Shorts", TAGS)
 main["long"] = long; main["short"] = short_a
 for i, nm in [(0, "The hook"), (1, "The Replay Room"), (3, "The chase"), (6, "The first innings")]:
     main["long"][i] = dict(main["long"][i], chapter=nm)
 young = meta("replay_4odi_young", "THE REPLAY ROOM", "WILL YOUNG · 125", "Replay_Room_Young_Long_unused", "Replay_Room_Will_Young_Two_Innings_Short_9x16", "WILL YOUNG", "TWO", "INNINGS", "125",
-             "Will Young: two innings in one", "Will Young's 125: two innings in one #Shorts", TAGS); young["short"] = short_young
+             "Will Young: Two Innings in One | India vs New Zealand - 4th ODI", "Will Young's 125: Two Innings in One | India vs New Zealand 4th ODI #Shorts", TAGS); young["short"] = short_young
 dots = meta("replay_4odi_dots", "THE REPLAY ROOM", "INDIA OUT DEFENDING", "Replay_Room_Dots_Long_unused", "Replay_Room_74_Percent_Dots_Short_9x16", "THE REPLAY ROOM", "74%", "DOTS", "74",
-            "India's 74% dot balls", "74% dot balls: India out defending #Shorts", TAGS); dots["short"] = short_dots
+            "India's 74% Dot Balls | India vs New Zealand - 4th ODI", "74% Dot Balls: India Out Defending | India vs New Zealand 4th ODI #Shorts", TAGS); dots["short"] = short_dots
 for sp in (main, young, dots):
     voice_lint.fix_spec(sp)
     json.dump(sp, open(f"specs/{sp['slug']}.json", "w"), ensure_ascii=False, indent=1)

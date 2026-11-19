@@ -1,0 +1,165 @@
+{
+ "slug": "dyk_third_man",
+ "claims": [
+  {
+   "claim": "third man: off side, behind the wicket",
+   "value": "off side, behind the wicket",
+   "sources": {
+    "wikipedia": "off side, behind the wicket",
+    "sportplan_guide": "off side, behind the wicket",
+    "cricketwriter_guide": "off side, behind the wicket"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "third man's job: stops edges and steers that beat the slips",
+   "value": "stops edges past the slips",
+   "sources": {
+    "sportplan_guide": "stops edges past the slips",
+    "cricketwriter_guide": "stops edges past the slips"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "slips are numbered outwards from the wicket-keeper",
+   "value": "first slip nearest the keeper",
+   "sources": {
+    "wikipedia": "first slip nearest the keeper",
+    "sportplan_guide": "first slip nearest the keeper"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "fast bowlers often field at third man between their overs",
+   "value": "pace bowlers rest at third man",
+   "sources": {
+    "wikipedia": "pace bowlers rest at third man",
+    "pitchvision": "pace bowlers rest at third man"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "theory: arrived with overarm bowling (reported, no source cited)",
+   "value": "reported",
+   "sources": {
+    "cricket_lounge": "reported"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "theory: covers the gap between slips and gully (reported, no source cited)",
+   "value": "reported",
+   "sources": {
+    "cricketwriter_guide": "reported"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "theory: a slip pushed back leaving two slips, 19th century (reported, no source cited)",
+   "value": "reported",
+   "sources": {
+    "idiom_origins": "reported"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "theory: the third fielder on the boundary (reported, no source cited)",
+   "value": "reported",
+   "sources": {
+    "cricket_guides": "reported"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "no documented origin of the name found in any source",
+   "value": "no documented origin",
+   "sources": {
+    "wikipedia": "no documented origin",
+    "sportplan_guide": "no documented origin"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "1884: Lillywhite's Cricketers' Companion prints 'third man' (dispense with long-stop, thereby getting a third man as well as mid-on)",
+   "value": "printed 1884",
+   "sources": {
+    "acs_lillywhite_1884": "printed 1884"
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Tendulkar 98 off 75, India won by six wickets chasing Pakistan, Centurion, 1 March 2003",
+   "value": [
+    98,
+    75,
+    "6 wickets"
+   ],
+   "sources": {
+    "cricsheet": [
+     98,
+     75,
+     "6 wickets"
+    ],
+    "wikipedia": [
+     98,
+     75,
+     "6 wickets"
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Tendulkar's first six was off Shoaib Akhtar in the 2nd over",
+   "value": [
+    2,
+    "Shoaib Akhtar"
+   ],
+   "sources": {
+    "cricsheet": [
+     2,
+     "Shoaib Akhtar"
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "the six was an upper cut over third man",
+   "value": "upper cut over third man",
+   "sources": {
+    "cricinfo_report": "upper cut over third man",
+    "sportskeeda": "upper cut over third man"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 7,
+  "LABELLED": 6
+ }
+}

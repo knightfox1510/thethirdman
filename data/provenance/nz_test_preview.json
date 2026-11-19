@@ -1,0 +1,302 @@
+{
+ "slug": "nz_test_preview",
+ "claims": [
+  {
+   "claim": "India won Test series in NZ: 1967-68 and 2008-09 (two in 58 years)",
+   "value": 2,
+   "sources": {
+    "scroll": 2,
+    "wikipedia": 2
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India series win 2009 in NZ, 1-0 (Hamilton win, two draws)",
+   "value": "1-0",
+   "sources": {
+    "scroll": "1-0",
+    "cricsheet": "1-0"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "years between series wins (1968 to 2009)",
+   "value": 41,
+   "sources": {
+    "scroll": 41,
+    "wikipedia": 41
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India Tests played in NZ",
+   "value": 25,
+   "sources": {
+    "scroll": 25,
+    "newssummary": 25
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India Tests won in NZ",
+   "value": 5,
+   "sources": {
+    "scroll": 5,
+    "newssummary": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India Tests lost in NZ",
+   "value": 10,
+   "sources": {
+    "scroll": 10,
+    "newssummary": 10
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ won the first WTC final (2021) vs India; Jamieson player of the match",
+   "value": "NZ, Jamieson",
+   "sources": {
+    "wikipedia": "NZ, Jamieson",
+    "cricsheet": "NZ, Jamieson"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ beat India 3-0 in India, 2024",
+   "value": "3-0",
+   "sources": {
+    "cricsheet": "3-0",
+    "wisden": "3-0"
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "share of Test wickets to pace since 2010, NZ (our spinner tagging)",
+   "value": 86,
+   "sources": {
+    "cricsheet": 86
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "share of Test wickets to pace since 2010, India",
+   "value": 44,
+   "sources": {
+    "cricsheet": 44
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India runs per wicket in NZ since 2009",
+   "value": 35.5,
+   "sources": {
+    "cricsheet": 35.5
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India runs per wicket at home since 2010",
+   "value": 41.1,
+   "sources": {
+    "cricsheet": 41.1
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Basin Reserve since 2010: first-innings average 339, bat first 7 wins, bat second 8 (20 Tests)",
+   "value": [
+    339,
+    7,
+    8,
+    20
+   ],
+   "sources": {
+    "cricsheet": [
+     339,
+     7,
+     8,
+     20
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Bumrah Test average (archive)",
+   "value": 19.8,
+   "sources": {
+    "cricsheet": 19.8
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Bumrah in NZ: wickets and average (two Tests, 2020)",
+   "value": [
+    6,
+    31.7
+   ],
+   "sources": {
+    "cricsheet": [
+     6,
+     31.7
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Bumrah v Latham (balls, runs, outs)",
+   "value": [
+    163,
+    79,
+    1
+   ],
+   "sources": {
+    "cricsheet": [
+     163,
+     79,
+     1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "most Test wickets v India since 2002 (archive): Southee 55, Boult 41, Ajaz Patel 32; Santner 23, Jamieson 22",
+   "value": [
+    55,
+    41,
+    32,
+    23,
+    22
+   ],
+   "sources": {
+    "cricsheet": [
+     55,
+     41,
+     32,
+     23,
+     22
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Southee, Boult, Ajaz Patel not in NZ's 14-man squad",
+   "value": true,
+   "sources": {
+    "qatar": true,
+    "arynews": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ squad: Latham captain; Conway, Ravindra, Blundell injury concerns",
+   "value": true,
+   "sources": {
+    "qatar": true,
+    "arynews": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India: Kuldeep Yadav released, Gurnoor Brar added (no Test caps)",
+   "value": true,
+   "sources": {
+    "icc": true,
+    "outlook": true,
+    "deccanchronicle": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "India squad has six fast bowlers",
+   "value": 6,
+   "sources": {
+    "icc": 6,
+    "outlook": 6
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant rejoined the squad after fitness clearance",
+   "value": true,
+   "sources": {
+    "outlook": true,
+    "searchsummary": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "3 of India's 16 have played a Test in NZ: Bumrah, Jadeja, Pant",
+   "value": 3,
+   "sources": {
+    "cricsheet": 3,
+    "icc": 3
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "first Test Wellington from 19 Nov; second Christchurch from 27 Nov",
+   "value": true,
+   "sources": {
+    "wion": true,
+    "outlook_sched": true,
+    "tribune": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 15,
+  "LABELLED": 9
+ }
+}

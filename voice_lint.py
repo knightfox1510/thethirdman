@@ -4,24 +4,26 @@ Rules (agreed with the channel owner):
   1. Every subcontinent player name - first and last - and Indian place names are written in Devanagari.
   2. "U19" / "U-19" / "U 19" is read as "Under nineteen" (the screen may still show U19).
   3. No digits in narration: years and numbers are spelled out in words."""
-import json, re, sys, glob
+import json, os, re, sys, glob
 
 # Latin -> Devanagari (longest first when applied). Add new names here AND their parts to engine.SHOW (done automatically below).
 NAMES = {
+    "T Natarajan": "टी नटराजन", "Natarajan": "नटराजन", "Zeeshan Ansari": "ज़ीशान अंसारी", "Zeeshan": "ज़ीशान", "Ansari": "अंसारी", "Khaleel Ahmed": "ख़लील अहमद", "Khaleel": "ख़लील",
+    "Harshal Patel": "हर्षल पटेल", "Harshal": "हर्षल", "M Siddharth": "एम सिद्धार्थ", "Siddharth": "सिद्धार्थ",
     "Virat Kohli": "विराट कोहली", "Kohli": "कोहली", "Virat": "विराट", "Rohit Sharma": "रोहित शर्मा", "Rohit": "रोहित",
     "Abhishek Sharma": "अभिषेक शर्मा", "Abhishek": "अभिषेक", "Jasprit Bumrah": "जसप्रीत बुमराह", "Jasprit": "जसप्रीत", "Bumrah": "बुमराह",
     "Sachin Tendulkar": "सचिन तेंदुलकर", "Sachin": "सचिन", "Tendulkar": "तेंदुलकर", "MS Dhoni": "एम एस धोनी", "Dhoni": "धोनी",
-    "Rishabh Pant": "ऋषभ पंत", "Rishabh": "ऋषभ", "Pant": "पंत", "Shubman Gill": "शुभमन गिल", "Shubman": "शुभमन", "Gill": "गिल",
+    "Rishabh Pant": "रिषभ पंत", "Rishabh": "रिषभ", "Pant": "पंत", "Shubman Gill": "शुभमन गिल", "Shubman": "शुभमन", "Gill": "गिल",
     "Sai Sudharsan": "साई सुदर्शन", "Sudharsan": "सुदर्शन", "Ishan Kishan": "इशान किशन", "Ishan": "इशान", "Kishan": "किशन",
     "KL Rahul": "के एल राहुल", "Rahul Tripathi": "राहुल त्रिपाठी", "Tripathi": "त्रिपाठी", "Rahul Dravid": "राहुल द्रविड़", "Dravid": "द्रविड़",
     "Sanju Samson": "संजू सैमसन", "Sanju": "संजू", "Samson": "सैमसन", "Vaibhav Sooryavanshi": "वैभव सूर्यवंशी", "Vaibhav Suryavanshi": "वैभव सूर्यवंशी",
     "Sooryavanshi": "सूर्यवंशी", "Suryavanshi": "सूर्यवंशी", "Vaibhav": "वैभव", "Bhuvneshwar Kumar": "भुवनेश्वर कुमार", "Bhuvneshwar": "भुवनेश्वर",
     "Mohsin Khan": "मोहसिन ख़ान", "Mohsin": "मोहसिन", "Rashid Khan": "राशिद ख़ान", "Rashid": "राशिद", "Yash Dayal": "यश दयाल", "Dayal": "दयाल",
     "Ruturaj Gaikwad": "ऋतुराज गायकवाड़", "Gaikwad": "गायकवाड़", "Ruturaj": "ऋतुराज", "Naman Dhir": "नमन धीर", "Dhir": "धीर", "Naman": "नमन",
-    "Auqib Nabi": "आक़िब नबी", "Nabi": "नबी", "Auqib": "आक़िब",
+    "Auqib Nabi": "आक़िब नबी", "Nabi": "नबी", "Auqib": "आक़िब", "Yash Thakur": "यश ठाकुर", "Thakur": "ठाकुर", "Yash": "यश", "Anshul": "अंशुल",
     "Anshul Kamboj": "अंशुल कंबोज", "Kamboj": "कंबोज", "Tilak Varma": "तिलक वर्मा", "Tilak": "तिलक", "Shreyas Iyer": "श्रेयस अय्यर",
     "Shreyas": "श्रेयस", "Iyer": "अय्यर", "Hardik Pandya": "हार्दिक पंड्या", "Hardik": "हार्दिक", "Krunal Pandya": "क्रुणाल पंड्या", "Krunal": "क्रुणाल",
-    "Pandya": "पंड्या", "Arshdeep Singh": "अर्शदीप सिंह", "Arshdeep": "अर्शदीप", "Umran Malik": "उमरान मलिक", "Umran": "उमरान",
+    "Pandya": "पंड्या", "Arshdeep Singh": "अर्शदीप सिंघ", "Arshdeep": "अर्शदीप", "Umran Malik": "उमरान मलिक", "Umran": "उमरान",
     "Shoaib Akhtar": "शोएब अख़्तर", "Shoaib": "शोएब", "Babar Azam": "बाबर आज़म", "Babar": "बाबर", "Joginder Sharma": "जोगिंदर शर्मा", "Joginder": "जोगिंदर",
     "Gurnoor Brar": "गुरनूर बराड़", "Gurnoor": "गुरनूर", "Brar": "बराड़", "Aaryavir Sehwag": "आर्यवीर सहवाग", "Aaryavir": "आर्यवीर",
     "Virender Sehwag": "वीरेंद्र सहवाग", "Virender": "वीरेंद्र", "Sehwag": "सहवाग", "Ravindra Jadeja": "रवींद्र जडेजा", "Jadeja": "जडेजा",
@@ -34,6 +36,19 @@ NAMES = {
     "Mohammad Rizwan": "मोहम्मद रिज़वान", "Rizwan": "रिज़वान", "Shaheen Shah Afridi": "शाहीन शाह अफ़रीदी", "Shaheen": "शाहीन",
     "Gautam Gambhir": "गौतम गंभीर", "Gambhir": "गंभीर", "Ajinkya Rahane": "अजिंक्य रहाणे", "Rahane": "रहाणे", "Ajaz Patel": "एजाज़ पटेल",
     "Rachin Ravindra": "रचिन रवींद्र", "Rachin": "रचिन", "Ish Sodhi": "ईश सोढ़ी", "Sodhi": "सोढ़ी", "Nitish Rana": "नितीश राणा", "Rahul": "राहुल",
+    # Under-19 Asia Cup final, Nov 2026 (India and Pakistan squads)
+    "Usman Khan": "उस्मान ख़ान", "Usman": "उस्मान", "Abdul Qadir": "अब्दुल क़ादिर", "Abdul": "अब्दुल", "Qadir": "क़ादिर", "Farhan Yousaf": "फ़रहान यूसुफ़", "Farhan": "फ़रहान", "Yousaf": "यूसुफ़",
+    "Hayam Khan": "हयाम ख़ान", "Hayam": "हयाम", "Ahmed Hussain": "अहमद हुसैन", "Ahmed": "अहमद", "Hussain": "हुसैन", "Niqab Shafiq": "निक़ाब शफ़ीक़", "Niqab": "निक़ाब", "Shafiq": "शफ़ीक़",
+    "Hamza Zahoor": "हमज़ा ज़हूर", "Hamza": "हमज़ा", "Zahoor": "ज़हूर", "Hasnain Abbas Dar": "हसनैन अब्बास डार", "Hasnain": "हसनैन", "Rizwanullah": "रिज़वानुल्लाह",
+    "Mohammad Sayyam": "मोहम्मद सय्यम", "Mohammad": "मोहम्मद", "Sayyam": "सय्यम", "Ali Raza": "अली रज़ा", "Raza": "रज़ा", "Kavya Paresh Patel": "काव्य पारेश पटेल", "Kavya Patel": "काव्य पटेल",
+    "Kavya": "काव्य", "Patel": "पटेल", "Mohit Ulva": "मोहित उलवा", "Mohit": "मोहित", "Ulva": "उलवा", "Manal Chauhan": "मानल चौहान", "Manal": "मानल", "Yashbardhan Chauhan": "यशवर्धन चौहान",
+    "Yashbardhan": "यशवर्धन", "Chauhan": "चौहान", "VK Vineeth": "वी के विनीत", "Vineeth": "विनीत", "Arjun Rajput": "अर्जुन राजपूत", "Arjun": "अर्जुन", "Rajput": "राजपूत",
+    "Aryan Savsani": "आर्यन सावसानी", "Aryan": "आर्यन", "Savsani": "सावसानी", "Chigurupati Venkata": "चिगुरुपति वेंकट", "Chigurupati": "चिगुरुपति", "Venkata": "वेंकट",
+    "Lakshya": "लक्ष्य", "Raichandani": "रायचंदानी",
+    "Matheesha Pathirana": "मथीशा पथिराना", "Pathirana": "पथिराना", "Wanindu Hasaranga": "वानिन्दु हसरंगा", "Hasaranga": "हसरंगा", "Deepak Chahar": "दीपक चाहर", "Chahar": "चाहर",
+    "Washington Sundar": "वॉशिंगटन सुंदर", "Sundar": "सुंदर", "Akash Deep": "आकाश दीप",
+    "Devdutt Padikkal": "देवदत्त पडिक्कल", "Padikkal": "पडिक्कल", "Prasidh": "प्रसिद्ध", "Akash": "आकाश", "Ravindra": "रवींद्र",
+    "Pathum Nissanka": "पथुम निसंका", "Nissanka": "निसंका", "Goa": "गोवा",
     # places
     "Hyderabad": "हैदराबाद", "Gujarat": "गुजरात", "Mumbai": "मुंबई", "Delhi": "दिल्ली", "Chennai": "चेन्नई", "Bengaluru": "बेंगलुरु",
     "Bangalore": "बेंगलुरु", "Ranchi": "रांची", "Rajkot": "राजकोट", "Kolkata": "कोलकाता", "Lucknow": "लखनऊ", "Ahmedabad": "अहमदाबाद",
@@ -73,7 +88,11 @@ def walk(o, fn, key=None):
 
 
 def fix_spec(spec):
-    walk(spec, fix_text); return spec
+    walk(spec, fix_text)
+    try:                                                 # series naming for output files (publish/series.py)
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "publish")); import series; series.apply_names(spec)
+    except Exception: pass
+    return spec
 
 
 def check_spec(spec, fmts=("long", "short")):
@@ -90,7 +109,7 @@ def show_map():
     for k, v in NAMES.items():
         for lw, dw in zip(k.split(), v.split()):
             m.setdefault(dw, lw)
-    m["ख़ान"] = "Khan"; m["एम"] = "M"; m["एस"] = "S"; m["के"] = "K"; m["एल"] = "L"
+    m["ख़ान"] = "Khan"; m["एम"] = "M"; m["एस"] = "S"; m["के"] = "K"; m["एल"] = "L"; m["टी"] = "T"
     return m
 
 

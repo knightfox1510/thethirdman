@@ -1,0 +1,832 @@
+{
+ "slug": "dhoni_captaincy_all",
+ "theme": "lab",
+ "theme_long": "whites",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "data",
+ "tag": "DATA STORY",
+ "tagsub": "MSD'S IPL CAPTAINCY, THE COMPLETE RECORD",
+ "files": {
+  "long": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Long",
+  "short": "Data_Story_Ep14_Dhoni_IPL_Captaincy_the_Complete_Record_Short_9x16"
+ },
+ "thumb": {
+  "kicker": "MS DHONI · EVERY IPL SEASON",
+  "lines": [
+   {
+    "t": "THE COMPLETE"
+   },
+   {
+    "t": "CAPTAINCY RECORD",
+    "c": "gold"
+   }
+  ],
+  "hero": "136",
+  "herosize": 520
+ },
+ "sources": [
+  "Captaincy totals (235 matches, 136 wins, 97 losses, 2 no results, CSK and Rising Pune Supergiant): Wikipedia, 'List of Indian Premier League captains' https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_captains (page last edited 19 September 2026), Cricketaddictor https://cricketaddictor.com/cricket-news/ms-dhonis-record-as-ipl-captain-full-batting-stats-and-key-numbers-after-retirement-466132/ and Insidesport; ESPNcricinfo's records page (supplied by the channel owner) could not be opened by us. Five titles level with Rohit Sharma: Wikipedia and India TV.",
+  "CSK season results 2008-2025: Wikipedia, 'Chennai Super Kings' season table https://en.wikipedia.org/wiki/Chennai_Super_Kings and the Cricsheet IPL ball-by-ball archive https://cricsheet.org/downloads/ipl_json.zip (wins agree in every season; Cricsheet lacks a few abandoned matches, so we state wins, finals, titles and playoff seasons, not losses).",
+  "Franchise comparison (playoff seasons, finals, titles, win rate on decided matches), every IPL season 2008-2025: Cricsheet IPL archive, shown as 'our data'. Mumbai Indians' six finals and five titles: myKhel https://www.mykhel.com/cricket/ms-dhoni-vs-rohit-sharma-ipl-stats-and-record-best-captain-in-indian-premier-league-215101.html . Captaincy changes (Jadeja in 2022, Gaikwad's injury in 2025): Wikipedia, 'Chennai Super Kings'.",
+  "Retirement from the IPL as a player and the mentor role: CSK announcement, 17 November 2026, as reported by Eastern Eye, Khel Now, Kalinga TV and Cricket Times. Figures: analysis/dhoni_captaincy_all.py."
+ ],
+ "venue": {
+  "time": "night",
+  "crowd": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    240,
+    240,
+    240
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    250,
+    200,
+    20
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "long": [
+  {
+   "vo": "Two hundred and thirty-five matches as an IPL captain. One hundred and thirty-six wins. No captain in IPL history has won more. This is MSD's captaincy, across every season, from the very first one.",
+   "scene": {
+    "type": "statement",
+    "lines": [
+     {
+      "t": "235 MATCHES."
+     },
+     {
+      "t": "136 WINS.",
+      "c": "gold"
+     }
+    ],
+    "sub": "MS DHONI · IPL CAPTAIN · OUR DATA: EVERY IPL SEASON, 2008-2025"
+   }
+  },
+  {
+   "vo": "Sixteen seasons with चेन्नई, and look at the shape. Nine wins in the first season. Eleven in twenty eleven. Twelve in twenty thirteen. Then two suspended years, and the comeback: eleven wins and a title in twenty eighteen. A fifth title in twenty twenty-three. And the final seasons were harder: four wins, seven, and four.",
+   "scene": {
+    "type": "line",
+    "head": {
+     "t": "CSK WINS, SEASON BY SEASON",
+     "sub": "SUSPENDED 2016-17 · OUR DATA: EVERY IPL SEASON, 2008-2025"
+    },
+    "ymin": 0,
+    "ymax": 14,
+    "yticks": [
+     0,
+     4,
+     8,
+     12
+    ],
+    "ylabel": "WINS",
+    "xticks": [
+     [
+      2008,
+      "2008"
+     ],
+     [
+      2012,
+      "2012"
+     ],
+     [
+      2016,
+      "2016"
+     ],
+     [
+      2020,
+      "2020"
+     ],
+     [
+      2025,
+      "2025"
+     ]
+    ],
+    "series": [
+     {
+      "name": "CSK",
+      "color": "gold",
+      "at": 0.1,
+      "dur": 0.8,
+      "points": [
+       [
+        2008,
+        9
+       ],
+       [
+        2009,
+        8
+       ],
+       [
+        2010,
+        9
+       ],
+       [
+        2011,
+        11
+       ],
+       [
+        2012,
+        10
+       ],
+       [
+        2013,
+        12
+       ],
+       [
+        2014,
+        10
+       ],
+       [
+        2015,
+        10
+       ],
+       [
+        2018,
+        11
+       ],
+       [
+        2019,
+        10
+       ],
+       [
+        2020,
+        6
+       ],
+       [
+        2021,
+        11
+       ],
+       [
+        2022,
+        4
+       ],
+       [
+        2023,
+        10
+       ],
+       [
+        2024,
+        7
+       ],
+       [
+        2025,
+        4
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Ten finals in sixteen seasons. No franchise has played more. Five titles.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "CSK IN THE FINAL"
+    },
+    "value": 10,
+    "label": "FINALS IN 16 SEASONS · 5 TITLES",
+    "color": "gold",
+    "note": "OUR DATA: EVERY IPL SEASON, 2008-2025"
+   }
+  },
+  {
+   "vo": "Put चेन्नई next to the next best franchise, मुंबई. Playoffs: twelve seasons out of sixteen, against eleven out of eighteen. Finals: ten against six. And titles: five each.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "CSK VS MUMBAI",
+     "sub": "OUR DATA: EVERY IPL SEASON, 2008-2025"
+    },
+    "a": {
+     "name": "MUMBAI",
+     "color": "ink"
+    },
+    "b": {
+     "name": "CSK",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "PLAYOFF SEASONS",
+      "11 of 18",
+      "12 of 16",
+      "b"
+     ],
+     [
+      "FINALS",
+      "6",
+      "10",
+      "b"
+     ],
+     [
+      "TITLES",
+      "5",
+      "5",
+      "level"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Across all eighteen seasons, चेन्नई won more of their decided matches than any franchise. Fifty-seven percent. मुंबई, fifty-five. Everyone else, at fifty-two or below.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WIN RATE, DECIDED MATCHES",
+     "sub": "OUR DATA: EVERY IPL SEASON, 2008-2025"
+    },
+    "max": 60,
+    "dec": 0,
+    "suffix": "%",
+    "items": [
+     {
+      "label": "CSK",
+      "value": 56.8,
+      "text": "57%",
+      "color": "gold"
+     },
+     {
+      "label": "MI",
+      "value": 55.3,
+      "text": "55%",
+      "color": "ink"
+     },
+     {
+      "label": "KKR",
+      "value": 52.1,
+      "text": "52%",
+      "color": "ink"
+     },
+     {
+      "label": "RCB",
+      "value": 50.0,
+      "text": "50%",
+      "color": "ink"
+     },
+     {
+      "label": "RR",
+      "value": 49.8,
+      "text": "50%",
+      "color": "ink"
+     },
+     {
+      "label": "SRH",
+      "value": 48.7,
+      "text": "49%",
+      "color": "ink"
+     },
+     {
+      "label": "PBKS",
+      "value": 46.1,
+      "text": "46%",
+      "color": "ink"
+     },
+     {
+      "label": "DC",
+      "value": 45.7,
+      "text": "46%",
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So here is the record. Two hundred and thirty-five matches. One hundred and thirty-six wins. Five titles, level with रोहित शर्मा. And a captain who came back in twenty twenty-five, when his team needed him.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "MS DHONI · IPL CAPTAIN",
+     "sub": "CSK AND RISING PUNE SUPERGIANT"
+    },
+    "tiles": [
+     {
+      "v": "235",
+      "l": "MATCHES",
+      "c": "ink"
+     },
+     {
+      "v": "136",
+      "l": "WINS",
+      "c": "gold"
+     },
+     {
+      "v": "5",
+      "l": "TITLES",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Our verdict? The most successful captain in IPL history. The most matches, the most wins, and ten finals. Thank you, MSD.",
+   "scene": {
+    "type": "statement",
+    "kicker": "OUR VERDICT",
+    "lines": [
+     {
+      "t": "THE MOST SUCCESSFUL"
+     },
+     {
+      "t": "CAPTAIN IN",
+      "c": "gold"
+     },
+     {
+      "t": "IPL HISTORY.",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Who is the greatest IPL captain? Tell us in the comments, and subscribe for more data stories.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "THANK YOU,"
+     },
+     {
+      "t": "MSD.",
+      "c": "gold"
+     }
+    ],
+    "pill": "THE GREATEST IPL CAPTAIN? TELL US BELOW"
+   }
+  }
+ ],
+ "short": [
+  {
+   "vo": "One hundred and thirty-six wins as an IPL captain. No one has won more. That is MSD.",
+   "scene": {
+    "type": "lab_big",
+    "title": "",
+    "value": 136,
+    "dec": 0,
+    "label": "Wins as an IPL captain",
+    "color": "red",
+    "count_dur": 0.8,
+    "kicker": "MS Dhoni · every IPL season"
+   }
+  },
+  {
+   "vo": "Ten finals in sixteen seasons. Five titles.",
+   "scene": {
+    "type": "lab_big",
+    "title": "",
+    "value": 10,
+    "dec": 0,
+    "label": "Finals in 16 seasons",
+    "color": "red",
+    "count_dur": 0.7,
+    "kicker": "Five titles · our data: 2008-2025"
+   }
+  },
+  {
+   "vo": "Twelve playoff seasons out of sixteen. मुंबई, eleven out of eighteen.",
+   "scene": {
+    "type": "lab_vs",
+    "kicker": "THE NUMBERS",
+    "title": "Seasons in the playoffs.",
+    "items": [
+     {
+      "label": "Mumbai (11 of 18)",
+      "v": 61.111111111111114,
+      "text": "61%",
+      "c": "ink",
+      "at": 0.1
+     },
+     {
+      "label": "CSK (12 of 16)",
+      "v": 75.0,
+      "text": "75%",
+      "c": "red",
+      "at": 0.4
+     }
+    ],
+    "max": 100
+   }
+  },
+  {
+   "vo": "The most successful captain in IPL history. Thank you, MSD.",
+   "scene": {
+    "type": "lab_big_text",
+    "lines": [
+     "THE MOST",
+     "[SUCCESSFUL CAPTAIN]",
+     "[IN IPL HISTORY.]"
+    ]
+   }
+  },
+  {
+   "vo": "Want the full breakdown? Subscribe to The Third Man on YouTube.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "full": [
+  {
+   "vo": "Two hundred and thirty-five matches as an IPL captain. One hundred and thirty-six wins. No captain in IPL history has won more. This is MSD's captaincy, across every season, from the very first one.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "IPL CAPTAIN · OUR DATA 2008-2025",
+     "left": {
+      "v": "235",
+      "l": "Matches",
+      "c": "gold"
+     },
+     "right": {
+      "v": "136",
+      "l": "Wins",
+      "c": "gold"
+     },
+     "sep": "→",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.3
+   }
+  },
+  {
+   "vo": "Sixteen seasons with चेन्नई, and look at the shape. Nine wins in the first season. Eleven in twenty eleven. Twelve in twenty thirteen. Then two suspended years, and the comeback: eleven wins and a title in twenty eighteen. A fifth title in twenty twenty-three. And the final seasons were harder: four wins, seven, and four.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "CSK WINS PER SEASON · NONE 2016-17",
+     "rows": [
+      [
+       "2008, the first season",
+       "9"
+      ],
+      [
+       "2011 (title)",
+       "11",
+       "gold"
+      ],
+      [
+       "2013",
+       "12"
+      ],
+      [
+       "2018 (title)",
+       "11",
+       "gold"
+      ],
+      [
+       "2023 (title)",
+       "10",
+       "gold"
+      ],
+      [
+       "2022 / 2024 / 2025",
+       "4 / 7 / 4"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "walk",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette",
+     "spot"
+    ]
+   }
+  },
+  {
+   "vo": "Ten finals in sixteen seasons. No franchise has played more. Five titles.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "bignum",
+     "kicker": "CSK FINALS · OUR DATA 2008-2025",
+     "label": "FINALS IN 16 SEASONS · 5 TITLES",
+     "value": 10,
+     "count_dur": 0.8,
+     "color": "gold",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.4
+   }
+  },
+  {
+   "vo": "Put चेन्नई next to the next best franchise, मुंबई. Playoffs: twelve seasons out of sixteen, against eleven out of eighteen. Finals: ten against six. And titles: five each.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "CSK VS MUMBAI · OUR DATA 2008-25",
+     "rows": [
+      [
+       "Playoff seasons",
+       "12 of 16 vs 11 of 18",
+       "gold"
+      ],
+      [
+       "Finals",
+       "10 vs 6",
+       "gold"
+      ],
+      [
+       "Titles",
+       "5 vs 5"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "stance",
+      "x": 0.5
+     }
+    ],
+    "cam": "pull",
+    "fx": [
+     "vignette",
+     "spot"
+    ],
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "Across all eighteen seasons, चेन्नई won more of their decided matches than any franchise. Fifty-seven percent. मुंबई, fifty-five. Everyone else, at fifty-two or below.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "table",
+     "kicker": "WIN RATE · OUR DATA 2008-2025",
+     "rows": [
+      [
+       "Chennai (CSK)",
+       "57%",
+       "gold"
+      ],
+      [
+       "Mumbai",
+       "55%"
+      ],
+      [
+       "Kolkata",
+       "52%"
+      ],
+      [
+       "Everyone else",
+       "50% or below"
+      ]
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "drive",
+      "x": 0.5
+     }
+    ],
+    "cam": "drift",
+    "fx": [
+     "vignette",
+     "speed",
+     "flash"
+    ],
+    "hit": "drive",
+    "ghost": true,
+    "ball": {
+     "at": 0.5,
+     "shot": "four"
+    },
+    "view": "side",
+    "stumps": [
+     0.2,
+     0.93
+    ]
+   }
+  },
+  {
+   "vo": "So here is the record. Two hundred and thirty-five matches. One hundred and thirty-six wins. Five titles, level with रोहित शर्मा. And a captain who came back in twenty twenty-five, when his team needed him.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "versus",
+     "kicker": "MS DHONI · CSK + RISING PUNE SUPERGIANT",
+     "left": {
+      "v": "136",
+      "l": "Wins",
+      "c": "gold"
+     },
+     "right": {
+      "v": "5",
+      "l": "Titles",
+      "c": "gold"
+     },
+     "sep": "&",
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "raise",
+      "x": 0.5
+     }
+    ],
+    "cam": "push",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.4
+   }
+  },
+  {
+   "vo": "Our verdict? The most successful captain in IPL history. The most matches, the most wins, and ten finals. Thank you, MSD.",
+   "scene": {
+    "type": "stage",
+    "panel": {
+     "kind": "headline",
+     "kicker": "OUR VERDICT",
+     "lines": [
+      {
+       "t": "THE MOST SUCCESSFUL"
+      },
+      {
+       "t": "CAPTAIN IN",
+       "c": "gold"
+      },
+      {
+       "t": "IPL HISTORY.",
+       "c": "gold"
+      }
+     ],
+     "at": 0.05
+    },
+    "avatars": [
+     {
+      "kit": "CSK",
+      "pose": "celebrate",
+      "x": 0.5
+     }
+    ],
+    "cam": "wide",
+    "fx": [
+     "vignette",
+     "spot",
+     "confetti"
+    ],
+    "fx_at": 0.4
+   }
+  }
+ ],
+ "full_theme": "stadium",
+ "full_captions": "v2",
+ "reel_cta": {
+  "vo": "Thank you, MSD. Who is the greatest IPL captain? Tell us in the comments. For the full data story, follow The Third Man on YouTube. Link in bio.",
+  "scene": {
+   "type": "cta",
+   "lines": [
+    {
+     "t": "THANK YOU,"
+    },
+    {
+     "t": "MSD.",
+     "c": "gold"
+    }
+   ],
+   "yt": {
+    "label": "THE THIRD MAN",
+    "handle": "YOUTUBE @thethirdman_angle",
+    "bio": "LINK IN BIO"
+   }
+  }
+ },
+ "reel_caption": "MS Dhoni's IPL captaincy, every season. 💛\n\n235 matches as captain. 136 wins, more than any captain in IPL history. Ten finals in sixteen seasons with CSK, five titles, and the playoffs in 12 of those 16 seasons. Against Mumbai, the next best franchise: 12 of 16 playoff seasons vs 11 of 18, finals 10 vs 6.\n\nThank you, MSD. Who is the greatest IPL captain? Tell us below.\n\nFull data story on YouTube: The Third Man (@thethirdman_angle). Link in bio.\n\nOur data: every IPL season 2008-2025.\n\n#MSDhoni #Dhoni #CSK #ChennaiSuperKings #IPL #IPL2027 #IPLCaptains #cricket #cricketanalysis #TheThirdMan",
+ "yt": {
+  "long": {
+   "title": "MS Dhoni IPL Captaincy: The Complete Record, 2008-2025 | Data Story Ep 14",
+   "description": "MS Dhoni's IPL captaincy, the complete record: every season from 2008 to 2025, not just the recent ones. 235 matches as captain (Chennai Super Kings and Rising Pune Supergiant), 136 wins, five titles (level with Rohit Sharma as the most by a captain). CSK reached ten finals in the sixteen seasons they played, and the playoffs in twelve of them. Against Mumbai Indians, the next best franchise: playoffs 12 of 16 seasons vs 11 of 18, finals 10 vs 6, titles 5 each. Over all eighteen seasons CSK won 57% of their decided matches, more than any franchise; Mumbai 55%, everyone else 52% or below.\n\nChapters:\n0:00 235 matches, 136 wins\n0:19 CSK wins, season by season\n0:43 Ten finals, and CSK vs Mumbai\n1:04 Win rate across all seasons\n1:18 The record\n1:34 Verdict\n\nCSK announced MSD's retirement from the IPL as a player, and his role as team mentor, on 17 November 2026.\n\nMethod: Cricsheet IPL ball-by-ball for every match 2008-2025 (our data); CSK's wins per season match Wikipedia's season table in every year. We state wins, finals and playoff seasons per season, not losses, because Cricsheet lacks a few abandoned matches. Win rate = wins / (wins + losses). Dhoni's own record is won 136 of 235 (57.87% counts no-results as matches).\n\n#MSDhoni #CSK #IPL #DataStory",
+   "tags": [
+    "MS Dhoni",
+    "Dhoni IPL captain",
+    "Dhoni captaincy record",
+    "Dhoni retirement",
+    "CSK",
+    "Chennai Super Kings",
+    "IPL captains",
+    "IPL records",
+    "most successful IPL captain",
+    "IPL data",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  },
+  "short": {
+   "title": "Dhoni: 136 Wins, 10 Finals as IPL Captain | Data Story Ep 14 #Shorts",
+   "description": "MS Dhoni as IPL captain: 136 wins (no one has won more), ten finals in sixteen seasons, five titles. CSK reached the playoffs in 12 of 16 seasons, Mumbai in 11 of 18. Full breakdown on the channel.\n\nOur data: every IPL season 2008-2025 (Cricsheet ball-by-ball, checked against Wikipedia's season tables).\n\n#MSDhoni #CSK #IPL #Shorts",
+   "tags": [
+    "MS Dhoni",
+    "Dhoni IPL captain",
+    "Dhoni captaincy record",
+    "Dhoni retirement",
+    "CSK",
+    "Chennai Super Kings",
+    "IPL captains",
+    "IPL records",
+    "most successful IPL captain",
+    "IPL data",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true,
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "DHONI'S IPL"
+   },
+   {
+    "t": "CAPTAINCY RECORD",
+    "c": "gold"
+   }
+  ],
+  "sub": "EVERY SEASON · 2008-2025",
+  "hero": "136"
+ }
+}

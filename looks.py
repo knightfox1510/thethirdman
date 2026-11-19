@@ -4,7 +4,7 @@
   retro   - "What If?": sepia film look with newspaper-style clippings (scene "film": true works on any theme)
   card    - "Rising Star": a trading card that flips from front (player) to back (stats)
 Captions: spec "captions": "lab" (grey words turn black as spoken, numbers boxed) or "serif" (italic, highlighted)."""
-import math, random
+import math, random, sys
 import skia
 import gfx
 from gfx import text, rrect, paint, prog, eo, eio, eback, clamp, twidth
@@ -35,7 +35,9 @@ gfx.THEMES.update({
                  RED=(232, 64, 64), ORANGE=(255, 128, 20), PANEL=(17, 24, 46), LINE=(52, 64, 98), display="Bebas.ttf",
                  heading="OswaldBold.ttf", glow=1.0, light=False),
 })
-LOOKS = ("lab", "board", "retro", "card")
+gfx.THEMES["plate"] = dict(BG=(238, 226, 196), INK=(52, 36, 26), MUTED=(120, 100, 70), GOLD=(160, 40, 36), BLUE=(60, 80, 110), RED=(160, 40, 36),
+                           ORANGE=(180, 100, 40), PANEL=(246, 238, 214), LINE=(200, 186, 160), display="PlayfairBold.ttf", heading="PlayfairBold.ttf", glow=0.0, light=True)
+LOOKS = ("lab", "board", "retro", "card", "plate")
 
 
 def col(c_):
@@ -263,7 +265,7 @@ def sc_lab_big_text(c, g, t, D, s):
     """An editorial statement: big lines, [highlighted] parts boxed."""
     header(c, g, t, D, {k: v for k, v in s.items() if k != "title"}); l = L(g); short = g.fmt == "short"
     lines = [ln["t"] if isinstance(ln, dict) else ln for ln in s["lines"]]
-    size = 104 if short else 110; y = (l["top"] + l["bot"]) / 2 - (len(lines) - 1) * size * .55 + size * .3
+    size = (128 if s.get("vert") else 104) if short else 110; y = (l["top"] + l["bot"]) / 2 - (len(lines) - 1) * size * .55 + size * .3 + (120 if s.get("vert") else 0)
     for k, ln in enumerate(lines):
         q = eo(prog(t, .08 + .14 * k, .5 + .14 * k))
         z = E.fit(ln.replace("[", "").replace("]", ""), l["x1"] - l["x0"], size, "interB", -2)
@@ -295,10 +297,10 @@ def sc_lab_vs(c, g, t, D, s):
 
 def sc_lab_dots(c, g, t, D, s):
     header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
-    rows = s["rows"]; n = len(rows)
-    lw = 360 if short else 520
-    xa, xb = l["x0"] + lw, l["x1"] - 110
-    top = l["top"] + 40; rh = min(66 if short else 44, (l["bot"] - top) / max(1, n))
+    rows = s["rows"]; n = len(rows); vert = s.get("vert")
+    lw = 0 if vert else (360 if short else 520)
+    xa, xb = l["x0"] + lw, l["x1"] - (170 if vert else 110)
+    top = l["top"] + 40 + (40 if vert else 0); rh = min(66 if short else 44, (l["bot"] - top) / max(1, n)) if not vert else min(150, (1560 - top) / max(1, n))
     lo, hi = s.get("domain", [0, 100])
     X = lambda v: xa + (xb - xa) * (v - lo) / (hi - lo)
     a = eo(prog(t, .2, .6))
@@ -315,9 +317,10 @@ def sc_lab_dots(c, g, t, D, s):
         st = D * s.get("from", .08) + k * D * s.get("stagger", .45) / max(1, n)
         q = eo(prog(t, st, st + .5))
         hl = r.get("hl") and t >= T(r, D, 0) if isinstance(r.get("hl"), bool) else False
-        lsz = 28 if short else 24
-        if hl: rrect(c, l["x0"] - 8, y - lsz * .95, twidth(r["label"], lsz, "interSB") + 16, lsz * 1.35, 6, (250, 205, 212), q)
-        text(c, r["label"], l["x0"], y, lsz, "interSB" if hl else "inter", gfx.INK, q)
+        lsz = 34 if vert else (28 if short else 24)
+        ly = y - 44 if vert else y
+        if hl: rrect(c, l["x0"] - 8, ly - lsz * .95, twidth(r["label"], lsz, "interSB") + 16, lsz * 1.35, 6, (250, 205, 212), q)
+        text(c, r["label"], l["x0"], ly, lsz, "interSB" if hl else "inter", gfx.INK, q)
         lp = paint((205, 203, 196), q); lp.setStrokeWidth(2); c.drawLine(xa, y - 9, xb, y - 9, lp)
         for v in s.get("ticks", [lo, (lo + hi) / 2, hi])[1:-1]:
             c.drawLine(X(v), y - 15, X(v), y - 3, lp)
@@ -327,10 +330,10 @@ def sc_lab_dots(c, g, t, D, s):
             pp = paint((40, 40, 40), .5 * q); pp.setStrokeWidth(4); c.drawLine(X(lo + (vals[0] - lo) * q), y - 9, X(lo + (vals[1] - lo) * q), y - 9, pp)
         for j, v in enumerate(vals):
             vx = X(lo + (v - lo) * q)
-            c.drawCircle(vx, y - 9, 13 if short else 10, paint(cols[j % len(cols)], q))
-            if hl and j == 0: c.drawCircle(vx, y - 9, 18, paint(RED, q, stroke=3))
+            c.drawCircle(vx, y - 9, 18 if vert else (13 if short else 10), paint(cols[j % len(cols)], q))
+            if hl and j == 0: c.drawCircle(vx, y - 9, 26 if vert else 18, paint(RED, q, stroke=3))
         txt = r.get("text", f'{vals[0]:g}')
-        text(c, txt, xb + 26, y, 26 if short else 22, "monoSB", gfx.INK, q)
+        text(c, txt, xb + 26, y + (4 if vert else 0), 36 if vert else (26 if short else 22), "monoSB", gfx.INK, q)
         if r.get("badge") and hl:
             bx = xb + 26 + twidth(txt, 26, "monoSB") + 14
             rrect(c, bx, y - 26, twidth(r["badge"], 22, "monoSB") + 14, 34, 5, RED, q)
@@ -407,14 +410,16 @@ def sc_lab_big(c, g, t, D, s):
     v = s["value"]; dec = s.get("dec", 0); st = T(s, D, .1); q = eio(prog(t, st, st + s.get("count_dur", 1.0)))
     cur = s.get("from", 0) + (v - s.get("from", 0)) * q
     vs = s.get("prefix", "") + f"{cur:,.{dec}f}" + s.get("suffix", "")
-    y = (l["top"] + l["bot"]) / 2 + (40 if short else 60)
-    z = E.fit(vs, (l["x1"] - l["x0"]) * .75, 230 if short else 260, "interB", -4)
+    vert = s.get("vert")
+    y = (l["top"] + l["bot"]) / 2 + (40 if short else 60) + (150 if vert else 0)
+    z = E.fit(vs, (l["x1"] - l["x0"]) * (.95 if vert else .75), 330 if vert else (230 if short else 260), "interB", -4)
     w = text(c, vs, l["x0"], y, z, "interB", col(s.get("color", "red")), eo(prog(t, st, st + .3)), track=-4)
     if s.get("unit"):
         text(c, s["unit"], l["x0"] + twidth(vs, z, "interB", -4) + 20, y, 40 if short else 36, "interB", gfx.INK, eo(prog(t, st + .3, st + .7)))
     if s.get("label"):
-        for k, ln in enumerate(E.wrap(s["label"], l["x1"] - l["x0"], 34 if short else 30, "inter")):
-            text(c, ln, l["x0"], y + 70 + k * 44, 34 if short else 30, "inter", gfx.MUTED, eo(prog(t, st + .4, st + .8)))
+        lsz_ = 40 if vert else (34 if short else 30)
+        for k, ln in enumerate(E.wrap(s["label"], l["x1"] - l["x0"], lsz_, "inter")):
+            text(c, ln, l["x0"], y + 90 + k * (lsz_ + 14), lsz_, "inter", gfx.MUTED, eo(prog(t, st + .4, st + .8)))
 
 
 def sc_lab_radial(c, g, t, D, s):
@@ -479,21 +484,24 @@ def sc_lab_rings(c, g, t, D, s):
 def sc_lab_compare(c, g, t, D, s):
     """Head-to-head table: two tokens on top, rows of [label, a, b, winner a|b|level]."""
     header(c, g, t, D, s); l = L(g); short = g.fmt == "short"
-    A, B = s["a"], s["b"]; w = l["x1"] - l["x0"]
-    ca, cb = l["x0"] + w * .62, l["x0"] + w * .88; y = l["top"] + 40
+    A, B = s["a"], s["b"]; w = l["x1"] - l["x0"]; vert = s.get("vert")
+    ca, cb = (l["x0"] + w * .27, l["x0"] + w * .73) if vert else (l["x0"] + w * .62, l["x0"] + w * .88); y = l["top"] + 40 + (30 if vert else 0)
     a = eo(prog(t, .1, .5))
     for cxx, P in ((ca, A), (cb, B)):
         token(c, cxx, y, 40 if short else 34, P["t"], P.get("kit", "ink"), a)
         text(c, P["name"], cxx, y + 74, 26 if short else 22, "interB", gfx.INK, a, "c")
-    y += 150; rh = 88 if short else 64
+    y += 150 + (30 if vert else 0); rh = 190 if vert else (88 if short else 64)
     for k, r in enumerate(s["rows"]):
         st = T(r, D, .15 + .6 * k / max(1, len(s["rows"]))); q = eo(prog(t, st, st + .35))
-        lp = paint((210, 208, 200), q); lp.setStrokeWidth(2); c.drawLine(l["x0"], y + rh * .62, l["x1"], y + rh * .62, lp)
-        text(c, r[0], l["x0"], y + rh * .4, 30 if short else 26, "inter", gfx.INK, q)
+        lp = paint((210, 208, 200), q); lp.setStrokeWidth(2); c.drawLine(l["x0"], y + rh * .86 if vert else y + rh * .62, l["x1"], y + rh * .86 if vert else y + rh * .62, lp)
+        if vert: text(c, r[0], l["x0"], y + 30, 32, "interSB", gfx.MUTED, q)
+        else: text(c, r[0], l["x0"], y + rh * .4, 30 if short else 26, "inter", gfx.INK, q)
+        vy = y + 120 if vert else y + rh * .4
         for j, (cxx, v) in enumerate(((ca, r[1]), (cb, r[2]))):
             win = (r[3] == "a" and j == 0) or (r[3] == "b" and j == 1)
-            if win: rrect(c, cxx - 80, y + rh * .4 - 38, 160, 50, 8, HL, q)
-            text(c, v, cxx, y + rh * .4, 36 if short else 30, "interB" if win else "inter", gfx.INK if win else gfx.MUTED, q, "c")
+            vsz = E.fit(v, 400 if vert else 160, 64 if vert else (36 if short else 30), "interB" if win else "inter", 0) if vert else (36 if short else 30)
+            if win: rrect(c, cxx - (210 if vert else 80), vy - (56 if vert else 38), 420 if vert else 160, 76 if vert else 50, 8, HL, q)
+            text(c, v, cxx, vy, vsz, "interB" if win else "inter", gfx.INK if win else gfx.MUTED, q, "c")
         y += rh
 
 
@@ -590,7 +598,7 @@ def sc_board(c, g, t, D, s):
         c.drawOval(skia.Rect.MakeXYWH(x - rw, y - rh, rw * 2, rh * 2), paint(E._sh(cc, .72) if pk["c"] != "white" else (190, 190, 186)))
         c.drawOval(skia.Rect.MakeXYWH(x - rw, y - hh - rh, rw * 2, rh * 2), paint(cc))
         if pk.get("label"):
-            lt = pk["label"]; lz = (24 if short else 20)
+            lt = pk["label"]; lz = ((34 if short else 26) if s.get("big_labels") else (24 if short else 20))
             text(c, lt, x, y + 30 * sc + 8, lz, "serifI", ink, q * .95, "c")
     for z in s.get("zones", []):                  # one label per zone, beside it
         q = eo(prog(t, T(z, D, .3) + .3, T(z, D, .3) + .7))
@@ -612,6 +620,11 @@ def sc_board(c, g, t, D, s):
             q = eo(prog(t, .1 + .12 * k, .5 + .12 * k))
             zz = E.fit(ln.replace("[", "").replace("]", ""), g.W - 200, z, "serifBI")
             rich(c, ln, g.W / 2, y + k * zz * 1.15, zz, "serifBI", ink, q, "c")
+    if s.get("note"):                                   # a short key line (or two) under the field: the term in plain words (graphics, not subtitles)
+        nl = s["note"] if isinstance(s["note"], list) else [s["note"]]
+        for k, ln in enumerate(nl):
+            q = eo(prog(t, .35 + .15 * k, .8 + .15 * k)); zz = E.fit(ln.replace("[", "").replace("]", ""), g.W - 160, 54 if short else 40, "serifBI")
+            rich(c, ln, g.W / 2, (1500 if short else 1030) + k * zz * 1.3, zz, "serifBI", ink, q, "c")
     if s.get("foot"):
         text(c, s["foot"].upper(), g.W / 2, 1390 if short else 1050, 19, "mono", (150, 160, 185) if navy else (120, 120, 116), a, "c", track=2)
 
@@ -793,9 +806,11 @@ def chrome(c, g, spec, T_, total, last):
     dark = gfx.THEME in ("board", "card")
     ink = (245, 242, 232) if dark else (20, 20, 22)
     c.drawRect(skia.Rect.MakeXYWH(0, 0, g.W * clamp(T_ / max(1, total)), 5), paint(RED if not dark else HL, .9))
+    brand = spec.get("brand", "THE THIRD MAN")     # a spec for another channel sets "brand": "" (hidden) or its own name
+    if not brand: return
     x, y = (g.W - 80, 96) if g.fmt == "short" else (g.W - 140, 1040)
-    c.drawCircle(x - twidth("THE THIRD MAN", 20, "monoSB", 2) - 18, y - 7, 6, paint(RED, 1))
-    text(c, "THE THIRD MAN", x, y, 20, "monoSB", ink, .85, "r", track=2)
+    c.drawCircle(x - twidth(brand, 20, "monoSB", 2) - 18, y - 7, 6, paint(RED, 1))
+    text(c, brand, x, y, 20, "monoSB", ink, .85, "r", track=2)
 
 
 
@@ -877,6 +892,9 @@ def install(engine):
     E.SCENES.update({"lab_title": sc_lab_title, "lab_dots": sc_lab_dots, "lab_swarm": sc_lab_swarm, "lab_units": sc_lab_units,
                      "lab_big": sc_lab_big, "lab_radial": sc_lab_radial, "lab_score": sc_lab_score, "lab_rings": sc_lab_rings,
                      "lab_compare": sc_lab_compare, "lab_big_text": sc_lab_big_text, "lab_vs": sc_lab_vs, "lab_wagon": sc_lab_wagon, "lab_pitch": sc_lab_pitch, "board": sc_board, "clipping": sc_clipping, "quote": sc_quote, "card": sc_card})
+    import plate; plate.install(engine)
+    import needs_scenes; needs_scenes.install(engine, sys.modules[__name__])
+    import day1_scenes; day1_scenes.install(engine, sys.modules[__name__])
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 
@@ -886,6 +904,8 @@ def install(engine):
         if th == "board": return bg_board(c, T_)
         if th == "retro": return bg_retro(c, T_)
         if th == "card": return bg_card(c, T_)
+        if th == "plate":
+            import plate; return plate.bg(c, T_)
         return prev_bg(c, T_)
     gfx.background = bg
     prev_chrome = E.chrome
@@ -933,6 +953,8 @@ def extra_sfx(s, D, T0):
     elif ty == "lab_title":
         ev.append([T0 + .05, "whoosh", .7]); ev.append([T0 + .4, "tick", 1]); ev.append([T0 + .55, "tick", 1])
         if len(s.get("players") or s.get("tokens") or []) == 2: ev.append([T0 + .95, "stamp", .8])
+    elif ty in ("plate", "plate_page", "plate_list"):
+        import plate; ev += plate.sfx(s, D, T0)
     elif ty == "card":
         ev.append([T0 + .05, "whoosh", .8])
         fl = s.get("_t", D * s.get("flip_at", .45)); ev.append([T0 + fl, "whoosh", 1]); ev.append([T0 + fl + .5, "crowd", .5])

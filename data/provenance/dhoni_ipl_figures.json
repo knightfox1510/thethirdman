@@ -1,0 +1,343 @@
+{
+ "archive_total": {
+  "runs": 3656,
+  "balls": 2651,
+  "sr": 137.9,
+  "fours": 238,
+  "sixes": 200
+ },
+ "innings": 173,
+ "dismissals": 94,
+ "not_outs": 79,
+ "phase_powerplay": {
+  "dhoni": {
+   "runs": 45,
+   "balls": 56,
+   "sr": 80.4,
+   "fours": 7,
+   "sixes": 0
+  },
+  "league_sr": 128.2
+ },
+ "phase_middle": {
+  "dhoni": {
+   "runs": 1038,
+   "balls": 1120,
+   "sr": 92.7,
+   "fours": 56,
+   "sixes": 30
+  },
+  "league_sr": 127.9
+ },
+ "phase_death": {
+  "dhoni": {
+   "runs": 2573,
+   "balls": 1475,
+   "sr": 174.4,
+   "fours": 175,
+   "sixes": 170
+  },
+  "league_sr": 160.2
+ },
+ "last2": {
+  "dhoni": {
+   "runs": 1270,
+   "balls": 583,
+   "sr": 217.8,
+   "fours": 93,
+   "sixes": 98
+  },
+  "league_sr": 174.0
+ },
+ "over20": {
+  "dhoni": {
+   "runs": 702,
+   "balls": 278,
+   "sr": 252.5,
+   "fours": 49,
+   "sixes": 62
+  },
+  "league_sr": 181.6
+ },
+ "chasing": {
+  "runs": 1885,
+  "balls": 1374,
+  "sr": 137.2,
+  "fours": 119,
+  "sixes": 104
+ },
+ "batting first": {
+  "runs": 1771,
+  "balls": 1277,
+  "sr": 138.7,
+  "fours": 119,
+  "sixes": 96
+ },
+ "chase_death": {
+  "dhoni": {
+   "runs": 1243,
+   "balls": 720,
+   "sr": 172.6,
+   "fours": 85,
+   "sixes": 83
+  },
+  "league_sr": 154.7
+ },
+ "seasons": [
+  {
+   "season": 2013,
+   "runs": 461,
+   "balls": 283,
+   "sr": 162.9,
+   "death_sr": 202.8,
+   "death_balls": 141,
+   "league_death_sr": 151.6,
+   "sixes": 25
+  },
+  {
+   "season": 2014,
+   "runs": 371,
+   "balls": 250,
+   "sr": 148.4,
+   "death_sr": 178.1,
+   "death_balls": 169,
+   "league_death_sr": 156.7,
+   "sixes": 20
+  },
+  {
+   "season": 2015,
+   "runs": 372,
+   "balls": 305,
+   "sr": 122.0,
+   "death_sr": 168.6,
+   "death_balls": 140,
+   "league_death_sr": 162.8,
+   "sixes": 17
+  },
+  {
+   "season": 2016,
+   "runs": 284,
+   "balls": 210,
+   "sr": 135.2,
+   "death_sr": 168.1,
+   "death_balls": 113,
+   "league_death_sr": 159.6,
+   "sixes": 14
+  },
+  {
+   "season": 2017,
+   "runs": 290,
+   "balls": 250,
+   "sr": 116.0,
+   "death_sr": 157.0,
+   "death_balls": 107,
+   "league_death_sr": 152.2,
+   "sixes": 16
+  },
+  {
+   "season": 2018,
+   "runs": 455,
+   "balls": 302,
+   "sr": 150.7,
+   "death_sr": 200.7,
+   "death_balls": 148,
+   "league_death_sr": 159.3,
+   "sixes": 30
+  },
+  {
+   "season": 2019,
+   "runs": 416,
+   "balls": 309,
+   "sr": 134.6,
+   "death_sr": 170.7,
+   "death_balls": 157,
+   "league_death_sr": 159.4,
+   "sixes": 23
+  },
+  {
+   "season": 2020,
+   "runs": 200,
+   "balls": 172,
+   "sr": 116.3,
+   "death_sr": 142.2,
+   "death_balls": 90,
+   "league_death_sr": 161.5,
+   "sixes": 7
+  },
+  {
+   "season": 2021,
+   "runs": 114,
+   "balls": 107,
+   "sr": 106.5,
+   "death_sr": 140.0,
+   "death_balls": 60,
+   "league_death_sr": 146.3,
+   "sixes": 3
+  },
+  {
+   "season": 2022,
+   "runs": 232,
+   "balls": 188,
+   "sr": 123.4,
+   "death_sr": 165.7,
+   "death_balls": 105,
+   "league_death_sr": 163.1,
+   "sixes": 10
+  },
+  {
+   "season": 2023,
+   "runs": 104,
+   "balls": 57,
+   "sr": 182.5,
+   "death_sr": 185.7,
+   "death_balls": 56,
+   "league_death_sr": 162.1,
+   "sixes": 10
+  },
+  {
+   "season": 2024,
+   "runs": 161,
+   "balls": 73,
+   "sr": 220.5,
+   "death_sr": 220.5,
+   "death_balls": 73,
+   "league_death_sr": 173.8,
+   "sixes": 13
+  },
+  {
+   "season": 2025,
+   "runs": 196,
+   "balls": 145,
+   "sr": 135.2,
+   "death_sr": 151.7,
+   "death_balls": 116,
+   "league_death_sr": 172.1,
+   "sixes": 12
+  }
+ ],
+ "sixes_19_20_by_season": {
+  "2013": 8,
+  "2014": 10,
+  "2015": 4,
+  "2016": 6,
+  "2017": 7,
+  "2018": 9,
+  "2019": 14,
+  "2020": 5,
+  "2021": 2,
+  "2022": 5,
+  "2023": 9,
+  "2024": 12,
+  "2025": 7
+ },
+ "league_rank_dhoni_seasons": [
+  {
+   "team": "Gujarat Titans",
+   "won": 11,
+   "played": 17,
+   "pct": 64.7
+  },
+  {
+   "team": "Chennai Super Kings",
+   "won": 80,
+   "played": 129,
+   "pct": 62.0
+  },
+  {
+   "team": "Mumbai Indians",
+   "won": 73,
+   "played": 123,
+   "pct": 59.3
+  },
+  {
+   "team": "Lucknow Super Giants",
+   "won": 8,
+   "played": 14,
+   "pct": 57.1
+  },
+  {
+   "team": "Kolkata Knight Riders",
+   "won": 60,
+   "played": 117,
+   "pct": 51.3
+  },
+  {
+   "team": "Royal Challengers Bengaluru",
+   "won": 54,
+   "played": 112,
+   "pct": 48.2
+  },
+  {
+   "team": "Rajasthan Royals",
+   "won": 54,
+   "played": 113,
+   "pct": 47.8
+  },
+  {
+   "team": "Sunrisers Hyderabad",
+   "won": 53,
+   "played": 117,
+   "pct": 45.3
+  },
+  {
+   "team": "Punjab Kings",
+   "won": 51,
+   "played": 113,
+   "pct": 45.1
+  },
+  {
+   "team": "Delhi Capitals",
+   "won": 45,
+   "played": 115,
+   "pct": 39.1
+  },
+  {
+   "team": "Pune Warriors",
+   "won": 4,
+   "played": 16,
+   "pct": 25.0
+  }
+ ],
+ "csk_dhoni_seasons": {
+  "decided": 129,
+  "won": 80,
+  "tight": 16,
+  "tight_won": 9,
+  "rest": 113,
+  "rest_won": 71,
+  "seasons": [
+   2013,
+   2014,
+   2015,
+   2018,
+   2019,
+   2020,
+   2021,
+   2023
+  ]
+ },
+ "last2_most_runs": {
+  "first": "Mahendra Singh Dhoni",
+  "first_val": 1270,
+  "second": "Ravindra Jadeja",
+  "second_val": 727
+ },
+ "last2_most_sixes": {
+  "first": "Mahendra Singh Dhoni",
+  "first_val": 98,
+  "second": "Hardik Pandya",
+  "second_val": 59
+ },
+ "death_most_runs": {
+  "first": "Mahendra Singh Dhoni",
+  "first_val": 2573,
+  "second": "Kieron Pollard",
+  "second_val": 1627
+ },
+ "death_most_balls": {
+  "first": "Mahendra Singh Dhoni",
+  "first_val": 1475,
+  "second": "Ravindra Jadeja",
+  "second_val": 971
+ }
+}

@@ -1,0 +1,539 @@
+{
+ "rohit_by_season": {
+  "2013": {
+   "inn": 19,
+   "runs": 537,
+   "balls": 409,
+   "sr": 131.3,
+   "fours": 35,
+   "sixes": 28,
+   "fifties": 4,
+   "hundreds": 0,
+   "pp_sr": 65.9,
+   "league_pp_sr": 108.1,
+   "team": "Mumbai Indians"
+  },
+  "2014": {
+   "inn": 15,
+   "runs": 390,
+   "balls": 302,
+   "sr": 129.1,
+   "fours": 31,
+   "sixes": 16,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 78.8,
+   "league_pp_sr": 116.7,
+   "team": "Mumbai Indians"
+  },
+  "2015": {
+   "inn": 16,
+   "runs": 482,
+   "balls": 333,
+   "sr": 144.7,
+   "fours": 41,
+   "sixes": 21,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 150.8,
+   "league_pp_sr": 120.7,
+   "team": "Mumbai Indians"
+  },
+  "2016": {
+   "inn": 14,
+   "runs": 489,
+   "balls": 368,
+   "sr": 132.9,
+   "fours": 49,
+   "sixes": 16,
+   "fifties": 5,
+   "hundreds": 0,
+   "pp_sr": 138.3,
+   "league_pp_sr": 121.2,
+   "team": "Mumbai Indians"
+  },
+  "2017": {
+   "inn": 16,
+   "runs": 333,
+   "balls": 273,
+   "sr": 122.0,
+   "fours": 31,
+   "sixes": 9,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 96.4,
+   "league_pp_sr": 131.1,
+   "team": "Mumbai Indians"
+  },
+  "2018": {
+   "inn": 14,
+   "runs": 286,
+   "balls": 215,
+   "sr": 133.0,
+   "fours": 25,
+   "sixes": 12,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 87.2,
+   "league_pp_sr": 134.4,
+   "team": "Mumbai Indians"
+  },
+  "2019": {
+   "inn": 15,
+   "runs": 405,
+   "balls": 315,
+   "sr": 128.6,
+   "fours": 52,
+   "sixes": 10,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 129.7,
+   "league_pp_sr": 128.4,
+   "team": "Mumbai Indians"
+  },
+  "2020": {
+   "inn": 12,
+   "runs": 332,
+   "balls": 260,
+   "sr": 127.7,
+   "fours": 27,
+   "sixes": 19,
+   "fifties": 3,
+   "hundreds": 0,
+   "pp_sr": 115.8,
+   "league_pp_sr": 121.5,
+   "team": "Mumbai Indians"
+  },
+  "2021": {
+   "inn": 13,
+   "runs": 381,
+   "balls": 299,
+   "sr": 127.4,
+   "fours": 33,
+   "sixes": 14,
+   "fifties": 1,
+   "hundreds": 0,
+   "pp_sr": 130.0,
+   "league_pp_sr": 122.1,
+   "team": "Mumbai Indians"
+  },
+  "2022": {
+   "inn": 14,
+   "runs": 268,
+   "balls": 223,
+   "sr": 120.2,
+   "fours": 28,
+   "sixes": 13,
+   "fifties": 0,
+   "hundreds": 0,
+   "pp_sr": 124.0,
+   "league_pp_sr": 121.5,
+   "team": "Mumbai Indians"
+  },
+  "2023": {
+   "inn": 16,
+   "runs": 332,
+   "balls": 250,
+   "sr": 132.8,
+   "fours": 35,
+   "sixes": 17,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 130.7,
+   "league_pp_sr": 137.4,
+   "team": "Mumbai Indians"
+  },
+  "2024": {
+   "inn": 14,
+   "runs": 417,
+   "balls": 278,
+   "sr": 150.0,
+   "fours": 45,
+   "sixes": 23,
+   "fifties": 1,
+   "hundreds": 1,
+   "pp_sr": 152.0,
+   "league_pp_sr": 148.6,
+   "team": "Mumbai Indians"
+  },
+  "2025": {
+   "inn": 15,
+   "runs": 418,
+   "balls": 280,
+   "sr": 149.3,
+   "fours": 41,
+   "sixes": 22,
+   "fifties": 4,
+   "hundreds": 0,
+   "pp_sr": 150.9,
+   "league_pp_sr": 152.0,
+   "team": "Mumbai Indians"
+  },
+  "2026": {
+   "inn": 9,
+   "runs": 283,
+   "balls": 180,
+   "sr": 157.2,
+   "fours": 21,
+   "sixes": 21,
+   "fifties": 2,
+   "hundreds": 0,
+   "pp_sr": 152.5,
+   "league_pp_sr": 159.3,
+   "team": "Mumbai Indians"
+  }
+ },
+ "rohit_captain_seasons_2014_2023": {
+  "inn": 145,
+  "runs": 3698,
+  "balls": 2838,
+  "sr": 130.3,
+  "fours": 352,
+  "sixes": 147,
+  "fifties_plus": 24,
+  "seasons": 10,
+  "runs_per_inn": 25.5
+ },
+ "rohit_non_captain_2024_2026": {
+  "inn": 38,
+  "runs": 1118,
+  "balls": 738,
+  "sr": 151.5,
+  "fours": 107,
+  "sixes": 66,
+  "fifties_plus": 8,
+  "seasons": 3,
+  "runs_per_inn": 29.4
+ },
+ "rohit_all_sportmonks_2013_2026": {
+  "inn": 202,
+  "runs": 5353,
+  "balls": 3985,
+  "sr": 134.3,
+  "fours": 494,
+  "sixes": 241,
+  "fifties_plus": 36,
+  "seasons": 14,
+  "runs_per_inn": 26.5
+ },
+ "rohit_cricsheet_by_season": {
+  "2008": {
+   "runs": 404,
+   "balls": 273,
+   "fours": 37,
+   "sixes": 19,
+   "inn": 12
+  },
+  "2009": {
+   "runs": 362,
+   "balls": 315,
+   "fours": 20,
+   "sixes": 18,
+   "inn": 16
+  },
+  "2010": {
+   "runs": 404,
+   "balls": 302,
+   "fours": 36,
+   "sixes": 14,
+   "inn": 16
+  },
+  "2011": {
+   "runs": 372,
+   "balls": 297,
+   "fours": 32,
+   "sixes": 13,
+   "inn": 13
+  },
+  "2012": {
+   "runs": 433,
+   "balls": 342,
+   "fours": 39,
+   "sixes": 18,
+   "inn": 16
+  },
+  "2013": {
+   "runs": 538,
+   "balls": 409,
+   "fours": 35,
+   "sixes": 28,
+   "inn": 19
+  },
+  "2014": {
+   "runs": 390,
+   "balls": 302,
+   "fours": 31,
+   "sixes": 16,
+   "inn": 15
+  },
+  "2015": {
+   "runs": 482,
+   "balls": 333,
+   "fours": 41,
+   "sixes": 21,
+   "inn": 16
+  },
+  "2016": {
+   "runs": 489,
+   "balls": 368,
+   "fours": 49,
+   "sixes": 17,
+   "inn": 14
+  },
+  "2017": {
+   "runs": 333,
+   "balls": 273,
+   "fours": 31,
+   "sixes": 9,
+   "inn": 16
+  },
+  "2018": {
+   "runs": 286,
+   "balls": 215,
+   "fours": 25,
+   "sixes": 12,
+   "inn": 14
+  },
+  "2019": {
+   "runs": 405,
+   "balls": 315,
+   "fours": 52,
+   "sixes": 10,
+   "inn": 15
+  },
+  "2020": {
+   "runs": 334,
+   "balls": 263,
+   "fours": 27,
+   "sixes": 19,
+   "inn": 13
+  },
+  "2021": {
+   "runs": 381,
+   "balls": 299,
+   "fours": 33,
+   "sixes": 14,
+   "inn": 13
+  },
+  "2022": {
+   "runs": 268,
+   "balls": 223,
+   "fours": 27,
+   "sixes": 13,
+   "inn": 14
+  },
+  "2023": {
+   "runs": 332,
+   "balls": 250,
+   "fours": 35,
+   "sixes": 17,
+   "inn": 16
+  },
+  "2024": {
+   "runs": 417,
+   "balls": 278,
+   "fours": 45,
+   "sixes": 23,
+   "inn": 14
+  },
+  "2025": {
+   "runs": 418,
+   "balls": 280,
+   "fours": 41,
+   "sixes": 22,
+   "inn": 15
+  },
+  "2026": {
+   "runs": 283,
+   "balls": 180,
+   "fours": 21,
+   "sixes": 21,
+   "inn": 9
+  }
+ },
+ "rohit_cricsheet_career_2008_2026": {
+  "runs": 7331,
+  "balls": 5517,
+  "sixes": 324,
+  "inn": 276,
+  "sr": 132.9
+ },
+ "mi_by_season": {
+  "2008": {
+   "P": 14,
+   "W": 7,
+   "L": 7,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2009": {
+   "P": 13,
+   "W": 5,
+   "L": 8,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2010": {
+   "P": 16,
+   "W": 11,
+   "L": 5,
+   "playoff": 1,
+   "final": 1,
+   "title": 0
+  },
+  "2011": {
+   "P": 16,
+   "W": 10,
+   "L": 6,
+   "playoff": 1,
+   "final": 0,
+   "title": 0
+  },
+  "2012": {
+   "P": 17,
+   "W": 10,
+   "L": 7,
+   "playoff": 1,
+   "final": 0,
+   "title": 0
+  },
+  "2013": {
+   "P": 19,
+   "W": 13,
+   "L": 6,
+   "playoff": 1,
+   "final": 1,
+   "title": 1
+  },
+  "2014": {
+   "P": 15,
+   "W": 7,
+   "L": 8,
+   "playoff": 1,
+   "final": 0,
+   "title": 0
+  },
+  "2015": {
+   "P": 16,
+   "W": 10,
+   "L": 6,
+   "playoff": 1,
+   "final": 1,
+   "title": 1
+  },
+  "2016": {
+   "P": 14,
+   "W": 7,
+   "L": 7,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2017": {
+   "P": 17,
+   "W": 11,
+   "L": 5,
+   "playoff": 1,
+   "final": 1,
+   "title": 1
+  },
+  "2018": {
+   "P": 14,
+   "W": 6,
+   "L": 8,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2019": {
+   "P": 16,
+   "W": 10,
+   "L": 5,
+   "playoff": 1,
+   "final": 1,
+   "title": 1
+  },
+  "2020": {
+   "P": 16,
+   "W": 11,
+   "L": 3,
+   "playoff": 1,
+   "final": 1,
+   "title": 1
+  },
+  "2021": {
+   "P": 14,
+   "W": 7,
+   "L": 7,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2022": {
+   "P": 14,
+   "W": 4,
+   "L": 10,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2023": {
+   "P": 16,
+   "W": 9,
+   "L": 7,
+   "playoff": 1,
+   "final": 0,
+   "title": 0
+  },
+  "2024": {
+   "P": 14,
+   "W": 4,
+   "L": 10,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  },
+  "2025": {
+   "P": 16,
+   "W": 9,
+   "L": 7,
+   "playoff": 1,
+   "final": 0,
+   "title": 0
+  },
+  "2026": {
+   "P": 14,
+   "W": 4,
+   "L": 10,
+   "playoff": 0,
+   "final": 0,
+   "title": 0
+  }
+ },
+ "mi_under_rohit_2014_2023": {
+  "W": 82,
+  "L": 66,
+  "win_pct": 55.4,
+  "playoffs": 6,
+  "seasons": 10,
+  "titles": 4
+ },
+ "mi_under_hardik_2024_2026": {
+  "W": 17,
+  "L": 27,
+  "win_pct": 38.6,
+  "playoffs": 1,
+  "seasons": 3,
+  "titles": 0
+ },
+ "mi_2013": {
+  "W": 13,
+  "L": 6,
+  "win_pct": 68.4,
+  "playoffs": 1,
+  "seasons": 1,
+  "titles": 1
+ }
+}

@@ -9,7 +9,7 @@ usage:
   engine.py outro  long|short                             render the logo outro clip
   engine.py thumb  specs/<slug>.json                      cover images only
 """
-import os, sys, json, math, hashlib, base64, subprocess, urllib.request
+import os, sys, shutil, json, math, hashlib, base64, subprocess, urllib.request
 import numpy as np, skia
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -528,6 +528,104 @@ def sc_swap(c, g, t, D, s):
         c.drawLine(g.cx + 220, y1 - 10, g.cx + 220, lerp(y1 - 10, y0 + 10, pa), paint(C(R_.get("color")), 1, stroke=6))
 
 
+_TS_IMG = {}
+
+
+def _tsimg(path):
+    if path not in _TS_IMG: _TS_IMG[path] = skia.Image.open(path if os.path.isabs(path) else os.path.join(ROOT, path))
+    return _TS_IMG[path]
+
+
+def _ts_grad(c1, c2, x0, y0, x1, y1):
+    p = skia.Paint(); p.setAntiAlias(True)
+    p.setShader(skia.GradientShader.MakeLinear([(x0, y0), (x1, y1)], [skia.Color(*c1), skia.Color(*c2)])); return p
+
+
+def sc_tradesplit(c, g, t, D, s):
+    """The trade format (owner pick, 17 Nov 2026): the screen splits on a diagonal into the two teams' colours. Each player stands in his OLD team's half, then they cross over
+    (SWAP), and the incoming player's name and numbers appear in each half. spec: a / b = {team, name, color}; p1 = the player who goes a -> b, p2 = b -> a (None for a one-way deal);
+    each player = {img (transparent PNG), lines [first, last], stat [..], pair (True for a two-player image)}; label, fee, stamp, one_way_text.
+    Vertical: content stays inside y 190-1570 (Shorts/Reels buttons cover the top and the bottom ~350 px). Photos are the owner's licensed images (cut out with cutout.py)."""
+    W, H = g.W, g.H; long = g.fmt == "long"; A, B = s["a"], s["b"]; p1, p2 = s["p1"], s.get("p2")
+    ca, cb = tuple(A["color"]), tuple(B["color"]); dark = lambda col, k: tuple(int(v * k) for v in col)
+    pin = eo(prog(t, 0, D * .14)); swp = eio(prog(t, D * .46, D * .74)); stamp_in = eo(prog(t, D * .44, D * .52)); stamp_out = 1 - eo(prog(t, D * .70, D * .80))
+    txt_old = 1 - eo(prog(t, D * .44, D * .52)); txt_new = eo(prog(t, D * .70, D * .82)); NAVY_ = (9, 14, 30)
+    if long:
+        sl = 150; PA = [(0, 0), (W / 2 + sl, 0), (W / 2 - sl * .15, H), (0, H)]; BAND = [(W / 2 + sl, 0), (W / 2 + sl + 150, 0), (W / 2 - sl * .15 + 150, H), (W / 2 - sl * .15, H)]
+        PB = [(W / 2 + sl + 150, 0), (W, 0), (W, H), (W / 2 - sl * .15 + 150, H)]; CXA, CXB = 545, W - 545
+    else:
+        PA = [(0, 0), (W, 0), (W, 800), (0, 905)]; BAND = [(0, 905), (W, 800), (W, 1010), (0, 1115)]; PB = [(0, 1115), (W, 1010), (W, H), (0, H)]
+    def poly(pts, pnt, dx=0, dy=0):
+        pa = skia.Path(); pa.moveTo(pts[0][0] + dx, pts[0][1] + dy)
+        for x_, y_ in pts[1:]: pa.lineTo(x_ + dx, y_ + dy)
+        pa.close(); c.drawPath(pa, pnt)
+    c.drawRect(skia.Rect.MakeWH(W, H), paint(NAVY_))
+    offa = (-(1 - pin) * W * .6, 0) if long else (0, -(1 - pin) * H * .6); offb = (-offa[0], -offa[1])
+    poly(PA, _ts_grad(ca, dark(ca, .55), 0, 0, W / 2, H) if long else _ts_grad(ca, dark(ca, .55), 0, 0, 0, 900), *offa)
+    poly(PB, _ts_grad(dark(cb, .55), cb, W / 2, 0, W, H) if long else _ts_grad(cb, dark(cb, .55), 0, 1115, 0, H), *offb)
+    poly(BAND, paint(NAVY_, pin))
+    def box(pl, slot):                                                     # where a player stands: (image, x, y, w, h)
+        im = _tsimg(pl["img"]); ar = im.width() / im.height(); pair = pl.get("pair")
+        if long:
+            hh = 930 if not pair else 800; ww = hh * ar                              # poster-size portraits, bottom-anchored, one per half
+            if ww > (800 if not pair else 880): ww = 800 if not pair else 880; hh = ww / ar
+            return im, (CXA if slot == "a" else CXB) - ww / 2, H - hh, ww, hh
+        hh = (700 if slot == "a" else 880) if not pair else (600 if slot == "a" else 720); ww = hh * ar
+        if ww > (640 if not pair else 760): ww = 640 if not pair else 760; hh = ww / ar
+        return im, ((W - ww) + 10 if slot == "a" else -10), ((890 - hh) if slot == "a" else (H + 40 - hh)), ww, hh
+    def draw_pl(pl, frm, to, k):
+        if not pl: return
+        im, x0, y0, w0, h0 = box(pl, frm); _, x1, y1, w1, h1 = box(pl, to)
+        x, y, w, h = lerp(x0, x1, k), lerp(y0, y1, k), lerp(w0, w1, k), lerp(h0, h1, k); sg = -1 if frm == "a" else 1
+        off = ((1 - pin) * sg * W * .5, 0) if long else (0, (1 - pin) * sg * H * .35)
+        c.drawImageRect(im, skia.Rect.MakeXYWH(x + off[0], y + off[1], w, h), skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear), skia.Paint(Alphaf=clamp(pin)))
+    draw_pl(p1, "a", "b", swp); draw_pl(p2, "b", "a", swp)
+    if long:
+        for x_, w_ in ((0, W / 2), (W / 2, W / 2)):
+            sp = skia.Paint(); sp.setShader(skia.GradientShader.MakeLinear([(0, 680), (0, H)], [skia.Color(0, 0, 0, 0), skia.Color(0, 0, 0, int(190 * pin))])); c.drawRect(skia.Rect.MakeXYWH(x_, 680, w_, H - 680), sp)
+    def words(pl, side, a, joins):
+        if not pl or a <= 0: return
+        T = A if side == "a" else B; big = 104 if not long else 112
+        if long: x = 70 if side == "a" else W - 70; al = "l" if side == "a" else "r"; y0 = 0; maxw = 800
+        else: x = 40 if side == "a" else W - 40; al = "l" if side == "a" else "r"; y0 = 336 if side == "a" else 1140; maxw = 330 if pl.get("pair") else 420
+        yy = y0
+        if long:                                                                   # name: big, across the bottom of the portrait
+            nl = pl["lines"]; zs = [fit(ln, maxw, 150, "bebas", 3) for ln in nl]; yb = H - 44
+            for k in range(len(nl) - 1, -1, -1):
+                text(c, nl[k], x + 4, yb + 4, zs[k], "bebas", (0, 0, 0), a * .6, al, track=3); text(c, nl[k], x, yb, zs[k], "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3); yb -= zs[k] * .92
+            yy = 215
+        else:
+            for k, ln in enumerate(pl["lines"]):
+                z = fit(ln, maxw, big, "bebas", 3); yy += z * .9
+                text(c, ln, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=3); text(c, ln, x, yy, z, "bebas", (255, 255, 255) if k == 0 else (255, 215, 90), a, al, track=3)
+        tag = ("JOINS " if joins else "LEAVES ") + T["team"]; yy += 62 if not long else 0
+        text(c, tag, x + (2 if long else 0), yy + (2 if long else 0), 70 if long else 56, "bebas", (0, 0, 0), a * .5, al, track=7) if long else None
+        text(c, tag, x, yy, 70 if long else 56, "bebas", GOLD, a, al, track=7, glow=8)
+        if joins and pl.get("stat"):
+            if long:
+                for k, st in enumerate(pl["stat"][:3]):
+                    yy += 60; z = fit(st, 380, 54 if k == 0 else 44, "bebas", 2); text(c, st, x + 3, yy + 3, z, "bebas", (0, 0, 0), a * .5, al, track=2); text(c, st, x, yy, z, "bebas", (255, 255, 255), a, al, track=2)
+                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 40, 24, "interB", (235, 240, 250), a * .9, al, track=4)
+            else:
+                for k, st in enumerate(pl["stat"][:3]): yy += 56 if k == 0 else 44; text(c, st, x, yy, 50 if k == 0 else 40, "bebas", (255, 255, 255), a * .95, al, track=2)
+                text(c, pl.get("tag", "2026 · OUR DATA"), x, yy + 40, 22, "interB", (225, 230, 245), a * .85, al, track=4)
+    words(p1, "a", txt_old * pin, False); words(p2, "b", txt_old * pin, False); words(p2, "a", txt_new, True); words(p1, "b", txt_new, True)
+    if not p2 and txt_new > 0:                                           # one-way deal: nothing comes back to the sending side
+        T = A; text(c, s.get("one_way_text", "NOTHING BACK · A CASH DEAL"), CXA if long else 40, 260 if long else 330, 70, "bebas", (255, 255, 255), txt_new, "c" if long else "l", track=4)
+    for side, T in (("a", A), ("b", B)):                                   # team names: top corner of each half (vertical: inside the safe area)
+        if long: text(c, T["name"], 60 if side == "a" else W - 60, 52, 34, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6) if False else None
+        else: text(c, T["name"], 40 if side == "a" else W - 40, 306 if side == "a" else 1135, 30, "interB", (255, 255, 255), .85 * pin, "l" if side == "a" else "r", track=6)
+    if s.get("label"):
+        z = 40 if long else 34; lw = twidth(s["label"], z, "bebas", 4) + 50
+        lx, ly = ((W - lw) / 2, 22) if long else (36, 962)
+        rrect(c, lx, ly, lw, 62, 31, GOLD, pin); text(c, s["label"], lx + lw / 2, ly + 46, z, "bebas", NAVY_, pin, "c", track=4)
+    if stamp_in > 0 and stamp_out > 0:
+        z = 230 * (1.25 - .25 * stamp_in); text(c, s.get("stamp", "SWAP"), W / 2 + (30 if long else 0), H / 2 + (80 if long else 20), z, "bebas", GOLD, stamp_in * stamp_out, "c", track=8, glow=24)
+    if s.get("fee") and txt_new > 0:
+        fz = 56; fw = twidth(s["fee"], fz, "bebas", 3) + 70; fx, fy = ((W - fw) / 2, 100) if long else (W - 36 - fw, 920)
+        rrect(c, fx, fy, fw, 84, 30, GOLD, txt_new); text(c, s["fee"], fx + fw / 2, fy + 60, fz, "bebas", NAVY_, txt_new, "c", track=3)
+
+
 def sc_field(c, g, t, D, s):
     head(c, g, t, s)
     c.save()
@@ -539,17 +637,83 @@ def sc_field(c, g, t, D, s):
     c.restore()
 
 
+_YT_LOGO = {}
+
+
+def _yt_logo(kind="red"):
+    if kind not in _YT_LOGO:
+        _YT_LOGO[kind] = skia.Image.open(os.path.join(ROOT, "brand", f"youtube_logo_{kind}.png"))
+    return _YT_LOGO[kind]
+
+
+def _cta_youtube(c, g, t, y, o):
+    """Vertical end card that points to YouTube. Uses the official YouTube logo from brand/ (supplied by the owner).
+    o: {"label": "THE THIRD MAN", "handle": "@thethirdman_angle", "bio": "LINK IN BIO" | None}"""
+    p1 = eback(prog(t, 1.2, 1.8))
+    if p1 > 0:
+        img = _yt_logo("red"); lw = 300; lh = lw * img.height() / img.width(); cy = y + 172
+        c.save(); c.translate(g.cx, cy); sc = clamp(p1, 0, 1.12) * (1 + .02 * math.sin(max(0, t - 2) * 5)); c.scale(sc, sc)
+        c.drawImageRect(img, skia.Rect.MakeXYWH(-lw / 2, -lh / 2, lw, lh), skia.SamplingOptions(skia.FilterMode.kLinear), skia.Paint(Alphaf=clamp(p1)))
+        c.restore()
+    p2 = eo(prog(t, 1.6, 2.2))
+    text(c, o.get("label", "THE THIRD MAN"), g.cx, y + 368, 96, "bebas", (255, 255, 255), p2, "c", track=3)
+    if o.get("handle"): text(c, o["handle"], g.cx, y + 430, 42, "interB", (255, 200, 40), p2, "c", track=2)
+    if o.get("sub"): text(c, o["sub"], g.cx, y + 482, 28, "interB", (225, 230, 240), p2, "c", track=4)
+    p3 = eback(prog(t, 2.0, 2.6))
+    if o.get("bio") and p3 > 0:
+        lab = o["bio"]; w = twidth(lab, 44, "bebas", 4) + 150; cy = y + 590
+        c.save(); c.translate(g.cx, cy); s_ = clamp(p3, 0, 1.1); c.scale(s_, s_)
+        rrect(c, -w / 2, -48, w, 96, 48, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=(255, 200, 40), sa=clamp(p3))
+        ar = skia.Path(); ax = -w / 2 + 52                                                        # up arrow: the bio link sits above the post
+        ar.moveTo(ax, -26); ar.lineTo(ax - 20, 0); ar.lineTo(ax - 7, 0); ar.lineTo(ax - 7, 24); ar.lineTo(ax + 7, 24); ar.lineTo(ax + 7, 0); ar.lineTo(ax + 20, 0); ar.close()
+        c.drawPath(ar, paint((255, 200, 40), clamp(p3)))
+        text(c, lab, 38, 15, 44, "bebas", (255, 255, 255), clamp(p3), "c", track=4)
+        c.restore()
+
+
+def _cta_long_youtube(c, g, t, s):
+    o = s["yt"]; gfx.logo_lockup(c, g.cx, 110, 80, eo(prog(t, 0, .5)), "c"); y = 190
+    for i, ln in enumerate(s["lines"]):
+        tt = ln["t"] if isinstance(ln, dict) else ln; gold = isinstance(ln, dict) and ln.get("c") == "gold"
+        sz = fit(tt, g.cw * .8, 95, "bebas", 2); y += sz * .95; p = eo(prog(t, .1 + i * .15, .6 + i * .15))
+        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", (255, 200, 40) if gold else INK, p, "c", track=2)
+    p1 = eback(prog(t, 1.0, 1.6))
+    if p1 > 0:
+        img = _yt_logo("red"); lw = 250; lh = lw * img.height() / img.width(); cy = y + 130
+        c.save(); c.translate(g.cx, cy); sc = clamp(p1, 0, 1.1); c.scale(sc, sc)
+        c.drawImageRect(img, skia.Rect.MakeXYWH(-lw / 2, -lh / 2, lw, lh), skia.SamplingOptions(skia.FilterMode.kLinear), skia.Paint(Alphaf=clamp(p1)))
+        c.restore()
+    p2 = eo(prog(t, 1.4, 2.0))
+    text(c, o.get("label", "THE THIRD MAN"), g.cx, y + 290, 78, "bebas", INK, p2, "c", track=3)
+    if o.get("handle"): text(c, o["handle"], g.cx, y + 345, 38, "interB", (255, 200, 40), p2, "c", track=2)
+    if o.get("sub"): text(c, o["sub"], g.cx, y + 395, 26, "interB", MUTED, p2, "c", track=4)
+    p3 = eback(prog(t, 1.8, 2.4))
+    if o.get("bio") and p3 > 0:
+        lab = o["bio"]; w = twidth(lab, 40, "bebas", 4) + 140; cy = y + 470
+        c.save(); c.translate(g.cx, cy); s_ = clamp(p3, 0, 1.1); c.scale(s_, s_)
+        rrect(c, -w / 2, -42, w, 84, 42, (8, 14, 32), .78 * clamp(p3), stroke=3, scol=(255, 200, 40), sa=clamp(p3))
+        text(c, lab, 0, 14, 40, "bebas", (255, 255, 255), clamp(p3), "c", track=4)
+        c.restore()
+
+
 def sc_cta(c, g, t, D, s):
     long = g.fmt == "long"
+    if s.get("yt") and long:                          # Instagram long version: point viewers to YouTube for more detailed breakdowns
+        _cta_long_youtube(c, g, t, s); return
     gfx.logo_lockup(c, g.cx, 250 if long else 560, 110 if long else 120, eo(prog(t, 0, .5)), "c")
     lines = s["lines"]; y = (430 if long else 780)
+    if s.get("yt") and not long:
+        _panel_card(c, g.x0, 690, g.cw, 1040 if s["yt"].get("bio") else (900 if s["yt"].get("sub") else 800), eo(prog(t, 0, .5)))        # keeps the text readable over the pitch
     for i, ln in enumerate(lines):
         tt = ln["t"] if isinstance(ln, dict) else ln
         cc = C(ln.get("c")) if isinstance(ln, dict) else INK
+        if s.get("yt") and not long: cc = (255, 200, 40) if (isinstance(ln, dict) and ln.get("c") == "gold") else (255, 255, 255)     # the YouTube end card sits on a dark panel on every theme
         sz = fit(tt, g.cw, 150, "bebas", 2)
         p = eo(prog(t, .1 + i * .15, .6 + i * .15))
         y += sz * .9
-        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", cc, p, "c", track=2, glow=12 if cc == GOLD else 0)
+        text(c, tt, g.cx, y + (1 - p) * 40, sz, "bebas", cc, p, "c", track=2, glow=12 if (cc == GOLD or cc == (255, 200, 40)) else 0)
+    if s.get("yt") and not long:                      # vertical end card: send viewers (Instagram especially) to YouTube
+        _cta_youtube(c, g, t, y, s["yt"]); return
     pill = s.get("pill") or ("SUBSCRIBE" if long else "FULL BREAKDOWN ON THE CHANNEL")
     if long:
         p3 = eo(prog(t, 1.0, 1.6))
@@ -624,6 +788,19 @@ def captions(c, g, t, grps):
 
 
 # ------------------------------------------------------------------ voice
+def _vo_pool():
+    """hash -> (vo dir, paragraph index, meta entry) over every narration already generated under out/*/*/vo."""
+    import glob
+    pool = {}
+    for mp in glob.glob(f"{ROOT}/out/*/*/vo/meta.json") + glob.glob(f"{ROOT}/out/*/vo/meta.json"):
+        d = os.path.dirname(mp)
+        try: ms = json.load(open(mp))
+        except Exception: continue
+        for j, e in enumerate(ms):
+            if e.get("hash") and os.path.exists(f"{d}/p{j}.mp3"): pool.setdefault(e["hash"], (d, j, e))
+    return pool
+
+
 def tts(paras, outdir, fmt):
     os.makedirs(outdir, exist_ok=True)
     mpath = f"{outdir}/meta.json"
@@ -633,6 +810,21 @@ def tts(paras, outdir, fmt):
         h = hashlib.md5((p + VOICE + str(TEMPO[fmt])).encode()).hexdigest()
         if i < len(old) and old[i].get("hash") == h and os.path.exists(f"{outdir}/p{i}.mp3"):
             meta.append(old[i]); continue
+        pool = _vo_pool()
+        for t_old in sorted({t for t in TEMPO.values() if t != TEMPO[fmt]}):     # same text and voice narrated for the other format (other tempo): reuse the raw audio, re-time it
+            h2 = hashlib.md5((p + VOICE + str(t_old)).encode()).hexdigest(); hit2 = pool.get(h2)
+            if hit2 and os.path.exists(f"{hit2[0]}/raw{hit2[1]}.mp3") and os.path.abspath(hit2[0]) != os.path.abspath(outdir):
+                shutil.copyfile(f"{hit2[0]}/raw{hit2[1]}.mp3", f"{outdir}/raw{i}.mp3")
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{outdir}/raw{i}.mp3", "-af", f"atempo={TEMPO[fmt]}", "-b:a", "192k", f"{outdir}/p{i}.mp3"], check=True)
+                k = t_old / TEMPO[fmt]; dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f"{outdir}/p{i}.mp3"]))
+                meta.append({"hash": h, "dur": dur, "words": [{"w": w["w"], "s": w["s"] * k, "e": w["e"] * k} for w in hit2[2]["words"]]})
+                json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice re-timed for paragraph {i} (from {hit2[0]}, tempo {t_old} -> {TEMPO[fmt]})"); break
+        else: hit2 = None
+        if hit2: continue
+        hit = pool.get(h)                      # same text, voice and tempo already narrated in another video: copy it (saves ElevenLabs credits)
+        if hit and os.path.abspath(hit[0]) != os.path.abspath(outdir):
+            shutil.copyfile(f"{hit[0]}/p{hit[1]}.mp3", f"{outdir}/p{i}.mp3"); meta.append(hit[2])
+            json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice reused for paragraph {i} (from {hit[0]})"); continue
         body = {"text": p, "model_id": "eleven_multilingual_v2",
                 "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True},
                 "previous_text": paras[i - 1] if i else None, "next_text": paras[i + 1] if i + 1 < len(paras) else None}
@@ -692,7 +884,10 @@ def breathe(outdir, i, m, fmt):
     least a natural pause, and cut hesitations inside phrases (e.g. after a Devanagari name) down to a normal gap.
     Silence is only removed where the audio really is quiet, so no part of a word is ever cut."""
     out = f"{outdir}/b{i}.wav"
-    if m.get("bv") == BREATH_V and os.path.exists(out): return m
+    if m.get("bv") == BREATH_V and os.path.exists(out):
+        import wave as _w
+        with _w.open(out) as _f: _d = _f.getnframes() / _f.getframerate()
+        if abs(_d - m["dur"]) < .08: return m          # cached clip belongs to this paragraph (a clip left over from another paragraph at the same index has a different length)
     raw_words = m.get("words_raw", m["words"]); raw_dur = m.get("dur_raw", m["dur"])
     pcm = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", f"{outdir}/p{i}.mp3", "-f", "f32le", "-ac", "1", "-ar", "44100", "-"])
     a = np.frombuffer(pcm, np.float32); SR = 44100
@@ -731,11 +926,11 @@ SCENE_GAP = {"long": {".": .55, "!": .55, "?": .75, "default": .3}, "short": {".
 def plan(spec, fmt, base):
     meta = json.load(open(f"{base}/vo/meta.json"))
     n = len(meta)
-    lead = [(.5 if fmt == "long" else .12)] + [(.12 if fmt == "long" else .08)] * (n - 1)
+    lead = [(.5 if fmt == "long" else .12)] + [spec.get(fmt + "_lead", (.12 if fmt == "long" else .08))] * (n - 1)       # spec "<fmt>_lead": the new scene shows this long before its voice starts
     tail = []
     for i in range(n - 1):
         last = meta[i]["words"][-1]["w"].rstrip("\"'”’")[-1:]
-        want = SCENE_GAP[fmt].get(last, SCENE_GAP[fmt]["default"])
+        want = {**SCENE_GAP[fmt], **spec.get(fmt + "_gap", {})}.get(last) or {**SCENE_GAP[fmt], **spec.get(fmt + "_gap", {})}["default"]       # spec "<fmt>_gap": {".": s, "default": s} overrides the scene gaps
         edges = (meta[i]["dur"] - meta[i]["words"][-1]["e"]) + meta[i + 1]["words"][0]["s"]
         tail.append(max(.03, want - edges - lead[i + 1]))
     tail.append(2.4 if fmt == "long" else 1.8)
@@ -777,7 +972,7 @@ def draw(c, g, spec, scenes, i, lt, D, T, total, frame, lead, grps, words=None):
     global VENUE
     VENUE = spec.get("venue") or {}
     if words is not None: autocue(s, words, lead)
-    if s.get("type") == "stage": stage_events(s, D, words, lead)
+    if s.get("type") in ("stage", "cam"): stage_events(s, D, words, lead)
     _looks.resolve_words(s, words, lead)
     film = _looks.film_on(spec, s)
     if film: _looks.film_begin(c)
@@ -879,7 +1074,8 @@ def mix(spec, fmt, base, total, lead, starts, n):
     flt.append("[vo]asplit=2[vo1][vosc]")
     trim = "atrim=start=9,asetpts=PTS-STARTPTS," if fmt == "short" else ""
     flt.append(f"[{n}:a]{trim}volume=0.13[mus]")
-    flt.append("[mus][vosc]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=550[duck]")
+    dk = spec.get(fmt + "_duck", {})                  # spec "<fmt>_duck": {"ratio","attack","release"}: gentler ducking stops the music pumping between scenes
+    flt.append(f"[mus][vosc]sidechaincompress=threshold=0.03:ratio={dk.get('ratio', 6)}:attack={dk.get('attack', 40)}:release={dk.get('release', 550)}[duck]")
     extra, mixin = [], ["[vo1]", "[duck]"]
     if sfx:
         ms = int(starts[1] * 1000)
@@ -928,6 +1124,9 @@ def build(spec_path, fmt):
     import voice_lint
     errs = voice_lint.check_spec(spec, (fmt,))
     if errs: raise SystemExit("pronunciation rules (run python3 voice_lint.py --fix):\n  " + "\n  ".join(errs))
+    from dataops import verify as _verify                                   # data gate: every claim needs two sources or an on-screen 'in our archive' label
+    _m = _verify.gate(spec)
+    if _m: raise SystemExit("data verification gate: " + _m)
     apply_theme(theme_for(spec, fmt))
     base = f"{ROOT}/out/{slug}/{fmt}"; os.makedirs(base, exist_ok=True)
     scenes = spec[fmt]
@@ -953,9 +1152,10 @@ def build(spec_path, fmt):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{base}/video.mp4", "-i", f"{base}/mix.m4a", "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "copy", "-shortest", f"{base}/main.mp4"], check=True)
     outro = f"{ROOT}/out/outro_{fmt}_{gfx.THEME}.mp4"
-    if not os.path.exists(outro): render_outro(fmt)
+    use_outro = spec.get("outro", True)      # a spec for another channel sets "outro": false (the logo outro is The Third Man's)
+    if use_outro and not os.path.exists(outro): render_outro(fmt)
     with open(f"{base}/final.txt", "w") as f:
-        f.write(f"file '{base}/main.mp4'\nfile '{outro}'\n")
+        f.write(f"file '{base}/main.mp4'\n" + (f"file '{outro}'\n" if use_outro else ""))
     name = spec["files"][fmt]
     final = f"{ROOT}/deliver/{slug}/{name}.mp4"; os.makedirs(os.path.dirname(final), exist_ok=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{base}/final.txt", "-c", "copy", "-movflags", "+faststart", final], check=True)
@@ -971,10 +1171,11 @@ def build(spec_path, fmt):
 # ------------------------------------------------------------------ animated logo outro
 def outro_frame(c, g, t):
     gfx.background(c, 200 + t)
+    BF = "brand" if gfx.THEME == "plate" else "bebas"                        # the wordmark keeps the brand face on the wide serif plate theme
     long = g.fmt == "long"
     size = 300 if long else 360
     if long:
-        ww = twidth("THIRD MAN", 190, "bebas", 3)
+        ww = twidth("THIRD MAN", 190, BF, 3)
         mx, my = g.W / 2 - (.12 * size + ww) / 2, g.H / 2
     else:
         mx, my = g.W / 2, 800
@@ -1012,11 +1213,11 @@ def outro_frame(c, g, t):
         if long:
             x = mx + size * .62; off = (1 - pw) * 60
             text(c, "THE", x + off, my - 60, 52, "interB", MUTED, pw, track=20)
-            text(c, "THIRD MAN", x + off, my + 90, 190, "bebas", INK, pw, track=3)
+            text(c, "THIRD MAN", x + off, my + 90, 190, BF, INK, pw, track=3)
         else:
             off = (1 - pw) * 50
             text(c, "THE", g.W / 2, my + 300 + off, 48, "interB", MUTED, pw, "c", track=20)
-            text(c, "THIRD MAN", g.W / 2, my + 470 + off, 190, "bebas", INK, pw, "c", track=3)
+            text(c, "THIRD MAN", g.W / 2, my + 470 + off, 190, BF, INK, pw, "c", track=3)
     ptg = eo(prog(t, 2.0, 2.6))
     if ptg > 0:
         tg = "CRICKET FROM A DIFFERENT ANGLE"
@@ -1087,9 +1288,14 @@ def thumb(spec_path):
     for fmt, (OW, OH) in [("long", (1280, 720)), ("short", (1080, 1920))]:
         apply_theme(theme_for(spec, fmt)); g = setup(fmt)
         arr = np.zeros((OH, OW, 4), np.uint8); sf = skia.Surface(arr); c = sf.getCanvas()
+        long = fmt == "long"
+        if not long:                                         # vertical cover: one consistent system for every series (covers.py)
+            import covers
+            arr = covers.render(spec)
+            name = spec["files"][fmt]; path = f"{outdir}/{name}_cover.jpg"
+            skia.Image.fromarray(arr, colorType=skia.kRGBA_8888_ColorType).save(path, skia.kJPEG, 92); res.append(path); continue
         c.save(); c.scale(OW / g.W, OH / g.H)
         gfx.background(c, 3.0)
-        long = fmt == "long"
         # hero (big number / symbol) with a glow plate
         hero = th.get("hero"); hc = C(th.get("heroc", "gold"))
         if long:
@@ -1591,6 +1797,25 @@ def _pose(pose, t):
             j.update(head=(0, -86.5), shL=(-14, -74), shR=(14, -74), elL=(-16, -60), elR=(16, -60), hL=(-15, -47), hR=(15, -47),
                      bat=((15, -47), (.5, 1)))
         return j
+    if pose in ("point", "helmet", "arms_wide", "kneel", "catch"):
+        j = dict(view="front", hipL=(-7, -48), hipR=(7, -48), kneeL=(-8, -26), kneeR=(8, -26), ankL=(-9, -5), ankR=(9, -5),
+                 shL=(-15, -77), shR=(15, -77), head=(0, -90), bob=S(t * 2.1) * .35, bat=None)
+        if pose == "point":          # right arm out, finger up and forward; left hand on hip
+            k = S(t * 2.4) * 1.2
+            j.update(elR=(25, -84), hR=(35, -98 + k), elL=(-24, -62), hL=(-14, -50), head=(2, -91))
+        elif pose == "helmet":       # touches the helmet and looks to the sky: the milestone gesture
+            k = S(t * 2) * 1
+            j.update(elR=(21, -86), hR=(7, -94 + k), elL=(-17, -61), hL=(-16, -50), head=(0, -92), bat=((-16, -50), (.2, 1)))
+        elif pose == "arms_wide":    # soak it in
+            k = S(t * 2.2) * 1.5
+            j.update(elL=(-30, -78 + k), hL=(-45, -76 + k), elR=(30, -78 - k), hR=(45, -76 - k), head=(0, -92), ankL=(-12, -5), ankR=(12, -5))
+        elif pose == "kneel":        # knee slide
+            j.update(hipL=(-6, -40), hipR=(7, -40), kneeL=(-9, -12), ankL=(-14, -4), kneeR=(14, -27), ankR=(14, -5),
+                     shL=(-15, -69), shR=(15, -69), head=(0, -82), elL=(-26, -86), hL=(-30, -104), elR=(26, -86), hR=(30, -104), bob=0)
+        else:                        # catch: both hands cupped overhead
+            k = S(t * 3) * 1.2
+            j.update(elL=(-17, -92), hL=(-8, -108 + k), elR=(17, -92), hR=(8, -108 + k), head=(0, -91))
+        return j
     # side-on views, facing +x (to the bowler)
     j = dict(view="side", bob=0.0)
     if pose == "stance":
@@ -1620,6 +1845,30 @@ def _pose(pose, t):
         j.update(hb=hip, hf=(hip[0] + 2, hip[1]), kb=legs[1][0], ab=legs[1][1], kf=legs[0][0], af=legs[0][1],
                  sb=(sh[0] - 2, sh[1]), sf=(sh[0] + 2, sh[1]), head=(sh[0] + 6, sh[1] - 12),
                  eb=arms[1][0], wb=arms[1][1], ef=arms[0][0], wf=arms[0][1], bat=(arms[0][1], (1, .55)))
+    elif pose == "defend":       # forward defence: head over the ball, bat beside the front pad
+        j.update(ab=(-14, -5), af=(17, -5), kb=(-7, -25), kf=(13, -27), hb=(-1, -45), hf=(3, -45), sb=(6, -71), sf=(10, -71),
+                 head=(17, -83), eb=(8, -60), ef=(18, -62), wb=(15, -52), wf=(17, -54), bat=((16, -53), (.1, 1)))
+    elif pose == "cut":          # square cut: weight back, bat sweeping across at shoulder height
+        j.update(ab=(-18, -5), kb=(-10, -25), hb=(-3, -47), af=(12, -6), kf=(5, -27), hf=(2, -47), sb=(-1, -75), sf=(3, -75),
+                 head=(5, -88), eb=(6, -73), ef=(14, -76), wb=(19, -80), wf=(20, -82), bat=((20, -81), (1, .3)))
+    elif pose == "sweep":        # sweep: front knee down, bat low and across
+        j.update(ab=(-18, -3), kb=(-13, -14), hb=(-4, -30), af=(14, -3), kf=(10, -11), hf=(3, -32), sb=(6, -57), sf=(10, -56),
+                 head=(16, -67), eb=(10, -44), ef=(15, -44), wb=(18, -32), wf=(19, -33), bat=((18, -32), (1, .45)))
+    elif pose == "flick":        # whip off the pads, bat finishing high behind
+        j.update(ab=(-12, -5), kb=(-6, -26), hb=(-1, -47), af=(14, -5), kf=(10, -27), hf=(2, -47), sb=(1, -76), sf=(4, -76),
+                 head=(8, -89), eb=(1, -70), ef=(8, -76), wb=(-4, -80), wf=(0, -84), bat=((0, -84), (-.7, -.7)))
+    elif pose == "loft":         # lofted drive: weight back, bat finishing high and long
+        j.update(ab=(-15, -4), kb=(-8, -25), hb=(-2, -46), af=(14, -5), kf=(11, -27), hf=(2, -46), sb=(2, -75), sf=(6, -76),
+                 head=(10, -89), eb=(7, -86), ef=(13, -90), wb=(15, -101), wf=(16, -103), bat=((16, -102), (.7, -.7)))
+    elif pose == "spin":         # spinner's delivery: compact, high front arm
+        j.update(ab=(-10, -5), kb=(-5, -26), hb=(0, -47), af=(12, -5), kf=(7, -27), hf=(2, -47), sb=(0, -76), sf=(3, -76),
+                 head=(6, -89), eb=(3, -92), wb=(5, -108), ef=(13, -72), wf=(19, -68), ball=True)
+    elif pose == "keeper":       # wicketkeeper crouch
+        j.update(ab=(-8, -3), kb=(-8, -16), hb=(-3, -28), af=(8, -3), kf=(9, -16), hf=(2, -28), sb=(5, -52), sf=(9, -52),
+                 head=(16, -63), eb=(11, -40), ef=(17, -40), wb=(20, -26), wf=(21, -27))
+    elif pose == "dive":         # fielder at full stretch
+        j.update(hb=(-20, -22), hf=(-12, -24), kb=(-30, -18), ab=(-42, -14), kf=(-26, -22), af=(-38, -22), sb=(8, -30), sf=(12, -31),
+                 head=(24, -33), eb=(20, -30), wb=(34, -34), ef=(24, -28), wf=(36, -31), bob=-12)
     elif pose == "bowl":
         k = S(t * 2) * 1.5
         j.update(ab=(-15, -6), kb=(-9, -25), hb=(-1, -47), af=(16, -5), kf=(8, -26), hf=(1, -47), sb=(-1, -76), sf=(2, -76),
@@ -1821,7 +2070,7 @@ def stage_panel(c, g, t, D, s, a=1.0):
             text(c, vs, cx, y + 190, fit(vs, cw * .42, 170, "bebas"), "bebas", cc, q, "c", glow=12 if side.get("c") == "gold" else 0)
             for j, l in enumerate(wrap(side["l"].upper(), cw * .4, 26, "interB")):
                 text(c, l, cx, y + 245 + j * 32, 26, "interB", MUTED, q, "c", track=3)
-        text(c, "VS", g.cx, y + 175, 44, "bebas", MUTED, pa, "c")
+        text(c, p.get("sep", "VS"), g.cx, y + 175, 44, "bebas", MUTED, pa, "c")
     elif kind == "score":          # a match card: event, then the innings
         _panel_card(c, x0, y, cw, 300, pa)
         text(c, p["event"].upper(), g.cx, y + 58, fit(p["event"].upper(), cw - 60, 30, "interB", 4), "interB", MUTED, pa, "c", track=4)
@@ -1868,7 +2117,7 @@ def _fig_h(g, A): return (470 if g.fmt == "short" else 520) * A.get("scale", 1.0
 def _ball_path(g, s, A, ax, ay, hh, tc, t):
     """Ball position (x, y, radius) at time t, or None; plus the contact point."""
     b = s["ball"]; side = s.get("view") == "side"; d = A.get("dir", 1); u = hh / 100
-    J = _pose(A.get("hit", "drive"), 0) if A.get("hit") in ("pull",) else None
+    J = _pose(A.get("hit", "drive"), 0) if A.get("hit") in ("pull", "cut", "sweep", "flick", "loft", "defend") else None
     if J and J.get("bat"):                            # meet the ball at the sweet spot of the shot's bat
         (hx, hy), (dx, dy) = J["bat"]; L0 = math.hypot(dx, dy); dx, dy = dx / L0, dy / L0
         kx, ky = hx - dx * 3.7 + dx * 33, hy - dy * 3.7 + dy * 33
@@ -1911,7 +2160,11 @@ def sc_stage(c, g, t, D, s):
     av = s.get("avatars", [])
     A0 = av[0] if av else {}
     fx = g.W * A0.get("x2", A0.get("x", .5)); fy = _feet(g) - _fig_h(g, A0) * .55
+    FX = s.get("fx", [])
+    tcs = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
     c.save(); c.translate(fx, fy); c.scale(z, z); c.translate(-fx, -fy)          # camera
+    if "shake" in FX and tcs is not None and tcs <= t < tcs + .6:               # impact shake
+        a_ = 14 * math.exp(-(t - tcs) * 9); c.translate(a_ * math.sin(t * 90), a_ * .6 * math.cos(t * 71))
     if gfx.THEME in ("stadium", "retro", "card", "lab"):
         stadium(c, t + 3, 1.0, view, _feet(g), tuple(s.get("stumps", (.2, .9))), far=True)
     tc = s["ball"].get("_t", D * s["ball"].get("at", .5)) if s.get("ball") else None
@@ -1924,6 +2177,12 @@ def sc_stage(c, g, t, D, s):
         hh = _fig_h(g, A)
         pose = A.get("pose", "stand")
         if tc is not None and k == ballk and A.get("hit") and t >= tc - .08: pose = A["hit"]
+        if "spot" in FX and k == 0: _fx_spot(c, g, ax, ay, hh, q, t)
+        if A.get("ghost") and tc is not None and k == ballk and A.get("hit") and tc - .1 <= t < tc + .6:      # motion afterimages
+            for j in (4, 3, 2, 1):
+                tt = t - j * .05; ps = A["hit"] if tt >= tc - .08 else A.get("pose", "stand")
+                avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60) - A.get("dir", 1) * j * 5, ay, hh, A.get("kit", "IND"), A.get("number"), ps, tt + k, q * (.05 + .07 * (5 - j)),
+                       dir=A.get("dir", 1), cap=A.get("cap"), pads=A.get("pads"), bat=A.get("bat"))
         avatar(c, ax + (1 - q) * (60 if x0_ > .5 else -60), ay, hh, A.get("kit", "IND"), A.get("number"), pose, t + k, q,
                dir=A.get("dir", 1), cap=A.get("cap"), pads=A.get("pads"), bat=A.get("bat"))
         if tc is not None and k == ballk:
@@ -1947,7 +2206,45 @@ def sc_stage(c, g, t, D, s):
                 f = (t - tc_f) / .3; pp = gfx.paint((255, 255, 255), .9 * (1 - f)); pp.setStyle(skia.Paint.kStroke_Style); pp.setStrokeWidth(6)
                 c.drawCircle(K[0], K[1], 20 + 120 * f, pp)
     c.restore()
+    if FX: _fx_screen(c, g, t, D, s, FX, tcs)
     stage_panel(c, g, t, D, s)
+
+
+def _fx_spot(c, g, ax, ay, hh, q, t):
+    """A soft stadium spotlight cone behind the figure."""
+    pth = skia.Path(); pth.moveTo(ax - hh * .08, -20); pth.lineTo(ax + hh * .08, -20); pth.lineTo(ax + hh * .62, ay + 10); pth.lineTo(ax - hh * .62, ay + 10); pth.close()
+    pp = skia.Paint(); pp.setShader(skia.GradientShader.MakeLinear([(0, 0), (0, ay)], [skia.Color(255, 255, 255, int(70 * q)), skia.Color(255, 255, 255, int(8 * q))]))
+    c.drawPath(pth, pp)
+    c.drawOval(skia.Rect.MakeXYWH(ax - hh * .55, ay - hh * .035, hh * 1.1, hh * .09), gfx.paint((255, 255, 255), .16 * q))
+
+
+def _fx_screen(c, g, t, D, s, FX, tcs):
+    """Screen-space effects: vignette, impact flash, speed lines, confetti, sparks."""
+    W, H = g.W, g.H
+    if "vignette" in FX:
+        pp = skia.Paint(); pp.setShader(skia.GradientShader.MakeRadial((W / 2, H * .55), H * .75, [skia.Color(0, 0, 0, 0), skia.Color(0, 0, 0, 120)], [.55, 1]))
+        c.drawRect(skia.Rect.MakeWH(W, H), pp)
+    if tcs is not None and tcs - .02 <= t < tcs + .5:
+        f = (t - tcs) / .5
+        if "flash" in FX and t < tcs + .12: c.drawRect(skia.Rect.MakeWH(W, H), gfx.paint((255, 255, 255), .45 * (1 - (t - tcs) / .12)))
+        if "speed" in FX:                                                           # radial streaks out from the contact point
+            cx_, cy_ = W * .5, H * .55
+            for i in range(26):
+                ang = i / 26 * math.tau + .3; r0 = 160 + 420 * f; r1 = r0 + 220 + 140 * ((i * 7) % 5) / 5
+                pp = gfx.paint((255, 255, 255), .5 * (1 - f), stroke=3); c.drawLine(cx_ + math.cos(ang) * r0, cy_ + math.sin(ang) * r0, cx_ + math.cos(ang) * r1, cy_ + math.sin(ang) * r1, pp)
+        if "sparks" in FX:
+            for i in range(22):
+                ang = ((i * 2.399) % math.tau); v = 260 + (i * 53) % 340
+                x = W * .5 + math.cos(ang) * v * f; y = H * .55 + math.sin(ang) * v * f + 380 * f * f
+                c.drawCircle(x, y, 5 * (1 - f) + 1, gfx.paint((255, 214, 60), 1 - f))
+    if "confetti" in FX:
+        t0 = D * s.get("fx_at", .15)
+        if t > t0:
+            cols = [(255, 214, 0), (255, 255, 255), (230, 60, 70), (60, 160, 255)]
+            for i in range(70):
+                rx = (math.sin(i * 12.9898) * 43758.5453) % 1; ry = (math.sin(i * 78.233) * 12543.1) % 1; rs = (math.sin(i * 39.346) * 9871.7) % 1
+                x = rx * W + math.sin(t * 3 + i) * 30; y = -60 + ((t - t0) * (260 + rs * 360) + ry * H) % (H + 120)
+                c.save(); c.translate(x, y); c.rotate(math.degrees(t * (4 + rs * 6) + i)); c.drawRect(skia.Rect.MakeXYWH(-7, -4, 14 * (.5 + rs * .5), 8), gfx.paint(cols[i % 4], .95)); c.restore()
 
 
 def stage_events(s, D, words, lead):
@@ -1971,6 +2268,11 @@ def sfx_events(spec, fmt, meta, lead, durs, starts):
             if e.get("word"):
                 tm = next((lead[i] + w["s"] for w in words if _norm(w["w"]) == _norm(e["word"])), tm)
             ev.append([T0 + tm, e["kind"], e.get("gain", 1)])
+        if s.get("type") == "cam":
+            stage_events(s, D, words, lead[i]); ev += _broadcast.sfx(s, D, T0)
+            p = s.get("panel", {})
+            if p: ev.append([T0 + max(0, D * p.get("at", .05) - .1), "whoosh", 1])
+            continue
         if s.get("type") != "stage":
             _looks.resolve_words(s, words, lead[i]); ev += _looks.extra_sfx(s, D, T0)
             if s.get("type") in CLASSIC_DRIFT:             # classic scenes: a soft whoosh in, a tick when a big number lands
@@ -2038,6 +2340,7 @@ import voice_lint as _vl
 SHOW.update({k: v for k, v in _vl.show_map().items() if k not in SHOW})
 import looks as _looks
 _looks.install(sys.modules[__name__])
+import broadcast as _broadcast; _broadcast.install(sys.modules[__name__])
 CLASSIC_DRIFT = {"statement", "bignum", "bars", "compare", "list", "timeline", "stats", "scorecard", "line", "gauge", "over", "swap", "field", "fieldplan", "trajectory", "matchup"}
 CAPW = {"v2": 34, "lab": 60, "serif": 50}
 

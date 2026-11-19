@@ -1,0 +1,525 @@
+{
+ "matches_per_season": {
+  "2008": 58,
+  "2009": 57,
+  "2010": 60,
+  "2011": 73,
+  "2012": 74,
+  "2013": 76,
+  "2014": 60,
+  "2015": 59,
+  "2016": 60,
+  "2017": 59,
+  "2018": 60,
+  "2019": 60,
+  "2020": 60,
+  "2021": 60,
+  "2022": 74,
+  "2023": 74,
+  "2024": 71,
+  "2025": 74,
+  "2026": 74
+ },
+ "franchises": {
+  "Gujarat Titans": {
+   "seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 4,
+   "W": 37,
+   "L": 23,
+   "decided": 60,
+   "win_pct": 61.7,
+   "playoff_seasons": 3,
+   "finals": 2,
+   "titles": 1
+  },
+  "Royal Challengers Bengaluru": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 18,
+   "W": 132,
+   "L": 132,
+   "decided": 264,
+   "win_pct": 50.0,
+   "playoff_seasons": 10,
+   "finals": 4,
+   "titles": 1
+  },
+  "Mumbai Indians": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 18,
+   "W": 151,
+   "L": 122,
+   "decided": 273,
+   "win_pct": 55.3,
+   "playoff_seasons": 11,
+   "finals": 6,
+   "titles": 5
+  },
+  "Sunrisers Hyderabad": {
+   "seasons": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 13,
+   "W": 93,
+   "L": 98,
+   "decided": 191,
+   "win_pct": 48.7,
+   "playoff_seasons": 7,
+   "finals": 3,
+   "titles": 1
+  },
+  "Chennai Super Kings": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 16,
+   "W": 142,
+   "L": 108,
+   "decided": 250,
+   "win_pct": 56.8,
+   "playoff_seasons": 12,
+   "finals": 10,
+   "titles": 5
+  },
+  "Lucknow Super Giants": {
+   "seasons": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 4,
+   "W": 30,
+   "L": 27,
+   "decided": 57,
+   "win_pct": 52.6,
+   "playoff_seasons": 2,
+   "finals": 0,
+   "titles": 0
+  },
+  "Punjab Kings": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 18,
+   "W": 119,
+   "L": 139,
+   "decided": 258,
+   "win_pct": 46.1,
+   "playoff_seasons": 3,
+   "finals": 2,
+   "titles": 0
+  },
+  "Rising Pune Supergiant": {
+   "seasons": [
+    2016,
+    2017
+   ],
+   "n_seasons": 2,
+   "W": 15,
+   "L": 15,
+   "decided": 30,
+   "win_pct": 50.0,
+   "playoff_seasons": 1,
+   "finals": 1,
+   "titles": 0
+  },
+  "Delhi Capitals": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 18,
+   "W": 118,
+   "L": 140,
+   "decided": 258,
+   "win_pct": 45.7,
+   "playoff_seasons": 6,
+   "finals": 1,
+   "titles": 0
+  },
+  "Deccan Chargers": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "n_seasons": 5,
+   "W": 29,
+   "L": 46,
+   "decided": 75,
+   "win_pct": 38.7,
+   "playoff_seasons": 2,
+   "finals": 1,
+   "titles": 1
+  },
+  "Rajasthan Royals": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 16,
+   "W": 114,
+   "L": 115,
+   "decided": 229,
+   "win_pct": 49.8,
+   "playoff_seasons": 6,
+   "finals": 2,
+   "titles": 1
+  },
+  "Kolkata Knight Riders": {
+   "seasons": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_seasons": 18,
+   "W": 135,
+   "L": 124,
+   "decided": 259,
+   "win_pct": 52.1,
+   "playoff_seasons": 8,
+   "finals": 4,
+   "titles": 3
+  },
+  "Gujarat Lions": {
+   "seasons": [
+    2016,
+    2017
+   ],
+   "n_seasons": 2,
+   "W": 13,
+   "L": 16,
+   "decided": 29,
+   "win_pct": 44.8,
+   "playoff_seasons": 1,
+   "finals": 0,
+   "titles": 0
+  },
+  "Kochi Tuskers Kerala": {
+   "seasons": [
+    2011
+   ],
+   "n_seasons": 1,
+   "W": 6,
+   "L": 8,
+   "decided": 14,
+   "win_pct": 42.9,
+   "playoff_seasons": 0,
+   "finals": 0,
+   "titles": 0
+  },
+  "Pune Warriors": {
+   "seasons": [
+    2011,
+    2012,
+    2013
+   ],
+   "n_seasons": 3,
+   "W": 12,
+   "L": 33,
+   "decided": 45,
+   "win_pct": 26.7,
+   "playoff_seasons": 0,
+   "finals": 0,
+   "titles": 0
+  }
+ },
+ "csk_by_season": {
+  "2008": {
+   "P": 16,
+   "W": 9,
+   "L": 7,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 0
+  },
+  "2009": {
+   "P": 14,
+   "W": 8,
+   "L": 6,
+   "NR": 0,
+   "playoff": 1,
+   "final": 0,
+   "champ": 0
+  },
+  "2010": {
+   "P": 16,
+   "W": 9,
+   "L": 6,
+   "NR": 1,
+   "playoff": 1,
+   "final": 1,
+   "champ": 1
+  },
+  "2011": {
+   "P": 16,
+   "W": 11,
+   "L": 5,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 1
+  },
+  "2012": {
+   "P": 18,
+   "W": 10,
+   "L": 8,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 0
+  },
+  "2013": {
+   "P": 18,
+   "W": 12,
+   "L": 6,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 0
+  },
+  "2014": {
+   "P": 16,
+   "W": 10,
+   "L": 6,
+   "NR": 0,
+   "playoff": 1,
+   "final": 0,
+   "champ": 0
+  },
+  "2015": {
+   "P": 17,
+   "W": 10,
+   "L": 7,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 0
+  },
+  "2018": {
+   "P": 16,
+   "W": 11,
+   "L": 5,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 1
+  },
+  "2019": {
+   "P": 17,
+   "W": 10,
+   "L": 7,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 0
+  },
+  "2020": {
+   "P": 14,
+   "W": 6,
+   "L": 8,
+   "NR": 0,
+   "playoff": 0,
+   "final": 0,
+   "champ": 0
+  },
+  "2021": {
+   "P": 16,
+   "W": 11,
+   "L": 5,
+   "NR": 0,
+   "playoff": 1,
+   "final": 1,
+   "champ": 1
+  },
+  "2022": {
+   "P": 14,
+   "W": 4,
+   "L": 10,
+   "NR": 0,
+   "playoff": 0,
+   "final": 0,
+   "champ": 0
+  },
+  "2023": {
+   "P": 16,
+   "W": 10,
+   "L": 5,
+   "NR": 1,
+   "playoff": 1,
+   "final": 1,
+   "champ": 1
+  },
+  "2024": {
+   "P": 14,
+   "W": 7,
+   "L": 7,
+   "NR": 0,
+   "playoff": 0,
+   "final": 0,
+   "champ": 0
+  },
+  "2025": {
+   "P": 14,
+   "W": 4,
+   "L": 10,
+   "NR": 0,
+   "playoff": 0,
+   "final": 0,
+   "champ": 0
+  },
+  "2026": {
+   "P": 14,
+   "W": 6,
+   "L": 8,
+   "NR": 0,
+   "playoff": 0,
+   "final": 0,
+   "champ": 0
+  }
+ },
+ "rps_2016": {
+  "P": 14,
+  "W": 5,
+  "L": 9,
+  "NR": 0,
+  "playoff": 0,
+  "final": 0,
+  "champ": 0
+ }
+}
