@@ -1,108 +1,114 @@
 # NZ v IND, 1st Test, Day 1: script and storyboard (DRAFT for review, 19 Nov 2026)
-Long (lab look, about 857 words, ~5.5 min) and vertical Instagram/Short (lab look, about 408 words, ~160 s). Names are shown in Latin here; the build converts subcontinent names to Devanagari. Nothing is voiced or rendered until approved.
+Long (lab look, about 834 words, ~5.5 min) and vertical Instagram/Short (lab look, about 386 words, ~160 s). Names are shown in Latin here; the build converts subcontinent names to Devanagari. Nothing is voiced or rendered until approved.
 
 ## LONG
 
-**1. statement: NEW ZEALAND V INDIA · 1ST TEST · DAY 1 (70 FOR 5. / THEN 243 FOR 5.)**
-> Seventy for five. India had won the toss, the conditions and the morning. By stumps, New Zealand were two hundred and forty-three for five. This is how day one in Wellington turned, and the stretch of overs where it slipped away.
+**1. statement: BUMRAH'S LAST BALL OF THE DAY · OVER 81 (ONE INSWINGER. / ONE TOE.)**
+> The last over of the day. Jasprit Bumrah has the second new ball. He bowls an inswinger at Henry Nicholls' toes, and Nicholls jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?
 
-**2. stats: THE CONDITIONS (15 MM GRASS ON THE PITCH | MOISTURE ON TOP IN THE MORNING | BOWL INDIA WON THE TOSS)**
-> Everything here comes from our ball-by-ball of the day. India won the toss, and Shubman Gill chose to bowl. The pitch had fifteen millimetres of grass, and moisture on top in the morning. Helpful conditions, and in the first hour the seamers made them count.
+**2. stats: ACT ONE · THE CONDITIONS (15 MM GRASS ON THE PITCH | MOISTURE ON TOP IN THE MORNING | BOWL INDIA WON THE TOSS)**
+> Rewind to the toss. Shubman Gill chose to bowl, and the pitch gave him every reason: fifteen millimetres of grass, and moisture on top. Everything you're about to hear comes from our ball-by-ball of the day.
 
 **3. trajectory: BUMRAH'S FIRST OVER**
-> Jasprit Bumrah's first over told the story. Full, on the fourth-stump line, the seam bolt upright. Tom Latham left it, expecting it to go away. It came back late, and hit off stump. Two for one.
+> Over one. Bumrah, full, on the fourth-stump line, the seam bolt upright. Tom Latham, sure it would leave, left it. It came back. Two for one, and the day had barely begun.
 
 **4. timeline: THE FIRST FOUR OVERS (0.3 Latham bowled by Bumrah · 2/1 | 2.5 Conway reviews: not out | 3.2 Conway c Pant b Kamboj · 12/2)**
-> Then a review that went New Zealand's way. Devon Conway was given out caught behind off Bumrah, and reviewed at once: the noise came before the ball reached the bat. Not out. Two overs later Anshul Kamboj bowled full and angled in, it seamed away, and Conway edged to Pant. Twelve for two.
+> Devon Conway lasted three more overs, and one review. He was given out caught behind, and the replay showed the noise came before the ball reached the bat. Not out. Then Anshul Kamboj bowled the ball he'd been waiting for: full, angled in, seaming away. Conway edged. Twelve for two.
 
 **5. list: TWO IN TWO OVERS (RAVINDRA C PANT B AKASH DEEP | MITCHELL C JAISWAL B BUMRAH)**
-> Rachin Ravindra rode his luck. India did not review an edge behind, and a direct hit from Kamboj missed. Then Akash Deep found extra bounce, short of a length outside off, and the edge went to Pant. Fifty-one for three. The last ball of the next over was Bumrah, a good-length ball that nipped back. Daryl Mitchell, who had been walking at him, got an inside edge to short leg, where Yashasvi Jaiswal held it. Fifty-two for four.
+> Then the luck swung back and forth. Rachin Ravindra survived an edge India did not review, and a direct hit that missed. Akash Deep got him anyway: extra bounce, short of a length. The next over, Bumrah's good-length nipbacker found Daryl Mitchell's inside edge, and Yashasvi Jaiswal took it at short leg. Fifty-two for four.
 
 **6. bignum: BEFORE LUNCH (25% OF BALLS DREW A FALSE SHOT · CRICBUZZ'S OWN FIGURE)**
-> Sixty for four at lunch. New Zealand were rattled: Cricbuzz has them playing and missing or edging on twenty-five per cent of balls in that session.
+> At lunch, sixty for four. New Zealand were playing and missing, or edging, at one ball in four. India had the match by the throat.
 
 **7. wicketmap: WHERE THE FIVE WICKETS CAME FROM (LATHAM | CONWAY | RAVINDRA | MITCHELL | BLUNDELL)**
-> After lunch, Bumrah struck again. Tom Blundell, short of a length, angled back into the fifth-stump line; he left his bat hanging out and edged to Gill at first slip, who hung on. Seventy for five, in twenty-eight overs. Here is where all five wickets came from.
+> After lunch, Bumrah came back for one more. Tom Blundell, short of a length, angled in, left his bat hanging out, and Gill held on at first slip. Seventy for five, in twenty-eight overs. If you had stopped watching here, you would have called it India's day. Hold on to that number.
 
 **8. bars: WHAT WORKED (GOOD LENGTH · 202 BALLS · 3 WKTS 1.48 | SHORT · 122 BALLS · 0 WKTS 3.78 | FULL · 78 BALLS · 2 WKTS 5.15)**
-> And here is what worked. India's seamers bowled two hundred and two balls on a good length, for just one point four eight an over, and three wickets. The full balls took two wickets but cost over five an over. The short balls cost nearly four an over, and took none.
+> And India had got their length right. Look at what worked: two hundred and two balls on a good length, one point four eight an over, three wickets. The full balls took two but cost over five an over. The short balls cost nearly four, and took none.
 
-**9. stats: THE BALL (52 / 3 FIRST 20 OVERS · NEW BALL | 184 / 2 OVERS 21-80 · OLD BALL | 7 / 0 OVERS 81-82 · SECOND NEW BALL)**
-> The ball told the same story. The new ball did the work: three wickets for fifty-two in the first twenty overs. The old ball took two wickets in the next sixty overs, and cost a hundred and eighty-four runs. The second new ball had two overs before stumps: seven runs, no wicket.
+**9. statement: ACT 2 (THE HOUR / IT SLIPPED)**
+> Act two. The hour it slipped away.
 
 **10. list: THE LIFELINES (30.3 · PHILLIPS ON 6 | 35.4 · PHILLIPS ON 19 | 50.3 · PHILLIPS ON 51 | 73.3 · NICHOLLS ON 102 | 79.3 · PHILLIPS ON 91)**
-> So where did it turn? Over thirty. Bumrah nips one back, Gill reviews an lbw against Glenn Phillips, who was on six, and the third umpire sees an inside edge. India lose the review. Five overs later, another inside edge rolls past the stumps. And it kept happening.
+> Over thirty. Bumrah nips one back at Glenn Phillips, who is on six. Gill reviews the lbw. The third umpire sees a spike: an inside edge. India lose the review. Five overs later, another inside edge rolls past the stumps. Phillips is still there, and so is Henry Nicholls.
 
 **11. compare: THE PITCH EASES (ALL BALLS / 25% / 14% | GOOD-LENGTH BALLS / 30% / 13%)**
-> Then the pitch eased. At lunch the pitch report said it was browning off as the sun came out, with not the kind of movement we saw before lunch. The numbers agree. Cricbuzz has New Zealand's false shots at twenty-five per cent before lunch, and thirteen and a half in the next session. On good-length balls, thirty per cent before lunch, and about thirteen after.
+> Then the sun came out. At lunch the pitch report said it was browning off, with not the kind of movement we saw before lunch. The numbers agree. Cricbuzz has false shots down from twenty-five per cent before lunch to fourteen after. On good-length balls, the same ball that drew thirty per cent false shots now drew thirteen.
 
 **12. compare: INDIA'S LENGTHS DRIFTED (SHORT / 19% / 36% | GOOD LENGTH / 57% / 47% | FULL / 24% / 17%)**
-> And India's lengths slipped. Before lunch, nineteen per cent of their seam balls were short. After lunch, thirty-six. Good-length balls fell from fifty-seven per cent to forty-seven. The pitch asked for a fuller length, and India drifted shorter.
+> The pitch had changed, and India's lengths changed with it, the wrong way. Short balls went from nineteen per cent of their seam deliveries before lunch to thirty-six after. The pitch report said India could have been fuller.
 
-**13. bignum: HENRY NICHOLLS (113* OFF 221 BALLS · 14 FOURS · CONTROL 90%)**
-> Henry Nicholls made the most of it. A hundred and thirteen not out, off two hundred and twenty-one balls, his fifth Test hundred at the Basin Reserve: in our archive he had four here before today. Playing late, behind the line. Cricbuzz had his control at ninety per cent, against seventy for the other New Zealand batters.
+**13. stats: THE BALL (52 / 3 FIRST 20 OVERS · NEW BALL | 184 / 2 OVERS 21-80 · OLD BALL | 7 / 0 OVERS 81-82 · SECOND NEW BALL)**
+> And the ball itself. The new ball did the damage: three wickets for fifty-two in twenty overs. Over the next sixty, the old ball took two more, and cost a hundred and eighty-four runs.
 
-**14. stats: 173 UNBROKEN (54 SINGLES | 7 TWOS | 7 THREES | 21 FOURS)**
-> And Glenn Phillips, ninety-four not out, off a hundred and eighty-two. Together, one hundred and seventy-three, unbroken. They ran everything: fifty-four singles, seven twos, seven threes, and twenty-one fours. Still seventy-three per cent dot balls, but India could never make that count.
+**14. statement: ACT 3 (THE STAND THAT / WOULD NOT BREAK)**
+> Act three. The stand that would not break.
 
-**15. overstrip: THE WHOLE DAY, OVER BY OVER**
+**15. bignum: HENRY NICHOLLS (113* OFF 221 BALLS · 14 FOURS · CONTROL 90%)**
+> Henry Nicholls played the innings his record promised. A hundred and thirteen not out, off two hundred and twenty-one balls, his fifth Test hundred at the Basin Reserve. In our archive, he had four here before today. Playing late, behind the line. Cricbuzz had his control at ninety per cent.
+
+**16. stats: 173 UNBROKEN (54 SINGLES | 7 TWOS | 7 THREES | 21 FOURS)**
+> With Glenn Phillips, ninety-four not out, he built a stand of one hundred and seventy-three. Fifty-four singles. Seven twos. Seven threes. Twenty-one fours. Seventy-three per cent of the balls were dots, but they never let India settle.
+
+**17. overstrip: THE WHOLE DAY, OVER BY OVER**
 > Put the whole day on one strip. Five wickets in the first twenty-eight overs. None in the next fifty-three.
 
-**16. bars: THE BOWLERS (AKASH DEEP · 15-5-33-1 2.2 | SUNDAR · 16-2-38-0 2.38 | BUMRAH · 17-5-52-3 3.06 | KAMBOJ · 18-4-57-1 3.17 | PRASIDH · 16-2-58-0 3.62)**
-> The bowlers. Bumrah, seventeen overs, three for fifty-two. After Blundell, forty-eight balls, thirty-five runs and no wicket. Akash Deep, fifteen overs, one for thirty-three. Kamboj, eighteen, one for fifty-seven. Prasidh Krishna, sixteen overs, none for fifty-eight, with nine fours. And Washington Sundar, sixteen overs for thirty-eight.
+**18. bars: THE BOWLERS (AKASH DEEP · 15-5-33-1 2.2 | SUNDAR · 16-2-38-0 2.38 | BUMRAH · 17-5-52-3 3.06 | KAMBOJ · 18-4-57-1 3.17 | PRASIDH · 16-2-58-0 3.62)**
+> The bowlers. Bumrah, three for fifty-two, and in the forty-eight balls after Blundell, thirty-five runs and no wicket. Akash Deep, one for thirty-three. Washington Sundar, none for thirty-eight in sixteen overs. Kamboj, one for fifty-seven. Prasidh Krishna, none for fifty-eight, with nine fours.
 
-**17. timeline: THE LAST HALF HOUR (73.3 Nicholls dropped on 102 | 80 second new ball taken | 80.6 Bumrah's toe-crusher: survived | 82 stumps: 243/5)**
-> India took the second new ball at eighty overs. Bumrah's first ball went for four, then five dots, one of them a toe-crusher that Nicholls only just jammed his bat down on. Kamboj bowled the last over. Two hundred and forty-three for five.
+**19. timeline: THE LAST HALF HOUR (73.3 Nicholls dropped on 102 | 80 second new ball taken | 80.6 Bumrah's toe-crusher: survived | 82 stumps: 243/5)**
+> India also dropped a chance. Nicholls, on a hundred and two, top-edged a pull, and Pant and Padikkal both stopped, each waiting for the other. At eighty overs, India took the second new ball. Bumrah's first ball went for four. Then five dots, the last one that toe-crusher. Nicholls jammed his bat down just in time. Two hundred and forty-three for five. That is the ball we started with.
 
-**18. list: YOUR CALL (NICHOLLS | PHILLIPS | BUMRAH)**
-> So what now? As Cricbuzz's commentators said at tea, anything over two hundred and fifty could hurt India later. That is fifty more runs. Day two starts with the new ball, and five wickets to take. Now your call: who won day one? Nicholls, Phillips or Bumrah? Comment one, two or three, and tell us what India should do first.
+**20. list: YOUR CALL (NICHOLLS | PHILLIPS | BUMRAH)**
+> So who won day one? New Zealand, the sun, and a catch nobody took. India's reply is on day two. As Cricbuzz's commentators said at tea, anything over two hundred and fifty could hurt India later, and that is only fifty runs away. Your call: who won day one? Nicholls, Phillips, or Bumrah? Comment one, two or three, and tell us what India should do first.
 
-**19. cta:  (WHO WON / DAY ONE?)**
-> Subscribe, and we'll break down day two the same way.
+**21. cta:  (WHO WON / DAY ONE?)**
+> Subscribe, and we'll tell you how day two turns.
 
 ## VERTICAL
 
-**1. statement: NEW ZEALAND V INDIA · 1ST TEST · DAY 1 (70 FOR 5. / THEN 243 FOR 5.)**
-> Seventy for five. Then two hundred and forty-three for five, and nobody could break the stand. Here is how day one in Wellington turned.
+**1. statement: BUMRAH'S LAST BALL OF THE DAY · OVER 81 (ONE INSWINGER. / ONE TOE.)**
+> Bumrah's last ball of the day. An inswinger at Nicholls' toes, and he jams his bat down just in time. Earlier that day, New Zealand were seventy for five. So how did India lose a day they were winning?
 
-**2. trajectory: BUMRAH'S FIRST OVER**
-> India won the toss and bowled. Fifteen millimetres of grass, moisture on top. Bumrah's first over: full, fourth-stump line, seam upright. Latham left it, expecting it to go away. It came back.
+**2. stats: ACT ONE · THE CONDITIONS (15 MM GRASS ON THE PITCH | MOISTURE ON TOP IN THE MORNING | BOWL INDIA WON THE TOSS)**
+> Rewind. India won the toss and bowled. Fifteen millimetres of grass, moisture on top. Over one: Bumrah, full, fourth-stump line, seam upright. Latham left it. It came back.
 
 **3. timeline: THE FIRST FOUR OVERS (0.3 Latham bowled by Bumrah · 2/1 | 2.5 Conway reviews: not out | 3.2 Conway c Pant b Kamboj · 12/2)**
-> Conway reviewed a caught-behind, and won. Two overs later Kamboj, full and angled in, seamed it away, and Conway edged to Pant. Twelve for two.
+> Conway reviewed a caught-behind, and survived. Two overs later Kamboj seamed one away, and Conway edged to Pant. Twelve for two.
 
 **4. list: TWO IN TWO OVERS (RAVINDRA C PANT B AKASH DEEP | MITCHELL C JAISWAL B BUMRAH)**
-> Ravindra was reprieved, twice. Then Akash Deep found extra bounce and Pant took the edge. Bumrah's nipbacker took Mitchell at short leg. Sixty for four at lunch.
+> Ravindra survived an edge nobody reviewed. Then Akash Deep's bounce had him, and Bumrah's nipbacker took Mitchell at short leg. Sixty for four at lunch.
 
 **5. wicketmap: WHERE THE FIVE WICKETS CAME FROM (LATHAM | CONWAY | RAVINDRA | MITCHELL | BLUNDELL)**
-> After lunch, Blundell edged to Gill. Seventy for five. Two full balls, one good length, two short of a length: all five found something in the surface.
+> After lunch, Blundell edged to Gill. Seventy for five. Two full balls, one good length, two short of a length: all five found something in the surface. If you had stopped here, it was India's day.
 
-**6. bars: WHAT WORKED (GOOD · 202 BALLS · 3 WKTS 1.48 | SHORT · 122 BALLS · 0 WKTS 3.78 | FULL · 78 BALLS · 2 WKTS 5.15)**
-> Look at what worked. Good-length balls cost one point four eight an over, and took three wickets. The full balls took two, but cost over five. The short balls cost nearly four an over, and took none.
+**6. bars: WHAT WORKED (GOOD LENGTH · 202 BALLS · 3 WKTS 1.48 | SHORT · 122 BALLS · 0 WKTS 3.78 | FULL · 78 BALLS · 2 WKTS 5.15)**
+> India had their length right. Good-length balls cost one point four eight an over, and took three wickets. The short balls cost nearly four, and took none.
 
 **7. stats: THE BALL (52 / 3 FIRST 20 OVERS · NEW BALL | 184 / 2 OVERS 21-80 · OLD BALL | 7 / 0 OVERS 81-82 · SECOND NEW BALL)**
-> The new ball did the work: three wickets for fifty-two in twenty overs. The old ball: two wickets in sixty overs, and a hundred and eighty-four runs.
+> The new ball did the damage: three wickets for fifty-two in twenty overs. The old ball: two wickets in sixty overs, and a hundred and eighty-four runs.
 
 **8. list: THE LIFELINES (30.3 · PHILLIPS ON 6 | 35.4 · PHILLIPS ON 19 | 50.3 · PHILLIPS ON 51 | 73.3 · NICHOLLS ON 102 | 79.3 · PHILLIPS ON 91)**
 > Then it turned. Phillips, on six, survived an lbw review, and India lost it. Inside edges rolled past the stumps. A catch was dropped.
 
-**9. compare: THE PITCH EASES (ALL BALLS / 25% / 14% | GOOD LENGTH / 30% / 13%)**
-> And the pitch eased as the sun came out. False shots fell from twenty-five per cent before lunch to fourteen after. On good-length balls, from thirty to thirteen.
+**9. compare: THE PITCH EASES (ALL BALLS / 25% / 14% | GOOD-LENGTH BALLS / 30% / 13%)**
+> And the sun came out. False shots fell from twenty-five per cent before lunch to fourteen after. On good-length balls, from thirty to thirteen.
 
-**10. compare: LENGTHS DRIFTED (SHORT / 19% / 36% | GOOD LENGTH / 57% / 47%)**
-> India drifted shorter, too. Nineteen per cent of their seam balls were short before lunch. After lunch, thirty-six. The pitch wanted a fuller length.
+**10. compare: INDIA'S LENGTHS DRIFTED (SHORT / 19% / 36% | GOOD LENGTH / 57% / 47% | FULL / 24% / 17%)**
+> India drifted shorter, too. Nineteen per cent of their seam balls were short before lunch. After lunch, thirty-six.
 
-**11. bignum: JASPRIT BUMRAH (3/52 17 OVERS · ALL THREE WICKETS BEFORE THE 29TH OVER)**
-> Bumrah finished with three for fifty-two. After Blundell, forty-eight balls, thirty-five runs, and no wicket. His work was done by the twenty-ninth over.
-
-**12. stats: NEW ZEALAND'S SIXTH-WICKET STAND (113* NICHOLLS · 221 BALLS | 94* PHILLIPS · 182 BALLS)**
+**11. stats: NEW ZEALAND'S SIXTH-WICKET STAND (113* NICHOLLS · 221 BALLS | 94* PHILLIPS · 182 BALLS)**
 > Henry Nicholls: a hundred and thirteen not out, his fifth hundred at the Basin Reserve. Glenn Phillips: ninety-four not out. Together, one seventy-three.
 
-**13. overstrip: THE WHOLE DAY, OVER BY OVER**
-> They ran seven twos and seven threes, and hit twenty-one fours. India went fifty-three overs without a wicket.
+**12. overstrip: THE WHOLE DAY, OVER BY OVER**
+> Five wickets in the first twenty-eight overs. None in the next fifty-three.
+
+**13. bignum: JASPRIT BUMRAH (3/52 17 OVERS · ALL THREE WICKETS BEFORE THE 29TH OVER)**
+> Bumrah finished with three for fifty-two. After Blundell, forty-eight balls, thirty-five runs, and no wicket. His work was done by the twenty-ninth over.
 
 **14. statement: STUMPS · DAY 1 (243 FOR 5. / NZ ON TOP.)**
-> India took the second new ball at eighty overs. Bumrah's first ball went for four, then five dots, one a toe-crusher that Nicholls only just survived. Two hundred and forty-three for five at stumps.
+> Which brings us back to Bumrah's last ball. Two hundred and forty-three for five at stumps. That toe-crusher was the one that got away.
 
 **15. list: YOUR CALL (NICHOLLS | PHILLIPS | BUMRAH)**
 > So who won day one? Nicholls, Phillips, or Bumrah? Comment one, two or three, and tell us what India should do first on day two.
