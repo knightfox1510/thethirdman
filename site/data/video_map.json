@@ -226,5 +226,11 @@
   "kind": "short",
   "title": "nz_ind_1st_test_day1",
   "format": "replay"
+ },
+ "UM5788F3ZKY": {
+  "slug": "bumrah_unplayable",
+  "kind": "short",
+  "title": "bumrah_unplayable",
+  "format": "datastories"
  }
 }
