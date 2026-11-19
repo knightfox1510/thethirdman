@@ -86,7 +86,9 @@
   "stumps",
   "flip",
   "kinetic",
-  "fieldmap"
+  "fieldmap",
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -175,6 +177,8 @@
   "zz_needs_prev": "stumps",
   "ipl_needs_2027__igshort": "flip",
   "zz_nz_prev": "kinetic",
-  "zz_day1_prev": "fieldmap"
+  "zz_day1_prev": "fieldmap",
+  "nz_ind_1st_test_day1": "stumps",
+  "nz_ind_1st_test_day1__igshort": "flip"
  }
 }

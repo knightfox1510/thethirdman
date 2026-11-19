@@ -20,8 +20,8 @@ BANDS = [(0, 2, "YORKER"), (2, 4, "FULL"), (4, 6, "GOOD LENGTH"), (6, 8, "BACK O
 
 def sc_wicketmap(c, g, t, D, s):
     LK.header(c, g, t, D, s); l = _L(g); sh = g.fmt == "short"; items = s["items"]; n = len(items)
-    top = l["top"] + 20; bot = l["bot"] - 40; H = bot - top; sc = min(H / 10.0, 95 if sh else 80); sx = sc * (1.6 if sh else 1.9); pw = 3.0 * sx
-    cx = (l["x0"] + 230 + pw / 2) if not sh else (l["x0"] + 215 + pw / 2); x0 = cx - pw / 2
+    top = l["top"] + 20; bot = l["bot"] - 40; H = bot - top; sc = min(H / 10.0, 95 if sh else 80); sx = sc * (1.05 if sh else 1.9); pw = 3.0 * sx
+    cx = (l["x0"] + 230 + pw / 2) if not sh else (l["x0"] + 175 + pw / 2); x0 = cx - pw / 2
     a = eo(prog(t, .05, .5))
     # pitch + bands
     rrect(c, x0 - 6, top, pw + 12, H, 8, (214, 196, 150) if gfx.THEME in ("lab", "whites") else (120, 104, 70), a * .55)
@@ -49,17 +49,18 @@ def sc_wicketmap(c, g, t, D, s):
         c.drawCircle(bx, by, (20 if sh else 17) * (.6 + .4 * q), paint(red, qa)); c.drawCircle(bx, by, (20 if sh else 17) * (.6 + .4 * q), paint((255, 255, 255), qa, stroke=3))
         text(c, str(it["n"]), bx, by + 7, 20, "interB", (255, 255, 255), qa, "c")
     # cards on the right (or below on vertical)
-    rx = (x0 + pw + 110) if not sh else (x0 + pw + 40); rw = l["x1"] - rx; rh = min((H - 10) / max(n, 1), 150 if sh else 110)
+    rx = (x0 + pw + 110) if not sh else (x0 + pw + 34); rw = l["x1"] - rx; rh = min((H - 10) / max(n, 1), 150 if sh else 110)
     for i, it in enumerate(items):
         st = D * (.14 + .62 * i / max(1, n)); q = eo(prog(t, st, st + .5)); y = top + i * rh
         if q <= 0: continue
         rrect(c, rx, y + 4, rw, rh - 10, 12, (255, 255, 255) if gfx.THEME in ("lab", "whites") else (28, 40, 70), q * .95, stroke=2, scol=LK.RED, sa=.5 * q)
         text(c, f'{it["n"]}', rx + 24, y + rh * .5 + 14, 44 if sh else 46, "interB", LK.RED, q)
         nm = f'{it["who"]}  b {it["by"]}' if it.get("kind", "b") == "b" else f'{it["who"]}  c {it["catcher"]} b {it["by"]}'
-        tz = E.fit(nm, rw - 90, 26 if sh else 30, "interB", -1); text(c, nm, rx + 70, y + rh * .40, tz, "interB", gfx.INK, q)
+        tz = E.fit(nm, rw - 120, 26 if sh else 30, "interB", -1); text(c, nm, rx + 70, y + rh * .40, tz, "interB", gfx.INK, q)
         for j, ln in enumerate(E.wrap(it["note"], rw - 90, 19 if sh else 21, "inter")[:2]): text(c, ln, rx + 70, y + rh * .40 + (28 if sh else 30) + j * (24 if sh else 26), 19 if sh else 21, "inter", gfx.MUTED, q)
         text(c, f'{it["over"]} ov · {it["score"]}', rx + rw - 14, y + 30, 18, "monoSB", gfx.MUTED, q, "r")
-    if s.get("footnote"): text(c, s["footnote"], l["x0"], bot + 62, 18, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
+    if s.get("footnote"):
+        for j, ln in enumerate(E.wrap(s["footnote"], l["x1"] - l["x0"], 17, "mono")[:3]): text(c, ln, l["x0"], bot + 62 + j * 24, 17, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
 
 
 def sc_overstrip(c, g, t, D, s):
