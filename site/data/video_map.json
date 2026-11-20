@@ -232,5 +232,11 @@
   "kind": "short",
   "title": "bumrah_unplayable",
   "format": "datastories"
+ },
+ "tf-AcXGhAAo": {
+  "slug": "nz_ind_1st_test_day2",
+  "kind": "short",
+  "title": "nz_ind_1st_test_day2",
+  "format": "replay"
  }
 }
