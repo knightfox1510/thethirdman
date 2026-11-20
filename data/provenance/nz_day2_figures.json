@@ -1,0 +1,193 @@
+{
+ "deliveries": 240,
+ "legal": 234,
+ "bowling_final": {
+  "Matt Henry": {
+   "ov": 12,
+   "m": 3,
+   "r": 43,
+   "w": 1,
+   "nb": 0
+  },
+  "Kyle Jamieson": {
+   "ov": 11,
+   "m": 5,
+   "r": 15,
+   "w": 0,
+   "nb": 0
+  },
+  "Jacob Duffy": {
+   "ov": 10,
+   "m": 0,
+   "r": 72,
+   "w": 0,
+   "nb": 3
+  },
+  "Nathan Smith": {
+   "ov": 6,
+   "m": 0,
+   "r": 29,
+   "w": 0,
+   "nb": 3
+  }
+ },
+ "batters": {
+  "Yashasvi Jaiswal": {
+   "batRuns": 85,
+   "batBalls": 89,
+   "batFours": 16,
+   "batSixes": 0,
+   "batDots": 62,
+   "batStrikeRate": 95.51
+  },
+  "KL Rahul": {
+   "batRuns": 52,
+   "batBalls": 116,
+   "batFours": 5,
+   "batSixes": 0,
+   "batDots": 88,
+   "batStrikeRate": 44.83
+  },
+  "Devdutt Padikkal": {
+   "batRuns": 16,
+   "batBalls": 35,
+   "batFours": 3,
+   "batSixes": 0,
+   "batDots": 29,
+   "batStrikeRate": 45.71
+  }
+ },
+ "tea_over": 7.6,
+ "tea_score": 16,
+ "stumps": {
+  "over": 38.6,
+  "score": 159
+ },
+ "wickets": [
+  {
+   "over": 27.5,
+   "bowler": "Matt Henry",
+   "bat": "Yashasvi Jaiswal",
+   "score": 130,
+   "text": "Matt Henry to Yashasvi Jaiswal, out Caught by Blundell!! Jaiswal looked all set for a hundred but is out against the run of play. Full credit to Matt Henry. He was adamant and the NZ players went \"huge noise\". Someone added \"massive noise and asked was he anywhere near his pad? I heard it. It's a hu"
+  }
+ ],
+ "speed": {
+  "Matt Henry": {
+   "n": 15,
+   "avg": 129.5,
+   "max": 134.2
+  },
+  "Kyle Jamieson": {
+   "n": 19,
+   "avg": 133.1,
+   "max": 136.6
+  },
+  "Jacob Duffy": {
+   "n": 18,
+   "avg": 135.4,
+   "max": 141.1
+  },
+  "Nathan Smith": {
+   "n": 9,
+   "avg": 133.8,
+   "max": 136.1
+  }
+ },
+ "no_balls": {
+  "Jacob Duffy": 3,
+  "Nathan Smith": 3
+ },
+ "by_length": {
+  "full": {
+   "balls": 57,
+   "runs": 46
+  },
+  "good": {
+   "balls": 33,
+   "runs": 10
+  },
+  "short_of_length": {
+   "balls": 38,
+   "runs": 24
+  },
+  "short": {
+   "balls": 45,
+   "runs": 16
+  },
+  "yorker": {
+   "balls": 1,
+   "runs": 2
+  },
+  "unclassified": 61
+ },
+ "blocks": {
+  "0-5": [
+   7,
+   36
+  ],
+  "6-11": [
+   27,
+   36
+  ],
+  "12-17": [
+   34,
+   37
+  ],
+  "18-23": [
+   39,
+   38
+  ],
+  "24-29": [
+   28,
+   36
+  ],
+  "30-35": [
+   10,
+   36
+  ],
+  "36-41": [
+   14,
+   21
+  ]
+ },
+ "fours": 23,
+ "dots": 174,
+ "milestones": [
+  {
+   "over": 3.6,
+   "ev": "over-break,UDRS,MAIDEN_OVER",
+   "score": 0
+  },
+  {
+   "over": 13.4,
+   "ev": "TEAM_FIFTY,FOUR",
+   "score": 51
+  },
+  {
+   "over": 22.1,
+   "ev": "FIFTY,FOUR",
+   "score": 89
+  },
+  {
+   "over": 23.4,
+   "ev": "TEAM_HUNDRED,PARTNERSHIP,FOUR",
+   "score": 102
+  },
+  {
+   "over": 27.5,
+   "ev": "WICKET,UDRS",
+   "score": 130
+  },
+  {
+   "over": 33.3,
+   "ev": "FIFTY",
+   "score": 142
+  },
+  {
+   "over": 36.5,
+   "ev": "TEAM_HUNDRED",
+   "score": 150
+  }
+ ]
+}
