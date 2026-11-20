@@ -101,7 +101,7 @@
    }
   },
   {
-   "vo": "First, the morning. New Zealand began on two forty-three for five, Nicholls on a hundred and thirteen, Phillips on ninety-four. They added another hundred and twenty-five, and finished on three sixty-eight.",
+   "vo": "First, the morning. New Zealand began on two forty-three for five, with Nicholls and Phillips at the crease. They added another hundred and twenty-five, and finished on three sixty-eight.",
    "scene": {
     "type": "photostand",
     "kicker": "NEW ZEALAND'S MORNING",
@@ -109,8 +109,8 @@
     "items": [
      {
       "img": "data/licensed/in/nz_day2_nicholls_walkoff.jpg",
-      "big": "113*",
-      "name": "NICHOLLS · DAY 1 END",
+      "big": "NICHOLLS",
+      "name": "NEW ZEALAND · DAY 2",
       "crop": [
        140,
        250,
@@ -120,8 +120,8 @@
      },
      {
       "img": "data/licensed/in/nz_day2_phillips_hundred.jpg",
-      "big": "94*",
-      "name": "PHILLIPS · DAY 1 END",
+      "big": "PHILLIPS",
+      "name": "NEW ZEALAND · DAY 2",
       "crop": [
        140,
        330,

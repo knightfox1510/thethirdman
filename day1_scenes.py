@@ -191,7 +191,7 @@ def sc_photostand(c, g, t, D, s):
     for k, it in enumerate(s["items"]):
         qa = eo(prog(t, .15 + .3 * k, .75 + .3 * k)); pw, ph = (920, 520) if sh else (780, 520); px, py = (80, 430 + k * 560) if sh else (140 + k * 830, 270)
         draw_photo(c, it["img"], px, py + (1 - qa) * 40, pw, ph, qa, 22, crop=it.get("crop"), rot=(-1 if k == 0 else 1) * (1.0 if sh else .8), shadow=True)
-        rrect(c, px + 24, py + ph - 176, 430, 152, 14, (20, 20, 22), .84 * qa); text(c, it["name"], px + 44, py + ph - 140, 22, "monoSB", (255, 214, 0), qa, track=1); text(c, it["big"], px + 44, py + ph - 48, 100, "interB", (255, 255, 255), qa)
+        rrect(c, px + 24, py + ph - 176, 430, 152, 14, (20, 20, 22), .84 * qa); text(c, it["name"], px + 44, py + ph - 140, 22, "monoSB", (255, 214, 0), qa, track=1); text(c, it["big"], px + 44, py + ph - 48, E.fit(it["big"], 382, 100, "interB"), "interB", (255, 255, 255), qa)
     ya = (1650 if sh else 840)
     for j, (v, lb) in enumerate(s.get("chips", [])):
         cw = (920 - 3 * 18) / 4 if sh else (1640 - 3 * 18) / 4; cx_ = x0 + j * (cw + 18); qq = eo(prog(t, D * .45 + .12 * j, D * .45 + .6 + .12 * j))
