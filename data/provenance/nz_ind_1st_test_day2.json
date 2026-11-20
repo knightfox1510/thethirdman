@@ -1,0 +1,188 @@
+{
+ "slug": "nz_ind_1st_test_day2",
+ "claims": [
+  {
+   "claim": "India 159/1 after 38.6 overs at stumps, trailing NZ's 368 by 209",
+   "value": [
+    159,
+    1,
+    368,
+    209
+   ],
+   "sources": {
+    "cricbuzz": [
+     159,
+     1,
+     368,
+     209
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Jaiswal 85 (89), 16 fours, c Blundell b Henry at 130 (27.5); fifty off 66 balls",
+   "value": [
+    85,
+    89,
+    16,
+    130,
+    66
+   ],
+   "sources": {
+    "cricbuzz": [
+     85,
+     89,
+     16,
+     130,
+     66
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul 52* (116), 5 fours; Padikkal 16* (35)",
+   "value": [
+    52,
+    116,
+    5,
+    16,
+    35
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     116,
+     5,
+     16,
+     35
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "tea: 16 for no loss after 8 overs (7.6); post-tea 143 runs in 31 overs",
+   "value": [
+    16,
+    8,
+    143,
+    31
+   ],
+   "sources": {
+    "cricbuzz": [
+     16,
+     8,
+     143,
+     31
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling by length (our classification): full 57b/46r, good 33b/10r, short of length 38b/24r, short 45b/16r",
+   "value": [
+    57,
+    46,
+    33,
+    10,
+    38,
+    24,
+    45,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     57,
+     46,
+     33,
+     10,
+     38,
+     24,
+     45,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Jaiswal vs full 27 balls 41 runs; vs good length 10 balls 0 runs (our classification)",
+   "value": [
+    27,
+    41,
+    10,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     27,
+     41,
+     10,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling figures Henry 12-3-43-1, Jamieson 11-5-15-0, Smith 6-0-29-0, Duffy 10-0-72-0; no-balls Duffy 3, Smith 3",
+   "value": 159,
+   "sources": {
+    "cricbuzz": 159
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "lifelines: NZ review lost (3.6); Jaiswal edge past slip on 0 (4.2); Henry lbw on Rahul 5 not reviewed (6.4); Phillips drops Jaiswal on 6 (7.3)",
+   "value": [
+    0,
+    5,
+    6
+   ],
+   "sources": {
+    "cricbuzz": [
+     0,
+     5,
+     6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul's 22nd Test fifty and first against NZ (Cricbuzz)",
+   "value": true,
+   "sources": {
+    "cricbuzz": true
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "after Jaiswal's wicket (130) to stumps (159): 29 runs",
+   "value": 29,
+   "sources": {
+    "cricbuzz": 29
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 10
+ }
+}

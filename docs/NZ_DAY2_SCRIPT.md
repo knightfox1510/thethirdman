@@ -69,3 +69,48 @@ Note: Cricbuzz numbers overs from zero (3.6 is the end of the fourth over), so t
 2. Photos: only Nicholls, Phillips, Latham, Bumrah exist on file. For Jaiswal and Rahul (and Henry, Jamieson, Duffy), hand over rights-cleared photos in chat if you want photo scenes; otherwise stage scenes with our own avatar.
 3. Title (search-first): `India vs New Zealand - 1st Test Day 2 Analysis | 85 Off 89 and Three Lives` (Short: `85 Off 89 and Three Lives | India vs New Zealand 1st Test Day 2 #Shorts`). Alternative hook: `How NZ Wasted a Review`.
 4. Short + IG at ~150 s as Day 1 (long after your approval; or vertical only first, like Bumrah).
+
+
+## 6. BUILT VERTICAL STORYBOARD + VOICE-OVER (approved for storyboard review, not yet voiced)
+
+**1. statement: NZ V IND · 1ST TEST · DAY 2**
+> India, one fifty-nine for one. Still two hundred and nine behind New Zealand's three sixty-eight. And the man who made eighty-five of those runs should have been out twice.
+
+**2. bignum: YASHASVI JAISWAL**
+> यशस्वी जायसवाल, eighty-five off eighty-nine balls. Sixteen fours. Sixty-four of his eighty-five came in boundaries.
+
+**3. stats: THE SQUEEZE**
+> But start with the squeeze. Before tea, eight overs, sixteen runs. Three slips and a gully. Kyle Jamieson finished the day with eleven overs, five maidens, fifteen runs.
+
+**4. timeline: NEW ZEALAND'S REVIEWS**
+> Then the drama. Over four, New Zealand review an lbw against के एल राहुल, and lose it. The impact was outside off. Over seven, Matt Henry hits राहुल on the pads, two sounds, a huge appeal. Tom Latham has a second left on the clock, and does not review. Henry throws his sweater down.
+
+**5. timeline: JAISWAL'S TWO LIVES**
+> And जायसवाल had two lives. On nought, an edge between third slip and gully, four. On six, an edge to gully, and Glenn Phillips drops it.
+
+**6. statement: TEA**
+> Then tea. And everything changed. Sixteen runs before it. A hundred and forty-three after it.
+
+**7. overstrip: INDIA'S INNINGS, OVER BY OVER**
+> Look at the innings over by over. Eight quiet overs, then the flood.
+
+**8. bars: WHAT NEW ZEALAND BOWLED**
+> Here is why. New Zealand's bowlers were full. Fifty-seven full balls, forty-six runs. The good-length ones? Thirty-three balls, ten runs.
+
+**9. compare: JAISWAL AGAINST EACH LENGTH**
+> जायसवाल against the full ball: twenty-seven balls, forty-one runs. Against good length: ten balls, no runs. Same bowlers, same pitch. The full ball gave him the innings.
+
+**10. timeline: THE WICKET**
+> His fifty took sixty-six balls. His last thirty-five took twenty-three. Then Henry, adamant, got his review, and जायसवाल was caught behind. Against the run of play, on eighty-five.
+
+**11. compare: AFTER THE WICKET**
+> After that, India scored twenty-nine in eleven overs. के एल राहुल, fifty-two off a hundred and sixteen balls, his first Test fifty against New Zealand. Strike rate, forty-five.
+
+**12. bars: NEW ZEALAND'S BOWLERS**
+> Jacob Duffy bowled ten overs for seventy-two and no wicket, and with Nathan Smith bowled six no-balls, by Cricbuzz's count. Jamieson, fifteen runs for the day.
+
+**13. list: YOUR CALL**
+> So, day three. Nine wickets in hand, two hundred and nine to find. How close do India get? Comment one, under a hundred. Two, a hundred to two hundred. Three, more.
+
+**14. cta: **
+> Subscribe, and we'll break down day three the same way.

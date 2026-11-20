@@ -30,6 +30,7 @@ EPISODES = {
     "replay_u19_final": ("replay", "02", "India vs Pakistan U19 Asia Cup Final"),
     "replay_5odi": ("replay", "03", "India vs New Zealand 5th ODI"),
     "nz_ind_1st_test_day1": ("replay", "04", "India vs New Zealand 1st Test Day 1"),
+    "nz_ind_1st_test_day2": ("replay", "05", "India vs New Zealand 1st Test Day 2"),
     "santner_problem": ("tactics", "01", "The Santner Problem, NZ v IND T20Is"),
     "abhishek_plan": ("tactics", "02", "How to Bowl to Abhishek Sharma"),
     "wellington_odi": ("tactics", "03", "Wellington ODI Breakdown"),

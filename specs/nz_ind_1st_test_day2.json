@@ -1,0 +1,630 @@
+{
+ "slug": "nz_ind_1st_test_day2",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DAY 2",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep05_India_vs_New_Zealand_1st_Test_Day_2_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 2",
+  "lines": [
+   {
+    "t": "85 OFF 89"
+   },
+   {
+    "t": "AND 3 LIVES",
+    "c": "gold"
+   }
+  ],
+  "hero": "85",
+  "herosize": 420
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "85 OFF 89"
+   },
+   {
+    "t": "AND THREE LIVES",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 2",
+  "hero": "85"
+ },
+ "sources": [
+  "India's first innings on Day 2: Cricbuzz full commentary for New Zealand v India, 1st Test, 20 November 2026 (owner's capture; bowler lines, no-ball counts and match summary are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Length classes (full / good length / short of a length / short) are our keyword read of Cricbuzz's ball text, with 61 of 240 deliveries unclassified. Figures: analysis/nz_day2.py"
+ ],
+ "short": [
+  {
+   "vo": "India, one fifty-nine for one. Still two hundred and nine behind New Zealand's three sixty-eight. And the man who made eighty-five of those runs should have been out twice.",
+   "scene": {
+    "type": "statement",
+    "kicker": "NZ V IND · 1ST TEST · DAY 2",
+    "lines": [
+     {
+      "t": "159 FOR 1."
+     },
+     {
+      "t": "209 BEHIND.",
+      "c": "gold"
+     }
+    ],
+    "sub": "And the man on 85 should have been out twice."
+   }
+  },
+  {
+   "vo": "यशस्वी जायसवाल, eighty-five off eighty-nine balls. Sixteen fours. Sixty-four of his eighty-five came in boundaries.",
+   "scene": {
+    "type": "bignum",
+    "head": {
+     "t": "YASHASVI JAISWAL"
+    },
+    "value": 85,
+    "suffix": "",
+    "label": "OFF 89 BALLS · 16 FOURS · 64 OF 85 IN BOUNDARIES",
+    "color": "gold",
+    "note": "out c Blundell b Henry · 130 for 1"
+   }
+  },
+  {
+   "vo": "But start with the squeeze. Before tea, eight overs, sixteen runs. Three slips and a gully. Kyle Jamieson finished the day with eleven overs, five maidens, fifteen runs.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE SQUEEZE",
+     "sub": "BEFORE TEA · INDIA BATTING"
+    },
+    "tiles": [
+     {
+      "v": "16",
+      "l": "RUNS IN 8 OVERS",
+      "c": "gold"
+     },
+     {
+      "v": "11-5-15",
+      "l": "JAMIESON'S DAY · 0 WKTS",
+      "c": "ink"
+     },
+     {
+      "v": "3 + GULLY",
+      "l": "SLIPS IN PLACE",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the drama. Over four, New Zealand review an lbw against के एल राहुल, and lose it. The impact was outside off. Over seven, Matt Henry hits राहुल on the pads, two sounds, a huge appeal. Tom Latham has a second left on the clock, and does not review. Henry throws his sweater down.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "NEW ZEALAND'S REVIEWS",
+     "sub": "OVERS FOUR AND SEVEN"
+    },
+    "events": [
+     {
+      "y": "3.6",
+      "t": "lbw review on Rahul: impact outside off. Review lost",
+      "c": "red"
+     },
+     {
+      "y": "6.4",
+      "t": "Henry's lbw shout on Rahul, two sounds. Latham does not review",
+      "hl": true
+     },
+     {
+      "y": "6.6",
+      "t": "Henry throws his sweater down",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And जायसवाल had two lives. On nought, an edge between third slip and gully, four. On six, an edge to gully, and Glenn Phillips drops it.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "JAISWAL'S TWO LIVES",
+     "sub": "BEFORE TEA"
+    },
+    "events": [
+     {
+      "y": "4.2",
+      "t": "On 0: edge between third slip and gully, four",
+      "hl": true
+     },
+     {
+      "y": "7.3",
+      "t": "On 6: edge to gully, Phillips drops it, four",
+      "hl": true
+     },
+     {
+      "y": "7.6",
+      "t": "tea: 16 for no loss",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then tea. And everything changed. Sixteen runs before it. A hundred and forty-three after it.",
+   "scene": {
+    "type": "statement",
+    "kicker": "TEA",
+    "lines": [
+     {
+      "t": "16 BEFORE."
+     },
+     {
+      "t": "143 AFTER.",
+      "c": "gold"
+     }
+    ],
+    "sub": "Runs in 8 overs before tea, then in 31 overs after it"
+   }
+  },
+  {
+   "vo": "Look at the innings over by over. Eight quiet overs, then the flood.",
+   "scene": {
+    "type": "overstrip",
+    "head": {
+     "t": "INDIA'S INNINGS, OVER BY OVER",
+     "sub": "RUNS IN EACH OVER · RED = WICKET · GREEN = MAIDEN"
+    },
+    "overs": [
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      10,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      12,
+      false
+     ],
+     [
+      10,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      5,
+      true
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      8,
+      false
+     ]
+    ],
+    "session_cuts": [
+     0,
+     8
+    ],
+    "legal_lines": null,
+    "legend_lines": [
+     [
+      "BEFORE TEA: 16 RUNS IN 8 OVERS",
+      "ink"
+     ],
+     [
+      "AFTER TEA: 143 RUNS, 1 WICKET",
+      "red"
+     ]
+    ],
+    "footnote": "OUR BALL-BY-BALL · TEA AFTER 7.6 OVERS"
+   }
+  },
+  {
+   "vo": "Here is why. New Zealand's bowlers were full. Fifty-seven full balls, forty-six runs. The good-length ones? Thirty-three balls, ten runs.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WHAT NEW ZEALAND BOWLED",
+     "sub": "RUNS PER OVER BY LENGTH · OUR READ OF CRICBUZZ'S TEXT"
+    },
+    "max": 6,
+    "dec": 2,
+    "items": [
+     {
+      "label": "FULL · 57 BALLS · 46 RUNS",
+      "value": 4.84,
+      "color": "red"
+     },
+     {
+      "label": "SHORT OF A LENGTH · 38 BALLS · 24 RUNS",
+      "value": 3.79,
+      "color": "ink"
+     },
+     {
+      "label": "SHORT · 45 BALLS · 16 RUNS",
+      "value": 2.13,
+      "color": "ink"
+     },
+     {
+      "label": "GOOD LENGTH · 33 BALLS · 10 RUNS",
+      "value": 1.82,
+      "color": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "जायसवाल against the full ball: twenty-seven balls, forty-one runs. Against good length: ten balls, no runs. Same bowlers, same pitch. The full ball gave him the innings.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "JAISWAL AGAINST EACH LENGTH",
+     "sub": "OUR READ OF CRICBUZZ'S TEXT"
+    },
+    "a": {
+     "name": "VS FULL",
+     "color": "red"
+    },
+    "b": {
+     "name": "VS GOOD LENGTH",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "BALLS",
+      "27",
+      "10",
+      "a"
+     ],
+     [
+      "RUNS",
+      "41",
+      "0",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "His fifty took sixty-six balls. His last thirty-five took twenty-three. Then Henry, adamant, got his review, and जायसवाल was caught behind. Against the run of play, on eighty-five.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE WICKET"
+    },
+    "events": [
+     {
+      "y": "22.1",
+      "t": "fifty off 66 balls",
+      "hl": true
+     },
+     {
+      "y": "25.3",
+      "t": "80 off 84 balls",
+      "c": "ink"
+     },
+     {
+      "y": "27.5",
+      "t": "c Blundell b Henry for 85 · NZ review · 130/1",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "After that, India scored twenty-nine in eleven overs. के एल राहुल, fifty-two off a hundred and sixteen balls, his first Test fifty against New Zealand. Strike rate, forty-five.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "AFTER THE WICKET",
+     "sub": "130 FOR 1 TO 159 FOR 1 · 11 OVERS"
+    },
+    "a": {
+     "name": "JAISWAL",
+     "color": "gold"
+    },
+    "b": {
+     "name": "RAHUL",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "RUNS",
+      "85",
+      "52*",
+      "a"
+     ],
+     [
+      "BALLS",
+      "89",
+      "116",
+      "b"
+     ],
+     [
+      "STRIKE RATE",
+      "96",
+      "45",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Jacob Duffy bowled ten overs for seventy-two and no wicket, and with Nathan Smith bowled six no-balls, by Cricbuzz's count. Jamieson, fifteen runs for the day.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "NEW ZEALAND'S BOWLERS",
+     "sub": "ECONOMY RATE · RUNS PER OVER"
+    },
+    "max": 8,
+    "dec": 2,
+    "items": [
+     {
+      "label": "JAMIESON · 11-5-15-0",
+      "value": 1.36,
+      "color": "gold"
+     },
+     {
+      "label": "HENRY · 12-3-43-1",
+      "value": 3.58,
+      "color": "ink"
+     },
+     {
+      "label": "SMITH · 6-0-29-0 · 3 NO-BALLS",
+      "value": 4.83,
+      "color": "ink"
+     },
+     {
+      "label": "DUFFY · 10-0-72-0 · 3 NO-BALLS",
+      "value": 7.2,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So, day three. Nine wickets in hand, two hundred and nine to find. How close do India get? Comment one, under a hundred. Two, a hundred to two hundred. Three, more.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "INDIA TRAIL BY 209 · COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · UNDER 100",
+      "d": "India are all out well short of New Zealand",
+      "c": "gold"
+     },
+     {
+      "h": "2 · 100 TO 200",
+      "d": "they claw most of it back"
+     },
+     {
+      "h": "3 · MORE",
+      "d": "India pass New Zealand's 368"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down day three the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "85 Off 89 and Three Lives | India vs New Zealand 1st Test Day 2 #Shorts",
+   "description": "India vs New Zealand, 1st Test day two: India 159 for 1, 209 behind. Jaiswal made 85 off 89, with two lives, a wasted New Zealand review and an unreviewed lbw. How the full ball gave him the innings. How close do India get? Comment 1 under 100, 2 100 to 200, 3 more. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Yashasvi Jaiswal",
+    "KL Rahul",
+    "Matt Henry",
+    "Jacob Duffy",
+    "Kyle Jamieson",
+    "Basin Reserve",
+    "Wellington Test",
+    "Day 2 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}
