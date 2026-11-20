@@ -2,6 +2,28 @@
  "slug": "nz_ind_1st_test_day2",
  "claims": [
   {
+   "claim": "NZ at Day 1 stumps 243/5 (Nicholls 113*, Phillips 94*), final total 368: 125 added on Day 2 (Cricbuzz stump summary; no Day 2 NZ ball data)",
+   "value": [
+    243,
+    113,
+    94,
+    368,
+    125
+   ],
+   "sources": {
+    "cricbuzz": [
+     243,
+     113,
+     94,
+     368,
+     125
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
    "claim": "India 159/1 after 38.6 overs at stumps, trailing NZ's 368 by 209",
    "value": [
     159,
@@ -183,6 +205,6 @@
   }
  ],
  "summary": {
-  "LABELLED": 10
+  "LABELLED": 11
  }
 }

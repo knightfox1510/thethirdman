@@ -153,7 +153,7 @@ def sc_photocard(c, g, t, D, s):
     text(c, s["kicker"], x0, 250 if sh else 150, 28 if sh else 26, "monoSB", LK.RED, q, track=2)
     if sh: text(c, s["title"], x0, 330 + 100, 130, "interB", gfx.INK, q, track=-2)
     pw, ph = (920, 613) if sh else (1000, 667); px, py = (80, 540) if sh else (120, 230); qa = eo(prog(t, .1, .6))
-    draw_photo(c, s["img"], px, py + (1 - qa) * 40, pw, ph, qa, 22, rot=-1.6 if sh else -1.4, shadow=True)
+    draw_photo(c, s["img"], px, py + (1 - qa) * 40, pw, ph, qa, 22, crop=s.get("crop_short" if sh else "crop_long"), rot=-1.6 if sh else -1.4, shadow=True)
     _tag(c, px + 40, py + 30, s["tag"], qa)
     if sh:
         text(c, s["name"], x0, 1310, E.fit(s["name"], 920, 78, "interB", -1), "interB", gfx.INK, eo(prog(t, .5, 1.0)))

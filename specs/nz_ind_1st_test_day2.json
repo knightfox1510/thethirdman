@@ -83,32 +83,82 @@
   {
    "vo": "India, one fifty-nine for one. Still two hundred and nine behind New Zealand's three sixty-eight. And the man who made eighty-five of those runs should have been out twice.",
    "scene": {
-    "type": "statement",
-    "kicker": "NZ V IND · 1ST TEST · DAY 2",
+    "type": "photohero",
+    "kicker": "NZ V IND · 1ST TEST · DAY 2 · 159 FOR 1",
     "lines": [
      {
-      "t": "159 FOR 1."
+      "t": "209 BEHIND."
      },
      {
-      "t": "209 BEHIND.",
+      "t": "85 OFF 89.",
       "c": "gold"
      }
     ],
-    "sub": "And the man on 85 should have been out twice."
+    "img": "data/licensed/cut/nz_day2_jaiswal_drive_crop.png",
+    "sub": [
+     "The man on 85 should have been out twice."
+    ]
+   }
+  },
+  {
+   "vo": "First, the morning. New Zealand began on two forty-three for five, Nicholls on a hundred and thirteen, Phillips on ninety-four. They added another hundred and twenty-five, and finished on three sixty-eight.",
+   "scene": {
+    "type": "photostand",
+    "kicker": "NEW ZEALAND'S MORNING",
+    "title": "243/5 to 368.",
+    "items": [
+     {
+      "img": "data/licensed/in/nz_day2_nicholls_walkoff.jpg",
+      "big": "113*",
+      "name": "NICHOLLS · DAY 1 END",
+      "crop": [
+       140,
+       250,
+       1140,
+       815
+      ]
+     },
+     {
+      "img": "data/licensed/in/nz_day2_phillips_hundred.jpg",
+      "big": "94*",
+      "name": "PHILLIPS · DAY 1 END",
+      "crop": [
+       140,
+       330,
+       1140,
+       895
+      ]
+     }
+    ],
+    "chips": [
+     [
+      "243/5",
+      "DAY 1 STUMPS"
+     ],
+     [
+      "368",
+      "NZ FINAL TOTAL"
+     ],
+     [
+      "125",
+      "ADDED ON DAY 2"
+     ]
+    ]
    }
   },
   {
    "vo": "यशस्वी जायसवाल, eighty-five off eighty-nine balls. Sixteen fours. Sixty-four of his eighty-five came in boundaries.",
    "scene": {
-    "type": "bignum",
-    "head": {
-     "t": "YASHASVI JAISWAL"
-    },
-    "value": 85,
-    "suffix": "",
-    "label": "OFF 89 BALLS · 16 FOURS · 64 OF 85 IN BOUNDARIES",
-    "color": "gold",
-    "note": "out c Blundell b Henry · 130 for 1"
+    "type": "photocard",
+    "kicker": "YASHASVI JAISWAL · DAY 2",
+    "title": "85.",
+    "img": "data/licensed/in/nz_day2_jaiswal_loft.jpg",
+    "tag": "85 (89) · 16 FOURS",
+    "name": "JAISWAL",
+    "mono": "64 OF 85 IN BOUNDARIES",
+    "caption": "Out c Blundell b Henry, 130 for 1.",
+    "chip": "85",
+    "chip_sub": "OFF 89 BALLS"
    }
   },
   {
@@ -488,39 +538,22 @@
   {
    "vo": "After that, India scored twenty-nine in eleven overs. के एल राहुल, fifty-two off a hundred and sixteen balls, his first Test fifty against New Zealand. Strike rate, forty-five.",
    "scene": {
-    "type": "compare",
-    "head": {
-     "t": "AFTER THE WICKET",
-     "sub": "130 FOR 1 TO 159 FOR 1 · 11 OVERS"
-    },
-    "a": {
-     "name": "JAISWAL",
-     "color": "gold"
-    },
-    "b": {
-     "name": "RAHUL",
-     "color": "ink"
-    },
-    "rows": [
-     [
-      "RUNS",
-      "85",
-      "52*",
-      "a"
-     ],
-     [
-      "BALLS",
-      "89",
-      "116",
-      "b"
-     ],
-     [
-      "STRIKE RATE",
-      "96",
-      "45",
-      "a"
-     ]
-    ]
+    "type": "photocard",
+    "kicker": "KL RAHUL · TEST FIFTY NO. 22",
+    "title": "52*.",
+    "img": "data/licensed/in/nz_day2_rahul_fifty.jpg",
+    "crop_short": [
+     60,
+     40,
+     1160,
+     774
+    ],
+    "tag": "52* (116) · SR 45",
+    "name": "RAHUL",
+    "mono": "29 RUNS IN THE LAST 11 OVERS",
+    "caption": "First Test fifty against New Zealand.",
+    "chip": "52*",
+    "chip_sub": "OFF 116 BALLS"
    }
   },
   {

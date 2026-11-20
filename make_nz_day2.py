@@ -26,6 +26,7 @@ for x in sorted(B, key=lambda x: x["ts"]):
     k = int(x["over"]); ov.setdefault(k, [0, False]); ov[k][0] += x["runs"]; ov[k][1] = ov[k][1] or x["wkt"]
 OVERS = [tuple(v) for v in ov.values()]; assert len(OVERS) == 39 and sum(r for r, _ in OVERS) == 159 - 6 + 6 - 0 or True
 c = V.Claims("nz_ind_1st_test_day2")
+c.check("NZ at Day 1 stumps 243/5 (Nicholls 113*, Phillips 94*), final total 368: 125 added on Day 2 (Cricbuzz stump summary; no Day 2 NZ ball data)", (243, 113, 94, 368, 125), {CB: (243, 113, 94, 368, 125)}, scope="archive")
 c.check("India 159/1 after 38.6 overs at stumps, trailing NZ's 368 by 209", (159, 1, 368, 209), {CB: (159, 1, 368, 209)}, scope="archive")
 c.check("Jaiswal 85 (89), 16 fours, c Blundell b Henry at 130 (27.5); fifty off 66 balls", (85, 89, 16, 130, 66), {CB: (85, 89, 16, 130, 66)}, scope="archive")
 c.check("Rahul 52* (116), 5 fours; Padikkal 16* (35)", (52, 116, 5, 16, 35), {CB: (52, 116, 5, 16, 35)}, scope="archive")
@@ -37,9 +38,11 @@ c.check("lifelines: NZ review lost (3.6); Jaiswal edge past slip on 0 (4.2); Hen
 c.check("Rahul's 22nd Test fifty and first against NZ (Cricbuzz)", True, {CB: True}, scope="archive")
 c.check("after Jaiswal's wicket (130) to stumps (159): 29 runs", 29, {CB: 29}, scope="archive")
 
+IN, CT = "data/licensed/in/", "data/licensed/cut/"
 def ACT(l1, l2, sub): return {"type": "statement", "kicker": "", "lines": [{"t": l1}, {"t": l2, "c": "gold"}], "sub": sub}
-COLD = {"type": "statement", "kicker": "NZ V IND · 1ST TEST · DAY 2", "lines": [{"t": "159 FOR 1."}, {"t": "209 BEHIND.", "c": "gold"}], "sub": "And the man on 85 should have been out twice."}
-BIG = {"type": "bignum", "head": {"t": "YASHASVI JAISWAL"}, "value": 85, "suffix": "", "label": "OFF 89 BALLS · 16 FOURS · 64 OF 85 IN BOUNDARIES", "color": "gold", "note": "out c Blundell b Henry · 130 for 1"}
+COLD = {"type": "photohero", "kicker": "NZ V IND · 1ST TEST · DAY 2 · 159 FOR 1", "lines": [{"t": "209 BEHIND."}, {"t": "85 OFF 89.", "c": "gold"}], "img": CT + "nz_day2_jaiswal_drive_crop.png", "sub": ["The man on 85 should have been out twice."]}
+MORN = {"type": "photostand", "kicker": "NEW ZEALAND'S MORNING", "title": "243/5 to 368.", "items": [{"img": IN + "nz_day2_nicholls_walkoff.jpg", "big": "113*", "name": "NICHOLLS · DAY 1 END", "crop": (140, 250, 1140, 815)}, {"img": IN + "nz_day2_phillips_hundred.jpg", "big": "94*", "name": "PHILLIPS · DAY 1 END", "crop": (140, 330, 1140, 895)}], "chips": [("243/5", "DAY 1 STUMPS"), ("368", "NZ FINAL TOTAL"), ("125", "ADDED ON DAY 2")]}
+BIG = {"type": "photocard", "kicker": "YASHASVI JAISWAL · DAY 2", "title": "85.", "img": IN + "nz_day2_jaiswal_loft.jpg", "tag": "85 (89) · 16 FOURS", "name": "JAISWAL", "mono": "64 OF 85 IN BOUNDARIES", "caption": "Out c Blundell b Henry, 130 for 1.", "chip": "85", "chip_sub": "OFF 89 BALLS"}
 SQZ = {"type": "stats", "head": {"t": "THE SQUEEZE", "sub": "BEFORE TEA · INDIA BATTING"}, "tiles": [{"v": "16", "l": "RUNS IN 8 OVERS", "c": "gold"}, {"v": "11-5-15", "l": "JAMIESON'S DAY · 0 WKTS", "c": "ink"}, {"v": "3 + GULLY", "l": "SLIPS IN PLACE", "c": "red"}]}
 REV = {"type": "timeline", "head": {"t": "NEW ZEALAND'S REVIEWS", "sub": "OVERS FOUR AND SEVEN"}, "events": [{"y": "3.6", "t": "lbw review on Rahul: impact outside off. Review lost", "c": "red"}, {"y": "6.4", "t": "Henry's lbw shout on Rahul, two sounds. Latham does not review", "hl": True}, {"y": "6.6", "t": "Henry throws his sweater down", "c": "red"}]}
 LIFE = {"type": "timeline", "head": {"t": "JAISWAL'S TWO LIVES", "sub": "BEFORE TEA"}, "events": [{"y": "4.2", "t": "On 0: edge between third slip and gully, four", "hl": True}, {"y": "7.3", "t": "On 6: edge to gully, Phillips drops it, four", "hl": True}, {"y": "7.6", "t": "tea: 16 for no loss", "c": "red"}]}
@@ -51,12 +54,13 @@ LEN = {"type": "bars", "head": {"t": "WHAT NEW ZEALAND BOWLED", "sub": "RUNS PER
     {"label": "SHORT · 45 BALLS · 16 RUNS", "value": round(16 * 6 / 45, 2), "color": "ink"}, {"label": "GOOD LENGTH · 33 BALLS · 10 RUNS", "value": round(10 * 6 / 33, 2), "color": "gold"}]}
 JVS = {"type": "compare", "head": {"t": "JAISWAL AGAINST EACH LENGTH", "sub": "OUR READ OF CRICBUZZ'S TEXT"}, "a": {"name": "VS FULL", "color": "red"}, "b": {"name": "VS GOOD LENGTH", "color": "gold"}, "rows": [["BALLS", "27", "10", "a"], ["RUNS", "41", "0", "a"]]}
 WKT = {"type": "timeline", "head": {"t": "THE WICKET"}, "events": [{"y": "22.1", "t": "fifty off 66 balls", "hl": True}, {"y": "25.3", "t": "80 off 84 balls", "c": "ink"}, {"y": "27.5", "t": "c Blundell b Henry for 85 · NZ review · 130/1", "c": "red"}]}
-SLOW = {"type": "compare", "head": {"t": "AFTER THE WICKET", "sub": "130 FOR 1 TO 159 FOR 1 · 11 OVERS"}, "a": {"name": "JAISWAL", "color": "gold"}, "b": {"name": "RAHUL", "color": "ink"}, "rows": [["RUNS", "85", "52*", "a"], ["BALLS", "89", "116", "b"], ["STRIKE RATE", "96", "45", "a"]]}
+SLOW = {"type": "photocard", "kicker": "KL RAHUL · TEST FIFTY NO. 22", "title": "52*.", "img": IN + "nz_day2_rahul_fifty.jpg", "crop_short": (60, 40, 1160, 774), "tag": "52* (116) · SR 45", "name": "RAHUL", "mono": "29 RUNS IN THE LAST 11 OVERS", "caption": "First Test fifty against New Zealand.", "chip": "52*", "chip_sub": "OFF 116 BALLS"}
 NZB = {"type": "bars", "head": {"t": "NEW ZEALAND'S BOWLERS", "sub": "ECONOMY RATE · RUNS PER OVER"}, "max": 8, "dec": 2, "items": [{"label": "JAMIESON · 11-5-15-0", "value": round(15 / 11, 2), "color": "gold"}, {"label": "HENRY · 12-3-43-1", "value": round(43 / 12, 2), "color": "ink"},
     {"label": "SMITH · 6-0-29-0 · 3 NO-BALLS", "value": round(29 / 6, 2), "color": "ink"}, {"label": "DUFFY · 10-0-72-0 · 3 NO-BALLS", "value": round(72 / 10, 2), "color": "red"}]}
 POLL = {"type": "list", "head": {"t": "YOUR CALL", "sub": "INDIA TRAIL BY 209 · COMMENT 1, 2 OR 3"}, "items": [{"h": "1 · UNDER 100", "d": "India are all out well short of New Zealand", "c": "gold"}, {"h": "2 · 100 TO 200", "d": "they claw most of it back"}, {"h": "3 · MORE", "d": "India pass New Zealand's 368"}]}
 short = [
     {"vo": "India, one fifty-nine for one. Still two hundred and nine behind New Zealand's three sixty-eight. And the man who made eighty-five of those runs should have been out twice.", "scene": COLD},
+    {"vo": "First, the morning. New Zealand began on two forty-three for five, Nicholls on a hundred and thirteen, Phillips on ninety-four. They added another hundred and twenty-five, and finished on three sixty-eight.", "scene": MORN},
     {"vo": "Yashasvi Jaiswal, eighty-five off eighty-nine balls. Sixteen fours. Sixty-four of his eighty-five came in boundaries.", "scene": BIG},
     {"vo": "But start with the squeeze. Before tea, eight overs, sixteen runs. Three slips and a gully. Kyle Jamieson finished the day with eleven overs, five maidens, fifteen runs.", "scene": SQZ},
     {"vo": "Then the drama. Over four, New Zealand review an lbw against KL Rahul, and lose it. The impact was outside off. Over seven, Matt Henry hits Rahul on the pads, two sounds, a huge appeal. Tom Latham has a second left on the clock, and does not review. Henry throws his sweater down.", "scene": REV},
