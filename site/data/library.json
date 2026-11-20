@@ -697,6 +697,23 @@
    ]
   },
   {
+   "slug": "nz_ind_1st_test_day2",
+   "title": "85 Off 89 and Three Lives | India vs New Zealand 1st Test Day 2",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "05",
+   "long": null,
+   "short": "2:54",
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "India's first innings on Day 2: Cricbuzz full commentary for New Zealand v India, 1st Test, 20 November 2026 (owner's capture; bowler lines, no-ball counts and match summary are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+    "Length classes (full / good length / short of a length / short) are our keyword read of Cricbuzz's ball text, with 61 of 240 deliveries unclassified. Figures: analysis/nz_day2.py"
+   ]
+  },
+  {
    "slug": "nz_test_preview",
    "title": "Can India Win a Test Series in New Zealand?",
    "format": "tactics",
