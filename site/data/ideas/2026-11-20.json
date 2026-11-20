@@ -1,0 +1,136 @@
+{
+ "date": "2026-11-20",
+ "by": "Daily ideas task",
+ "news": [
+  {
+   "title": "1st Test, day two: Phillips out for 118, NZ 317/6 at lunch; Nicholls 146* after 8.5 hours",
+   "url": "https://www.wral.com/news/ap/f81df-phillips-out-for-118-new-zealand-reaches-317-6-at-lunch-on-day-2-of-1st-cricket-test-against-india/",
+   "note": "From 70/5 to 317/6: a 216-run stand (Nicholls-Phillips) ended by Akash Deep (2/45 off 21 at lunch). Bumrah wicketless on day two; AP says the green tinge has faded. Day two was still in play at our check (06:30 IST), so the Replay Room needs the stumps score."
+  },
+  {
+   "title": "Day one recap: Bumrah strikes third ball of the match on return, three wickets on day one; Nicholls' 12th Test hundred (fifth at the Basin)",
+   "url": "https://www.icc-cricket.com/tournaments/world-test-championship/news/nicholls-phillips-rally-new-zealand-after-bumrah-burst",
+   "note": "Nicholls' Basin Reserve record is a ready-made data angle; India's four-seam plan worked for one session only."
+  },
+  {
+   "title": "Day two session timings: play 3:30-10:30 am IST",
+   "url": "https://khelnow.com/cricket/nz-vs-ind-day-2-session-timing-wellington-202611",
+   "note": "Day-after uploads should land by noon IST, after stumps."
+  },
+  {
+   "title": "England win the ODI series in Australia 2-1: Duckett 133, Sonny Baker 4/45, won by 97 runs in Hobart (18 Nov)",
+   "url": "https://www.skysports.com/cricket/news/13613516/england-cruise-to-odi-series-win-over-australia-as-ben-duckett-scores-century-and-sonny-baker-takes-four-wickets",
+   "note": "Global-audience angle; five T20Is follow from 21 Nov (MCG). Corrects our fixtures entry (result was unconfirmed yesterday)."
+  },
+  {
+   "title": "India's next ODIs: Sri Lanka at Visakhapatnam 13 Dec, Bengaluru 16 Dec, Ahmedabad 19 Dec (2 pm IST); Zimbabwe ODIs 3-9 Jan 2027",
+   "url": "https://khelnow.com/cricket/when-will-india-next-play-odi-cricket-202611",
+   "note": "Fixture list for December/January previews."
+  },
+  {
+   "title": "MI captaincy: still only reports (Rohit 'set to' return, 31 Oct, unnamed sources); no official MI announcement found today",
+   "url": "https://www.wionews.com/sports/rohit-sharma-reappointed-mumbai-indians-captain-ipl-2027-hardik-pandya-1793416275783",
+   "note": "Keep the prepared 'Mumbai cha Raja' cut on Hold until MI confirm."
+  },
+  {
+   "title": "Ranji Trophy 2026-27 round four: Tripura upset Saurashtra, Hyderabad chase 259 by one wicket; Bachhav 13 wickets for Sikkim",
+   "url": "https://wisden.com/series/ranji-trophy-2026-27/cricket-news/ranji-trophy-202627-round-four-wrap-up-anikethreddy-rearguard-batting-act-inspires-one-wicket-win-tripura-upset-saurashtra",
+   "note": "Domestic breakout pool (Salil Arora's four tons in four games, Harsh Dubey's 14/90 from earlier coverage) ahead of the auction."
+  },
+  {
+   "title": "Earlier round-four coverage: Salil Arora fourth hundred in four games; Harsh Dubey nine-for",
+   "url": "https://wisden.com/series/ranji-trophy-2026-27/cricket-news/ranji-trophy-202627-round-four-day-one-srh-batter-salil-arora-slams-fourth-ton-in-four-games-harsh-dubey-takes-nine-for",
+   "note": "Auction-relevant Rising Star candidates (registration deadline 23 Nov)."
+  }
+ ],
+ "ideas": [
+  {
+   "title": "India vs New Zealand - 1st Test Day 2 Analysis | The 216-Run Stand That Flattened India's Plan",
+   "format": "replay",
+   "why": "From 70/5 to past 300: where India's four seamers lost the length once the green went. Over-by-over runs and lengths for Nicholls and Phillips vs each bowler, Bumrah's day-two spells. Follows yesterday's Day 1 video, so it becomes a running Test diary.",
+   "timing": "Today after stumps (play ends ~10:30 am IST); upload by early afternoon IST while the Test is live.",
+   "data": "Owner's Cricinfo + Cricbuzz capture after stumps (cricinfo_import.py); headline numbers against the official scorecard.",
+   "priority": "High"
+  },
+  {
+   "title": "News Short: Henry Nicholls at the Basin Reserve, five Test hundreds at one ground",
+   "format": "news",
+   "why": "Hook: 'Five of his twelve Test hundreds, one ground.' His Basin average vs everywhere else, and how long he batted (8.5 hours by lunch).",
+   "timing": "Today (day two), while his innings is the story.",
+   "data": "Official record (ICC/Cricinfo Statsguru) for his ground split, checked against Wikipedia; AP/ICC report for today's figures.",
+   "priority": "High"
+  },
+  {
+   "title": "Tactics Board: Christchurch preview, how India bowl once the Basin-style green fades",
+   "format": "tactics",
+   "why": "Day two showed the four-seam plan works for a session then dries up. Hagley Oval history: first-innings par, toss, pace share of wickets, and whether India bring back a spinner.",
+   "timing": "Post 25-26 Nov, 1-2 days before the 2nd Test (27 Nov).",
+   "data": "Cricsheet Tests at Hagley Oval (men only, label 'in our archive'); squads and fitness from BCCI/NZC news.",
+   "priority": "High"
+  },
+  {
+   "title": "Myth or Data?: 'Four seamers and no spinner is the way to win in New Zealand'",
+   "format": "myth",
+   "why": "India dropped Jadeja for a fourth seamer. Test the claim: share of wickets by pace/spin in NZ Tests since 2010, and how visiting all-pace attacks fared after day one.",
+   "timing": "Within 2-3 days, before the 2nd Test XI is picked.",
+   "data": "Cricsheet Tests in NZ since 2010 (filter male, label 'in our archive'); totals checked against Cricinfo records.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Flip: Henry Nicholls vs the best NZ batters at the same Test count",
+   "format": "flip",
+   "why": "A visual benchmark flip that rides today's innings; Kiwi and Indian audiences both engage.",
+   "timing": "Today or tomorrow, during the Test.",
+   "data": "Cricsheet Tests (career-to-date curves; label 'in our archive'), totals checked against official records.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Stat Check: England's ODI series win in Australia, how rare is it?",
+   "format": "statcheck",
+   "why": "Duckett 133, Baker 4/45, a 97-run decider in Hobart. How often have England won a bilateral ODI series in Australia, and Duckett's ODI numbers vs the openers around him.",
+   "timing": "Before the Aus v Eng T20Is start (21 Nov), within 48 h of the result.",
+   "data": "Cricinfo records for series history (Tier A); Cricsheet ODIs for Duckett's scoring profile ('in our archive').",
+   "priority": "Medium"
+  },
+  {
+   "title": "Rising Star: Salil Arora, four hundreds in four Ranji games before the auction",
+   "format": "rising",
+   "why": "A keeper-batter on a hot streak a week before the IPL registration deadline: who might bid, and what his first-class numbers say.",
+   "timing": "Before the auction registration deadline (23 Nov) or the auction (16 Dec).",
+   "data": "Official BCCI/Cricinfo scorecards for the Ranji season (verify each hundred twice); Sportmonks IPL if he has IPL appearances.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Did You Know?: When does a seamer's new ball become 'old'? The 80-over rule in Tests",
+   "format": "lab",
+   "why": "Day two's story is the ball softening on the Basin. Explainer framed as a Lab chart: how scoring and wicket rates change by ball age in NZ Tests (Did You Know? plate look if built as that series).",
+   "timing": "Any time during the Test series (by 27 Nov).",
+   "data": "MCC Laws / ICC Test Playing Conditions for the rule; Cricsheet Tests in NZ for ball-age phases ('in our archive').",
+   "priority": "Low"
+  },
+  {
+   "title": "The Lab: Which Indian seamer handles the old ball best in SENA Tests?",
+   "format": "lab",
+   "why": "Akash Deep took both day-two wickets as Bumrah went quiet. Compare economy and strike rate after over forty in SENA Tests for Bumrah, Akash Deep, Prasidh, Kamboj.",
+   "timing": "Before the 2nd Test (27 Nov).",
+   "data": "Cricsheet Tests (men, SENA, phase by over number); sample sizes shown; label 'in our archive'.",
+   "priority": "Medium"
+  },
+  {
+   "title": "What If?: India had picked Jadeja at the Basin",
+   "format": "whatif",
+   "why": "Counterfactual on the 216-run stand: what Jadeja's NZ and old-ball numbers suggest he would have changed. Film look, honest about uncertainty.",
+   "timing": "After the 1st Test result (around 23-24 Nov).",
+   "data": "Cricsheet Tests for Jadeja's SENA phase numbers ('in our archive'); official career record for totals.",
+   "priority": "Low"
+  },
+  {
+   "title": "Flip: Ben Duckett vs the world's ODI openers since 2023",
+   "format": "flip",
+   "why": "Rides the Hobart century for a global audience; no narration needed.",
+   "timing": "Within 48 h of the series win (by 20-21 Nov).",
+   "data": "Cricsheet ODIs ('in our archive'), headline total checked against Cricinfo.",
+   "priority": "Low"
+  }
+ ]
+}

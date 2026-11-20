@@ -1,6 +1,6 @@
 {
- "synced": "2026-11-19",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1)",
+ "synced": "2026-11-20",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates)",
  "items": [
   {
    "date": "2026-11-17",
@@ -15,7 +15,7 @@
    "event": "3rd ODI",
    "teams": "Australia v England",
    "venue": "Hobart (Ninja Stadium, Bellerive Oval), 2:30 pm local",
-   "status": "Played 18 Nov (series was 1-1); result not confirmed in today's check",
+   "status": "England won by 97 runs (Duckett 133, Baker 4/45); series 2-1 to England",
    "format": "news"
   },
   {
@@ -23,8 +23,16 @@
    "event": "1st Test (19–23 Nov)",
    "teams": "NZ v India",
    "venue": "Wellington (Basin Reserve)",
-   "status": "Live: India won toss, bowled; NZ 60/4 at lunch day one (Bumrah 2/17 on return). India four seamers + Sundar; no Jadeja/Siraj; Santner out for NZ",
+   "status": "Live, day two: NZ 243/5 at day-one stumps (from 70/5), 317/6 at lunch on day two; Phillips 118, Nicholls 146*; Akash Deep 2/45, Bumrah 3 on day one",
    "format": "replay"
+  },
+  {
+   "date": "2026-11-21",
+   "event": "1st T20I (of five, to 2 Dec)",
+   "teams": "Australia v England",
+   "venue": "Melbourne (MCG)",
+   "status": "Upcoming",
+   "format": "news"
   },
   {
    "date": "2026-11-23",
@@ -33,6 +41,14 @@
    "venue": "—",
    "status": "Upcoming",
    "format": "statcheck"
+  },
+  {
+   "date": "2026-11-23",
+   "event": "1st Test, day five (if needed)",
+   "teams": "NZ v India",
+   "venue": "Wellington",
+   "status": "Replay Room long due next day",
+   "format": "replay"
   },
   {
    "date": "2026-11-27",
@@ -46,7 +62,7 @@
    "date": "2026-12-13",
    "event": "1st ODI (D/N)",
    "teams": "India v Sri Lanka",
-   "venue": "Visakhapatnam (shifted from Delhi; verify)",
+   "venue": "Visakhapatnam (ACA-VDCA), 2 pm IST (moved from Delhi)",
    "status": "Upcoming",
    "format": "replay"
   },
@@ -97,6 +113,14 @@
    "venue": "Pune",
    "status": "Upcoming",
    "format": "replay"
+  },
+  {
+   "date": "2027-01-03",
+   "event": "1st ODI",
+   "teams": "India v Zimbabwe",
+   "venue": "Kolkata (verify)",
+   "status": "Upcoming (Hyderabad 6 Jan, Mumbai 9 Jan)",
+   "format": "tactics"
   }
  ]
 }
