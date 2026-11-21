@@ -19,6 +19,7 @@ A faceless cricket channel ("Cricket from a different angle"). Every video is a 
 
 ## Hard rules (the owner has flagged these repeatedly)
 - NO burned-in captions/subtitles in ANY video, long or Short, any series. The engine only draws them if a spec sets "burn_captions": true - never set it. Ship the .srt instead.
+- NEVER name a data or news source (Cricbuzz, ESPNcricinfo, Cricsheet, Sportmonks, Wisden, broadcasters, "per Cricbuzz", "our Cricbuzz table") in a video's voice-over or on screen, in any scene, any series, long or Short, nor in the on-screen end cards (owner rule, 21 Nov 2026). Say "in our records" / "by our count" / "in our ball-by-ball" instead; credit sources only in the YouTube description and the spec's `sources[]`. voice_lint.check_spec enforces this on vo and every scene string; engine builds FAIL on a violation.
 - NO on-screen source/footer lines in any video (e.g. "Ball-by-ball: ESPNcricinfo, Cricbuzz · ... · our own analysis"). Never set "foot" on scenes (Lab scenes ignore it); credit sources only in the YouTube description and the spec's `sources[]`.
 - Pronunciation: every subcontinent player name (first AND last, e.g. जसप्रीत बुमराह, राशिद ख़ान, के एल राहुल) and Indian place names are Devanagari in `vo`; "U19" is spoken "Under nineteen"; "T20" is written "T-twenty"; no digits. voice_lint.py enforces this and engine builds FAIL on violations - add new names to voice_lint.NAMES (SHOW is filled from it).
 

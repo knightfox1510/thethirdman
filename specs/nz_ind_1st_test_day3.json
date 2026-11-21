@@ -81,7 +81,7 @@
  ],
  "short": [
   {
-   "vo": "Three balls left in the day. शुभमन गिल, on ninety-eight. Jacob Duffy bowls him through the gate. But day three was bigger than that. India started it two hundred and nine behind. They finished a hundred and eighteen ahead.",
+   "vo": "Three balls left. शुभमन गिल, on ninety-eight. Jacob Duffy bowls him through the gate. But India started day three two hundred and nine behind. They finished a hundred and eighteen ahead.",
    "scene": {
     "type": "statement",
     "kicker": "DAY 3 · THREE BALLS TO GO",
@@ -98,39 +98,12 @@
    }
   },
   {
-   "vo": "Three hundred and twenty-seven runs. Three wickets. Eighty-six overs.",
-   "scene": {
-    "type": "stats",
-    "head": {
-     "t": "DAY THREE",
-     "sub": "159/1 TO 486/4"
-    },
-    "tiles": [
-     {
-      "v": "327",
-      "l": "RUNS",
-      "c": "gold"
-     },
-     {
-      "v": "3",
-      "l": "WICKETS · 86 OVERS",
-      "c": "ink"
-     },
-     {
-      "v": "+118",
-      "l": "FROM 209 BEHIND",
-      "c": "red"
-     }
-    ]
-   }
-  },
-  {
-   "vo": "And every session was faster. Eighty runs before lunch. A hundred and five to tea. A hundred and forty-two in the evening.",
+   "vo": "Three hundred and twenty-seven runs, three wickets, and every session faster. Eighty before lunch, a hundred and five to tea, a hundred and forty-two after.",
    "scene": {
     "type": "bars",
     "head": {
      "t": "EVERY SESSION FASTER",
-     "sub": "RUNS PER OVER · INDIA'S INNINGS"
+     "sub": "RUNS PER OVER · 159/1 TO 486/4 · +118"
     },
     "max": 5,
     "dec": 2,
@@ -154,7 +127,81 @@
    }
   },
   {
-   "vo": "The morning was के एल राहुल's. A hundred off two hundred and seven balls, his first in New Zealand, and by Cricbuzz's count a Test hundred in every SENA country.",
+   "vo": "New Zealand began stump to stump. Before lunch, eighty-four per cent were on or outside off. By the evening, a quarter were on the leg side.",
+   "scene": {
+    "type": "pitchzones",
+    "head": {
+     "t": "WHERE NEW ZEALAND BOWLED",
+     "sub": "SHARE OF DELIVERIES · LINE BY LENGTH · ILLUSTRATIVE"
+    },
+    "panels": [
+     {
+      "title": "BEFORE LUNCH",
+      "n": 295,
+      "cells": {
+       "outside_off|short": 30,
+       "off|short_of_length": 15,
+       "middle|short": 8,
+       "outside_off|full": 39,
+       "off|good": 40,
+       "off|full": 51,
+       "outside_off|good": 27,
+       "off|short": 26,
+       "middle|full": 9,
+       "leg|short_of_length": 4,
+       "outside_off|short_of_length": 19,
+       "leg|short": 9,
+       "leg|full": 2,
+       "leg|good": 4,
+       "middle|good": 9,
+       "middle|short_of_length": 3
+      },
+      "stats": [
+       [
+        "84%",
+        "ON OR OUTSIDE OFF"
+       ],
+       [
+        "6%",
+        "ON THE LEG SIDE"
+       ]
+      ]
+     },
+     {
+      "title": "AFTER TEA",
+      "n": 101,
+      "cells": {
+       "outside_off|full": 18,
+       "leg|full": 5,
+       "outside_off|good": 3,
+       "leg|good": 1,
+       "off|full": 10,
+       "off|good": 15,
+       "middle|short": 5,
+       "leg|short": 16,
+       "off|short": 9,
+       "off|short_of_length": 6,
+       "leg|short_of_length": 4,
+       "outside_off|short": 7,
+       "middle|full": 2
+      },
+      "stats": [
+       [
+        "68%",
+        "ON OR OUTSIDE OFF"
+       ],
+       [
+        "26%",
+        "ON THE LEG SIDE"
+       ]
+      ]
+     }
+    ],
+    "footnote": "OUR READ OF THE BALL-BY-BALL TEXT · BATTER'S END AT THE TOP · SHADE = SHARE OF THE PANEL'S BALLS"
+   }
+  },
+  {
+   "vo": "The morning was के एल राहुल's. A hundred off two hundred and seven balls, his first in New Zealand, and a Test hundred in every SENA country.",
    "scene": {
     "type": "photocard",
     "kicker": "KL RAHUL · DAY 3",
@@ -169,105 +216,839 @@
     "tag": "100 (207) · 68.4 OV",
     "name": "RAHUL",
     "mono": "FIRST HUNDRED IN NEW ZEALAND",
-    "caption": "Per Cricbuzz: a Test hundred in all four SENA countries.",
+    "caption": "A Test hundred in all four SENA countries.",
     "chip": "136",
     "chip_sub": "OFF 290 BALLS"
    }
   },
   {
-   "vo": "देवदत्त पडिक्कल added a hundred and sixty-five with him. Eighty, and then one ball from Kyle Jamieson that held its line. A hundred, missed by twenty.",
+   "vo": "Sixty of his placed runs came through the leg side, forty-nine through the off.",
    "scene": {
-    "type": "stats",
+    "type": "wagon",
     "head": {
-     "t": "DEVDUTT PADIKKAL",
-     "sub": "THE SECOND-WICKET STAND WITH RAHUL"
+     "t": "RAHUL'S 136",
+     "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"
     },
-    "tiles": [
-     {
-      "v": "80",
-      "l": "OFF 175 BALLS · b JAMIESON",
-      "c": "gold"
-     },
-     {
-      "v": "165",
-      "l": "STAND FOR THE SECOND WICKET",
-      "c": "ink"
-     },
-     {
-      "v": "-20",
-      "l": "FROM A HUNDRED",
-      "c": "red"
-     }
-    ]
+    "pts": [
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      4,
+      "f"
+     ],
+     [
+      0,
+      2,
+      "n"
+     ],
+     [
+      -28,
+      2,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      4,
+      "f"
+     ],
+     [
+      -140,
+      4,
+      "f"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      4,
+      "f"
+     ],
+     [
+      62,
+      4,
+      "n"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      2,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      2,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      4,
+      "f"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      4,
+      "f"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      140,
+      4,
+      "f"
+     ],
+     [
+      62,
+      2,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      2,
+      "n"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      6,
+      "s"
+     ],
+     [
+      62,
+      3,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      62,
+      4,
+      "f"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      2,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      0,
+      4,
+      "n"
+     ],
+     [
+      0,
+      4,
+      "f"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      118,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      105,
+      6,
+      "s"
+     ]
+    ],
+    "chips": [
+     [
+      "60",
+      "RUNS LEG SIDE"
+     ],
+     [
+      "49",
+      "RUNS OFF SIDE"
+     ],
+     [
+      "13",
+      "STRAIGHT"
+     ]
+    ],
+    "footnote": "71 SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT"
    }
   },
   {
-   "vo": "Then the second new ball. Thirteen overs, fifty-six runs. गिल's fifty, a pull for six, put India in front. राहुल fell soon after, bowled by Nathan Smith for a hundred and thirty-six.",
-   "scene": {
-    "type": "timeline",
-    "head": {
-     "t": "THE SECOND NEW BALL",
-     "sub": "TAKEN AT 80 OVERS"
-    },
-    "events": [
-     {
-      "y": "80.0",
-      "t": "to tea: 56 runs in 13 overs, one wicket",
-      "hl": true
-     },
-     {
-      "y": "100.3",
-      "t": "Gill's fifty: a six, and India lead",
-      "c": "red"
-     },
-     {
-      "y": "103.3",
-      "t": "Rahul b Smith for 136",
-      "c": "ink"
-     }
-    ]
-   }
-  },
-  {
-   "vo": "Then रिषभ पंत. Fifteen off thirty-seven balls, and then thirty-seven off eighteen. Two sixes in two balls off Duffy. Fifty-two off fifty-five.",
+   "vo": "देवदत्त पडिक्कल added a hundred and sixty-five with him. Eighty, then one Jamieson ball held its line. A hundred, missed by twenty.",
    "scene": {
     "type": "photocard",
-    "kicker": "RISHABH PANT",
-    "title": "52.",
-    "img": "data/licensed/in/nz_day3_pant_pull.jpg",
+    "kicker": "DEVDUTT PADIKKAL",
+    "title": "80.",
+    "img": "data/licensed/in/nz_day3_padikkal_cut.jpg",
     "crop_short": [
-     0,
-     380,
-     1280,
-     1233
+     150,
+     20,
+     1150,
+     667
     ],
-    "tag": "52 (55) · 2 SIXES IN 2 BALLS",
-    "name": "PANT",
-    "mono": "15 OFF 37, THEN 37 OFF 18",
-    "caption": "The lead went past 100.",
-    "chip": "55*",
-    "chip_sub": "OFF 62 BALLS"
+    "tag": "80 (175) · b JAMIESON",
+    "name": "PADIKKAL",
+    "mono": "165 FOR THE SECOND WICKET",
+    "caption": "One ball that held its line. A hundred, missed by twenty.",
+    "chip": "80",
+    "chip_sub": "OFF 175 BALLS"
    }
   },
   {
-   "vo": "गिल made ninety-eight, off a hundred and forty-six balls. Nine fours, two sixes.",
+   "vo": "Then रिषभ पंत. Fifteen off thirty-seven, then thirty-seven off eighteen. Two sixes in two balls off Duffy. The short ball gave him thirty-seven runs from eighteen balls.",
    "scene": {
-    "type": "photocard",
-    "kicker": "SHUBMAN GILL · INDIA CAPTAIN",
-    "title": "98.",
-    "img": "data/licensed/in/nz_day3_batter_pull_apollo.jpg",
-    "crop_short": [
-     0,
-     280,
-     1280,
-     1133
+    "type": "wagon",
+    "head": {
+     "t": "PANT'S 55*",
+     "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"
+    },
+    "pts": [
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      4,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ]
     ],
-    "tag": "98 (146) · 9 FOURS · 2 SIXES",
-    "name": "GILL",
-    "mono": "b DUFFY · 124.4 · THIRD-LAST BALL",
-    "caption": "Pushed in front of the pad. The ball sneaked through.",
-    "chip": "98",
-    "chip_sub": "OFF 146 BALLS"
+    "photo": {
+     "img": "data/licensed/in/nz_day3_pant_pull.jpg",
+     "crop": [
+      300,
+      560,
+      1000,
+      1260
+     ]
+    },
+    "chips": [
+     [
+      "2",
+      "SIXES"
+     ],
+     [
+      "5",
+      "FOURS"
+     ],
+     [
+      "37",
+      "RUNS OFF 18 SHORT BALLS"
+     ]
+    ],
+    "footnote": "25 SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT"
+   }
+  },
+  {
+   "vo": "गिल's fifty was a pull for six, and it put India in front. Ninety-eight off a hundred and forty-six, nine fours, two sixes, mostly on the leg side.",
+   "scene": {
+    "type": "wagon",
+    "head": {
+     "t": "GILL'S 98",
+     "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"
+    },
+    "pts": [
+     [
+      -62,
+      2,
+      "n"
+     ],
+     [
+      -105,
+      2,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      62,
+      4,
+      "f"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      3,
+      "n"
+     ],
+     [
+      105,
+      4,
+      "f"
+     ],
+     [
+      -62,
+      2,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      3,
+      "n"
+     ],
+     [
+      -140,
+      1,
+      "n"
+     ],
+     [
+      140,
+      4,
+      "f"
+     ],
+     [
+      -140,
+      4,
+      "f"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      28,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      28,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ]
+    ],
+    "photo": {
+     "img": "data/licensed/in/nz_day3_batter_pull_apollo.jpg",
+     "crop": [
+      330,
+      280,
+      1030,
+      980
+     ]
+    },
+    "chips": [
+     [
+      "9",
+      "FOURS"
+     ],
+     [
+      "2",
+      "SIXES"
+     ],
+     [
+      "146",
+      "BALLS FACED"
+     ]
+    ],
+    "footnote": "46 SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT"
    }
   },
   {
@@ -276,7 +1057,7 @@
     "type": "bars",
     "head": {
      "t": "INDIA CAPTAINS IN NEW ZEALAND",
-     "sub": "HIGHEST TEST SCORES · PER CRICBUZZ"
+     "sub": "HIGHEST TEST SCORES · IN OUR RECORDS"
     },
     "max": 200,
     "dec": 0,
@@ -310,12 +1091,12 @@
    }
   },
   {
-   "vo": "But it is his fourth dismissal in the nineties. Ninety-one, ninety-one, ninety, and now ninety-eight. The second India captain out in the nineties against New Zealand. The first was एम एस धोनी, for an identical ninety-eight.",
+   "vo": "But it is his fourth dismissal in the nineties. Ninety-one, ninety-one, ninety, now ninety-eight. एम एस धोनी was also out for ninety-eight against New Zealand, in Nagpur.",
    "scene": {
     "type": "list",
     "head": {
      "t": "GILL IN THE NINETIES",
-     "sub": "TEST DISMISSALS · PER CRICBUZZ"
+     "sub": "TEST DISMISSALS · IN OUR RECORDS"
     },
     "items": [
      {
@@ -339,12 +1120,12 @@
    }
   },
   {
-   "vo": "Still, all five of India's top five went past fifty. It has happened five times in Tests, says Cricbuzz.",
+   "vo": "Still, all five of India's top five went past fifty. It has happened five times in Tests.",
    "scene": {
     "type": "list",
     "head": {
      "t": "ALL FIVE PAST FIFTY",
-     "sub": "INDIA'S TOP FIVE · THE FIFTH TIME IN TESTS · PER CRICBUZZ"
+     "sub": "INDIA'S TOP FIVE · THE FIFTH TIME IN TESTS"
     },
     "items": [
      {
@@ -372,7 +1153,7 @@
    }
   },
   {
-   "vo": "New Zealand's bowlers paid. Jacob Duffy: twenty-nine overs, one wicket, a hundred and eighty-one runs. Fourteen no-balls in the innings, seven of them his.",
+   "vo": "New Zealand's bowlers paid. Jacob Duffy: twenty-nine overs, one wicket, a hundred and eighty-one runs. Fourteen no-balls in the innings, seven his.",
    "scene": {
     "type": "bars",
     "head": {

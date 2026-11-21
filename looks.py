@@ -895,6 +895,7 @@ def install(engine):
     import plate; plate.install(engine)
     import needs_scenes; needs_scenes.install(engine, sys.modules[__name__])
     import day1_scenes; day1_scenes.install(engine, sys.modules[__name__])
+    import shot_scenes; shot_scenes.install(engine, sys.modules[__name__])
     E.NO_CAPTION |= {"lab_title"}
     prev_bg = gfx.background
 

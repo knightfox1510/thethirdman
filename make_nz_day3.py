@@ -7,6 +7,12 @@ import voice_lint
 from dataops import verify as V
 from variants import YT_CTA
 
+ONES = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(); TENS = "x x twenty thirty forty fifty sixty seventy eighty ninety".split()
+def w(n):
+    n = int(n)
+    if n < 20: return ONES[n]
+    if n < 100: return TENS[n // 10] + ("-" + ONES[n % 10] if n % 10 else "")
+    h, r = divmod(n, 100); return ONES[h] + " hundred" + (" and " + w(r) if r else "")
 F = json.load(open("data/provenance/nz_day3_figures.json")); B = json.load(open("data/provenance/nz_day3_balls.json")); CB = "cricbuzz"
 bt, bf = F["batters"], F["bowling_final"]
 assert F["stumps"]["score"] == 486 and F["lunch"] == {"over": 65.6, "score": 239} and F["tea"] == {"over": 92.6, "score": 344}
@@ -31,32 +37,51 @@ c.check("Cricbuzz list: Gill dismissed in the 90s four times (91 Brisbane 2021, 
 c.check("Cricbuzz list: all of India's top five past 50 in a Test innings: five times (Kolkata 1998, Mohali 1999, Brabourne 2009, Dharamsala 2024, Wellington 2026)", 5, {CB: 5}, scope="archive")
 c.check("NZ bowling: Duffy 29-1-181-1 with 7 no-balls; Smith 4, Phillips 3 (14 in the innings); Henry 29-7-86-1; Jamieson 27-6-57-1", (29, 181, 7, 4, 3, 14), {CB: (29, 181, 7, 4, 3, 14)}, scope="archive")
 IN = "data/licensed/in/"
+SH = json.load(open("data/provenance/nz_shots.json"))
+def wagon(bat, day=None):
+    xs = [o for o in SH if o["bat"] == bat and o["ang"] is not None and (day is None or o["day"] == day)]
+    shots = [[o["ang"], min(o["runs"], 6) if o["res"] != "no ball" else 4, "s" if o["res"] == "SIX" else ("f" if o["res"] == "FOUR" or o["runs"] >= 4 else "n")] for o in xs]
+    tot = sum(o["runs"] for o in xs); off = sum(o["runs"] for o in xs if o["ang"] > 0); leg = sum(o["runs"] for o in xs if o["ang"] < 0); st = sum(o["runs"] for o in xs if o["ang"] == 0)
+    return shots, dict(n=len(xs), tot=tot, off=off, leg=leg, st=st, fours=sum(1 for q in shots if q[2] == "f"), sixes=sum(1 for q in shots if q[2] == "s"))
+KS, KW = wagon("KL Rahul"); GS, GW = wagon("Shubman Gill"); PS, PW = wagon("Rishabh Pant")
+pant_short = [o for o in SH if o["bat"] == "Rishabh Pant" and o["day"] == 3 and o["len"] == "short"]; PSH = (len(pant_short), sum(o["runs"] for o in pant_short))
+def panel(sess, title):
+    xs = [o for o in SH if o["sess"] == sess and o["line"] and o["len"] and o["line"] != "wide"]; cells = collections.Counter(f'{o["line"]}|{"full" if o["len"] == "yorker" else o["len"]}' for o in xs)
+    n = len(xs); line = collections.Counter(o["line"] for o in xs); ln = collections.Counter(o["len"] for o in xs)
+    return dict(title=title, n=n, cells=dict(cells)), {k: round(100 * v / n) for k, v in line.items()}, {k: round(100 * v / n) for k, v in ln.items()}
+P1, L1, E1 = panel(1, "BEFORE LUNCH"); P3, L3, E3 = panel(3, "AFTER TEA")
+assert L1["off"] + L1["outside_off"] >= 80 and L3["leg"] >= 24, (L1, L3)
+off1 = L1["off"] + L1["outside_off"]; leg3 = L3["leg"]; short3 = E3["short"]
+P1["stats"] = [(f"{off1}%", "ON OR OUTSIDE OFF"), (f'{L1["leg"]}%', "ON THE LEG SIDE")]; P3["stats"] = [(f'{L3["off"] + L3["outside_off"]}%', "ON OR OUTSIDE OFF"), (f"{leg3}%", "ON THE LEG SIDE")]
+print("wagon KL", KW, "Gill", GW, "Pant", PW, "pant short", PSH, "| pitch", off1, L1["leg"], leg3, short3, P1["n"], P3["n"])
+c.check("our read of NZ's lines: before lunch %d%% on or outside off, %d%% leg side; after tea %d%% leg side (zones from the commentary text)" % (off1, L1["leg"], leg3), (off1, L1["leg"], leg3), {CB: (off1, L1["leg"], leg3)}, scope="archive")
+c.check("Pant vs short balls on Day 3: %d balls, %d runs (our read)" % PSH, PSH, {CB: PSH}, scope="archive")
 COLD = {"type": "statement", "kicker": "DAY 3 · THREE BALLS TO GO", "lines": [{"t": "98."}, {"t": "TWO SHORT.", "c": "gold"}], "sub": "Gill b Duffy. But India led by 118."}
-TURN = {"type": "stats", "head": {"t": "DAY THREE", "sub": "159/1 TO 486/4"}, "tiles": [{"v": "327", "l": "RUNS", "c": "gold"}, {"v": "3", "l": "WICKETS · 86 OVERS", "c": "ink"}, {"v": "+118", "l": "FROM 209 BEHIND", "c": "red"}]}
-SESS = {"type": "bars", "head": {"t": "EVERY SESSION FASTER", "sub": "RUNS PER OVER · INDIA'S INNINGS"}, "max": 5, "dec": 2, "items": [{"label": "BEFORE LUNCH · 80 RUNS · 0 WKTS", "value": rr[0], "color": "ink"}, {"label": "LUNCH TO TEA · 105 RUNS · 1 WKT", "value": rr[1], "color": "ink"}, {"label": "TEA TO STUMPS · 142 RUNS · 2 WKTS", "value": rr[2], "color": "red"}]}
-KLH = {"type": "photocard", "kicker": "KL RAHUL · DAY 3", "title": "100.", "img": IN + "nz_day3_rahul_hundred.jpg", "crop_short": (0, 250, 1280, 1103), "tag": "100 (207) · 68.4 OV", "name": "RAHUL", "mono": "FIRST HUNDRED IN NEW ZEALAND", "caption": "Per Cricbuzz: a Test hundred in all four SENA countries.", "chip": "136", "chip_sub": "OFF 290 BALLS"}
-PAD = {"type": "stats", "head": {"t": "DEVDUTT PADIKKAL", "sub": "THE SECOND-WICKET STAND WITH RAHUL"}, "tiles": [{"v": "80", "l": "OFF 175 BALLS · b JAMIESON", "c": "gold"}, {"v": "165", "l": "STAND FOR THE SECOND WICKET", "c": "ink"}, {"v": "-20", "l": "FROM A HUNDRED", "c": "red"}]}
-GILLP = {"type": "photocard", "kicker": "SHUBMAN GILL · INDIA CAPTAIN", "title": "98.", "img": IN + "nz_day3_batter_pull_apollo.jpg", "crop_short": (0, 280, 1280, 1133), "tag": "98 (146) · 9 FOURS · 2 SIXES", "name": "GILL", "mono": "b DUFFY · 124.4 · THIRD-LAST BALL", "caption": "Pushed in front of the pad. The ball sneaked through.", "chip": "98", "chip_sub": "OFF 146 BALLS"}
-NEWB = {"type": "timeline", "head": {"t": "THE SECOND NEW BALL", "sub": "TAKEN AT 80 OVERS"}, "events": [{"y": "80.0", "t": "to tea: 56 runs in 13 overs, one wicket", "hl": True}, {"y": "100.3", "t": "Gill's fifty: a six, and India lead", "c": "red"}, {"y": "103.3", "t": "Rahul b Smith for 136", "c": "ink"}]}
-PANT = {"type": "photocard", "kicker": "RISHABH PANT", "title": "52.", "img": IN + "nz_day3_pant_pull.jpg", "crop_short": (0, 380, 1280, 1233), "tag": "52 (55) · 2 SIXES IN 2 BALLS", "name": "PANT", "mono": "15 OFF 37, THEN 37 OFF 18", "caption": "The lead went past 100.", "chip": "55*", "chip_sub": "OFF 62 BALLS"}
-CAPT = {"type": "bars", "head": {"t": "INDIA CAPTAINS IN NEW ZEALAND", "sub": "HIGHEST TEST SCORES · PER CRICBUZZ"}, "max": 200, "dec": 0, "items": [{"label": "AZHARUDDIN · AUCKLAND 1990", "value": 192, "color": "ink"}, {"label": "GAVASKAR · AUCKLAND 1976", "value": 116, "color": "ink"}, {"label": "AZHARUDDIN · WELLINGTON 1998", "value": 103, "color": "ink"}, {"label": "GILL · WELLINGTON 2026", "value": 98, "color": "red"}, {"label": "DHONI · WELLINGTON 2014", "value": 68, "color": "ink"}]}
-NINE = {"type": "list", "head": {"t": "GILL IN THE NINETIES", "sub": "TEST DISMISSALS · PER CRICBUZZ"}, "items": [{"h": "91 · BRISBANE 2021", "d": "v Australia"}, {"h": "91 · RAJKOT 2024", "d": "v England"}, {"h": "90 · MUMBAI 2024", "d": "v New Zealand"}, {"h": "98 · WELLINGTON 2026", "d": "v New Zealand · like Dhoni, 98, Nagpur 2010", "c": "gold"}]}
-FIVE = {"type": "list", "head": {"t": "ALL FIVE PAST FIFTY", "sub": "INDIA'S TOP FIVE · THE FIFTH TIME IN TESTS · PER CRICBUZZ"}, "items": [{"h": "JAISWAL 85", "d": "c Blundell b Henry"}, {"h": "RAHUL 136", "d": "b Smith"}, {"h": "PADIKKAL 80", "d": "b Jamieson"}, {"h": "GILL 98", "d": "b Duffy", "c": "gold"}, {"h": "PANT 55*", "d": "not out"}]}
+SESS = {"type": "bars", "head": {"t": "EVERY SESSION FASTER", "sub": "RUNS PER OVER · 159/1 TO 486/4 · +118"}, "max": 5, "dec": 2, "items": [{"label": "BEFORE LUNCH · 80 RUNS · 0 WKTS", "value": rr[0], "color": "ink"}, {"label": "LUNCH TO TEA · 105 RUNS · 1 WKT", "value": rr[1], "color": "ink"}, {"label": "TEA TO STUMPS · 142 RUNS · 2 WKTS", "value": rr[2], "color": "red"}]}
+PITCH = {"type": "pitchzones", "head": {"t": "WHERE NEW ZEALAND BOWLED", "sub": "SHARE OF DELIVERIES · LINE BY LENGTH · ILLUSTRATIVE"}, "panels": [P1, P3], "footnote": "OUR READ OF THE BALL-BY-BALL TEXT · BATTER'S END AT THE TOP · SHADE = SHARE OF THE PANEL'S BALLS"}
+KLH = {"type": "photocard", "kicker": "KL RAHUL · DAY 3", "title": "100.", "img": IN + "nz_day3_rahul_hundred.jpg", "crop_short": (0, 250, 1280, 1103), "tag": "100 (207) · 68.4 OV", "name": "RAHUL", "mono": "FIRST HUNDRED IN NEW ZEALAND", "caption": "A Test hundred in all four SENA countries.", "chip": "136", "chip_sub": "OFF 290 BALLS"}
+KLW = {"type": "wagon", "head": {"t": "RAHUL'S 136", "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"}, "pts": KS, "chips": [(f'{KW["leg"]}', "RUNS LEG SIDE"), (f'{KW["off"]}', "RUNS OFF SIDE"), (f'{KW["st"]}', "STRAIGHT")], "footnote": f'{KW["n"]} SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT'}
+PAD = {"type": "photocard", "kicker": "DEVDUTT PADIKKAL", "title": "80.", "img": IN + "nz_day3_padikkal_cut.jpg", "crop_short": (150, 20, 1150, 667), "tag": "80 (175) · b JAMIESON", "name": "PADIKKAL", "mono": "165 FOR THE SECOND WICKET", "caption": "One ball that held its line. A hundred, missed by twenty.", "chip": "80", "chip_sub": "OFF 175 BALLS"}
+PANTW = {"type": "wagon", "head": {"t": "PANT'S 55*", "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"}, "pts": PS, "photo": {"img": IN + "nz_day3_pant_pull.jpg", "crop": (300, 560, 1000, 1260)}, "chips": [(f'{bt["Rishabh Pant"]["batSixes"]}', "SIXES"), (f'{bt["Rishabh Pant"]["batFours"]}', "FOURS"), (f"{PSH[1]}", f"RUNS OFF {PSH[0]} SHORT BALLS")], "footnote": f'{PW["n"]} SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT'}
+GILLW = {"type": "wagon", "head": {"t": "GILL'S 98", "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"}, "pts": GS, "photo": {"img": IN + "nz_day3_batter_pull_apollo.jpg", "crop": (330, 280, 1030, 980)}, "chips": [(f'{bt["Shubman Gill"]["batFours"]}', "FOURS"), (f'{bt["Shubman Gill"]["batSixes"]}', "SIXES"), ("146", "BALLS FACED")], "footnote": f'{GW["n"]} SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT'}
+CAPT = {"type": "bars", "head": {"t": "INDIA CAPTAINS IN NEW ZEALAND", "sub": "HIGHEST TEST SCORES · IN OUR RECORDS"}, "max": 200, "dec": 0, "items": [{"label": "AZHARUDDIN · AUCKLAND 1990", "value": 192, "color": "ink"}, {"label": "GAVASKAR · AUCKLAND 1976", "value": 116, "color": "ink"}, {"label": "AZHARUDDIN · WELLINGTON 1998", "value": 103, "color": "ink"}, {"label": "GILL · WELLINGTON 2026", "value": 98, "color": "red"}, {"label": "DHONI · WELLINGTON 2014", "value": 68, "color": "ink"}]}
+NINE = {"type": "list", "head": {"t": "GILL IN THE NINETIES", "sub": "TEST DISMISSALS · IN OUR RECORDS"}, "items": [{"h": "91 · BRISBANE 2021", "d": "v Australia"}, {"h": "91 · RAJKOT 2024", "d": "v England"}, {"h": "90 · MUMBAI 2024", "d": "v New Zealand"}, {"h": "98 · WELLINGTON 2026", "d": "v New Zealand · like Dhoni, 98, Nagpur 2010", "c": "gold"}]}
+FIVE = {"type": "list", "head": {"t": "ALL FIVE PAST FIFTY", "sub": "INDIA'S TOP FIVE · THE FIFTH TIME IN TESTS"}, "items": [{"h": "JAISWAL 85", "d": "c Blundell b Henry"}, {"h": "RAHUL 136", "d": "b Smith"}, {"h": "PADIKKAL 80", "d": "b Jamieson"}, {"h": "GILL 98", "d": "b Duffy", "c": "gold"}, {"h": "PANT 55*", "d": "not out"}]}
 ATT = {"type": "bars", "head": {"t": "NEW ZEALAND'S BOWLERS", "sub": "RUNS PER OVER · FULL INNINGS SO FAR"}, "max": 8, "dec": 2, "items": [{"label": "JAMIESON · 27-6-57-1", "value": round(57 / 27, 2), "color": "gold"}, {"label": "HENRY · 29-7-86-1", "value": round(86 / 29, 2), "color": "ink"}, {"label": "SMITH · 24-4-65-1 · 4 NO-BALLS", "value": round(65 / 24, 2), "color": "ink"}, {"label": "DUFFY · 29-1-181-1 · 7 NO-BALLS", "value": round(181 / 29, 2), "color": "red"}]}
 POLL = {"type": "list", "head": {"t": "YOUR CALL", "sub": "INDIA LEAD BY 118 · COMMENT 1, 2 OR 3"}, "items": [{"h": "1 · UNDER 200", "d": "India are bowled out soon", "c": "gold"}, {"h": "2 · 200 TO 300", "d": "a sporting declaration"}, {"h": "3 · MORE", "d": "India bat New Zealand out of the game"}]}
 short = [
-    {"vo": "Three balls left in the day. Shubman Gill, on ninety-eight. Jacob Duffy bowls him through the gate. But day three was bigger than that. India started it two hundred and nine behind. They finished a hundred and eighteen ahead.", "scene": COLD},
-    {"vo": "Three hundred and twenty-seven runs. Three wickets. Eighty-six overs.", "scene": TURN},
-    {"vo": "And every session was faster. Eighty runs before lunch. A hundred and five to tea. A hundred and forty-two in the evening.", "scene": SESS},
-    {"vo": "The morning was KL Rahul's. A hundred off two hundred and seven balls, his first in New Zealand, and by Cricbuzz's count a Test hundred in every SENA country.", "scene": KLH},
-    {"vo": "Devdutt Padikkal added a hundred and sixty-five with him. Eighty, and then one ball from Kyle Jamieson that held its line. A hundred, missed by twenty.", "scene": PAD},
-    {"vo": "Then the second new ball. Thirteen overs, fifty-six runs. Gill's fifty, a pull for six, put India in front. Rahul fell soon after, bowled by Nathan Smith for a hundred and thirty-six.", "scene": NEWB},
-    {"vo": "Then Rishabh Pant. Fifteen off thirty-seven balls, and then thirty-seven off eighteen. Two sixes in two balls off Duffy. Fifty-two off fifty-five.", "scene": PANT},
-    {"vo": "Gill made ninety-eight, off a hundred and forty-six balls. Nine fours, two sixes.", "scene": GILLP},
+    {"vo": "Three balls left. Shubman Gill, on ninety-eight. Jacob Duffy bowls him through the gate. But India started day three two hundred and nine behind. They finished a hundred and eighteen ahead.", "scene": COLD},
+    {"vo": "Three hundred and twenty-seven runs, three wickets, and every session faster. Eighty before lunch, a hundred and five to tea, a hundred and forty-two after.", "scene": SESS},
+    {"vo": f"New Zealand began stump to stump. Before lunch, {w(off1)} per cent were on or outside off. By the evening, a quarter were on the leg side.", "scene": PITCH},
+    {"vo": "The morning was KL Rahul's. A hundred off two hundred and seven balls, his first in New Zealand, and a Test hundred in every SENA country.", "scene": KLH},
+    {"vo": f"{w(KW['leg']).capitalize()} of his placed runs came through the leg side, {w(KW['off'])} through the off.", "scene": KLW},
+    {"vo": "Devdutt Padikkal added a hundred and sixty-five with him. Eighty, then one Jamieson ball held its line. A hundred, missed by twenty.", "scene": PAD},
+    {"vo": f"Then Rishabh Pant. Fifteen off thirty-seven, then thirty-seven off eighteen. Two sixes in two balls off Duffy. The short ball gave him {w(PSH[1])} runs from {w(PSH[0])} balls.", "scene": PANTW},
+    {"vo": "Gill's fifty was a pull for six, and it put India in front. Ninety-eight off a hundred and forty-six, nine fours, two sixes, mostly on the leg side.", "scene": GILLW},
     {"vo": "It is the fourth-highest score by an India captain in New Zealand. Only Azharuddin, twice, and Gavaskar have made more.", "scene": CAPT},
-    {"vo": "But it is his fourth dismissal in the nineties. Ninety-one, ninety-one, ninety, and now ninety-eight. The second India captain out in the nineties against New Zealand. The first was MS Dhoni, for an identical ninety-eight.", "scene": NINE},
-    {"vo": "Still, all five of India's top five went past fifty. It has happened five times in Tests, says Cricbuzz.", "scene": FIVE},
-    {"vo": "New Zealand's bowlers paid. Jacob Duffy: twenty-nine overs, one wicket, a hundred and eighty-one runs. Fourteen no-balls in the innings, seven of them his.", "scene": ATT},
+    {"vo": "But it is his fourth dismissal in the nineties. Ninety-one, ninety-one, ninety, now ninety-eight. MS Dhoni was also out for ninety-eight against New Zealand, in Nagpur.", "scene": NINE},
+    {"vo": "Still, all five of India's top five went past fifty. It has happened five times in Tests.", "scene": FIVE},
+    {"vo": "New Zealand's bowlers paid. Jacob Duffy: twenty-nine overs, one wicket, a hundred and eighty-one runs. Fourteen no-balls in the innings, seven his.", "scene": ATT},
     {"vo": "So, day four. India lead by a hundred and eighteen, with six wickets in hand. How big a lead do they set? Comment one, under two hundred. Two, two hundred to three hundred. Three, more.", "scene": POLL},
     dict(YT_CTA, vo="Subscribe, and we'll break down day four the same way."),
 ]

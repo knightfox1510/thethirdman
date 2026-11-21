@@ -54,7 +54,7 @@
    "why": "Lessons: the Vaas three-wickets-in-an-over error, Kohli's missing 122*. Totals and records come from Tier A (Cricinfo, ICC, boards)."
   },
   {
-   "rule": "No on-screen source or footer lines in any video (never set \"foot\" on a scene). Credit sources only in the YouTube description and the spec's sources[].",
+   "rule": "No on-screen source or footer lines in any video (never set \"foot\" on a scene), and never name a data or news source (Cricbuzz, ESPNcricinfo, Cricsheet, Sportmonks...) in the voice-over or on screen. Say \"in our records\" instead. Credit sources only in the YouTube description and the spec's sources[].",
    "why": "Owner rule, flagged repeatedly. Sources stay verifiable without cluttering the frame."
   },
   {

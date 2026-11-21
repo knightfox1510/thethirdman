@@ -95,11 +95,27 @@ def fix_spec(spec):
     return spec
 
 
+SOURCE = re.compile(r"cricbuzz|cricinfo|espn|sportmonks|cricsheet|wisden|sony\s?liv|star sports|hotstar|crichd", re.I)      # owner rule (21 Nov 2026): never name a data/news source in a video's voice-over or on screen; credit sources only in the YouTube description and the spec's sources[]
+
+
+def _strings(o, key=None):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k in ("img", "yt", "sources"): continue
+            yield from _strings(v, k)
+    elif isinstance(o, list):
+        for v in o: yield from _strings(v, key)
+    elif isinstance(o, str): yield o
+
+
 def check_spec(spec, fmts=("long", "short")):
     errs = []
     for f in fmts:
         for i, p in enumerate(spec.get(f, []) or []):
             for e in problems(p.get("vo", "")): errs.append(f"{f} p{i}: {e}")
+            for s in _strings(p):
+                m = SOURCE.search(s)
+                if m: errs.append(f"{f} p{i}: source name '{m.group(0)}' in voice-over or on-screen text (owner rule: credit sources only in the description)"); break
     return errs
 
 

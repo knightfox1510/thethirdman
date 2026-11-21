@@ -242,9 +242,43 @@
    "scope": "archive",
    "status": "LABELLED",
    "conflicts": []
+  },
+  {
+   "claim": "our read of NZ's lines: before lunch 84% on or outside off, 6% leg side; after tea 26% leg side (zones from the commentary text)",
+   "value": [
+    84,
+    6,
+    26
+   ],
+   "sources": {
+    "cricbuzz": [
+     84,
+     6,
+     26
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant vs short balls on Day 3: 18 balls, 37 runs (our read)",
+   "value": [
+    18,
+    37
+   ],
+   "sources": {
+    "cricbuzz": [
+     18,
+     37
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
   }
  ],
  "summary": {
-  "LABELLED": 11
+  "LABELLED": 13
  }
 }
