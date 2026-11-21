@@ -1,0 +1,250 @@
+{
+ "slug": "nz_ind_1st_test_day3",
+ "claims": [
+  {
+   "claim": "India 486/4 at stumps (124.6 overs), lead of 118 over NZ's 368; Day 3 = 327 runs for 3 wickets in 86 overs (from 159/1 at 38.6)",
+   "value": [
+    486,
+    4,
+    368,
+    118,
+    327,
+    3,
+    86
+   ],
+   "sources": {
+    "cricbuzz": [
+     486,
+     4,
+     368,
+     118,
+     327,
+     3,
+     86
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "sessions: lunch 239/1 (80 in 27 overs), tea 344/2 (105 in 27), stumps 486/4 (142 in 32, two wickets: Rahul and Gill); run rates 2.96, 3.89, 4.44",
+   "value": [
+    80,
+    105,
+    142,
+    2.96,
+    3.89,
+    4.44
+   ],
+   "sources": {
+    "cricbuzz": [
+     80,
+     105,
+     142,
+     2.96,
+     3.89,
+     4.44
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul 100 off 207 balls (68.4), out b Smith 136 (290); Cricbuzz: first hundred in NZ and a Test hundred in all SENA countries",
+   "value": [
+    100,
+    207,
+    136,
+    290
+   ],
+   "sources": {
+    "cricbuzz": [
+     100,
+     207,
+     136,
+     290
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Padikkal 80 (175) b Jamieson at 295/2; second-wicket stand with Rahul 165",
+   "value": [
+    80,
+    175,
+    295,
+    165
+   ],
+   "sources": {
+    "cricbuzz": [
+     80,
+     175,
+     295,
+     165
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "second new ball at 80 overs: 56 runs in the next 13 overs (288 at 79.6 to 344 at 92.6)",
+   "value": [
+    288,
+    344,
+    56
+   ],
+   "sources": {
+    "cricbuzz": [
+     288,
+     344,
+     56
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Gill fifty (66 balls) with a six at 100.3 that took India past 368; Gill b Duffy 98 (146), 9 fours 2 sixes, third-last ball of the day",
+   "value": [
+    66,
+    371,
+    98,
+    146,
+    9,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     66,
+     371,
+     98,
+     146,
+     9,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant 52 off 55 (15 off 37, then 37 off 18), two sixes in a row off Duffy at 120.4/120.5; 55* (62)",
+   "value": [
+    52,
+    55,
+    15,
+    37,
+    37,
+    18,
+    55,
+    62
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     55,
+     15,
+     37,
+     37,
+     18,
+     55,
+     62
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: highest scores as India Test captain in NZ: 192 Azharuddin, 116 Gavaskar, 103* Azharuddin, 98 Gill, 68 Dhoni",
+   "value": [
+    192,
+    116,
+    103,
+    98,
+    68
+   ],
+   "sources": {
+    "cricbuzz": [
+     192,
+     116,
+     103,
+     98,
+     68
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: Gill dismissed in the 90s four times (91 Brisbane 2021, 91 Rajkot 2024, 90 Mumbai 2024, 98 Wellington 2026); Dhoni 4, Tendulkar 2 as captain; Dhoni 98 v Vettori, Nagpur 2010",
+   "value": [
+    91,
+    91,
+    90,
+    98,
+    4,
+    2,
+    98
+   ],
+   "sources": {
+    "cricbuzz": [
+     91,
+     91,
+     90,
+     98,
+     4,
+     2,
+     98
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: all of India's top five past 50 in a Test innings: five times (Kolkata 1998, Mohali 1999, Brabourne 2009, Dharamsala 2024, Wellington 2026)",
+   "value": 5,
+   "sources": {
+    "cricbuzz": 5
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling: Duffy 29-1-181-1 with 7 no-balls; Smith 4, Phillips 3 (14 in the innings); Henry 29-7-86-1; Jamieson 27-6-57-1",
+   "value": [
+    29,
+    181,
+    7,
+    4,
+    3,
+    14
+   ],
+   "sources": {
+    "cricbuzz": [
+     29,
+     181,
+     7,
+     4,
+     3,
+     14
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 11
+ }
+}

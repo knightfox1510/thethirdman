@@ -1,0 +1,534 @@
+{
+ "deliveries": 526,
+ "innings_deliveries": 766,
+ "stumps": {
+  "over": 124.6,
+  "score": 486
+ },
+ "batters": {
+  "Yashasvi Jaiswal": {
+   "batRuns": 85,
+   "batBalls": 89,
+   "batFours": 16,
+   "batSixes": 0,
+   "batDots": 62,
+   "batStrikeRate": 95.51
+  },
+  "KL Rahul": {
+   "batRuns": 136,
+   "batBalls": 290,
+   "batFours": 9,
+   "batSixes": 2,
+   "batDots": 208,
+   "batStrikeRate": 46.9
+  },
+  "Devdutt Padikkal": {
+   "batRuns": 80,
+   "batBalls": 175,
+   "batFours": 10,
+   "batSixes": 0,
+   "batDots": 132,
+   "batStrikeRate": 45.71
+  },
+  "Shubman Gill": {
+   "batRuns": 98,
+   "batBalls": 146,
+   "batFours": 9,
+   "batSixes": 2,
+   "batDots": 94,
+   "batStrikeRate": 67.12
+  },
+  "Rishabh Pant": {
+   "batRuns": 55,
+   "batBalls": 62,
+   "batFours": 5,
+   "batSixes": 2,
+   "batDots": 32,
+   "batStrikeRate": 88.71
+  },
+  "Anshul Kamboj": {
+   "batRuns": 0,
+   "batBalls": 2,
+   "batFours": 0,
+   "batSixes": 0,
+   "batDots": 2,
+   "batStrikeRate": 0
+  }
+ },
+ "bowling_final": {
+  "Matt Henry": {
+   "ov": 29,
+   "m": 7,
+   "r": 86,
+   "w": 1,
+   "nb": 0,
+   "wd": 0
+  },
+  "Kyle Jamieson": {
+   "ov": 27,
+   "m": 6,
+   "r": 57,
+   "w": 1,
+   "nb": 0,
+   "wd": 1
+  },
+  "Jacob Duffy": {
+   "ov": 29,
+   "m": 1,
+   "r": 181,
+   "w": 1,
+   "nb": 7,
+   "wd": 1
+  },
+  "Nathan Smith": {
+   "ov": 24,
+   "m": 4,
+   "r": 65,
+   "w": 1,
+   "nb": 4,
+   "wd": 0
+  },
+  "Glenn Phillips": {
+   "ov": 14,
+   "m": 0,
+   "r": 76,
+   "w": 0,
+   "nb": 3,
+   "wd": 0
+  },
+  "Rachin Ravindra": {
+   "ov": 2,
+   "m": 0,
+   "r": 6,
+   "w": 0,
+   "nb": 0,
+   "wd": 0
+  }
+ },
+ "lunch": {
+  "over": 65.6,
+  "score": 239
+ },
+ "tea": {
+  "over": 92.6,
+  "score": 344
+ },
+ "wickets": [
+  {
+   "over": 27.5,
+   "bowler": "Matt Henry",
+   "bat": "Yashasvi Jaiswal",
+   "score": 130
+  },
+  {
+   "over": 82.6,
+   "bowler": "Kyle Jamieson",
+   "bat": "Devdutt Padikkal",
+   "score": 295
+  },
+  {
+   "over": 103.3,
+   "bowler": "Nathan Smith",
+   "bat": "Rahul",
+   "score": 386
+  },
+  {
+   "over": 124.4,
+   "bowler": "Jacob Duffy",
+   "bat": "Shubman Gill",
+   "score": 486
+  }
+ ],
+ "milestones": [
+  {
+   "over": 3.6,
+   "ev": "over-break,UDRS,MAIDEN_OVER",
+   "score": 0,
+   "bat": "KL Rahul",
+   "runs": 0,
+   "balls": 12
+  },
+  {
+   "over": 13.4,
+   "ev": "TEAM_FIFTY,FOUR",
+   "score": 51,
+   "bat": "KL Rahul",
+   "runs": 22,
+   "balls": 32
+  },
+  {
+   "over": 22.1,
+   "ev": "FIFTY,FOUR",
+   "score": 89,
+   "bat": "Yashasvi Jaiswal",
+   "runs": 50,
+   "balls": 66
+  },
+  {
+   "over": 23.4,
+   "ev": "TEAM_HUNDRED,PARTNERSHIP,FOUR",
+   "score": 102,
+   "bat": "Yashasvi Jaiswal",
+   "runs": 62,
+   "balls": 73
+  },
+  {
+   "over": 27.5,
+   "ev": "WICKET,UDRS",
+   "score": 130,
+   "bat": "Yashasvi Jaiswal",
+   "runs": 85,
+   "balls": 89
+  },
+  {
+   "over": 33.3,
+   "ev": "FIFTY",
+   "score": 142,
+   "bat": "KL Rahul",
+   "runs": 50,
+   "balls": 99
+  },
+  {
+   "over": 36.5,
+   "ev": "TEAM_HUNDRED",
+   "score": 150,
+   "bat": "Devdutt Padikkal",
+   "runs": 9,
+   "balls": 28
+  },
+  {
+   "over": 55.6,
+   "ev": "over-break,TEAM_HUNDRED",
+   "score": 201,
+   "bat": "KL Rahul",
+   "runs": 71,
+   "balls": 170
+  },
+  {
+   "over": 59.3,
+   "ev": "FIFTY",
+   "score": 218,
+   "bat": "Devdutt Padikkal",
+   "runs": 50,
+   "balls": 98
+  },
+  {
+   "over": 62.3,
+   "ev": "SIX",
+   "score": 229,
+   "bat": "KL Rahul",
+   "runs": 83,
+   "balls": 188
+  },
+  {
+   "over": 62.4,
+   "ev": "PARTNERSHIP",
+   "score": 232,
+   "bat": "KL Rahul",
+   "runs": 86,
+   "balls": 189
+  },
+  {
+   "over": 68.4,
+   "ev": "HUNDRED",
+   "score": 247,
+   "bat": "KL Rahul",
+   "runs": 100,
+   "balls": 207
+  },
+  {
+   "over": 69.1,
+   "ev": "TEAM_HUNDRED,FOUR",
+   "score": 252,
+   "bat": "Devdutt Padikkal",
+   "runs": 54,
+   "balls": 127
+  },
+  {
+   "over": 78.2,
+   "ev": "PARTNERSHIP",
+   "score": 280,
+   "bat": "KL Rahul",
+   "runs": 109,
+   "balls": 232
+  },
+  {
+   "over": 82.6,
+   "ev": "over-break,WICKET",
+   "score": 295,
+   "bat": "Devdutt Padikkal",
+   "runs": 80,
+   "balls": 175
+  },
+  {
+   "over": 85.1,
+   "ev": "TEAM_HUNDRED",
+   "score": 300,
+   "bat": "KL Rahul",
+   "runs": 116,
+   "balls": 248
+  },
+  {
+   "over": 96.2,
+   "ev": "TEAM_HUNDRED,FOUR",
+   "score": 353,
+   "bat": "Shubman Gill",
+   "runs": 43,
+   "balls": 51
+  },
+  {
+   "over": 100.3,
+   "ev": "FIFTY,SIX",
+   "score": 371,
+   "bat": "Shubman Gill",
+   "runs": 52,
+   "balls": 66
+  },
+  {
+   "over": 102.6,
+   "ev": "over-break,SIX",
+   "score": 385,
+   "bat": "KL Rahul",
+   "runs": 136,
+   "balls": 288
+  },
+  {
+   "over": 103.3,
+   "ev": "WICKET",
+   "score": 386,
+   "bat": "KL Rahul",
+   "runs": 136,
+   "balls": 290
+  },
+  {
+   "over": 104.6,
+   "ev": "over-break,UDRS",
+   "score": 389,
+   "bat": "Rishabh Pant",
+   "runs": 1,
+   "balls": 7
+  },
+  {
+   "over": 107.2,
+   "ev": "UDRS",
+   "score": 398,
+   "bat": "Shubman Gill",
+   "runs": 67,
+   "balls": 93
+  },
+  {
+   "over": 107.4,
+   "ev": "TEAM_HUNDRED,FOUR",
+   "score": 402,
+   "bat": "Shubman Gill",
+   "runs": 71,
+   "balls": 95
+  },
+  {
+   "over": 114.5,
+   "ev": "SIX",
+   "score": 424,
+   "bat": "Shubman Gill",
+   "runs": 84,
+   "balls": 117
+  },
+  {
+   "over": 118.5,
+   "ev": "TEAM_HUNDRED",
+   "score": 450,
+   "bat": "Rishabh Pant",
+   "runs": 25,
+   "balls": 46
+  },
+  {
+   "over": 120.4,
+   "ev": "SIX",
+   "score": 463,
+   "bat": "Rishabh Pant",
+   "runs": 37,
+   "balls": 50
+  },
+  {
+   "over": 120.5,
+   "ev": "SIX",
+   "score": 469,
+   "bat": "Rishabh Pant",
+   "runs": 43,
+   "balls": 51
+  },
+  {
+   "over": 122.3,
+   "ev": "FIFTY,FOUR",
+   "score": 483,
+   "bat": "Rishabh Pant",
+   "runs": 52,
+   "balls": 55
+  },
+  {
+   "over": 124.1,
+   "ev": "PARTNERSHIP",
+   "score": 486,
+   "bat": "Rishabh Pant",
+   "runs": 55,
+   "balls": 62
+  },
+  {
+   "over": 124.4,
+   "ev": "WICKET",
+   "score": 486,
+   "bat": "Shubman Gill",
+   "runs": 98,
+   "balls": 146
+  },
+  {
+   "over": 124.6,
+   "ev": "over-break,UDRS",
+   "score": 486,
+   "bat": "Anshul Kamboj",
+   "runs": 0,
+   "balls": 2
+  }
+ ],
+ "blocks_by_10_overs": {
+  "30-39": [
+   0,
+   6,
+   0
+  ],
+  "40-49": [
+   22,
+   60,
+   0
+  ],
+  "50-59": [
+   37,
+   62,
+   0
+  ],
+  "60-69": [
+   37,
+   61,
+   0
+  ],
+  "70-79": [
+   33,
+   61,
+   0
+  ],
+  "80-89": [
+   34,
+   62,
+   1
+  ],
+  "90-99": [
+   42,
+   61,
+   0
+  ],
+  "100-109": [
+   46,
+   62,
+   1
+  ],
+  "110-119": [
+   45,
+   61,
+   0
+  ],
+  "120-129": [
+   31,
+   30,
+   1
+  ]
+ },
+ "day3_bowlers": {
+  "Matt Henry": {
+   "balls": 102,
+   "runs": 47,
+   "wkts": 0,
+   "nb": 0
+  },
+  "Nathan Smith": {
+   "balls": 109,
+   "runs": 44,
+   "wkts": 1,
+   "nb": 1
+  },
+  "Kyle Jamieson": {
+   "balls": 97,
+   "runs": 44,
+   "wkts": 1,
+   "nb": 0
+  },
+  "Jacob Duffy": {
+   "balls": 119,
+   "runs": 110,
+   "wkts": 1,
+   "nb": 4
+  },
+  "Glenn Phillips": {
+   "balls": 87,
+   "runs": 76,
+   "wkts": 0,
+   "nb": 3
+  },
+  "Rachin Ravindra": {
+   "balls": 12,
+   "runs": 6,
+   "wkts": 0,
+   "nb": 0
+  }
+ },
+ "day3_runs": 327,
+ "day3_fours": 24,
+ "day3_sixes": 6,
+ "day3_dots": 338,
+ "day3_by_length": {
+  "full": {
+   "balls": 135,
+   "runs": 64
+  },
+  "good": {
+   "balls": 78,
+   "runs": 28
+  },
+  "short_of_length": {
+   "balls": 56,
+   "runs": 34
+  },
+  "short": {
+   "balls": 130,
+   "runs": 108
+  }
+ },
+ "reviews": [
+  {
+   "over": 3.6,
+   "text": "Kyle Jamieson to Rahul, no run, it would have been a review lost because of impact outside anyway but Sonic interestingly couldn't figure out whether it was pad or bat first on the ball so they didn't even progress to ba"
+  },
+  {
+   "over": 27.5,
+   "text": "Matt Henry to Yashasvi Jaiswal, out Caught by Blundell!! Jaiswal looked all set for a hundred but is out against the run of play. Full credit to Matt Henry. He was adamant and the NZ players went \"huge noise\". Someone ad"
+  },
+  {
+   "over": 104.6,
+   "text": "Jacob Duffy to Rishabh Pant, no run, New Zealand lose their second review. Top decision from umpire Dharmasena. Short of length delivery, right at the batter and Pant takes his eyes off as he tries to help the pull along"
+  },
+  {
+   "over": 107.2,
+   "text": "Nathan Smith to Shubman Gill, no run, New Zealand are not happy that this was overturned! You could almost see the inside edge on the replay even before Sonic came up. But funnily, Gill didn't feel it and reviewed only a"
+  },
+  {
+   "over": 124.6,
+   "text": "Jacob Duffy to Anshul Kamboj, no run, full and tailing back in, AK47 tried to get bat on ball, but got obstructed by the boot so it hits the pad but he did well to get his front foot well outside the line of over. New Ze"
+  }
+ ],
+ "notes": [
+  "Pitch 2/3: [Surface condition and expected batting conditions] Just have a look over here, Scotty. We’ve got two batters here that I think, one’s already spent a good significant amount of this Test match already out there, Tom Latham. But they’re not going to have a bat on. I wouldn’t have expected today because of how flat this surface is. When you look down in it, Scotty, there’s not too much t",
+  "Pitch 3/3: [Groundstaff’s revised assessment of the pitch] I’ve got one final question. The groundstaff said they felt this pitch was going to get quicker. They have changed their mind completely. They now think it’s going to get slower as well. [Role of spin bowling and New Zealand’s bowling options] So what about the active spin bowlers and how they’re going to play a part today? I think it will",
+  "Matt Henry talking before the start of the day's play 1/2: [It didn’t look like there was much there in the pitch. What has been the chat overnight about how you can get nine more wickets?] Yeah, I think it’s probably going into this game we could, we could see that after that new ball was pretty flat and probably on the low side as well. So for us was probably just how do we restrain the run rate",
+  "Jamieson is stretching. Will he have a go, or will he be the one to take the second new ball?",
+  "Three overs to the second new ball and Latham wants to use his part-timers to fill in the overs. Rachin is coming on now and will have a couple of overs. Meanwhile, Padikkal is being checked by the physio, his right arm seems to be an issue. Not sure if it is cramp or something else, because he was definitely not hit.",
+  "Drinks are on the field. Another wicketless hour goes by. Rahul got to his hundred early in the session and has just carried on. Padikkal gave a chance to New Zealand which was not taken by Nicholls at gully. That was the only chance created in this session. The second new ball is available and they have taken it. Rahul getting some more treatment to his right arm, he was struck by a short ball fr"
+ ]
+}

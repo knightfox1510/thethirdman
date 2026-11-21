@@ -91,7 +91,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -185,6 +186,7 @@
   "nz_ind_1st_test_day1__igshort": "flip",
   "nz_ind_1st_test_day2": "kinetic",
   "nz_day2_mock": "fieldmap",
-  "nz_ind_1st_test_day2__igshort": "stumps"
+  "nz_ind_1st_test_day2__igshort": "stumps",
+  "nz_day3_mock": "flip"
  }
 }

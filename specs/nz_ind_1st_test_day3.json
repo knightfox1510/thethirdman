@@ -1,0 +1,478 @@
+{
+ "slug": "nz_ind_1st_test_day3",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DAY 3",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 3",
+  "lines": [
+   {
+    "t": "98. TWO"
+   },
+   {
+    "t": "RUNS SHORT",
+    "c": "gold"
+   }
+  ],
+  "hero": "98",
+  "herosize": 420
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "98. TWO"
+   },
+   {
+    "t": "RUNS SHORT",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 3",
+  "hero": "98"
+ },
+ "sources": [
+  "India's first innings on Day 3: Cricbuzz full commentary for New Zealand v India, 1st Test, 21 November 2026 (owner's capture; bowler lines, no-ball counts, and the record and milestone lists are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Figures: analysis/nz_day3.py. Session splits and run rates are our arithmetic from Cricbuzz's scores."
+ ],
+ "short": [
+  {
+   "vo": "Three balls left in the day. शुभमन गिल, on ninety-eight. Jacob Duffy bowls him through the gate. But day three was bigger than that. India started it two hundred and nine behind. They finished a hundred and eighteen ahead.",
+   "scene": {
+    "type": "statement",
+    "kicker": "DAY 3 · THREE BALLS TO GO",
+    "lines": [
+     {
+      "t": "98."
+     },
+     {
+      "t": "TWO SHORT.",
+      "c": "gold"
+     }
+    ],
+    "sub": "Gill b Duffy. But India led by 118."
+   }
+  },
+  {
+   "vo": "Three hundred and twenty-seven runs. Three wickets. Eighty-six overs.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "DAY THREE",
+     "sub": "159/1 TO 486/4"
+    },
+    "tiles": [
+     {
+      "v": "327",
+      "l": "RUNS",
+      "c": "gold"
+     },
+     {
+      "v": "3",
+      "l": "WICKETS · 86 OVERS",
+      "c": "ink"
+     },
+     {
+      "v": "+118",
+      "l": "FROM 209 BEHIND",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And every session was faster. Eighty runs before lunch. A hundred and five to tea. A hundred and forty-two in the evening.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "EVERY SESSION FASTER",
+     "sub": "RUNS PER OVER · INDIA'S INNINGS"
+    },
+    "max": 5,
+    "dec": 2,
+    "items": [
+     {
+      "label": "BEFORE LUNCH · 80 RUNS · 0 WKTS",
+      "value": 2.96,
+      "color": "ink"
+     },
+     {
+      "label": "LUNCH TO TEA · 105 RUNS · 1 WKT",
+      "value": 3.89,
+      "color": "ink"
+     },
+     {
+      "label": "TEA TO STUMPS · 142 RUNS · 2 WKTS",
+      "value": 4.44,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The morning was के एल राहुल's. A hundred off two hundred and seven balls, his first in New Zealand, and by Cricbuzz's count a Test hundred in every SENA country.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "KL RAHUL · DAY 3",
+    "title": "100.",
+    "img": "data/licensed/in/nz_day3_rahul_hundred.jpg",
+    "crop_short": [
+     0,
+     250,
+     1280,
+     1103
+    ],
+    "tag": "100 (207) · 68.4 OV",
+    "name": "RAHUL",
+    "mono": "FIRST HUNDRED IN NEW ZEALAND",
+    "caption": "Per Cricbuzz: a Test hundred in all four SENA countries.",
+    "chip": "136",
+    "chip_sub": "OFF 290 BALLS"
+   }
+  },
+  {
+   "vo": "देवदत्त पडिक्कल added a hundred and sixty-five with him. Eighty, and then one ball from Kyle Jamieson that held its line. A hundred, missed by twenty.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "DEVDUTT PADIKKAL",
+     "sub": "THE SECOND-WICKET STAND WITH RAHUL"
+    },
+    "tiles": [
+     {
+      "v": "80",
+      "l": "OFF 175 BALLS · b JAMIESON",
+      "c": "gold"
+     },
+     {
+      "v": "165",
+      "l": "STAND FOR THE SECOND WICKET",
+      "c": "ink"
+     },
+     {
+      "v": "-20",
+      "l": "FROM A HUNDRED",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the second new ball. Thirteen overs, fifty-six runs. गिल's fifty, a pull for six, put India in front. राहुल fell soon after, bowled by Nathan Smith for a hundred and thirty-six.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "THE SECOND NEW BALL",
+     "sub": "TAKEN AT 80 OVERS"
+    },
+    "events": [
+     {
+      "y": "80.0",
+      "t": "to tea: 56 runs in 13 overs, one wicket",
+      "hl": true
+     },
+     {
+      "y": "100.3",
+      "t": "Gill's fifty: a six, and India lead",
+      "c": "red"
+     },
+     {
+      "y": "103.3",
+      "t": "Rahul b Smith for 136",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then रिषभ पंत. Fifteen off thirty-seven balls, and then thirty-seven off eighteen. Two sixes in two balls off Duffy. Fifty-two off fifty-five.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "RISHABH PANT",
+    "title": "52.",
+    "img": "data/licensed/in/nz_day3_pant_pull.jpg",
+    "crop_short": [
+     0,
+     380,
+     1280,
+     1233
+    ],
+    "tag": "52 (55) · 2 SIXES IN 2 BALLS",
+    "name": "PANT",
+    "mono": "15 OFF 37, THEN 37 OFF 18",
+    "caption": "The lead went past 100.",
+    "chip": "55*",
+    "chip_sub": "OFF 62 BALLS"
+   }
+  },
+  {
+   "vo": "गिल made ninety-eight, off a hundred and forty-six balls. Nine fours, two sixes.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "SHUBMAN GILL · INDIA CAPTAIN",
+    "title": "98.",
+    "img": "data/licensed/in/nz_day3_batter_pull_apollo.jpg",
+    "crop_short": [
+     0,
+     280,
+     1280,
+     1133
+    ],
+    "tag": "98 (146) · 9 FOURS · 2 SIXES",
+    "name": "GILL",
+    "mono": "b DUFFY · 124.4 · THIRD-LAST BALL",
+    "caption": "Pushed in front of the pad. The ball sneaked through.",
+    "chip": "98",
+    "chip_sub": "OFF 146 BALLS"
+   }
+  },
+  {
+   "vo": "It is the fourth-highest score by an India captain in New Zealand. Only Azharuddin, twice, and Gavaskar have made more.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "INDIA CAPTAINS IN NEW ZEALAND",
+     "sub": "HIGHEST TEST SCORES · PER CRICBUZZ"
+    },
+    "max": 200,
+    "dec": 0,
+    "items": [
+     {
+      "label": "AZHARUDDIN · AUCKLAND 1990",
+      "value": 192,
+      "color": "ink"
+     },
+     {
+      "label": "GAVASKAR · AUCKLAND 1976",
+      "value": 116,
+      "color": "ink"
+     },
+     {
+      "label": "AZHARUDDIN · WELLINGTON 1998",
+      "value": 103,
+      "color": "ink"
+     },
+     {
+      "label": "GILL · WELLINGTON 2026",
+      "value": 98,
+      "color": "red"
+     },
+     {
+      "label": "DHONI · WELLINGTON 2014",
+      "value": 68,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But it is his fourth dismissal in the nineties. Ninety-one, ninety-one, ninety, and now ninety-eight. The second India captain out in the nineties against New Zealand. The first was एम एस धोनी, for an identical ninety-eight.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "GILL IN THE NINETIES",
+     "sub": "TEST DISMISSALS · PER CRICBUZZ"
+    },
+    "items": [
+     {
+      "h": "91 · BRISBANE 2021",
+      "d": "v Australia"
+     },
+     {
+      "h": "91 · RAJKOT 2024",
+      "d": "v England"
+     },
+     {
+      "h": "90 · MUMBAI 2024",
+      "d": "v New Zealand"
+     },
+     {
+      "h": "98 · WELLINGTON 2026",
+      "d": "v New Zealand · like Dhoni, 98, Nagpur 2010",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Still, all five of India's top five went past fifty. It has happened five times in Tests, says Cricbuzz.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "ALL FIVE PAST FIFTY",
+     "sub": "INDIA'S TOP FIVE · THE FIFTH TIME IN TESTS · PER CRICBUZZ"
+    },
+    "items": [
+     {
+      "h": "JAISWAL 85",
+      "d": "c Blundell b Henry"
+     },
+     {
+      "h": "RAHUL 136",
+      "d": "b Smith"
+     },
+     {
+      "h": "PADIKKAL 80",
+      "d": "b Jamieson"
+     },
+     {
+      "h": "GILL 98",
+      "d": "b Duffy",
+      "c": "gold"
+     },
+     {
+      "h": "PANT 55*",
+      "d": "not out"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "New Zealand's bowlers paid. Jacob Duffy: twenty-nine overs, one wicket, a hundred and eighty-one runs. Fourteen no-balls in the innings, seven of them his.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "NEW ZEALAND'S BOWLERS",
+     "sub": "RUNS PER OVER · FULL INNINGS SO FAR"
+    },
+    "max": 8,
+    "dec": 2,
+    "items": [
+     {
+      "label": "JAMIESON · 27-6-57-1",
+      "value": 2.11,
+      "color": "gold"
+     },
+     {
+      "label": "HENRY · 29-7-86-1",
+      "value": 2.97,
+      "color": "ink"
+     },
+     {
+      "label": "SMITH · 24-4-65-1 · 4 NO-BALLS",
+      "value": 2.71,
+      "color": "ink"
+     },
+     {
+      "label": "DUFFY · 29-1-181-1 · 7 NO-BALLS",
+      "value": 6.24,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So, day four. India lead by a hundred and eighteen, with six wickets in hand. How big a lead do they set? Comment one, under two hundred. Two, two hundred to three hundred. Three, more.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "INDIA LEAD BY 118 · COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · UNDER 200",
+      "d": "India are bowled out soon",
+      "c": "gold"
+     },
+     {
+      "h": "2 · 200 TO 300",
+      "d": "a sporting declaration"
+     },
+     {
+      "h": "3 · MORE",
+      "d": "India bat New Zealand out of the game"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down day four the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Gill Out for 98, India Lead by 118 | India vs New Zealand 1st Test Day 3 #Shorts",
+   "description": "India vs New Zealand, 1st Test day three: India 486 for 4, a lead of 118. KL Rahul's hundred, Devdutt Padikkal 80, Rishabh Pant's fifty, and Shubman Gill out for 98 off the third-last ball of the day. The records: Gill's fourth dismissal in the nineties, the fourth-highest score by an India captain in New Zealand. How big a lead do India set? Comment 1 under 200, 2 200 to 300, 3 more. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Shubman Gill",
+    "KL Rahul",
+    "Rishabh Pant",
+    "Devdutt Padikkal",
+    "Jacob Duffy",
+    "Basin Reserve",
+    "Wellington Test",
+    "Day 3 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}
