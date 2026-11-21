@@ -3171,7 +3171,7 @@
    }
   },
   {
-   "vo": "So, day four. India lead by a hundred and eighteen, with six wickets in hand. How big a lead do they set? Comment one, under two hundred. Two, two hundred to three hundred. Three, more.",
+   "vo": "So, day four. India lead by a hundred and eighteen, with six wickets in hand. How big a lead do they set? Comment one, under two hundred. Two, up to three hundred. Three, more.",
    "scene": {
     "type": "list",
     "head": {
@@ -3186,7 +3186,8 @@
      },
      {
       "h": "2 · 200 TO 300",
-      "d": "a sporting declaration"
+      "d": "a sporting declaration",
+      "cue": "up"
      },
      {
       "h": "3 · MORE",

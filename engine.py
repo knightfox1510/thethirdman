@@ -134,7 +134,8 @@ def autocue(s, words, lead):
             order.append((key, it, fields))
     for key, it, fields in order:
         toks = []
-        for f in fields:
+        if it.get("cue"): toks = [str(it["cue"])]                          # an explicit spoken word to appear on (when the label has no word of its own)
+        for f in (() if it.get("cue") else fields):
             toks += [t for t in re.findall(r"[A-Za-z]{3,}", str(it.get(f, ""))) if t.upper() not in STOP]
         toks = [t.upper() for t in toks]
         for j in range(ptr, len(W)):
