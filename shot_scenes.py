@@ -14,11 +14,17 @@ def _L(g):
     return l
 
 
+def _hd(s):
+    """The lab header reads title/sub; scenes here carry head {t, sub} like the chart scenes do."""
+    h = s.get("head")
+    return dict(s, title=h["t"], sub=h.get("sub", "")) if (isinstance(h, dict) and not s.get("title")) else s
+
+
 def _jit(i): return ((i * 37) % 11 - 5) * 1.3                                  # deterministic angle jitter (degrees), so overlapping rays fan out
 
 
 def sc_wagon(c, g, t, D, s):
-    LK.header(c, g, t, D, s); l = _L(g); sh = g.fmt == "short"; W = g.W
+    LK.header(c, g, t, D, _hd(s)); l = _L(g); sh = g.fmt == "short"; W = g.W
     R = 400 if sh else 330; cx = W / 2 if sh else 560; cy = l["top"] + (80 if sh else 40) + R; a = eo(prog(t, .05, .5))
     # field: rope circle, inner circle, pitch strip
     c.drawCircle(cx, cy, R + 10, paint((0, 0, 0), .10 * a, blur=22))
@@ -67,7 +73,7 @@ LENS = [("FULL", "full"), ("GOOD", "good"), ("SHORT OF A LENGTH", "short_of_leng
 
 def sc_pitchzones(c, g, t, D, s):
     """Two pitch panels (line by length). Cell shade = share of the panel's deliveries; the number is that share in %."""
-    LK.header(c, g, t, D, s); l = _L(g); sh = g.fmt == "short"; a = eo(prog(t, .05, .5))
+    LK.header(c, g, t, D, _hd(s)); l = _L(g); sh = g.fmt == "short"; a = eo(prog(t, .05, .5))
     panels = s["panels"]; npn = len(panels); gap = 30; pw = ((l["x1"] - l["x0"]) - gap * (npn - 1)) / npn; top = l["top"] + 70; ch = 150 if sh else 120
     for k, pn in enumerate(panels):
         x0 = l["x0"] + k * (pw + gap); qk = eo(prog(t, .1 + .25 * k, .7 + .25 * k)); tot = pn["n"]
@@ -98,7 +104,7 @@ LN_Y = {"yorker": (1.0, 2.0), "full": (2.0, 4.0), "good": (4.0, 6.0), "short_of_
 
 def sc_pitchtop(c, g, t, D, s):
     """The pitch from above: two grass panels with the 22-yard strip, creases and stumps; each delivery is a dot where its line and length put it (jittered inside its zone)."""
-    LK.header(c, g, t, D, s); l = _L(g); a = eo(prog(t, .05, .5)); panels = s["panels"]; npn = len(panels); gap = 24
+    LK.header(c, g, t, D, _hd(s)); l = _L(g); a = eo(prog(t, .05, .5)); panels = s["panels"]; npn = len(panels); gap = 24
     pw = ((l["x1"] - l["x0"]) - gap * (npn - 1)) / npn; m = 62.0; top = l["top"] + 70; gh = 10.9 * m + 50
     for k, pn in enumerate(panels):
         x0 = l["x0"] + k * (pw + gap); cx = x0 + pw / 2; qk = eo(prog(t, .1 + .25 * k, .7 + .25 * k)); y0 = top + 36                 # y0 = the batter's stumps

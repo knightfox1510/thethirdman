@@ -8,6 +8,11 @@ E = None; LK = None
 AMB = (226, 150, 24); GRN = (40, 150, 90); GREY = (170, 170, 168)
 
 
+def _hd(s):
+    h = s.get("head")
+    return dict(s, title=h["t"], sub=h.get("sub", "")) if (isinstance(h, dict) and not s.get("title")) else s
+
+
 def _L(g):
     l = dict(LK.L(g))
     if g.fmt == "short": l["bot"] = 1620
@@ -19,7 +24,7 @@ BANDS = [(0, 2, "YORKER"), (2, 4, "FULL"), (4, 6, "GOOD LENGTH"), (6, 8, "BACK O
 
 
 def sc_wicketmap(c, g, t, D, s):
-    LK.header(c, g, t, D, s); l = _L(g); sh = g.fmt == "short"; items = s["items"]; n = len(items)
+    LK.header(c, g, t, D, _hd(s)); l = _L(g); sh = g.fmt == "short"; items = s["items"]; n = len(items)
     top = l["top"] + 20; bot = l["bot"] - 40; H = bot - top; sc = min(H / 10.0, 95 if sh else 80); sx = sc * (1.05 if sh else 1.9); pw = 3.0 * sx
     cx = (l["x0"] + 230 + pw / 2) if not sh else (l["x0"] + 175 + pw / 2); x0 = cx - pw / 2
     a = eo(prog(t, .05, .5))
@@ -64,7 +69,7 @@ def sc_wicketmap(c, g, t, D, s):
 
 
 def sc_overstrip(c, g, t, D, s):
-    LK.header(c, g, t, D, s); l = _L(g); sh = g.fmt == "short"; ov = s["overs"]; n = len(ov); rows = 3 if sh else 1; per = math.ceil(n / rows)
+    LK.header(c, g, t, D, _hd(s)); l = _L(g); sh = g.fmt == "short"; ov = s["overs"]; n = len(ov); rows = 3 if sh else 1; per = math.ceil(n / rows)
     gap = 3 if not sh else 4; cw = (l["x1"] - l["x0"] - gap * (per - 1)) / per; ch = 300 if not sh else 190; top = l["top"] + (40 if not sh else 30)
     prog_all = eo(prog(t, .1, D * .8 if D > 1 else .8)); shown = prog_all * n
     cut1, cut2 = s["session_cuts"]; split = s.get("split")                                  # overs after which the lunch / tea break fall; split = over index where the 'no wickets' stand begins
