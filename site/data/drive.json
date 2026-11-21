@@ -1,6 +1,6 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-20",
+ "synced": "2026-11-21",
  "videos": {
   "myth_ep1_kohli_knockouts": {
    "state": "posted",
@@ -966,6 +966,63 @@
     }
    ]
   },
+  "nz_ind_1st_test_day3": {
+   "state": "posted",
+   "series": "02 The Replay Room",
+   "episode": "Ep06 - India vs New Zealand 1st Test Day 3 [posted]",
+   "folder": "https://drive.google.com/drive/folders/1I53GjO4SsrTB5IXJpfYt1NVvSxgWoIfj",
+   "files": [
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1Yh1lsUQ259IT5oCw93Vihd2W3yJIQnZw/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1Pv7bCvihLmZC31oxiwFLTwfXQSntpZoD/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1a0Ka5uFAdvkJhyeZkxalszk5xRiYwHaW/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 27.0,
+     "url": "https://drive.google.com/file/d/1kYXKWJHOUvuF2ruLHUVZG_RYbXKzUiMR/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1P_CG2YU_zgYWqv2ofRxBEbMEUtychqYF/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1hhcq1GZ6Mmt2j6Depo6LygiPOp1KxNSQ/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep06_India_vs_New_Zealand_1st_Test_Day_3_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 26.6,
+     "url": "https://drive.google.com/file/d/1Y29RNIzzn03N06KI3Ppa5GcGCdl6N5QN/view?usp=drivesdk"
+    }
+   ]
+  },
   "santner_problem": {
    "state": "not posted",
    "series": "03 Tactics Board",
@@ -1823,7 +1880,7 @@
   "flip_bumrah_52_tests": {
    "state": "not posted",
    "series": "08 Flip",
-   "episode": "Ep02 - Bumrah vs Fast Bowlers After 52 Tests",
+   "episode": "Ep02 - Bumrah vs Fast Bowlers After 52 Tests [Posted]",
    "folder": "https://drive.google.com/drive/folders/1zHfh1WhshsPSkVLmt7LJfNZlMnckNQUu",
    "files": [
     {
@@ -3644,7 +3701,8 @@
     "replay_u19_final",
     "replay_5odi",
     "nz_ind_1st_test_day1",
-    "nz_ind_1st_test_day2"
+    "nz_ind_1st_test_day2",
+    "nz_ind_1st_test_day3"
    ]
   },
   "03 Tactics Board": {
