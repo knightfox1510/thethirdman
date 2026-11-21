@@ -157,9 +157,11 @@ def sc_photocard(c, g, t, D, s):
     _tag(c, px + 40, py + 30, s["tag"], qa)
     if sh:
         text(c, s["name"], x0, 1310, E.fit(s["name"], 920, 78, "interB", -1), "interB", gfx.INK, eo(prog(t, .5, 1.0)))
-        text(c, s["mono"], x0, 1420, 30, "monoSB", LK.RED, eo(prog(t, .6, 1.1))); text(c, s["caption"], x0, 1480, 36, "interB", gfx.INK, eo(prog(t, .7, 1.2)))
-        rrect(c, 80, 1570, 250, 120, 18, (255, 255, 255), eo(prog(t, .8, 1.3)), stroke=4, scol=gfx.INK, sa=1); text(c, s["chip"], 205, 1650, 78, "interB", gfx.INK, eo(prog(t, .8, 1.3)), "c")
-        text(c, s.get("chip_sub", ""), 360, 1630, 26, "monoSB", gfx.MUTED, eo(prog(t, .8, 1.3)))
+        text(c, s["mono"], x0, 1420, E.fit(s["mono"], 920, 30, "monoSB", 1), "monoSB", LK.RED, eo(prog(t, .6, 1.1)), track=1); cl = E.wrap(s["caption"], 920, 34, "interB")[:2]
+        for j, ln in enumerate(cl): text(c, ln, x0, 1478 + 42 * j, 34, "interB", gfx.INK, eo(prog(t, .7, 1.2)))
+        cy0 = 1540 + 42 * len(cl)
+        rrect(c, 80, cy0, 250, 120, 18, (255, 255, 255), eo(prog(t, .8, 1.3)), stroke=4, scol=gfx.INK, sa=1); text(c, s["chip"], 205, cy0 + 80, 78, "interB", gfx.INK, eo(prog(t, .8, 1.3)), "c")
+        text(c, s.get("chip_sub", ""), 360, cy0 + 60, E.fit(s.get("chip_sub", ""), 640, 26, "monoSB", 1), "monoSB", gfx.MUTED, eo(prog(t, .8, 1.3)), track=1)
     else:
         text(c, s["name"], 1260, 440, E.fit(s["name"], 560, 84, "interB", -1), "interB", LK.RED, eo(prog(t, .5, 1.0)))
         text(c, s["mono"], 1260, 560, E.fit(s["mono"], 520, 28, "monoSB", 1), "monoSB", gfx.INK, eo(prog(t, .6, 1.1)), track=1)

@@ -50,8 +50,9 @@ def sc_wagon(c, g, t, D, s):
     ya = ky + 70; chips = s.get("chips", [])
     for j, (v, lb) in enumerate(chips):
         cw = (920 - 18 * (len(chips) - 1)) / max(1, len(chips)) if sh else 360; cx_ = l["x0"] + j * (cw + 18); qq = eo(prog(t, D * .4 + .1 * j, D * .4 + .6 + .1 * j))
-        rrect(c, cx_, ya, cw, 150, 14, (255, 255, 255), qq, stroke=3, scol=LK.RED if j else gfx.INK, sa=qq); text(c, v, cx_ + cw / 2, ya + 80, 70, "interB", LK.RED if j else gfx.INK, qq, "c"); text(c, lb, cx_ + cw / 2, ya + 125, 21, "monoSB", gfx.MUTED, qq, "c")
-    if s.get("footnote"): text(c, s["footnote"], l["x0"], ya + 200, 18, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
+        rrect(c, cx_, ya, cw, 150, 14, (255, 255, 255), qq, stroke=3, scol=LK.RED if j else gfx.INK, sa=qq); text(c, v, cx_ + cw / 2, ya + 80, 70, "interB", LK.RED if j else gfx.INK, qq, "c"); text(c, lb, cx_ + cw / 2, ya + 125, E.fit(lb, cw - 24, 21, "monoSB", 1), "monoSB", gfx.MUTED, qq, "c", track=1)
+    if s.get("footnote"):
+        for j, ln_ in enumerate(E.wrap(s["footnote"], l["x1"] - l["x0"], 17, "mono")[:2]): text(c, ln_, l["x0"], ya + 200 + 24 * j, 17, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
 
 
 _IMG = {}
@@ -91,7 +92,51 @@ def sc_pitchzones(c, g, t, D, s):
         for j, ln_ in enumerate(E.wrap(s["footnote"], l["x1"] - l["x0"], 17, "mono")[:3]): text(c, ln_, l["x0"], l["bot"] - 70 + j * 24, 17, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
 
 
+LN_X = {"leg": (-.46, -.10), "middle": (-.10, .10), "off": (.10, .38), "outside_off": (.38, 1.0), "wide": (1.0, 1.4)}      # metres from middle stump, off side positive
+LN_Y = {"yorker": (1.0, 2.0), "full": (2.0, 4.0), "good": (4.0, 6.0), "short_of_length": (6.0, 8.0), "short": (8.0, 10.0)}            # metres from the batter's stumps
+
+
+def sc_pitchtop(c, g, t, D, s):
+    """The pitch from above: two grass panels with the 22-yard strip, creases and stumps; each delivery is a dot where its line and length put it (jittered inside its zone)."""
+    LK.header(c, g, t, D, s); l = _L(g); a = eo(prog(t, .05, .5)); panels = s["panels"]; npn = len(panels); gap = 24
+    pw = ((l["x1"] - l["x0"]) - gap * (npn - 1)) / npn; m = 62.0; top = l["top"] + 70; gh = 10.9 * m + 50
+    for k, pn in enumerate(panels):
+        x0 = l["x0"] + k * (pw + gap); cx = x0 + pw / 2; qk = eo(prog(t, .1 + .25 * k, .7 + .25 * k)); y0 = top + 36                 # y0 = the batter's stumps
+        rrect(c, x0, l["top"] - 10, pw, 54, 10, gfx.INK if k == 0 else LK.RED, qk); text(c, pn["title"], x0 + pw / 2, l["top"] + 28, 26, "interB", (255, 255, 255), qk, "c")
+        c.save(); c.clipRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x0, top, pw, gh), 14, 14), doAntiAlias=True)
+        c.drawRect(skia.Rect.MakeXYWH(x0, top, pw, gh), paint((86, 138, 78), qk))
+        for i in range(int(gh // 56) + 1):                                                                                  # mown stripes
+            if i % 2 == 0: c.drawRect(skia.Rect.MakeXYWH(x0, top + i * 56, pw, 56), paint((104, 156, 92), .55 * qk))
+        sw = 3.05 * m; px = cx - sw / 2; c.drawRect(skia.Rect.MakeXYWH(px, y0 - 1.3 * m, sw, 12.2 * m), paint((205, 184, 138), qk))          # the strip
+        c.drawRect(skia.Rect.MakeXYWH(px + sw * .18, y0 + 1.0 * m, sw * .64, 8.2 * m), paint((190, 168, 120), .45 * qk))                       # worn middle
+        wp = paint((250, 250, 245), qk); wp.setStrokeWidth(3)
+        c.drawLine(cx - 2.4 * m, y0 + 1.22 * m, cx + 2.4 * m, y0 + 1.22 * m, wp)                                           # popping crease
+        c.drawLine(cx - 1.32 * m, y0, cx + 1.32 * m, y0, wp); c.drawLine(cx - 1.32 * m, y0, cx - 1.32 * m, y0 + 1.22 * m, wp); c.drawLine(cx + 1.32 * m, y0, cx + 1.32 * m, y0 + 1.22 * m, wp)
+        for j in (-1, 0, 1): c.drawRect(skia.Rect.MakeXYWH(cx + j * 0.11 * m - 2.5, y0 - 12, 5, 14), paint((245, 232, 200), qk))   # the stumps
+        for lo, lab in ((2.0, "FULL"), (4.0, "GOOD"), (6.0, "BACK OF A LENGTH"), (8.0, "SHORT")):
+            dl = paint((255, 255, 255), .30 * qk); dl.setStrokeWidth(2); c.drawLine(px, y0 + lo * m, px + sw, y0 + lo * m, dl)
+            if k == 0: text(c, lab.replace("BACK OF A LENGTH", "BACK OF LGTH"), x0 + 8, y0 + lo * m - 8, 13, "monoSB", (240, 244, 236), qk, "l", track=1)
+        n = len(pn["balls"]); shown = qk * eo(prog(t, .3, max(.9, D * .8))) * n
+        for i, (ln_, le_, out) in enumerate(pn["balls"]):
+            q = clamp(shown - i)
+            if q <= 0: continue
+            xa, xb = LN_X[ln_]; ya, yb = LN_Y[le_]; fx = ((i * 53) % 17) / 17.0; fy = ((i * 29) % 13) / 13.0
+            bx = cx + (xa + (xb - xa) * fx) * m * (1 if True else 1); by = y0 + (ya + (yb - ya) * fy) * m
+            col = {"d": (250, 250, 245), "r": AMB, "b": LK.RED, "w": (20, 20, 22)}[out]; r = 7 if out in ("d", "r") else 9
+            c.drawCircle(bx, by, r, paint(col, (.55 if out == "d" else .95) * q))
+            if out == "w": c.drawCircle(bx, by, 13, paint(LK.RED, q, stroke=4))
+        c.restore()
+        yy = top + gh + 56
+        for j, (v, lb) in enumerate(pn.get("stats", [])):
+            qs = eo(prog(t, D * .35 + .1 * j, D * .35 + .6 + .1 * j)); text(c, v, x0 + 4, yy + j * 52, 38, "interB", LK.RED if k else gfx.INK, qs); text(c, lb, x0 + 4 + twidth(v, 38, "interB", 0) + 12, yy + j * 52 - 4, E.fit(lb, pw - 120, 19, "monoSB", 1), "monoSB", gfx.MUTED, qs, track=1)
+    ky = top + gh + 56 + 52 * 2 + 24
+    for j, (lab, col) in enumerate((("DOT BALL", (150, 150, 145)), ("RUNS", AMB), ("BOUNDARY", LK.RED), ("WICKET", (20, 20, 22)))):
+        kx = l["x0"] + j * 225; c.drawCircle(kx + 9, ky - 7, 8, paint(col, a)); text(c, lab, kx + 26, ky, 19, "monoSB", gfx.INK, a, track=1)
+    if s.get("footnote"):
+        for j, ln_ in enumerate(E.wrap(s["footnote"], l["x1"] - l["x0"], 16, "mono")[:2]): text(c, ln_, l["x0"], ky + 36 + 22 * j, 16, "mono", gfx.MUTED, eo(prog(t, D * .5, D * .5 + .6)))
+
+
 def install(engine, looks):
     global E, LK
     E = engine; LK = looks
-    E.SCENES.update({"wagon": sc_wagon, "pitchzones": sc_pitchzones})
+    E.SCENES.update({"wagon": sc_wagon, "pitchzones": sc_pitchzones, "pitchtop": sc_pitchtop})
