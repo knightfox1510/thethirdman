@@ -1,21 +1,13 @@
 {
- "synced": "2026-11-21",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa)",
+ "synced": "2026-11-22",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa); 22 Nov: AP/Sitka Sentinel (day three stumps 486/4), Tribune/ANI + Outlook (day four lunch 629/6), Sky Sports + Cricinfo (1st T20I result, 2nd T20I 24 Nov Carrara), myKhel (Santner out)",
  "items": [
-  {
-   "date": "2026-11-18",
-   "event": "3rd ODI",
-   "teams": "Australia v England",
-   "venue": "Hobart (Ninja Stadium, Bellerive Oval), 2:30 pm local",
-   "status": "England won by 97 runs (Duckett 133, Baker 4/45); series 2-1 to England",
-   "format": "news"
-  },
   {
    "date": "2026-11-19",
    "event": "1st Test (19–23 Nov)",
    "teams": "NZ v India",
    "venue": "Wellington (Basin Reserve)",
-   "status": "Live, day three: NZ 368 (Nicholls 175*, Phillips 118; Bumrah 4/92, Akash Deep 3/53); India 159/1 at day-two stumps (Jaiswal 85), 239/1 at lunch on day three (Rahul 93*, Padikkal 53*), trailing by 129",
+   "status": "Live, day four: NZ 368; India 486/4 at day-three stumps (Rahul 136, Gill 98), 629/6 at lunch on day four (Pant 128), lead 261",
    "format": "replay"
   },
   {
@@ -23,7 +15,7 @@
    "event": "1st T20I (of five, to 2 Dec)",
    "teams": "Australia v England",
    "venue": "Melbourne (MCG)",
-   "status": "Today (result not yet found)",
+   "status": "Australia won by 3 wickets (191/7 in 19.5 chasing 188; Chaudhary POTM); Australia lead 1-0",
    "format": "news"
   },
   {
@@ -39,8 +31,16 @@
    "event": "1st Test, day five (if needed)",
    "teams": "NZ v India",
    "venue": "Wellington",
-   "status": "Replay Room long due next day",
+   "status": "Likely final day; Replay Room long due within 12 hours of the result",
    "format": "replay"
+  },
+  {
+   "date": "2026-11-24",
+   "event": "2nd T20I",
+   "teams": "Australia v England",
+   "venue": "Carrara (Gold Coast)",
+   "status": "Upcoming",
+   "format": "news"
   },
   {
    "date": "2026-11-27",
@@ -87,7 +87,7 @@
    "event": "1st T20I",
    "teams": "India v Sri Lanka",
    "venue": "Rajkot",
-   "status": "Upcoming",
+   "status": "Australia won by 3 wickets (191/7 in 19.5 chasing 188; Chaudhary POTM); Australia lead 1-0",
    "format": "replay"
   },
   {

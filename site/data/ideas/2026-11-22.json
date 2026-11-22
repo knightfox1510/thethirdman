@@ -1,0 +1,149 @@
+{
+ "date": "2026-11-22",
+ "by": "Daily ideas task",
+ "news": [
+  {
+   "title": "1st Test, day four: Pant's 128 (153 balls, 10 fours, 6 sixes) takes India to 629/6 at lunch, lead 261 over NZ's 368",
+   "url": "https://www.tribuneindia.com/news/anshul-kamboj/1st-test-pants-128-powers-india-to-629-6-take-261-run-lead-over-new-zealand-at-lunch-on-day-4",
+   "note": "The Test has flipped from 70/5 on day one to India in command. FOW 130, 295, 386, 486, 554, 629. Replay Room long due after the result (likely day five, 23 Nov)"
+  },
+  {
+   "title": "Same report (ANI): Pant claims - first Indian keeper with Test hundreds in all four SENA countries, Test sixes to 108 (past McCullum's 107), 3,000 WTC runs",
+   "url": "https://www.aninews.in/news/sports/cricket/1st-test-pants-128-powers-india-to-6296-take-261-run-lead-over-new-zealand-at-lunch-on-day-420261122055758/",
+   "note": "Milestone Short + Flip material, but every record claim must be checked against Cricinfo records (Tier A) first"
+  },
+  {
+   "title": "Day-four live blog: Pant's ninth Test century; Jurel and Sundar resume",
+   "url": "https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-1st-test-day-4-live-score-ind-vs-nz-scorecard-latest-updates-highlights",
+   "note": "Second source for day-four numbers. Its title says 629/5 but body says 629/6: use the official scorecard"
+  },
+  {
+   "title": "Day three stumps: India 486/4, lead 118; Rahul 136 (13th Test hundred), Gill 98 bowled by Duffy two balls before stumps, Padikkal 80",
+   "url": "https://sitkasentinel.com/stories/india-leads-new-zealand-by-118-runs-after-rahuls-136-on-day-3-of-the-1st-cricket-test,187950",
+   "note": "Top five scored 85, 136, 80, 98, 128: a data story on India's batting depth. Stands: Rahul-Padikkal 165, Gill-Pant 100 in 96 minutes"
+  },
+  {
+   "title": "Cricinfo match report: India's top five rack up the runs to push New Zealand to a corner",
+   "url": "https://www.cricinfo.com/series/india-in-new-zealand-2026-27-1539421/new-zealand-vs-india-1st-test-1539442/match-report",
+   "note": "Tier A page; capture with tools/ttm-capture after the Test ends"
+  },
+  {
+   "title": "Australia beat England by 3 wickets in the 1st T20I at the MCG, chasing 188 with a ball to spare (record T20I chase at the MCG for Australia, per Sky)",
+   "url": "https://www.skysports.com/cricket/news/13614645/australia-beat-england-in-first-t20i-as-mcg-record-run-chase-earns-hosts-1-0-lead-in-five-match-series",
+   "note": "Nikhil Chaudhary Player of the Match (2-21 and a fifty; Sky's own figures differ by a couple of runs). Australia lead 1-0; 2nd T20I Carrara, Tue 24 Nov. T20Is are in Sportmonks"
+  },
+  {
+   "title": "Cricinfo scorecard: Australia won by 3 wickets (with 1 ball remaining)",
+   "url": "https://www.cricinfo.com/series/england-in-australia-2026-27-1528677/australia-vs-england-1st-t20i-1528706/live-cricket-score",
+   "note": "Tier A source for the T20I numbers"
+  },
+  {
+   "title": "Mitchell Santner ruled out of the India Test series",
+   "url": "https://www.mykhel.com/cricket/india-vs-new-zealand-why-is-mitchell-santner-ruled-out-of-test-series-who-has-replaced-him-459185.html",
+   "note": "NZ's spin options for Christchurch: input for the 2nd Test preview (verify replacement before use)"
+  },
+  {
+   "title": "IPL 2027 auction confirmed for 16 December in Goa; player registration closes 23 Nov",
+   "url": "https://www.oneindia.com/sports/cricket/ipl-2027-auction-date-time-and-venue-confirmed-goa-to-host-bidding-event-on-16-december-8262989.html",
+   "note": "Auction-pool content once the registered list is published"
+  }
+ ],
+ "ideas": [
+  {
+   "title": "India vs New Zealand - 1st Test Analysis | How 70/5 Turned Into a 261-Run Lead",
+   "format": "replay",
+   "why": "The full swing in one story: NZ 70/5, the Nicholls-Phillips 216 stand, then India's top five batting NZ out of the game (85, 136, 80, 98, 128). Show where NZ's lengths went after the new ball and how India's scoring rate climbed each session.",
+   "timing": "Within 12 hours of the result (likely day five, 23 Nov IST), before 2nd Test build-up",
+   "data": "Cricinfo + Cricbuzz capture of all days (cricinfo_import.py); totals and FOW checked against the official scorecard",
+   "priority": "High"
+  },
+  {
+   "title": "Rishabh Pant's Ninth Test Hundred: 108 Sixes and Counting | India vs New Zealand 1st Test #Shorts",
+   "format": "news",
+   "why": "Milestone Short: 128 off 153 with six sixes; reported to take him past McCullum into second on the all-time Test sixes list and to complete hundreds in all four SENA countries as a keeper. Lead with whichever claim survives verification.",
+   "timing": "Today (22 Nov), while the Test is live",
+   "data": "Cricinfo records (most Test sixes, keeper hundreds by country) as Tier A + one more source (ICC/Wisden) via dataops/verify.py; ANI is a lead, not a source",
+   "priority": "High"
+  },
+  {
+   "title": "Is 629/6 India's Highest Test Total in New Zealand? | Stat Check",
+   "format": "statcheck",
+   "why": "India's first-innings total (and climbing at lunch) after conceding 368. Answer the record question honestly, then the better number: how often teams replying to 350-plus in NZ have taken a 250-plus lead.",
+   "timing": "Today or tomorrow, before the Test ends",
+   "data": "Cricinfo team records (India in NZ, highest totals) Tier A; reply-lead frequency from Cricsheet men's Tests filtered to gender male, labelled 'in our archive'",
+   "priority": "High"
+  },
+  {
+   "title": "India vs New Zealand - 2nd Test Preview | Christchurch Without Santner",
+   "format": "tactics",
+   "why": "Updated from yesterday's idea: NZ's bowlers conceded 600-plus at the Basin and Santner is out of the series. Board scenes on Hagley Oval lengths and NZ's seam-heavy plan vs India's top five, labelled Illustrative.",
+   "timing": "25-26 Nov, one to two days before the 2nd Test (27 Nov)",
+   "data": "Match capture of the 1st Test (lengths, control); Hagley Oval Test history from Cricinfo; squads from NZC/BCCI",
+   "priority": "High"
+  },
+  {
+   "title": "Flip: Rishabh Pant vs Adam Gilchrist, Test Keeper Hundreds",
+   "format": "flip",
+   "why": "Benchmark flip after Pant's ninth hundred: hundreds, balls per hundred, sixes, away hundreds. One live record claim (Outlook says he is third among keepers for Test hundreds) to verify.",
+   "timing": "Within 48 hours, while the hundred is fresh",
+   "data": "Cricinfo Statsguru/records for both careers (Tier A) + Wikipedia cross-check",
+   "priority": "Medium"
+  },
+  {
+   "title": "India's Top Five in Wellington: 85, 136, 80, 98, 128 | Data Story",
+   "format": "datastories",
+   "why": "How rare is it for an Indian top five to all pass 80 in one Test innings? Partnership ladder (130, 165, 91, 100) as a visual, and the Gill 98 that ended two balls before stumps.",
+   "timing": "After the Test, 23-24 Nov",
+   "data": "Official scorecard + Cricinfo records; any 'first/only' only from Tier A, archive baselines from Cricsheet labelled 'in our archive'",
+   "priority": "Medium"
+  },
+  {
+   "title": "Rishabh Pant: Too Reckless for Test Cricket? | Myth or Data",
+   "format": "myth",
+   "why": "The perennial debate, re-opened by a 128 with six sixes: compare his attacking-shot dismissals and average with conventional keepers since debut. Verdict stamp.",
+   "timing": "Before the 2nd Test (by 26 Nov)",
+   "data": "Cricinfo ball-by-ball captures for recent Tests (shot/control); career numbers from Cricinfo; Cricsheet men's Tests labelled 'in our archive'",
+   "priority": "Medium"
+  },
+  {
+   "title": "Nikhil Chaudhary: The Punjab-Born All-Rounder Who Won the MCG Chase",
+   "format": "rising",
+   "why": "Player of the Match in Australia's record MCG chase of 188 (fifty plus 2-21). Indian-origin angle for our audience; trading card with verified T20I and BBL numbers.",
+   "timing": "Before the 2nd T20I (24 Nov, Carrara)",
+   "data": "Sportmonks T20I cache + Cricinfo scorecard (Tier A); BBL numbers from Cricinfo",
+   "priority": "Medium"
+  },
+  {
+   "title": "Can You Declare at Lunch? The Declaration Law Explained | Did You Know",
+   "format": "didyouknow",
+   "why": "India's lead decision on day four makes Law 15 topical: when a captain can declare or forfeit, and the twist (declaring timing and the follow-on choice).",
+   "timing": "This week, while the declaration debate is live",
+   "data": "MCC Laws of Cricket (Law 15, re-check the 2026 edition clause) + ICC Test Playing Conditions clause 15",
+   "priority": "Low"
+  },
+  {
+   "title": "The Lab: How Often Do Teams Win After Conceding 350-Plus First?",
+   "format": "lab",
+   "why": "India conceded 368 and still lead by 261-plus. Model the win/draw/loss odds by first-innings deficit closed, NZ venues vs elsewhere.",
+   "timing": "Between Tests (24-26 Nov)",
+   "data": "Cricsheet men's Tests (male filter), labelled 'in our archive'; check stability across eras",
+   "priority": "Medium"
+  },
+  {
+   "title": "IPL 2027 Auction Pool: Who Registered? | Stat Check",
+   "format": "statcheck",
+   "why": "Registration closes 23 Nov. Once the list is out, rank the best-value names by role gaps from our 'What every team needs' story.",
+   "timing": "When BCCI publishes the registered list (expected after 23 Nov), well before the 16 Dec auction",
+   "data": "Official IPL/BCCI list; player T20 numbers from Sportmonks (IPL/T20Is)",
+   "priority": "Medium"
+  },
+  {
+   "title": "What If? Gill Had Survived the Last Two Balls of Day Three",
+   "format": "whatif",
+   "why": "Bowled by Duffy on 98 two balls before stumps. Light, sepia What If on how often batters dismissed in the 90s near stumps, and what a hundred would have meant for his Test record in NZ.",
+   "timing": "Low urgency; fill a quiet day this week",
+   "data": "Official scorecard + Cricinfo records for Gill; nineties dismissals from Cricsheet labelled 'in our archive'",
+   "priority": "Low"
+  }
+ ]
+}
