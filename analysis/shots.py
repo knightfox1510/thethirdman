@@ -2,7 +2,8 @@
 (approximate zones, not tracked coordinates). Off side is drawn on the right for every batter. Writes data/provenance/nz_shots.json.   python3 analysis/shots.py"""
 import json, os, re, collections
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-d = json.load(open(f"{R}/data/cricbuzz/nz_ind_1st_test_day3.json")); C = [x for x in d["comments"] if x["inningsId"] == 2]
+SRC_IN = os.environ.get("SHOTS_IN", "nz_ind_1st_test_day3.json"); SRC_OUT = os.environ.get("SHOTS_OUT", "nz_shots.json"); INNS = [int(i) for i in os.environ.get("SHOTS_INN", "2").split(",")]
+d = json.load(open(f"{R}/data/cricbuzz/{SRC_IN}")); C = [x for x in d["comments"] if x["inningsId"] in INNS]
 
 
 def text(x):
@@ -47,11 +48,11 @@ for x in rows:
     res, desc = m.group(3), (m.group(4) or "")
     runs = x.get("totalRuns", 0); legal = res not in ("wide",) and "no ball" not in res
     bat = (x.get("batsmanStriker") or {}).get("batName") or m.group(2)
-    day = 3 if x["overNumber"] > 38.6 + 1e-9 else 2
+    day = (3 if x["overNumber"] > 38.6 + 1e-9 else 2) if x["inningsId"] == 2 else 0
     sess = 1 if x["overNumber"] <= 65.6 else (2 if x["overNumber"] <= 92.6 else 3) if day == 3 else 0
     shot = desc.lower()
-    out.append({"over": x["overNumber"], "day": day, "sess": sess, "bowler": m.group(1), "bat": bat, "res": res, "runs": runs, "len": pick(desc, LEN), "line": pick(desc, LINE), "ang": zone(shot) if (runs > 0 and "bye" not in res and "wide" not in res) else None, "wkt": "WICKET" in x.get("event", "")})
-json.dump(out, open(f"{R}/data/provenance/nz_shots.json", "w"))
+    out.append({"inn": x["inningsId"], "over": x["overNumber"], "day": day, "sess": sess, "bowler": m.group(1), "bat": bat, "res": res, "runs": runs, "len": pick(desc, LEN), "line": pick(desc, LINE), "ang": zone(shot) if (runs > 0 and "bye" not in res and "wide" not in res) else None, "wkt": "WICKET" in x.get("event", "")})
+json.dump(out, open(f"{R}/data/provenance/{SRC_OUT}", "w"))
 score = [o for o in out if o["runs"] > 0 and "bye" not in o["res"] and "wide" not in o["res"]]
 print(len(out), "balls;", len(score), "scoring shots;", sum(1 for o in score if o["ang"] is not None), "placed")
 for b in ("KL Rahul", "Rahul", "Shubman Gill", "Rishabh Pant", "Devdutt Padikkal", "Yashasvi Jaiswal"):

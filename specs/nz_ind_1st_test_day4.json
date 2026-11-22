@@ -1,0 +1,1338 @@
+{
+ "slug": "nz_ind_1st_test_day4",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DAY 4",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 4",
+  "lines": [
+   {
+    "t": "720 AND"
+   },
+   {
+    "t": "A PAIR",
+    "c": "gold"
+   }
+  ],
+  "hero": "720",
+  "herosize": 420
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "720 AND"
+   },
+   {
+    "t": "A PAIR",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 4",
+  "hero": "720"
+ },
+ "sources": [
+  "Day 4 ball-by-ball (India 720/9 declared; New Zealand 119/2): Cricbuzz full commentary for New Zealand v India, 1st Test, 22 November 2026 (owner's capture; bowler lines, no-ball counts, control rates and the pair note are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Figures: analysis/nz_day4.py, analysis/shots.py. Wagon wheel and pitch map positions are our read of the commentary text (approximate zones)."
+ ],
+ "short": [
+  {
+   "vo": "India declare on seven twenty for nine, a lead of three fifty-two. And in the second ball of New Zealand's reply, their captain Tom Latham is out for a pair. Day four had it all.",
+   "scene": {
+    "type": "statement",
+    "kicker": "DAY 4 · 720 FOR 9 DECLARED",
+    "lines": [
+     {
+      "t": "720."
+     },
+     {
+      "t": "AND A PAIR.",
+      "c": "gold"
+     }
+    ],
+    "sub": "India lead by 352. Latham: second ball, again."
+   }
+  },
+  {
+   "vo": "It began with रिषभ पंत. A hundred, brought up with a six, off a hundred and fifty-three balls for a hundred and twenty-eight. Ten fours, six sixes. He passed Brendon McCullum on the Test sixes list.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "RISHABH PANT · DAY 4",
+    "title": "128.",
+    "img": "data/licensed/in/nz_day4_pant_hundred.jpg",
+    "crop_short": [
+     130,
+     330,
+     1130,
+     997
+    ],
+    "tag": "128 (153) · 10 FOURS · 6 SIXES",
+    "name": "PANT",
+    "mono": "HIS HUNDRED CAME WITH A SIX",
+    "caption": "Past Brendon McCullum on the Test sixes list.",
+    "chip": "128",
+    "chip_sub": "OFF 153 BALLS"
+   }
+  },
+  {
+   "vo": "Look at the wheel. thirty-three through the off side, thirty-three through the leg, thirty straight. Three of the six sixes went down the ground.",
+   "scene": {
+    "type": "wagon",
+    "head": {
+     "t": "PANT'S 128",
+     "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"
+    },
+    "pts": [
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      4,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      0,
+      2,
+      "n"
+     ],
+     [
+      0,
+      2,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      105,
+      2,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      62,
+      2,
+      "n"
+     ],
+     [
+      140,
+      4,
+      "f"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      62,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      0,
+      1,
+      "n"
+     ],
+     [
+      140,
+      4,
+      "f"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      1,
+      "n"
+     ]
+    ],
+    "photo": {
+     "img": "data/licensed/in/nz_day4_pant_hundred.jpg",
+     "crop": [
+      190,
+      300,
+      890,
+      1000
+     ]
+    },
+    "chips": [
+     [
+      "6",
+      "SIXES"
+     ],
+     [
+      "10",
+      "FOURS"
+     ],
+     [
+      "3",
+      "SIXES STRAIGHT"
+     ]
+    ],
+    "footnote": "48 SCORING SHOTS PLACED · ZONES READ FROM THE BALL-BY-BALL TEXT"
+   }
+  },
+  {
+   "vo": "The man who paid was Glenn Phillips. Twenty-four overs, a hundred and fifty-four runs, and nine sixes, seven of them today. He still took three wickets.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "GLENN PHILLIPS",
+     "sub": "OFF-SPIN · INDIA'S INNINGS"
+    },
+    "tiles": [
+     {
+      "v": "9",
+      "l": "SIXES CONCEDED · 7 TODAY",
+      "c": "red"
+     },
+     {
+      "v": "154",
+      "l": "RUNS IN 24 OVERS",
+      "c": "ink"
+     },
+     {
+      "v": "3",
+      "l": "WICKETS ANYWAY",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the lower order. Dhruv Jurel, seventy-eight off seventy-nine. The nightwatchman, अंशुल कंबोज, thirty-eight off forty-two. आकाश दीप, thirteen off five balls, two sixes.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE LATE ORDER",
+     "sub": "RUNS AND BALLS · DAY 4"
+    },
+    "max": 100,
+    "dec": 0,
+    "items": [
+     {
+      "label": "JUREL · 78 OFF 79",
+      "value": 78,
+      "color": "gold"
+     },
+     {
+      "label": "KAMBOJ · 38 OFF 42 · NIGHTWATCHMAN",
+      "value": 38,
+      "color": "ink"
+     },
+     {
+      "label": "SUNDAR · 24 OFF 26",
+      "value": 24,
+      "color": "ink"
+     },
+     {
+      "label": "AKASH DEEP · 13 OFF 5 · 2 SIXES",
+      "value": 13,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Two hundred and thirty-four runs in forty-one overs, five point seven one an over. Then India declared.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE DECLARATION",
+     "sub": "486/4 TO 720/9 · 165.6 OVERS"
+    },
+    "tiles": [
+     {
+      "v": "234",
+      "l": "RUNS IN 41 OVERS",
+      "c": "gold"
+     },
+     {
+      "v": "5.71",
+      "l": "AN OVER",
+      "c": "ink"
+     },
+     {
+      "v": "+352",
+      "l": "LEAD AT THE DECLARATION",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The reply. जसप्रीत बुमराह, second ball, Latham caught behind. Nought in the first innings, nought in the second. The third New Zealand captain with a Test pair, and the eighth New Zealand opener.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE REPLY · OVER ONE",
+    "title": "0.",
+    "img": "data/licensed/in/nz_day4_bumrah_celebrate.jpg",
+    "crop_short": [
+     0,
+     90,
+     1280,
+     943
+    ],
+    "tag": "c PANT b BUMRAH · 0.2 OV",
+    "name": "LATHAM",
+    "mono": "A PAIR · THE THIRD NZ CAPTAIN TO BAG ONE",
+    "caption": "The eighth by a New Zealand opener in Tests.",
+    "chip": "0, 0",
+    "chip_sub": "SECOND BALL, BOTH INNINGS"
+   }
+  },
+  {
+   "vo": "Henry Nicholls, the first-innings centurion, lasted fifty-nine balls. प्रसिद्ध कृष्णा got one to jump, and Dhruv Jurel dived at short leg. Sixty for two.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "OVER TWENTY-TWO",
+    "title": "31.",
+    "img": "data/licensed/in/nz_day4_prasidh_jurel_catch.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "c JUREL b PRASIDH · 22.1 OV",
+    "name": "NICHOLLS",
+    "mono": "A DIVING CATCH AT SHORT LEG",
+    "caption": "The first-innings centurion goes for 31 off 59.",
+    "chip": "60/2",
+    "chip_sub": "NEW ZEALAND"
+   }
+  },
+  {
+   "vo": "The stump mic caught प्रसिद्ध in रचिन रवींद्र's ear. Try another shot. Hit one convincing, and I will agree. रचिन did not rise to it.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE STUMP MIC · PRASIDH TO RACHIN",
+    "lines": [
+     {
+      "t": "“HIT ONE"
+     },
+     {
+      "t": "CONVINCING.”",
+      "c": "gold"
+     }
+    ],
+    "sub": "“And I will agree.”"
+   }
+  },
+  {
+   "vo": "India's plan shifted too. In the first twenty-two overs, twenty-seven per cent of the balls were short. After Nicholls, forty-five, and a quarter on the leg side.",
+   "scene": {
+    "type": "pitchtop",
+    "head": {
+     "t": "WHERE INDIA BOWLED",
+     "sub": "THE PITCH FROM ABOVE · EACH DOT A DELIVERY · ILLUSTRATIVE"
+    },
+    "panels": [
+     {
+      "title": "FIRST 22 OVERS",
+      "n": 59,
+      "balls": [
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "b"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "r"
+       ],
+       [
+        "leg",
+        "short",
+        "b"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "b"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "good",
+        "r"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "r"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "b"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ]
+      ],
+      "cells": {},
+      "stats": [
+       [
+        "27%",
+        "SHORT"
+       ],
+       [
+        "8%",
+        "ON THE LEG SIDE"
+       ]
+      ]
+     },
+     {
+      "title": "AFTER NICHOLLS",
+      "n": 65,
+      "balls": [
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "leg",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "leg",
+        "good",
+        "r"
+       ],
+       [
+        "outside_off",
+        "short",
+        "b"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "b"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "r"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "r"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ]
+      ],
+      "cells": {},
+      "stats": [
+       [
+        "45%",
+        "SHORT"
+       ],
+       [
+        "25%",
+        "ON THE LEG SIDE"
+       ]
+      ]
+     }
+    ],
+    "footnote": "POSITIONS ARE OUR READ OF THE BALL-BY-BALL TEXT (LINE AND LENGTH ZONES) · BATTER AT THE TOP"
+   }
+  },
+  {
+   "vo": "But Devon Conway and रचिन रवींद्र settled. Fifty-nine unbeaten. Their control went from eighty-two per cent in the first thirty overs to ninety-nine in the next fifteen.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "NEW ZEALAND SETTLE",
+     "sub": "CONWAY AND RACHIN · 59 UNBEATEN · IN OUR RECORDS"
+    },
+    "a": {
+     "name": "FIRST 30 OVERS",
+     "color": "gold"
+    },
+    "b": {
+     "name": "NEXT 15 OVERS",
+     "color": "red"
+    },
+    "rows": [
+     [
+      "CONTROL",
+      "81.6%",
+      "98.9%",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "New Zealand, one nineteen for two, still two thirty-three behind. India need eight wickets on a flat pitch. Can they force a win, or is it a draw?",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "STUMPS · DAY 4",
+     "sub": "NEW ZEALAND 119/2 · 44.6 OVERS"
+    },
+    "tiles": [
+     {
+      "v": "233",
+      "l": "STILL BEHIND",
+      "c": "red"
+     },
+     {
+      "v": "8",
+      "l": "WICKETS INDIA NEED",
+      "c": "gold"
+     },
+     {
+      "v": "59*",
+      "l": "CONWAY NOT OUT · 137 BALLS",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Day five. Comment one, India win. Two, a draw. Three, a New Zealand win.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "DAY 5 · COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · INDIA WIN",
+      "d": "eight wickets, one day",
+      "c": "gold",
+      "cue": "india"
+     },
+     {
+      "h": "2 · A DRAW",
+      "d": "the flat pitch holds",
+      "cue": "draw"
+     },
+     {
+      "h": "3 · NZ WIN",
+      "d": "an unlikely turnaround",
+      "cue": "zealand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down day five the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "720 and a Pair: Pant's Hundred, Latham Out | India vs New Zealand 1st Test Day 4 #Shorts",
+   "description": "India vs New Zealand, 1st Test day four: India declare on 720 for 9, a lead of 352. Rishabh Pant's hundred with a six and 128 in all, nine sixes off Glenn Phillips, Dhruv Jurel 78 off 79, and Tom Latham out for a pair, the third New Zealand captain with one in Tests. New Zealand 119 for 2, still 233 behind. Can India take eight wickets on Day 5? Comment 1 India win, 2 draw, 3 New Zealand win. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Rishabh Pant",
+    "Tom Latham",
+    "Glenn Phillips",
+    "Jasprit Bumrah",
+    "Dhruv Jurel",
+    "Devon Conway",
+    "Basin Reserve",
+    "Wellington Test",
+    "Day 4 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

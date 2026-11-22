@@ -1,0 +1,188 @@
+{
+ "slug": "nz_ind_1st_test_day4",
+ "claims": [
+  {
+   "claim": "India 720/9 declared in 165.6 overs; lead 352 over NZ's 368; Day 4 = 234 runs in 41 overs (5.71 an over) from 486/4",
+   "value": [
+    720,
+    9,
+    368,
+    352,
+    234,
+    41,
+    5.71
+   ],
+   "sources": {
+    "cricbuzz": [
+     720,
+     9,
+     368,
+     352,
+     234,
+     41,
+     5.71
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant 128 (153): 10 fours, 6 sixes; hundred brought up with a six off Phillips (105 after the six, 135 balls); passed McCullum on the Test sixes list",
+   "value": [
+    128,
+    153,
+    10,
+    6
+   ],
+   "sources": {
+    "cricbuzz": [
+     128,
+     153,
+     10,
+     6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Kamboj 38 (42), Jurel 78 (79), Akash Deep 13 (5) with 2 sixes",
+   "value": [
+    38,
+    42,
+    78,
+    79,
+    13,
+    5,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     38,
+     42,
+     78,
+     79,
+     13,
+     5,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Phillips 24-0-154-3; 9 sixes off him in the innings, 7 on Day 4 (our count of sixes by bowler)",
+   "value": [
+    24,
+    154,
+    3,
+    9,
+    7
+   ],
+   "sources": {
+    "cricbuzz": [
+     24,
+     154,
+     3,
+     9,
+     7
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Latham c Pant b Bumrah 0 off the second ball (0 in the first innings): a pair; third NZ captain with a Test pair (Cave 1956, Fleming 1997); eighth NZ opener pair, second against India after McIntosh (Ahmedabad 2010)",
+   "value": [
+    0,
+    0,
+    3,
+    8,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     0,
+     0,
+     3,
+     8,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls c Jurel b Prasidh 31 (59) at 22.1 (60/2); Conway 59* (137), Rachin 27* (72), 59 unbeaten; NZ 119/2 at stumps, 233 behind",
+   "value": [
+    31,
+    59,
+    60,
+    59,
+    27,
+    72,
+    119,
+    233
+   ],
+   "sources": {
+    "cricbuzz": [
+     31,
+     59,
+     60,
+     59,
+     27,
+     72,
+     119,
+     233
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "control: 81.6% in the first 30 overs of NZ's second innings, 98.9% in the 15 overs after",
+   "value": [
+    81.6,
+    98.9
+   ],
+   "sources": {
+    "cricbuzz": [
+     81.6,
+     98.9
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's bowling (our read of lines/lengths): short 27% -> 45%, leg side 8% -> 25% after Nicholls' wicket",
+   "value": [
+    27,
+    45,
+    8,
+    25
+   ],
+   "sources": {
+    "cricbuzz": [
+     27,
+     45,
+     8,
+     25
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 8
+ }
+}
