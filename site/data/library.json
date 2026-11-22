@@ -731,6 +731,23 @@
    ]
   },
   {
+   "slug": "nz_ind_1st_test_day4",
+   "title": "720 and a Pair: Pant's Hundred, Latham Out | India vs New Zealand 1st Test Day 4",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "07",
+   "long": null,
+   "short": "2:31",
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "Day 4 ball-by-ball (India 720/9 declared; New Zealand 119/2): Cricbuzz full commentary for New Zealand v India, 1st Test, 22 November 2026 (owner's capture; bowler lines, no-ball counts, control rates and the pair note are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+    "Figures: analysis/nz_day4.py, analysis/shots.py. Wagon wheel and pitch map positions are our read of the commentary text (approximate zones)."
+   ]
+  },
+  {
    "slug": "nz_test_preview",
    "title": "Can India Win a Test Series in New Zealand?",
    "format": "tactics",

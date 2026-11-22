@@ -1,6 +1,6 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-21",
+ "synced": "2026-11-22",
  "videos": {
   "myth_ep1_kohli_knockouts": {
    "state": "posted",
@@ -1020,6 +1020,63 @@
      "platform": "YouTube",
      "mb": 26.6,
      "url": "https://drive.google.com/file/d/1Y29RNIzzn03N06KI3Ppa5GcGCdl6N5QN/view?usp=drivesdk"
+    }
+   ]
+  },
+  "nz_ind_1st_test_day4": {
+   "state": "posted",
+   "series": "02 The Replay Room",
+   "episode": "Ep07 - India vs New Zealand 1st Test Day 4 [posted]",
+   "folder": "https://drive.google.com/drive/folders/1HAXKP_n4wg076GfHgzkWUfvIf57iy6Fh",
+   "files": [
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1JAERiBJ38GVI8_TQXslJUKKQuCKnDDjd/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1QFoFad9i1BMPBHR16vy12jOTHghIEz01/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1fgGFZtczF_dTzm72j_CsmCXdiMR2uypU/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 24.5,
+     "url": "https://drive.google.com/file/d/1NZOxsUkeNS9mz_R4oLTufquEU-krFOdr/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1adpmRl_Nq5r3aCY0oYxQHk7bu9ug5HLH/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1inXW-vkQDyWJqFZaVX8XH0rG5fVjMs1C/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep07_India_vs_New_Zealand_1st_Test_Day_4_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 24.1,
+     "url": "https://drive.google.com/file/d/1tCm5rC5ErQfM_06v9aDDETK-cmG3faYw/view?usp=drivesdk"
     }
    ]
   },
@@ -3702,7 +3759,8 @@
     "replay_5odi",
     "nz_ind_1st_test_day1",
     "nz_ind_1st_test_day2",
-    "nz_ind_1st_test_day3"
+    "nz_ind_1st_test_day3",
+    "nz_ind_1st_test_day4"
    ]
   },
   "03 Tactics Board": {
