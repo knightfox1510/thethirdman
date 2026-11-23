@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-23",
+ "by": "Daily ideas task",
+ "news": [
+  {
+   "title": "1st Test, day five: Conway and Ravindra fall, New Zealand 157/4 at lunch, still 195 behind; India close on victory",
+   "url": "https://www.tribuneindia.com/news/basin-reserve/1st-test-conway-ravindra-fall-as-india-has-new-zealand-157-4-at-lunch-on-day-5",
+   "note": "Result due today (NZ time). The Replay Room long is the priority: capture Cricinfo + Cricbuzz as soon as the match ends."
+  },
+  {
+   "title": "AP: India strikes twice before lunch, closes on victory over New Zealand in 1st Test",
+   "url": "https://sports.yahoo.com/articles/india-strikes-twice-lunch-closes-002252450.html",
+   "note": "Second source for the day-five lunch score."
+  },
+  {
+   "title": "AFP/Dawn: India declare on a record 720/9 - the highest Test total ever made in New Zealand (past NZ's 715/6d v Bangladesh, Hamilton 2019) and India's highest overseas; lead 352",
+   "url": "https://www.dawn.com/news/2046443/india-take-charge-after-posting-record-720-9-against-nz",
+   "note": "Headline number for a news Short and the replay. AFP also claims all top five scoring 80-plus is a first in Tests; verify against Cricinfo records before use."
+  },
+  {
+   "title": "Outlook day-four report: 720/9d is the highest Test total in New Zealand; Pant 128 off 153, Jurel 78 off 79; NZ 119/2 at stumps (Conway 59*, Ravindra 27*)",
+   "url": "https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-1st-test-day-4-report-rishabh-pant-century-basin-reserve-wellington-2026",
+   "note": "Second source for the record total. Pant: first Asian keeper with Test hundreds in all four SENA countries (claim, verify)."
+  },
+  {
+   "title": "Cricket Times: claims all seven of India's first partnerships reached 50, a Test first; Pant's Test sixes at 108",
+   "url": "https://crickettimes.com/2026/11/fans-erupt-as-rishabh-pant-dhruv-jurel-power-india-to-record-breaking-total-against-new-zealand-on-day-4-of-wellington-test/",
+   "note": "Single source and it misreports Pant's sixes in the innings (13 vs AFP's 6): treat as a lead only."
+  },
+  {
+   "title": "Day-five live: Washington Sundar makes the first breakthrough of the day",
+   "url": "https://www.thedailyjagran.com/cricket/news/live-ind-vs-nz-cricket-score-updates-1st-test-day-5-indian-cricket-team-need-8-wicket-to-win-vs-new-zealand-cricket-team-wellington-test-bumrah-conway-rachin-sundar-krishna-kamboj-latest-news-10337266",
+   "note": "Spin on day five at the Basin: a beat for the replay and the Christchurch preview."
+  },
+  {
+   "title": "Vaibhav Sooryavanshi, 15, becomes the youngest captain in men's T20 history, leading Bihar in the Syed Mushtaq Ali Trophy",
+   "url": "https://www.khaleejtimes.com/sports/cricket/india-vaibhav-sooryavanshi-youngest-captain-mens-t20-history",
+   "note": "New angle on the RR-retained teenager: Rising Star Short."
+  },
+  {
+   "title": "Rajat Patidar smashes 135 off 48 balls in the SMAT, Madhya Pradesh's first century in the competition",
+   "url": "https://www.wisden.com/series/syed-mushtaq-ali-trophy-2026/cricket-news/rajat-patidar-rapid-hundred-135-smat-record-total",
+   "note": "RCB captain in form three weeks before the auction; a T20 power-hitting data angle."
+  },
+  {
+   "title": "IPL 2027 auction confirmed for 16 December in Goa",
+   "url": "https://www.crictracker.com/cricket-news/ipl-2027-auction-to-be-held-on-december-16-in-goa-7060/",
+   "note": "Registration window closes around now; the shortlist release is the next Stat Check trigger."
+  },
+  {
+   "title": "Australia v England T20Is (Australia lead 1-0): 2nd T20I at Carrara on 24 November",
+   "url": "https://wisden.com/series/australia-vs-england-m-2026/cricket-news/aus-vs-eng-t20is-schedule-squads-match-timings",
+   "note": "Other big international cricket; low priority for an India-first channel."
+  }
+ ],
+ "ideas": [
+  {
+   "title": "India vs New Zealand - 1st Test Analysis | From 70/5 to 720: How India Took Wellington",
+   "format": "replay",
+   "why": "The whole Test in one arc: NZ 70/5, Nicholls 175* rescue to 368, then India's top five all past 80 and a record 720/9. Retitle the hook to the result (win margin, or how NZ saved it).",
+   "timing": "Within 12 hours of the result (today/tonight IST), before 2nd Test previews flood in on 25-26 Nov.",
+   "data": "Owner's Cricinfo + Cricbuzz capture of all three innings (cricinfo_import.py); totals and records checked against the official scorecard and Cricinfo records.",
+   "priority": "High"
+  },
+  {
+   "title": "720/9: The Highest Test Total Ever Made in New Zealand | India vs New Zealand 1st Test #Shorts",
+   "format": "news",
+   "why": "One number, two sources already agree (AFP/Dawn and Outlook): past NZ's own 715/6d. Show the top five totals in NZ climbing to India's 720.",
+   "timing": "Today, while the record is fresh; pair with the replay upload.",
+   "data": "Cricinfo records 'highest totals in New Zealand' (Tier A) + the two match reports; dataops/verify.py on 720 and 715.",
+   "priority": "High"
+  },
+  {
+   "title": "India vs New Zealand - 2nd Test Preview | Christchurch After 720: Can NZ's Seamers Recover?",
+   "format": "tactics",
+   "why": "NZ's attack went for 720 (Duffy 1/201) without Santner; Hagley Oval historically favours seam. Board scenes on India's lengths vs NZ's, and who replaces whom.",
+   "timing": "Post 25-26 Nov, 1-2 days before the 27 Nov start.",
+   "data": "Match capture from Wellington for lengths/lines; Christchurch Test history from Cricinfo; squads from BCCI/NZC announcements.",
+   "priority": "High"
+  },
+  {
+   "title": "All Top Five Scored 80-Plus: Has That Ever Happened in a Test? | Stat Check",
+   "format": "statcheck",
+   "why": "Jaiswal 85, Rahul 136, Padikkal 80, Gill 98, Pant 128. AFP calls it a first; a 'first' claim needs Tier A confirmation before it goes on screen.",
+   "timing": "Before the 2nd Test (by 26 Nov).",
+   "data": "Cricinfo Statsguru innings-by-innings query (batting positions 1-5); never Cricsheet alone for a 'first'.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Flip: Jacob Duffy's 1/201 vs the Most Expensive Test Figures Ever",
+   "format": "flip",
+   "why": "A Test bowler conceding 200-plus is rare; benchmark Duffy against the all-time most expensive innings figures.",
+   "timing": "Within 48 hours, before Christchurch where Duffy may be under pressure.",
+   "data": "Cricinfo records (most runs conceded in an innings) + the official Wellington scorecard.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Does a 700-Plus Total Mean a Draw? | Myth or Data",
+   "format": "myth",
+   "why": "The common line is that huge totals kill Tests. Count every 700-plus innings and how often the side won, drew or lost; Wellington adds a fresh data point.",
+   "timing": "Within 2-3 days, when the result is known (fits the debate after the Test).",
+   "data": "Cricinfo team records (totals of 700+) for the full list (Tier A); define 'result' per match.",
+   "priority": "Medium"
+  },
+  {
+   "title": "Vaibhav Sooryavanshi: Youngest Captain in Men's T20 History at 15 | Rising Star",
+   "format": "rising",
+   "why": "Fresh milestone for the RR-retained teen (captaincy debut began in defeat). Card front: illustrated avatar; back: verified T20 numbers.",
+   "timing": "This week, while SMAT is running and before the 16 Dec auction coverage.",
+   "data": "Official BCA/BCCI scorecards + Cricinfo profile; the 'youngest captain' claim checked against two sources (Khaleej Times plus Cricinfo/BCCI).",
+   "priority": "Medium"
+  },
+  {
+   "title": "The Lab: What 350-Run First-Innings Leads Do to the Fourth Day and Fifth Day",
+   "format": "lab",
+   "why": "India led by 352 but batted second, so no follow-on and limited time. Model how often big leads earned late in a Test convert to wins, by overs left.",
+   "timing": "Any time this week; evergreen with the Wellington hook.",
+   "data": "Cricsheet men's Tests (filter info.gender == male; 2002 onward, labelled 'in our archive') for overs-remaining curves; headline figures cross-checked with Cricinfo.",
+   "priority": "Medium"
+  },
+  {
+   "title": "What If India Had Declared at Lunch on Day Four (629/6)? | What If",
+   "format": "whatif",
+   "why": "India batted on from 629/6 to 720/9. Did the extra ninety-odd runs cost overs that decide the result? Use the actual run rate and NZ's survival rate.",
+   "timing": "Right after the result (works whichever way the Test ended).",
+   "data": "Owner's ball-by-ball capture (overs and timings per session); illustrative projection labelled as such.",
+   "priority": "Low"
+  },
+  {
+   "title": "Why Couldn't India Enforce the Follow-On With a 352 Lead? | Did You Know",
+   "format": "didyouknow",
+   "why": "The follow-on only applies to the side batting first. A 352-run lead with no follow-on option is a perfect explainer: Law, drawn example, the twist.",
+   "timing": "Before the 2nd Test; evergreen.",
+   "data": "MCC Laws of Cricket (Law 14, re-check numbering in the 2026 edition) and ICC Test playing conditions (two sources).",
+   "priority": "Low"
+  },
+  {
+   "title": "Rajat Patidar's 135 off 48: Is RCB's Captain a Better T20 Hitter Than His IPL Numbers Say? | Stat Check",
+   "format": "statcheck",
+   "why": "SMAT form vs his IPL strike-rate by phase, three weeks before the auction.",
+   "timing": "Before the 16 Dec auction; flexible.",
+   "data": "Sportmonks IPL ball-by-ball (phase strike rates); the SMAT innings from the official scorecard and Wisden.",
+   "priority": "Low"
+  }
+ ]
+}
