@@ -814,9 +814,10 @@ def tts(paras, outdir, fmt):
         pool = _vo_pool()
         for t_old in sorted({t for t in TEMPO.values() if t != TEMPO[fmt]}):     # same text and voice narrated for the other format (other tempo): reuse the raw audio, re-time it
             h2 = hashlib.md5((p + VOICE + str(t_old)).encode()).hexdigest(); hit2 = pool.get(h2)
-            if hit2 and os.path.exists(f"{hit2[0]}/raw{hit2[1]}.mp3") and os.path.abspath(hit2[0]) != os.path.abspath(outdir):
-                shutil.copyfile(f"{hit2[0]}/raw{hit2[1]}.mp3", f"{outdir}/raw{i}.mp3")
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{outdir}/raw{i}.mp3", "-af", f"atempo={TEMPO[fmt]}", "-b:a", "192k", f"{outdir}/p{i}.mp3"], check=True)
+            if hit2 and (os.path.exists(f"{hit2[0]}/raw{hit2[1]}.mp3") or os.path.exists(f"{hit2[0]}/p{hit2[1]}.mp3")) and os.path.abspath(hit2[0]) != os.path.abspath(outdir):
+                if os.path.exists(f"{hit2[0]}/raw{hit2[1]}.mp3"): shutil.copyfile(f"{hit2[0]}/raw{hit2[1]}.mp3", f"{outdir}/raw{i}.mp3"); atp = TEMPO[fmt]
+                else: shutil.copyfile(f"{hit2[0]}/p{hit2[1]}.mp3", f"{outdir}/raw{i}.mp3"); atp = round(TEMPO[fmt] / t_old, 4)        # only the already-timed clip is cached: re-time it by the tempo ratio
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{outdir}/raw{i}.mp3", "-af", f"atempo={atp}", "-b:a", "192k", f"{outdir}/p{i}.mp3"], check=True)
                 k = t_old / TEMPO[fmt]; dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f"{outdir}/p{i}.mp3"]))
                 meta.append({"hash": h, "dur": dur, "words": [{"w": w["w"], "s": w["s"] * k, "e": w["e"] * k} for w in hit2[2]["words"]]})
                 json.dump(meta + old[len(meta):], open(mpath, "w"), ensure_ascii=False); print(f"  voice re-timed for paragraph {i} (from {hit2[0]}, tempo {t_old} -> {TEMPO[fmt]})"); break
