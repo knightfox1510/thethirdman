@@ -169,6 +169,10 @@ spec = {"slug": "nz_ind_1st_test_long", "theme": "lab", "theme_long": "lab", "ca
 for d in range(1, 6):                                                                 # each day's verified claims travel with the video
     p = f"data/provenance/nz_ind_1st_test_day{d}.json"
     if os.path.exists(p): c.items.extend(json.load(open(p))["claims"])
+from variants import IG_CTA
+spec["full"] = copy.deepcopy(long[:-1]); spec["reel_cta"] = IG_CTA                      # the 9:16 cut for Instagram: the whole narration, the standard IG end card (already narrated: no new credits)
+for it in spec["full"]: it.pop("chapter", None)
+spec["reel_caption"] = open("deliver/nz_ind_1st_test_long/Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long_IG_caption.txt").read() if os.path.exists("deliver/nz_ind_1st_test_long/Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long_IG_caption.txt") else None
 c.save(spec); voice_lint.fix_spec(spec)
 json.dump(spec, open("specs/nz_ind_1st_test_long.json", "w"), ensure_ascii=False, indent=1)
 print("long words", sum(len(s["vo"].split()) for s in long), "scenes", len(long), "|", voice_lint.check_spec(spec, ("long",)) or "lint clean", "|", spec["files"])
