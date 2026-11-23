@@ -765,6 +765,23 @@
    ]
   },
   {
+   "slug": "nz_ind_1st_test_long",
+   "title": "India vs New Zealand - 1st Test Analysis | How India Needed 8 and Took 3",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "09",
+   "long": "14:35",
+   "short": null,
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "Ball-by-ball for all five days (New Zealand 368 and 239/5, India 720/9 declared): Cricbuzz full commentary for New Zealand v India, 1st Test, 19-23 November 2026 (owner's captures; bowler lines, records, the WTC table, pitch reports and match notes are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+    "Day-by-day figures: analysis/nz_day1.py ... nz_day5.py, analysis/shots.py. Length classes, wagon-wheel zones and the pitch maps are our read of the commentary text (approximate zones, illustrative). The final walk-off clip and the photographs were supplied by the channel owner."
+   ]
+  },
+  {
    "slug": "nz_test_preview",
    "title": "Can India Win a Test Series in New Zealand?",
    "format": "tactics",

@@ -1137,6 +1137,42 @@
     }
    ]
   },
+  "nz_ind_1st_test_long": {
+   "state": "posted",
+   "series": "02 The Replay Room",
+   "episode": "Ep09 - India vs New Zealand 1st Test Analysis [posted]",
+   "folder": "https://drive.google.com/drive/folders/1Ls0bLpBaju0S8wZpD7_1MnzBz49570d1",
+   "files": [
+    {
+     "name": "Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long_thumbnail.jpg",
+     "kind": "thumbnail",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1G-hWmS7fg_1q6Vd8X7AMOtzwicZG4OWh/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1Bzw8w5CvOzyS8OP9bUwKUqzWpvzOY6K1/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long.mp4",
+     "kind": "long",
+     "platform": "YouTube",
+     "mb": 199.3,
+     "url": "https://drive.google.com/file/d/1Rfud5TlPOWcbhy5qx-8XIUd7HTaaSsCA/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep09_India_vs_New_Zealand_1st_Test_Analysis_Long.chapters.txt",
+     "kind": "text",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1pyv9LoKJ8ncz5_dbPB08tGrknyq0Hv9V/view?usp=drivesdk"
+    }
+   ]
+  },
   "santner_problem": {
    "state": "not posted",
    "series": "03 Tactics Board",
@@ -3818,7 +3854,8 @@
     "nz_ind_1st_test_day2",
     "nz_ind_1st_test_day3",
     "nz_ind_1st_test_day4",
-    "nz_ind_1st_test_day5"
+    "nz_ind_1st_test_day5",
+    "nz_ind_1st_test_long"
    ]
   },
   "03 Tactics Board": {

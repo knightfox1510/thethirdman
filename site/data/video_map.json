@@ -256,5 +256,11 @@
   "kind": "short",
   "title": "nz_ind_1st_test_day5",
   "format": "replay"
+ },
+ "qTU4hv1_YX8": {
+  "slug": "nz_ind_1st_test_long",
+  "kind": "long",
+  "title": "nz_ind_1st_test_long",
+  "format": "replay"
  }
 }
