@@ -142,7 +142,7 @@ def iglong(spec_path):
     sc = v["long"]
     if sc[-1]["scene"].get("type") == "cta":
         keep = re.sub(r"[^.!?]*\b(follow|subscribe)\b[^.!?]*[.!?]\s*$", "", sc[-1]["vo"], flags=re.I).strip()
-        sc[-1] = {"vo": (keep + " " + IG_LONG_CTA["vo"]).strip(), "scene": IG_LONG_CTA["scene"]}
+        sc[-1] = {"vo": (keep + " " + (spec.get("iglong_vo") or IG_LONG_CTA["vo"])).strip(), "scene": IG_LONG_CTA["scene"]}      # spec "iglong_vo": reuse an already-narrated end line (no ElevenLabs credits)
     else: sc.append(IG_LONG_CTA)
     v["files"] = {"long": base + "_IG", "short": "_unused"}; v.pop("short", None); v.pop("burn_captions", None)
     src_vo, dst_vo = f"{ROOT}/out/{slug}/long/vo", f"{ROOT}/out/{slug}__iglong/long/vo"
