@@ -1,0 +1,194 @@
+{
+ "slug": "nz_ind_1st_test_gill",
+ "claims": [
+  {
+   "claim": "situation: NZ 239/5 with about 15 overs (90 balls) left, five wickets needed; India took 3 wickets in 75 overs on Day 5 (one every 25)",
+   "value": [
+    239,
+    5,
+    90,
+    3,
+    75
+   ],
+   "sources": {
+    "cricbuzz": [
+     239,
+     5,
+     90,
+     3,
+     75
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "model: hazards from 899 men's Tests since 2001 (our archive); NZ's second innings had 3 dismissals against 7.06 expected at those rates: pitch factor 0.42",
+   "value": [
+    7.06,
+    3
+   ],
+   "sources": {
+    "cricbuzz": [
+     7.06,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "simulation (100,000 runs each): P(all five wickets in 15 overs) 0.37% on this pitch, 8.4% at archive-average rates",
+   "value": [
+    0.0037,
+    0.0844
+   ],
+   "sources": {
+    "cricbuzz": [
+     0.0037,
+     0.0844
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "attack factor needed: x2 wicket rate gives 5.1%; more overs: 25 overs 2.4%, 40 overs 10.3%",
+   "value": [
+    0.051,
+    0.024,
+    0.103
+   ],
+   "sources": {
+    "cricbuzz": [
+     0.051,
+     0.024,
+     0.103
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "run-out missed (73.1, Mitchell on 12): P(India bowl NZ out) 0.140 actual vs 0.309 if the chance is taken",
+   "value": [
+    0.14,
+    0.309
+   ],
+   "sources": {
+    "cricbuzz": [
+     0.14,
+     0.309
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "bat-pad, no short leg (88.2, Mitchell on 24): P(India bowl NZ out) 0.159 actual vs 0.379 if the chance is taken",
+   "value": [
+    0.159,
+    0.379
+   ],
+   "sources": {
+    "cricbuzz": [
+     0.159,
+     0.379
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Kamboj kicker, drop (94.4, Mitchell on 24): P(India bowl NZ out) 0.106 actual vs 0.299 if the chance is taken",
+   "value": [
+    0.106,
+    0.299
+   ],
+   "sources": {
+    "cricbuzz": [
+     0.106,
+     0.299
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Day 5 false-shot counts per 100 balls (our keyword read): morning 11.5, after lunch 16.6, evening 8.3, last 15 overs 11.1",
+   "value": [
+    11.5,
+    16.6,
+    8.3,
+    11.1
+   ],
+   "sources": {
+    "cricbuzz": [
+     11.5,
+     16.6,
+     8.3,
+     11.1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Basin Reserve in our archive: 28 Tests since 2001, 7 draws; innings 3-4 wickets per 100 overs 9.4 vs 9.5 at other NZ venues; Day 5 here: 4.0",
+   "value": [
+    28,
+    7,
+    9.4,
+    9.5,
+    4.0
+   ],
+   "sources": {
+    "cricbuzz": [
+     28,
+     7,
+     9.4,
+     9.5,
+     4.0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "last 15 overs bowled by Sundar 6, Akash Deep 2, Bumrah 2, Prasidh 2, Jaiswal 2, Jurel 1 (Bumrah's last over was the 110th)",
+   "value": [
+    6,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "sources": {
+    "cricbuzz": [
+     6,
+     2,
+     2,
+     2,
+     2,
+     1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 10
+ }
+}

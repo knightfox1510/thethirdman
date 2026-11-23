@@ -1,0 +1,563 @@
+{
+ "slug": "nz_ind_1st_test_gill",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DID INDIA QUIT TOO SOON?",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 5",
+  "lines": [
+   {
+    "t": "TOO SOON?"
+   },
+   {
+    "t": "WE SIMULATED IT",
+    "c": "gold"
+   }
+  ],
+  "hero": "0.4%",
+  "herosize": 360
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "TOO SOON?"
+   },
+   {
+    "t": "WE SIMULATED IT",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 5",
+  "hero": "0.4%"
+ },
+ "sources": [
+  "Ball-by-ball for Day 5 (New Zealand 239/5): Cricbuzz full commentary for New Zealand v India, 1st Test, 23 November 2026 (owner's capture; Gill's quote is from the post-match interview). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Model: dismissal hazards by balls faced from Cricsheet men's Test ball-by-ball (899 matches since 2001-06, cricsheet.org, ODC-BY), scaled to this pitch with New Zealand's second innings (3 dismissals against 7.06 expected), 100,000 simulated finishes per scenario: analysis/gill_sim.py, gill_sim2.py, gill_pitch.py. A model of dismissal risk, not a prediction."
+ ],
+ "short": [
+  {
+   "vo": "Fifteen overs left. New Zealand two thirty-nine for five. India needed five wickets, and शुभमन गिल shook hands. Too soon? We simulated the last fifteen overs, a hundred thousand times.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "DAY 5 · 15 OVERS LEFT · 5 WICKETS NEEDED",
+    "title": "Too soon?",
+    "img": "data/licensed/in/nz_day5_handshake.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "239/5 · DRAW AGREED",
+    "name": "THE HANDSHAKE",
+    "mono": "WE SIMULATED THE LAST 15 OVERS 100,000 TIMES",
+    "caption": "Did Shubman Gill quit too soon?",
+    "chip": "239/5",
+    "chip_sub": "NEW ZEALAND"
+   }
+  },
+  {
+   "vo": "Ninety balls. Five wickets. And all day, India had taken one wicket every twenty-five overs.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE SITUATION",
+     "sub": "NEW ZEALAND 239/5 · ABOUT AN HOUR LEFT"
+    },
+    "tiles": [
+     {
+      "v": "90",
+      "l": "BALLS LEFT",
+      "c": "gold"
+     },
+     {
+      "v": "5",
+      "l": "WICKETS NEEDED",
+      "c": "red"
+     },
+     {
+      "v": "1 / 25",
+      "l": "INDIA'S WICKETS PER OVERS ALL DAY",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The model: how often batters get out in nine hundred Tests, calibrated to this pitch, where Day five's batters got out two point four times less often than the archive says.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE MODEL",
+     "sub": "A SIMULATION, NOT A PREDICTION"
+    },
+    "items": [
+     {
+      "h": "1 · THE ARCHIVE",
+      "d": "899 men's Tests: how often a batter is out, by balls faced",
+      "c": "gold"
+     },
+     {
+      "h": "2 · THIS PITCH",
+      "d": "Day 5's batters got out 2.4 times less often than the archive says: 3 dismissals, 7.1 expected"
+     },
+     {
+      "h": "3 · 100,000 FINISHES",
+      "d": "ball by ball, from Mitchell and Phillips at the crease"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "In fifty-six per cent of the simulations, India took no wicket at all. Just one in two hundred and seventy took all five.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WICKETS IN THE LAST 15 OVERS",
+     "sub": "SHARE OF 100,000 SIMULATED FINISHES · THIS PITCH"
+    },
+    "max": 60,
+    "dec": 0,
+    "items": [
+     {
+      "label": "NONE",
+      "value": 56,
+      "color": "ink"
+     },
+     {
+      "label": "ONE",
+      "value": 27,
+      "color": "ink"
+     },
+     {
+      "label": "TWO",
+      "value": 11,
+      "color": "ink"
+     },
+     {
+      "label": "THREE",
+      "value": 4,
+      "color": "ink"
+     },
+     {
+      "label": "FOUR",
+      "value": 1,
+      "color": "ink"
+     },
+     {
+      "label": "ALL FIVE: A WIN",
+      "value": 0.4,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "On an average Test pitch, the same finish comes up eight per cent of the time. This pitch made it four in a thousand.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "ALL FIVE IN 15 OVERS",
+     "sub": "CHANCE OF AN INDIA WIN · SIMULATED"
+    },
+    "a": {
+     "name": "THIS PITCH",
+     "color": "red"
+    },
+    "b": {
+     "name": "AN AVERAGE TEST PITCH",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "INDIA WIN",
+      "0.4%",
+      "8.4%",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "To make it a one in twenty chance, India would have had to take wickets twice as fast as they had all day.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "ATTACK FASTER?",
+     "sub": "CHANCE OF A WIN IF INDIA TOOK WICKETS FASTER · 15 OVERS"
+    },
+    "max": 20,
+    "dec": 1,
+    "items": [
+     {
+      "label": "AS ALL DAY (X1)",
+      "value": 0.4,
+      "color": "ink"
+     },
+     {
+      "label": "25% FASTER",
+      "value": 0.9,
+      "color": "ink"
+     },
+     {
+      "label": "50% FASTER",
+      "value": 1.7,
+      "color": "ink"
+     },
+     {
+      "label": "TWICE AS FAST",
+      "value": 5.1,
+      "color": "gold"
+     },
+     {
+      "label": "THREE TIMES",
+      "value": 17.5,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "More overs would have helped. Another ten, two per cent. Another twenty-five, one in ten.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "MORE OVERS?",
+     "sub": "CHANCE OF A WIN IF THE DAY HAD LASTED LONGER · THIS PITCH"
+    },
+    "max": 30,
+    "dec": 1,
+    "items": [
+     {
+      "label": "15 OVERS (ACTUAL)",
+      "value": 0.4,
+      "color": "ink"
+     },
+     {
+      "label": "25 OVERS",
+      "value": 2.4,
+      "color": "ink"
+     },
+     {
+      "label": "40 OVERS",
+      "value": 10.3,
+      "color": "gold"
+     },
+     {
+      "label": "60 OVERS",
+      "value": 27.2,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The match was lost earlier. A run-out आकाश दीप missed. A bat-pad off प्रसिद्ध, with no short leg. A kicker पडिक्कल could not hold. All three were Mitchell.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE THREE CHANCES",
+     "sub": "CHANCE OF AN INDIA WIN, BEFORE AND IF TAKEN"
+    },
+    "items": [
+     {
+      "h": "73.1 · RUN-OUT MISSED",
+      "d": "Mitchell on 12 · 14% to 31%",
+      "c": "gold",
+      "cue": "akash"
+     },
+     {
+      "h": "88.2 · BAT-PAD, NO SHORT LEG",
+      "d": "Mitchell on 24 · 16% to 38%",
+      "cue": "batpad"
+     },
+     {
+      "h": "94.4 · KICKER, DROPPED",
+      "d": "Mitchell on 24 · 11% to 30%",
+      "cue": "kicker"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Each was worth between seventeen and twenty-two points of win probability. In WTC points, the last fifteen overs were worth three hundredths of a point. Each chance, up to one point eight.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "IN WTC POINTS",
+     "sub": "EIGHT POINTS BETWEEN A WIN AND A DRAW · EXPECTED GAIN"
+    },
+    "tiles": [
+     {
+      "v": "0.03",
+      "l": "THE LAST 15 OVERS",
+      "c": "ink"
+     },
+     {
+      "v": "1.4-1.8",
+      "l": "EACH MISSED CHANCE",
+      "c": "red"
+     },
+     {
+      "v": "x46-60",
+      "l": "THE CHANCES WERE WORTH MORE",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Did the pitch die at the end? No. Edges and misses per hundred balls: twelve before lunch, seventeen after, eight in the evening, eleven in the last fifteen overs.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "DID THE PITCH DIE?",
+     "sub": "EDGES AND PLAY-AND-MISSES PER 100 BALLS · OUR COUNT"
+    },
+    "max": 20,
+    "dec": 1,
+    "items": [
+     {
+      "label": "BEFORE LUNCH",
+      "value": 11.5,
+      "color": "ink"
+     },
+     {
+      "label": "LUNCH TO TEA",
+      "value": 16.6,
+      "color": "gold"
+     },
+     {
+      "label": "THE EVENING",
+      "value": 8.3,
+      "color": "ink"
+     },
+     {
+      "label": "THE LAST 15 OVERS",
+      "value": 11.1,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "And the ground is no freak. In our archive, the Basin Reserve takes wickets in the last two innings at nine point four per hundred overs, the same as the rest of New Zealand. Day five managed four.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE BASIN RESERVE",
+     "sub": "WICKETS PER 100 OVERS IN INNINGS 3 AND 4 · IN OUR ARCHIVE"
+    },
+    "tiles": [
+     {
+      "v": "9.4",
+      "l": "BASIN RESERVE · 28 TESTS SINCE 2001",
+      "c": "ink"
+     },
+     {
+      "v": "9.5",
+      "l": "OTHER NEW ZEALAND GROUNDS",
+      "c": "ink"
+     },
+     {
+      "v": "4.0",
+      "l": "DAY 5 HERE: 3 IN 75 OVERS",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The last fifteen overs: वॉशिंगटन सुंदर six, आकाश दीप, बुमराह and प्रसिद्ध two each, then जायसवाल and Jurel. बुमराह's last over was the hundred and tenth.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "WHO BOWLED THE LAST 15 OVERS",
+     "sub": "OVERS BOWLED · DAY 5"
+    },
+    "max": 7,
+    "dec": 0,
+    "items": [
+     {
+      "label": "SUNDAR",
+      "value": 6,
+      "color": "ink"
+     },
+     {
+      "label": "AKASH DEEP",
+      "value": 2,
+      "color": "ink"
+     },
+     {
+      "label": "BUMRAH",
+      "value": 2,
+      "color": "gold"
+     },
+     {
+      "label": "PRASIDH",
+      "value": 2,
+      "color": "gold"
+     },
+     {
+      "label": "JAISWAL",
+      "value": 2,
+      "color": "red"
+     },
+     {
+      "label": "JUREL",
+      "value": 1,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "गिल said after the match that getting ten wickets on that wicket was always going to be a challenge, but that India had a couple of chances.",
+   "scene": {
+    "type": "statement",
+    "kicker": "SHUBMAN GILL, AFTER THE MATCH",
+    "lines": [
+     {
+      "t": "“A CHALLENGE TO GET"
+     },
+     {
+      "t": "TEN WICKETS.”",
+      "c": "gold"
+     }
+    ],
+    "sub": "“We knew it's gonna be a challenge to get ten wickets on that wicket. But we had our chances, couple of chances here and there.”"
+   }
+  },
+  {
+   "vo": "So, too soon? Going on would have cost India almost nothing, and gained almost nothing. The match slipped away between over seventy-three and ninety-four.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE VERDICT",
+    "lines": [
+     {
+      "t": "THE MATCH SLIPPED"
+     },
+     {
+      "t": "EARLIER.",
+      "c": "gold"
+     }
+    ],
+    "sub": "Going on would have cost India almost nothing, and gained almost nothing."
+   }
+  },
+  {
+   "vo": "Was the handshake right? Comment one, too soon. Two, right call. Three, it was the chances.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "WAS THE HANDSHAKE RIGHT? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · TOO SOON",
+      "d": "no downside to going on",
+      "c": "gold",
+      "cue": "too"
+     },
+     {
+      "h": "2 · RIGHT CALL",
+      "d": "protect the bowlers",
+      "cue": "right"
+     },
+     {
+      "h": "3 · THE CHANCES",
+      "d": "it was lost at 73 overs",
+      "cue": "chances"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down the series decider the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Did Gill Quit Too Soon? We Simulated the Last 15 Overs | India vs New Zealand 1st Test #Shorts",
+   "description": "India vs New Zealand, 1st Test day five: did Shubman Gill quit too soon? A simulation of the last 15 overs (New Zealand 239 for 5, five wickets needed): India's chance of a win was about 4 in 1,000, and what the three missed chances around Daryl Mitchell were worth: 17 to 22 points of win probability each. The Day 5 pitch at the end, the Basin Reserve in the Test archive, and who bowled the last 15 overs. A model, not a prediction. Comment 1 too soon, 2 right call, 3 it was the chances. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "Shubman Gill",
+    "Daryl Mitchell",
+    "Glenn Phillips",
+    "Basin Reserve",
+    "Wellington Test",
+    "WTC",
+    "cricket simulation",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}
