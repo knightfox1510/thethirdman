@@ -1,0 +1,59 @@
+{
+ "false_shot_per_100": {
+  "morning": [
+   11.5,
+   156
+  ],
+  "middle": [
+   16.6,
+   151
+  ],
+  "evening": [
+   8.3,
+   145
+  ],
+  "last15": [
+   11.1,
+   90
+  ]
+ },
+ "last15_bowlers": {
+  "Washington Sundar": 6,
+  "Akash Deep": 2,
+  "Jasprit Bumrah": 2,
+  "Prasidh Krishna": 2,
+  "Yashasvi Jaiswal": 2,
+  "Dhruv Jurel": 1
+ },
+ "last15_order": [
+  "Washington Sundar",
+  "Akash Deep",
+  "Jasprit Bumrah",
+  "Washington Sundar",
+  "Jasprit Bumrah",
+  "Prasidh Krishna",
+  "Washington Sundar",
+  "Prasidh Krishna",
+  "Washington Sundar",
+  "Akash Deep",
+  "Washington Sundar",
+  "Yashasvi Jaiswal",
+  "Washington Sundar",
+  "Yashasvi Jaiswal",
+  "Dhruv Jurel"
+ ],
+ "ground": {
+  "Basin Reserve": {
+   "matches": 28,
+   "draws": 7,
+   "wkts_per_100_overs_inn34": 9.4,
+   "balls": 21572
+  },
+  "other NZ venues": {
+   "matches": 55,
+   "draws": 11,
+   "wkts_per_100_overs_inn34": 9.5,
+   "balls": 44645
+  }
+ }
+}
