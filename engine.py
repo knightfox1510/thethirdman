@@ -829,7 +829,7 @@ def tts(paras, outdir, fmt):
         body = {"text": p, "model_id": "eleven_multilingual_v2",
                 "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.3, "use_speaker_boost": True},
                 "previous_text": paras[i - 1] if i else None, "next_text": paras[i + 1] if i + 1 < len(paras) else None}
-        req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_192",
+        req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format={os.environ.get('XI_FORMAT', 'mp3_44100_192')}",
                                      data=json.dumps(body).encode(), headers={"xi-api-key": XI_KEY, "Content-Type": "application/json"})
         for attempt in range(3):
             try:
