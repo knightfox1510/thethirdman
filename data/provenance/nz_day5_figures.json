@@ -1,0 +1,568 @@
+{
+ "start": {
+  "over": 44.6,
+  "score": 119
+ },
+ "end": {
+  "over": 119.6,
+  "score": 239
+ },
+ "batters": {
+  "Tom Latham": {
+   "batRuns": 0,
+   "batBalls": 2,
+   "batFours": 0,
+   "batSixes": 0,
+   "batDots": 2
+  },
+  "Henry Nicholls": {
+   "batRuns": 31,
+   "batBalls": 59,
+   "batFours": 3,
+   "batSixes": 0,
+   "batDots": 43
+  },
+  "Devon Conway": {
+   "batRuns": 65,
+   "batBalls": 165,
+   "batFours": 7,
+   "batSixes": 0,
+   "batDots": 129
+  },
+  "Rachin Ravindra": {
+   "batRuns": 37,
+   "batBalls": 129,
+   "batFours": 4,
+   "batSixes": 0,
+   "batDots": 107
+  },
+  "Daryl Mitchell": {
+   "batRuns": 49,
+   "batBalls": 186,
+   "batFours": 4,
+   "batSixes": 1,
+   "batDots": 160
+  },
+  "Tom Blundell": {
+   "batRuns": 15,
+   "batBalls": 54,
+   "batFours": 1,
+   "batSixes": 0,
+   "batDots": 46
+  },
+  "Glenn Phillips": {
+   "batRuns": 26,
+   "batBalls": 126,
+   "batFours": 2,
+   "batSixes": 0,
+   "batDots": 111
+  }
+ },
+ "bowlers": {
+  "Jasprit Bumrah": {
+   "ov": 20,
+   "m": 7,
+   "r": 42,
+   "w": 1,
+   "nb": 0
+  },
+  "Akash Deep": {
+   "ov": 20,
+   "m": 6,
+   "r": 47,
+   "w": 0,
+   "nb": 0
+  },
+  "Anshul Kamboj": {
+   "ov": 22,
+   "m": 5,
+   "r": 45,
+   "w": 1,
+   "nb": 0
+  },
+  "Prasidh Krishna": {
+   "ov": 19,
+   "m": 10,
+   "r": 23,
+   "w": 2,
+   "nb": 0
+  },
+  "Washington Sundar": {
+   "ov": 35,
+   "m": 14,
+   "r": 65,
+   "w": 1,
+   "nb": 1
+  },
+  "Devdutt Padikkal": {
+   "ov": 1,
+   "m": 0,
+   "r": 2,
+   "w": 0,
+   "nb": 0
+  },
+  "Yashasvi Jaiswal": {
+   "ov": 2,
+   "m": 0,
+   "r": 4,
+   "w": 0,
+   "nb": 0
+  },
+  "Dhruv Jurel": {
+   "ov": 1,
+   "m": 0,
+   "r": 1,
+   "w": 0,
+   "nb": 0
+  }
+ },
+ "wickets": [
+  {
+   "over": 55.5,
+   "score": 132,
+   "bat": "Devon Conway",
+   "runs": 65,
+   "balls": 165
+  },
+  {
+   "over": 59.6,
+   "score": 139,
+   "bat": "Rachin Ravindra",
+   "runs": 37,
+   "balls": 129
+  },
+  {
+   "over": 76.6,
+   "score": 176,
+   "bat": "Tom Blundell",
+   "runs": 15,
+   "balls": 54
+  }
+ ],
+ "morning": {
+  "over_from": 44.6,
+  "over_to": 70.6,
+  "runs": 38,
+  "wkts": 2,
+  "overs": 26.0
+ },
+ "middle": {
+  "over_from": 70.6,
+  "over_to": 95.6,
+  "runs": 49,
+  "wkts": 1,
+  "overs": 25.0
+ },
+ "evening": {
+  "over_from": 95.6,
+  "over_to": 119.6,
+  "runs": 33,
+  "wkts": 0,
+  "overs": 24.0
+ },
+ "per_over": [
+  [
+   45,
+   0,
+   false
+  ],
+  [
+   46,
+   0,
+   false
+  ],
+  [
+   47,
+   1,
+   false
+  ],
+  [
+   48,
+   1,
+   false
+  ],
+  [
+   49,
+   4,
+   false
+  ],
+  [
+   50,
+   1,
+   false
+  ],
+  [
+   51,
+   1,
+   false
+  ],
+  [
+   52,
+   4,
+   false
+  ],
+  [
+   53,
+   1,
+   false
+  ],
+  [
+   54,
+   0,
+   false
+  ],
+  [
+   55,
+   0,
+   true
+  ],
+  [
+   56,
+   2,
+   false
+  ],
+  [
+   57,
+   3,
+   false
+  ],
+  [
+   58,
+   2,
+   false
+  ],
+  [
+   59,
+   0,
+   true
+  ],
+  [
+   60,
+   0,
+   false
+  ],
+  [
+   61,
+   0,
+   false
+  ],
+  [
+   62,
+   0,
+   false
+  ],
+  [
+   63,
+   1,
+   false
+  ],
+  [
+   64,
+   1,
+   false
+  ],
+  [
+   65,
+   8,
+   false
+  ],
+  [
+   66,
+   0,
+   false
+  ],
+  [
+   67,
+   2,
+   false
+  ],
+  [
+   68,
+   1,
+   false
+  ],
+  [
+   69,
+   5,
+   false
+  ],
+  [
+   70,
+   0,
+   false
+  ],
+  [
+   71,
+   0,
+   false
+  ],
+  [
+   72,
+   9,
+   false
+  ],
+  [
+   73,
+   4,
+   false
+  ],
+  [
+   74,
+   4,
+   false
+  ],
+  [
+   75,
+   1,
+   false
+  ],
+  [
+   76,
+   1,
+   true
+  ],
+  [
+   77,
+   0,
+   false
+  ],
+  [
+   78,
+   5,
+   false
+  ],
+  [
+   79,
+   2,
+   false
+  ],
+  [
+   80,
+   1,
+   false
+  ],
+  [
+   81,
+   0,
+   false
+  ],
+  [
+   82,
+   4,
+   false
+  ],
+  [
+   83,
+   6,
+   false
+  ],
+  [
+   84,
+   0,
+   false
+  ],
+  [
+   85,
+   1,
+   false
+  ],
+  [
+   86,
+   1,
+   false
+  ],
+  [
+   87,
+   6,
+   false
+  ],
+  [
+   88,
+   0,
+   false
+  ],
+  [
+   89,
+   0,
+   false
+  ],
+  [
+   90,
+   0,
+   false
+  ],
+  [
+   91,
+   0,
+   false
+  ],
+  [
+   92,
+   0,
+   false
+  ],
+  [
+   93,
+   0,
+   false
+  ],
+  [
+   94,
+   0,
+   false
+  ],
+  [
+   95,
+   4,
+   false
+  ],
+  [
+   96,
+   2,
+   false
+  ],
+  [
+   97,
+   9,
+   false
+  ],
+  [
+   98,
+   4,
+   false
+  ],
+  [
+   99,
+   0,
+   false
+  ],
+  [
+   100,
+   1,
+   false
+  ],
+  [
+   101,
+   5,
+   false
+  ],
+  [
+   102,
+   0,
+   false
+  ],
+  [
+   103,
+   0,
+   false
+  ],
+  [
+   104,
+   0,
+   false
+  ],
+  [
+   105,
+   0,
+   false
+  ],
+  [
+   106,
+   0,
+   false
+  ],
+  [
+   107,
+   0,
+   false
+  ],
+  [
+   108,
+   1,
+   false
+  ],
+  [
+   109,
+   0,
+   false
+  ],
+  [
+   110,
+   1,
+   false
+  ],
+  [
+   111,
+   2,
+   false
+  ],
+  [
+   112,
+   0,
+   false
+  ],
+  [
+   113,
+   0,
+   false
+  ],
+  [
+   114,
+   3,
+   false
+  ],
+  [
+   115,
+   0,
+   false
+  ],
+  [
+   116,
+   3,
+   false
+  ],
+  [
+   117,
+   0,
+   false
+  ],
+  [
+   118,
+   1,
+   false
+  ],
+  [
+   119,
+   1,
+   false
+  ]
+ ],
+ "maidens_day5": 33,
+ "overs_by_bowler": {
+  "morning": {
+   "Anshul Kamboj": 3,
+   "Jasprit Bumrah": 6,
+   "Washington Sundar": 8,
+   "Akash Deep": 3,
+   "Prasidh Krishna": 6
+  },
+  "middle": {
+   "Washington Sundar": 9,
+   "Anshul Kamboj": 6,
+   "Jasprit Bumrah": 3,
+   "Akash Deep": 4,
+   "Prasidh Krishna": 3
+  },
+  "evening": {
+   "Anshul Kamboj": 4,
+   "Washington Sundar": 10,
+   "Akash Deep": 3,
+   "Jasprit Bumrah": 2,
+   "Prasidh Krishna": 2,
+   "Yashasvi Jaiswal": 2,
+   "Dhruv Jurel": 1
+  }
+ },
+ "dots_day5": 387,
+ "balls_day5": 451
+}

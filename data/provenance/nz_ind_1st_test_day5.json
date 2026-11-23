@@ -1,0 +1,222 @@
+{
+ "slug": "nz_ind_1st_test_day5",
+ "claims": [
+  {
+   "claim": "Day 5: NZ 119/2 to 239/5 in 75 overs (120 runs, 1.60 an over): morning 38/2 in 26 overs, to tea 49/1 in 25, last session 33/0 in 24; India took 3 wickets (Conway 65, Rachin 37, Blundell 15)",
+   "value": [
+    119,
+    239,
+    75,
+    120,
+    38,
+    49,
+    33,
+    3
+   ],
+   "sources": {
+    "cricbuzz": [
+     119,
+     239,
+     75,
+     120,
+     38,
+     49,
+     33,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "387 dot balls of 451 on Day 5 (86%); 34 maidens in 75 overs; India's innings 42 maidens, the most by a team innings in the WTC 2025-27 cycle",
+   "value": [
+    387,
+    451,
+    34,
+    42
+   ],
+   "sources": {
+    "cricbuzz": [
+     387,
+     451,
+     34,
+     42
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Mitchell 49* (186 balls, 160 dots) and Phillips 26* (126, 111 dots): 63* in 259 balls over 43 overs (176/5 to 239/5)",
+   "value": [
+    49,
+    186,
+    160,
+    26,
+    126,
+    111,
+    63,
+    259,
+    43
+   ],
+   "sources": {
+    "cricbuzz": [
+     49,
+     186,
+     160,
+     26,
+     126,
+     111,
+     63,
+     259,
+     43
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "43 overs: second-most for an NZ sixth-wicket-or-lower stand in the third innings of a drawn Test this century; record 123 overs, McCullum and Watling (352), Wellington 2014 v India",
+   "value": [
+    43,
+    123,
+    352
+   ],
+   "sources": {
+    "cricbuzz": [
+     43,
+     123,
+     352
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Mitchell's chances: run-out missed by Akash Deep (73.1, on 12), bat-pad off Prasidh with no forward short leg (88.2, on 24), Kamboj kicker, Padikkal could not hold (94.4, on 24)",
+   "value": [
+    12,
+    24,
+    24
+   ],
+   "sources": {
+    "cricbuzz": [
+     12,
+     24,
+     24
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Prasidh Day 5: 11-8-3-1; Washington 27-12-49-1; Bumrah 11-6-9-0; Kamboj 13-4-24-1; Akash Deep 10-4-22-0",
+   "value": [
+    11,
+    8,
+    3,
+    1
+   ],
+   "sources": {
+    "cricbuzz": [
+     11,
+     8,
+     3,
+     1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "conditions: breeze 22 km/h from the north, 16 degrees, some cloud, no rain threat; pitch dried out, grass dead, still a very good batting surface",
+   "value": [
+    22,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     22,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "WTC: both sides 4 points; NZ 66.67 percent, slip behind Australia to third; India 4th on 50, need to win all next 6 Tests; 16 points missed across two drawn Tests",
+   "value": [
+    4,
+    66.67,
+    50,
+    6,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     4,
+     66.67,
+     50,
+     6,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Handshake with about an hour left (17:40 local): India had 3 wickets in 75 overs (one every 25); Nicholls 175* Player of the Match, Phillips 118 in NZ's 368",
+   "value": [
+    3,
+    75,
+    175,
+    118,
+    368
+   ],
+   "sources": {
+    "cricbuzz": [
+     3,
+     75,
+     175,
+     118,
+     368
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's lines (our read, balls with a stated line and length): on or outside off 73% before lunch -> 93% lunch to tea; on middle 20% -> 3%",
+   "value": [
+    73,
+    93,
+    20,
+    3
+   ],
+   "sources": {
+    "cricbuzz": [
+     73,
+     93,
+     20,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 10
+ }
+}

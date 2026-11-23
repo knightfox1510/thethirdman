@@ -1,0 +1,1899 @@
+{
+ "slug": "nz_ind_1st_test_day5",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 1ST TEST · DAY 5",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep08_India_vs_New_Zealand_1st_Test_Day_5_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 1ST TEST · DAY 5",
+  "lines": [
+   {
+    "t": "8 NEEDED."
+   },
+   {
+    "t": "3 TAKEN.",
+    "c": "gold"
+   }
+  ],
+  "hero": "239",
+  "herosize": 420
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "8 NEEDED."
+   },
+   {
+    "t": "3 TAKEN.",
+    "c": "gold"
+   }
+  ],
+  "sub": "1ST TEST · DAY 5 · DRAWN",
+  "hero": "239"
+ },
+ "sources": [
+  "Day 5 ball-by-ball (New Zealand 239/5, draw): Cricbuzz full commentary for New Zealand v India, 1st Test, 23 November 2026 (owner's capture; bowler lines, records, WTC table, pitch report and match notes are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+  "Figures: analysis/nz_day5.py, analysis/shots.py. Session splits and run rates are our arithmetic; the pitch map is our read of the commentary text (approximate zones)."
+ ],
+ "short": [
+  {
+   "vo": "Two thirty-nine for five, and the first Test is drawn. India needed eight wickets on day five. They took three. Here is how New Zealand held on.",
+   "scene": {
+    "type": "statement",
+    "kicker": "DAY 5 · THE FIRST TEST IS DRAWN",
+    "lines": [
+     {
+      "t": "239/5."
+     },
+     {
+      "t": "A DRAW.",
+      "c": "gold"
+     }
+    ],
+    "sub": "India needed eight wickets. They took three."
+   }
+  },
+  {
+   "vo": "One point six runs an over. Eighty-six per cent of balls were dots. Thirty-four maidens in seventy-five overs. Blocking, by plan.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "A DAY OF BLOCKING",
+     "sub": "NEW ZEALAND · 119/2 TO 239/5 · 75 OVERS"
+    },
+    "tiles": [
+     {
+      "v": "1.60",
+      "l": "RUNS AN OVER",
+      "c": "gold"
+     },
+     {
+      "v": "86%",
+      "l": "DOT BALLS · 387 OF 451",
+      "c": "red"
+     },
+     {
+      "v": "34",
+      "l": "MAIDENS IN 75 OVERS",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The whole day over by over. Two wickets before lunch, one after, and none in the last session.",
+   "scene": {
+    "type": "overstrip",
+    "head": {
+     "t": "THE DAY, OVER BY OVER",
+     "sub": "RUNS IN EACH OVER · RED = WICKET · GREEN = MAIDEN"
+    },
+    "overs": [
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      true
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      8,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      true
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      6,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      9,
+      false
+     ],
+     [
+      4,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      5,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      2,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      3,
+      false
+     ],
+     [
+      0,
+      false
+     ],
+     [
+      1,
+      false
+     ],
+     [
+      1,
+      false
+     ]
+    ],
+    "session_cuts": [
+     26,
+     51
+    ],
+    "legal_lines": null,
+    "legend_lines": [
+     [
+      "BEFORE LUNCH: 38 RUNS, 2 WICKETS",
+      "ink"
+     ],
+     [
+      "LUNCH TO TEA: 49 RUNS, 1 WICKET",
+      "ink"
+     ],
+     [
+      "LAST SESSION: 33 RUNS, NO WICKET",
+      "red"
+     ]
+    ],
+    "footnote": "OUR BALL-BY-BALL · LUNCH AFTER 26 OVERS, TEA AFTER 51"
+   }
+  },
+  {
+   "vo": "The conditions gave India little: a twenty-two kilometre breeze, sixteen degrees, dead grass, a dried-out pitch.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE CONDITIONS",
+     "sub": "BASIN RESERVE · DAY FIVE · IN OUR RECORDS"
+    },
+    "tiles": [
+     {
+      "v": "22 KM/H",
+      "l": "BREEZE FROM THE NORTH",
+      "c": "gold"
+     },
+     {
+      "v": "16°C",
+      "l": "SOME CLOUD, NO RAIN",
+      "c": "ink"
+     },
+     {
+      "v": "DEAD",
+      "l": "GRASS · PITCH DRIED OUT",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India's lines tightened. Before lunch, seventy-three per cent were on or outside off. After lunch, ninety-three. The stumps were no longer under attack.",
+   "scene": {
+    "type": "pitchtop",
+    "head": {
+     "t": "WHERE INDIA BOWLED",
+     "sub": "THE PITCH FROM ABOVE · EACH DOT A DELIVERY · ILLUSTRATIVE"
+    },
+    "panels": [
+     {
+      "title": "BEFORE LUNCH",
+      "n": 142,
+      "balls": [
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "leg",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "b"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short_of_length",
+        "b"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "r"
+       ],
+       [
+        "leg",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "leg",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "w"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "r"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "r"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "r"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short_of_length",
+        "r"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "b"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "short",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "d"
+       ]
+      ],
+      "cells": {},
+      "stats": [
+       [
+        "73%",
+        "ON OR OUTSIDE OFF"
+       ],
+       [
+        "20%",
+        "ON MIDDLE"
+       ]
+      ]
+     },
+     {
+      "title": "LUNCH TO TEA",
+      "n": 61,
+      "balls": [
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "middle",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "r"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "short_of_length",
+        "r"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "middle",
+        "full",
+        "b"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "r"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "b"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "leg",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "short",
+        "d"
+       ],
+       [
+        "outside_off",
+        "good",
+        "d"
+       ],
+       [
+        "outside_off",
+        "full",
+        "d"
+       ]
+      ],
+      "cells": {},
+      "stats": [
+       [
+        "93%",
+        "ON OR OUTSIDE OFF"
+       ],
+       [
+        "3%",
+        "ON MIDDLE"
+       ]
+      ]
+     }
+    ],
+    "footnote": "POSITIONS ARE OUR READ OF THE BALL-BY-BALL TEXT (BALLS WITH A STATED LINE AND LENGTH) · BATTER AT THE TOP"
+   }
+  },
+  {
+   "vo": "The morning gave India two: Conway, caught by रिषभ पंत off वॉशिंगटन सुंदर, then रचिन रवींद्र at gully. Thirty-eight runs in twenty-six overs.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE MORNING · TWO WICKETS",
+    "title": "2 for 38.",
+    "img": "data/licensed/in/nz_day5_pant_catch.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "38 RUNS IN 26 OVERS",
+    "name": "CONWAY AND RACHIN OUT",
+    "mono": "CONWAY 65 (165) · RACHIN 37 (129)",
+    "caption": "Conway c Pant b Sundar. Rachin c Rahul b Prasidh. Then the shutters came down.",
+    "chip": "139/4",
+    "chip_sub": "BY THE 60TH OVER"
+   }
+  },
+  {
+   "vo": "India's best hope was Daryl Mitchell, and he had three lives: a run-out missed, a bat-pad with no short leg, a kicker पडिक्कल could not hold.",
+   "scene": {
+    "type": "timeline",
+    "head": {
+     "t": "DARYL MITCHELL'S THREE LIVES",
+     "sub": "ALL THREE IN THE SESSION BEFORE TEA"
+    },
+    "events": [
+     {
+      "y": "73.1",
+      "t": "On 12: Akash Deep misses a run-out",
+      "c": "red"
+     },
+     {
+      "y": "88.2",
+      "t": "On 24: bat-pad off Prasidh, no short leg in place",
+      "hl": true
+     },
+     {
+      "y": "94.4",
+      "t": "On 24: Kamboj kicker, Padikkal can't hold on",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then the wall. Mitchell and Phillips: sixty-three unbeaten, off two hundred and fifty-nine balls, forty-three overs.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE WALL · 176/5 TO 239/5",
+    "title": "63*.",
+    "img": "data/licensed/in/nz_day5_mitchell_phillips.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "259 BALLS · 43 OVERS",
+    "name": "MITCHELL AND PHILLIPS",
+    "mono": "49* OFF 186 · 26* OFF 126",
+    "caption": "Over three hundred balls between them. Not one more wicket.",
+    "chip": "63*",
+    "chip_sub": "259 BALLS"
+   }
+  },
+  {
+   "vo": "Phillips left one hundred and eleven of one hundred and twenty-six balls alone. Mitchell, one hundred and sixty of one hundred and eighty-six.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "SHARE OF DOT BALLS",
+     "sub": "NEW ZEALAND'S SECOND INNINGS · BY BATTER"
+    },
+    "max": 100,
+    "dec": 0,
+    "items": [
+     {
+      "label": "PHILLIPS · 111 DOTS OF 126",
+      "value": 88,
+      "color": "red"
+     },
+     {
+      "label": "MITCHELL · 160 DOTS OF 186",
+      "value": 86,
+      "color": "red"
+     },
+     {
+      "label": "RACHIN · 107 DOTS OF 129",
+      "value": 83,
+      "color": "ink"
+     },
+     {
+      "label": "BLUNDELL · 46 DOTS OF 54",
+      "value": 85,
+      "color": "ink"
+     },
+     {
+      "label": "CONWAY · 129 DOTS OF 165",
+      "value": 78,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "It is the second-longest stand like it by New Zealand this century. The record, a hundred and twenty-three overs, was set on this ground, against India.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "WELLINGTON REMEMBERS",
+     "sub": "NZ SIXTH-WICKET-OR-LOWER STANDS IN A DRAWN TEST'S THIRD INNINGS · IN OUR RECORDS"
+    },
+    "a": {
+     "name": "MITCHELL + PHILLIPS 2026",
+     "color": "red"
+    },
+    "b": {
+     "name": "McCULLUM + WATLING 2014",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "OVERS BATTED",
+      "43",
+      "123",
+      "b"
+     ],
+     [
+      "RUNS",
+      "63*",
+      "352",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "India bowled well. प्रसिद्ध कृष्णा: eleven overs, eight maidens, three runs. Forty-two maidens in the innings, the most by any team in this cycle.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "INDIA'S BOWLING TODAY",
+     "sub": "OVERS-MAIDENS-RUNS-WICKETS · 34 MAIDENS IN 75 OVERS"
+    },
+    "max": 3,
+    "dec": 2,
+    "items": [
+     {
+      "label": "PRASIDH · 11-8-3-1",
+      "value": 0.27,
+      "color": "gold"
+     },
+     {
+      "label": "BUMRAH · 11-6-9-0",
+      "value": 0.82,
+      "color": "ink"
+     },
+     {
+      "label": "SUNDAR · 27-12-49-1",
+      "value": 1.81,
+      "color": "ink"
+     },
+     {
+      "label": "KAMBOJ · 13-4-24-1",
+      "value": 1.85,
+      "color": "ink"
+     },
+     {
+      "label": "AKASH DEEP · 10-4-22-0",
+      "value": 2.2,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So, too soon? With about an hour left, Mitchell offered his hand and शुभमन गिल took it. Three wickets in seventy-five overs, one every twenty-five. India needed five.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "ABOUT AN HOUR LEFT",
+    "title": "Handshake.",
+    "img": "data/licensed/in/nz_day5_handshake.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "5 WICKETS NEEDED",
+    "name": "INDIA CALL IT",
+    "mono": "THREE WICKETS IN 75 OVERS: ONE EVERY 25",
+    "caption": "Mitchell offered a hand. Gill took it.",
+    "chip": "239/5",
+    "chip_sub": "DRAW AGREED"
+   }
+  },
+  {
+   "vo": "The last overs went to part-timers, जायसवाल and Jurel. बुमराह bowled two overs in the last session. प्रसिद्ध, two.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE LAST OVERS",
+    "title": "Part-timers.",
+    "img": "data/licensed/in/nz_day5_jaiswal_bowling.jpg",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "JAISWAL 2-0-4-0 · JUREL 1-0-1-0",
+    "name": "JAISWAL AND JUREL",
+    "mono": "BUMRAH: 2 OVERS IN THE LAST SESSION",
+    "caption": "Prasidh bowled 2 of the last 24 overs.",
+    "chip": "24",
+    "chip_sub": "OVERS IN THE LAST SESSION"
+   }
+  },
+  {
+   "vo": "The cost. New Zealand fall to sixty-six point six seven per cent, behind Australia. India stay fourth on fifty, and need all six remaining Tests. Sixteen points missed in two draws.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE WTC COST",
+     "sub": "BOTH SIDES GET FOUR POINTS · IN OUR RECORDS"
+    },
+    "items": [
+     {
+      "h": "NEW ZEALAND 66.67%",
+      "d": "slip behind Australia to third",
+      "c": "gold"
+     },
+     {
+      "h": "INDIA FOURTH ON 50",
+      "d": "must win all six remaining Tests"
+     },
+     {
+      "h": "16 POINTS MISSED",
+      "d": "across two drawn Tests in a row"
+     },
+     {
+      "h": "SRI LANKA, THEN HERE",
+      "d": "India could not close out either"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "The match in three numbers. New Zealand three sixty-eight, Henry Nicholls one seventy-five not out, the Player of the Match. India seven twenty for nine. And New Zealand two thirty-nine for five.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE TEST IN THREE NUMBERS",
+     "sub": "WELLINGTON · 19 TO 23 NOVEMBER"
+    },
+    "tiles": [
+     {
+      "v": "368",
+      "l": "NEW ZEALAND · NICHOLLS 175* (PLAYER OF THE MATCH)",
+      "c": "ink"
+     },
+     {
+      "v": "720/9",
+      "l": "INDIA DECLARED · LEAD 352",
+      "c": "gold"
+     },
+     {
+      "v": "239/5",
+      "l": "NEW ZEALAND SECOND INNINGS · DRAW",
+      "c": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Did India give up too soon? Comment one, yes. Two, no. Three, fair.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "DID INDIA GIVE UP TOO SOON? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · YES",
+      "d": "an hour was enough to try",
+      "c": "gold",
+      "cue": "yes"
+     },
+     {
+      "h": "2 · NO",
+      "d": "the pitch had nothing left",
+      "cue": "two"
+     },
+     {
+      "h": "3 · FAIR",
+      "d": "right call, hard to argue",
+      "cue": "fair"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down the series decider the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "India Needed 8, Took 3: How New Zealand Drew | India vs New Zealand 1st Test Day 5 #Shorts",
+   "description": "India vs New Zealand, 1st Test day five: the draw at the Basin Reserve. New Zealand 239 for 5 after batting 75 overs: 1.60 runs an over, 86 per cent dot balls. Daryl Mitchell's three lives, the Mitchell and Phillips stand of 63 off 259 balls, India's bowling plan, the WTC cost, and did India give up too soon? Comment 1 yes, 2 no, 3 fair. Full breakdown on the channel.\n\n#INDvNZ #IndiaVsNewZealand #1stTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 1st Test",
+    "IND vs NZ 1st Test",
+    "New Zealand vs India Test",
+    "Daryl Mitchell",
+    "Glenn Phillips",
+    "Shubman Gill",
+    "Prasidh Krishna",
+    "Washington Sundar",
+    "Basin Reserve",
+    "Wellington Test",
+    "WTC",
+    "Day 5 analysis",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}
