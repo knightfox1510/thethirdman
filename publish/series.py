@@ -34,6 +34,7 @@ EPISODES = {
     "nz_ind_1st_test_day3": ("replay", "06", "India vs New Zealand 1st Test Day 3"),
     "nz_ind_1st_test_day4": ("replay", "07", "India vs New Zealand 1st Test Day 4"),
     "nz_ind_1st_test_day5": ("replay", "08", "India vs New Zealand 1st Test Day 5"),
+    "nz_ind_1st_test_long": ("replay", "09", "India vs New Zealand 1st Test Analysis"),
     "santner_problem": ("tactics", "01", "The Santner Problem, NZ v IND T20Is"),
     "abhishek_plan": ("tactics", "02", "How to Bowl to Abhishek Sharma"),
     "wellington_odi": ("tactics", "03", "Wellington ODI Breakdown"),

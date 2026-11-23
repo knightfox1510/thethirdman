@@ -1,0 +1,1379 @@
+{
+ "slug": "nz_ind_1st_test_long",
+ "claims": [
+  {
+   "claim": "whole-Test lines and lengths (our read): India's attack 29% short, 80% on or outside off; New Zealand's attack 29% short, 77% on or outside off",
+   "value": [
+    29,
+    80,
+    29,
+    77
+   ],
+   "sources": {
+    "cricbuzz": [
+     29,
+     80,
+     29,
+     77
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Day 1 map (our read): India's short balls 26% before lunch, 39% after; Nicholls placed runs leg 57 off 42; Phillips off 57 leg 16",
+   "value": [
+    26,
+    39,
+    57,
+    42,
+    57,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     26,
+     39,
+     57,
+     42,
+     57,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Test totals: NZ 368, India 720/9 declared, NZ 239/5: 1,327 runs, 24 wickets, a draw; Nicholls 175* (Player of the Match), Phillips 118",
+   "value": [
+    368,
+    720,
+    239,
+    1327,
+    24,
+    175,
+    118
+   ],
+   "sources": {
+    "cricbuzz": [
+     368,
+     720,
+     239,
+     1327,
+     24,
+     175,
+     118
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's first seven partnerships all 50+ (a Test record); all five of the top five past 50 (fifth time)",
+   "value": [
+    7,
+    5
+   ],
+   "sources": {
+    "cricbuzz": [
+     7,
+     5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Jaiswal's placed runs: off 51, leg 19, straight 6; Mitchell and Phillips on Day 5: placed 17 and 14 scoring shots",
+   "value": [
+    51,
+    19,
+    6
+   ],
+   "sources": {
+    "cricbuzz": [
+     51,
+     19,
+     6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Bumrah, first innings of the 2020 Wellington Test: 1 for 88 in 26 overs",
+   "value": [
+    1,
+    88,
+    26
+   ],
+   "sources": {
+    "cricsheet": [
+     1,
+     88,
+     26
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "score at tea: 140/5; Nicholls 66*, Phillips 42*",
+   "value": [
+    140,
+    5,
+    66,
+    42
+   ],
+   "sources": {
+    "cricbuzz": [
+     140,
+     5,
+     66,
+     42
+    ],
+    "telanganatoday": [
+     140,
+     5,
+     66,
+     42
+    ],
+    "openpress": [
+     140,
+     5,
+     66,
+     42
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "figures at tea: Bumrah 3/31, Akash Deep 1/22, Kamboj 1/39",
+   "value": [
+    [
+     3,
+     31
+    ],
+    [
+     1,
+     22
+    ],
+    [
+     1,
+     39
+    ]
+   ],
+   "sources": {
+    "cricbuzz": [
+     [
+      3,
+      31
+     ],
+     [
+      1,
+      22
+     ],
+     [
+      1,
+      39
+     ]
+    ],
+    "telanganatoday": [
+     [
+      3,
+      31
+     ],
+     [
+      1,
+      22
+     ],
+     [
+      1,
+      39
+     ]
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "wickets: Latham, Mitchell, Blundell to Bumrah; Conway to Kamboj; Ravindra to Akash Deep",
+   "value": 5,
+   "sources": {
+    "cricbuzz": 5,
+    "openpress": 5
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "lunch 60/4 (after 22.5 overs)",
+   "value": [
+    60,
+    4
+   ],
+   "sources": {
+    "cricbuzz": [
+     60,
+     4
+    ],
+    "telanganatoday": [
+     60,
+     4
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "pitch easing after lunch: browning off as the sun came out",
+   "value": true,
+   "sources": {
+    "cricbuzz": true,
+    "telanganatoday": true,
+    "openpress": true
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "stumps 243/5 after 81.6 overs",
+   "value": [
+    243,
+    5
+   ],
+   "sources": {
+    "cricbuzz": [
+     243,
+     5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls 113 (221), Phillips 94 (182), 6th-wicket stand 173 off 327 balls",
+   "value": [
+    113,
+    221,
+    94,
+    182,
+    173,
+    327
+   ],
+   "sources": {
+    "cricbuzz": [
+     113,
+     221,
+     94,
+     182,
+     173,
+     327
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "full bowling figures (Bumrah 17-5-52-3, Kamboj 18-4-57-1, Akash 15-5-33-1, Prasidh 16-2-58-0, Sundar 16-2-38-0)",
+   "value": 243,
+   "sources": {
+    "cricbuzz": 243
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "stand: 54 singles, 7 twos, 7 threes, 21 fours; 238 dots of 327 (73%)",
+   "value": [
+    54,
+    7,
+    7,
+    21,
+    238,
+    327
+   ],
+   "sources": {
+    "cricbuzz": [
+     54,
+     7,
+     7,
+     21,
+     238,
+     327
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "after Blundell: Bumrah 48 balls, 35 runs, no wicket",
+   "value": [
+    48,
+    35,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     48,
+     35,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "5 wickets in the first 28.2 overs (171 balls, 70 runs); none in the next 53.4 overs (327 balls, 173 runs)",
+   "value": [
+    171,
+    70,
+    5,
+    327,
+    173,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     171,
+     70,
+     5,
+     327,
+     173,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "false shots 25.1% before lunch vs 13.6% in session 2 (Cricbuzz's own figures)",
+   "value": [
+    25.1,
+    13.6
+   ],
+   "sources": {
+    "cricbuzz": [
+     25.1,
+     13.6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "seam length table, day: full 2/67 78b, good 3/50 202b, short 0/77 122b",
+   "value": [
+    [
+     2,
+     67,
+     78
+    ],
+    [
+     3,
+     50,
+     202
+    ],
+    [
+     0,
+     77,
+     122
+    ]
+   ],
+   "sources": {
+    "cricbuzz": [
+     [
+      2,
+      67,
+      78
+     ],
+     [
+      3,
+      50,
+      202
+     ],
+     [
+      0,
+      77,
+      122
+     ]
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "derived split after lunch: short share 19% -> 36%, good-length false shots 30% -> 13%",
+   "value": [
+    19,
+    36,
+    30,
+    13
+   ],
+   "sources": {
+    "cricbuzz": [
+     19,
+     36,
+     30,
+     13
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls had four hundreds at the Basin Reserve before today",
+   "value": 4,
+   "sources": {
+    "cricsheet": 4,
+    "cricbuzz": 4
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "ball age: first 20 overs 52/3, overs 21-80 184/2, second new ball (overs 81-82) 7/0",
+   "value": [
+    52,
+    3,
+    184,
+    2,
+    7,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     3,
+     184,
+     2,
+     7,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India won the toss and bowled; 15 mm of grass, moisture on top in the morning",
+   "value": true,
+   "sources": {
+    "cricbuzz": true
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "lifelines: Phillips lbw review lost on 6 (30.3); Nicholls dropped on 102 (73.3)",
+   "value": [
+    6,
+    102
+   ],
+   "sources": {
+    "cricbuzz": [
+     6,
+     102
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ at Day 1 stumps 243/5, final total 368: 125 added on Day 2 (Cricbuzz stump summary; no Day 2 NZ ball data)",
+   "value": [
+    243,
+    368,
+    125
+   ],
+   "sources": {
+    "cricbuzz": [
+     243,
+     368,
+     125
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India 159/1 after 38.6 overs at stumps, trailing NZ's 368 by 209",
+   "value": [
+    159,
+    1,
+    368,
+    209
+   ],
+   "sources": {
+    "cricbuzz": [
+     159,
+     1,
+     368,
+     209
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Jaiswal 85 (89), 16 fours, c Blundell b Henry at 130 (27.5); fifty off 66 balls",
+   "value": [
+    85,
+    89,
+    16,
+    130,
+    66
+   ],
+   "sources": {
+    "cricbuzz": [
+     85,
+     89,
+     16,
+     130,
+     66
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul 52* (116), 5 fours; Padikkal 16* (35)",
+   "value": [
+    52,
+    116,
+    5,
+    16,
+    35
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     116,
+     5,
+     16,
+     35
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "tea: 16 for no loss after 8 overs (7.6); post-tea 143 runs in 31 overs",
+   "value": [
+    16,
+    8,
+    143,
+    31
+   ],
+   "sources": {
+    "cricbuzz": [
+     16,
+     8,
+     143,
+     31
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling by length (our classification): full 57b/46r, good 33b/10r, short of length 38b/24r, short 45b/16r",
+   "value": [
+    57,
+    46,
+    33,
+    10,
+    38,
+    24,
+    45,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     57,
+     46,
+     33,
+     10,
+     38,
+     24,
+     45,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Jaiswal vs full 27 balls 41 runs; vs good length 10 balls 0 runs (our classification)",
+   "value": [
+    27,
+    41,
+    10,
+    0
+   ],
+   "sources": {
+    "cricbuzz": [
+     27,
+     41,
+     10,
+     0
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling figures Henry 12-3-43-1, Jamieson 11-5-15-0, Smith 6-0-29-0, Duffy 10-0-72-0; no-balls Duffy 3, Smith 3",
+   "value": 159,
+   "sources": {
+    "cricbuzz": 159
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "lifelines: NZ review lost (3.6); Jaiswal edge past slip on 0 (4.2); Henry lbw on Rahul 5 not reviewed (6.4); Phillips drops Jaiswal on 6 (7.3)",
+   "value": [
+    0,
+    5,
+    6
+   ],
+   "sources": {
+    "cricbuzz": [
+     0,
+     5,
+     6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul's 22nd Test fifty and first against NZ (Cricbuzz)",
+   "value": true,
+   "sources": {
+    "cricbuzz": true
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "after Jaiswal's wicket (130) to stumps (159): 29 runs",
+   "value": 29,
+   "sources": {
+    "cricbuzz": 29
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India 486/4 at stumps (124.6 overs), lead of 118 over NZ's 368; Day 3 = 327 runs for 3 wickets in 86 overs (from 159/1 at 38.6)",
+   "value": [
+    486,
+    4,
+    368,
+    118,
+    327,
+    3,
+    86
+   ],
+   "sources": {
+    "cricbuzz": [
+     486,
+     4,
+     368,
+     118,
+     327,
+     3,
+     86
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "sessions: lunch 239/1 (80 in 27 overs), tea 344/2 (105 in 27), stumps 486/4 (142 in 32, two wickets: Rahul and Gill); run rates 2.96, 3.89, 4.44",
+   "value": [
+    80,
+    105,
+    142,
+    2.96,
+    3.89,
+    4.44
+   ],
+   "sources": {
+    "cricbuzz": [
+     80,
+     105,
+     142,
+     2.96,
+     3.89,
+     4.44
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rahul 100 off 207 balls (68.4), out b Smith 136 (290); Cricbuzz: first hundred in NZ and a Test hundred in all SENA countries",
+   "value": [
+    100,
+    207,
+    136,
+    290
+   ],
+   "sources": {
+    "cricbuzz": [
+     100,
+     207,
+     136,
+     290
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Padikkal 80 (175) b Jamieson at 295/2; second-wicket stand with Rahul 165",
+   "value": [
+    80,
+    175,
+    295,
+    165
+   ],
+   "sources": {
+    "cricbuzz": [
+     80,
+     175,
+     295,
+     165
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "second new ball at 80 overs: 56 runs in the next 13 overs (288 at 79.6 to 344 at 92.6)",
+   "value": [
+    288,
+    344,
+    56
+   ],
+   "sources": {
+    "cricbuzz": [
+     288,
+     344,
+     56
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Gill fifty (66 balls) with a six at 100.3 that took India past 368; Gill b Duffy 98 (146), 9 fours 2 sixes, third-last ball of the day",
+   "value": [
+    66,
+    371,
+    98,
+    146,
+    9,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     66,
+     371,
+     98,
+     146,
+     9,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant 52 off 55 (15 off 37, then 37 off 18), two sixes in a row off Duffy at 120.4/120.5; 55* (62)",
+   "value": [
+    52,
+    55,
+    15,
+    37,
+    37,
+    18,
+    55,
+    62
+   ],
+   "sources": {
+    "cricbuzz": [
+     52,
+     55,
+     15,
+     37,
+     37,
+     18,
+     55,
+     62
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: highest scores as India Test captain in NZ: 192 Azharuddin, 116 Gavaskar, 103* Azharuddin, 98 Gill, 68 Dhoni",
+   "value": [
+    192,
+    116,
+    103,
+    98,
+    68
+   ],
+   "sources": {
+    "cricbuzz": [
+     192,
+     116,
+     103,
+     98,
+     68
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: Gill dismissed in the 90s four times (91 Brisbane 2021, 91 Rajkot 2024, 90 Mumbai 2024, 98 Wellington 2026); Dhoni 4, Tendulkar 2 as captain; Dhoni 98 v Vettori, Nagpur 2010",
+   "value": [
+    91,
+    91,
+    90,
+    98,
+    4,
+    2,
+    98
+   ],
+   "sources": {
+    "cricbuzz": [
+     91,
+     91,
+     90,
+     98,
+     4,
+     2,
+     98
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Cricbuzz list: all of India's top five past 50 in a Test innings: five times (Kolkata 1998, Mohali 1999, Brabourne 2009, Dharamsala 2024, Wellington 2026)",
+   "value": 5,
+   "sources": {
+    "cricbuzz": 5
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "NZ bowling: Duffy 29-1-181-1 with 7 no-balls; Smith 4, Phillips 3 (14 in the innings); Henry 29-7-86-1; Jamieson 27-6-57-1",
+   "value": [
+    29,
+    181,
+    7,
+    4,
+    3,
+    14
+   ],
+   "sources": {
+    "cricbuzz": [
+     29,
+     181,
+     7,
+     4,
+     3,
+     14
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "our read of NZ's lines: before lunch 84% on or outside off, 6% leg side; after tea 26% leg side (zones from the commentary text)",
+   "value": [
+    84,
+    6,
+    26
+   ],
+   "sources": {
+    "cricbuzz": [
+     84,
+     6,
+     26
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant vs short balls on Day 3: 18 balls, 37 runs (our read)",
+   "value": [
+    18,
+    37
+   ],
+   "sources": {
+    "cricbuzz": [
+     18,
+     37
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India 720/9 declared in 165.6 overs; lead 352 over NZ's 368; Day 4 = 234 runs in 41 overs (5.71 an over) from 486/4",
+   "value": [
+    720,
+    9,
+    368,
+    352,
+    234,
+    41,
+    5.71
+   ],
+   "sources": {
+    "cricbuzz": [
+     720,
+     9,
+     368,
+     352,
+     234,
+     41,
+     5.71
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Pant 128 (153): 10 fours, 6 sixes; hundred brought up with a six off Phillips (105 after the six, 135 balls); passed McCullum on the Test sixes list",
+   "value": [
+    128,
+    153,
+    10,
+    6
+   ],
+   "sources": {
+    "cricbuzz": [
+     128,
+     153,
+     10,
+     6
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Kamboj 38 (42), Jurel 78 (79), Akash Deep 13 (5) with 2 sixes",
+   "value": [
+    38,
+    42,
+    78,
+    79,
+    13,
+    5,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     38,
+     42,
+     78,
+     79,
+     13,
+     5,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Phillips 24-0-154-3; 9 sixes off him in the innings, 7 on Day 4 (our count of sixes by bowler)",
+   "value": [
+    24,
+    154,
+    3,
+    9,
+    7
+   ],
+   "sources": {
+    "cricbuzz": [
+     24,
+     154,
+     3,
+     9,
+     7
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Latham c Pant b Bumrah 0 off the second ball (0 in the first innings): a pair; third NZ captain with a Test pair (Cave 1956, Fleming 1997); eighth NZ opener pair, second against India after McIntosh (Ahmedabad 2010)",
+   "value": [
+    0,
+    0,
+    3,
+    8,
+    2
+   ],
+   "sources": {
+    "cricbuzz": [
+     0,
+     0,
+     3,
+     8,
+     2
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Nicholls c Jurel b Prasidh 31 (59) at 22.1 (60/2); Conway 59* (137), Rachin 27* (72), 59 unbeaten; NZ 119/2 at stumps, 233 behind",
+   "value": [
+    31,
+    59,
+    60,
+    59,
+    27,
+    72,
+    119,
+    233
+   ],
+   "sources": {
+    "cricbuzz": [
+     31,
+     59,
+     60,
+     59,
+     27,
+     72,
+     119,
+     233
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "control: 81.6% in the first 30 overs of NZ's second innings, 98.9% in the 15 overs after",
+   "value": [
+    81.6,
+    98.9
+   ],
+   "sources": {
+    "cricbuzz": [
+     81.6,
+     98.9
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's bowling (our read of lines/lengths): short 27% -> 45%, leg side 8% -> 25% after Nicholls' wicket",
+   "value": [
+    27,
+    45,
+    8,
+    25
+   ],
+   "sources": {
+    "cricbuzz": [
+     27,
+     45,
+     8,
+     25
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Day 5: NZ 119/2 to 239/5 in 75 overs (120 runs, 1.60 an over): morning 38/2 in 26 overs, to tea 49/1 in 25, last session 33/0 in 24; India took 3 wickets (Conway 65, Rachin 37, Blundell 15)",
+   "value": [
+    119,
+    239,
+    75,
+    120,
+    38,
+    49,
+    33,
+    3
+   ],
+   "sources": {
+    "cricbuzz": [
+     119,
+     239,
+     75,
+     120,
+     38,
+     49,
+     33,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "387 dot balls of 451 on Day 5 (86%); 34 maidens in 75 overs; India's innings 42 maidens, the most by a team innings in the WTC 2025-27 cycle",
+   "value": [
+    387,
+    451,
+    34,
+    42
+   ],
+   "sources": {
+    "cricbuzz": [
+     387,
+     451,
+     34,
+     42
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Mitchell 49* (186 balls, 160 dots) and Phillips 26* (126, 111 dots): 63* in 259 balls over 43 overs (176/5 to 239/5)",
+   "value": [
+    49,
+    186,
+    160,
+    26,
+    126,
+    111,
+    63,
+    259,
+    43
+   ],
+   "sources": {
+    "cricbuzz": [
+     49,
+     186,
+     160,
+     26,
+     126,
+     111,
+     63,
+     259,
+     43
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "43 overs: second-most for an NZ sixth-wicket-or-lower stand in the third innings of a drawn Test this century; record 123 overs, McCullum and Watling (352), Wellington 2014 v India",
+   "value": [
+    43,
+    123,
+    352
+   ],
+   "sources": {
+    "cricbuzz": [
+     43,
+     123,
+     352
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Mitchell's chances: run-out missed by Akash Deep (73.1, on 12), bat-pad off Prasidh with no forward short leg (88.2, on 24), Kamboj kicker, Padikkal could not hold (94.4, on 24)",
+   "value": [
+    12,
+    24,
+    24
+   ],
+   "sources": {
+    "cricbuzz": [
+     12,
+     24,
+     24
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Prasidh Day 5: 11-8-3-1; Washington 27-12-49-1; Bumrah 11-6-9-0; Kamboj 13-4-24-1; Akash Deep 10-4-22-0",
+   "value": [
+    11,
+    8,
+    3,
+    1
+   ],
+   "sources": {
+    "cricbuzz": [
+     11,
+     8,
+     3,
+     1
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "conditions: breeze 22 km/h from the north, 16 degrees, some cloud, no rain threat; pitch dried out, grass dead, still a very good batting surface",
+   "value": [
+    22,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     22,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "WTC: both sides 4 points; NZ 66.67 percent, slip behind Australia to third; India 4th on 50, need to win all next 6 Tests; 16 points missed across two drawn Tests",
+   "value": [
+    4,
+    66.67,
+    50,
+    6,
+    16
+   ],
+   "sources": {
+    "cricbuzz": [
+     4,
+     66.67,
+     50,
+     6,
+     16
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Handshake with about an hour left (17:40 local): India had 3 wickets in 75 overs (one every 25); Nicholls 175* Player of the Match, Phillips 118 in NZ's 368",
+   "value": [
+    3,
+    75,
+    175,
+    118,
+    368
+   ],
+   "sources": {
+    "cricbuzz": [
+     3,
+     75,
+     175,
+     118,
+     368
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "India's lines (our read, balls with a stated line and length): on or outside off 73% before lunch -> 93% lunch to tea; on middle 20% -> 3%",
+   "value": [
+    73,
+    93,
+    20,
+    3
+   ],
+   "sources": {
+    "cricbuzz": [
+     73,
+     93,
+     20,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 60,
+  "OK": 6
+ }
+}
