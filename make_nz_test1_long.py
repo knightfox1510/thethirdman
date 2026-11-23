@@ -154,7 +154,9 @@ long = [
     {"vo": "Who wins the series? Comment one, India. Two, a second draw. Three, New Zealand.", "scene": POLL},
     dict(YT_CTA, vo="Subscribe, and we'll break down the series decider the same way."),
 ]
-for item in long: item["scene"] = clean(item["scene"])
+for item in long:
+    item["scene"] = clean(item["scene"])
+    if item["scene"].get("chapter"): item["chapter"] = item["scene"].pop("chapter")      # the engine reads chapters from the scene item (YouTube chapter list)
 SRC = ["Ball-by-ball for all five days (New Zealand 368 and 239/5, India 720/9 declared): Cricbuzz full commentary for New Zealand v India, 1st Test, 19-23 November 2026 (owner's captures; bowler lines, records, the WTC table, pitch reports and match notes are Cricbuzz's). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
        "Day-by-day figures: analysis/nz_day1.py ... nz_day5.py, analysis/shots.py. Length classes, wagon-wheel zones and the pitch maps are our read of the commentary text (approximate zones, illustrative). The final walk-off clip and the photographs were supplied by the channel owner."]
 TAGS = ["India vs New Zealand", "India vs New Zealand 1st Test", "IND vs NZ 1st Test", "New Zealand vs India Test", "Basin Reserve", "Wellington Test", "Rishabh Pant", "KL Rahul", "Shubman Gill", "Jasprit Bumrah", "Henry Nicholls", "Glenn Phillips", "Daryl Mitchell", "WTC", "Test analysis", "cricket analysis", "The Third Man"]
