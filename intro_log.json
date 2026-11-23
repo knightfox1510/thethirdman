@@ -104,7 +104,8 @@
   "kinetic",
   "fieldmap",
   "stumps",
-  "flip"
+  "flip",
+  "kinetic"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -211,6 +212,7 @@
   "nz_long_mock": "kinetic",
   "nz_ind_1st_test_long": "fieldmap",
   "nz_ind_1st_test_long__iglong": "stumps",
-  "nz_full_mock": "flip"
+  "nz_full_mock": "flip",
+  "nz_ind_1st_test_long__igfull": "kinetic"
  }
 }
