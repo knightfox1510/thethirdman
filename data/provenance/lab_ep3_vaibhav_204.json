@@ -1,0 +1,249 @@
+{
+ "slug": "lab_ep3_vaibhav_204",
+ "claims": [
+  {
+   "claim": "India A v UAE, Asia Cup Rising Stars (50 overs), 24 Nov 2026: India A chased 250 in 14.2 overs; Vaibhav 204 (53), 7 fours, 28 sixes (196 in boundaries, SR 385)",
+   "value": [
+    250,
+    14.2,
+    204,
+    53,
+    7,
+    28,
+    196
+   ],
+   "sources": {
+    "cricbuzz": [
+     250,
+     14.2,
+     204,
+     53,
+     7,
+     28,
+     196
+    ],
+    "cricinfo": [
+     250,
+     14.2,
+     204,
+     53,
+     7,
+     28,
+     196
+    ]
+   },
+   "scope": "archive",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "milestones in balls 50/100/150/200: 16/28/40/52 (match commentary; the records are said as 'in our records')",
+   "value": [
+    16,
+    28,
+    40,
+    52
+   ],
+   "sources": {
+    "cricbuzz": [
+     16,
+     28,
+     40,
+     52
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "28 sixes: 23 placed from the commentary text: 8 leg side, 7 straight, 8 off side",
+   "value": [
+    23,
+    8,
+    7,
+    8
+   ],
+   "sources": {
+    "cricbuzz": [
+     23,
+     8,
+     7,
+     8
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "by bowler: Ibrar Ahmad 57 off 13, Basil Hameed 43 off 12 (dismissed him c Aryansh Sharma 12.5)",
+   "value": [
+    57,
+    13,
+    43,
+    12
+   ],
+   "sources": {
+    "cricbuzz": [
+     57,
+     13,
+     43,
+     12
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL career: 23 innings, 1,028 runs, SR 229",
+   "value": [
+    23,
+    1028,
+    229
+   ],
+   "sources": {
+    "sportmonks": [
+     23,
+     1028,
+     229
+    ],
+    "cricinfo": [
+     23,
+     1028,
+     229
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "IPL splits (our count): vs top-four sides by season wins SR 248 (avg 54) vs the rest 207 (avg 36); playoffs 193 off 76",
+   "value": [
+    248,
+    207,
+    193,
+    76
+   ],
+   "sources": {
+    "sportmonks": [
+     248,
+     207,
+     193,
+     76
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "T20I career: 10 innings, 295 runs",
+   "value": [
+    10,
+    295
+   ],
+   "sources": {
+    "cricsheet": [
+     10,
+     295
+    ],
+    "cricinfo": [
+     10,
+     295
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "T20I splits (our count): v England/NZ/Pakistan/Sri Lanka avg 21 SR 176; v Zimbabwe avg 50 SR 196",
+   "value": [
+    21,
+    176,
+    50,
+    196
+   ],
+   "sources": {
+    "cricsheet": [
+     21,
+     176,
+     50,
+     196
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "dismissed in the IPL playoffs: Eliminator 97 (29) c off Praful Hinge, Qualifier Two 96 (47) c off Kagiso Rabada; 18 of 23 IPL dismissals caught",
+   "value": [
+    97,
+    29,
+    96,
+    47,
+    18,
+    23
+   ],
+   "sources": {
+    "sportmonks": [
+     97,
+     29,
+     96,
+     47,
+     18,
+     23
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "registered DOB 27 March 2011: aged 15 years 8 months on 24 Nov 2026; youngest male cricketer to play for India (reported)",
+   "value": [
+    2011,
+    3,
+    27,
+    15,
+    8
+   ],
+   "sources": {
+    "cricbuzz": [
+     2011,
+     3,
+     27,
+     15,
+     8
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "first-class: 11 matches, average 23.5",
+   "value": [
+    11,
+    23.5
+   ],
+   "sources": {
+    "cricinfo": [
+     11,
+     23.5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 3,
+  "LABELLED": 8
+ }
+}

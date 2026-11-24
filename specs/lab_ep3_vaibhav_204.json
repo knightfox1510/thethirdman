@@ -1,0 +1,730 @@
+{
+ "slug": "lab_ep3_vaibhav_204",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "lab",
+ "tag": "THE LAB",
+ "tagsub": "VAIBHAV SURYAVANSHI · 204 OFF 53",
+ "files": {
+  "long": "_unused",
+  "short": "The_Lab_Ep03_Vaibhav_Suryavanshi_204_Off_53_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "INDIA A V UAE · 24 NOV 2026",
+  "lines": [
+   {
+    "t": "204 OFF 53"
+   },
+   {
+    "t": "AGED 15",
+    "c": "gold"
+   }
+  ],
+  "hero": "204",
+  "herosize": 360
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "204 OFF 53"
+   },
+   {
+    "t": "AGED 15",
+    "c": "gold"
+   }
+  ],
+  "sub": "VAIBHAV SURYAVANSHI",
+  "hero": "204"
+ },
+ "sources": [
+  "The innings (India A v UAE, Asia Cup Rising Stars, 24 November 2026): Cricbuzz ball-by-ball commentary and Cricinfo ball-by-ball (owner's captures); 204 (53), 28 sixes, 7 fours cross-checked in both. Milestones and shot directions come from the commentary text only.",
+  "Career: IPL ball-by-ball (Sportmonks, IPL 2025-26: 23 innings, 1,028 runs, SR 229); T20 internationals (Cricsheet, 10 innings, 295 runs; Cricinfo profile). Splits against teams and bowlers are our own count (analysis/vaibhav.py).",
+  "Technique: Cricbuzz feature, 'What makes Vaibhav Sooryavanshi possible' (comments from a Loughborough University biomechanics researcher, a power-hitting coach and Vaibhav's childhood coach, paraphrased). Technique graphics: owner-supplied, redrawn.",
+  "Date of birth (27 March 2011) as officially registered, as reported; some reports question it."
+ ],
+ "short": [
+  {
+   "vo": "Two hundred and four. Off fifty-three balls. Twenty-eight sixes. वैभव सूर्यवंशी is fifteen years old.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "INDIA A V UAE · 24 NOVEMBER 2026",
+    "title": "204.",
+    "img": "data/licensed/in/vaibhav_celebration.webp",
+    "crop_short": [
+     0,
+     60,
+     718,
+     538
+    ],
+    "tag": "204 (53) · 28 SIXES",
+    "name": "VAIBHAV SURYAVANSHI",
+    "mono": "AGED 15 YEARS, 8 MONTHS",
+    "caption": "India A chased 250 with 214 balls to spare",
+    "chip": "385",
+    "chip_sub": "STRIKE RATE"
+   }
+  },
+  {
+   "vo": "India A needed two fifty. They finished with two hundred and fourteen balls to spare, and ninety-six per cent of his runs were boundaries.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "THE INNINGS",
+     "sub": "INDIA A CHASED 250 IN 14.2 OVERS"
+    },
+    "tiles": [
+     {
+      "v": "385",
+      "l": "STRIKE RATE",
+      "c": "red"
+     },
+     {
+      "v": "96%",
+      "l": "OF HIS RUNS IN BOUNDARIES",
+      "c": "gold"
+     },
+     {
+      "v": "11",
+      "l": "DOT BALLS OF 53",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Fifty off sixteen balls. Then a hundred, a hundred and fifty, two hundred, each fifty in just twelve. In our records, nothing faster.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "BALLS FOR EACH FIFTY",
+     "sub": "204 OFF 53 · IN OUR RECORDS"
+    },
+    "max": 20,
+    "dec": 0,
+    "items": [
+     {
+      "label": "0 TO 50",
+      "value": 16,
+      "color": "ink"
+     },
+     {
+      "label": "50 TO 100",
+      "value": 12,
+      "color": "gold"
+     },
+     {
+      "label": "100 TO 150",
+      "value": 12,
+      "color": "gold"
+     },
+     {
+      "label": "150 TO 200",
+      "value": 12,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Where did the sixes go? Twenty-three we could place: eight over the leg side, seven straight, eight over the off side. No bowler could hide.",
+   "scene": {
+    "type": "wagon",
+    "head": {
+     "t": "28 SIXES",
+     "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"
+    },
+    "pts": [
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      62,
+      6,
+      "s"
+     ],
+     [
+      -105,
+      1,
+      "n"
+     ],
+     [
+      62,
+      4,
+      "f"
+     ],
+     [
+      28,
+      1,
+      "n"
+     ],
+     [
+      105,
+      6,
+      "s"
+     ],
+     [
+      -62,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      28,
+      6,
+      "s"
+     ],
+     [
+      -28,
+      1,
+      "n"
+     ],
+     [
+      62,
+      6,
+      "s"
+     ],
+     [
+      -28,
+      4,
+      "f"
+     ],
+     [
+      0,
+      4,
+      "f"
+     ],
+     [
+      -105,
+      6,
+      "s"
+     ],
+     [
+      62,
+      6,
+      "s"
+     ],
+     [
+      -62,
+      4,
+      "f"
+     ],
+     [
+      -62,
+      2,
+      "n"
+     ],
+     [
+      28,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      6,
+      "s"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -28,
+      6,
+      "s"
+     ],
+     [
+      140,
+      4,
+      "f"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      62,
+      6,
+      "s"
+     ],
+     [
+      28,
+      6,
+      "s"
+     ],
+     [
+      0,
+      6,
+      "s"
+     ],
+     [
+      62,
+      1,
+      "n"
+     ],
+     [
+      -62,
+      6,
+      "s"
+     ],
+     [
+      -28,
+      6,
+      "s"
+     ],
+     [
+      28,
+      6,
+      "s"
+     ],
+     [
+      -62,
+      6,
+      "s"
+     ],
+     [
+      62,
+      4,
+      "f"
+     ],
+     [
+      -28,
+      6,
+      "s"
+     ]
+    ],
+    "photo": {
+     "img": "data/licensed/in/vaibhav_portrait.jpg",
+     "crop": [
+      480,
+      20,
+      980,
+      520
+     ]
+    },
+    "chips": [
+     [
+      "8",
+      "LEG SIDE"
+     ],
+     [
+      "7",
+      "STRAIGHT"
+     ],
+     [
+      "8",
+      "OFF SIDE"
+     ]
+    ],
+    "footnote": "23 OF 28 SIXES PLACED · ZONES READ FROM OUR BALL-BY-BALL NOTES"
+   }
+  },
+  {
+   "vo": "इब्रार अहमद went for fifty-seven off thirteen balls. बासिल हमीद, forty-three off twelve, and he is the one who finally got him.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "RUNS OFF EACH BOWLER",
+     "sub": "UAE ATTACK · BALLS FACED IN BRACKETS"
+    },
+    "max": 60,
+    "dec": 0,
+    "items": [
+     {
+      "label": "IBRAR AHMAD (13)",
+      "value": 57,
+      "color": "red"
+     },
+     {
+      "label": "ZAHID ALI (14)",
+      "value": 45,
+      "color": "ink"
+     },
+     {
+      "label": "BASIL HAMEED (12)",
+      "value": 43,
+      "color": "gold"
+     },
+     {
+      "label": "UDDISH SURI (9)",
+      "value": 41,
+      "color": "ink"
+     },
+     {
+      "label": "SIMRANJEET (5)",
+      "value": 18,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Officially registered date of birth, twenty-seventh March, twenty eleven. Fifteen years, eight months, the youngest to play for India, with a thousand and twenty-eight IPL runs already.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE YOUNGEST TO PLAY FOR INDIA",
+    "title": "15.",
+    "img": "data/licensed/in/vaibhav_portrait.jpg",
+    "crop_short": [
+     400,
+     0,
+     1100,
+     467
+    ],
+    "tag": "BORN 27 MARCH 2011 · AS REGISTERED",
+    "name": "15 YEARS, 8 MONTHS",
+    "mono": "TWO IPL SEASONS",
+    "caption": "1,028 IPL runs at a strike rate of 229",
+    "chip": "1,028",
+    "chip_sub": "IPL RUNS · 23 INNINGS"
+   }
+  },
+  {
+   "vo": "Does he only beat small teams? In T-twenty internationals, against England, New Zealand, Pakistan and Sri Lanka, he averages twenty-one. Against Zimbabwe, fifty.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "BIG TEAMS, SMALL TEAMS?",
+     "sub": "T20 INTERNATIONALS · 10 INNINGS"
+    },
+    "a": {
+     "name": "ENG · NZ · PAK · SL",
+     "color": "ink"
+    },
+    "b": {
+     "name": "ZIMBABWE",
+     "color": "gold"
+    },
+    "rows": [
+     [
+      "AVERAGE",
+      "21",
+      "50",
+      "b"
+     ],
+     [
+      "STRIKE RATE",
+      "176",
+      "196",
+      "b"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "But in the IPL, it flips. Against the top four sides, a strike rate of two forty-eight. Against the rest, two oh seven.",
+   "scene": {
+    "type": "compare",
+    "head": {
+     "t": "IN THE IPL IT FLIPS",
+     "sub": "STRIKE RATE AND AVERAGE · 23 INNINGS"
+    },
+    "a": {
+     "name": "TOP FOUR SIDES",
+     "color": "red"
+    },
+    "b": {
+     "name": "THE REST",
+     "color": "ink"
+    },
+    "rows": [
+     [
+      "STRIKE RATE",
+      "248",
+      "207",
+      "a"
+     ],
+     [
+      "AVERAGE",
+      "54",
+      "36",
+      "a"
+     ]
+    ]
+   }
+  },
+  {
+   "vo": "Who got him on the big stages? प्रफुल्ल हिंगे, in the Eliminator, for ninety-seven. Rabada, in Qualifier Two, for ninety-six. In T-twenty internationals, Archer twice.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "WHO GOT HIM",
+     "sub": "ON THE BIG STAGES"
+    },
+    "items": [
+     {
+      "h": "ELIMINATOR · HINGE",
+      "d": "caught for 97 off 29 balls",
+      "c": "gold",
+      "cue": "hinge"
+     },
+     {
+      "h": "QUALIFIER 2 · RABADA",
+      "d": "caught for 96 off 47 balls",
+      "c": "gold",
+      "cue": "rabada"
+     },
+     {
+      "h": "T20Is · ARCHER TWICE",
+      "d": "then Jacks, Saim Ayub, Fisher, Smith",
+      "cue": "archer"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "So why does it work? His bat goes past the vertical, a longer arc, more time to build speed. Experts say it looks closer to baseball or golf than cricket.",
+   "scene": {
+    "type": "techimg",
+    "head": {
+     "t": "WHY IT WORKS",
+     "sub": "THE TECHNIQUE · 1 OF 4"
+    },
+    "img": "data/licensed/in/vaibhav_technique_ref.jpg",
+    "box": [
+     370,
+     40,
+     520,
+     240
+    ],
+    "zoom": 2.2,
+    "ring": [
+     440,
+     130,
+     95
+    ],
+    "n": "1",
+    "title": "BAT PAST THE VERTICAL",
+    "tag": "THE BACKSWING",
+    "body": "A longer swing arc, and more time to build bat speed before impact. Experts say it looks closer to baseball or golf than cricket."
+   }
+  },
+  {
+   "vo": "At the top of the backswing, his shoulders stay closed against his hips. They call it separation. The more of it, the more force when the body unwinds.",
+   "scene": {
+    "type": "techimg",
+    "head": {
+     "t": "WHY IT WORKS",
+     "sub": "THE TECHNIQUE · 2 OF 4"
+    },
+    "img": "data/licensed/in/vaibhav_technique_ref.jpg",
+    "box": [
+     250,
+     190,
+     500,
+     330
+    ],
+    "zoom": 2.0,
+    "ring": [
+     350,
+     250,
+     130
+    ],
+    "n": "2",
+    "title": "CLOSED SHOULDERS",
+    "tag": "SEPARATION",
+    "body": "At the top of the backswing, his shoulders stay closed against his hips. The more of that separation, the more force when the body unwinds."
+   }
+  },
+  {
+   "vo": "Then the front knee braces, like a fast bowler's. The lower body stops, the upper body flings through. Weight transfer turns into rotation.",
+   "scene": {
+    "type": "techimg",
+    "head": {
+     "t": "WHY IT WORKS",
+     "sub": "THE TECHNIQUE · 3 OF 4"
+    },
+    "img": "data/licensed/in/vaibhav_technique_graphic2.png",
+    "box": [
+     440,
+     330,
+     600,
+     580
+    ],
+    "zoom": 2.0,
+    "ring": [
+     500,
+     450,
+     120
+    ],
+    "n": "3",
+    "title": "THE BRACED FRONT KNEE",
+    "tag": "THE DOWNSWING",
+    "body": "Like a fast bowler's front leg: the lower body stops, the upper body flings through. Weight transfer becomes rotation."
+   }
+  },
+  {
+   "vo": "Most batters finish like a C. His finish is closer to an O, the bat high above the shoulder, the shoulder held in line.",
+   "scene": {
+    "type": "follow",
+    "head": {
+     "t": "THE FINISH",
+     "sub": "THE TECHNIQUE · 4 OF 4 · ILLUSTRATIVE"
+    }
+   }
+  },
+  {
+   "vo": "So where is the weakness? Eighteen of his twenty-three IPL dismissals were catches. And the red ball is the open question: eleven first-class matches, average twenty-three.",
+   "scene": {
+    "type": "statement",
+    "kicker": "SO WHERE IS THE WEAKNESS?",
+    "lines": [
+     {
+      "t": "NOT FOUND"
+     },
+     {
+      "t": "YET.",
+      "c": "gold"
+     }
+    ],
+    "sub": "18 of his 23 IPL dismissals were catches. The red ball is the open question: 11 first-class matches, average 23."
+   }
+  },
+  {
+   "vo": "His childhood coach says technique can be taught, the courage to hit cannot. And experts say the bowlers haven't found his weakness yet.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE EXPERTS' PUZZLE",
+    "lines": [
+     {
+      "t": "TECHNIQUE CAN"
+     },
+     {
+      "t": "BE TAUGHT.",
+      "c": "gold"
+     }
+    ],
+    "sub": "“The courage to hit cannot.” His childhood coach, on why others who hit as far are not Vaibhav."
+   }
+  },
+  {
+   "vo": "Where is the weakness? Comment one, left-arm pace. Two, the red ball. Three, nowhere yet.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "WHERE IS THE WEAKNESS? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · LEFT-ARM PACE",
+      "d": "and off-spin",
+      "c": "gold",
+      "cue": "left"
+     },
+     {
+      "h": "2 · THE RED BALL",
+      "d": "Tests will tell",
+      "cue": "red"
+     },
+     {
+      "h": "3 · NOWHERE YET",
+      "d": "bowlers haven't found it",
+      "cue": "nowhere"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down every big innings like this.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "Vaibhav Suryavanshi: 204 Off 53 Balls, Explained | India A vs UAE #Shorts",
+   "description": "Vaibhav Suryavanshi, 15 years old, hit 204 off 53 balls for India A against the UAE in the Asia Cup Rising Stars, 28 sixes, a strike rate of 385. What makes it possible: the bat past the vertical, closed shoulders, the braced front knee, the O-shaped follow-through. How he does against small and big teams, and the bowlers who have got him on the big stages (Praful Hinge in the Eliminator, Kagiso Rabada in Qualifier Two). Date of birth as officially registered. Comment 1 left-arm pace, 2 the red ball, 3 nowhere yet.\n\n#VaibhavSuryavanshi #INDAvUAE #RisingStars #Shorts",
+   "tags": [
+    "Vaibhav Suryavanshi",
+    "Vaibhav Sooryavanshi",
+    "204 off 53",
+    "India A vs UAE",
+    "Asia Cup Rising Stars",
+    "Rajasthan Royals",
+    "IPL 2026",
+    "cricket analysis",
+    "batting technique",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}

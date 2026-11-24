@@ -8,6 +8,7 @@ import json, os, re, sys, glob
 
 # Latin -> Devanagari (longest first when applied). Add new names here AND their parts to engine.SHOW (done automatically below).
 NAMES = {
+    "Praful Hinge": "प्रफुल्ल हिंगे", "Hinge": "हिंगे", "Ibrar Ahmad": "इब्रार अहमद", "Ibrar": "इब्रार", "Basil Hameed": "बासिल हमीद", "Basil": "बासिल", "Hameed": "हमीद", "Saim Ayub": "साइम अयूब", "Saim": "साइम", "Ayub": "अयूब",
     "T Natarajan": "टी नटराजन", "Natarajan": "नटराजन", "Zeeshan Ansari": "ज़ीशान अंसारी", "Zeeshan": "ज़ीशान", "Ansari": "अंसारी", "Khaleel Ahmed": "ख़लील अहमद", "Khaleel": "ख़लील",
     "Harshal Patel": "हर्षल पटेल", "Harshal": "हर्षल", "M Siddharth": "एम सिद्धार्थ", "Siddharth": "सिद्धार्थ",
     "Virat Kohli": "विराट कोहली", "Kohli": "कोहली", "Virat": "विराट", "Rohit Sharma": "रोहित शर्मा", "Rohit": "रोहित",
