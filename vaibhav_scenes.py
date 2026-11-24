@@ -10,7 +10,7 @@ SAMP = skia.SamplingOptions(skia.FilterMode.kLinear, skia.MipmapMode.kLinear)
 
 
 def sc_techimg(c, g, t, D, s):
-    LK.header(c, g, t, D, SS._hd(s)); l = SS._L(g); sh = g.fmt == "short"
+    LK.header(c, g, t, D, dict(s, title=s["head"]["t"], sub=s["head"].get("sub", ""))); l = SS._L(g); sh = g.fmt == "short"
     x0, x1 = l["x0"], l["x1"]; cw = x1 - x0; ch = cw * 9 / 16; y0 = l["top"] + 40; a = eo(prog(t, .05, .5))
     im = SS._pimg(s["img"]); iw, ih = im.width(), im.height(); bx0, by0, bx1, by1 = s["box"]
     zk = s.get("zoom", 2.3); zw = iw / zk; zh = ih / zk; zcx = (bx0 + bx1) / 2; zcy = (by0 + by1) / 2
