@@ -165,7 +165,7 @@
    }
   },
   {
-   "vo": "Where did the sixes go? Twenty-three we could place: eight over the leg side, seven straight, eight over the off side. No bowler could hide.",
+   "vo": "Where did the sixes go? All twenty-eight, placed: twelve over the leg side, seven straight, nine over the off side. No bowler could hide.",
    "scene": {
     "type": "wagon",
     "head": {
@@ -204,12 +204,32 @@
       "n"
      ],
      [
+      -62,
+      6,
+      "s"
+     ],
+     [
       105,
       6,
       "s"
      ],
      [
       -62,
+      6,
+      "s"
+     ],
+     [
+      -62,
+      6,
+      "s"
+     ],
+     [
+      -62,
+      6,
+      "s"
+     ],
+     [
+      140,
       6,
       "s"
      ],
@@ -352,6 +372,11 @@
       -28,
       6,
       "s"
+     ],
+     [
+      -62,
+      6,
+      "s"
      ]
     ],
     "batter_top": true,
@@ -366,7 +391,7 @@
     },
     "chips": [
      [
-      "8",
+      "12",
       "LEG SIDE"
      ],
      [
@@ -374,11 +399,11 @@
       "STRAIGHT"
      ],
      [
-      "8",
+      "9",
       "OFF SIDE"
      ]
     ],
-    "footnote": "23 OF 28 SIXES PLACED · ZONES READ FROM OUR BALL-BY-BALL NOTES"
+    "footnote": "ALL 28 SIXES PLACED · ZONES READ FROM OUR BALL-BY-BALL NOTES"
    }
   },
   {

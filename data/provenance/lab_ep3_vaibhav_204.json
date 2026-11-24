@@ -57,19 +57,19 @@
    "conflicts": []
   },
   {
-   "claim": "28 sixes: 23 placed from the commentary text: 8 leg side, 7 straight, 8 off side",
+   "claim": "28 sixes, all placed from the commentary text: 12 leg side, 7 straight, 9 off side (4 over deep midwicket, 1 ramp over third man)",
    "value": [
-    23,
-    8,
+    28,
+    12,
     7,
-    8
+    9
    ],
    "sources": {
     "cricbuzz": [
-     23,
-     8,
+     28,
+     12,
      7,
-     8
+     9
     ]
    },
    "scope": "archive",

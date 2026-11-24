@@ -13,7 +13,7 @@ def w(n):
     if n < 100: return TENS[n // 10] + ("-" + ONES[n % 10] if n % 10 else "")
     h, r = divmod(n, 100); return ONES[h] + " hundred" + (" and " + w(r) if r else "")
 U = json.load(open("data/provenance/vaibhav_uae_figures.json")); F = json.load(open("data/provenance/vaibhav_figures.json")); I = U["innings"]; M = U["milestones_balls"]; CB = "cricbuzz"; CI = "cricinfo"
-assert (I["runs"], I["balls"], I["fours"], I["sixes"], round(I["sr"]), round(I["boundary_share"])) == (204, 53, 7, 28, 385, 96) and M == {"50": 16, "100": 28, "150": 40, "200": 52} and U["six_dirs"] == {"leg_side": 8, "straight": 7, "off_side": 8}
+assert (I["runs"], I["balls"], I["fours"], I["sixes"], round(I["sr"]), round(I["boundary_share"])) == (204, 53, 7, 28, 385, 96) and M == {"50": 16, "100": 28, "150": 40, "200": 52} and U["six_dirs"] == {"leg_side": 12, "straight": 7, "off_side": 9} and U["sixes_placed"] == 28
 ip = F["ipl"]; assert (ip["inns"], ip["all"]["runs"], round(ip["all"]["sr"])) == (23, 1028, 229)
 t4, rs = ip["vs_top4"]["top4"], ip["vs_top4"]["rest"]; assert (round(t4["sr"]), round(rs["sr"]), round(t4["avg"]), round(rs["avg"])) == (248, 207, 54, 36)
 po = ip["playoffs"]; assert (po["runs"], po["balls"]) == (193, 76)
@@ -28,7 +28,7 @@ d = {x["date"]: x["bowler"] for x in ip["dismissals"]}; assert d["2026-05-27"] =
 c = V.Claims("lab_ep3_vaibhav_204")
 c.check("India A v UAE, Asia Cup Rising Stars (50 overs), 24 Nov 2026: India A chased 250 in 14.2 overs; Vaibhav 204 (53), 7 fours, 28 sixes (196 in boundaries, SR 385)", (250, 14.2, 204, 53, 7, 28, 196), {CB: (250, 14.2, 204, 53, 7, 28, 196), CI: (250, 14.2, 204, 53, 7, 28, 196)}, scope="archive")
 c.check("milestones in balls 50/100/150/200: 16/28/40/52 (match commentary; the records are said as 'in our records')", (16, 28, 40, 52), {CB: (16, 28, 40, 52)}, scope="archive")
-c.check("28 sixes: 23 placed from the commentary text: 8 leg side, 7 straight, 8 off side", (23, 8, 7, 8), {CB: (23, 8, 7, 8)}, scope="archive")
+c.check("28 sixes, all placed from the commentary text: 12 leg side, 7 straight, 9 off side (4 over deep midwicket, 1 ramp over third man)", (28, 12, 7, 9), {CB: (28, 12, 7, 9)}, scope="archive")
 c.check("by bowler: Ibrar Ahmad 57 off 13, Basil Hameed 43 off 12 (dismissed him c Aryansh Sharma 12.5)", (57, 13, 43, 12), {CB: (57, 13, 43, 12)}, scope="archive")
 c.check("IPL career: 23 innings, 1,028 runs, SR 229", (23, 1028, 229), {"sportmonks": (23, 1028, 229), CI: (23, 1028, 229)})
 c.check("IPL splits (our count): vs top-four sides by season wins SR %d (avg %d) vs the rest %d (avg %d); playoffs 193 off 76" % (round(t4["sr"]), round(t4["avg"]), round(rs["sr"]), round(rs["avg"])), (248, 207, 193, 76), {"sportmonks": (248, 207, 193, 76)}, scope="archive")
@@ -42,7 +42,7 @@ pts = [[x["ang"], x["runs"] if x["runs"] < 4 else x["runs"], "s" if x["res"] == 
 COLD = {"type": "photocard", "kicker": "INDIA A V UAE · 24 NOVEMBER 2026", "title": "204.", "img": IN + "vaibhav_celebration.webp", "crop_short": (0, 60, 718, 538), "tag": "204 (53) · 28 SIXES", "name": "VAIBHAV SURYAVANSHI", "mono": "AGED 15 YEARS, 8 MONTHS", "caption": "India A chased 250 with 214 balls to spare", "chip": "385", "chip_sub": "STRIKE RATE"}
 STATS = {"type": "stats", "head": {"t": "THE INNINGS", "sub": "INDIA A CHASED 250 IN 14.2 OVERS"}, "tiles": [{"v": "385", "l": "STRIKE RATE", "c": "red"}, {"v": "96%", "l": "OF HIS RUNS IN BOUNDARIES", "c": "gold"}, {"v": "11", "l": "DOT BALLS OF 53", "c": "ink"}]}
 MILE = {"type": "bars", "head": {"t": "BALLS FOR EACH FIFTY", "sub": "204 OFF 53 · IN OUR RECORDS"}, "max": 20, "dec": 0, "items": [{"label": "0 TO 50", "value": 16, "color": "ink"}, {"label": "50 TO 100", "value": 12, "color": "gold"}, {"label": "100 TO 150", "value": 12, "color": "gold"}, {"label": "150 TO 200", "value": 12, "color": "red"}]}
-WAG = {"type": "wagon", "head": {"t": "28 SIXES", "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"}, "pts": pts, "batter_top": True, "photo": {"img": IN + "vaibhav_portrait.jpg", "crop": (480, 20, 980, 520)}, "chips": [("8", "LEG SIDE"), ("7", "STRAIGHT"), ("8", "OFF SIDE")], "footnote": "23 OF 28 SIXES PLACED · ZONES READ FROM OUR BALL-BY-BALL NOTES"}
+WAG = {"type": "wagon", "head": {"t": "28 SIXES", "sub": "WHERE THE RUNS WENT · ILLUSTRATIVE"}, "pts": pts, "batter_top": True, "photo": {"img": IN + "vaibhav_portrait.jpg", "crop": (480, 20, 980, 520)}, "chips": [("12", "LEG SIDE"), ("7", "STRAIGHT"), ("9", "OFF SIDE")], "footnote": "ALL 28 SIXES PLACED · ZONES READ FROM OUR BALL-BY-BALL NOTES"}
 BWL = {"type": "bars", "head": {"t": "RUNS OFF EACH BOWLER", "sub": "UAE ATTACK · BALLS FACED IN BRACKETS"}, "max": 60, "dec": 0, "items": [{"label": "IBRAR AHMAD (13)", "value": 57, "color": "red"}, {"label": "ZAHID ALI (14)", "value": 45, "color": "ink"}, {"label": "BASIL HAMEED (12)", "value": 43, "color": "gold"}, {"label": "UDDISH SURI (9)", "value": 41, "color": "ink"}, {"label": "SIMRANJEET (5)", "value": 18, "color": "ink"}]}
 AGE = {"type": "photocard", "kicker": "THE YOUNGEST TO PLAY FOR INDIA", "title": "15.", "img": IN + "vaibhav_portrait.jpg", "crop_short": (400, 0, 1100, 467), "tag": "BORN 27 MARCH 2011 · AS REGISTERED", "name": "15 YEARS, 8 MONTHS", "mono": "TWO IPL SEASONS", "caption": "1,028 IPL runs at a strike rate of 229", "chip": "1,028", "chip_sub": "IPL RUNS · 23 INNINGS"}
 CMP1 = {"type": "compare", "head": {"t": "BIG TEAMS, SMALL TEAMS?", "sub": "T20 INTERNATIONALS · 10 INNINGS"}, "a": {"name": "ENG · NZ · PAK · SL", "color": "ink"}, "b": {"name": "ZIMBABWE", "color": "gold"}, "rows": [["AVERAGE", str(big[1]), str(zim[1]), "b"], ["STRIKE RATE", str(big[0]), str(zim[0]), "b"]]}
@@ -59,7 +59,7 @@ short = [
     {"vo": "Two hundred and four. Off fifty-three balls. Twenty-eight sixes. Vaibhav Sooryavanshi is fifteen years old.", "scene": COLD},
     {"vo": "India A needed two fifty. They finished with two hundred and fourteen balls to spare, and ninety-six per cent of his runs were boundaries.", "scene": STATS},
     {"vo": "Fifty off sixteen balls. Then a hundred, a hundred and fifty, two hundred, each fifty in just twelve. In our records, nothing faster.", "scene": MILE},
-    {"vo": "Where did the sixes go? Twenty-three we could place: eight over the leg side, seven straight, eight over the off side. No bowler could hide.", "scene": WAG},
+    {"vo": "Where did the sixes go? All twenty-eight, placed: twelve over the leg side, seven straight, nine over the off side. No bowler could hide.", "scene": WAG},
     {"vo": "Ibrar Ahmad went for fifty-seven off thirteen balls. Basil Hameed, forty-three off twelve, and he is the one who finally got him.", "scene": BWL},
     {"vo": "Officially registered date of birth, twenty-seventh March, twenty eleven. Fifteen years, eight months, the youngest to play for India, with a thousand and twenty-eight IPL runs already.", "scene": AGE},
     {"vo": "Does he only beat small teams? In T-twenty internationals, against England, New Zealand, Pakistan and Sri Lanka, he averages twenty-one. Against Zimbabwe, fifty.", "scene": CMP1},

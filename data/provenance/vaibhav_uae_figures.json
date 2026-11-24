@@ -46,12 +46,12 @@
    "fours": 1
   }
  },
- "sixes_placed": 23,
+ "sixes_placed": 28,
  "sixes_total": 28,
  "six_dirs": {
-  "leg_side": 8,
+  "leg_side": 12,
   "straight": 7,
-  "off_side": 8
+  "off_side": 9
  },
  "runs_by_over": {
   "0": 19,
@@ -176,7 +176,7 @@
    "runs": 6,
    "score": 30,
    "balls": 10,
-   "ang": null,
+   "ang": -62,
    "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, wow, this is absolute madness, but it's not something we haven't seen from him before! Picks the length early, rocks back and slaps it flat over deep mid wick"
   },
   {
@@ -216,7 +216,7 @@
    "runs": 6,
    "score": 42,
    "balls": 13,
-   "ang": null,
+   "ang": -62,
    "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, it's only the third over, and Vaibhav has already smashed six sixes! Rocks back this time and sends the shortish delivery sailing over deep mid wicket for an"
   },
   {
@@ -236,7 +236,7 @@
    "runs": 6,
    "score": 48,
    "balls": 15,
-   "ang": null,
+   "ang": -62,
    "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, this is ruthless batting! India A race to 50 in less than three overs. Full again, and the left hander swings across the line, smoking it over deep mid wicke"
   },
   {
@@ -256,7 +256,7 @@
    "runs": 6,
    "score": 60,
    "balls": 17,
-   "ang": null,
+   "ang": 140,
    "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, short again from Ibrar, outside off and Vaibhav stands tall before hopping across to ramp it over deep third for another six. He is showing no signs of slowin"
   },
   {
@@ -616,7 +616,7 @@
    "runs": 6,
    "score": 204,
    "balls": 52,
-   "ang": null,
+   "ang": -62,
    "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, whoa! The fastest ever double century in List A cricket! What an innings this has been, absolute carnage! That's his 28th six of the innings. Tossed up on mi"
   },
   {

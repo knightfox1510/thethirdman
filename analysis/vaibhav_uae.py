@@ -11,7 +11,7 @@ def text(x):
 ZONES = [(r"third man|fine third|wide of gully|past gully", 140), (r"backward point|deep point|\bpoint\b|square of the wicket|cuts? ", 105), (r"extra cover|deep cover|through cover|\bcover\b", 62), (r"mid-?off|long-?off|wide of mid-off|straight of mid-off", 28),
          (r"down the ground|straight down|back past the bowler|over the bowler|over the bowler's head|straight over|straight", 0), (r"mid-?on|long-?on", -28), (r"mid-?wicket|midwicket|deep mid-wicket|deep midwicket|slog.?sweep", -62), (r"square leg|deep square|backward square", -105), (r"fine leg|down the leg|glance|flick|behind square", -140)]
 def zone(s):
-    s = s.lower(); best = None
+    s = s.lower().replace("mid wicket", "midwicket").replace("deep third", "third man"); best = None
     for p, a in ZONES:
         m = re.search(p, s)
         if m and (best is None or m.start() < best[0]): best = (m.start(), a)
