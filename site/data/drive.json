@@ -1,6 +1,6 @@
 {
  "root": "https://drive.google.com/drive/folders/1sT1uxsl7xuCdGdE-EtnwCFRk7KWJ0rTS",
- "synced": "2026-11-23",
+ "synced": "2026-11-24",
  "videos": {
   "myth_ep1_kohli_knockouts": {
    "state": "posted",
@@ -1191,6 +1191,63 @@
      "platform": "YouTube",
      "mb": 0.0,
      "url": "https://drive.google.com/file/d/1pyv9LoKJ8ncz5_dbPB08tGrknyq0Hv9V/view?usp=drivesdk"
+    }
+   ]
+  },
+  "nz_ind_1st_test_gill": {
+   "state": "posted",
+   "series": "02 The Replay Room",
+   "episode": "Ep10 - India vs New Zealand 1st Test Did India Quit Too Soon [posted]",
+   "folder": "https://drive.google.com/drive/folders/1-vo_dTkETANZ7hSjGrvEcAPYMuxVwu2O",
+   "files": [
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16_IG_cover.jpg",
+     "kind": "cover",
+     "platform": "Instagram",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1vcI2qvBuNEgcegkeODuP34oXz47UxgSL/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16_IG_caption.txt",
+     "kind": "text",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1G9KBh7urCHNRmrOifftaXN_2_MYkzGEz/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16_IG.srt",
+     "kind": "subtitles",
+     "platform": "Instagram",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1wUt-8aaldmAkzp2tQwdoD9Ae8glWKCju/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16_IG.mp4",
+     "kind": "short",
+     "platform": "Instagram",
+     "mb": 16.1,
+     "url": "https://drive.google.com/file/d/1iTK-jjo8bv9aIDp6wLquJTQvMnm9hOFq/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16_cover.jpg",
+     "kind": "cover",
+     "platform": "YouTube",
+     "mb": 0.1,
+     "url": "https://drive.google.com/file/d/1P5nsrKohUbswTiEZvHkvrAUMhWYcuw9m/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16.srt",
+     "kind": "subtitles",
+     "platform": "YouTube",
+     "mb": 0.0,
+     "url": "https://drive.google.com/file/d/1SuG823VkoE__tFU1bbxUlXveJ0_CF95f/view?usp=drivesdk"
+    },
+    {
+     "name": "Replay_Room_Ep10_India_vs_New_Zealand_1st_Test_Did_India_Quit_Too_Soon_Short_9x16.mp4",
+     "kind": "short",
+     "platform": "YouTube",
+     "mb": 15.7,
+     "url": "https://drive.google.com/file/d/1MTL0aUIzDzgC6sDwq_bwGku0_a8nO-TM/view?usp=drivesdk"
     }
    ]
   },
@@ -3876,7 +3933,8 @@
     "nz_ind_1st_test_day3",
     "nz_ind_1st_test_day4",
     "nz_ind_1st_test_day5",
-    "nz_ind_1st_test_long"
+    "nz_ind_1st_test_long",
+    "nz_ind_1st_test_gill"
    ]
   },
   "03 Tactics Board": {

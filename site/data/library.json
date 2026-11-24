@@ -765,6 +765,23 @@
    ]
   },
   {
+   "slug": "nz_ind_1st_test_gill",
+   "title": "Did Gill Quit Too Soon? We Simulated the Last 15 Overs | India vs New Zealand 1st Test",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "10",
+   "long": null,
+   "short": "2:42",
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "Ball-by-ball for Day 5 (New Zealand 239/5): Cricbuzz full commentary for New Zealand v India, 1st Test, 23 November 2026 (owner's capture; Gill's quote is from the post-match interview). https://www.cricbuzz.com/live-cricket-full-commentary/161285/nz-vs-ind-1st-test-india-tour-of-new-zealand-2026",
+    "Model: dismissal hazards by balls faced from Cricsheet men's Test ball-by-ball (899 matches since 2001-06, cricsheet.org, ODC-BY), scaled to this pitch with New Zealand's second innings (3 dismissals against 7.06 expected), 100,000 simulated finishes per scenario: analysis/gill_sim.py, gill_sim2.py, gill_pitch.py. A model of dismissal risk, not a prediction."
+   ]
+  },
+  {
    "slug": "nz_ind_1st_test_long",
    "title": "India vs New Zealand - 1st Test Analysis | How India Needed 8 and Took 3",
    "format": "replay",
