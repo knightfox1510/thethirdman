@@ -1,13 +1,13 @@
 {
- "synced": "2026-11-23",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa); 22 Nov: AP/Sitka Sentinel (day three stumps 486/4), Tribune/ANI + Outlook (day four lunch 629/6), Sky Sports + Cricinfo (1st T20I result, 2nd T20I 24 Nov Carrara), myKhel (Santner out); 23 Nov: Dawn/AFP + Outlook (720/9d record, NZ 119/2 day-four stumps), Tribune/AP (day five lunch NZ 157/4), Khaleej Times (Sooryavanshi youngest T20 captain)",
+ "synced": "2026-11-24",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa); 22 Nov: AP/Sitka Sentinel (day three stumps 486/4), Tribune/ANI + Outlook (day four lunch 629/6), Sky Sports + Cricinfo (1st T20I result, 2nd T20I 24 Nov Carrara), myKhel (Santner out); 23 Nov: Dawn/AFP + Outlook (720/9d record, NZ 119/2 day-four stumps), Tribune/AP (day five lunch NZ 157/4), Khaleej Times (Sooryavanshi youngest T20 captain); 24 Nov: Cricinfo match report + Cricket Times (1st Test drawn, NZ 239/5, Nicholls POTM), WION (MI captaincy report, unconfirmed)",
  "items": [
   {
    "date": "2026-11-19",
    "event": "1st Test (19–23 Nov)",
    "teams": "NZ v India",
    "venue": "Wellington (Basin Reserve)",
-   "status": "Day five: NZ 368 & 157/4 at lunch (195 behind); India 720/9d (record total in NZ). Result due 23 Nov",
+   "status": "Drawn: NZ 368 & 239/5 (120 ov) v India 720/9d (record India away total); Nicholls POTM; series 0-0",
    "format": "replay"
   },
   {
@@ -39,7 +39,7 @@
    "event": "2nd Test (27 Nov–1 Dec)",
    "teams": "NZ v India",
    "venue": "Christchurch",
-   "status": "Upcoming",
+   "status": "Upcoming: series decider (0-0 after the Wellington draw)",
    "format": "tactics"
   },
   {
