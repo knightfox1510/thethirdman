@@ -354,6 +354,7 @@
       "s"
      ]
     ],
+    "batter_top": true,
     "photo": {
      "img": "data/licensed/in/vaibhav_portrait.jpg",
      "crop": [
@@ -542,13 +543,26 @@
      "sub": "THE TECHNIQUE · 1 OF 4"
     },
     "img": "data/licensed/in/vaibhav_technique_ref.jpg",
-    "box": [
-     370,
-     40,
-     520,
-     240
+    "crop": [
+     110,
+     0,
+     510,
+     608
     ],
-    "zoom": 1.0,
+    "mask": [
+     [
+      476,
+      76,
+      512,
+      90
+     ],
+     [
+      476,
+      462,
+      512,
+      478
+     ]
+    ],
     "ring": [
      435,
      95,
@@ -569,13 +583,26 @@
      "sub": "THE TECHNIQUE · 2 OF 4"
     },
     "img": "data/licensed/in/vaibhav_technique_ref.jpg",
-    "box": [
-     250,
-     190,
-     500,
-     330
+    "crop": [
+     110,
+     0,
+     510,
+     608
     ],
-    "zoom": 1.0,
+    "mask": [
+     [
+      476,
+      76,
+      512,
+      90
+     ],
+     [
+      476,
+      462,
+      512,
+      478
+     ]
+    ],
     "ring": [
      360,
      270,
@@ -596,13 +623,26 @@
      "sub": "THE TECHNIQUE · 3 OF 4"
     },
     "img": "data/licensed/in/vaibhav_technique_graphic2.png",
-    "box": [
-     440,
-     330,
+    "crop": [
+     215,
+     0,
      600,
-     580
+     595
     ],
-    "zoom": 1.0,
+    "mask": [
+     [
+      546,
+      416,
+      600,
+      436
+     ],
+     [
+      596,
+      236,
+      600,
+      254
+     ]
+    ],
     "ring": [
      500,
      470,

@@ -29,16 +29,25 @@ def sc_wagon(c, g, t, D, s):
     c.drawCircle(cx, cy, R + 10, paint((0, 0, 0), .10 * a, blur=22))
     c.drawCircle(cx, cy, R, paint((226, 233, 214), a))
     c.drawCircle(cx, cy, R, paint(gfx.INK, a, stroke=4)); ip = paint(gfx.INK, .35 * a, stroke=2); c.drawCircle(cx, cy, R * .5, ip)
-    rrect(c, cx - 15, cy - 70 * (R / 400), 30, 140 * (R / 400), 4, (214, 196, 150), a)
-    for k in range(-1, 2): c.drawRect(skia.Rect.MakeXYWH(cx + k * 8 - 1.5, cy - 72 * (R / 400), 3, 9), paint(gfx.INK, a))
-    text(c, "OFF SIDE", cx + R - 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "r", track=2); text(c, "LEG SIDE", cx - R + 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "l", track=2)
-    text(c, "STRAIGHT", cx, cy - R - 16, 20, "monoSB", gfx.MUTED, a, "c", track=2)
+    fl = bool(s.get("batter_top"))                                  # batter at the top end of the pitch, bowler at the bottom: straight is DOWN the page
+    if fl:
+        sl = 150 * (R / 400); rrect(c, cx - 15, cy - 8, 30, sl, 4, (214, 196, 150), a)
+        for yy in (cy - 8, cy - 8 + sl - 9):
+            for k in range(-1, 2): c.drawRect(skia.Rect.MakeXYWH(cx + k * 8 - 1.5, yy, 3, 9), paint(gfx.INK, a))
+        text(c, "BATTER", cx + 30, cy - 12, 17, "monoSB", gfx.MUTED, a, "l", track=1); text(c, "BOWLER", cx + 30, cy + sl + 6, 17, "monoSB", gfx.MUTED, a, "l", track=1)
+        text(c, "OFF SIDE", cx + R - 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "r", track=2); text(c, "LEG SIDE", cx - R + 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "l", track=2)
+        text(c, "STRAIGHT", cx, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "c", track=2); text(c, "BEHIND THE WICKET", cx, cy - R - 16, 20, "monoSB", gfx.MUTED, a, "c", track=2)
+    else:
+        rrect(c, cx - 15, cy - 70 * (R / 400), 30, 140 * (R / 400), 4, (214, 196, 150), a)
+        for k in range(-1, 2): c.drawRect(skia.Rect.MakeXYWH(cx + k * 8 - 1.5, cy - 72 * (R / 400), 3, 9), paint(gfx.INK, a))
+        text(c, "OFF SIDE", cx + R - 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "r", track=2); text(c, "LEG SIDE", cx - R + 10, cy + R + 44, 22, "monoSB", gfx.MUTED, a, "l", track=2)
+        text(c, "STRAIGHT", cx, cy - R - 16, 20, "monoSB", gfx.MUTED, a, "c", track=2)
     shots = s["pts"]; n = len(shots); shown = eo(prog(t, .2, max(.8, D * .75))) * n
     for i, (ang, runs, kind) in enumerate(shots):
         q = clamp(shown - i)
         if q <= 0: continue
         th = math.radians(ang + _jit(i)); ln = R * {1: .30, 2: .52, 3: .74}.get(runs, 1.0) * (1.0 if kind != "s" else 1.04) * (.35 + .65 * q) if kind in ("f", "s") or runs in (1, 2, 3) else R * .4 * q
-        x2 = cx + math.sin(th) * ln; y2 = cy - math.cos(th) * ln
+        x2 = cx + math.sin(th) * ln; y2 = cy + (1 if s.get("batter_top") else -1) * math.cos(th) * ln
         col = LK.RED if kind == "s" else (AMB if kind == "f" else gfx.INK)
         p = paint(col, (.95 if kind in ("f", "s") else .45) * q); p.setStrokeWidth(5 if kind == "s" else (4 if kind == "f" else 2)); c.drawLine(cx, cy, x2, y2, p)
         if kind in ("f", "s"): c.drawCircle(x2, y2, 9 if kind == "s" else 7, paint(col, q))
