@@ -1,0 +1,1515 @@
+{
+ "ipl": {
+  "all": {
+   "balls": 449,
+   "runs": 1028,
+   "outs": 23,
+   "sr": 229.0,
+   "avg": 44.7,
+   "fours": 81,
+   "sixes": 96,
+   "dot_pct": 33.6,
+   "bpb": 2.5
+  },
+  "inns": 23,
+  "2025": {
+   "balls": 122,
+   "runs": 252,
+   "outs": 7,
+   "sr": 206.6,
+   "avg": 36.0,
+   "fours": 18,
+   "sixes": 24,
+   "dot_pct": 36.1,
+   "bpb": 2.9,
+   "inns": 7
+  },
+  "2026": {
+   "balls": 327,
+   "runs": 776,
+   "outs": 16,
+   "sr": 237.3,
+   "avg": 48.5,
+   "fours": 63,
+   "sixes": 72,
+   "dot_pct": 32.7,
+   "bpb": 2.4,
+   "inns": 16
+  },
+  "by_kind": {
+   "left-arm pace": {
+    "balls": 55,
+    "runs": 114,
+    "outs": 3,
+    "sr": 207.3,
+    "avg": 38.0,
+    "fours": 10,
+    "sixes": 11,
+    "dot_pct": 45.5,
+    "bpb": 2.6
+   },
+   "left-arm spin": {
+    "balls": 30,
+    "runs": 89,
+    "outs": 2,
+    "sr": 296.7,
+    "avg": 44.5,
+    "fours": 6,
+    "sixes": 9,
+    "dot_pct": 16.7,
+    "bpb": 2.0
+   },
+   "off-spin": {
+    "balls": 59,
+    "runs": 108,
+    "outs": 2,
+    "sr": 183.1,
+    "avg": 54.0,
+    "fours": 5,
+    "sixes": 11,
+    "dot_pct": 35.6,
+    "bpb": 3.7
+   },
+   "right-arm pace": {
+    "balls": 286,
+    "runs": 690,
+    "outs": 14,
+    "sr": 241.3,
+    "avg": 49.3,
+    "fours": 58,
+    "sixes": 63,
+    "dot_pct": 32.5,
+    "bpb": 2.4
+   }
+  },
+  "pace_vs_spin": {
+   "spin": {
+    "balls": 108,
+    "runs": 224,
+    "outs": 6,
+    "sr": 207.4,
+    "avg": 37.3,
+    "fours": 13,
+    "sixes": 22,
+    "dot_pct": 30.6,
+    "bpb": 3.1
+   },
+   "pace": {
+    "balls": 341,
+    "runs": 804,
+    "outs": 17,
+    "sr": 235.8,
+    "avg": 47.3,
+    "fours": 68,
+    "sixes": 74,
+    "dot_pct": 34.6,
+    "bpb": 2.4
+   }
+  },
+  "by_phase": {
+   "death": {
+    "balls": 10,
+    "runs": 29,
+    "outs": 1,
+    "sr": 290.0,
+    "avg": 29.0,
+    "fours": 2,
+    "sixes": 3,
+    "dot_pct": 30.0,
+    "bpb": 2.0
+   },
+   "middle": {
+    "balls": 146,
+    "runs": 334,
+    "outs": 11,
+    "sr": 228.8,
+    "avg": 30.4,
+    "fours": 20,
+    "sixes": 33,
+    "dot_pct": 25.3,
+    "bpb": 2.8
+   },
+   "powerplay": {
+    "balls": 293,
+    "runs": 665,
+    "outs": 11,
+    "sr": 227.0,
+    "avg": 60.5,
+    "fours": 59,
+    "sixes": 60,
+    "dot_pct": 37.9,
+    "bpb": 2.5
+   }
+  },
+  "by_balls_faced": {
+   "balls 1-10": {
+    "balls": 193,
+    "runs": 401,
+    "outs": 5,
+    "sr": 207.8,
+    "avg": 80.2,
+    "fours": 38,
+    "sixes": 33,
+    "dot_pct": 38.9,
+    "bpb": 2.7
+   },
+   "balls 11-25": {
+    "balls": 180,
+    "runs": 438,
+    "outs": 10,
+    "sr": 243.3,
+    "avg": 43.8,
+    "fours": 32,
+    "sixes": 43,
+    "dot_pct": 30.6,
+    "bpb": 2.4
+   },
+   "balls 26+": {
+    "balls": 76,
+    "runs": 189,
+    "outs": 8,
+    "sr": 248.7,
+    "avg": 23.6,
+    "fours": 11,
+    "sixes": 20,
+    "dot_pct": 27.6,
+    "bpb": 2.5
+   }
+  },
+  "innings": [
+   {
+    "fixture": 65578,
+    "date": "2025-04-19",
+    "opp": "Lucknow Super Giants",
+    "balls": 20,
+    "runs": 34,
+    "fours": 2,
+    "sixes": 3,
+    "out": true,
+    "sr": 170.0,
+    "po": false
+   },
+   {
+    "fixture": 65584,
+    "date": "2025-04-24",
+    "opp": "Royal Challengers Bengaluru",
+    "balls": 12,
+    "runs": 16,
+    "fours": 0,
+    "sixes": 2,
+    "out": true,
+    "sr": 133.3,
+    "po": false
+   },
+   {
+    "fixture": 65589,
+    "date": "2025-04-28",
+    "opp": "Gujarat Titans",
+    "balls": 38,
+    "runs": 101,
+    "fours": 7,
+    "sixes": 11,
+    "out": true,
+    "sr": 265.8,
+    "po": false
+   },
+   {
+    "fixture": 65592,
+    "date": "2025-05-01",
+    "opp": "Mumbai Indians",
+    "balls": 2,
+    "runs": 0,
+    "fours": 0,
+    "sixes": 0,
+    "out": true,
+    "sr": 0.0,
+    "po": false
+   },
+   {
+    "fixture": 65595,
+    "date": "2025-05-04",
+    "opp": "Kolkata Knight Riders",
+    "balls": 2,
+    "runs": 4,
+    "fours": 1,
+    "sixes": 0,
+    "out": true,
+    "sr": 200.0,
+    "po": false
+   },
+   {
+    "fixture": 65609,
+    "date": "2025-05-18",
+    "opp": "Punjab Kings",
+    "balls": 15,
+    "runs": 40,
+    "fours": 4,
+    "sixes": 4,
+    "out": true,
+    "sr": 266.7,
+    "po": false
+   },
+   {
+    "fixture": 65605,
+    "date": "2025-05-20",
+    "opp": "Chennai Super Kings",
+    "balls": 33,
+    "runs": 57,
+    "fours": 4,
+    "sixes": 4,
+    "out": true,
+    "sr": 172.7,
+    "po": false
+   },
+   {
+    "fixture": 69520,
+    "date": "2026-03-30",
+    "opp": "Chennai Super Kings",
+    "balls": 17,
+    "runs": 52,
+    "fours": 4,
+    "sixes": 5,
+    "out": true,
+    "sr": 305.9,
+    "po": false
+   },
+   {
+    "fixture": 69526,
+    "date": "2026-04-04",
+    "opp": "Gujarat Titans",
+    "balls": 18,
+    "runs": 31,
+    "fours": 5,
+    "sixes": 1,
+    "out": true,
+    "sr": 172.2,
+    "po": false
+   },
+   {
+    "fixture": 69530,
+    "date": "2026-04-07",
+    "opp": "Mumbai Indians",
+    "balls": 14,
+    "runs": 39,
+    "fours": 1,
+    "sixes": 5,
+    "out": true,
+    "sr": 278.6,
+    "po": false
+   },
+   {
+    "fixture": 69533,
+    "date": "2026-04-10",
+    "opp": "Royal Challengers Bengaluru",
+    "balls": 26,
+    "runs": 78,
+    "fours": 8,
+    "sixes": 7,
+    "out": true,
+    "sr": 300.0,
+    "po": false
+   },
+   {
+    "fixture": 69615,
+    "date": "2026-04-13",
+    "opp": "Sunrisers Hyderabad",
+    "balls": 1,
+    "runs": 0,
+    "fours": 0,
+    "sixes": 0,
+    "out": true,
+    "sr": 0.0,
+    "po": false
+   },
+   {
+    "fixture": 69622,
+    "date": "2026-04-19",
+    "opp": "Kolkata Knight Riders",
+    "balls": 28,
+    "runs": 46,
+    "fours": 6,
+    "sixes": 2,
+    "out": true,
+    "sr": 164.3,
+    "po": false
+   },
+   {
+    "fixture": 69626,
+    "date": "2026-04-22",
+    "opp": "Lucknow Super Giants",
+    "balls": 11,
+    "runs": 8,
+    "fours": 2,
+    "sixes": 0,
+    "out": true,
+    "sr": 72.7,
+    "po": false
+   },
+   {
+    "fixture": 69630,
+    "date": "2026-04-25",
+    "opp": "Sunrisers Hyderabad",
+    "balls": 37,
+    "runs": 103,
+    "fours": 5,
+    "sixes": 12,
+    "out": true,
+    "sr": 278.4,
+    "po": false
+   },
+   {
+    "fixture": 69634,
+    "date": "2026-04-28",
+    "opp": "Punjab Kings",
+    "balls": 16,
+    "runs": 43,
+    "fours": 3,
+    "sixes": 5,
+    "out": true,
+    "sr": 268.8,
+    "po": false
+   },
+   {
+    "fixture": 69637,
+    "date": "2026-05-01",
+    "opp": "Delhi Capitals",
+    "balls": 2,
+    "runs": 4,
+    "fours": 1,
+    "sixes": 0,
+    "out": true,
+    "sr": 200.0,
+    "po": false
+   },
+   {
+    "fixture": 69646,
+    "date": "2026-05-09",
+    "opp": "Gujarat Titans",
+    "balls": 16,
+    "runs": 36,
+    "fours": 3,
+    "sixes": 3,
+    "out": true,
+    "sr": 225.0,
+    "po": false
+   },
+   {
+    "fixture": 69656,
+    "date": "2026-05-17",
+    "opp": "Delhi Capitals",
+    "balls": 21,
+    "runs": 46,
+    "fours": 5,
+    "sixes": 3,
+    "out": true,
+    "sr": 219.0,
+    "po": false
+   },
+   {
+    "fixture": 69658,
+    "date": "2026-05-19",
+    "opp": "Lucknow Super Giants",
+    "balls": 38,
+    "runs": 93,
+    "fours": 7,
+    "sixes": 10,
+    "out": true,
+    "sr": 244.7,
+    "po": false
+   },
+   {
+    "fixture": 69663,
+    "date": "2026-05-24",
+    "opp": "Mumbai Indians",
+    "balls": 6,
+    "runs": 4,
+    "fours": 0,
+    "sixes": 0,
+    "out": true,
+    "sr": 66.7,
+    "po": false
+   },
+   {
+    "fixture": 69666,
+    "date": "2026-05-27",
+    "opp": "Sunrisers Hyderabad",
+    "balls": 29,
+    "runs": 97,
+    "fours": 5,
+    "sixes": 12,
+    "out": true,
+    "sr": 334.5,
+    "po": true
+   },
+   {
+    "fixture": 69667,
+    "date": "2026-05-29",
+    "opp": "Gujarat Titans",
+    "balls": 47,
+    "runs": 96,
+    "fours": 8,
+    "sixes": 7,
+    "out": true,
+    "sr": 204.3,
+    "po": true
+   }
+  ],
+  "table": {
+   "2025": [
+    [
+     "Royal Challengers Bengaluru",
+     12
+    ],
+    [
+     "Mumbai Indians",
+     10
+    ],
+    [
+     "Punjab Kings",
+     9
+    ],
+    [
+     "Gujarat Titans",
+     7
+    ],
+    [
+     "Sunrisers Hyderabad",
+     6
+    ],
+    [
+     "Lucknow Super Giants",
+     6
+    ],
+    [
+     "Rajasthan Royals",
+     6
+    ],
+    [
+     "Delhi Capitals",
+     5
+    ],
+    [
+     "Chennai Super Kings",
+     4
+    ],
+    [
+     "Kolkata Knight Riders",
+     3
+    ]
+   ],
+   "2026": [
+    [
+     "Rajasthan Royals",
+     11
+    ],
+    [
+     "Gujarat Titans",
+     10
+    ],
+    [
+     "Sunrisers Hyderabad",
+     9
+    ],
+    [
+     "Royal Challengers Bengaluru",
+     8
+    ],
+    [
+     "Chennai Super Kings",
+     7
+    ],
+    [
+     "Kolkata Knight Riders",
+     7
+    ],
+    [
+     "Punjab Kings",
+     6
+    ],
+    [
+     "Delhi Capitals",
+     6
+    ],
+    [
+     "Lucknow Super Giants",
+     4
+    ],
+    [
+     "Mumbai Indians",
+     3
+    ]
+   ]
+  },
+  "vs_top4": {
+   "top4": {
+    "balls": 241,
+    "runs": 598,
+    "outs": 11,
+    "sr": 248.1,
+    "avg": 54.4,
+    "fours": 45,
+    "sixes": 59,
+    "dot_pct": 33.2,
+    "bpb": 2.3
+   },
+   "rest": {
+    "balls": 208,
+    "runs": 430,
+    "outs": 12,
+    "sr": 206.7,
+    "avg": 35.8,
+    "fours": 36,
+    "sixes": 37,
+    "dot_pct": 34.1,
+    "bpb": 2.8
+   }
+  },
+  "playoffs": {
+   "balls": 76,
+   "runs": 193,
+   "outs": 2,
+   "sr": 253.9,
+   "avg": 96.5,
+   "fours": 13,
+   "sixes": 19,
+   "dot_pct": 27.6,
+   "bpb": 2.4
+  },
+  "league": {
+   "balls": 373,
+   "runs": 835,
+   "outs": 21,
+   "sr": 223.9,
+   "avg": 39.8,
+   "fours": 68,
+   "sixes": 77,
+   "dot_pct": 34.9,
+   "bpb": 2.6
+  },
+  "by_opp": {
+   "Chennai Super Kings": {
+    "balls": 50,
+    "runs": 109,
+    "outs": 2,
+    "sr": 218.0,
+    "avg": 54.5,
+    "fours": 8,
+    "sixes": 9,
+    "dot_pct": 20.0,
+    "bpb": 2.9
+   },
+   "Delhi Capitals": {
+    "balls": 23,
+    "runs": 50,
+    "outs": 2,
+    "sr": 217.4,
+    "avg": 25.0,
+    "fours": 6,
+    "sixes": 3,
+    "dot_pct": 26.1,
+    "bpb": 2.6
+   },
+   "Gujarat Titans": {
+    "balls": 119,
+    "runs": 264,
+    "outs": 4,
+    "sr": 221.8,
+    "avg": 66.0,
+    "fours": 23,
+    "sixes": 22,
+    "dot_pct": 32.8,
+    "bpb": 2.6
+   },
+   "Kolkata Knight Riders": {
+    "balls": 30,
+    "runs": 50,
+    "outs": 2,
+    "sr": 166.7,
+    "avg": 25.0,
+    "fours": 7,
+    "sixes": 2,
+    "dot_pct": 36.7,
+    "bpb": 3.3
+   },
+   "Lucknow Super Giants": {
+    "balls": 69,
+    "runs": 135,
+    "outs": 3,
+    "sr": 195.7,
+    "avg": 45.0,
+    "fours": 11,
+    "sixes": 13,
+    "dot_pct": 46.4,
+    "bpb": 2.9
+   },
+   "Mumbai Indians": {
+    "balls": 22,
+    "runs": 43,
+    "outs": 3,
+    "sr": 195.5,
+    "avg": 14.3,
+    "fours": 1,
+    "sixes": 5,
+    "dot_pct": 31.8,
+    "bpb": 3.7
+   },
+   "Punjab Kings": {
+    "balls": 31,
+    "runs": 83,
+    "outs": 2,
+    "sr": 267.7,
+    "avg": 41.5,
+    "fours": 7,
+    "sixes": 9,
+    "dot_pct": 45.2,
+    "bpb": 1.9
+   },
+   "Royal Challengers Bengaluru": {
+    "balls": 38,
+    "runs": 94,
+    "outs": 2,
+    "sr": 247.4,
+    "avg": 47.0,
+    "fours": 8,
+    "sixes": 9,
+    "dot_pct": 36.8,
+    "bpb": 2.2
+   },
+   "Sunrisers Hyderabad": {
+    "balls": 67,
+    "runs": 200,
+    "outs": 3,
+    "sr": 298.5,
+    "avg": 66.7,
+    "fours": 10,
+    "sixes": 24,
+    "dot_pct": 26.9,
+    "bpb": 2.0
+   }
+  },
+  "bowlers": [
+   {
+    "bowler": "Praful Hinge",
+    "balls": 17,
+    "runs": 57,
+    "outs": 2,
+    "kind": "right-arm pace",
+    "sr": 335.0
+   },
+   {
+    "bowler": "Mohsin Khan",
+    "balls": 12,
+    "runs": 2,
+    "outs": 2,
+    "kind": "left-arm pace",
+    "sr": 17.0
+   },
+   {
+    "bowler": "Deepak Chahar",
+    "balls": 5,
+    "runs": 2,
+    "outs": 2,
+    "kind": "right-arm pace",
+    "sr": 40.0
+   },
+   {
+    "bowler": "Mohammed Siraj",
+    "balls": 35,
+    "runs": 68,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 194.0
+   },
+   {
+    "bowler": "Kagiso Rabada",
+    "balls": 23,
+    "runs": 43,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 187.0
+   },
+   {
+    "bowler": "Bhuvneshwar Kumar",
+    "balls": 19,
+    "runs": 39,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 205.0
+   },
+   {
+    "bowler": "Sakib Hussain",
+    "balls": 19,
+    "runs": 59,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 311.0
+   },
+   {
+    "bowler": "Prasidh Krishna",
+    "balls": 14,
+    "runs": 15,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 107.0
+   },
+   {
+    "bowler": "Arshdeep Singh",
+    "balls": 13,
+    "runs": 36,
+    "outs": 1,
+    "kind": "left-arm pace",
+    "sr": 277.0
+   },
+   {
+    "bowler": "Rashid Khan",
+    "balls": 12,
+    "runs": 20,
+    "outs": 1,
+    "kind": "leg-spin",
+    "sr": 167.0
+   },
+   {
+    "bowler": "Anshul Kamboj",
+    "balls": 9,
+    "runs": 20,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 222.0
+   },
+   {
+    "bowler": "Shardul Thakur",
+    "balls": 9,
+    "runs": 25,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 278.0
+   },
+   {
+    "bowler": "Ravichandran Ashwin",
+    "balls": 8,
+    "runs": 5,
+    "outs": 1,
+    "kind": "off-spin",
+    "sr": 62.0
+   },
+   {
+    "bowler": "Vaibhav Arora",
+    "balls": 8,
+    "runs": 19,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 238.0
+   },
+   {
+    "bowler": "Aiden Markram",
+    "balls": 4,
+    "runs": 2,
+    "outs": 1,
+    "kind": "off-spin",
+    "sr": 50.0
+   },
+   {
+    "bowler": "Krunal Pandya",
+    "balls": 4,
+    "runs": 8,
+    "outs": 1,
+    "kind": "left-arm spin",
+    "sr": 200.0
+   },
+   {
+    "bowler": "Harpreet Brar",
+    "balls": 3,
+    "runs": 8,
+    "outs": 1,
+    "kind": "left-arm spin",
+    "sr": 267.0
+   },
+   {
+    "bowler": "Kyle Jamieson",
+    "balls": 2,
+    "runs": 4,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 200.0
+   },
+   {
+    "bowler": "Madhav Tiwari",
+    "balls": 2,
+    "runs": 1,
+    "outs": 1,
+    "kind": "right-arm pace",
+    "sr": 50.0
+   },
+   {
+    "bowler": "Varun Chakaravarthy",
+    "balls": 2,
+    "runs": 1,
+    "outs": 1,
+    "kind": "leg-spin",
+    "sr": 50.0
+   },
+   {
+    "bowler": "Digvesh Rathi",
+    "balls": 13,
+    "runs": 26,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 200.0
+   },
+   {
+    "bowler": "Eshan Malinga",
+    "balls": 13,
+    "runs": 25,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 192.0
+   },
+   {
+    "bowler": "Prince Yadav",
+    "balls": 13,
+    "runs": 35,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 269.0
+   },
+   {
+    "bowler": "Noor Ahmad",
+    "balls": 12,
+    "runs": 38,
+    "outs": 0,
+    "kind": "left-arm spin",
+    "sr": 317.0
+   },
+   {
+    "bowler": "Pat Cummins",
+    "balls": 12,
+    "runs": 38,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 317.0
+   },
+   {
+    "bowler": "Marco Jansen",
+    "balls": 10,
+    "runs": 23,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 230.0
+   },
+   {
+    "bowler": "Mayank Yadav",
+    "balls": 10,
+    "runs": 22,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 220.0
+   },
+   {
+    "bowler": "Washington Sundar",
+    "balls": 10,
+    "runs": 32,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 320.0
+   },
+   {
+    "bowler": "Jason Holder",
+    "balls": 9,
+    "runs": 18,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 200.0
+   },
+   {
+    "bowler": "Kartik Tyagi",
+    "balls": 9,
+    "runs": 15,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 167.0
+   },
+   {
+    "bowler": "Vijay Tripurana",
+    "balls": 9,
+    "runs": 21,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 233.0
+   },
+   {
+    "bowler": "Sunil Narine",
+    "balls": 8,
+    "runs": 7,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 88.0
+   },
+   {
+    "bowler": "Ishant Sharma",
+    "balls": 7,
+    "runs": 27,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 386.0
+   },
+   {
+    "bowler": "Akash Maharaj Singh",
+    "balls": 6,
+    "runs": 24,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 400.0
+   },
+   {
+    "bowler": "Karim Janat",
+    "balls": 6,
+    "runs": 30,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 500.0
+   },
+   {
+    "bowler": "Khaleel Ahmed",
+    "balls": 6,
+    "runs": 10,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 167.0
+   },
+   {
+    "bowler": "Matt Henry",
+    "balls": 6,
+    "runs": 19,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 317.0
+   },
+   {
+    "bowler": "Shivang Kumar",
+    "balls": 6,
+    "runs": 21,
+    "outs": 0,
+    "kind": "left-arm spin",
+    "sr": 350.0
+   },
+   {
+    "bowler": "Abhinandan Singh",
+    "balls": 5,
+    "runs": 15,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 300.0
+   },
+   {
+    "bowler": "Jasprit Bumrah",
+    "balls": 5,
+    "runs": 13,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 260.0
+   },
+   {
+    "bowler": "Lockie Ferguson",
+    "balls": 5,
+    "runs": 16,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 320.0
+   },
+   {
+    "bowler": "Lungi Ngidi",
+    "balls": 5,
+    "runs": 12,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 240.0
+   },
+   {
+    "bowler": "Ravindra Jadeja",
+    "balls": 5,
+    "runs": 14,
+    "outs": 0,
+    "kind": "left-arm spin",
+    "sr": 280.0
+   },
+   {
+    "bowler": "Josh Hazlewood",
+    "balls": 4,
+    "runs": 18,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 450.0
+   },
+   {
+    "bowler": "Matheesha Pathirana",
+    "balls": 4,
+    "runs": 3,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 75.0
+   },
+   {
+    "bowler": "Mitchell Starc",
+    "balls": 4,
+    "runs": 11,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 275.0
+   },
+   {
+    "bowler": "Ravi Bishnoi",
+    "balls": 4,
+    "runs": 5,
+    "outs": 0,
+    "kind": "leg-spin",
+    "sr": 125.0
+   },
+   {
+    "bowler": "Tim David",
+    "balls": 4,
+    "runs": 13,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 325.0
+   },
+   {
+    "bowler": "Ashok Sharma",
+    "balls": 3,
+    "runs": 11,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 367.0
+   },
+   {
+    "bowler": "Avesh Khan",
+    "balls": 3,
+    "runs": 11,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 367.0
+   },
+   {
+    "bowler": "Cameron Green",
+    "balls": 3,
+    "runs": 8,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 267.0
+   },
+   {
+    "bowler": "Will Jacks",
+    "balls": 3,
+    "runs": 2,
+    "outs": 0,
+    "kind": "off-spin",
+    "sr": 67.0
+   },
+   {
+    "bowler": "Hardik Pandya",
+    "balls": 2,
+    "runs": 2,
+    "outs": 0,
+    "kind": "right-arm pace",
+    "sr": 100.0
+   },
+   {
+    "bowler": "Trent Boult",
+    "balls": 2,
+    "runs": 7,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 350.0
+   },
+   {
+    "bowler": "Yash Dayal",
+    "balls": 2,
+    "runs": 1,
+    "outs": 0,
+    "kind": "left-arm pace",
+    "sr": 50.0
+   },
+   {
+    "bowler": "Mukesh Kumar",
+    "balls": 1,
+    "runs": 1,
+    "outs": 0,
+    "kind": "unknown",
+    "sr": 100.0
+   }
+  ],
+  "dismissals": [
+   {
+    "date": "2025-04-19",
+    "bowl_team": "Lucknow Super Giants",
+    "bowler": "Aiden Markram",
+    "bowl_kind": "off-spin",
+    "dismissal": "Stump Out",
+    "nb": "20"
+   },
+   {
+    "date": "2025-04-24",
+    "bowl_team": "Royal Challengers Bengaluru",
+    "bowler": "Bhuvneshwar Kumar",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Clean Bowled",
+    "nb": "12"
+   },
+   {
+    "date": "2025-04-28",
+    "bowl_team": "Gujarat Titans",
+    "bowler": "Prasidh Krishna",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Clean Bowled",
+    "nb": "38"
+   },
+   {
+    "date": "2025-05-01",
+    "bowl_team": "Mumbai Indians",
+    "bowler": "Deepak Chahar",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "2"
+   },
+   {
+    "date": "2025-05-04",
+    "bowl_team": "Kolkata Knight Riders",
+    "bowler": "Vaibhav Arora",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "2"
+   },
+   {
+    "date": "2025-05-18",
+    "bowl_team": "Punjab Kings",
+    "bowler": "Harpreet Brar",
+    "bowl_kind": "left-arm spin",
+    "dismissal": "Catch Out",
+    "nb": "15"
+   },
+   {
+    "date": "2025-05-20",
+    "bowl_team": "Chennai Super Kings",
+    "bowler": "Ravichandran Ashwin",
+    "bowl_kind": "off-spin",
+    "dismissal": "Catch Out",
+    "nb": "33"
+   },
+   {
+    "date": "2026-03-30",
+    "bowl_team": "Chennai Super Kings",
+    "bowler": "Anshul Kamboj",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "17"
+   },
+   {
+    "date": "2026-04-04",
+    "bowl_team": "Gujarat Titans",
+    "bowler": "Rashid Khan",
+    "bowl_kind": "leg-spin",
+    "dismissal": "Catch Out",
+    "nb": "18"
+   },
+   {
+    "date": "2026-04-07",
+    "bowl_team": "Mumbai Indians",
+    "bowler": "Shardul Thakur",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "14"
+   },
+   {
+    "date": "2026-04-10",
+    "bowl_team": "Royal Challengers Bengaluru",
+    "bowler": "Krunal Pandya",
+    "bowl_kind": "left-arm spin",
+    "dismissal": "Catch Out",
+    "nb": "26"
+   },
+   {
+    "date": "2026-04-13",
+    "bowl_team": "Sunrisers Hyderabad",
+    "bowler": "Praful Hinge",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "1"
+   },
+   {
+    "date": "2026-04-19",
+    "bowl_team": "Kolkata Knight Riders",
+    "bowler": "Varun Chakaravarthy",
+    "bowl_kind": "leg-spin",
+    "dismissal": "Catch Out",
+    "nb": "28"
+   },
+   {
+    "date": "2026-04-22",
+    "bowl_team": "Lucknow Super Giants",
+    "bowler": "Mohsin Khan",
+    "bowl_kind": "left-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "11"
+   },
+   {
+    "date": "2026-04-25",
+    "bowl_team": "Sunrisers Hyderabad",
+    "bowler": "Sakib Hussain",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "LBW OUT",
+    "nb": "37"
+   },
+   {
+    "date": "2026-04-28",
+    "bowl_team": "Punjab Kings",
+    "bowler": "Arshdeep Singh",
+    "bowl_kind": "left-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "16"
+   },
+   {
+    "date": "2026-05-01",
+    "bowl_team": "Delhi Capitals",
+    "bowler": "Kyle Jamieson",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Clean Bowled",
+    "nb": "2"
+   },
+   {
+    "date": "2026-05-09",
+    "bowl_team": "Gujarat Titans",
+    "bowler": "Mohammed Siraj",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "16"
+   },
+   {
+    "date": "2026-05-17",
+    "bowl_team": "Delhi Capitals",
+    "bowler": "Madhav Tiwari",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "21"
+   },
+   {
+    "date": "2026-05-19",
+    "bowl_team": "Lucknow Super Giants",
+    "bowler": "Mohsin Khan",
+    "bowl_kind": "left-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "38"
+   },
+   {
+    "date": "2026-05-24",
+    "bowl_team": "Mumbai Indians",
+    "bowler": "Deepak Chahar",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "6"
+   },
+   {
+    "date": "2026-05-27",
+    "bowl_team": "Sunrisers Hyderabad",
+    "bowler": "Praful Hinge",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "29"
+   },
+   {
+    "date": "2026-05-29",
+    "bowl_team": "Gujarat Titans",
+    "bowler": "Kagiso Rabada",
+    "bowl_kind": "right-arm pace",
+    "dismissal": "Catch Out",
+    "nb": "47"
+   }
+  ],
+  "dismissal_types": {
+   "Stump Out": 1,
+   "Clean Bowled": 3,
+   "Catch Out": 18,
+   "LBW OUT": 1
+  }
+ },
+ "t20i": [
+  {
+   "date": "2026-07-04",
+   "event": "India tour of England",
+   "teams": [
+    "India",
+    "England"
+   ],
+   "venue": "Old Trafford",
+   "runs": 14,
+   "balls": 10,
+   "fours": 0,
+   "sixes": 2,
+   "out": "stumped",
+   "bowler": "WG Jacks",
+   "kind": null,
+   "stage": null,
+   "dots": 6
+  },
+  {
+   "date": "2026-07-07",
+   "event": "India tour of England",
+   "teams": [
+    "England",
+    "India"
+   ],
+   "venue": "Trent Bridge",
+   "runs": 13,
+   "balls": 5,
+   "fours": 0,
+   "sixes": 2,
+   "out": "caught",
+   "bowler": "JC Archer",
+   "kind": null,
+   "stage": null,
+   "dots": 2
+  },
+  {
+   "date": "2026-07-09",
+   "event": "India tour of England",
+   "teams": [
+    "India",
+    "England"
+   ],
+   "venue": "County Ground, Bristol",
+   "runs": 15,
+   "balls": 10,
+   "fours": 1,
+   "sixes": 1,
+   "out": "caught",
+   "bowler": "JC Archer",
+   "kind": null,
+   "stage": null,
+   "dots": 5
+  },
+  {
+   "date": "2026-07-23",
+   "event": "India tour of Zimbabwe",
+   "teams": [
+    "Zimbabwe",
+    "India"
+   ],
+   "venue": "Harare Sports Club",
+   "runs": 50,
+   "balls": 19,
+   "fours": 4,
+   "sixes": 4,
+   "out": "caught",
+   "bowler": "R Ngarava",
+   "kind": null,
+   "stage": null,
+   "dots": 4
+  },
+  {
+   "date": "2026-07-25",
+   "event": "India tour of Zimbabwe",
+   "teams": [
+    "India",
+    "Zimbabwe"
+   ],
+   "venue": "Harare Sports Club",
+   "runs": 20,
+   "balls": 9,
+   "fours": 3,
+   "sixes": 1,
+   "out": "caught",
+   "bowler": "R Ngarava",
+   "kind": null,
+   "stage": null,
+   "dots": 3
+  },
+  {
+   "date": "2026-07-26",
+   "event": "India tour of Zimbabwe",
+   "teams": [
+    "India",
+    "Zimbabwe"
+   ],
+   "venue": "Harare Sports Club",
+   "runs": 81,
+   "balls": 49,
+   "fours": 8,
+   "sixes": 4,
+   "out": "caught",
+   "bowler": "W Madhevere",
+   "kind": null,
+   "stage": null,
+   "dots": 15
+  },
+  {
+   "date": "2026-10-24",
+   "event": "India tour of New Zealand",
+   "teams": [
+    "New Zealand",
+    "India"
+   ],
+   "venue": "Hagley Oval, Christchurch",
+   "runs": 4,
+   "balls": 8,
+   "fours": 0,
+   "sixes": 0,
+   "out": "caught",
+   "bowler": "NG Smith",
+   "kind": null,
+   "stage": null,
+   "dots": 5
+  },
+  {
+   "date": "2026-10-27",
+   "event": "India tour of New Zealand",
+   "teams": [
+    "New Zealand",
+    "India"
+   ],
+   "venue": "Hnry Stadium, Wellington",
+   "runs": 45,
+   "balls": 19,
+   "fours": 4,
+   "sixes": 4,
+   "out": "caught",
+   "bowler": "MJ Fisher",
+   "kind": null,
+   "stage": null,
+   "dots": 7
+  },
+  {
+   "date": "2026-10-01",
+   "event": "Asian Games Men's Cricket Competition",
+   "teams": [
+    "India",
+    "Sri Lanka"
+   ],
+   "venue": "Korogi Sports Park",
+   "runs": 38,
+   "balls": 21,
+   "fours": 6,
+   "sixes": 2,
+   "out": "caught",
+   "bowler": "SSD Arachchige",
+   "kind": null,
+   "stage": "Semi Final",
+   "dots": 11
+  },
+  {
+   "date": "2026-10-03",
+   "event": "Asian Games Men's Cricket Competition",
+   "teams": [
+    "India",
+    "Pakistan"
+   ],
+   "venue": "Korogi Sports Park",
+   "runs": 15,
+   "balls": 9,
+   "fours": 0,
+   "sixes": 2,
+   "out": "caught",
+   "bowler": "Saim Ayub",
+   "kind": null,
+   "stage": "Final",
+   "dots": 4
+  }
+ ]
+}
