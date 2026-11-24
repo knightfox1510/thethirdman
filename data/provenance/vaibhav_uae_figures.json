@@ -1,0 +1,660 @@
+{
+ "innings": {
+  "runs": 204,
+  "balls": 53,
+  "fours": 7,
+  "sixes": 28,
+  "sr": 384.9,
+  "boundary_runs": 196,
+  "boundary_share": 96.1
+ },
+ "milestones_balls": {
+  "50": 16,
+  "100": 28,
+  "150": 40,
+  "200": 52
+ },
+ "by_bowler": {
+  "Zahid Ali": {
+   "balls": 14,
+   "runs": 45,
+   "sixes": 6,
+   "fours": 1
+  },
+  "Ibrar Ahmad": {
+   "balls": 13,
+   "runs": 57,
+   "sixes": 6,
+   "fours": 5
+  },
+  "Basil Hameed": {
+   "balls": 12,
+   "runs": 43,
+   "sixes": 7,
+   "fours": 0
+  },
+  "Simranjeet Singh": {
+   "balls": 5,
+   "runs": 18,
+   "sixes": 3,
+   "fours": 0
+  },
+  "Uddish Suri": {
+   "balls": 9,
+   "runs": 41,
+   "sixes": 6,
+   "fours": 1
+  }
+ },
+ "sixes_placed": 23,
+ "sixes_total": 28,
+ "six_dirs": {
+  "leg_side": 8,
+  "straight": 7,
+  "off_side": 8
+ },
+ "runs_by_over": {
+  "0": 19,
+  "1": 17,
+  "2": 18,
+  "3": 10,
+  "4": 18,
+  "5": 7,
+  "6": 30,
+  "7": 3,
+  "8": 13,
+  "9": 16,
+  "10": 13,
+  "11": 28,
+  "12": 12
+ },
+ "rows": [
+  {
+   "over": 0.1,
+   "bowler": "Zahid Ali",
+   "res": "no run",
+   "runs": 0,
+   "score": 0,
+   "balls": 1,
+   "ang": null,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, no run, starts with a fullish delivery outside off that zips through as the left hander lets it go - that's rare from Vaibhav Sooryavanshi"
+  },
+  {
+   "over": 0.2,
+   "bowler": "Zahid Ali",
+   "res": "no run",
+   "runs": 0,
+   "score": 0,
+   "balls": 2,
+   "ang": null,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, no run, full again and slanting across outside off, Vaibhav Sooryavanshi moves across and drives it to cover"
+  },
+  {
+   "over": 0.3,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 6,
+   "balls": 3,
+   "ang": 0,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, there he goes! After two dot balls, Vaibhav decides it's time to break free. Gets underneath this one and smokes it straight down the ground for a six"
+  },
+  {
+   "over": 0.4,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 12,
+   "balls": 4,
+   "ang": 0,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, you can't afford to bowl that length to this young lad! Go fuller and it will disappear. Zahid will have to figure that out quickly. Right in the hitting zone a"
+  },
+  {
+   "over": 0.5,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 18,
+   "balls": 5,
+   "ang": 62,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, oh no, another one on full! This time Zahid pushes it wide, but that makes little difference as Vaibhav gets underneath it and lofts it over deep extra cover. T"
+  },
+  {
+   "over": 0.6,
+   "bowler": "Zahid Ali",
+   "res": "1 run",
+   "runs": 1,
+   "score": 19,
+   "balls": 6,
+   "ang": -105,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, 1 run, skids through from a length close to off, and the left hander gets an inside half of the bat on his defensive push as the ball trickles towards square leg. Va"
+  },
+  {
+   "over": 1.1,
+   "bowler": "Ibrar Ahmad",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 23,
+   "balls": 7,
+   "ang": 62,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, FOUR, full toss, and that's been struck with tremendous power! Wide outside off, and the left hander extends his arms before drilling it to sweeper cover for a bou"
+  },
+  {
+   "over": 1.2,
+   "bowler": "Ibrar Ahmad",
+   "res": "no run",
+   "runs": 0,
+   "score": 23,
+   "balls": 8,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, no run, fullish again from round the wicket, and Vaibhav slashes it to point"
+  },
+  {
+   "over": 1.3,
+   "bowler": "Ibrar Ahmad",
+   "res": "1 run",
+   "runs": 1,
+   "score": 24,
+   "balls": 9,
+   "ang": 28,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, 1 run, yorker-length angling in around off and Vaibhav Sooryavanshi gets his right leg out of the way and drives it to wide mid-off for a single"
+  },
+  {
+   "over": 1.5,
+   "bowler": "Ibrar Ahmad",
+   "res": "wide",
+   "runs": 0,
+   "score": 24,
+   "balls": 9,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, wide, tries to keep it away from the dangerous bat swing but ends up sending it beyond the wide tramline"
+  },
+  {
+   "over": 1.5,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 30,
+   "balls": 10,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, wow, this is absolute madness, but it's not something we haven't seen from him before! Picks the length early, rocks back and slaps it flat over deep mid wick"
+  },
+  {
+   "over": 1.6,
+   "bowler": "Ibrar Ahmad",
+   "res": "wide",
+   "runs": 0,
+   "score": 30,
+   "balls": 10,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, wide, fullish and very wide, outside the tramline. Vaibhav stretches out to reach it but fails to make contact"
+  },
+  {
+   "over": 1.6,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 36,
+   "balls": 11,
+   "ang": 105,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, this guy just doesn't know when to stop! Not quite sure he got hold of this one, but the result is the same. Another six! Reaches out to the wide delivery and"
+  },
+  {
+   "over": 2.2,
+   "bowler": "Basil Hameed",
+   "res": "no run",
+   "runs": 0,
+   "score": 36,
+   "balls": 12,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, no run, comes in with the arm on the stumps - blocked by Vaibhav Sooryavanshi"
+  },
+  {
+   "over": 2.3,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 42,
+   "balls": 13,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, it's only the third over, and Vaibhav has already smashed six sixes! Rocks back this time and sends the shortish delivery sailing over deep mid wicket for an"
+  },
+  {
+   "over": 2.4,
+   "bowler": "Basil Hameed",
+   "res": "no run",
+   "runs": 0,
+   "score": 42,
+   "balls": 14,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, no run, darts in as Vaibhav Sooryavanshi defends into the surface"
+  },
+  {
+   "over": 2.5,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 48,
+   "balls": 15,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, this is ruthless batting! India A race to 50 in less than three overs. Full again, and the left hander swings across the line, smoking it over deep mid wicke"
+  },
+  {
+   "over": 2.6,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 54,
+   "balls": 16,
+   "ang": -62,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, 50 off just 16 deliveries for the young maverick Vaibhav Sooryavanshi, and he brings it up with a six - of course! That's his eighth maximum already. Doesn't"
+  },
+  {
+   "over": 3.5,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 60,
+   "balls": 17,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, short again from Ibrar, outside off and Vaibhav stands tall before hopping across to ramp it over deep third for another six. He is showing no signs of slowin"
+  },
+  {
+   "over": 3.6,
+   "bowler": "Ibrar Ahmad",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 64,
+   "balls": 18,
+   "ang": null,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, FOUR, another wild swing from the left hander, who gets a thick edge that flies over short third for yet another boundary"
+  },
+  {
+   "over": 4.2,
+   "bowler": "Simranjeet Singh",
+   "res": "SIX",
+   "runs": 6,
+   "score": 70,
+   "balls": 19,
+   "ang": 0,
+   "text": "Simranjeet Singh to Vaibhav Sooryavanshi, SIX, he takes him straightaway, he is dealing in sixes at the moment, his 10th off the evening, well tossed up on off, Sooryavanshi kneels down and slogs it w"
+  },
+  {
+   "over": 4.3,
+   "bowler": "Simranjeet Singh",
+   "res": "SIX",
+   "runs": 6,
+   "score": 76,
+   "balls": 20,
+   "ang": 0,
+   "text": "Simranjeet Singh to Vaibhav Sooryavanshi, SIX, this time straight down the ground, Singh tosses it up again, easy pickings for Sooryavanshi as he launches it right into the stands over long-on, absolu"
+  },
+  {
+   "over": 4.4,
+   "bowler": "Simranjeet Singh",
+   "res": "byes",
+   "runs": 0,
+   "score": 76,
+   "balls": 21,
+   "ang": null,
+   "text": "Simranjeet Singh to Vaibhav Sooryavanshi, byes, 2 runs, that's a rare moment, Sooryavanshi is beaten! Turning in from outside off, much slower from over the wicket, Sooryavanshi goes for another slog "
+  },
+  {
+   "over": 4.5,
+   "bowler": "Simranjeet Singh",
+   "res": "no run",
+   "runs": 0,
+   "score": 76,
+   "balls": 22,
+   "ang": null,
+   "text": "Simranjeet Singh to Vaibhav Sooryavanshi, no run, excellent bowling from Singh, he pulls the length back and much slower through the air, Sooryavanshi gets down the track and misses out on the slog, b"
+  },
+  {
+   "over": 4.6,
+   "bowler": "Simranjeet Singh",
+   "res": "SIX",
+   "runs": 6,
+   "score": 82,
+   "balls": 23,
+   "ang": 0,
+   "text": "Simranjeet Singh to Vaibhav Sooryavanshi, SIX, he doesn't miss out this time, drags it too short, Sooryavanshi goes deep into the crease and pulls it over the bowlers head straight down the ground, 10"
+  },
+  {
+   "over": 5.2,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 88,
+   "balls": 24,
+   "ang": 28,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, thumped away! A friendly full-toss, much slower, Sooryavanshi picks it and with amazing bat-swing, launches it into the grass banks over long-off, the ball has "
+  },
+  {
+   "over": 5.3,
+   "bowler": "Zahid Ali",
+   "res": "1 run",
+   "runs": 1,
+   "score": 89,
+   "balls": 25,
+   "ang": -28,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, 1 run, a single from Sooryavanshi after a long time, yorker length on middle, Sooryavanshi pushes it down to long-on"
+  },
+  {
+   "over": 6.1,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 95,
+   "balls": 26,
+   "ang": 62,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, no stopping him at the moment! That is an amazing shot, slightly shorter outside off, Sooryavanshi stands tall and slaps it in the air over deep extra cover, "
+  },
+  {
+   "over": 6.2,
+   "bowler": "Ibrar Ahmad",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 99,
+   "balls": 27,
+   "ang": -28,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, FOUR, he moves onto 99, the fastest ton record is in danger, low full-toss on the pads, Sooryavanshi clips it past the mid-on fielder to deep mid-wicket and gets f"
+  },
+  {
+   "over": 6.3,
+   "bowler": "Ibrar Ahmad",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 103,
+   "balls": 28,
+   "ang": 0,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, FOUR, he has done it! The fastest ever List A hundred, off just 28 balls! Take a bow young man, he removes the helmet and raises his bat to the crowd. The dressing"
+  },
+  {
+   "over": 6.4,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 109,
+   "balls": 29,
+   "ang": -105,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, he is not stopping today, shortish on the stumps, Sooryavanshi swivels and pulls it right into the grass bacnks over backward square leg, that went a long way"
+  },
+  {
+   "over": 6.5,
+   "bowler": "Ibrar Ahmad",
+   "res": "SIX",
+   "runs": 6,
+   "score": 115,
+   "balls": 30,
+   "ang": 62,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, SIX, keep calm and just watch Sooryavanshi clearing the fence with utter ease! Wide full-toss, Sooryavanshi picks it and slashes it in the air to sweeper cover, ri"
+  },
+  {
+   "over": 6.6,
+   "bowler": "Ibrar Ahmad",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 119,
+   "balls": 31,
+   "ang": -62,
+   "text": "Ibrar Ahmad to Vaibhav Sooryavanshi, FOUR, where do you bowl to Sooryavanshi? This is destruction, slightly shorter outside off, Sooryavanshi drags it across the line in the gap to deep mid-wicket"
+  },
+  {
+   "over": 7.5,
+   "bowler": "Zahid Ali",
+   "res": "2 runs",
+   "runs": 2,
+   "score": 121,
+   "balls": 32,
+   "ang": -62,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, 2 runs, low in-swinging full-toss, Sooryavanshi clips it in the gap to deep mid-wicket for a couple"
+  },
+  {
+   "over": 7.6,
+   "bowler": "Zahid Ali",
+   "res": "1 run",
+   "runs": 1,
+   "score": 122,
+   "balls": 33,
+   "ang": 28,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, 1 run, a rare quiet over after a long time, slips in a yorker on middle, Sooryavanshi digs it out to mid-off, keeps the strike!"
+  },
+  {
+   "over": 8.1,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 128,
+   "balls": 34,
+   "ang": -28,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, a new bowler, but Sooryavanshi doesn't spare anyone, tossed up and right in the slot, easy pickings for Sooryavanshi as he launches it right into the stands o"
+  },
+  {
+   "over": 8.2,
+   "bowler": "Uddish Suri",
+   "res": "1 run",
+   "runs": 1,
+   "score": 129,
+   "balls": 35,
+   "ang": 62,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, 1 run, speared in full on off, Sooryavanshi squeezes it to cover, Singh had to hurry as the throw came in quickly"
+  },
+  {
+   "over": 8.6,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 135,
+   "balls": 36,
+   "ang": -28,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, 20 off the over and yet another half a dozen from Sooryavanshi, trifle short from Suri, Sooryavanshi latches onto it in a flash and slogs it wildly over wide "
+  },
+  {
+   "over": 9.3,
+   "bowler": "Zahid Ali",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 139,
+   "balls": 37,
+   "ang": 140,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, FOUR, the fielder tried to stop it, but his foot was touching the ropes, length delivery wide outside off, Sooryavanshi swings hard at it and gets a top edge high in"
+  },
+  {
+   "over": 9.4,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 145,
+   "balls": 38,
+   "ang": 0,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, this one went off the lower part of the bat, but still clears the in-field, a low full-toss on middle, Sooryavanshi picks it and bunts it straight down the grou"
+  },
+  {
+   "over": 9.5,
+   "bowler": "Zahid Ali",
+   "res": "no run",
+   "runs": 0,
+   "score": 145,
+   "balls": 39,
+   "ang": null,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, no run, oh he's missed out on that, a slower delivery on the stumps, Sooryavanshi swings hard across the line and gets it off the inside half of the bat to the leg s"
+  },
+  {
+   "over": 9.6,
+   "bowler": "Zahid Ali",
+   "res": "SIX",
+   "runs": 6,
+   "score": 151,
+   "balls": 40,
+   "ang": 62,
+   "text": "Zahid Ali to Vaibhav Sooryavanshi, SIX, Sooryavanshi has reached 150 in the power-play! Would you believe it? shot of the day to get there, slightly shorter and wider outside off, Sooryavanshi reaches"
+  },
+  {
+   "over": 10.2,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 157,
+   "balls": 41,
+   "ang": 28,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, no stopping Sooryavanshi at the moment, he is playing as if he is training at the nets, slightly shorter, Sooryavanshi was camping on the back foot and flat-"
+  },
+  {
+   "over": 10.3,
+   "bowler": "Basil Hameed",
+   "res": "no run",
+   "runs": 0,
+   "score": 157,
+   "balls": 42,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, no run, tossed up outside off and turning away, Sooryavanshi swings hard and misses it"
+  },
+  {
+   "over": 10.4,
+   "bowler": "Basil Hameed",
+   "res": "wide",
+   "runs": 0,
+   "score": 157,
+   "balls": 42,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, wide, fired in full wide outside off, Sooryavanshi leaves it alone, the only way to keep him quiet"
+  },
+  {
+   "over": 10.4,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 163,
+   "balls": 43,
+   "ang": 0,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, yet another half a dozen, trifle short from Hameed, Sooryavanshi was waiting for it and hammers it straight down the ground, so much power on that one!"
+  },
+  {
+   "over": 10.5,
+   "bowler": "Basil Hameed",
+   "res": "1 run",
+   "runs": 1,
+   "score": 164,
+   "balls": 44,
+   "ang": 62,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, 1 run, oh he has been dropped in the deep, tossed up delivery wide outside off, Sooryavanshi reaches out and mistimes a loft to sweeper cover, a regulation catch "
+  },
+  {
+   "over": 11.1,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 170,
+   "balls": 45,
+   "ang": -62,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, whoa! serves him a juicy full-toss, Sooryavanshi picks it and thumps it over deep mid-wicket, the partnership between Vaibhav Sooryavanshi and Rinku Singh is "
+  },
+  {
+   "over": 11.2,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 176,
+   "balls": 46,
+   "ang": -28,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, that is another half a dozen, where do you bowl to him, full on the pads, Sooryavanshi clips it off the strong bottom hand over long-on"
+  },
+  {
+   "over": 11.3,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 182,
+   "balls": 47,
+   "ang": 28,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, right near the comm box, 25th six off the innings, most ever by any batter in an innings, Sooryavanshi is re-writing records today, too full and wide outside "
+  },
+  {
+   "over": 11.4,
+   "bowler": "Uddish Suri",
+   "res": "SIX",
+   "runs": 6,
+   "score": 188,
+   "balls": 48,
+   "ang": -62,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, SIX, carnage! tossed up and turning in, Sooryavanshi gets down and slog sweeps it over deep mid-wicket. I am running out of words to describe this innings!"
+  },
+  {
+   "over": 11.5,
+   "bowler": "Uddish Suri",
+   "res": "FOUR",
+   "runs": 4,
+   "score": 192,
+   "balls": 49,
+   "ang": 62,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, FOUR, a rare four from Sooryavanshi, overpitched and in the slot, Sooryavanshi picks it and drills it to sweeper cover, finding the gap at ease"
+  },
+  {
+   "over": 11.6,
+   "bowler": "Uddish Suri",
+   "res": "no run",
+   "runs": 0,
+   "score": 192,
+   "balls": 50,
+   "ang": null,
+   "text": "Uddish Suri to Vaibhav Sooryavanshi, no run, a rare dot ball! flighted delivery outside off, Sooryavanshi defends it to the off side"
+  },
+  {
+   "over": 12.3,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 198,
+   "balls": 51,
+   "ang": -28,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, he moves onto 198 in the 13th over! Gentle off-spinner, slightly shorter on middle, Sooryavanshi was standing deep in the crease and smashes it up and over l"
+  },
+  {
+   "over": 12.4,
+   "bowler": "Basil Hameed",
+   "res": "SIX",
+   "runs": 6,
+   "score": 204,
+   "balls": 52,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, SIX, whoa! The fastest ever double century in List A cricket! What an innings this has been, absolute carnage! That's his 28th six of the innings. Tossed up on mi"
+  },
+  {
+   "over": 12.5,
+   "bowler": "Basil Hameed",
+   "res": "wide",
+   "runs": 0,
+   "score": 204,
+   "balls": 52,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, wide, tossed up wide outside off and turning away, Sooryavanshi swings hard and misses it"
+  },
+  {
+   "over": 12.5,
+   "bowler": "Basil Hameed",
+   "res": "wide",
+   "runs": 0,
+   "score": 204,
+   "balls": 52,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, wide, full and wide outside off, Sooryavanshi leaves it alone"
+  },
+  {
+   "over": 12.5,
+   "bowler": "Basil Hameed",
+   "res": "out Caught by Aryansh Sharma!! A monumental innings comes to an end and he walks to a standing ovation from the everyone present at the stadium",
+   "runs": 0,
+   "score": 204,
+   "balls": 53,
+   "ang": null,
+   "text": "Basil Hameed to Vaibhav Sooryavanshi, out Caught by Aryansh Sharma!! A monumental innings comes to an end and he walks to a standing ovation from the everyone present at the stadium, an innings for th"
+  }
+ ],
+ "partners": {
+  "Abhishek Sharma": 68,
+  "Prabhsimran Singh": 40,
+  "Rinku Singh": 137
+ },
+ "dots": 11,
+ "dismissal": "c Aryansh Sharma b Basil Hameed (12.5 ov, 245/3)"
+}
