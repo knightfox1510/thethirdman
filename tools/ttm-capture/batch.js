@@ -162,6 +162,7 @@
     if (k !== "match" && notFound()) { s.done[key] = { at: new Date().toISOString(), schema: SCHEMA, missing: true }; await log(s, "  page not found: skipped"); await advance(s); return goNext(s); }
 
     if (k === "list" || k === "series") {                                              // collect the next level down
+      if (s.strict) { await log(s, `  strict mode: this ${k} link is not expanded (nothing queued, nothing saved): skipped`); await advance(s); return goNext(s); }
       for (let i = 0; i < 4 && !stopFlag; i++) { window.scrollTo(0, document.body.scrollHeight); await sleep(1200); }
       if (stopFlag) return;
       const st = k === "series" && SITE === "cricinfo" ? structured() : null;                       // authoritative list when the page has it, else the main-content links
@@ -260,6 +261,7 @@
         <label style="display:block;margin-bottom:6px">Max matches per run <input id="tb-max" type="number" min="1" max="100" style="width:56px;${INP}"></label>
         <label style="display:block;margin-bottom:6px">Only from year <input id="tb-since" type="number" style="width:70px;${INP}"> <span style="color:${C.mute}">(0 = all)</span></label>
         <label style="display:block;margin-bottom:8px"><input id="tb-lists" type="checkbox"> also save series / list pages (for audits)</label>
+        <label style="display:block;margin-bottom:8px"><input id="tb-strict" type="checkbox"> strict: capture only the links I pasted (series / list links are not expanded)</label>
         <label style="display:block;margin-bottom:2px"><input id="tb-direct" type="checkbox"> <b>Direct fetch</b> (faster: one page load per match)</label>
         <div style="color:${C.mute};font-size:11px;margin:0 0 6px 20px">Reads the commentary and the other tabs through the page's own data instead of clicking and scrolling. If it fails for a match, that match is done the old way.</div>
         <label style="display:block;margin:0 0 8px 20px"><input id="tb-quick" type="checkbox"> Quick pace (5-10 s between matches instead of 8-16 s)</label>
@@ -295,7 +297,7 @@
   };
   const start = async () => {
     document.body.appendChild(box); let s = await get();
-    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-auto").checked = !!s.auto; $("tb-direct").checked = s.direct !== false; $("tb-quick").checked = !!s.quick; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; $("tb-screen").checked = !!s.screen; render(s);
+    $("tb-q").value = s.queue.slice(s.idx).join("\n"); $("tb-max").value = s.max; $("tb-since").value = s.since || 0; $("tb-lists").checked = !!s.saveLists; $("tb-strict").checked = !!s.strict; $("tb-auto").checked = !!s.auto; $("tb-direct").checked = s.direct !== false; $("tb-quick").checked = !!s.quick; $("tb-cool").value = s.cool || 20; $("tb-awake").checked = s.keepAwake !== false; $("tb-screen").checked = !!s.screen; render(s);
     const saveOpts = async () => { const t = await get(); t.auto = $("tb-auto").checked; t.cool = Math.min(240, Math.max(5, +$("tb-cool").value || 20)); t.keepAwake = $("tb-awake").checked; t.screen = $("tb-screen").checked; t.direct = $("tb-direct").checked; t.quick = $("tb-quick").checked; await setOpts(t); heartbeat(); };   // applies at once, even mid-run
     $("tb-auto").onchange = $("tb-cool").onchange = $("tb-awake").onchange = $("tb-screen").onchange = $("tb-direct").onchange = $("tb-quick").onchange = saveOpts;
     setInterval(heartbeat, 45000); heartbeat();
@@ -305,7 +307,8 @@
     $("tb-go").onclick = async () => {
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
-      const force = !same && typed[0] && typed[0].trim().toLowerCase() === "#force"; if (force) typed.shift(); s.force = same ? !!s.force : force;   // first line "#force": re-capture these links even if already done (the new file replaces the old one)
+      let force = false, strictTag = false; if (!same) while (typed[0] && /^#(force|strict)\s*$/i.test(typed[0].trim())) { const d = typed.shift().trim().toLowerCase(); if (d === "#force") force = true; else strictTag = true; }   // directive lines at the top: #force = re-capture these links even if already done (the new file replaces the old one); #strict = capture only the pasted links, never expand a series or list link
+      s.force = same ? !!s.force : force; s.strict = same ? !!s.strict : (strictTag || $("tb-strict").checked);
       const q = same ? s.queue : typed.filter((u) => force || !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
       Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, directOff: false, screen: $("tb-screen").checked, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
       await setOpts(s);
