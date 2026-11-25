@@ -1022,6 +1022,26 @@
    "status": "Ready",
    "link": "",
    "notes": "Built 25 Nov (OmniVoice draft narration); on Drive"
+  },
+  {
+   "id": 5,
+   "date": "2026-11-25",
+   "platform": "Instagram Reel",
+   "series": "04 The Lab",
+   "content": "कोहली का वो छक्का, जो उन्हें भी समझ नहीं आया (Hindi)",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 25 Nov (Hindi, OmniVoice draft narration); on Drive"
+  },
+  {
+   "id": 6,
+   "date": "2026-11-25",
+   "platform": "YouTube Short",
+   "series": "04 The Lab",
+   "content": "कोहली का वो छक्का, जो उन्हें भी समझ नहीं आया (Hindi)",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 25 Nov (Hindi, OmniVoice draft narration); on Drive"
   }
  ]
 }
