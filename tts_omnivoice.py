@@ -10,7 +10,7 @@ ap = argparse.ArgumentParser(); ap.add_argument("spec"); ap.add_argument("fmt");
 a = ap.parse_args(); torch.set_num_threads(4)
 VOICE = "siw1N9V8LmYeEWKyWBxv"; TEMPO = {"long": 1.04, "short": 1.07}[a.fmt]
 spec = json.load(open(a.spec)); paras = [s["vo"] for s in spec[a.fmt]]; out = f"out/{spec['slug']}/{a.fmt}/vo"; os.makedirs(out, exist_ok=True)
-NAMES = json.load(open(a.names)) if a.names else {}; DEV = {}
+NAMES = json.load(open(a.names)) if a.names and a.lang == "en" else {}; DEV = {}
 for lat, dev in NAMES.items():
     for dw, lw in zip(dev.split(), re.findall(r"[A-Za-z]+", lat)):
         if len(dev.split()) == len(re.findall(r"[A-Za-z]+", lat)): DEV[dw] = lw.lower()
@@ -20,7 +20,7 @@ def hi_num(n):
     if n < 1000: return (HI[n // 100] + " सौ" + (" " + HI[n % 100] if n % 100 else ""))
     return str(n)
 def norm(s, asr=False):
-    s = s.lower().replace("-", " ")
+    s = s.lower().replace("-", " ").replace("\u0964", " ").replace("\u0965", " ")
     if asr: s = re.sub(r"\d+(?:,\d{3})*(?:\.\d+)?", lambda m: " " + (hi_num(int(m.group(0).replace(",", ""))) if a.lang == "hi" else num2words(int(m.group(0).replace(",", ""))).replace("-", " ").replace(",", "").replace(" and", "")) + " ", s)
     toks = []
     for t in re.findall(r"[\wऀ-ॿ']+", s):
