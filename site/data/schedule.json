@@ -1002,6 +1002,26 @@
    "status": "Posted",
    "link": "https://youtu.be/0TvtvYPYRlI",
    "notes": "Uploaded 25 Nov (private until published in Studio); on Drive"
+  },
+  {
+   "id": 3,
+   "date": "2026-11-25",
+   "platform": "Instagram Reel",
+   "series": "04 The Lab",
+   "content": "The Shot Kohli Can't Explain: India vs Pakistan, the 19th over",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 25 Nov (OmniVoice draft narration); on Drive"
+  },
+  {
+   "id": 4,
+   "date": "2026-11-25",
+   "platform": "YouTube Short",
+   "series": "04 The Lab",
+   "content": "The Shot Kohli Can't Explain: India vs Pakistan, the 19th over",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 25 Nov (OmniVoice draft narration); on Drive"
   }
  ]
 }

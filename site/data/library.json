@@ -643,6 +643,25 @@
    ]
   },
   {
+   "slug": "lab_ep4_kohli_rauf_19th_over",
+   "title": "The Shot Kohli Can't Explain | India vs Pakistan T20 World Cup 2022",
+   "format": "lab",
+   "series": "The Lab",
+   "ep": "04",
+   "long": null,
+   "short": "2:35",
+   "status": "Posted",
+   "link": "https://youtu.be/UEvmwDqCTsg",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "The match (India v Pakistan, ICC Men's T20 World Cup, MCG, 23 October 2022): Cricsheet ball-by-ball (cricsheet.org, ODC-BY), match 1298150; result and scores checked against match reports (https://www.icc-cricket.com/news/the-king-lives-kohli-masterclass-helps-india-beat-pakistan-in-mcg-thriller ; https://www.cricket.com.au/news/3319263). The free hit in the last over (no-ball, wide, then Kohli bowled and three byes) comes from the ball-by-ball.",
+    "Archive rates: our verified ESPNcricinfo ball-by-ball captures of men's T20 matches with line and length (1,632 back-of-a-length balls on the stumps in overs 17-20; 140 sixes, 32 straight, shot direction from Cricinfo's wagon zones 4 and 5) and Cricsheet men's T20 chases (25-31 needed off 8 balls, at most 5 down: 4 wins in 29, a small sample): analysis/kohli_rauf.py. 'In our archive': the archive is a sample, not the full history.",
+    "Quotes: Kohli, Star Sports interview, November 2023, as reported by PTI/Outlook India https://www.outlookindia.com/sports/icc-cricket-world-cup-2023-virat-kohli-focuses-on-learning-new-strokes-rather-than-becoming-a-complete-batter-news-330035 ; Rauf (Cricwick, December 2022) as reported by PTI/ThePrint https://theprint.in/sport/would-have-felt-hurt-if-pandya-or-dk-hit-me-for-sixes-but-kohli-is-different-class-haris-rauf/1243640 and DNA India https://www.dnaindia.com/cricket/report-don-t-think-he-can-do-that-again-haris-rauf-on-virat-kohli-s-straight-six-vs-pakistan-in-t20-world-cup-3015621 ; the shot's description (footwork, length, the flick) from SportsCafe https://sportscafe.in/blogs/untold-stories/what-was-kohli-thinking-during-those-monumental-sixes-against-haris-rauf . Reports differ on the length of the first six and on the direction of the second; the video says so.",
+    "The figure and the pitch map are our own illustrations, not a replay or the actual delivery. Photographs: supplied by the channel owner."
+   ]
+  },
+  {
    "slug": "myth_ep1_kohli_knockouts",
    "title": "Myth or Data? Ep. 1: Kohli in knockouts",
    "format": "myth",
