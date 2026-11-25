@@ -95,10 +95,12 @@ def process(src, f, move, arch, st):
                 rec, status, note = compact(d); row["status"] = status; row["note"] = note; row["match_id"] = rec["match_id"]; row["coverage"] = rec.get("coverage")
                 key = rec["match_id"]
                 with LOCK:
-                    seen = st["seen"].get(key)
-                    if seen and seen != row["md5"]: row["status"] = "DUP_DIFF"; row["note"] = "same match id, different content: kept first, review"
+                    seen = st["seen"].get(key); prev = st["stat"].get(key)
+                    if seen and seen != row["md5"]:
+                        if prev == "MISMATCH" and status == "OK": row["note"] = "replaces an earlier incomplete capture: " + row["note"]; st["seen"][key] = row["md5"]; st["stat"][key] = status      # a re-scrape that reconciles beats the flagged one
+                        else: row["status"] = "DUP_DIFF"; row["note"] = "same match id, different content: kept first, review"
                     elif seen: row["status"] = "DUP"
-                    else: st["seen"][key] = row["md5"]
+                    else: st["seen"][key] = row["md5"]; st["stat"][key] = status
                 if row["status"] in ("OK", "TEXT_ONLY", "MISMATCH"): json.dump(rec, gzip.open(f"{OUT}/{key}.json.gz", "wt", encoding="utf-8"), ensure_ascii=False)
         if move and row["status"] in ("OK", "TEXT_ONLY", "SERIES", "DUP"):
             call("PATCH", f"{D}/{f['id']}?supportsAllDrives=true&addParents={arch}&removeParents={st['parent'][src]}", "drive", body={}); row["moved"] = True
@@ -130,15 +132,15 @@ def main(a):
     if a[0] == "list":
         for k, v in fo.items(): fs = ls(v); print(k, len(fs), "files", round(sum(int(x.get("size", 0)) for x in fs) / 1e9, 1), "GB"); return
     lim = int(a[a.index("--limit") + 1]) if "--limit" in a else 10 ** 9; only = a[a.index("--only") + 1] if "--only" in a else None; move = "--move" in a; w = int(a[a.index("--workers") + 1]) if "--workers" in a else 4
-    done = set(); seen = {}
+    done = set(); seen = {}; stat = {}
     if os.path.exists(MAN):
         for l in open(MAN):
             r = json.loads(l)
             if r["status"] in ("OK", "TEXT_ONLY", "SERIES", "DUP", "SKIP") and (r.get("moved") or not move): done.add(r["drive_id"])
-            if r.get("match_id") and r.get("md5") and r["status"] in ("OK", "TEXT_ONLY", "MISMATCH"): seen[r["match_id"]] = r["md5"]
+            if r.get("match_id") and r.get("md5") and r["status"] in ("OK", "TEXT_ONLY", "MISMATCH"): seen[r["match_id"]] = r["md5"]; stat[r["match_id"]] = r["status"]
     arch = None
     if move: ar = find(ROOTID, "Archive"); ce = find(ar, "Cricinfo extracts", True); arch = {k: find(ce, k, True) for k in fo}
-    st = {"tmp": tempfile.mkdtemp(), "seen": seen, "n": 0, "parent": fo}; todo = []
+    st = {"tmp": tempfile.mkdtemp(), "seen": seen, "stat": stat, "n": 0, "parent": fo}; todo = []
     for k, v in fo.items():
         if only and k != only: continue
         todo += [(k, f) for f in ls(v) if f["id"] not in done and f["name"] != "desktop.ini"]

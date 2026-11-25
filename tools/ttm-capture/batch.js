@@ -120,7 +120,7 @@
     return fresh.length;
   };
   const stopped = async (s, msg) => { s.running = false; s.now = ""; s.pausedUntil = 0; awake(false); if (!(s.queue.length - s.idx)) s.started = false; await log(s, msg); };
-  const advance = async (s) => { s.blockTries = 0; s.navTries = 0; s.errs = 0; s.idx++; s.tab = 0; s.plan = null; while (s.idx < s.queue.length && s.done[doneKey(s.queue[s.idx])] && s.done[doneKey(s.queue[s.idx])].schema === SCHEMA) s.idx++; await set(s); };   // skips already-done items at once
+  const advance = async (s) => { s.blockTries = 0; s.navTries = 0; s.errs = 0; s.idx++; s.tab = 0; s.plan = null; while (!s.force && s.idx < s.queue.length && s.done[doneKey(s.queue[s.idx])] && s.done[doneKey(s.queue[s.idx])].schema === SCHEMA) s.idx++; await set(s); };   // skips already-done items at once
   const goNext = async (s, pause = true) => {
     if (stopFlag) return;
     if (s.idx >= s.queue.length) return stopped(s, `DONE: queue finished, ${s.results.length} captured this run.`);
@@ -150,7 +150,7 @@
     }
     const job = s.queue[s.idx]; if (!job) return stopped(s, `DONE: ${s.results.length} captured.`);
     const k = kind(job), key = doneKey(job);
-    if (s.done[key] && s.done[key].schema === SCHEMA) { await advance(s); return goNext(s, false); }                       // already captured: skip, no waiting
+    if (!s.force && s.done[key] && s.done[key].schema === SCHEMA) { await advance(s); return goNext(s, false); }                       // already captured: skip, no waiting
     const here = clean(location.href), target = k === "match" ? matchId(job) : clean(job);
     const wantTab = k === "match" ? TABS[(s.plan || Object.keys(TABS))[s.tab || 0]] : null;
     const onTab = (t) => SITE === "cricinfo" ? location.pathname.split("/").filter(Boolean)[3] === t : location.pathname.replace(/^\//, "").startsWith(t);
@@ -305,7 +305,8 @@
     $("tb-go").onclick = async () => {
       s = await get(); const typed = lines($("tb-q").value); stopFlag = false; window.__ttmStop = false;
       const same = typed.join("\n") === s.queue.slice(s.idx).join("\n");                       // unchanged text = resume where we stopped; edited text = new queue
-      const q = same ? s.queue : typed.filter((u) => !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
+      const force = !same && typed[0] && typed[0].trim().toLowerCase() === "#force"; if (force) typed.shift(); s.force = same ? !!s.force : force;   // first line "#force": re-capture these links even if already done (the new file replaces the old one)
+      const q = same ? s.queue : typed.filter((u) => force || !(s.done[doneKey(u)] && s.done[doneKey(u)].schema === SCHEMA));
       Object.assign(s, { queue: q, idx: same ? s.idx : 0, tab: 0, plan: null, running: q.length > 0, started: q.length > 0, results: same ? s.results : [], max: Math.min(100, +$("tb-max").value || MAX_DEFAULT), since: +$("tb-since").value || 0, saveLists: $("tb-lists").checked, pausedUntil: 0, resumeUrl: null, blockTries: 0, navTries: 0, errs: 0, auto: $("tb-auto").checked, cool: Math.min(240, Math.max(5, +$("tb-cool").value || 20)), keepAwake: $("tb-awake").checked, directOff: false, screen: $("tb-screen").checked, direct: $("tb-direct").checked, quick: $("tb-quick").checked });
       await setOpts(s);
       if (!q.length) { await log(s, "Nothing to do: the queue is empty (or everything in it is already done)."); return; }

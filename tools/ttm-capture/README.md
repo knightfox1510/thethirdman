@@ -120,3 +120,5 @@ What it cannot do: load the commentary by scrolling in a window that is locked o
 - macOS: System Settings → Lock Screen → "Require password after screen saver begins or display is turned off" = Never (or the longest); Battery/Power → prevent automatic sleeping; keep the lid open; `caffeinate -dimsu` in a terminal is a good extra.
 - Leave the capture tab in its own Chrome window that is not minimised (covered by other windows is fine on most systems; minimised is not).
 A display that is simply turned off (not locked) is fine on most systems.
+
+**Re-capturing matches already done (v1.8.1):** the extension remembers finished matches and skips them. To re-scrape specific matches (for example ones whose file did not reconcile), put `#force` alone on the first line of the link box, then the links, then Start. Only that queue ignores the done-list, and the new file has the same name as the old one. The repo side (`python3 -m dataops.drive_ingest`) keeps the re-capture if it reconciles with the scorecard and the earlier one did not.
