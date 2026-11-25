@@ -982,6 +982,26 @@
    "status": "Ready",
    "link": null,
    "notes": "Built 2026-11-24; on Drive; caption on Drive"
+  },
+  {
+   "id": 1,
+   "date": "2026-11-24",
+   "platform": "Instagram Reel",
+   "series": "04 The Lab",
+   "content": "Vaibhav Suryavanshi: 204 Off 53 Balls, Explained",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 24 Nov; on Drive"
+  },
+  {
+   "id": 2,
+   "date": "2026-11-25",
+   "platform": "YouTube Short",
+   "series": "04 The Lab",
+   "content": "Vaibhav Suryavanshi: 204 Off 53 Balls, Explained",
+   "status": "Posted",
+   "link": "https://youtu.be/0TvtvYPYRlI",
+   "notes": "Uploaded 25 Nov (private until published in Studio); on Drive"
   }
  ]
 }

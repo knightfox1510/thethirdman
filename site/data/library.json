@@ -624,6 +624,25 @@
    ]
   },
   {
+   "slug": "lab_ep3_vaibhav_204",
+   "title": "Vaibhav Suryavanshi: 204 Off 53 Balls, Explained | India A vs UAE",
+   "format": "lab",
+   "series": "The Lab",
+   "ep": "03",
+   "long": null,
+   "short": "2:49",
+   "status": "Posted",
+   "link": "https://youtu.be/0TvtvYPYRlI",
+   "planned": "2026-11-24",
+   "recheck": null,
+   "sources": [
+    "The innings (India A v UAE, Asia Cup Rising Stars, 24 November 2026): Cricbuzz ball-by-ball commentary and Cricinfo ball-by-ball (owner's captures); 204 (53), 28 sixes, 7 fours cross-checked in both. Milestones and shot directions come from the commentary text only.",
+    "Career: IPL ball-by-ball (Sportmonks, IPL 2025-26: 23 innings, 1,028 runs, SR 229); T20 internationals (Cricsheet, 10 innings, 295 runs; Cricinfo profile). Splits against teams and bowlers are our own count (analysis/vaibhav.py).",
+    "Technique: Cricbuzz feature, 'What makes Vaibhav Sooryavanshi possible' (comments from a Loughborough University biomechanics researcher, a power-hitting coach and Vaibhav's childhood coach, paraphrased). Technique graphics: owner-supplied, redrawn.",
+    "Date of birth (27 March 2011) as officially registered, as reported; some reports question it."
+   ]
+  },
+  {
    "slug": "myth_ep1_kohli_knockouts",
    "title": "Myth or Data? Ep. 1: Kohli in knockouts",
    "format": "myth",
