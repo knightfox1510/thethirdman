@@ -111,7 +111,8 @@
   "flip",
   "kinetic",
   "fieldmap",
-  "stumps"
+  "stumps",
+  "flip"
  ],
  "assigned": {
   "sachin_t20": "flip",
@@ -225,6 +226,7 @@
   "nz_ind_1st_test_gill__igshort": "flip",
   "lab_ep3_vaibhav_204": "kinetic",
   "lab_ep3_vaibhav_204__igshort": "fieldmap",
-  "lab_ep4_kohli_rauf_19th_over": "stumps"
+  "lab_ep4_kohli_rauf_19th_over": "stumps",
+  "lab_ep4_kohli_rauf_19th_over__igshort": "flip"
  }
 }
