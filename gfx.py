@@ -87,7 +87,30 @@ def _plain(s, tf):
     return all(_FB.get((tf, ch), None) == tf or (_FB.setdefault((tf, ch), tf if skia.Font(TF[tf], 20).unicharToGlyph(ord(ch)) else "interB") == tf) for ch in s)
 
 
+# ---- Devanagari: the per-glyph skia path cannot shape Hindi (conjuncts, matras), so any run of Devanagari is laid out by Pillow+raqm and drawn as an image ---------------------------
+import re as _re
+from PIL import Image as _PI, ImageDraw as _PD, ImageFont as _PF
+_DEV = _re.compile(r"([\u0900-\u097f\u200c\u200d]+(?:[ \u0900-\u097f\u200c\u200d,.?!:;'\u2018\u2019\u201c\u201d\-]*[\u0900-\u097f\u200c\u200d])?)")
+_DFONT = {}; _DIMG = {}
+def _dfont(size, bold):
+    k = (round(size), bold)
+    if k not in _DFONT: _DFONT[k] = _PF.truetype("/usr/share/fonts/truetype/noto/NotoSansDevanagari-%s.ttf" % ("Bold" if bold else "Regular"), round(size * 1.0), layout_engine=_PF.Layout.RAQM)
+    return _DFONT[k]
+_BOLD = {"interB", "interSB", "bebas", "oswald", "brand"}
+def has_dev(s): return bool(_DEV.search(s))
+def _runs(s): return [(seg, bool(_DEV.fullmatch(seg))) for seg in _DEV.split(s) if seg]
+def _dw(seg, size, tf): return _dfont(size, tf in _BOLD).getlength(seg)
+def _dimg(seg, size, tf, color):
+    k = (seg, round(size), tf in _BOLD, tuple(color))
+    if k not in _DIMG:
+        f = _dfont(size, tf in _BOLD); w = int(f.getlength(seg)) + 16; h = int(size * 2.0); base = int(size * 1.32)
+        im = _PI.new("RGBA", (w, h), (0, 0, 0, 0)); _PD.Draw(im).text((8, base), seg, font=f, fill=(*[int(v) for v in color[:3]], 255), anchor="ls")
+        _DIMG[k] = (skia.Image.fromarray(np.array(im), colorType=skia.kRGBA_8888_ColorType, alphaType=skia.kUnpremul_AlphaType), base)
+    return _DIMG[k]
+
+
 def twidth(s, size, tf="inter", track=0):
+    if has_dev(s): return sum(_dw(seg, size, tf) if dv else twidth(seg, size, tf, 0) for seg, dv in _runs(s))
     if _plain(s, tf):
         f = skia.Font(TF[tf], size)
         if not track:
@@ -105,6 +128,14 @@ def text(c, s, x, y, size, tf="inter", color=None, a=1.0, align="l", track=0, gl
     w = twidth(s, size, tf, track)
     if align == "c": x -= w / 2
     elif align == "r": x -= w
+    if has_dev(s):                                                             # Hindi (or mixed) line: shaped runs as images, Latin runs as normal text
+        xx = x; col = color
+        for seg, dv in _runs(s):
+            if dv:
+                img, base = _dimg(seg, size, tf, col); c.drawImage(img, xx - 8, y - base, skia.SamplingOptions(skia.FilterMode.kLinear), paint((255, 255, 255), a)); xx += _dw(seg, size, tf)
+            else:
+                text(c, seg, xx, y, size, tf, color, a, "l", 0, glow); xx += twidth(seg, size, tf, 0)
+        return w
     paints = []
     glow = glow * GLOWK
     if glow:

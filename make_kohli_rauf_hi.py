@@ -1,0 +1,67 @@
+"""Writes specs/lab_ep4_kohli_rauf_19th_over_hi.json: the Hindi, poetic version of Kohli v Rauf (the 19th over). Same facts and checks as make_kohli_rauf.py (they are asserted there); Hindi voice-over in Devanagari (numbers in words), Hindi on-screen text.   python3 make_kohli_rauf_hi.py"""
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import voice_lint
+from dataops import verify as V
+from variants import YT_CTA
+F = json.load(open("data/provenance/kohli_rauf_figures.json")); A = F["archive"]; CS = "cricsheet"; CI = "cricinfo"
+assert F["need_before_sixes"] == 28 and F["over19"] == [1, 1, 0, 1, 6, 6] and F["rauf_first3"] == 22 and F["sixes_in_last8"] == 3 and (F["chase_28_8"]["situations"], F["chase_28_8"]["wins"]) == (29, 4) and round(1 / A["p_six"]) == 12 and round(1 / A["p_straight"]) == 51
+c = V.Claims("lab_ep4_kohli_rauf_19th_over_hi")
+c.check("India v Pakistan, T20 World Cup, MCG, 23 Oct 2022: Pakistan 159/8, India 160/6 won by four wickets off the last ball; Kohli 82* (53), 6 fours, 4 sixes", (159, 160, 82, 53, 6, 4), {CS: (159, 160, 82, 53, 6, 4), "web reports": (159, 160, 82, 53, 6, 4)})
+c.check("after 18 overs 129/4; 19th over by Rauf: 1, 1, 0, 1, 6, 6 -> 28 needed off 8 before the fifth ball, 16 off 6 after the sixes", (28, 8, 16, 6), {CS: (28, 8, 16, 6), "web reports": (28, 8, 16, 6)})
+c.check("Rauf's first three overs 22 runs; 15 off the 19th", (22, 15), {CS: (22, 15)}, scope="archive")
+c.check("last over (Nawaz): no-ball six, wide, free hit Kohli bowled, three byes, stumped, wide, single off the last legal ball; three of Kohli's four sixes in the final eight balls", (3, 4), {CS: (3, 4)}, scope="archive")
+c.check("archive, men's T20 with line and length (1,632 back-of-a-length balls on the stumps, overs 17-20): six 1 in 12, straight six 1 in 51", (1632, 140, 32), {CI: (1632, 140, 32)}, scope="archive")
+c.check("archive: men's T20 chases needing 25-31 off 8 balls with at most 5 down: 4 wins in 29 (small sample)", (29, 4), {CS: (29, 4)}, scope="archive")
+c.check("Rauf: three slower balls in the over; no idea Kohli could hit him down the ground off that length; does not think he can do it again. Kohli: 'Till this date, I don't know how I pulled off that shot'", (3,), {"press reports": (3,)}, scope="archive")
+IN = "data/licensed/in/"
+COLD = {"type": "photocard", "kicker": "टी-ट्वेंटी विश्व कप · एमसीजी · 23 अक्टूबर 2022", "title": "28 रन, 8 गेंद।", "img": IN + "kohli_mcg_loft_wide.jpg", "crop_short": (0, 40, 1061, 747), "tag": "भारत को चाहिए 28 रन, 8 गेंद में", "name": "विराट कोहली", "mono": "19वाँ ओवर · हारिस रऊफ़", "caption": "पाकिस्तान के ख़िलाफ़ 160 का पीछा", "chip": "7 में 1", "chip_sub": "ऐसे पीछे सफल, हमारे आँकड़ों में (छोटा सैंपल)"}
+SIT = {"type": "stats", "head": {"t": "हालात", "sub": "भारत 4 विकेट नीचे · 19वाँ ओवर"}, "tiles": [{"v": "28", "l": "8 गेंद में चाहिए", "c": "red"}, {"v": "22", "l": "रऊफ़ के पहले तीन ओवर", "c": "ink"}, {"v": "3", "l": "धीमी गेंदें, रऊफ़ के मुताबिक़", "c": "gold"}]}
+OVR = {"type": "bars", "head": {"t": "19वाँ ओवर", "sub": "हर गेंद पर रन · हारिस रऊफ़"}, "max": 6, "dec": 0, "items": [{"label": "गेंद 1", "value": 1, "color": "ink"}, {"label": "गेंद 2", "value": 1, "color": "ink"}, {"label": "गेंद 3", "value": 0, "color": "ink"}, {"label": "गेंद 4", "value": 1, "color": "ink"}, {"label": "गेंद 5", "value": 6, "color": "red"}, {"label": "गेंद 6", "value": 6, "color": "red"}]}
+DEL = {"type": "pitchtop", "head": {"t": "पाँचवीं गेंद", "sub": "चित्र काल्पनिक · लेंथ पर रिपोर्टें अलग-अलग"}, "panels": [{"title": "लेंथ से पीछे, स्टंप पर", "balls": [["middle", "short_of_length", "b"]], "stats": [("12 में 1", "आख़िरी ओवरों में ऐसी गेंद पर छक्का"), ("51 में 1", "सीधा छक्का")]}], "footnote": "हमारे आँकड़ों में, पुरुष टी-ट्वेंटी, ओवर 17 से 20"}
+W1 = {"type": "statement", "kicker": "इतना मुश्किल क्यों · 1", "lines": [{"t": "सीमा रेखा"}, {"t": "बहुत दूर थी।", "c": "gold"}], "sub": "गेंद को पहले गेंदबाज़ के ऊपर से निकलना था, फिर आसमान छूना था।"}
+W2 = {"type": "statement", "kicker": "इतना मुश्किल क्यों · 2", "lines": [{"t": "सोचने का"}, {"t": "वक़्त नहीं।", "c": "gold"}], "sub": "तेज़ गेंद, लेंथ से पीछे: फ़ैसला पहले होता है, या होता ही नहीं।"}
+W3 = {"type": "statement", "kicker": "इतना मुश्किल क्यों · 3", "lines": [{"t": "गेंदबाज़ का सिर"}, {"t": "रास्ते में।", "c": "gold"}], "sub": "सीधा मतलब उसके ऊपर से। देर हुई तो गेंद स्टंप पर।"}
+W4 = {"type": "stats", "head": {"t": "इतना मुश्किल क्यों · 4", "sub": "पाँचवीं गेंद के बाद स्कोरबोर्ड"}, "tiles": [{"v": "28 / 7", "l": "चूके तो: रन / गेंद", "c": "ink"}, {"v": "16 / 6", "l": "लगा तो: रन / गेंद", "c": "red"}, {"v": "51 में 1", "l": "सीधे छक्के के आँकड़े", "c": "gold"}]}
+FIG = {"type": "shotfig", "head": {"t": "कैसे खेला", "sub": "रिपोर्टों के मुताबिक़"}, "photo": {"img": IN + "kohli_mcg_loft_wide.jpg", "crop": (380, 10, 800, 430)}, "cap": "रिपोर्टों से बने चार चरण। हमारा अपना चित्र, रीप्ले नहीं।", "steps": [
+    {"pose": "stance", "t": "तैयार स्टांस", "d": "अगला पाँव आगे"}, {"pose": "across", "t": "आर-पार, जगह बनाई", "d": "पीछे हटे, वज़न पीछे"}, {"pose": "punch", "t": "सीधा बल्ला", "d": "लाइन के आर-पार", "ball": (97, 18)}, {"pose": "finish", "t": "ऊपर, और ऊपर", "d": "गेंदबाज़ के सिर के ऊपर से", "ball": (74, -20)}]}
+KQ = {"type": "statement", "kicker": "विराट कोहली, बाद में", "lines": [{"t": "“पता नहीं, कैसे"}, {"t": "खेल गया।”", "c": "gold"}], "sub": "“आज तक मुझे नहीं पता कि मैंने वो शॉट कैसे खेला, पर खेला गया।”"}
+RQ = {"type": "statement", "kicker": "हारिस रऊफ़, बाद में", "lines": [{"t": "“अंदाज़ा ही"}, {"t": "नहीं था।”", "c": "gold"}], "sub": "उन्हें अंदाज़ा नहीं था कि कोहली उस लेंथ पर सीधा मार सकते हैं, और नहीं लगता कि वो फिर कर पाएँगे।"}
+SIX2 = {"type": "statement", "kicker": "छठी गेंद", "lines": [{"t": "फ़्लिक।"}, {"t": "फिर बाहर।", "c": "gold"}], "sub": "रिपोर्टों में मतभेद: स्क्वेयर के पीछे, या फ़ाइन लेग के ऊपर से।"}
+LAST = {"type": "list", "head": {"t": "आख़िरी ओवर", "sub": "हमारा गेंद-दर-गेंद रिकॉर्ड"}, "items": [{"h": "नो-बॉल, छक्का", "d": "20.4 · नवाज़", "c": "gold", "cue": "नो-बॉल"}, {"h": "वाइड", "d": "20.5", "cue": "वाइड"}, {"h": "फ़्री हिट: बोल्ड, 3 बाई", "d": "20.6 · कोहली", "c": "gold", "cue": "फ़्री"}, {"h": "स्टंप, वाइड", "d": "20.7 · 20.8", "cue": "स्टंपिंग"}, {"h": "एक रन, आख़िरी गेंद", "d": "20.9 · भारत 4 विकेट से जीता", "c": "gold", "cue": "आख़िरी"}]}
+INN = {"type": "photocard", "kicker": "कोहली · 82* (53)", "title": "82*", "img": IN + "kohli_mcg_followthrough_frames.jpg", "crop_short": (0, 150, 736, 640), "tag": "6 चौके · 4 छक्के", "name": "फ़ॉलो-थ्रू", "mono": "आख़िरी गेंद पर जीत", "caption": "चार में से तीन छक्के आख़िरी आठ गेंदों में", "chip": "4 में 3", "chip_sub": "छक्के आख़िरी आठ गेंदों में"}
+VERD = {"type": "statement", "kicker": "आँकड़ों का फ़ैसला", "lines": [{"t": "51 में 1।"}, {"t": "वो एक, कोहली।", "c": "gold"}], "sub": "कोई इसे सदी का शॉट कहता है। हम कहते हैं, ये वो आँकड़ा है जो उन पर लागू होने के लिए बना ही नहीं।"}
+POLL = {"type": "list", "head": {"t": "आपकी राय", "sub": "कौन सा छक्का बेहतर? कमेंट में 1, 2 या 3"}, "items": [{"h": "1 · सीधा वाला", "d": "गेंदबाज़ के सिर के ऊपर से", "c": "gold", "cue": "एक,"}, {"h": "2 · फ़्लिक", "d": "पैड से", "cue": "दो,"}, {"h": "3 · नो-बॉल वाला", "d": "आख़िरी ओवर", "cue": "तीन,"}]}
+short = [
+    {"vo": "अट्ठाईस रन चाहिए। आठ गेंदें बाक़ी। सामने हारिस रऊफ़, जिसने तीन ओवर में सिर्फ़ बाईस रन दिए थे। हमारे आँकड़ों में, ऐसा पीछा सात में से एक बार पूरा होता है।", "scene": COLD},
+    {"vo": "भारत चार विकेट खो चुका था। मेलबर्न की रात साँस रोके खड़ी थी। रऊफ़ के हिसाब से, उन्होंने तीन धीमी गेंदें डाली थीं। समझदार आदमी इसे हार कहता। विराट कोहली समझदार नहीं थे।", "scene": SIT},
+    {"vo": "चार गेंद, तीन रन। रऊफ़ ओवर जीत रहे थे। फिर दो गेंद, और बारह रन।", "scene": OVR},
+    {"vo": "पाँचवीं गेंद, ज़्यादातर रिपोर्टों के मुताबिक़, लेंथ से थोड़ी पीछे, स्टंप पर, तेज़ रफ़्तार। हमारे आँकड़ों में, आख़िरी ओवरों में ऐसी गेंद पर छक्का बारह में एक बार लगता है। और सीधा छक्का? इक्यावन में एक बार।", "scene": DEL},
+    {"vo": "एक: सीमा रेखा बहुत दूर थी। गेंद को पहले गेंदबाज़ के ऊपर से निकलना था, फिर आसमान छूना था।", "scene": W1},
+    {"vo": "दो: इतनी तेज़ गेंद पर सोचने का वक़्त नहीं मिलता। फ़ैसला पहले होता है, या होता ही नहीं।", "scene": W2},
+    {"vo": "तीन: सीधे का मतलब, गेंदबाज़ के सिर के ऊपर से। देर हुई, तो गेंद स्टंप पर।", "scene": W3},
+    {"vo": "चार: चूक गए, तो अट्ठाईस रन सात गेंद में। लग गया, तो सोलह रन छह गेंद में। आँकड़े डरते नहीं, बस बेरहम होते हैं।", "scene": W4},
+    {"vo": "तो कैसे खेला? रिपोर्टें कहती हैं, वो स्टंप के आर-पार सरके, जगह बनाई, पीछे हटे, और सीधे बल्ले से गेंद को आसमान की ओर भेज दिया। ये स्लॉग नहीं था। ये ड्राइव थी, जो रुकना भूल गई।", "scene": FIG},
+    {"vo": "बाद में विराट कोहली ने कहा, आज तक मुझे नहीं पता कि मैंने वो शॉट कैसे खेला। यानी हम सब एक ही नाव में हैं।", "scene": KQ},
+    {"vo": "रऊफ़ ने कहा, उन्हें अंदाज़ा ही नहीं था कि कोहली उस लेंथ पर सीधा मार सकते हैं, और उन्हें नहीं लगता कि वो फिर कर पाएँगे।", "scene": RQ},
+    {"vo": "छठी गेंद पर फ़्लिक। गेंद कहाँ से गई, इस पर रिपोर्टें एकमत नहीं। पर बाहर गई, इस पर सब एकमत हैं।", "scene": SIX2},
+    {"vo": "फिर आख़िरी ओवर। नो-बॉल पर छक्का। वाइड। फ़्री हिट पर कोहली बोल्ड, पर तीन बाई। फिर स्टंपिंग, वाइड, और आख़िरी गेंद पर एक रन। उस ओवर में किसी की योजना नहीं बची।", "scene": LAST},
+    {"vo": "विराट कोहली, बयासी रन, तिरपन गेंद में, नाबाद। चार में से तीन छक्के, आख़िरी आठ गेंदों में। और जीत, आख़िरी गेंद पर।", "scene": INN},
+    {"vo": "हमने आँकड़े खँगाले। इक्यावन में एक। कोई इसे सदी का शॉट कहता है। हम कहते हैं, आँकड़ा बोला, इक्यावन में एक, और उस दिन, वो एक, कोहली था।", "scene": VERD},
+    {"vo": "कौन सा छक्का बेहतर था? एक, सीधा वाला। दो, फ़्लिक। तीन, नो-बॉल वाला। कमेंट में बताइए।", "scene": POLL},
+    dict(YT_CTA, vo="सब्सक्राइब कीजिए, अगली महान पारी का हम ऐसे ही हिसाब लगाएँगे।"),
+]
+SRC = ["The match (India v Pakistan, ICC Men's T20 World Cup, MCG, 23 October 2022): Cricsheet ball-by-ball (cricsheet.org, ODC-BY), match 1298150; result and scores checked against match reports (https://www.icc-cricket.com/news/the-king-lives-kohli-masterclass-helps-india-beat-pakistan-in-mcg-thriller ; https://www.cricket.com.au/news/3319263). The free hit in the last over comes from the ball-by-ball.",
+       "Archive rates: our verified ESPNcricinfo ball-by-ball captures of men's T20 matches with line and length (1,632 back-of-a-length balls on the stumps in overs 17-20; 140 sixes, 32 straight) and Cricsheet men's T20 chases (25-31 needed off 8 balls, at most 5 down: 4 wins in 29, a small sample): analysis/kohli_rauf.py.",
+       "Quotes (translated into Hindi by us): Kohli, Star Sports interview, November 2023, as reported by PTI/Outlook India https://www.outlookindia.com/sports/icc-cricket-world-cup-2023-virat-kohli-focuses-on-learning-new-strokes-rather-than-becoming-a-complete-batter-news-330035 ; Rauf (Cricwick, December 2022) as reported by PTI/ThePrint https://theprint.in/sport/would-have-felt-hurt-if-pandya-or-dk-hit-me-for-sixes-but-kohli-is-different-class-haris-rauf/1243640 and DNA India https://www.dnaindia.com/cricket/report-don-t-think-he-can-do-that-again-haris-rauf-on-virat-kohli-s-straight-six-vs-pakistan-in-t20-world-cup-3015621 ; the shot's description from SportsCafe https://sportscafe.in/blogs/untold-stories/what-was-kohli-thinking-during-those-monumental-sixes-against-haris-rauf . Reports differ on the length of the first six and the direction of the second; the video says so.",
+       "The figure and the pitch map are our own illustrations. Photographs: supplied by the channel owner."]
+TAGS = ["विराट कोहली", "हारिस रऊफ़", "Virat Kohli", "Haris Rauf", "India vs Pakistan", "T20 World Cup 2022", "Kohli six Rauf", "MCG", "The Third Man"]
+DS = ("भारत बनाम पाकिस्तान, टी-ट्वेंटी विश्व कप 2022, एमसीजी: 19वें ओवर में विराट कोहली के हारिस रऊफ़ पर दो छक्के, 8 गेंद में 28 रन चाहिए थे। सीधा छक्का इतना मुश्किल क्यों था (हमारे आँकड़ों में लेंथ से पीछे की ऐसी गेंद पर आख़िरी ओवरों में छक्का 12 में 1 बार, और सीधा छक्का 51 में 1 बार), रिपोर्टों के मुताबिक़ कोहली ने इसे कैसे खेला, कोहली और रऊफ़ के अपने शब्द, और आख़िरी ओवर: नो-बॉल पर छक्का, फ़्री हिट और तीन बाई। कुछ ब्योरों पर रिपोर्टें अलग हैं; हम बताते हैं कहाँ। कमेंट में बताइए: 1 सीधा छक्का, 2 फ़्लिक, 3 नो-बॉल वाला छक्का।\n\n#ViratKohli #INDvPAK #T20WorldCup #Shorts")
+spec = {"slug": "lab_ep4_kohli_rauf_19th_over_hi", "theme": "lab", "theme_long": "lab", "captions": "lab", "captions_long": False, "series": "lab", "tag": "द लैब", "tagsub": "कोहली बनाम रऊफ़ · 19वाँ ओवर",
+        "files": {"long": "_unused", "short": "x"}, "venue": {"time": "night", "crowd": [[20, 20, 22], [230, 230, 230], [25, 100, 200], [20, 60, 140]], "boards": [[20, 20, 22], [25, 100, 200]]},
+        "thumb": {"kicker": "टी-ट्वेंटी विश्व कप 2022", "lines": [{"t": "51 में 1"}, {"t": "कोहली", "c": "gold"}], "hero": "1:51", "herosize": 300},
+        "ig_cover": {"lines": [{"t": "51 में 1"}, {"t": "वो एक, कोहली", "c": "gold"}], "sub": "19वाँ ओवर", "hero": "1:51"}, "sources": SRC, "short": short,
+        "yt": {"short": {"title": "कोहली का वो छक्का, जो उन्हें भी समझ नहीं आया | India vs Pakistan T20 World Cup 2022 #Shorts", "description": DS, "tags": TAGS}}}
+c.save(spec); voice_lint.fix_spec(spec)
+json.dump(spec, open("specs/lab_ep4_kohli_rauf_19th_over_hi.json", "w"), ensure_ascii=False, indent=1)
+print("short words", sum(len(s["vo"].split()) for s in short), "|", voice_lint.check_spec(spec, ("short",)) or "lint clean", "|", spec["files"], "| chars", sum(len(s["vo"]) for s in short))

@@ -1,0 +1,147 @@
+{
+ "slug": "lab_ep4_kohli_rauf_19th_over_hi",
+ "claims": [
+  {
+   "claim": "India v Pakistan, T20 World Cup, MCG, 23 Oct 2022: Pakistan 159/8, India 160/6 won by four wickets off the last ball; Kohli 82* (53), 6 fours, 4 sixes",
+   "value": [
+    159,
+    160,
+    82,
+    53,
+    6,
+    4
+   ],
+   "sources": {
+    "cricsheet": [
+     159,
+     160,
+     82,
+     53,
+     6,
+     4
+    ],
+    "web reports": [
+     159,
+     160,
+     82,
+     53,
+     6,
+     4
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "after 18 overs 129/4; 19th over by Rauf: 1, 1, 0, 1, 6, 6 -> 28 needed off 8 before the fifth ball, 16 off 6 after the sixes",
+   "value": [
+    28,
+    8,
+    16,
+    6
+   ],
+   "sources": {
+    "cricsheet": [
+     28,
+     8,
+     16,
+     6
+    ],
+    "web reports": [
+     28,
+     8,
+     16,
+     6
+    ]
+   },
+   "scope": "career",
+   "status": "OK",
+   "conflicts": []
+  },
+  {
+   "claim": "Rauf's first three overs 22 runs; 15 off the 19th",
+   "value": [
+    22,
+    15
+   ],
+   "sources": {
+    "cricsheet": [
+     22,
+     15
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "last over (Nawaz): no-ball six, wide, free hit Kohli bowled, three byes, stumped, wide, single off the last legal ball; three of Kohli's four sixes in the final eight balls",
+   "value": [
+    3,
+    4
+   ],
+   "sources": {
+    "cricsheet": [
+     3,
+     4
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive, men's T20 with line and length (1,632 back-of-a-length balls on the stumps, overs 17-20): six 1 in 12, straight six 1 in 51",
+   "value": [
+    1632,
+    140,
+    32
+   ],
+   "sources": {
+    "cricinfo": [
+     1632,
+     140,
+     32
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "archive: men's T20 chases needing 25-31 off 8 balls with at most 5 down: 4 wins in 29 (small sample)",
+   "value": [
+    29,
+    4
+   ],
+   "sources": {
+    "cricsheet": [
+     29,
+     4
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Rauf: three slower balls in the over; no idea Kohli could hit him down the ground off that length; does not think he can do it again. Kohli: 'Till this date, I don't know how I pulled off that shot'",
+   "value": [
+    3
+   ],
+   "sources": {
+    "press reports": [
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "OK": 2,
+  "LABELLED": 5
+ }
+}
