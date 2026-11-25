@@ -48,8 +48,51 @@ def sc_follow(c, g, t, D, s):
         text(c, lab, cx, cy - R - 50, 28, "monoSB", LK.RED if k else gfx.MUTED, q, "c", track=2); text(c, sub, cx, cy + R + 78, E.fit(sub, 880, 40, "interB", 0), "interB", gfx.INK, q, "c")
     if s.get("foot"): text(c, s["foot"], l["x0"], l["bot"] - 10, 20, "mono", gfx.MUTED, eo(prog(t, 1.2, 2)))
 
+# ---- shotfig: a drawn side-on figure in four phases (our own illustration, always labelled ILLUSTRATIVE) ----------------------------------------------------------------
+POSES = {   # joints on a 100 x 100 board (y down): head, hip, front knee/foot, back knee/foot, hands, bat tip
+    "stance":  dict(head=(46, 16), hip=(46, 52), kf=(54, 72), ff=(60, 94), kb=(40, 73), fb=(33, 94), hands=(56, 40), bat=(63, 90)),
+    "across":  dict(head=(42, 16), hip=(41, 52), kf=(52, 72), ff=(62, 94), kb=(34, 74), fb=(26, 94), hands=(46, 28), bat=(30, 6)),
+    "punch":   dict(head=(48, 18), hip=(47, 52), kf=(56, 73), ff=(62, 94), kb=(41, 76), fb=(34, 90), hands=(66, 30), bat=(90, 22)),
+    "finish":  dict(head=(48, 14), hip=(44, 50), kf=(55, 72), ff=(61, 94), kb=(40, 74), fb=(34, 88), hands=(58, 4), bat=(46, -8)),
+}
+
+
+def _fig(c, x, y, sc, pose, col, a, bat=(226, 150, 24)):
+    P = POSES[pose]; X = lambda k: (x + P[k][0] * sc, y + P[k][1] * sc)
+    sh = (P["hip"][0] + (P["head"][0] - P["hip"][0]) * .78, P["hip"][1] + (P["head"][1] - P["hip"][1]) * .78)               # the shoulders, 78% of the way up the trunk
+    S = (x + sh[0] * sc, y + sh[1] * sc)
+    def ln(p0, p1, w, cc):
+        pt = paint(cc, a, stroke=w); pt.setStrokeCap(skia.Paint.kRound_Cap); c.drawLine(p0[0], p0[1], p1[0], p1[1], pt)
+    ln(X("hip"), S, sc * 5.2, col); ln(X("hip"), X("kf"), sc * 4.2, col); ln(X("kf"), X("ff"), sc * 3.6, col); ln(X("hip"), X("kb"), sc * 4.2, col); ln(X("kb"), X("fb"), sc * 3.6, col)
+    ln(S, X("hands"), sc * 3.4, col); ln(X("hands"), X("bat"), sc * 2.6, bat)
+    c.drawCircle(*X("head"), sc * 5.2, paint(col, a)); c.drawCircle(X("head")[0] + sc * 1.8, X("head")[1] - sc * 1.0, sc * 5.6, paint((255, 255, 255), .0))
+
+
+def sc_shotfig(c, g, t, D, s):
+    LK.header(c, g, t, D, dict(s, title=s["head"]["t"], sub=s["head"].get("sub", ""))); l = SS._L(g); x0, x1 = l["x0"], l["x1"]; y0 = l["top"] + 30
+    if s.get("photo"):
+        ph = s["photo"]; qa = eo(prog(t, .05, .5)); pw = 430; ph_h = 430; im = SS._pimg(ph["img"])
+        c.save(); c.clipRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x0, y0, pw, ph_h), 20, 20), doAntiAlias=True)
+        c.drawImageRect(im, skia.Rect.MakeLTRB(*ph["crop"]), skia.Rect.MakeXYWH(x0, y0, pw, ph_h), SAMP, paint((255, 255, 255), qa)); c.restore()
+        c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x0, y0, pw, ph_h), 20, 20), paint(gfx.INK, qa, stroke=4))
+        xr = x0 + pw + 40; wr = x1 - xr
+        text(c, "ILLUSTRATIVE", xr, y0 + 40, 24, "monoSB", LK.RED, qa, track=3)
+        for j, ln_ in enumerate(E.wrap(s["note"], wr, 34, "interB")[:8]): text(c, ln_, xr, y0 + 100 + 48 * j, 34, "interB", gfx.INK, eo(prog(t, .3 + .08 * j, .8 + .08 * j)))
+        gy = y0 + ph_h + 50
+    else: gy = y0
+    pw_ = (x1 - x0 - 24) / 2; ph2 = 380; steps = s["steps"]
+    for k, st in enumerate(steps):
+        cx_ = x0 + (k % 2) * (pw_ + 24); cy_ = gy + (k // 2) * (ph2 + 24); q = eo(prog(t, .5 + .55 * k, 1.0 + .55 * k)); on = prog(t, .5 + .55 * k, 99) > 0
+        rrect(c, cx_, cy_, pw_, ph2, 18, (255, 255, 255), q, stroke=3, scol=LK.RED if k == len(steps) - 1 else gfx.INK, sa=q)
+        gnd = paint((120, 120, 110), .6 * q, stroke=3); c.drawLine(cx_ + 24, cy_ + ph2 - 82, cx_ + pw_ - 24, cy_ + ph2 - 82, gnd)
+        _fig(c, cx_ + pw_ * .22, cy_ + 34, 2.85, st["pose"], gfx.INK, q)
+        if st.get("ball") and k >= 2:
+            bx, by = st["ball"]; c.drawCircle(cx_ + pw_ * .22 + bx * 2.85, cy_ + 34 + by * 2.85, 9, paint(LK.RED, q))
+        c.drawCircle(cx_ + 34, cy_ + 34, 22, paint(LK.RED, q)); text(c, str(k + 1), cx_ + 34, cy_ + 43, 28, "interB", (255, 255, 255), q, "c")
+        text(c, st["t"], cx_ + 24, cy_ + ph2 - 40, E.fit(st["t"], pw_ - 48, 30, "interB", -1), "interB", gfx.INK, q); text(c, st.get("d", ""), cx_ + 24, cy_ + ph2 - 12, E.fit(st.get("d", ""), pw_ - 48, 18, "monoSB", 1), "monoSB", gfx.MUTED, q, track=1)
+
 
 def install(engine, looks):
     global E, LK
     E = engine; LK = looks
-    E.SCENES.update({"techimg": sc_techimg, "follow": sc_follow})
+    E.SCENES.update({"techimg": sc_techimg, "follow": sc_follow, "shotfig": sc_shotfig})

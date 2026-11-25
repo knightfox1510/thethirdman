@@ -42,6 +42,7 @@ EPISODES = {
     "nz_test_preview": ("tactics", "04", "India in New Zealand Test Preview"),
     "bay_oval_new_ball": ("tactics", "05", "Surviving the New Ball at Bay Oval"),
     "lab_ep1_abhishek_twin": ("lab", "01", "Abhishek Sharma's Statistical Twin"),
+    "lab_ep4_kohli_rauf_19th_over": ("lab", "04", "Kohli v Rauf The 19th Over"),
     "lab_ep3_vaibhav_204": ("lab", "03", "Vaibhav Suryavanshi 204 Off 53"),
     "lab_ep2_bumrah_twin": ("lab", "02", "Bumrah's Bowling Twin"),
     "stat_check_bumrah_rashid": ("statcheck", "01", "Bumrah or Rashid"),

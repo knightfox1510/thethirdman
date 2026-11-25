@@ -1,0 +1,174 @@
+{
+ "match": {
+  "pak": 159,
+  "ind": 160,
+  "kohli": [
+   82,
+   53,
+   6,
+   4
+  ]
+ },
+ "after_over": {
+  "1": {
+   "score": 5,
+   "wkts": 0,
+   "kohli": 0,
+   "kohli_balls": 0
+  },
+  "2": {
+   "score": 7,
+   "wkts": 1,
+   "kohli": 0,
+   "kohli_balls": 1
+  },
+  "3": {
+   "score": 10,
+   "wkts": 1,
+   "kohli": 2,
+   "kohli_balls": 5
+  },
+  "4": {
+   "score": 17,
+   "wkts": 2,
+   "kohli": 2,
+   "kohli_balls": 7
+  },
+  "5": {
+   "score": 22,
+   "wkts": 2,
+   "kohli": 3,
+   "kohli_balls": 8
+  },
+  "6": {
+   "score": 31,
+   "wkts": 3,
+   "kohli": 5,
+   "kohli_balls": 9
+  },
+  "7": {
+   "score": 33,
+   "wkts": 4,
+   "kohli": 6,
+   "kohli_balls": 11
+  },
+  "8": {
+   "score": 38,
+   "wkts": 4,
+   "kohli": 9,
+   "kohli_balls": 14
+  },
+  "9": {
+   "score": 41,
+   "wkts": 4,
+   "kohli": 11,
+   "kohli_balls": 19
+  },
+  "10": {
+   "score": 45,
+   "wkts": 4,
+   "kohli": 12,
+   "kohli_balls": 21
+  },
+  "11": {
+   "score": 54,
+   "wkts": 4,
+   "kohli": 15,
+   "kohli_balls": 23
+  },
+  "12": {
+   "score": 74,
+   "wkts": 4,
+   "kohli": 22,
+   "kohli_balls": 26
+  },
+  "13": {
+   "score": 83,
+   "wkts": 4,
+   "kohli": 28,
+   "kohli_balls": 29
+  },
+  "14": {
+   "score": 90,
+   "wkts": 4,
+   "kohli": 34,
+   "kohli_balls": 33
+  },
+  "15": {
+   "score": 100,
+   "wkts": 4,
+   "kohli": 42,
+   "kohli_balls": 37
+  },
+  "16": {
+   "score": 106,
+   "wkts": 4,
+   "kohli": 43,
+   "kohli_balls": 39
+  },
+  "17": {
+   "score": 112,
+   "wkts": 4,
+   "kohli": 46,
+   "kohli_balls": 42
+  },
+  "18": {
+   "score": 129,
+   "wkts": 4,
+   "kohli": 61,
+   "kohli_balls": 47
+  },
+  "19": {
+   "score": 144,
+   "wkts": 4,
+   "kohli": 74,
+   "kohli_balls": 50
+  },
+  "20": {
+   "score": 160,
+   "wkts": 6,
+   "kohli": 82,
+   "kohli_balls": 53
+  }
+ },
+ "over19": [
+  1,
+  1,
+  0,
+  1,
+  6,
+  6
+ ],
+ "need_before_sixes": 28,
+ "rauf_by_over": {
+  "4": 7,
+  "6": 9,
+  "16": 6,
+  "19": 15
+ },
+ "rauf_first3": 22,
+ "last_over": [
+  "('HH Pandya', 0, 0, None, ['caught'])",
+  "('KD Karthik', 1, 1, None, [])",
+  "('V Kohli', 2, 2, None, [])",
+  "('V Kohli', 6, 7, {'noballs': 1}, [])",
+  "('V Kohli', 0, 1, {'wides': 1}, [])",
+  "('V Kohli', 0, 3, {'byes': 3}, [])",
+  "('KD Karthik', 0, 0, None, ['stumped'])",
+  "('R Ashwin', 0, 1, {'wides': 1}, [])",
+  "('R Ashwin', 1, 1, None, [])"
+ ],
+ "sixes_in_last8": 3,
+ "archive": {
+  "balls": 1632,
+  "sixes": 140,
+  "straight_sixes": 32,
+  "p_six": 0.0858,
+  "p_straight": 0.0196,
+  "matches_used": null
+ },
+ "chase_28_8": {
+  "situations": 29,
+  "wins": 4
+ }
+}
