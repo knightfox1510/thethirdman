@@ -41,7 +41,11 @@ def download(fid, path):
 def compact(d):
     """-> (record, status, note). Modern layout: pages['full-scorecard'] JSON. Old layout: text pages only."""
     pg = d.get("pages", {}); mid = str(d.get("match_id", ""))
-    sc = (pg.get("full-scorecard") or {}).get("props", {}).get("appPageProps", {}).get("data")
+    sc = None
+    for k_, v_ in pg.items():                                                          # modern files: 'full-scorecard'; older captures key the same page by its slug
+        if isinstance(v_, dict):
+            dd = v_.get("props", {}).get("appPageProps", {}).get("data")
+            if dd and dd.get("content", {}).get("innings") is not None and dd.get("match"): sc = dd; break
     if not sc:
         txt = {k: v for k, v in pg.items() if k.endswith("_text") or isinstance(v, str)}
         return {"match_id": mid, "slug": d.get("match_slug"), "layout": "text", "text": txt, "series": d.get("series"), "url": d.get("page_url")}, "TEXT_ONLY", "scorecard text only"
@@ -62,7 +66,13 @@ def compact(d):
                              int(bool(x.get("isWicket"))), x.get("dismissalType"), x.get("outPlayerId"), x.get("wagonX"), x.get("wagonY"), x.get("wagonZone"), x.get("pitchLine"), x.get("pitchLength"), x.get("shotType"), x.get("shotControl")])
     rec["ball_cols"] = "inn,over,ball,batter,bowler,bat_runs,total_runs,wides,noballs,byes,legbyes,wicket,dismissal,out_player,wagon_x,wagon_y,wagon_zone,line,length,shot,control".split(",")
     B = rec["balls"]; cov = {"balls": len(B), "wagon": sum(1 for b in B if b[16]), "line": sum(1 for b in B if b[17]), "shot": sum(1 for b in B if b[19])}; rec["coverage"] = cov
-    if not B: return rec, "OK", "scorecard only (no ball-by-ball)"
+    if not B:                                                                           # scorecard only: check each innings adds up (batters + extras = total)
+        bad = []
+        for i in rec["innings"]:
+            tot = sum((b["runs"] or 0) for b in i["bat"]) + (i["extras"] or 0)
+            if i["n"] <= 2 and tot != i["runs"]: bad.append(f"inn{i['n']}: batters+extras {tot} vs card {i['runs']}")
+        rec["reconcile"] = bad or "ok"
+        return rec, ("MISMATCH" if bad else "OK"), "; ".join(bad) or "scorecard only (no ball-by-ball)"
     bad = []
     for i in rec["innings"]:
         if i["n"] > 2: continue
@@ -96,7 +106,26 @@ def process(src, f, move, arch, st):
     with LOCK:
         open(MAN, "a").write(json.dumps(row, ensure_ascii=False) + "\n"); st["n"] += 1
         if st["n"] % 25 == 0: print(st["n"], "done", flush=True)
+def reparse(workers=6):
+    """Re-read files already in Archive whose first pass kept only page text (old layout), now that compact() finds their scorecard JSON."""
+    fo = folders(); ar = find(ROOTID, "Archive"); ce = find(ar, "Cricinfo extracts"); arch_odi = find(ce, "odi"); last = {}
+    for l in open(MAN):
+        r = json.loads(l); last[r["drive_id"]] = r
+    todo = [r for r in last.values() if r["status"] == "TEXT_ONLY"]; print("to reparse", len(todo), flush=True); st = {"n": 0}
+    def one(r):
+        row = {"src": r["src"], "name": r["name"], "drive_id": r["drive_id"], "bytes": r["bytes"], "moved": True}
+        try:
+            tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".json", dir=tempfile.gettempdir()); tmp.close(); row["md5"] = download(r["drive_id"], tmp.name)
+            d = json.load(open(tmp.name, encoding="utf-8")); os.unlink(tmp.name); rec, status, note = compact(d); row.update(status=status, note="reparsed: " + note, match_id=rec["match_id"], coverage=rec.get("coverage"))
+            json.dump(rec, gzip.open(f"{OUT}/{rec['match_id']}.json.gz", "wt", encoding="utf-8"), ensure_ascii=False)
+        except BaseException as e: row["status"] = "BAD"; row["note"] = "reparse: " + str(e)[:200]
+        with LOCK:
+            open(MAN, "a").write(json.dumps(row, ensure_ascii=False) + "\n"); st["n"] += 1
+            if st["n"] % 50 == 0: print(st["n"], "reparsed", flush=True)
+    with ThreadPoolExecutor(workers) as ex: list(ex.map(one, todo))
+    print("REPARSE DONE", flush=True)
 def main(a):
+    if a[0] == "reparse": return reparse()
     fo = folders(); os.makedirs(OUT, exist_ok=True)
     if a[0] == "list":
         for k, v in fo.items(): fs = ls(v); print(k, len(fs), "files", round(sum(int(x.get("size", 0)) for x in fs) / 1e9, 1), "GB"); return
