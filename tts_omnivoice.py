@@ -25,13 +25,15 @@ def norm(s, asr=False):
 def similar(x, y):
     if len(x) < 3 or len(y) < 3: return x == y
     return difflib.SequenceMatcher(None, x, y).ratio() >= .6
+NUMW = set("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand".split())
 def score(script, heard):
     A, B = norm(script), norm(heard, True); m = difflib.SequenceMatcher(None, A, B, autojunk=False); good = 0
+    badnum = [x for x in A if x in NUMW and A.count(x) > B.count(x)]                 # numbers must be heard exactly: a garbled number is a wrong number
     for tag, i1, i2, j1, j2 in m.get_opcodes():
         if tag == "equal": good += i2 - i1
         elif tag == "replace":
             for x, y in zip(A[i1:i2], B[j1:j2]): good += similar(x, y)
-    return good / max(len(A), 1), [x for x in A if not any(similar(x, y) for y in B)]
+    return good / max(len(A), 1) - (.2 if badnum else 0), sorted(set(badnum)) + [x for x in A if x not in NUMW and not any(similar(x, y) for y in B)]
 from omnivoice import OmniVoice
 from transformers import pipeline
 M = OmniVoice.from_pretrained("k2-fsa/OmniVoice", device_map="cpu", dtype=torch.float32)

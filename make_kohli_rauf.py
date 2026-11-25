@@ -48,7 +48,7 @@ short = [
     {"vo": "Rauf said he had no idea Kohli could hit him down the ground off that length, and that he doesn't think he can do it again.", "scene": RQ},
     {"vo": "The sixth ball, a flick. Reports disagree on whether it went behind square or over fine leg. Everyone agrees it went out.", "scene": SIX2},
     {"vo": "Then the last over. A no-ball, and a six. A wide. A free hit, Kohli bowled, three byes. A stumping, a wide, and a single off the last ball. Nobody's plan survived that over.", "scene": LAST},
-    {"vo": "Eighty-two off fifty-three. Three of his four sixes came in the final eight balls. India won off the last ball.", "scene": INN},
+    {"vo": "Kohli finished on eighty-two, from fifty-three balls. Three of his four sixes came in the final eight balls. India won off the last ball.", "scene": INN},
     {"vo": "So we checked the archive. One in fifty-one. Some call it the shot of the century. We call it a number that was never meant to apply to him.", "scene": VERD},
     {"vo": "Which was the better six? Comment one, the straight one. Two, the flick. Three, the no-ball.", "scene": POLL},
     dict(YT_CTA, vo="Subscribe, and we'll audit the next great innings the same way."),
