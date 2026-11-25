@@ -77,7 +77,7 @@ def sc_shotfig(c, g, t, D, s):
         c.drawRRect(skia.RRect.MakeRectXY(skia.Rect.MakeXYWH(x0, y0, pw, ph_h), 20, 20), paint(gfx.INK, qa, stroke=4))
         xr = x0 + pw + 40; wr = x1 - xr
         text(c, "ILLUSTRATIVE", xr, y0 + 40, 24, "monoSB", LK.RED, qa, track=3)
-        for j, ln_ in enumerate(E.wrap(s["note"], wr, 34, "interB")[:8]): text(c, ln_, xr, y0 + 100 + 48 * j, 34, "interB", gfx.INK, eo(prog(t, .3 + .08 * j, .8 + .08 * j)))
+        for j, ln_ in enumerate(E.wrap(s["cap"], wr, 34, "interB")[:8]): text(c, ln_, xr, y0 + 100 + 48 * j, 34, "interB", gfx.INK, eo(prog(t, .3 + .08 * j, .8 + .08 * j)))
         gy = y0 + ph_h + 50
     else: gy = y0
     pw_ = (x1 - x0 - 24) / 2; ph2 = 380; steps = s["steps"]
