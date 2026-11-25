@@ -91,7 +91,7 @@ for i, p in enumerate(paras):
         w16 = librosa.resample(au.astype("float32"), orig_sr=24000, target_sr=16000); r = ASR({"raw": w16, "sampling_rate": 16000}, generate_kwargs={"task": "transcribe", "language": a.lang})
         sc, miss = score(p, r["text"]); print(f"[{i}] take {k + 1}: match {sc:.2f} missing {miss} ({time.time() - t0:.0f}s)", flush=True)
         if best is None or sc > best[0]: best = (sc, au, r, miss)
-        if sc >= (.93 if a.lang == "en" else .8) and not miss: break
+        if (sc >= .93 and not miss) if a.lang == "en" else sc >= .85: break
     sc, au, r, miss = best; sf.write(f"{out}/raw{i}.wav", au, 24000)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{out}/raw{i}.wav", "-b:a", "192k", f"{out}/raw{i}.mp3"], check=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{out}/raw{i}.mp3", "-af", f"atempo={TEMPO}", "-b:a", "192k", f"{out}/p{i}.mp3"], check=True)
