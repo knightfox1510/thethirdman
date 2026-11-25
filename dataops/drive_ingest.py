@@ -80,8 +80,48 @@ def compact(d):
         if not bs: bad.append(f"inn{i['n']}: no balls"); continue
         runs = sum(b[6] for b in bs); wk = sum(b[11] for b in bs)
         if runs != i["runs"] or wk != i["wickets"]: bad.append(f"inn{i['n']}: balls {runs}/{wk} vs card {i['runs']}/{i['wickets']}")
-    rec["reconcile"] = bad or "ok"
+    bad += extra_checks(rec); rec["reconcile"] = bad or "ok"
     return rec, ("MISMATCH" if bad else "OK"), "; ".join(bad)
+def extra_checks(rec):
+    """Contamination checks the innings-1/2 reconcile cannot see: balls past the last over of the format, more than a super over's worth of balls in innings 3+, duplicated balls."""
+    B = rec.get("balls") or []; mo = 20 if (rec.get("format") or "").upper().startswith("T20") else 50; out = []
+    over = sum(1 for b in B if b[1] > mo); extra = sum(1 for b in B if b[0] > 2); dup = len(B) - len(set((b[0], b[1], b[2]) for b in B))
+    if over: out.append(f"{over} balls past over {mo}")
+    if extra > 14: out.append(f"{extra} balls in innings 3+")
+    if dup: out.append(f"{dup} duplicate balls")
+    return out
+def clean_rec(rec):
+    """Drop the impossible rows (past the format's last over, innings 3+ beyond a super over, duplicates) and re-run the innings 1-2 reconcile. Returns (dropped, problems)."""
+    mo = 20 if (rec.get("format") or "").upper().startswith("T20") else 50; B = rec["balls"]; n0 = len(B); extra = sum(1 for b in B if b[0] > 2); seen = set(); out = []
+    for b in B:
+        if b[1] > mo or (b[0] > 2 and extra > 14): continue
+        k = (b[0], b[1], b[2])
+        if k in seen: continue
+        seen.add(k); out.append(b)
+    rec["balls"] = out; bad = []
+    for i in rec["innings"]:
+        if i["n"] > 2: continue
+        bs = [b for b in out if b[0] == i["n"]]; runs = sum(b[6] for b in bs); wk = sum(b[11] for b in bs)
+        if runs != i["runs"] or wk != i["wickets"]: bad.append(f"inn{i['n']}: balls {runs}/{wk} vs card {i['runs']}/{i['wickets']}")
+    cov = {"balls": len(out), "wagon": sum(1 for b in out if b[16]), "line": sum(1 for b in out if b[17]), "shot": sum(1 for b in out if b[19])}; rec["coverage"] = cov
+    rec["reconcile"] = bad or "ok"; rec["cleaned"] = f"dropped {n0 - len(out)} impossible rows"
+    return n0 - len(out), bad
+def revalidate():
+    """Re-check every stored record (no download): clean contaminated ones in place, re-run the reconcile, record the result in the manifest."""
+    last = {}
+    for l in open(MAN):
+        r = json.loads(l)
+        if r.get("match_id"): last[r["match_id"]] = r
+    res = []
+    for k, r in last.items():
+        if r["status"] not in ("OK", "MISMATCH"): continue
+        try: rec = json.load(gzip.open(f"{OUT}/{k}.json.gz", "rt", encoding="utf-8"))
+        except Exception: continue
+        if not extra_checks(rec): continue
+        dropped, bad = clean_rec(rec); json.dump(rec, gzip.open(f"{OUT}/{k}.json.gz", "wt", encoding="utf-8"), ensure_ascii=False)
+        row = dict(r); row["status"] = "MISMATCH" if bad else "OK"; row["note"] = f"cleaned ({dropped} impossible rows dropped); " + ("; ".join(bad) or "now reconciles"); row["coverage"] = rec["coverage"]
+        open(MAN, "a").write(json.dumps(row, ensure_ascii=False) + "\n"); res.append((k, dropped, bool(bad)))
+    print("cleaned", len(res), "now reconcile", sum(1 for x in res if not x[2]), "still partial", sum(1 for x in res if x[2]))
 def process(src, f, move, arch, st):
     name = f["name"]; row = {"src": src, "name": name, "drive_id": f["id"], "bytes": int(f.get("size", 0))}
     try:
@@ -128,6 +168,7 @@ def reparse(workers=6):
     print("REPARSE DONE", flush=True)
 def main(a):
     if a[0] == "reparse": return reparse()
+    if a[0] == "revalidate": return revalidate()
     fo = folders(); os.makedirs(OUT, exist_ok=True)
     if a[0] == "list":
         for k, v in fo.items(): fs = ls(v); print(k, len(fs), "files", round(sum(int(x.get("size", 0)) for x in fs) / 1e9, 1), "GB"); return
