@@ -12,7 +12,7 @@ from gauth import api, resumable, token
 import drive as DR
 
 ROOT = DR.ROOT
-RAW = ["data/cricbuzz", "data/cricinfo", "data/players", "data/capture_index.json", "data/abhishek_t20i_ids.json", "data/index", "data/licensed"]
+RAW = ["data/cricbuzz", "data/cricinfo", "data/players", "data/capture_index.json", "data/abhishek_t20i_ids.json", "data/index", "data/licensed", "data/cricinfo_compact"]
 
 
 def bk_folder(): return DR.folder("Backup", DR.folder("Data", DR.folder("The Third Man")))
