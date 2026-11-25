@@ -21,3 +21,4 @@ data/*
 # secrets
 .env
 *.key
+mockups/out/
