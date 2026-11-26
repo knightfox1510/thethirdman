@@ -1,0 +1,307 @@
+{
+ "as_of": "2026-11-26",
+ "source": "Sunday Guardian (Uzma Fatima, 25 Nov 2026) bracket lists, relayed; KhelNow and CricTracker give totals and team tables only. Names and base-price brackets as reported: not the official list. Scott Boland is reported to have withdrawn. Shakib Al Hasan and Mustafizur Rahman are reported missing from the initial register.",
+ "totals": {
+  "registered": 1220,
+  "indian": 939,
+  "overseas": 281,
+  "capped": 184,
+  "uncapped": 994,
+  "associate": 42,
+  "uncapped_indian_with_ipl": 127,
+  "uncapped_indian_other": 798,
+  "uncapped_international": 69
+ },
+ "brackets": {
+  "2 cr": [
+   {
+    "n": "Avesh Khan",
+    "c": "India"
+   },
+   {
+    "n": "Deepak Chahar",
+    "c": "India"
+   },
+   {
+    "n": "Ben Stokes",
+    "c": "England"
+   },
+   {
+    "n": "Fazalhaq Farooqi",
+    "c": "Afghanistan"
+   },
+   {
+    "n": "Mujeeb Ur Rahman",
+    "c": "Afghanistan"
+   },
+   {
+    "n": "Rahmanullah Gurbaz",
+    "c": "Afghanistan"
+   },
+   {
+    "n": "David Warner",
+    "c": "Australia"
+   },
+   {
+    "n": "Jake Fraser-McGurk",
+    "c": "Australia"
+   },
+   {
+    "n": "Jhye Richardson",
+    "c": "Australia"
+   },
+   {
+    "n": "Mahli Beardman",
+    "c": "Australia"
+   },
+   {
+    "n": "Spencer Johnson",
+    "c": "Australia"
+   },
+   {
+    "n": "Jonny Bairstow",
+    "c": "England"
+   },
+   {
+    "n": "Sam Billings",
+    "c": "England"
+   },
+   {
+    "n": "Sonny Baker",
+    "c": "England"
+   },
+   {
+    "n": "Tom Curran",
+    "c": "England"
+   },
+   {
+    "n": "Adam Milne",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Ben Sears",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Bevon Jacobs",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Daryl Mitchell",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Devon Conway",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Rachin Ravindra",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Trent Boult",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Will O'Rourke",
+    "c": "New Zealand"
+   },
+   {
+    "n": "Anrich Nortje",
+    "c": "South Africa"
+   },
+   {
+    "n": "Gerald Coetzee",
+    "c": "South Africa"
+   },
+   {
+    "n": "Matheesha Pathirana",
+    "c": "Sri Lanka"
+   },
+   {
+    "n": "Wanindu Hasaranga",
+    "c": "Sri Lanka"
+   },
+   {
+    "n": "Shai Hope",
+    "c": "West Indies"
+   },
+   {
+    "n": "Shimron Hetmyer",
+    "c": "West Indies"
+   }
+  ],
+  "1.5 cr": [
+   {
+    "n": "Allah Ghazanfar"
+   },
+   {
+    "n": "Daniel Sams"
+   },
+   {
+    "n": "Riley Meredith"
+   },
+   {
+    "n": "David Wiese"
+   },
+   {
+    "n": "Rassie van der Dussen"
+   },
+   {
+    "n": "Jayden Seales"
+   },
+   {
+    "n": "Keemo Paul"
+   }
+  ],
+  "1.25 cr": [
+   {
+    "n": "Ashton Agar"
+   },
+   {
+    "n": "Billy Stanlake"
+   },
+   {
+    "n": "Kyle Mayers"
+   },
+   {
+    "n": "Matthew Forde"
+   }
+  ],
+  "1 cr": [
+   {
+    "n": "Gulbadin Naib"
+   },
+   {
+    "n": "Ibrahim Zadran"
+   },
+   {
+    "n": "Mohammad Nabi"
+   },
+   {
+    "n": "Chris Lynn"
+   },
+   {
+    "n": "Scott Boland"
+   },
+   {
+    "n": "Rishad Hossain"
+   },
+   {
+    "n": "Akash Deep"
+   },
+   {
+    "n": "Blair Tickner"
+   },
+   {
+    "n": "Matthew Fisher"
+   },
+   {
+    "n": "Nathan Smith"
+   },
+   {
+    "n": "Zak Foulkes"
+   },
+   {
+    "n": "Duan Jansen"
+   },
+   {
+    "n": "Marques Ackerman"
+   },
+   {
+    "n": "Matthew Breetzke"
+   },
+   {
+    "n": "Ottneil Baartman"
+   },
+   {
+    "n": "Charith Asalanka"
+   },
+   {
+    "n": "Dushmantha Chameera"
+   },
+   {
+    "n": "Kusal Mendis"
+   },
+   {
+    "n": "Maheesh Theekshana"
+   },
+   {
+    "n": "Sonal Dinusha"
+   },
+   {
+    "n": "Jaydev Unadkat"
+   },
+   {
+    "n": "Tushar Deshpande"
+   },
+   {
+    "n": "Umesh Yadav"
+   },
+   {
+    "n": "Andre Fletcher"
+   },
+   {
+    "n": "John Campbell"
+   },
+   {
+    "n": "Matthew Kuhnemann"
+   },
+   {
+    "n": "Nikhil Chaudhary"
+   },
+   {
+    "n": "Tymal Mills"
+   },
+   {
+    "n": "Newman Nyamhuri"
+   }
+  ],
+  "75 lakh": [
+   {
+    "n": "Deepak Hooda"
+   },
+   {
+    "n": "Karun Nair"
+   },
+   {
+    "n": "Kuldeep Sen"
+   },
+   {
+    "n": "Mayank Agarwal"
+   },
+   {
+    "n": "Rahul Tripathi"
+   },
+   {
+    "n": "Saransh Jain"
+   },
+   {
+    "n": "Shivam Mavi"
+   },
+   {
+    "n": "Umran Malik"
+   },
+   {
+    "n": "Cameron Bancroft"
+   },
+   {
+    "n": "Hassan Eisakhil"
+   }
+  ],
+  "30 lakh": [
+   {
+    "n": "Aaryavir Sehwag",
+    "c": "India"
+   },
+   {
+    "n": "Mohit Ulva",
+    "c": "India"
+   },
+   {
+    "n": "Kavyan Patel",
+    "c": "India"
+   }
+  ]
+ }
+}

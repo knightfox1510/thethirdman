@@ -1,0 +1,7666 @@
+{
+ "named": {
+  "Avesh Khan": {
+   "name": "Avesh Khan",
+   "seasons": "2017-2026",
+   "n_seasons": 10,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 16,
+    "balls": 43,
+    "runs": 68,
+    "sr": 158.1,
+    "outs": 3,
+    "avg": 22.7,
+    "bnd": 76.0,
+    "sixes": 4
+   },
+   "career_bowl": {
+    "balls": 1767,
+    "econ": 9.29,
+    "wkts": 98
+   },
+   "r3_bat": {
+    "inn": 9,
+    "balls": 23,
+    "runs": 37,
+    "sr": 160.9,
+    "outs": 2,
+    "avg": 18.5,
+    "bnd": 70.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 761,
+    "econ": 10.15,
+    "wkts": 40
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 9,
+    "balls": 23,
+    "runs": 37,
+    "sr": 160.9,
+    "outs": 2,
+    "avg": 18.5,
+    "bnd": 70.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 185,
+    "econ": 11.84,
+    "wkts": 6
+   },
+   "r3_bowl_death": {
+    "balls": 282,
+    "econ": 9.94,
+    "wkts": 21
+   },
+   "bracket": "2 cr",
+   "listed_as": "Avesh Khan",
+   "country": "India"
+  },
+  "Deepak Chahar": {
+   "name": "Deepak Chahar",
+   "seasons": "2016-2026",
+   "n_seasons": 10,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 20,
+    "balls": 103,
+    "runs": 142,
+    "sr": 137.9,
+    "outs": 10,
+    "avg": 14.2,
+    "bnd": 61.0,
+    "sixes": 9
+   },
+   "career_bowl": {
+    "balls": 2043,
+    "econ": 8.26,
+    "wkts": 99
+   },
+   "r3_bat": {
+    "inn": 8,
+    "balls": 44,
+    "runs": 62,
+    "sr": 140.9,
+    "outs": 3,
+    "avg": 20.7,
+    "bnd": 68.0,
+    "sixes": 3
+   },
+   "r3_bowl": {
+    "balls": 540,
+    "econ": 9.37,
+    "wkts": 25
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 6,
+    "sr": 120.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 7,
+    "balls": 39,
+    "runs": 56,
+    "sr": 143.6,
+    "outs": 3,
+    "avg": 18.7,
+    "bnd": 68.0,
+    "sixes": 3
+   },
+   "r3_bowl_pp": {
+    "balls": 422,
+    "econ": 8.67,
+    "wkts": 19
+   },
+   "r3_bowl_death": {
+    "balls": 52,
+    "econ": 13.27,
+    "wkts": 5
+   },
+   "bracket": "2 cr",
+   "listed_as": "Deepak Chahar",
+   "country": "India"
+  },
+  "Ben Stokes": {
+   "name": "Ben Stokes",
+   "seasons": "2017-2023",
+   "n_seasons": 6,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 43,
+    "balls": 698,
+    "runs": 935,
+    "sr": 134.0,
+    "outs": 38,
+    "avg": 24.6,
+    "bnd": 55.0,
+    "sixes": 32
+   },
+   "career_bowl": {
+    "balls": 689,
+    "econ": 8.64,
+    "wkts": 31
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Ben Stokes",
+   "country": "England"
+  },
+  "Fazalhaq Farooqi": {
+   "name": "Fazalhaq Farooqi",
+   "seasons": "2022-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 3,
+    "balls": 15,
+    "runs": 5,
+    "sr": 33.3,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 254,
+    "econ": 10.32,
+    "wkts": 6
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 102,
+    "econ": 12.35,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 60,
+    "econ": 10.3,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 18,
+    "econ": 17.33,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Fazalhaq Farooqi",
+   "country": "Afghanistan"
+  },
+  "Mujeeb Ur Rahman": {
+   "name": "Mujeeb Ur Rahman",
+   "seasons": "2018-2025",
+   "n_seasons": 5,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 6,
+    "balls": 15,
+    "runs": 12,
+    "sr": 80.0,
+    "outs": 3,
+    "avg": 4.0,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 446,
+    "econ": 8.34,
+    "wkts": 21
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 14.0,
+    "wkts": 1
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 15.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Mujeeb Ur Rahman",
+   "country": "Afghanistan"
+  },
+  "Rahmanullah Gurbaz": {
+   "name": "Rahmanullah Gurbaz",
+   "seasons": "2023-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 17,
+    "balls": 266,
+    "runs": 362,
+    "sr": 136.1,
+    "outs": 17,
+    "avg": 21.3,
+    "bnd": 74.0,
+    "sixes": 22
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 6,
+    "balls": 96,
+    "runs": 135,
+    "sr": 140.6,
+    "outs": 6,
+    "avg": 22.5,
+    "bnd": 81.0,
+    "sixes": 7
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 6,
+    "balls": 80,
+    "runs": 106,
+    "sr": 132.5,
+    "outs": 4,
+    "avg": 26.5,
+    "bnd": 81.0,
+    "sixes": 5
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 16,
+    "runs": 29,
+    "sr": 181.2,
+    "outs": 2,
+    "avg": 14.5,
+    "bnd": 83.0,
+    "sixes": 2
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Rahmanullah Gurbaz",
+   "country": "Afghanistan"
+  },
+  "David Warner": {
+   "name": "David Warner",
+   "seasons": "2013-2024",
+   "n_seasons": 11,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "leg-spin",
+   "career_bat": {
+    "inn": 145,
+    "balls": 3942,
+    "runs": 5540,
+    "sr": 140.5,
+    "outs": 120,
+    "avg": 46.2,
+    "bnd": 61.0,
+    "sixes": 192
+   },
+   "career_bowl": {
+    "balls": 1,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 8,
+    "balls": 125,
+    "runs": 168,
+    "sr": 134.4,
+    "outs": 8,
+    "avg": 21.0,
+    "bnd": 76.0,
+    "sixes": 10
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 8,
+    "balls": 87,
+    "runs": 125,
+    "sr": 143.7,
+    "outs": 5,
+    "avg": 25.0,
+    "bnd": 82.0,
+    "sixes": 9
+   },
+   "r3_bat_mid": {
+    "inn": 3,
+    "balls": 38,
+    "runs": 43,
+    "sr": 113.2,
+    "outs": 3,
+    "avg": 14.3,
+    "bnd": 60.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "David Warner",
+   "country": "Australia"
+  },
+  "Jake Fraser-McGurk": {
+   "name": "Jake Fraser-McGurk",
+   "seasons": "2024-2025",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 15,
+    "balls": 193,
+    "runs": 385,
+    "sr": 199.5,
+    "outs": 14,
+    "avg": 27.5,
+    "bnd": 87.0,
+    "sixes": 30
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 15,
+    "balls": 193,
+    "runs": 385,
+    "sr": 199.5,
+    "outs": 14,
+    "avg": 27.5,
+    "bnd": 87.0,
+    "sixes": 30
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 15,
+    "balls": 144,
+    "runs": 298,
+    "sr": 206.9,
+    "outs": 10,
+    "avg": 29.8,
+    "bnd": 91.0,
+    "sixes": 22
+   },
+   "r3_bat_mid": {
+    "inn": 4,
+    "balls": 49,
+    "runs": 87,
+    "sr": 177.6,
+    "outs": 4,
+    "avg": 21.8,
+    "bnd": 74.0,
+    "sixes": 8
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Jake Fraser-McGurk",
+   "country": "Australia"
+  },
+  "Jhye Richardson": {
+   "name": "Jhye Richardson",
+   "seasons": "2021-2024",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 3,
+    "balls": 26,
+    "runs": 17,
+    "sr": 65.4,
+    "outs": 3,
+    "avg": 5.7,
+    "bnd": 47.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 90,
+    "econ": 10.47,
+    "wkts": 3
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 24,
+    "econ": 10.0,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 13.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 6,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Jhye Richardson",
+   "country": "Australia"
+  },
+  "Spencer Johnson": {
+   "name": "Spencer Johnson",
+   "seasons": "2024-2026",
+   "n_seasons": 3,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "unknown",
+   "career_bat": {
+    "inn": 6,
+    "balls": 12,
+    "runs": 8,
+    "sr": 66.7,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 230,
+    "econ": 10.33,
+    "wkts": 7
+   },
+   "r3_bat": {
+    "inn": 6,
+    "balls": 12,
+    "runs": 8,
+    "sr": 66.7,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 230,
+    "econ": 10.33,
+    "wkts": 7
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 3,
+    "runs": 1,
+    "sr": 33.3,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 5,
+    "balls": 9,
+    "runs": 7,
+    "sr": 77.8,
+    "outs": 0,
+    "avg": null,
+    "bnd": 57.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 126,
+    "econ": 10.29,
+    "wkts": 1
+   },
+   "r3_bowl_death": {
+    "balls": 50,
+    "econ": 9.84,
+    "wkts": 3
+   },
+   "bracket": "2 cr",
+   "listed_as": "Spencer Johnson",
+   "country": "Australia"
+  },
+  "Jonny Bairstow": {
+   "name": "Jonny Bairstow",
+   "seasons": "2019-2025",
+   "n_seasons": 6,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 52,
+    "balls": 1146,
+    "runs": 1670,
+    "sr": 145.7,
+    "outs": 47,
+    "avg": 35.5,
+    "bnd": 68.0,
+    "sixes": 74
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 13,
+    "balls": 241,
+    "runs": 383,
+    "sr": 158.9,
+    "outs": 11,
+    "avg": 34.8,
+    "bnd": 72.0,
+    "sixes": 19
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 13,
+    "balls": 155,
+    "runs": 249,
+    "sr": 160.6,
+    "outs": 5,
+    "avg": 49.8,
+    "bnd": 73.0,
+    "sixes": 9
+   },
+   "r3_bat_mid": {
+    "inn": 7,
+    "balls": 80,
+    "runs": 123,
+    "sr": 153.8,
+    "outs": 6,
+    "avg": 20.5,
+    "bnd": 70.0,
+    "sixes": 9
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 6,
+    "runs": 11,
+    "sr": 183.3,
+    "outs": 0,
+    "avg": null,
+    "bnd": 55.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Jonny Bairstow",
+   "country": "England"
+  },
+  "Sam Billings": {
+   "name": "Sam Billings",
+   "seasons": "2016-2022",
+   "n_seasons": 5,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 27,
+    "balls": 388,
+    "runs": 503,
+    "sr": 129.6,
+    "outs": 26,
+    "avg": 19.3,
+    "bnd": 56.0,
+    "sixes": 20
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Sam Billings",
+   "country": "England"
+  },
+  "Tom Curran": {
+   "name": "Tom Curran",
+   "seasons": "2018-2021",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 10,
+    "balls": 107,
+    "runs": 127,
+    "sr": 118.7,
+    "outs": 6,
+    "avg": 21.2,
+    "bnd": 46.0,
+    "sixes": 3
+   },
+   "career_bowl": {
+    "balls": 238,
+    "econ": 10.84,
+    "wkts": 13
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Tom Curran",
+   "country": "England"
+  },
+  "Adam Milne": {
+   "name": "Adam Milne",
+   "seasons": "2016-2026",
+   "n_seasons": 5,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 7,
+    "balls": 31,
+    "runs": 25,
+    "sr": 80.6,
+    "outs": 4,
+    "avg": 6.2,
+    "bnd": 24.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 227,
+    "econ": 9.73,
+    "wkts": 8
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 20,
+    "econ": 12.3,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 2,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 12,
+    "econ": 11.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 8,
+    "econ": 14.25,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Adam Milne",
+   "country": "New Zealand"
+  },
+  "Daryl Mitchell": {
+   "name": "Daryl Mitchell",
+   "seasons": "2022-2024",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 15,
+    "balls": 267,
+    "runs": 351,
+    "sr": 131.5,
+    "outs": 13,
+    "avg": 27.0,
+    "bnd": 49.0,
+    "sixes": 10
+   },
+   "career_bowl": {
+    "balls": 48,
+    "econ": 12.12,
+    "wkts": 1
+   },
+   "r3_bat": {
+    "inn": 13,
+    "balls": 223,
+    "runs": 318,
+    "sr": 142.6,
+    "outs": 11,
+    "avg": 28.9,
+    "bnd": 53.0,
+    "sixes": 10
+   },
+   "r3_bowl": {
+    "balls": 36,
+    "econ": 11.67,
+    "wkts": 1
+   },
+   "r3_bat_pp": {
+    "inn": 8,
+    "balls": 73,
+    "runs": 97,
+    "sr": 132.9,
+    "outs": 2,
+    "avg": 48.5,
+    "bnd": 58.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 8,
+    "balls": 112,
+    "runs": 175,
+    "sr": 156.2,
+    "outs": 7,
+    "avg": 25.0,
+    "bnd": 57.0,
+    "sixes": 8
+   },
+   "r3_bat_death": {
+    "inn": 4,
+    "balls": 38,
+    "runs": 46,
+    "sr": 121.1,
+    "outs": 2,
+    "avg": 23.0,
+    "bnd": 26.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Daryl Mitchell",
+   "country": "New Zealand"
+  },
+  "Devon Conway": {
+   "name": "Devon Conway",
+   "seasons": "2022-2025",
+   "n_seasons": 3,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 28,
+    "balls": 773,
+    "runs": 1080,
+    "sr": 139.7,
+    "outs": 24,
+    "avg": 45.0,
+    "bnd": 62.0,
+    "sixes": 34
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 6,
+    "balls": 119,
+    "runs": 156,
+    "sr": 131.1,
+    "outs": 5,
+    "avg": 31.2,
+    "bnd": 59.0,
+    "sixes": 4
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 6,
+    "balls": 62,
+    "runs": 71,
+    "sr": 114.5,
+    "outs": 4,
+    "avg": 17.8,
+    "bnd": 68.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 50,
+    "runs": 75,
+    "sr": 150.0,
+    "outs": 1,
+    "avg": 75.0,
+    "bnd": 59.0,
+    "sixes": 4
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 7,
+    "runs": 10,
+    "sr": 142.9,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Devon Conway",
+   "country": "New Zealand"
+  },
+  "Rachin Ravindra": {
+   "name": "Rachin Ravindra",
+   "seasons": "2024-2025",
+   "n_seasons": 2,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 18,
+    "balls": 287,
+    "runs": 413,
+    "sr": 143.9,
+    "outs": 16,
+    "avg": 25.8,
+    "bnd": 62.0,
+    "sixes": 16
+   },
+   "career_bowl": {
+    "balls": 12,
+    "econ": 3.5,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 18,
+    "balls": 287,
+    "runs": 413,
+    "sr": 143.9,
+    "outs": 16,
+    "avg": 25.8,
+    "bnd": 62.0,
+    "sixes": 16
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 3.5,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 18,
+    "balls": 200,
+    "runs": 275,
+    "sr": 137.5,
+    "outs": 10,
+    "avg": 27.5,
+    "bnd": 66.0,
+    "sixes": 7
+   },
+   "r3_bat_mid": {
+    "inn": 7,
+    "balls": 78,
+    "runs": 114,
+    "sr": 146.2,
+    "outs": 6,
+    "avg": 19.0,
+    "bnd": 49.0,
+    "sixes": 6
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 9,
+    "runs": 24,
+    "sr": 266.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 75.0,
+    "sixes": 3
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Rachin Ravindra",
+   "country": "New Zealand"
+  },
+  "Trent Boult": {
+   "name": "Trent Boult",
+   "seasons": "2015-2026",
+   "n_seasons": 12,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 26,
+    "balls": 85,
+    "runs": 93,
+    "sr": 109.4,
+    "outs": 9,
+    "avg": 10.3,
+    "bnd": 47.0,
+    "sixes": 4
+   },
+   "career_bowl": {
+    "balls": 2781,
+    "econ": 8.49,
+    "wkts": 153
+   },
+   "r3_bat": {
+    "inn": 8,
+    "balls": 23,
+    "runs": 24,
+    "sr": 104.3,
+    "outs": 3,
+    "avg": 8.0,
+    "bnd": 58.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 763,
+    "econ": 9.03,
+    "wkts": 41
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 1,
+    "sr": 50.0,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 7,
+    "balls": 21,
+    "runs": 23,
+    "sr": 109.5,
+    "outs": 2,
+    "avg": 11.5,
+    "bnd": 61.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 456,
+    "econ": 8.34,
+    "wkts": 22
+   },
+   "r3_bowl_death": {
+    "balls": 175,
+    "econ": 9.57,
+    "wkts": 17
+   },
+   "bracket": "2 cr",
+   "listed_as": "Trent Boult",
+   "country": "New Zealand"
+  },
+  "William O'Rourke": {
+   "name": "William O'Rourke",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 62,
+    "econ": 12.77,
+    "wkts": 6
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 62,
+    "econ": 12.77,
+    "wkts": 6
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 24,
+    "econ": 13.0,
+    "wkts": 2
+   },
+   "r3_bowl_death": {
+    "balls": 14,
+    "econ": 12.86,
+    "wkts": 2
+   },
+   "bracket": "2 cr",
+   "listed_as": "Will O'Rourke",
+   "country": "New Zealand"
+  },
+  "Anrich Nortje": {
+   "name": "Anrich Nortje",
+   "seasons": "2020-2026",
+   "n_seasons": 7,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 14,
+    "balls": 50,
+    "runs": 49,
+    "sr": 98.0,
+    "outs": 6,
+    "avg": 8.2,
+    "bnd": 49.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 1120,
+    "econ": 9.09,
+    "wkts": 63
+   },
+   "r3_bat": {
+    "inn": 3,
+    "balls": 9,
+    "runs": 4,
+    "sr": 44.4,
+    "outs": 3,
+    "avg": 1.3,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 198,
+    "econ": 12.61,
+    "wkts": 8
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 3,
+    "balls": 9,
+    "runs": 4,
+    "sr": 44.4,
+    "outs": 3,
+    "avg": 1.3,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 54,
+    "econ": 12.0,
+    "wkts": 2
+   },
+   "r3_bowl_death": {
+    "balls": 72,
+    "econ": 16.92,
+    "wkts": 3
+   },
+   "bracket": "2 cr",
+   "listed_as": "Anrich Nortje",
+   "country": "South Africa"
+  },
+  "Gerald Coetzee": {
+   "name": "Gerald Coetzee",
+   "seasons": "2024-2025",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 7,
+    "balls": 33,
+    "runs": 31,
+    "sr": 93.9,
+    "outs": 6,
+    "avg": 5.2,
+    "bnd": 65.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 273,
+    "econ": 10.37,
+    "wkts": 15
+   },
+   "r3_bat": {
+    "inn": 7,
+    "balls": 33,
+    "runs": 31,
+    "sr": 93.9,
+    "outs": 6,
+    "avg": 5.2,
+    "bnd": 65.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 273,
+    "econ": 10.37,
+    "wkts": 15
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 9,
+    "runs": 8,
+    "sr": 88.9,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 6,
+    "balls": 24,
+    "runs": 23,
+    "sr": 95.8,
+    "outs": 5,
+    "avg": 4.6,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "r3_bowl_pp": {
+    "balls": 66,
+    "econ": 10.82,
+    "wkts": 3
+   },
+   "r3_bowl_death": {
+    "balls": 99,
+    "econ": 10.67,
+    "wkts": 7
+   },
+   "bracket": "2 cr",
+   "listed_as": "Gerald Coetzee",
+   "country": "South Africa"
+  },
+  "Matheesha Pathirana": {
+   "name": "Matheesha Pathirana",
+   "seasons": "2022-2026",
+   "n_seasons": 5,
+   "bat_hand": null,
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 690,
+    "econ": 8.72,
+    "wkts": 51
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 391,
+    "econ": 9.24,
+    "wkts": 28
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 8,
+    "econ": 6.75,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 209,
+    "econ": 10.08,
+    "wkts": 17
+   },
+   "bracket": "2 cr",
+   "listed_as": "Matheesha Pathirana",
+   "country": "Sri Lanka"
+  },
+  "Wanindu Hasaranga": {
+   "name": "Wanindu Hasaranga",
+   "seasons": "2021-2025",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "leg-spin",
+   "career_bat": {
+    "inn": 19,
+    "balls": 88,
+    "runs": 81,
+    "sr": 92.0,
+    "outs": 15,
+    "avg": 5.4,
+    "bnd": 42.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 798,
+    "econ": 8.41,
+    "wkts": 47
+   },
+   "r3_bat": {
+    "inn": 5,
+    "balls": 15,
+    "runs": 9,
+    "sr": 60.0,
+    "outs": 5,
+    "avg": 1.8,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 246,
+    "econ": 9.05,
+    "wkts": 11
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 3,
+    "balls": 11,
+    "runs": 8,
+    "sr": 72.7,
+    "outs": 3,
+    "avg": 2.7,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 4,
+    "runs": 1,
+    "sr": 25.0,
+    "outs": 2,
+    "avg": 0.5,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 30,
+    "econ": 10.0,
+    "wkts": 3
+   },
+   "bracket": "2 cr",
+   "listed_as": "Wanindu Hasaranga",
+   "country": "Sri Lanka"
+  },
+  "Shai Hope": {
+   "name": "Shai Hope",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 9,
+    "balls": 122,
+    "runs": 183,
+    "sr": 150.0,
+    "outs": 7,
+    "avg": 26.1,
+    "bnd": 66.0,
+    "sixes": 12
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 9,
+    "balls": 122,
+    "runs": 183,
+    "sr": 150.0,
+    "outs": 7,
+    "avg": 26.1,
+    "bnd": 66.0,
+    "sixes": 12
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 7,
+    "balls": 60,
+    "runs": 78,
+    "sr": 130.0,
+    "outs": 3,
+    "avg": 26.0,
+    "bnd": 77.0,
+    "sixes": 4
+   },
+   "r3_bat_mid": {
+    "inn": 4,
+    "balls": 52,
+    "runs": 94,
+    "sr": 180.8,
+    "outs": 4,
+    "avg": 23.5,
+    "bnd": 60.0,
+    "sixes": 8
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 10,
+    "runs": 11,
+    "sr": 110.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 36.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Shai Hope",
+   "country": "West Indies"
+  },
+  "Shimron Hetmyer": {
+   "name": "Shimron Hetmyer",
+   "seasons": "2019-2026",
+   "n_seasons": 8,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 85,
+    "balls": 1045,
+    "runs": 1560,
+    "sr": 149.3,
+    "outs": 56,
+    "avg": 27.9,
+    "bnd": 61.0,
+    "sixes": 96
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 29,
+    "balls": 302,
+    "runs": 430,
+    "sr": 142.4,
+    "outs": 22,
+    "avg": 19.5,
+    "bnd": 58.0,
+    "sixes": 21
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 3,
+    "balls": 11,
+    "runs": 8,
+    "sr": 72.7,
+    "outs": 2,
+    "avg": 4.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 17,
+    "balls": 122,
+    "runs": 161,
+    "sr": 132.0,
+    "outs": 4,
+    "avg": 40.2,
+    "bnd": 55.0,
+    "sixes": 8
+   },
+   "r3_bat_death": {
+    "inn": 22,
+    "balls": 169,
+    "runs": 261,
+    "sr": 154.4,
+    "outs": 16,
+    "avg": 16.3,
+    "bnd": 61.0,
+    "sixes": 13
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "2 cr",
+   "listed_as": "Shimron Hetmyer",
+   "country": "West Indies"
+  },
+  "AM Ghazanfar": {
+   "name": "AM Ghazanfar",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 2,
+    "sr": 66.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 233,
+    "econ": 9.99,
+    "wkts": 15
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 2,
+    "sr": 66.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 233,
+    "econ": 9.99,
+    "wkts": 15
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 2,
+    "sr": 66.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 60,
+    "econ": 10.8,
+    "wkts": 7
+   },
+   "r3_bowl_death": {
+    "balls": 35,
+    "econ": 12.69,
+    "wkts": 4
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "Allah Ghazanfar",
+   "country": null
+  },
+  "Daniel Sams": {
+   "name": "Daniel Sams",
+   "seasons": "2020-2022",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 13,
+    "balls": 44,
+    "runs": 44,
+    "sr": 100.0,
+    "outs": 9,
+    "avg": 4.9,
+    "bnd": 50.0,
+    "sixes": 3
+   },
+   "career_bowl": {
+    "balls": 360,
+    "econ": 8.72,
+    "wkts": 15
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "Daniel Sams",
+   "country": null
+  },
+  "Riley Meredith": {
+   "name": "Riley Meredith",
+   "seasons": "2021-2023",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 2,
+    "balls": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 388,
+    "econ": 9.46,
+    "wkts": 21
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "Riley Meredith",
+   "country": null
+  },
+  "David Wiese": {
+   "name": "David Wiese",
+   "seasons": "2015-2023",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 11,
+    "balls": 101,
+    "runs": 148,
+    "sr": 146.5,
+    "outs": 5,
+    "avg": 29.6,
+    "bnd": 61.0,
+    "sixes": 7
+   },
+   "career_bowl": {
+    "balls": 296,
+    "econ": 8.92,
+    "wkts": 17
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "David Wiese",
+   "country": null
+  },
+  "Rassie van der Dussen": {
+   "name": "Rassie van der Dussen",
+   "seasons": "2022-2022",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 3,
+    "balls": 24,
+    "runs": 22,
+    "sr": 91.7,
+    "outs": 2,
+    "avg": 11.0,
+    "bnd": 36.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "Rassie van der Dussen",
+   "country": null
+  },
+  "Keemo Paul": {
+   "name": "Keemo Paul",
+   "seasons": "2019-2019",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 5,
+    "balls": 24,
+    "runs": 18,
+    "sr": 75.0,
+    "outs": 4,
+    "avg": 4.5,
+    "bnd": 56.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 163,
+    "econ": 8.69,
+    "wkts": 10
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.5 cr",
+   "listed_as": "Keemo Paul",
+   "country": null
+  },
+  "Billy Stanlake": {
+   "name": "Billy Stanlake",
+   "seasons": "2017-2018",
+   "n_seasons": 2,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 5,
+    "sr": 250.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 80.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 144,
+    "econ": 8.33,
+    "wkts": 7
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.25 cr",
+   "listed_as": "Billy Stanlake",
+   "country": null
+  },
+  "Kyle Mayers": {
+   "name": "Kyle Mayers",
+   "seasons": "2023-2023",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 12,
+    "balls": 246,
+    "runs": 365,
+    "sr": 148.4,
+    "outs": 12,
+    "avg": 30.4,
+    "bnd": 76.0,
+    "sixes": 22
+   },
+   "career_bowl": {
+    "balls": 42,
+    "econ": 8.43,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1.25 cr",
+   "listed_as": "Kyle Mayers",
+   "country": null
+  },
+  "Gulbadin Naib": {
+   "name": "Gulbadin Naib",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 1,
+    "balls": 15,
+    "runs": 19,
+    "sr": 126.7,
+    "outs": 1,
+    "avg": 19.0,
+    "bnd": 53.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 6,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 15,
+    "runs": 19,
+    "sr": 126.7,
+    "outs": 1,
+    "avg": 19.0,
+    "bnd": 53.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 6,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 4,
+    "sr": 80.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 10,
+    "runs": 15,
+    "sr": 150.0,
+    "outs": 1,
+    "avg": 15.0,
+    "bnd": 67.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Gulbadin Naib",
+   "country": null
+  },
+  "Mohammad Nabi": {
+   "name": "Mohammad Nabi",
+   "seasons": "2017-2024",
+   "n_seasons": 6,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 19,
+    "balls": 150,
+    "runs": 215,
+    "sr": 143.3,
+    "outs": 15,
+    "avg": 14.3,
+    "bnd": 64.0,
+    "sixes": 11
+   },
+   "career_bowl": {
+    "balls": 408,
+    "econ": 7.54,
+    "wkts": 14
+   },
+   "r3_bat": {
+    "inn": 5,
+    "balls": 31,
+    "runs": 35,
+    "sr": 112.9,
+    "outs": 4,
+    "avg": 8.8,
+    "bnd": 57.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 74,
+    "econ": 8.84,
+    "wkts": 2
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 13,
+    "runs": 20,
+    "sr": 153.8,
+    "outs": 0,
+    "avg": null,
+    "bnd": 70.0,
+    "sixes": 1
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 3,
+    "sr": 75.0,
+    "outs": 1,
+    "avg": 3.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 4,
+    "balls": 14,
+    "runs": 12,
+    "sr": 85.7,
+    "outs": 3,
+    "avg": 4.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 18,
+    "econ": 7.33,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 2,
+    "econ": 9.0,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Mohammad Nabi",
+   "country": null
+  },
+  "Chris Lynn": {
+   "name": "Chris Lynn",
+   "seasons": "2014-2021",
+   "n_seasons": 6,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 41,
+    "balls": 937,
+    "runs": 1318,
+    "sr": 140.7,
+    "outs": 37,
+    "avg": 35.6,
+    "bnd": 69.0,
+    "sixes": 66
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Chris Lynn",
+   "country": null
+  },
+  "Scott Boland": {
+   "name": "Scott Boland",
+   "seasons": "2016-2016",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 42,
+    "econ": 7.71,
+    "wkts": 3
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Scott Boland",
+   "country": null
+  },
+  "Akash Deep": {
+   "name": "Akash Deep",
+   "seasons": "2022-2025",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 5,
+    "balls": 14,
+    "runs": 25,
+    "sr": 178.6,
+    "outs": 3,
+    "avg": 8.3,
+    "bnd": 80.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 278,
+    "econ": 11.83,
+    "wkts": 11
+   },
+   "r3_bat": {
+    "inn": 3,
+    "balls": 4,
+    "runs": 8,
+    "sr": 200.0,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 75.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 135,
+    "econ": 12.62,
+    "wkts": 4
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 3,
+    "balls": 4,
+    "runs": 8,
+    "sr": 200.0,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 75.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 78,
+    "econ": 11.85,
+    "wkts": 2
+   },
+   "r3_bowl_death": {
+    "balls": 21,
+    "econ": 13.71,
+    "wkts": 1
+   },
+   "bracket": "1 cr",
+   "listed_as": "Akash Deep",
+   "country": null
+  },
+  "Duan Jansen": {
+   "name": "Duan Jansen",
+   "seasons": "2023-2023",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "unknown",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 24,
+    "econ": 13.25,
+    "wkts": 1
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Duan Jansen",
+   "country": null
+  },
+  "Matthew Breetzke": {
+   "name": "Matthew Breetzke",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 12,
+    "runs": 14,
+    "sr": 116.7,
+    "outs": 1,
+    "avg": 14.0,
+    "bnd": 71.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 12,
+    "runs": 14,
+    "sr": 116.7,
+    "outs": 1,
+    "avg": 14.0,
+    "bnd": 71.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 12,
+    "runs": 14,
+    "sr": 116.7,
+    "outs": 1,
+    "avg": 14.0,
+    "bnd": 71.0,
+    "sixes": 1
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Matthew Breetzke",
+   "country": null
+  },
+  "Dushmantha Chameera": {
+   "name": "Dushmantha Chameera",
+   "seasons": "2022-2026",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 11,
+    "balls": 45,
+    "runs": 53,
+    "sr": 117.8,
+    "outs": 3,
+    "avg": 17.7,
+    "bnd": 57.0,
+    "sixes": 3
+   },
+   "career_bowl": {
+    "balls": 384,
+    "econ": 9.7,
+    "wkts": 15
+   },
+   "r3_bat": {
+    "inn": 4,
+    "balls": 17,
+    "runs": 10,
+    "sr": 58.8,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 120,
+    "econ": 11.85,
+    "wkts": 4
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 4,
+    "balls": 16,
+    "runs": 9,
+    "sr": 56.2,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 48,
+    "econ": 12.75,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 42,
+    "econ": 12.29,
+    "wkts": 3
+   },
+   "bracket": "1 cr",
+   "listed_as": "Dushmantha Chameera",
+   "country": null
+  },
+  "Kusal Mendis": {
+   "name": "Kusal Mendis",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 10,
+    "runs": 20,
+    "sr": 200.0,
+    "outs": 1,
+    "avg": 20.0,
+    "bnd": 80.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 10,
+    "runs": 20,
+    "sr": 200.0,
+    "outs": 1,
+    "avg": 20.0,
+    "bnd": 80.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 9,
+    "runs": 20,
+    "sr": 222.2,
+    "outs": 0,
+    "avg": null,
+    "bnd": 80.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 1,
+    "avg": 0.0,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Kusal Mendis",
+   "country": null
+  },
+  "Maheesh Theekshana": {
+   "name": "Maheesh Theekshana",
+   "seasons": "2022-2025",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 6,
+    "balls": 34,
+    "runs": 17,
+    "sr": 50.0,
+    "outs": 3,
+    "avg": 5.7,
+    "bnd": 35.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 852,
+    "econ": 8.24,
+    "wkts": 34
+   },
+   "r3_bat": {
+    "inn": 4,
+    "balls": 27,
+    "runs": 10,
+    "sr": 37.0,
+    "outs": 2,
+    "avg": 5.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 372,
+    "econ": 8.94,
+    "wkts": 13
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 9,
+    "runs": 2,
+    "sr": 22.2,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 3,
+    "balls": 18,
+    "runs": 8,
+    "sr": 44.4,
+    "outs": 1,
+    "avg": 8.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 138,
+    "econ": 8.87,
+    "wkts": 1
+   },
+   "r3_bowl_death": {
+    "balls": 54,
+    "econ": 12.67,
+    "wkts": 4
+   },
+   "bracket": "1 cr",
+   "listed_as": "Maheesh Theekshana",
+   "country": null
+  },
+  "Jaydev Unadkat": {
+   "name": "Jaydev Unadkat",
+   "seasons": "2013-2026",
+   "n_seasons": 14,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 27,
+    "balls": 164,
+    "runs": 200,
+    "sr": 122.0,
+    "outs": 13,
+    "avg": 15.4,
+    "bnd": 53.0,
+    "sixes": 7
+   },
+   "career_bowl": {
+    "balls": 2055,
+    "econ": 9.04,
+    "wkts": 108
+   },
+   "r3_bat": {
+    "inn": 6,
+    "balls": 29,
+    "runs": 28,
+    "sr": 96.6,
+    "outs": 2,
+    "avg": 14.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 383,
+    "econ": 9.73,
+    "wkts": 24
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 6,
+    "balls": 24,
+    "runs": 28,
+    "sr": 116.7,
+    "outs": 2,
+    "avg": 14.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 114,
+    "econ": 10.53,
+    "wkts": 5
+   },
+   "r3_bowl_death": {
+    "balls": 89,
+    "econ": 10.25,
+    "wkts": 11
+   },
+   "bracket": "1 cr",
+   "listed_as": "Jaydev Unadkat",
+   "country": null
+  },
+  "Tushar Deshpande": {
+   "name": "Tushar Deshpande",
+   "seasons": "2020-2026",
+   "n_seasons": 6,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 10,
+    "balls": 36,
+    "runs": 54,
+    "sr": 150.0,
+    "outs": 4,
+    "avg": 13.5,
+    "bnd": 59.0,
+    "sixes": 4
+   },
+   "career_bowl": {
+    "balls": 1097,
+    "econ": 10.16,
+    "wkts": 60
+   },
+   "r3_bat": {
+    "inn": 7,
+    "balls": 23,
+    "runs": 33,
+    "sr": 143.5,
+    "outs": 3,
+    "avg": 11.0,
+    "bnd": 55.0,
+    "sixes": 3
+   },
+   "r3_bowl": {
+    "balls": 618,
+    "econ": 10.09,
+    "wkts": 32
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 7,
+    "balls": 22,
+    "runs": 33,
+    "sr": 150.0,
+    "outs": 3,
+    "avg": 11.0,
+    "bnd": 55.0,
+    "sixes": 3
+   },
+   "r3_bowl_pp": {
+    "balls": 264,
+    "econ": 9.27,
+    "wkts": 9
+   },
+   "r3_bowl_death": {
+    "balls": 198,
+    "econ": 11.03,
+    "wkts": 19
+   },
+   "bracket": "1 cr",
+   "listed_as": "Tushar Deshpande",
+   "country": null
+  },
+  "Umesh Yadav": {
+   "name": "Umesh Yadav",
+   "seasons": "2013-2024",
+   "n_seasons": 11,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 42,
+    "balls": 185,
+    "runs": 202,
+    "sr": 109.2,
+    "outs": 17,
+    "avg": 11.9,
+    "bnd": 58.0,
+    "sixes": 9
+   },
+   "career_bowl": {
+    "balls": 2426,
+    "econ": 8.66,
+    "wkts": 130
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 15,
+    "runs": 12,
+    "sr": 80.0,
+    "outs": 1,
+    "avg": 12.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 126,
+    "econ": 10.0,
+    "wkts": 9
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 14,
+    "runs": 12,
+    "sr": 85.7,
+    "outs": 1,
+    "avg": 12.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 102,
+    "econ": 8.76,
+    "wkts": 6
+   },
+   "r3_bowl_death": {
+    "balls": 12,
+    "econ": 15.5,
+    "wkts": 2
+   },
+   "bracket": "1 cr",
+   "listed_as": "Umesh Yadav",
+   "country": null
+  },
+  "Tymal Mills": {
+   "name": "Tymal Mills",
+   "seasons": "2017-2022",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 5,
+    "balls": 14,
+    "runs": 8,
+    "sr": 57.1,
+    "outs": 4,
+    "avg": 2.0,
+    "bnd": 75.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 209,
+    "econ": 9.85,
+    "wkts": 11
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "1 cr",
+   "listed_as": "Tymal Mills",
+   "country": null
+  },
+  "Deepak Hooda": {
+   "name": "Deepak Hooda",
+   "seasons": "2015-2025",
+   "n_seasons": 11,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 101,
+    "balls": 1172,
+    "runs": 1496,
+    "sr": 127.6,
+    "outs": 78,
+    "avg": 19.2,
+    "bnd": 51.0,
+    "sixes": 62
+   },
+   "career_bowl": {
+    "balls": 379,
+    "econ": 8.64,
+    "wkts": 10
+   },
+   "r3_bat": {
+    "inn": 14,
+    "balls": 146,
+    "runs": 176,
+    "sr": 120.5,
+    "outs": 13,
+    "avg": 13.5,
+    "bnd": 55.0,
+    "sixes": 4
+   },
+   "r3_bowl": {
+    "balls": 24,
+    "econ": 9.25,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 5,
+    "balls": 39,
+    "runs": 48,
+    "sr": 123.1,
+    "outs": 3,
+    "avg": 16.0,
+    "bnd": 71.0,
+    "sixes": 1
+   },
+   "r3_bat_mid": {
+    "inn": 9,
+    "balls": 83,
+    "runs": 93,
+    "sr": 112.0,
+    "outs": 8,
+    "avg": 11.6,
+    "bnd": 41.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 3,
+    "balls": 24,
+    "runs": 35,
+    "sr": 145.8,
+    "outs": 2,
+    "avg": 17.5,
+    "bnd": 69.0,
+    "sixes": 2
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Deepak Hooda",
+   "country": null
+  },
+  "Karun Nair": {
+   "name": "Karun Nair",
+   "seasons": "2013-2026",
+   "n_seasons": 11,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 77,
+    "balls": 1303,
+    "runs": 1712,
+    "sr": 131.4,
+    "outs": 69,
+    "avg": 24.8,
+    "bnd": 61.0,
+    "sixes": 49
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 9,
+    "balls": 132,
+    "runs": 216,
+    "sr": 163.6,
+    "outs": 8,
+    "avg": 27.0,
+    "bnd": 78.0,
+    "sixes": 10
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 9,
+    "balls": 72,
+    "runs": 115,
+    "sr": 159.7,
+    "outs": 4,
+    "avg": 28.8,
+    "bnd": 83.0,
+    "sixes": 6
+   },
+   "r3_bat_mid": {
+    "inn": 4,
+    "balls": 60,
+    "runs": 101,
+    "sr": 168.3,
+    "outs": 4,
+    "avg": 25.2,
+    "bnd": 71.0,
+    "sixes": 4
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Karun Nair",
+   "country": null
+  },
+  "Kuldeep Sen": {
+   "name": "Kuldeep Sen",
+   "seasons": "2022-2024",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 241,
+    "econ": 9.63,
+    "wkts": 14
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 72,
+    "econ": 10.17,
+    "wkts": 6
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 12,
+    "econ": 12.5,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 18,
+    "econ": 15.0,
+    "wkts": 1
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Kuldeep Sen",
+   "country": null
+  },
+  "Mayank Agarwal": {
+   "name": "Mayank Agarwal",
+   "seasons": "2013-2025",
+   "n_seasons": 13,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 106,
+    "balls": 1786,
+    "runs": 2386,
+    "sr": 133.6,
+    "outs": 98,
+    "avg": 24.3,
+    "bnd": 60.0,
+    "sixes": 81
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 8,
+    "balls": 121,
+    "runs": 159,
+    "sr": 131.4,
+    "outs": 7,
+    "avg": 22.7,
+    "bnd": 57.0,
+    "sixes": 3
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 6,
+    "balls": 75,
+    "runs": 88,
+    "sr": 117.3,
+    "outs": 3,
+    "avg": 29.3,
+    "bnd": 59.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 5,
+    "balls": 41,
+    "runs": 66,
+    "sr": 161.0,
+    "outs": 4,
+    "avg": 16.5,
+    "bnd": 58.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 5,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Mayank Agarwal",
+   "country": null
+  },
+  "Rahul Tripathi": {
+   "name": "Rahul Tripathi",
+   "seasons": "2017-2025",
+   "n_seasons": 9,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 98,
+    "balls": 1662,
+    "runs": 2291,
+    "sr": 137.8,
+    "outs": 84,
+    "avg": 27.3,
+    "bnd": 62.0,
+    "sixes": 85
+   },
+   "career_bowl": {
+    "balls": 6,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 11,
+    "balls": 172,
+    "runs": 220,
+    "sr": 127.9,
+    "outs": 10,
+    "avg": 22.0,
+    "bnd": 63.0,
+    "sixes": 7
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 11,
+    "balls": 100,
+    "runs": 140,
+    "sr": 140.0,
+    "outs": 5,
+    "avg": 28.0,
+    "bnd": 76.0,
+    "sixes": 5
+   },
+   "r3_bat_mid": {
+    "inn": 6,
+    "balls": 72,
+    "runs": 80,
+    "sr": 111.1,
+    "outs": 5,
+    "avg": 16.0,
+    "bnd": 40.0,
+    "sixes": 2
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Rahul Tripathi",
+   "country": null
+  },
+  "Shivam Mavi": {
+   "name": "Shivam Mavi",
+   "seasons": "2018-2022",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 11,
+    "balls": 56,
+    "runs": 51,
+    "sr": 91.1,
+    "outs": 9,
+    "avg": 5.7,
+    "bnd": 55.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 649,
+    "econ": 8.71,
+    "wkts": 33
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Shivam Mavi",
+   "country": null
+  },
+  "Umran Malik": {
+   "name": "Umran Malik",
+   "seasons": "2021-2024",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 5,
+    "balls": 16,
+    "runs": 23,
+    "sr": 143.8,
+    "outs": 1,
+    "avg": 23.0,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 493,
+    "econ": 9.4,
+    "wkts": 31
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 6,
+    "econ": 15.0,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "bracket": "75 lakh",
+   "listed_as": "Umran Malik",
+   "country": null
+  }
+ },
+ "unmatched": [
+  [
+   "2 cr",
+   {
+    "n": "Mahli Beardman",
+    "c": "Australia"
+   }
+  ],
+  [
+   "2 cr",
+   {
+    "n": "Sonny Baker",
+    "c": "England"
+   }
+  ],
+  [
+   "2 cr",
+   {
+    "n": "Ben Sears",
+    "c": "New Zealand"
+   }
+  ],
+  [
+   "2 cr",
+   {
+    "n": "Bevon Jacobs",
+    "c": "New Zealand"
+   }
+  ],
+  [
+   "1.5 cr",
+   {
+    "n": "Jayden Seales"
+   }
+  ],
+  [
+   "1.25 cr",
+   {
+    "n": "Ashton Agar"
+   }
+  ],
+  [
+   "1.25 cr",
+   {
+    "n": "Matthew Forde"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Ibrahim Zadran"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Rishad Hossain"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Blair Tickner"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Matthew Fisher"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Nathan Smith"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Zak Foulkes"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Marques Ackerman"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Ottneil Baartman"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Charith Asalanka"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Sonal Dinusha"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Andre Fletcher"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "John Campbell"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Matthew Kuhnemann"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Nikhil Chaudhary"
+   }
+  ],
+  [
+   "1 cr",
+   {
+    "n": "Newman Nyamhuri"
+   }
+  ],
+  [
+   "75 lakh",
+   {
+    "n": "Saransh Jain"
+   }
+  ],
+  [
+   "75 lakh",
+   {
+    "n": "Cameron Bancroft"
+   }
+  ],
+  [
+   "75 lakh",
+   {
+    "n": "Hassan Eisakhil"
+   }
+  ],
+  [
+   "30 lakh",
+   {
+    "n": "Aaryavir Sehwag",
+    "c": "India"
+   }
+  ],
+  [
+   "30 lakh",
+   {
+    "n": "Mohit Ulva",
+    "c": "India"
+   }
+  ],
+  [
+   "30 lakh",
+   {
+    "n": "Kavyan Patel",
+    "c": "India"
+   }
+  ]
+ ],
+ "dark_horses": {
+  "Abhinav Manohar": {
+   "name": "Abhinav Manohar",
+   "seasons": "2022-2025",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 20,
+    "balls": 235,
+    "runs": 292,
+    "sr": 124.3,
+    "outs": 19,
+    "avg": 15.4,
+    "bnd": 60.0,
+    "sixes": 14
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 7,
+    "balls": 77,
+    "runs": 70,
+    "sr": 90.9,
+    "outs": 7,
+    "avg": 10.0,
+    "bnd": 51.0,
+    "sixes": 4
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 6,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 6,
+    "balls": 40,
+    "runs": 27,
+    "sr": 67.5,
+    "outs": 3,
+    "avg": 9.0,
+    "bnd": 37.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 4,
+    "balls": 31,
+    "runs": 43,
+    "sr": 138.7,
+    "outs": 4,
+    "avg": 10.8,
+    "bnd": 60.0,
+    "sixes": 3
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Abhinav Manohar",
+   "retained": false
+  },
+  "Abishek Porel": {
+   "name": "Abishek Porel",
+   "seasons": "2023-2026",
+   "n_seasons": 4,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 32,
+    "balls": 519,
+    "runs": 761,
+    "sr": 146.6,
+    "outs": 29,
+    "avg": 26.2,
+    "bnd": 64.0,
+    "sixes": 28
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 28,
+    "balls": 488,
+    "runs": 728,
+    "sr": 149.2,
+    "outs": 25,
+    "avg": 29.1,
+    "bnd": 64.0,
+    "sixes": 26
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 24,
+    "balls": 248,
+    "runs": 373,
+    "sr": 150.4,
+    "outs": 11,
+    "avg": 33.9,
+    "bnd": 73.0,
+    "sixes": 13
+   },
+   "r3_bat_mid": {
+    "inn": 15,
+    "balls": 216,
+    "runs": 301,
+    "sr": 139.4,
+    "outs": 12,
+    "avg": 25.1,
+    "bnd": 50.0,
+    "sixes": 10
+   },
+   "r3_bat_death": {
+    "inn": 5,
+    "balls": 24,
+    "runs": 54,
+    "sr": 225.0,
+    "outs": 2,
+    "avg": 27.0,
+    "bnd": 78.0,
+    "sixes": 3
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Abishek Porel",
+   "retained": false
+  },
+  "Akash Madhwal": {
+   "name": "Akash Madhwal",
+   "seasons": "2023-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 2,
+    "balls": 14,
+    "runs": 8,
+    "sr": 57.1,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 352,
+    "econ": 10.06,
+    "wkts": 25
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 14,
+    "runs": 8,
+    "sr": 57.1,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 199,
+    "econ": 11.19,
+    "wkts": 10
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 9,
+    "runs": 6,
+    "sr": 66.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 48,
+    "econ": 8.62,
+    "wkts": 2
+   },
+   "r3_bowl_death": {
+    "balls": 67,
+    "econ": 14.51,
+    "wkts": 4
+   },
+   "listed_as": "Akash Madhwal",
+   "retained": false
+  },
+  "Akshat Raghuwanshi": {
+   "name": "Akshat Raghuwanshi",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 2,
+    "balls": 25,
+    "runs": 29,
+    "sr": 116.0,
+    "outs": 2,
+    "avg": 14.5,
+    "bnd": 34.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 25,
+    "runs": 29,
+    "sr": 116.0,
+    "outs": 2,
+    "avg": 14.5,
+    "bnd": 34.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 25,
+    "runs": 29,
+    "sr": 116.0,
+    "outs": 2,
+    "avg": 14.5,
+    "bnd": 34.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Akshat Raghuwanshi",
+   "retained": false
+  },
+  "Atharva Taide": {
+   "name": "Atharva Taide",
+   "seasons": "2023-2025",
+   "n_seasons": 3,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 10,
+    "balls": 177,
+    "runs": 260,
+    "sr": 146.9,
+    "outs": 9,
+    "avg": 28.9,
+    "bnd": 65.0,
+    "sixes": 8
+   },
+   "career_bowl": {
+    "balls": 1,
+    "econ": 24.0,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 3,
+    "balls": 48,
+    "runs": 74,
+    "sr": 154.2,
+    "outs": 3,
+    "avg": 24.7,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 1,
+    "econ": 24.0,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 3,
+    "balls": 38,
+    "runs": 55,
+    "sr": 144.7,
+    "outs": 2,
+    "avg": 27.5,
+    "bnd": 69.0,
+    "sixes": 1
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 10,
+    "runs": 19,
+    "sr": 190.0,
+    "outs": 1,
+    "avg": 19.0,
+    "bnd": 74.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 1,
+    "econ": 24.0,
+    "wkts": 0
+   },
+   "listed_as": "Atharva Taide",
+   "retained": false
+  },
+  "BR Sharath": {
+   "name": "BR Sharath",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "BR Sharath",
+   "retained": false
+  },
+  "Danish Malewar": {
+   "name": "Danish Malewar",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 2,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 2,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 2,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 2,
+    "balls": 5,
+    "runs": 2,
+    "sr": 40.0,
+    "outs": 2,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Danish Malewar",
+   "retained": false
+  },
+  "Darshan Nalkande": {
+   "name": "Darshan Nalkande",
+   "seasons": "2022-2024",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 2,
+    "balls": 12,
+    "runs": 12,
+    "sr": 100.0,
+    "outs": 2,
+    "avg": 6.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 84,
+    "econ": 10.57,
+    "wkts": 6
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 11,
+    "runs": 12,
+    "sr": 109.1,
+    "outs": 1,
+    "avg": 12.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 29,
+    "econ": 9.31,
+    "wkts": 3
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 11,
+    "runs": 12,
+    "sr": 109.1,
+    "outs": 1,
+    "avg": 12.0,
+    "bnd": 50.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 17,
+    "econ": 8.47,
+    "wkts": 1
+   },
+   "listed_as": "Darshan Nalkande",
+   "retained": false
+  },
+  "Dinesh Karthik": {
+   "name": "Dinesh Karthik",
+   "seasons": "2013-2024",
+   "n_seasons": 12,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 171,
+    "balls": 2580,
+    "runs": 3612,
+    "sr": 140.0,
+    "outs": 126,
+    "avg": 28.7,
+    "bnd": 60.0,
+    "sixes": 134
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 13,
+    "balls": 174,
+    "runs": 326,
+    "sr": 187.4,
+    "outs": 8,
+    "avg": 40.8,
+    "bnd": 74.0,
+    "sixes": 22
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 7,
+    "balls": 58,
+    "runs": 77,
+    "sr": 132.8,
+    "outs": 0,
+    "avg": null,
+    "bnd": 57.0,
+    "sixes": 2
+   },
+   "r3_bat_death": {
+    "inn": 12,
+    "balls": 116,
+    "runs": 249,
+    "sr": 214.7,
+    "outs": 8,
+    "avg": 31.1,
+    "bnd": 79.0,
+    "sixes": 20
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Dinesh Karthik",
+   "retained": false
+  },
+  "Harpreet Singh Bhatia": {
+   "name": "Harpreet Singh Bhatia",
+   "seasons": "2023-2024",
+   "n_seasons": 2,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 5,
+    "balls": 93,
+    "runs": 103,
+    "sr": 110.8,
+    "outs": 4,
+    "avg": 25.8,
+    "bnd": 56.0,
+    "sixes": 3
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 34,
+    "runs": 27,
+    "sr": 79.4,
+    "outs": 2,
+    "avg": 13.5,
+    "bnd": 30.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 13,
+    "runs": 12,
+    "sr": 92.3,
+    "outs": 0,
+    "avg": null,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 7,
+    "runs": 4,
+    "sr": 57.1,
+    "outs": 1,
+    "avg": 4.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 14,
+    "runs": 11,
+    "sr": 78.6,
+    "outs": 1,
+    "avg": 11.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Harpreet Singh Bhatia",
+   "retained": false
+  },
+  "Himanshu Sharma": {
+   "name": "Himanshu Sharma",
+   "seasons": "2023-2024",
+   "n_seasons": 2,
+   "bat_hand": null,
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 30,
+    "econ": 11.4,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 14.5,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Himanshu Sharma",
+   "retained": false
+  },
+  "Krish Bhagat": {
+   "name": "Krish Bhagat",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 2,
+    "balls": 21,
+    "runs": 10,
+    "sr": 47.6,
+    "outs": 1,
+    "avg": 10.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 36,
+    "econ": 10.5,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 21,
+    "runs": 10,
+    "sr": 47.6,
+    "outs": 1,
+    "avg": 10.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 36,
+    "econ": 10.5,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 8,
+    "runs": 4,
+    "sr": 50.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 13,
+    "runs": 6,
+    "sr": 46.2,
+    "outs": 1,
+    "avg": 6.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 18,
+    "econ": 9.33,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 18,
+    "econ": 11.67,
+    "wkts": 0
+   },
+   "listed_as": "Krish Bhagat",
+   "retained": false
+  },
+  "Kulwant Khejroliya": {
+   "name": "Kulwant Khejroliya",
+   "seasons": "2018-2026",
+   "n_seasons": 5,
+   "bat_hand": null,
+   "bowl_kind": "left-arm pace",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 145,
+    "econ": 10.72,
+    "wkts": 6
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 30,
+    "econ": 12.0,
+    "wkts": 1
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Kulwant Khejroliya",
+   "retained": false
+  },
+  "Kumar Kartikeya": {
+   "name": "Kumar Kartikeya",
+   "seasons": "2022-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 4,
+    "balls": 17,
+    "runs": 12,
+    "sr": 70.6,
+    "outs": 3,
+    "avg": 4.0,
+    "bnd": 33.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 282,
+    "econ": 8.66,
+    "wkts": 12
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 5,
+    "runs": 3,
+    "sr": 60.0,
+    "outs": 1,
+    "avg": 3.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 48,
+    "econ": 9.75,
+    "wkts": 2
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 2,
+    "sr": 50.0,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Kumar Kartikeya",
+   "retained": false
+  },
+  "Kunal Singh Rathore": {
+   "name": "Kunal Singh Rathore",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 1,
+    "avg": 0.0,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 1,
+    "avg": 0.0,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 5,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 1,
+    "avg": 0.0,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Kunal Singh Rathore",
+   "retained": false
+  },
+  "Lalit Yadav": {
+   "name": "Lalit Yadav",
+   "seasons": "2021-2024",
+   "n_seasons": 4,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 21,
+    "balls": 290,
+    "runs": 305,
+    "sr": 105.2,
+    "outs": 15,
+    "avg": 20.3,
+    "bnd": 49.0,
+    "sixes": 7
+   },
+   "career_bowl": {
+    "balls": 288,
+    "econ": 8.85,
+    "wkts": 11
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 12,
+    "runs": 10,
+    "sr": 83.3,
+    "outs": 2,
+    "avg": 5.0,
+    "bnd": 40.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 18,
+    "econ": 18.67,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 8,
+    "runs": 7,
+    "sr": 87.5,
+    "outs": 1,
+    "avg": 7.0,
+    "bnd": 57.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 3,
+    "sr": 75.0,
+    "outs": 1,
+    "avg": 3.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 18,
+    "econ": 18.67,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Lalit Yadav",
+   "retained": false
+  },
+  "Lokesh Rahul": {
+   "name": "Lokesh Rahul",
+   "seasons": "2013-2026",
+   "n_seasons": 13,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 148,
+    "balls": 4163,
+    "runs": 5805,
+    "sr": 139.4,
+    "outs": 122,
+    "avg": 47.6,
+    "bnd": 60.0,
+    "sixes": 239
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 40,
+    "balls": 1068,
+    "runs": 1642,
+    "sr": 153.7,
+    "outs": 35,
+    "avg": 46.9,
+    "bnd": 63.0,
+    "sixes": 71
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 38,
+    "balls": 485,
+    "runs": 685,
+    "sr": 141.2,
+    "outs": 14,
+    "avg": 48.9,
+    "bnd": 69.0,
+    "sixes": 29
+   },
+   "r3_bat_mid": {
+    "inn": 26,
+    "balls": 486,
+    "runs": 778,
+    "sr": 160.1,
+    "outs": 12,
+    "avg": 64.8,
+    "bnd": 56.0,
+    "sixes": 34
+   },
+   "r3_bat_death": {
+    "inn": 13,
+    "balls": 97,
+    "runs": 179,
+    "sr": 184.5,
+    "outs": 9,
+    "avg": 19.9,
+    "bnd": 69.0,
+    "sixes": 8
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Lokesh Rahul",
+   "retained": false
+  },
+  "Mahipal Lomror": {
+   "name": "Mahipal Lomror",
+   "seasons": "2018-2024",
+   "n_seasons": 7,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 35,
+    "balls": 373,
+    "runs": 527,
+    "sr": 141.3,
+    "outs": 29,
+    "avg": 18.2,
+    "bnd": 59.0,
+    "sixes": 30
+   },
+   "career_bowl": {
+    "balls": 90,
+    "econ": 8.47,
+    "wkts": 2
+   },
+   "r3_bat": {
+    "inn": 10,
+    "balls": 68,
+    "runs": 125,
+    "sr": 183.8,
+    "outs": 8,
+    "avg": 15.6,
+    "bnd": 72.0,
+    "sixes": 9
+   },
+   "r3_bowl": {
+    "balls": 6,
+    "econ": 18.0,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 6,
+    "balls": 25,
+    "runs": 39,
+    "sr": 156.0,
+    "outs": 2,
+    "avg": 19.5,
+    "bnd": 67.0,
+    "sixes": 3
+   },
+   "r3_bat_death": {
+    "inn": 8,
+    "balls": 43,
+    "runs": 86,
+    "sr": 200.0,
+    "outs": 6,
+    "avg": 14.3,
+    "bnd": 74.0,
+    "sixes": 6
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Mahipal Lomror",
+   "retained": false
+  },
+  "Manoj Bhandage": {
+   "name": "Manoj Bhandage",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 1,
+    "sr": 25.0,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 1,
+    "sr": 25.0,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 1,
+    "sr": 25.0,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Manoj Bhandage",
+   "retained": false
+  },
+  "Mayank Dagar": {
+   "name": "Mayank Dagar",
+   "seasons": "2023-2024",
+   "n_seasons": 2,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 137,
+    "econ": 8.89,
+    "wkts": 2
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 71,
+    "econ": 10.14,
+    "wkts": 1
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 20.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 5,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "listed_as": "Mayank Dagar",
+   "retained": false
+  },
+  "Mukul DChoudhary": {
+   "name": "Mukul DChoudhary",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 10,
+    "balls": 120,
+    "runs": 170,
+    "sr": 141.7,
+    "outs": 6,
+    "avg": 28.3,
+    "bnd": 68.0,
+    "sixes": 12
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 10,
+    "balls": 120,
+    "runs": 170,
+    "sr": 141.7,
+    "outs": 6,
+    "avg": 28.3,
+    "bnd": 68.0,
+    "sixes": 12
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 8,
+    "balls": 43,
+    "runs": 55,
+    "sr": 127.9,
+    "outs": 1,
+    "avg": 55.0,
+    "bnd": 65.0,
+    "sixes": 2
+   },
+   "r3_bat_death": {
+    "inn": 9,
+    "balls": 77,
+    "runs": 115,
+    "sr": 149.4,
+    "outs": 5,
+    "avg": 23.0,
+    "bnd": 70.0,
+    "sixes": 10
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Mukul DChoudhary",
+   "retained": false
+  },
+  "Nehal Wadhera": {
+   "name": "Nehal Wadhera",
+   "seasons": "2023-2026",
+   "n_seasons": 4,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "leg-spin",
+   "career_bat": {
+    "inn": 37,
+    "balls": 560,
+    "runs": 784,
+    "sr": 140.0,
+    "outs": 32,
+    "avg": 24.5,
+    "bnd": 66.0,
+    "sixes": 43
+   },
+   "career_bowl": {
+    "balls": 17,
+    "econ": 7.76,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 27,
+    "balls": 394,
+    "runs": 543,
+    "sr": 137.8,
+    "outs": 23,
+    "avg": 23.6,
+    "bnd": 64.0,
+    "sixes": 31
+   },
+   "r3_bowl": {
+    "balls": 17,
+    "econ": 7.76,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 7,
+    "balls": 32,
+    "runs": 33,
+    "sr": 103.1,
+    "outs": 0,
+    "avg": null,
+    "bnd": 61.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 25,
+    "balls": 314,
+    "runs": 433,
+    "sr": 137.9,
+    "outs": 13,
+    "avg": 33.3,
+    "bnd": 62.0,
+    "sixes": 21
+   },
+   "r3_bat_death": {
+    "inn": 12,
+    "balls": 48,
+    "runs": 77,
+    "sr": 160.4,
+    "outs": 10,
+    "avg": 7.7,
+    "bnd": 78.0,
+    "sixes": 8
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 5,
+    "econ": 10.8,
+    "wkts": 0
+   },
+   "listed_as": "Nehal Wadhera",
+   "retained": false
+  },
+  "Prashant Veer": {
+   "name": "Prashant Veer",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 5,
+    "balls": 67,
+    "runs": 91,
+    "sr": 135.8,
+    "outs": 2,
+    "avg": 45.5,
+    "bnd": 64.0,
+    "sixes": 3
+   },
+   "career_bowl": {
+    "balls": 12,
+    "econ": 12.5,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 5,
+    "balls": 67,
+    "runs": 91,
+    "sr": 135.8,
+    "outs": 2,
+    "avg": 45.5,
+    "bnd": 64.0,
+    "sixes": 3
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 12.5,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 28,
+    "runs": 43,
+    "sr": 153.6,
+    "outs": 0,
+    "avg": null,
+    "bnd": 70.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 5,
+    "balls": 39,
+    "runs": 48,
+    "sr": 123.1,
+    "outs": 2,
+    "avg": 24.0,
+    "bnd": 58.0,
+    "sixes": 2
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 18.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Prashant Veer",
+   "retained": false
+  },
+  "Praveen Dubey": {
+   "name": "Praveen Dubey",
+   "seasons": "2020-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "leg-spin",
+   "career_bat": {
+    "inn": 2,
+    "balls": 33,
+    "runs": 23,
+    "sr": 69.7,
+    "outs": 1,
+    "avg": 23.0,
+    "bnd": 35.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 78,
+    "econ": 8.54,
+    "wkts": 2
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 10.0,
+    "wkts": 1
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Praveen Dubey",
+   "retained": false
+  },
+  "Ravichandran Smaran": {
+   "name": "Ravichandran Smaran",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 4,
+    "balls": 25,
+    "runs": 19,
+    "sr": 76.0,
+    "outs": 3,
+    "avg": 6.3,
+    "bnd": 63.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 4,
+    "balls": 25,
+    "runs": 19,
+    "sr": 76.0,
+    "outs": 3,
+    "avg": 6.3,
+    "bnd": 63.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 2,
+    "balls": 19,
+    "runs": 10,
+    "sr": 52.6,
+    "outs": 2,
+    "avg": 5.0,
+    "bnd": 40.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 4,
+    "runs": 4,
+    "sr": 100.0,
+    "outs": 1,
+    "avg": 4.0,
+    "bnd": 100.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 5,
+    "sr": 250.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 80.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Ravichandran Smaran",
+   "retained": false
+  },
+  "Ricky Bhui": {
+   "name": "Ricky Bhui",
+   "seasons": "2018-2024",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 4,
+    "balls": 26,
+    "runs": 10,
+    "sr": 38.5,
+    "outs": 4,
+    "avg": 2.5,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 9,
+    "runs": 3,
+    "sr": 33.3,
+    "outs": 2,
+    "avg": 1.5,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 1,
+    "avg": 0.0,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 7,
+    "runs": 3,
+    "sr": 42.9,
+    "outs": 1,
+    "avg": 3.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Ricky Bhui",
+   "retained": false
+  },
+  "Robin Minz": {
+   "name": "Robin Minz",
+   "seasons": "2025-2026",
+   "n_seasons": 2,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 4,
+    "balls": 19,
+    "runs": 12,
+    "sr": 63.2,
+    "outs": 3,
+    "avg": 4.0,
+    "bnd": 33.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 4,
+    "balls": 19,
+    "runs": 12,
+    "sr": 63.2,
+    "outs": 3,
+    "avg": 4.0,
+    "bnd": 33.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 15,
+    "runs": 6,
+    "sr": 40.0,
+    "outs": 2,
+    "avg": 3.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 4,
+    "runs": 6,
+    "sr": 150.0,
+    "outs": 1,
+    "avg": 6.0,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Robin Minz",
+   "retained": false
+  },
+  "Sahil Parakh": {
+   "name": "Sahil Parakh",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 4,
+    "balls": 33,
+    "runs": 46,
+    "sr": 139.4,
+    "outs": 4,
+    "avg": 11.5,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 4,
+    "balls": 33,
+    "runs": 46,
+    "sr": 139.4,
+    "outs": 4,
+    "avg": 11.5,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 3,
+    "balls": 14,
+    "runs": 24,
+    "sr": 171.4,
+    "outs": 2,
+    "avg": 12.0,
+    "bnd": 83.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 19,
+    "runs": 22,
+    "sr": 115.8,
+    "outs": 2,
+    "avg": 11.0,
+    "bnd": 55.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Sahil Parakh",
+   "retained": false
+  },
+  "Satyanarayana Raju": {
+   "name": "Satyanarayana Raju",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 24,
+    "econ": 13.25,
+    "wkts": 2
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 24,
+    "econ": 13.25,
+    "wkts": 2
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 13.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 12,
+    "econ": 14.0,
+    "wkts": 2
+   },
+   "listed_as": "Satyanarayana Raju",
+   "retained": false
+  },
+  "Saurav Chauhan": {
+   "name": "Saurav Chauhan",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 3,
+    "balls": 15,
+    "runs": 18,
+    "sr": 120.0,
+    "outs": 3,
+    "avg": 6.0,
+    "bnd": 56.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 3,
+    "balls": 15,
+    "runs": 18,
+    "sr": 120.0,
+    "outs": 3,
+    "avg": 6.0,
+    "bnd": 56.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 2,
+    "runs": 1,
+    "sr": 50.0,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 13,
+    "runs": 17,
+    "sr": 130.8,
+    "outs": 2,
+    "avg": 8.5,
+    "bnd": 59.0,
+    "sixes": 1
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Saurav Chauhan",
+   "retained": false
+  },
+  "Shaik Rasheed": {
+   "name": "Shaik Rasheed",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 5,
+    "balls": 63,
+    "runs": 71,
+    "sr": 112.7,
+    "outs": 5,
+    "avg": 14.2,
+    "bnd": 68.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 5,
+    "balls": 63,
+    "runs": 71,
+    "sr": 112.7,
+    "outs": 5,
+    "avg": 14.2,
+    "bnd": 68.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 5,
+    "balls": 60,
+    "runs": 69,
+    "sr": 115.0,
+    "outs": 4,
+    "avg": 17.2,
+    "bnd": 70.0,
+    "sixes": 2
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 2,
+    "sr": 66.7,
+    "outs": 1,
+    "avg": 2.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Shaik Rasheed",
+   "retained": false
+  },
+  "Shams Mulani": {
+   "name": "Shams Mulani",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "left-hand-bat",
+   "bowl_kind": "left-arm spin",
+   "career_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 30,
+    "econ": 11.4,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 30,
+    "econ": 11.4,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 1,
+    "runs": 1,
+    "sr": 100.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 6,
+    "econ": 21.0,
+    "wkts": 0
+   },
+   "listed_as": "Shams Mulani",
+   "retained": false
+  },
+  "Sumit Kumar": {
+   "name": "Sumit Kumar",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 3,
+    "balls": 24,
+    "runs": 18,
+    "sr": 75.0,
+    "outs": 2,
+    "avg": 9.0,
+    "bnd": 78.0,
+    "sixes": 1
+   },
+   "career_bowl": {
+    "balls": 20,
+    "econ": 11.4,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 3,
+    "balls": 24,
+    "runs": 18,
+    "sr": 75.0,
+    "outs": 2,
+    "avg": 9.0,
+    "bnd": 78.0,
+    "sixes": 1
+   },
+   "r3_bowl": {
+    "balls": 20,
+    "econ": 11.4,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 2,
+    "runs": 0,
+    "sr": 0.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 12,
+    "runs": 16,
+    "sr": 133.3,
+    "outs": 0,
+    "avg": null,
+    "bnd": 88.0,
+    "sixes": 1
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 10,
+    "runs": 2,
+    "sr": 20.0,
+    "outs": 2,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 2,
+    "econ": 24.0,
+    "wkts": 0
+   },
+   "listed_as": "Sumit Kumar",
+   "retained": false
+  },
+  "Suyash Prabhudessai": {
+   "name": "Suyash Prabhudessai",
+   "seasons": "2022-2024",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 10,
+    "balls": 106,
+    "runs": 126,
+    "sr": 118.9,
+    "outs": 9,
+    "avg": 14.0,
+    "bnd": 54.0,
+    "sixes": 4
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 18,
+    "runs": 24,
+    "sr": 133.3,
+    "outs": 1,
+    "avg": 24.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 11,
+    "runs": 19,
+    "sr": 172.7,
+    "outs": 0,
+    "avg": null,
+    "bnd": 42.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 7,
+    "runs": 5,
+    "sr": 71.4,
+    "outs": 1,
+    "avg": 5.0,
+    "bnd": 80.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Suyash Prabhudessai",
+   "retained": false
+  },
+  "Tanush Kotian": {
+   "name": "Tanush Kotian",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 1,
+    "balls": 31,
+    "runs": 24,
+    "sr": 77.4,
+    "outs": 1,
+    "avg": 24.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 1,
+    "balls": 31,
+    "runs": 24,
+    "sr": 77.4,
+    "outs": 1,
+    "avg": 24.0,
+    "bnd": 50.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 1,
+    "balls": 20,
+    "runs": 18,
+    "sr": 90.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 11,
+    "runs": 6,
+    "sr": 54.5,
+    "outs": 1,
+    "avg": 6.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Tanush Kotian",
+   "retained": false
+  },
+  "Tejasvi Dahiya": {
+   "name": "Tejasvi Dahiya",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": null,
+   "career_bat": {
+    "inn": 2,
+    "balls": 15,
+    "runs": 12,
+    "sr": 80.0,
+    "outs": 2,
+    "avg": 6.0,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 15,
+    "runs": 12,
+    "sr": 80.0,
+    "outs": 2,
+    "avg": 6.0,
+    "bnd": 67.0,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 1,
+    "balls": 3,
+    "runs": 1,
+    "sr": 33.3,
+    "outs": 1,
+    "avg": 1.0,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 1,
+    "balls": 12,
+    "runs": 11,
+    "sr": 91.7,
+    "outs": 1,
+    "avg": 11.0,
+    "bnd": 73.0,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Tejasvi Dahiya",
+   "retained": false
+  },
+  "Vidwath Kaverappa": {
+   "name": "Vidwath Kaverappa",
+   "seasons": "2024-2024",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 24,
+    "econ": 9.0,
+    "wkts": 2
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 24,
+    "econ": 9.0,
+    "wkts": 2
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 18,
+    "econ": 6.67,
+    "wkts": 2
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Vidwath Kaverappa",
+   "retained": false
+  },
+  "Vignesh Puthur": {
+   "name": "Vignesh Puthur",
+   "seasons": "2025-2025",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "unknown",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 72,
+    "econ": 9.08,
+    "wkts": 6
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 72,
+    "econ": 9.08,
+    "wkts": 6
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 12,
+    "econ": 12.0,
+    "wkts": 0
+   },
+   "listed_as": "Vignesh Puthur",
+   "retained": false
+  },
+  "Vijay Tripurana": {
+   "name": "Vijay Tripurana",
+   "seasons": "2026-2026",
+   "n_seasons": 1,
+   "bat_hand": null,
+   "bowl_kind": "off-spin",
+   "career_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "career_bowl": {
+    "balls": 12,
+    "econ": 14.5,
+    "wkts": 0
+   },
+   "r3_bat": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl": {
+    "balls": 12,
+    "econ": 14.5,
+    "wkts": 0
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bowl_pp": {
+    "balls": 6,
+    "econ": 18.0,
+    "wkts": 0
+   },
+   "r3_bowl_death": {
+    "balls": 0,
+    "econ": null,
+    "wkts": 0
+   },
+   "listed_as": "Vijay Tripurana",
+   "retained": false
+  },
+  "Yudhvir Singh Charak": {
+   "name": "Yudhvir Singh Charak",
+   "seasons": "2023-2025",
+   "n_seasons": 3,
+   "bat_hand": "right-hand-bat",
+   "bowl_kind": "right-arm pace",
+   "career_bat": {
+    "inn": 4,
+    "balls": 16,
+    "runs": 22,
+    "sr": 137.5,
+    "outs": 4,
+    "avg": 5.5,
+    "bnd": 73.0,
+    "sixes": 2
+   },
+   "career_bowl": {
+    "balls": 138,
+    "econ": 11.0,
+    "wkts": 8
+   },
+   "r3_bat": {
+    "inn": 2,
+    "balls": 14,
+    "runs": 21,
+    "sr": 150.0,
+    "outs": 2,
+    "avg": 10.5,
+    "bnd": 76.0,
+    "sixes": 2
+   },
+   "r3_bowl": {
+    "balls": 90,
+    "econ": 12.2,
+    "wkts": 5
+   },
+   "r3_bat_pp": {
+    "inn": 0,
+    "balls": 0,
+    "runs": 0,
+    "sr": null,
+    "outs": 0,
+    "avg": null,
+    "bnd": null,
+    "sixes": 0
+   },
+   "r3_bat_mid": {
+    "inn": 2,
+    "balls": 4,
+    "runs": 2,
+    "sr": 50.0,
+    "outs": 0,
+    "avg": null,
+    "bnd": 0.0,
+    "sixes": 0
+   },
+   "r3_bat_death": {
+    "inn": 2,
+    "balls": 10,
+    "runs": 19,
+    "sr": 190.0,
+    "outs": 2,
+    "avg": 9.5,
+    "bnd": 84.0,
+    "sixes": 2
+   },
+   "r3_bowl_pp": {
+    "balls": 42,
+    "econ": 12.14,
+    "wkts": 3
+   },
+   "r3_bowl_death": {
+    "balls": 18,
+    "econ": 12.0,
+    "wkts": 1
+   },
+   "listed_as": "Yudhvir Singh Charak",
+   "retained": false
+  }
+ },
+ "india_country_id": 153732,
+ "n_candidates": 40,
+ "caps_keys": 165
+}
