@@ -47,7 +47,7 @@ Names come from one outlet's bracket lists (Sunday Guardian): 29 at ₹2 cr, 7 a
 - **Jonny Bairstow** (₹2 cr): 13 inns, 383 runs, SR 158.9, avg 34.8; death-over strike rate 183.3. A proven all-phase batter.
 - **Rachin Ravindra** (₹2 cr): 18 inns, 413 runs, SR 143.9, avg 25.8. **Daryl Mitchell** (13 inns, 318 runs, SR 142.6, avg 28.9). **Devon Conway** (6 inns, 156 runs, SR 131.1, avg 31.2). **Shai Hope** (9 inns, 183 runs, SR 150.0, avg 26.1). **Rahmanullah Gurbaz** (6 inns, 135 runs, SR 140.6, avg 22.5, a keeper-batter: KKR have one keeper). **David Warner** (8 inns, 168 runs, SR 134.4, avg 21.0, 2024 only).
 - **Shimron Hetmyer** (₹2 cr): 29 inns, 430 runs, SR 142.4, avg 19.5; death strike rate 154.4 against a league 170.8, and 72.7 in the powerplay. Scarcity, not form, will price him.
-- **Karun Nair** (₹75 lakh): 9 inns, 216 runs, SR 163.6, avg 27.0. Strong value. **Nitish Rana's** and **Rahul Tripathi's** numbers are not on the record above (Rana is a DC release; Tripathi 11 inns, 220 runs, SR 127.9, avg 22.0).
+- **Karun Nair** (₹75 lakh): 9 inns, 216 runs, SR 163.6, avg 27.0. Strong value. **Rahul Tripathi** (₹75 lakh): 11 inns, 220 runs, SR 127.9, avg 22.0: modest. Nitish Rana (a DC release, 442 runs at SR 156 over 2025-26) is not in the reported bracket lists, so his registration is unconfirmed.
 - No 2024-26 IPL data: Ben Stokes (last IPL 2023), Sam Billings, Chris Lynn, Kusal Mendis, Matthew Breetzke, Rassie van der Dussen, Kyle Mayers, Duan Jansen.
 
 ## 4. Who could go big (our opinion; demand = teams with the gap, supply = proven players)
@@ -82,7 +82,7 @@ Capped status: CricTracker and myKhel call these players uncapped; we have not c
 - **Tushar Deshpande** (RR release, ₹1 cr): the volume pace option, 618 balls. **Nikhil Chaudhary** (named at ₹1 cr): no 2024-26 data in our archive, so unproven. **Abishek Porel** (DC release; keeper-batter): 2024-26: 728 runs in 28 innings, SR 149, death SR 225, plus 252 runs at SR 165 in this SMAT (Bengal). **Nehal Wadhera** (PBKS release): 543 runs in 27 innings, SR 138. **Mahipal Lomror** (MI release): 125 runs off 68 balls, SR 184 (small sample). **Prashant Veer** (CSK release): ₹14.2 cr last year, 91 runs in 5 innings, no bowling data: a price anchor, not a performer. **Vignesh Puthur**, **Kuldeep Sen** and **Shivam Mavi** are released names with little recent data.
 - **Aaryavir Sehwag** (named, ₹30 lakh), **Mohit Ulva** and **Kavyan Patel** (also ₹30 lakh): no stats in our archive. Sehwag's U19 numbers are in our earlier video.
 ### 5c. Overseas: wildcards and value
-- **Value:** Maheesh Theekshana (spin, ₹1 cr), Karun Nair is Indian; Bairstow at ₹2 cr gives the batting gap sides an experienced option.
+- **Value:** Maheesh Theekshana (spin, ₹1 cr) and Jonny Bairstow (₹2 cr, an all-phase batter for the batting-gap sides).
 - **Reputation bids with no IPL record in our data:** Sonny Baker and Mahli Beardman (pace), Ben Sears (pace), Bevon Jacobs (batter), Hassan Eisakhil (the son of Mohammad Nabi, ₹75 lakh, **would be the first father-and-son pair in the IPL** if both are picked: a story, not a form guide), Will O'Rourke (62 balls at 12.8 an over).
 - **The 69 uncapped overseas and 42 Associate players** are unnamed in every report we found: this is the biggest hole in the pool analysis until 4 Dec.
 
