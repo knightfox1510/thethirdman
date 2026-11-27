@@ -19,9 +19,14 @@ def hi_num(n):
     if n < 100: return HI[n]
     if n < 1000: return (HI[n // 100] + " सौ" + (" " + HI[n % 100] if n % 100 else ""))
     return str(n)
+def _numw(x):
+    x = x.replace(",", "")
+    if "." in x:                                                   # 1.47 -> one point four seven
+        i, f = x.split("."); return _numw(i) + " point " + " ".join(_numw(ch) for ch in f)
+    n = int(x); return hi_num(n) if a.lang == "hi" else num2words(n).replace("-", " ").replace(",", "").replace(" and", "")
 def norm(s, asr=False):
     s = s.lower().replace("-", " ").replace("\u0964", " ").replace("\u0965", " ")
-    if asr: s = re.sub(r"\d+(?:,\d{3})*(?:\.\d+)?", lambda m: " " + (hi_num(int(m.group(0).replace(",", ""))) if a.lang == "hi" else num2words(int(m.group(0).replace(",", ""))).replace("-", " ").replace(",", "").replace(" and", "")) + " ", s)
+    if asr: s = re.sub(r"\d+(?:,\d{3})*(?:\.\d+)?", lambda m: " " + _numw(m.group(0)) + " ", s)
     toks = []
     for t in re.findall(r"[\wऀ-ॿ']+", s):
         t = t.strip("'")
