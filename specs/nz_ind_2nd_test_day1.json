@@ -257,7 +257,7 @@
      {
       "lab": "27.3 · LATHAM",
       "ang": 28.1,
-      "len": 1.0
+      "len": 0.88
      },
      {
       "lab": "44.2 · BLUNDELL",
@@ -267,7 +267,7 @@
      {
       "lab": "58.6 · MITCHELL",
       "ang": 21.4,
-      "len": 0.9
+      "len": 0.82
      },
      {
       "lab": "61.5 · MITCHELL",
@@ -277,7 +277,7 @@
      {
       "lab": "73.4 · PHILLIPS",
       "ang": 15.6,
-      "len": 0.93
+      "len": 0.78
      }
     ],
     "foot": "POSITIONS ARE TYPICAL, NOT THE ACTUAL FIELD · EDGE DIRECTIONS FROM THE DAY'S WAGON DATA"

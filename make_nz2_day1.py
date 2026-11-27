@@ -14,7 +14,7 @@ assert (BW["JJ Bumrah"]["overs"], BW["JJ Bumrah"]["runs"], BW["JJ Bumrah"]["wkts
 EDGES = [27.3, 44.2, 58.6, 61.5, 73.4]; e = df[df.over.isin(EDGES) & (df.four == 1) & (df.ctl == 2)]; assert len(e) == 5 and int(e.runs.sum()) == 20 and round(100 * 20 / 246) == 8, (len(e), e.runs.sum())
 edges = []
 for i, (_, r) in enumerate(e.sort_values("over").iterrows()):
-    lh = LH[r.bat]; dx = (r.wx - 180) if lh else (180 - r.wx); dy = 180 - r.wy; edges.append({"lab": f"{r.over:.1f} · {r.bat.split()[-1].upper()}", "ang": round(math.degrees(math.atan2(dx, dy)), 1), "len": [1.0, .95, .90, .97, .93][i]})
+    lh = LH[r.bat]; dx = (r.wx - 180) if lh else (180 - r.wx); dy = 180 - r.wy; edges.append({"lab": f"{r.over:.1f} · {r.bat.split()[-1].upper()}", "ang": round(math.degrees(math.atan2(dx, dy)), 1), "len": [.88, .95, .82, .97, .78][i]})
 assert sorted(int(x) for x in e.zone) == [1, 8, 8, 8, 8], e.zone.tolist()
 mit = df[(df.bat == "DJ Mitchell") & (df.bowler == "Washington Sundar")]; assert len(mit) == 10 and sum(1 for t in mit.text.fillna("").str.lower().tolist()[:9] if ("midwicket" in t or "leg side" in t)) == 5
 assert int(df[df.ov.between(41, 44) & (df.legal == 1)].runs.sum()) == 4 and O["fow"][1][2:] == [110, 41.3] and O["fow"][3][2:] == [110, 43.6] and G["first_inn_after_85"] == [[439, 8], [278, 8], [332, 1], [232, 3], [336, 8], [325, 9]]
