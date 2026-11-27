@@ -1,0 +1,156 @@
+{
+ "slug": "nz_ind_2nd_test_day1",
+ "claims": [
+  {
+   "claim": "NZ v IND 2nd Test, Hagley Oval, Day 1 (27 Nov 2026): India chose to field; NZ 246/5 in 85 overs (2.89); Blundell 53*, Phillips 36*; fall of wickets 77, 110, 110, 110, 184",
+   "value": [
+    246,
+    5,
+    85,
+    53,
+    36
+   ],
+   "sources": {
+    "cricinfo": [
+     246,
+     5,
+     85,
+     53,
+     36
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Gurnoor Brar (debut, per the owner): 19-4-52-1, seven no-balls; first wicket Conway lbw 25.6 (NZ review failed)",
+   "value": [
+    19,
+    4,
+    52,
+    1,
+    7
+   ],
+   "sources": {
+    "cricinfo": [
+     19,
+     4,
+     52,
+     1,
+     7
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "five outside edges for four through or past the cordon (27.3 Latham, 44.2 Blundell, 58.6 Mitchell twice-noted 'only two slips', 61.5 Mitchell 'no third slip', 73.4 Phillips) = 20 runs, 8% of 246; four in wagon zone 8",
+   "value": [
+    5,
+    20,
+    8
+   ],
+   "sources": {
+    "cricinfo": [
+     5,
+     20,
+     8
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "good length 232 balls 1.47 an over 4 wickets; full 138 balls 4.61 an over 106 runs no wicket (3.1x); 112 balls not in control, 1 wicket in 22",
+   "value": [
+    232,
+    138,
+    106,
+    112
+   ],
+   "sources": {
+    "cricinfo": [
+     232,
+     138,
+     106,
+     112
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "overs 41.3-43.6: three wickets (Latham, Nicholls, Ravindra) at 110, no runs added; Akash Deep took Latham and Ravindra off good-length balls close to off",
+   "value": [
+    110,
+    3
+   ],
+   "sources": {
+    "cricinfo": [
+     110,
+     3
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "the catch: Mitchell c Jurel b Sundar 64.4 at backward short leg (184/5); Mitchell's first 9 balls from Sundar: 5 to midwicket or the leg side",
+   "value": [
+    184,
+    5,
+    5
+   ],
+   "sources": {
+    "cricinfo": [
+     184,
+     5,
+     5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Hagley Oval, men's Tests in our archive: first innings after 85 overs 232/3 to 439/8 (six innings); NZ's 246/5 second slowest of seven; Hagley 3.39 runs an over, NZ today 2.89",
+   "value": [
+    6,
+    246
+   ],
+   "sources": {
+    "cricsheet": [
+     6,
+     246
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  },
+  {
+   "claim": "Test 1 Day 1 (Basin Reserve): NZ 243/5 in 81.6 overs, all five wickets inside 29 overs, Bumrah 3",
+   "value": [
+    243,
+    5
+   ],
+   "sources": {
+    "cricbuzz capture": [
+     243,
+     5
+    ]
+   },
+   "scope": "archive",
+   "status": "LABELLED",
+   "conflicts": []
+  }
+ ],
+ "summary": {
+  "LABELLED": 8
+ }
+}

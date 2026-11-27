@@ -92,7 +92,35 @@ def sc_shotfig(c, g, t, D, s):
         text(c, st["t"], cx_ + 24, cy_ + ph2 - 40, E.fit(st["t"], pw_ - 48, 30, "interB", -1), "interB", gfx.INK, q); text(c, st.get("d", ""), cx_ + 24, cy_ + ph2 - 12, E.fit(st.get("d", ""), pw_ - 48, 18, "monoSB", 1), "monoSB", gfx.MUTED, q, track=1)
 
 
+def sc_cordon(c, g, t, D, s):
+    """The slip cordon from above (our illustration; fielder positions are typical, not the actual field) with the edges' directions from the day's wagon coordinates and an empty chair where a third slip would stand."""
+    LK.header(c, g, t, D, dict(s, title=s["head"]["t"], sub=s["head"].get("sub", ""))); l = SS._L(g); x0, x1 = l["x0"], l["x1"]; a = eo(prog(t, .05, .5)); W = g.W
+    cx = x0 + 150; cy = l["bot"] - 190; Rb = min(cy - l["top"] - 110, 760)
+    c.drawCircle(cx, cy, Rb, paint((226, 233, 214), a)); c.drawCircle(cx, cy, Rb, paint(gfx.INK, a, stroke=4)); c.drawCircle(cx, cy, Rb * .55, paint(gfx.INK, .25 * a, stroke=2))
+    rrect(c, cx - 14, cy - 40, 28, 90, 4, (214, 196, 150), a)
+    for k in (-1, 0, 1): c.drawRect(skia.Rect.MakeXYWH(cx + k * 8 - 1.5, cy - 44, 3, 9), paint(gfx.INK, a))
+    text(c, "BATTER'S STUMPS", cx + 26, cy + 34, 17, "monoSB", gfx.MUTED, a, "l", track=1); text(c, "BEHIND THE WICKET", cx + Rb * .35, l["top"] + 8, 18, "monoSB", gfx.MUTED, a, "c", track=2)
+    F = [("KEEPER", 0, 75), ("1ST SLIP", 11, 135), ("2ND SLIP", 20, 185), (None, 30, 238), ("GULLY", 58, 215)]
+    for i, (lab, ang, r) in enumerate(F):
+        q = eo(prog(t, .2 + .12 * i, .7 + .12 * i)); th = math.radians(ang); fx = cx + r * math.sin(th); fy = cy - r * math.cos(th)
+        if lab:
+            c.drawCircle(fx, fy, 17, paint(gfx.INK, q)); text(c, lab, fx + 26, fy + 7, 20, "monoSB", gfx.INK, q, "l", track=1)
+        else:
+            e = eo(prog(t, s.get("empty_at", 3.0), s.get("empty_at", 3.0) + .6)) if s.get("empty_at") else q
+            dp = paint(LK.RED, max(q, e), stroke=5); c.drawCircle(fx, fy, 22, dp)
+            c.drawRect(skia.Rect.MakeXYWH(fx - 9, fy - 12, 18, 14), paint(LK.RED, max(q, e)))                                    # a chair: seat, back, legs
+            c.drawRect(skia.Rect.MakeXYWH(fx - 9, fy - 24, 4, 14), paint(LK.RED, max(q, e))); c.drawLine(fx - 8, fy + 2, fx - 8, fy + 14, paint(LK.RED, max(q, e), stroke=3)); c.drawLine(fx + 8, fy + 2, fx + 8, fy + 14, paint(LK.RED, max(q, e), stroke=3))
+            text(c, s["empty"], fx + 32, fy + 7, 22, "interB", LK.RED, max(q, e), "l")
+    for i, e in enumerate(s["edges"]):
+        q = clamp((t - (s.get("ray_at", 1.2) + .5 * i)) / .6)
+        if q <= 0: continue
+        th = math.radians(e["ang"]); R = Rb * e.get("len", 1.0); ex = cx + R * math.sin(th) * q; ey = cy - R * math.cos(th) * q
+        p = paint(LK.RED, .9, stroke=5); c.drawLine(cx, cy - 20, ex, ey, p); c.drawCircle(ex, ey, 10, paint(LK.RED, 1))
+        if q >= 1: text(c, e["lab"], ex + 16, ey + 8 + 4 * (i % 2), 22, "monoSB", gfx.INK, 1, "l", track=1)
+    text(c, s["foot"], x0, l["bot"] + 40, 18, "mono", gfx.MUTED, eo(prog(t, .8, 1.4)))
+
+
 def install(engine, looks):
     global E, LK
     E = engine; LK = looks
-    E.SCENES.update({"techimg": sc_techimg, "follow": sc_follow, "shotfig": sc_shotfig})
+    E.SCENES.update({"techimg": sc_techimg, "follow": sc_follow, "shotfig": sc_shotfig, "cordon": sc_cordon})

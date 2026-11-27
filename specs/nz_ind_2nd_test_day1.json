@@ -1,0 +1,555 @@
+{
+ "slug": "nz_ind_2nd_test_day1",
+ "theme": "lab",
+ "theme_long": "lab",
+ "captions": "lab",
+ "captions_long": false,
+ "series": "replay",
+ "tag": "THE REPLAY ROOM",
+ "tagsub": "NZ V IND · 2ND TEST · DAY 1",
+ "files": {
+  "long": "_unused",
+  "short": "Replay_Room_Ep11_India_vs_New_Zealand_2nd_Test_Day_1_Short_9x16"
+ },
+ "venue": {
+  "time": "day",
+  "crowd": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    230,
+    230,
+    230
+   ],
+   [
+    25,
+    100,
+    200
+   ],
+   [
+    20,
+    60,
+    140
+   ]
+  ],
+  "boards": [
+   [
+    20,
+    20,
+    22
+   ],
+   [
+    25,
+    100,
+    200
+   ]
+  ]
+ },
+ "thumb": {
+  "kicker": "NZ V IND · 2ND TEST · DAY 1",
+  "lines": [
+   {
+    "t": "THE EMPTY"
+   },
+   {
+    "t": "THIRD SLIP",
+    "c": "gold"
+   }
+  ],
+  "hero": "5 EDGES",
+  "herosize": 280
+ },
+ "ig_cover": {
+  "lines": [
+   {
+    "t": "5 EDGES"
+   },
+   {
+    "t": "20 RUNS",
+    "c": "gold"
+   }
+  ],
+  "sub": "2ND TEST · DAY 1",
+  "hero": "20"
+ },
+ "sources": [
+  "The day (NZ v IND, 2nd Test, Hagley Oval, Christchurch, 27 November 2026): the channel owner's ESPNcricinfo ball-by-ball capture of match 1539443 (517 deliveries: line, length, shot, control, wagon zone; the day's commentary text for speeds, chances and reviews). Every bowler's figures and every batter's runs reproduce the scorecard.",
+  "The edges: the five outside-edge fours (27.3 Latham, 44.2 Blundell, 58.6 and 61.5 Mitchell, 73.4 Phillips) are the balls Cricinfo flags 'not in control' that went for four past or through the slips; the commentary at 58.6 ('only two slips') and 61.5 ('no third slip') says the cordon was two slips. Cricinfo's scoring has Latham on strike for the catch dropped at 14.1 while its text names Conway: the video does not name the batter. Photographs supplied by the channel owner; Gurnoor Brar's debut and Dhruv Jurel's catch identified by the owner.",
+  "Ground history: Cricsheet men's Tests at Hagley Oval, 2014 to 2025 (cricsheet.org, ODC-BY): 15 Tests in our archive (partial coverage): first innings after 85 overs, scoring rate. Test 1 Day 1 (Basin Reserve, NZ 243/5): the channel's earlier Cricbuzz match capture. Analysis: analysis/nz2_day1.py, analysis/nz2_ground.py.",
+  "The cordon figure and the pitch map are our own illustrations: fielder positions are typical, not the actual field."
+ ],
+ "short": [
+  {
+   "vo": "Five times, New Zealand edged it past India's slips for four. Twenty runs. And twice, the commentators said the same thing: there is no third slip.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "5 EDGES, 20 RUNS",
+     "sub": "NZ V IND · 2ND TEST · DAY 1"
+    },
+    "tiles": [
+     {
+      "v": "5",
+      "l": "OUTSIDE EDGES FOR FOUR, THROUGH OR PAST THE SLIPS",
+      "c": "red"
+     },
+     {
+      "v": "20",
+      "l": "RUNS: 8% OF THE DAY",
+      "c": "gold"
+     },
+     {
+      "v": "2",
+      "l": "TIMES THE COMMENTARY NOTED NO THIRD SLIP",
+      "c": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "But first, a debut. गुरनूर बराड़ got his cap, and nineteen overs: four maidens, fifty-two runs. His first Test wicket came on the last ball before lunch: Conway, lbw, and the review confirmed it. Seven no-balls came with it.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "DEBUT · 2ND TEST · CHRISTCHURCH",
+    "title": "The debut.",
+    "img": "data/licensed/in/nz2_brar_debut_cap.webp",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "TEST CAP",
+    "name": "GURNOOR BRAR",
+    "mono": "19-4-52-1 · 7 NO-BALLS",
+    "caption": "First Test wicket: Conway lbw, last ball before lunch",
+    "chip": "1 WKT",
+    "chip_sub": "NZ REVIEW FAILED, OUT STANDS"
+   }
+  },
+  {
+   "vo": "India chose to field. New Zealand finished two forty-six for five, off eighty-five overs, fifteen per cent slower than Hagley's usual.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "NZ V IND · 2ND TEST · DAY 1",
+    "title": "246/5.",
+    "img": "data/licensed/in/nz2_conway_defend.webp",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     853
+    ],
+    "tag": "DEVON CONWAY 31 (79)",
+    "name": "NEW ZEALAND",
+    "mono": "85 OVERS · 2.89 AN OVER",
+    "caption": "India chose to field. Hagley's usual: 3.39",
+    "chip": "-15%",
+    "chip_sub": "SLOWER THAN HAGLEY'S USUAL RATE"
+   }
+  },
+  {
+   "vo": "India's good-length balls went for one point four seven an over, and took four of the five wickets. Their full balls went for four point six one, and took none. Three times the price.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "THE PRICE OF A FULL BALL",
+     "sub": "RUNS PER OVER BY LENGTH · INDIA'S BOWLERS, DAY 1"
+    },
+    "max": 5,
+    "dec": 2,
+    "items": [
+     {
+      "label": "GOOD LENGTH · 4 WKTS",
+      "value": 1.47,
+      "color": "gold"
+     },
+     {
+      "label": "SHORT · 0 WKTS",
+      "value": 1.89,
+      "color": "ink"
+     },
+     {
+      "label": "BACK OF A LENGTH · 1 WKT",
+      "value": 3.49,
+      "color": "ink"
+     },
+     {
+      "label": "FULL · 0 WKTS",
+      "value": 4.61,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Between the forty-first and forty-fourth overs, three wickets fell for no runs. आकाश दीप took two, with the same ball: good length, close to off, seaming away.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "OVERS 41 TO 44",
+    "title": "3 for 0.",
+    "img": "data/licensed/in/nz2_india_celebrate.webp",
+    "crop_short": [
+     0,
+     150,
+     1280,
+     1003
+    ],
+    "tag": "110/1 TO 110/4",
+    "name": "THE COLLAPSE",
+    "mono": "LATHAM · NICHOLLS · RAVINDRA",
+    "caption": "Three wickets, no runs added",
+    "chip": "0",
+    "chip_sub": "RUNS ADDED WHILE THREE FELL"
+   }
+  },
+  {
+   "vo": "Same ball, twice. Almost the same spot.",
+   "scene": {
+    "type": "pitchtop",
+    "head": {
+     "t": "SAME BALL, TWICE",
+     "sub": "ILLUSTRATIVE · LATHAM 41.3 AND RAVINDRA 43.6"
+    },
+    "panels": [
+     {
+      "title": "GOOD LENGTH, OUTSIDE OFF",
+      "balls": [
+       [
+        "outside_off",
+        "good",
+        "w"
+       ],
+       [
+        "outside_off",
+        "good",
+        "w"
+       ]
+      ],
+      "stats": [
+       [
+        "2",
+        "WICKETS, SAME LINE AND LENGTH"
+       ],
+       [
+        "232",
+        "GOOD-LENGTH BALLS, 4 WICKETS"
+       ]
+      ]
+     }
+    ],
+    "footnote": "AKASH DEEP BOTH TIMES · LINE AND LENGTH AS RECORDED"
+   }
+  },
+  {
+   "vo": "Now look where the edges went. A keeper. Two slips. And a third slip who, on the day, was an empty chair. Five edges, through or past the cordon.",
+   "scene": {
+    "type": "cordon",
+    "head": {
+     "t": "THE EMPTY CHAIR",
+     "sub": "WHERE THE FIVE EDGES WENT · ILLUSTRATIVE"
+    },
+    "empty": "THIRD SLIP: EMPTY",
+    "edges": [
+     {
+      "lab": "27.3 · LATHAM",
+      "ang": 28.1,
+      "len": 1.0
+     },
+     {
+      "lab": "44.2 · BLUNDELL",
+      "ang": 17.3,
+      "len": 0.95
+     },
+     {
+      "lab": "58.6 · MITCHELL",
+      "ang": 21.4,
+      "len": 0.9
+     },
+     {
+      "lab": "61.5 · MITCHELL",
+      "ang": 23.5,
+      "len": 0.97
+     },
+     {
+      "lab": "73.4 · PHILLIPS",
+      "ang": 15.6,
+      "len": 0.93
+     }
+    ],
+    "foot": "POSITIONS ARE TYPICAL, NOT THE ACTUAL FIELD · EDGE DIRECTIONS FROM THE DAY'S WAGON DATA"
+   }
+  },
+  {
+   "vo": "Twenty runs, eight per cent of the day. In fairness, a third slip means one fewer fielder somewhere else, and we can't see the plan.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "WHAT IT COST",
+     "sub": "THE CORDON AND THE DAY"
+    },
+    "tiles": [
+     {
+      "v": "20 / 246",
+      "l": "RUNS FROM THE FIVE EDGES / THE DAY'S TOTAL",
+      "c": "red"
+     },
+     {
+      "v": "112",
+      "l": "BALLS NOT IN CONTROL (22%)",
+      "c": "ink"
+     },
+     {
+      "v": "1 IN 22",
+      "l": "FALSE SHOTS THAT BECAME A WICKET",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India set one trap, and it worked. वॉशिंगटन सुंदर: drift, dip, a backward short leg waiting. Daryl Mitchell had worked five of his ten balls from him to midwicket or leg.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE TRAP",
+     "sub": "MITCHELL C JUREL B SUNDAR · 64.4"
+    },
+    "items": [
+     {
+      "h": "1 · DRIFT AND DIP",
+      "d": "Sundar tossed it up, full, outside off",
+      "c": "gold",
+      "cue": "drift"
+     },
+     {
+      "h": "2 · BACKWARD SHORT LEG",
+      "d": "a catcher set for the back-foot clip",
+      "cue": "backward"
+     },
+     {
+      "h": "3 · FIVE OF TEN TO LEG",
+      "d": "Mitchell worked half his balls from Sundar that way",
+      "c": "gold",
+      "cue": "worked"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Then one turned and bounced. ध्रुव जुरेल, at backward short leg, dived and took it. A fielder in that spot, a bowler who dips it, a batter who goes back: that is a plan, and it worked.",
+   "scene": {
+    "type": "photocard",
+    "kicker": "THE CATCH · OVER 64.4",
+    "title": "Taken.",
+    "img": "data/licensed/in/nz2_jurel_catch.webp",
+    "crop_short": [
+     0,
+     0,
+     1280,
+     852
+    ],
+    "tag": "MITCHELL C JUREL B SUNDAR",
+    "name": "DHRUV JUREL",
+    "mono": "BACKWARD SHORT LEG",
+    "caption": "Turn, bounce, and a fielder waiting: the trap worked",
+    "chip": "184/5",
+    "chip_sub": "NEW ZEALAND'S FIFTH WICKET"
+   }
+  },
+  {
+   "vo": "The catch that went down was at second slip, in the fourteenth over. India reviewed once and lost it. New Zealand reviewed twice, and one stuck.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "THE LUCK",
+     "sub": "CHANCES AND REVIEWS"
+    },
+    "items": [
+     {
+      "h": "14.1 · CATCH DROPPED",
+      "d": "second slip, off Akash Deep",
+      "c": "gold",
+      "cue": "catch"
+     },
+     {
+      "h": "INDIA: 1 REVIEW, LOST",
+      "d": "Blundell lbw, 47.5",
+      "cue": "india"
+     },
+     {
+      "h": "NZ: 2 REVIEWS, 1 STUCK",
+      "d": "Latham upheld 0.5 · Conway failed 25.6",
+      "c": "gold",
+      "cue": "zealand"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "At Hagley, first innings after eighty-five overs have read two thirty-two to four thirty-nine. New Zealand's two forty-six for five is the second slowest of seven.",
+   "scene": {
+    "type": "bars",
+    "head": {
+     "t": "HAGLEY, AFTER 85 OVERS",
+     "sub": "FIRST-INNINGS SCORE · MEN'S TESTS IN OUR ARCHIVE"
+    },
+    "max": 450,
+    "dec": 0,
+    "items": [
+     {
+      "label": "2014 NZ · 439/8",
+      "value": 439,
+      "color": "ink"
+     },
+     {
+      "label": "2023 SL · 336/8",
+      "value": 336,
+      "color": "ink"
+     },
+     {
+      "label": "2022 NZ · 332/1",
+      "value": 332,
+      "color": "ink"
+     },
+     {
+      "label": "2024 NZ · 325/9",
+      "value": 325,
+      "color": "ink"
+     },
+     {
+      "label": "2018 ENG · 278/8",
+      "value": 278,
+      "color": "ink"
+     },
+     {
+      "label": "TODAY · NZ 246/5",
+      "value": 246,
+      "color": "red"
+     },
+     {
+      "label": "2022 SA · 232/3",
+      "value": 232,
+      "color": "ink"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Same score as Wellington, two forty-three for five, but there all five wickets fell inside twenty-nine overs. Tomorrow, Blundell and Phillips resume, sixty-two unbroken, with a new ball behind them.",
+   "scene": {
+    "type": "stats",
+    "head": {
+     "t": "TOMORROW",
+     "sub": "NZ V IND · 2ND TEST · DAY 2"
+    },
+    "tiles": [
+     {
+      "v": "243/5",
+      "l": "TEST 1, DAY 1: ALL FIVE WICKETS INSIDE 29 OVERS",
+      "c": "ink"
+     },
+     {
+      "v": "246/5",
+      "l": "TEST 2, DAY 1: THE FIRST WICKET AT 25.6",
+      "c": "red"
+     },
+     {
+      "v": "62*",
+      "l": "BLUNDELL AND PHILLIPS, UNBROKEN",
+      "c": "gold"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "India bowled well enough to win the day. The empty chair, and the full ball, had other ideas.",
+   "scene": {
+    "type": "statement",
+    "kicker": "THE VERDICT",
+    "lines": [
+     {
+      "t": "BOWLED WELL ENOUGH"
+     },
+     {
+      "t": "TO WIN THE DAY.",
+      "c": "gold"
+     }
+    ],
+    "sub": "The empty chair, and the full ball, had other ideas."
+   }
+  },
+  {
+   "vo": "Should India add a third slip? Comment one, yes. Two, no. Three, it's the full ball.",
+   "scene": {
+    "type": "list",
+    "head": {
+     "t": "YOUR CALL",
+     "sub": "SHOULD INDIA ADD A THIRD SLIP? COMMENT 1, 2 OR 3"
+    },
+    "items": [
+     {
+      "h": "1 · YES",
+      "d": "a third slip",
+      "c": "gold",
+      "cue": "one"
+     },
+     {
+      "h": "2 · NO",
+      "d": "keep the field",
+      "cue": "two"
+     },
+     {
+      "h": "3 · THE FULL BALL",
+      "d": "fix the length first",
+      "cue": "three"
+     }
+    ]
+   }
+  },
+  {
+   "vo": "Subscribe, and we'll break down Day two the same way.",
+   "scene": {
+    "type": "cta",
+    "lines": [
+     {
+      "t": "WANT THE FULL"
+     },
+     {
+      "t": "BREAKDOWN?",
+      "c": "gold"
+     }
+    ],
+    "yt": {
+     "label": "THE THIRD MAN",
+     "handle": "@thethirdman_angle",
+     "sub": "SUBSCRIBE · INSTAGRAM @thethirdman.angle",
+     "bio": null
+    }
+   }
+  }
+ ],
+ "yt": {
+  "short": {
+   "title": "The Third Slip That Wasn't There | India vs New Zealand 2nd Test Day 1 #Shorts",
+   "description": "India vs New Zealand, 2nd Test at Hagley Oval, Day 1 analysis: five outside edges for four past or through the slips (20 runs, 8% of New Zealand's 246 for 5), the empty third slip, Gurnoor Brar's debut (19-4-52-1, first Test wicket Conway lbw), the Washington Sundar and Dhruv Jurel backward-short-leg trap that dismissed Daryl Mitchell, the three wickets for no runs in overs 41 to 44, and why India's full balls cost 4.61 an over against 1.47 for good length. Hagley Oval history: after 85 overs of a first innings, New Zealand's 246 for 5 is the second slowest of seven in our archive. Comment 1 yes, 2 no, 3 the full ball: should India add a third slip?\n\n#INDvNZ #IndiaVsNewZealand #2ndTest #Shorts",
+   "tags": [
+    "India vs New Zealand",
+    "India vs New Zealand 2nd Test",
+    "NZ vs IND 2nd Test Day 1",
+    "Hagley Oval",
+    "Gurnoor Brar",
+    "Dhruv Jurel",
+    "Washington Sundar",
+    "Akash Deep",
+    "Jasprit Bumrah",
+    "cricket analysis",
+    "The Third Man"
+   ]
+  }
+ },
+ "provenance_required": true
+}
