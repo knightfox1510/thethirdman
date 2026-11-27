@@ -505,6 +505,7 @@
   "uploaded": "2026-11-27T11:28:59+00:00",
   "privacy": "private",
   "publish_at": null,
-  "captions": true
+  "captions": true,
+  "thumbnail": true
  }
 ]
