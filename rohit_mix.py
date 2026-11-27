@@ -6,7 +6,7 @@ D = "out/rohit_vo"; durs = json.load(open(f"{D}/durs.json")); OUT = "deliver/roh
 st = [sum(durs[:i]) for i in range(len(durs))]; tot = sum(durs); ev = []
 for i, t in enumerate(st): ev.append((t + .02, "whoosh", 1.0))
 ev += [(st[1] + .2, "crowd", 1.0), (st[1] + 3.5, "crowd", .8), (st[5] + .3, "stamp", 1.0), (st[6] + .3, "stamp", 1.0), (st[11] + .3, "crowd", 1.2), (st[11] + .5, "stamp", 1.0), (st[0] + .15, "crowd", .8)]
-json.dump(ev, open(f"{D}/ev.json", "w")); subprocess.run(["python3", "sfx.py", f"{D}/ev.json", str(tot), f"{D}/sfx.wav"], check=True); subprocess.run(["python3", "music.py", str(tot), f"{D}/music.wav"], check=True)
+json.dump(ev, open(f"{D}/ev.json", "w")); subprocess.run(["python3", "sfx.py", f"{D}/ev.json", str(tot), f"{D}/sfx.wav"], check=True); subprocess.run(["python3", "rohit_music.py", f"{D}/durs.json", f"{D}/music.wav"], check=True)
 ins = []; fl = []
 for i in range(12): ins += ["-i", f"{D}/s{i}.mp3"]
 ins += ["-i", f"{D}/sfx.wav", "-i", f"{D}/music.wav"]
