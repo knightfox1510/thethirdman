@@ -55,7 +55,7 @@ short = [
     {"vo": "Twenty runs, eight per cent of the day. In fairness, a third slip means one fewer fielder somewhere else, and we can't see the plan.", "scene": TWENTY},
     {"vo": "India set one trap, and it worked. Washington Sundar: drift, dip, a backward short leg waiting. Daryl Mitchell had worked five of his ten balls from him to midwicket or leg.", "scene": TRAP},
     {"vo": "Then one turned and bounced. Dhruv Jurel, at backward short leg, dived and took it. A fielder in that spot, a bowler who dips it, a batter who goes back: that is a plan, and it worked.", "scene": CATCH},
-    {"vo": "The catch that went down was at second slip, in the fourteenth over. India reviewed once and lost it. New Zealand reviewed twice, and one stuck.", "scene": LUCK},
+    {"vo": "The catch that went down was at second slip, in the fourteenth over. India reviewed once and lost it. New Zealand reviewed twice, and got one right.", "scene": LUCK},
     {"vo": "At Hagley, first innings after eighty-five overs have read two thirty-two to four thirty-nine. New Zealand's two forty-six for five is the second slowest of seven.", "scene": HAG},
     {"vo": "Same score as Wellington, two forty-three for five, but there all five wickets fell inside twenty-nine overs. Tomorrow, Blundell and Phillips resume, sixty-two unbroken, with a new ball behind them.", "scene": TOM},
     {"vo": "India bowled well enough to win the day. The empty chair, and the full ball, had other ideas.", "scene": VERD},
