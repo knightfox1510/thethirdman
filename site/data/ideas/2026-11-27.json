@@ -1,0 +1,136 @@
+{
+ "date": "2026-11-27",
+ "by": "Daily ideas task",
+ "news": [
+  {
+   "title": "2nd Test, Hagley Oval: India won the toss and bowled on a green pitch; Gurnoor Brar debuts in place of Prasidh Krishna, NZ unchanged",
+   "url": "https://abcnews.com/Sports/wireStory/india-wins-toss-bowls-2nd-test-new-zealand-138472871",
+   "note": "Series decider (0-0). The Day 1 replay needs a Cricinfo + Cricbuzz capture at stumps. India XI: Jaiswal, Rahul, Padikkal, Gill (c), Pant, Jurel, Washington, Kamboj, Akash Deep, Bumrah, Brar"
+  },
+  {
+   "title": "Day 1: Latham and Conway put on 77; Brar's first Test wicket (Conway lbw for 31) came off the last ball before lunch; NZ 77/1 at lunch, 81/1 soon after",
+   "url": "https://www.outlookindia.com/sports/cricket/india-vs-new-zealand-2nd-test-day-1-live-score-ind-vs-nz-scorecard-latest-updates-highlights",
+   "note": "Rahul dropped Latham at second slip off Akash Deep in his 30s. The hook is the bowl-first gamble on a green top. Stumps score not yet confirmed at the time of writing"
+  },
+  {
+   "title": "Nation Press: Brar's debut strike leaves NZ 77/1 at lunch",
+   "url": "https://www.nationpress.com/sports/debutant-brar-strikes-as-nz-reach-771-at-lunch",
+   "note": "Second source for the lunch score"
+  },
+  {
+   "title": "AP: Bumrah dismissed Latham in the first over of both innings in Wellington; NZ 3rd and India 4th in the WTC",
+   "url": "https://abcnews.com/Sports/wireStory/india-wins-toss-bowls-2nd-test-new-zealand-138472871",
+   "note": "Good Bumrah vs Latham hook. This time Latham survived the new ball"
+  },
+  {
+   "title": "Mumbai Indians announce their IPL 2027 captain today (27 Nov) at 5:45 pm IST; Rohit Sharma is widely reported to return",
+   "url": "https://khelnow.com/cricket/mumbai-indians-reveal-date-time-captaincy-announcement-ipl-2027-202611",
+   "note": "TIME-CRITICAL: the prepared 'Mumbai cha Raja' Short is on Hold in the tracker. Release it within an hour of the announcement if Rohit is named"
+  },
+  {
+   "title": "IANS: MI captain announced Friday evening, Rohit likely; Tilak Varma talked of as deputy",
+   "url": "https://ianslive.in/mumbai-indians-to-announce-captain-for-ipl-2027-season-on-friday-rohit-likely-to-return--20261126183736",
+   "note": "Second source. Hardik Pandya was traded to PBKS for Arshdeep. MI finished 9th in 2026"
+  },
+  {
+   "title": "Australia v England 3rd T20I at the Gabba today (series 1-1)",
+   "url": "https://particle.news/story/third-t20-at-the-gabba-follows-1-1-split-between-australia-and-england",
+   "note": "Result not confirmed at the time of writing. Background only"
+  },
+  {
+   "title": "IPL 2027 auction confirmed for 16 Dec in Goa; franchise shortlists are due 1 Dec",
+   "url": "https://www.oneindia.com/sports/cricket/ipl-2027-auction-date-time-and-venue-confirmed-goa-to-host-bidding-event-on-16-december-8262989.html",
+   "note": "The auction content window opens next week"
+  }
+ ],
+ "ideas": [
+  {
+   "title": "India vs New Zealand - 2nd Test Day 1 Analysis | Bowl First on a Green Top: Did It Pay?",
+   "format": "replay",
+   "why": "India chose to bowl, debuted Brar and dropped Latham early. Break down the day's lengths and the false-shot rate session by session, and ask whether the gamble worked.",
+   "timing": "By noon IST on 28 Nov (capture at stumps tonight)",
+   "data": "Cricinfo + Cricbuzz match capture (cricinfo_import.py); official scorecard for the headline numbers",
+   "priority": "High"
+  },
+  {
+   "title": "Rohit Sharma Is MI Captain Again: Five Titles in Numbers | Data Story #Shorts",
+   "format": "news",
+   "why": "MI name their captain at 5:45 pm IST today. If it is Rohit, publish the prepared 'Mumbai cha Raja' cut right away, with his MI captaincy record (wins, titles, win %) against Hardik's two seasons.",
+   "timing": "Today within 1 hour of the 17:45 IST announcement; hold if someone else is named",
+   "data": "Sportmonks IPL ball-by-ball 2013-2026 + the official IPL record (two sources via dataops/verify.py)",
+   "priority": "High"
+  },
+  {
+   "title": "Flip: Rohit vs Hardik as MI Captain",
+   "format": "flip",
+   "why": "Benchmark flip: win %, playoff runs and death-overs economy under each captain, one card each.",
+   "timing": "Today or tomorrow, riding the announcement",
+   "data": "Sportmonks IPL 2013-2026; IPL official results for the win counts",
+   "priority": "High"
+  },
+  {
+   "title": "Gurnoor Brar: From Uncapped to Series Decider | Rising Star #Shorts",
+   "format": "rising",
+   "why": "Uncapped seamer picked over Prasidh for the decider, took his first Test wicket off the last ball before lunch. Trading-card format: first-class record, build and bounce, and how he made the XI.",
+   "timing": "Within 24 h, while the debut is news (check his height and FC numbers on Cricinfo first)",
+   "data": "Cricinfo player page + BCCI domestic records (Tier A); match capture for his debut spell",
+   "priority": "High"
+  },
+  {
+   "title": "Bumrah vs Latham: First Over, Both Innings | Stat Check",
+   "format": "statcheck",
+   "why": "AP: Bumrah got Latham in the first over of both innings in Wellington. Count how often Bumrah strikes in his first over in Tests, and how Latham has fared against him.",
+   "timing": "Before NZ's second innings (days 3-4)",
+   "data": "Cricinfo ball-by-ball (Tests are not on Sportmonks); match captures for this series; Cricsheet as a labelled 'in our archive' baseline",
+   "priority": "Medium"
+  },
+  {
+   "title": "Does Winning the Toss and Bowling First Win Tests in New Zealand? | Myth or Data",
+   "format": "myth",
+   "why": "Gill bowled first. Test the belief that bowling first is the play in NZ, at Hagley and across NZ venues, with the result split by toss decision.",
+   "timing": "Days 2-3 of the Test, while the toss call is still debated",
+   "data": "Cricinfo records (toss/result by ground, Tier A) cross-checked with Cricsheet men's Tests (filter gender == male) as a labelled sample",
+   "priority": "Medium"
+  },
+  {
+   "title": "Dropped at Slip: What a Drop Costs in Test Cricket | The Lab",
+   "format": "lab",
+   "why": "Rahul's second-slip drop of Latham, with ball-tracking showing it would have hit. Model the average runs added after a dropped chance, using Cricinfo control/false-shot data from our captures.",
+   "timing": "After the Test (quiet day filler)",
+   "data": "Our Cricinfo captures (control / dropped notes, verified); single-source numbers labelled 'in our archive'",
+   "priority": "Medium"
+  },
+  {
+   "title": "IPL 2027 Auction Shortlists: Who Each Team Must Chase | Stat Check",
+   "format": "statcheck",
+   "why": "Shortlists are due 1 Dec. Rank the gaps in each squad (death bowling, finishers, spin) against the purse left.",
+   "timing": "Post 30 Nov-1 Dec, ahead of the shortlist deadline",
+   "data": "Sportmonks IPL 2026 role metrics + official retention lists and purses",
+   "priority": "Medium"
+  },
+  {
+   "title": "India vs Sri Lanka - ODI Series Preview | <hook>",
+   "format": "tactics",
+   "why": "India's white-ball return at Vizag on 13 Dec. Start squad and venue research now so the preview lands 11-12 Dec.",
+   "timing": "Plan now; publish 11-12 Dec",
+   "data": "Official squads (BCCI/SLC), Cricinfo venue records for Vizag",
+   "priority": "Low"
+  },
+  {
+   "title": "What Is the Follow-On, and Why Don't Captains Enforce It Any More? | Did You Know",
+   "format": "didyouknow",
+   "why": "A decider on a seaming pitch could bring the follow-on into play. Law 14 (with its number checked in the 2026 MCC edition), the 200-run margin in Tests, and the twist: why modern captains rarely enforce it.",
+   "timing": "Any day this week; topical if the follow-on comes up in Christchurch",
+   "data": "MCC Laws (2026 edition) + ICC Test Playing Conditions clause 14 (two sources)",
+   "priority": "Low"
+  },
+  {
+   "title": "What If India Had Batted First at Hagley? | What If",
+   "format": "whatif",
+   "why": "A counterfactual on the toss call, built on the result-by-toss model from the myth episode.",
+   "timing": "After the Test ends (1-2 Dec), only if the toss decision proved pivotal",
+   "data": "Cricinfo records by ground and toss; our model, labelled illustrative",
+   "priority": "Low"
+  }
+ ]
+}
