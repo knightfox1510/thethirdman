@@ -56,6 +56,12 @@ Overs-maidens-runs-wickets are the official figures (checked). "Not in control" 
 - **Reviews and lbws:** NZ reviewed twice (0.5, Latham, upheld: the ball missed leg stump; 25.6, Conway, struck down), India once (47.5, Blundell lbw, struck down). India did not review a big lbw against Latham at 14.2; further lbw appeals were turned down at 22.5, 29.3 (Latham), 33.3 (Nicholls: "height is a problem"), 63.1 and 79.5 (Blundell: high or down leg).
 - **False shots to wickets:** 112 balls not in control, 5 wickets, all five on not-in-control balls. By bowler: Akash Deep 34 for 2, Gurnoor Brar 25 for 1, Bumrah 26 for 0, Anshul Kamboj 18 for 1, Sundar 9 for 1.
 
+
+### 5b. The third slip that wasn't there (owner's observation, checked against the data)
+- **Five outside edges ran for four through or past the slip cordon: 27.3 (Latham's fifty, through second slip's hands), 44.2 (Blundell), 58.6 (Mitchell), 61.5 (Mitchell), 73.4 (Phillips). 20 runs, 8% of the day's 246.** Four of the five landed in wagon zone 8 (the third-man side, past the cordon); all five were flagged "not in control" by Cricinfo.
+- **The commentary says it outright twice:** at 58.6 ("only two slips") and at 61.5 ("no third slip: it would have been gobbled up"). Several other edges fell near the cordon without a boundary: 10.4 (past second slip, a single), 19.4 (a steer to gully off a no-ball, four), 82.5 and 83.1 (to and just short of gully), 45.5 (inside edge to gully).
+- **Caveat:** a third slip means one fewer fielder elsewhere (the day also had 12 fours through cover, mid-off and midwicket). We do not know India's plan; the data shows the cost of the gap, not whether it was the wrong trade.
+
 ## 6. The five wickets
 | Over | Score | Bowler | Batter | How | Ball |
 |---|---|---|---|---|---|
