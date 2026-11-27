@@ -1042,6 +1042,26 @@
    "status": "Ready",
    "link": "",
    "notes": "Built 25 Nov (Hindi, OmniVoice draft narration); on Drive"
+  },
+  {
+   "id": 7,
+   "date": "2026-11-27",
+   "platform": "Instagram Reel",
+   "series": "02 The Replay Room",
+   "content": "The Third Slip That Wasn't There: India vs New Zealand 2nd Test Day 1",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 27 Nov (OmniVoice draft narration); on Drive"
+  },
+  {
+   "id": 8,
+   "date": "2026-11-27",
+   "platform": "YouTube Short",
+   "series": "02 The Replay Room",
+   "content": "The Third Slip That Wasn't There: India vs New Zealand 2nd Test Day 1",
+   "status": "Ready",
+   "link": "",
+   "notes": "Built 27 Nov (OmniVoice draft narration); on Drive"
   }
  ]
 }

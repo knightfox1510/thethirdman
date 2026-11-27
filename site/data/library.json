@@ -856,6 +856,25 @@
    ]
   },
   {
+   "slug": "nz_ind_2nd_test_day1",
+   "title": "The Third Slip That Wasn't There | India vs New Zealand 2nd Test Day 1",
+   "format": "replay",
+   "series": "The Replay Room",
+   "ep": "11",
+   "long": null,
+   "short": "2:25",
+   "status": "Posted",
+   "link": "https://youtu.be/kDMPpYDYlns",
+   "planned": "2026-11-14",
+   "recheck": null,
+   "sources": [
+    "The day (NZ v IND, 2nd Test, Hagley Oval, Christchurch, 27 November 2026): the channel owner's ESPNcricinfo ball-by-ball capture of match 1539443 (517 deliveries: line, length, shot, control, wagon zone; the day's commentary text for speeds, chances and reviews). Every bowler's figures and every batter's runs reproduce the scorecard.",
+    "The edges: the five outside-edge fours (27.3 Latham, 44.2 Blundell, 58.6 and 61.5 Mitchell, 73.4 Phillips) are the balls Cricinfo flags 'not in control' that went for four past or through the slips; the commentary at 58.6 ('only two slips') and 61.5 ('no third slip') says the cordon was two slips. Cricinfo's scoring has Latham on strike for the catch dropped at 14.1 while its text names Conway: the video does not name the batter. Photographs supplied by the channel owner; Gurnoor Brar's debut and Dhruv Jurel's catch identified by the owner.",
+    "Ground history: Cricsheet men's Tests at Hagley Oval, 2014 to 2025 (cricsheet.org, ODC-BY): 15 Tests in our archive (partial coverage): first innings after 85 overs, scoring rate. Test 1 Day 1 (Basin Reserve, NZ 243/5): the channel's earlier Cricbuzz match capture. Analysis: analysis/nz2_day1.py, analysis/nz2_ground.py.",
+    "The cordon figure and the pitch map are our own illustrations: fielder positions are typical, not the actual field."
+   ]
+  },
+  {
    "slug": "nz_test_preview",
    "title": "Can India Win a Test Series in New Zealand?",
    "format": "tactics",
