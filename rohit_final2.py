@@ -79,19 +79,19 @@ def f3(p=1.0):
         d.line([(cx + r0 * math.cos(a), cy + r0 * math.sin(a)), (cx + L * math.cos(a), cy + L * math.sin(a))], fill=col + (255,), width=34); T.txt(c, str(y)[2:], (cx + (r0 - 38) * math.cos(a), cy + (r0 - 38) * math.sin(a)), BEB(26), MUTED, "mm", 1)
         if (MI[y]["title"] or y == 2009) and eg > .97: T.txt(c, "★", (cx + (L + 30) * math.cos(a), cy + (L + 30) * math.sin(a)), INT(34), GOLD, "mm")
     d.ellipse((cx - 190, cy - 190, cx + 190, cy + 190), fill=(6, 20, 60, 255)); face_c(c, cx, cy, 170, IMG("title_tile_ML"), (60, 10, 300, 250))
-    T.txt(c, "7,046 RUNS THROUGH 2025", (W / 2, 1400), BEB(86), GOLD, "mm", 5); T.txt(c, "SECOND ONLY TO KOHLI · YELLOW DECCAN, BLUE MUMBAI · ★ TITLE", (W / 2, 1480), INT(22), MUTED, "mm", 3); strip(c, 1590); return _save(c, "G3_ring.png")
+    T.txt(c, "7,329 IPL RUNS", (W / 2, 1400), BEB(86), GOLD, "mm", 5); T.txt(c, "IN OUR ARCHIVE, 2008-2026 · YELLOW DECCAN, BLUE MUMBAI · ★ TITLE", (W / 2, 1480), INT(22), MUTED, "mm", 3); strip(c, 1590); return _save(c, "G3_ring.png")
 
 
 def f4():                                                           # from Deccan to Mumbai
     c = bgc((20, 18, 6), (4, 10, 30)); pill(c, "HOW IT STARTED", (60, 200)); T.txt(c, "DECCAN CHARGERS · 2008 TO 2010", (W / 2, 330), BEB(60), DCY, "mm", 6)
     put(c, IMG("deccan_left_confetti"), (40, 390, 520, 900), 20, DCY, 5, 0.5, 0.3); put(c, IMG("deccan_right_trophy"), (560, 390, 1040, 900), 20, DCY, 5, 0.3, 0.3); T.txt(c, "2009: A TITLE WITH DECCAN", (W / 2, 975), BEB(50), WHITE, "mm", 5)
-    ImageDraw.Draw(c).polygon([(500, 1040), (580, 1040), (540, 1100)], fill=GOLD); banner(c, "2011 · MI WIN THE BID", 1130, 70); T.txt(c, "$2 MILLION · AGAINST PUNJAB AND DECCAN", (W / 2, 1310), BEB(56), WHITE, "mm", 5)
+    ImageDraw.Draw(c).polygon([(500, 1040), (580, 1040), (540, 1100)], fill=GOLD); banner(c, "2011 · HOME TO MUMBAI", 1130, 70); T.txt(c, "A NEW CITY. A NEW SHIRT.", (W / 2, 1310), BEB(56), WHITE, "mm", 5)
     T.txt(c, "FROM THEN ON, HE NEVER LEFT", (W / 2, 1420), BEB(70), GOLD, "mm", 8); return _save(c, "G4_deccan_to_mumbai.png")
 
 
 def f5(p=1.0):                                                           # ribbon: 2013, with Ricky Ponting
     c = bgc((6, 12, 30), (14, 24, 52)); d = ImageDraw.Draw(c, "RGBA"); pill(c, "2013 · THE CAPTAINCY BEGINS", (60, 200)); put(c, IMG("rohit_with_trophy_2013"), (60, 310, 1020, 820), 20, GOLD, 5, 0.5, 0.35)
-    T.txt(c, "WITH RICKY PONTING · 2013 CHAMPIONS", (W / 2, 870), BEB(46), WHITE, "mm", 5); T.txt(c, str(int(538 * ease(p * 1.5))), (W / 2, 1060), BEB(280), GOLD, "mm", 4); T.txt(c, "RUNS IN HIS FIRST SEASON AS CAPTAIN · MI 13-6 · TITLE", (W / 2, 1230), BEB(42), WHITE, "mm", 4)
+    T.txt(c, "WITH RICKY PONTING · 2013 CHAMPIONS", (W / 2, 870), BEB(46), WHITE, "mm", 5); T.txt(c, "CHAMPIONS", (W / 2, 1060), BEB(230), GOLD, "mm", 4); T.txt(c, "FIRST SEASON AS CAPTAIN · FIRST TITLE AS CAPTAIN", (W / 2, 1230), BEB(42), WHITE, "mm", 4)
     y0 = 1300; d.rounded_rectangle((20, y0 - 20, W - 20, y0 + 270), 24, fill=(255, 255, 255, 14))
     for i, y in enumerate(YRS):
         x = 60 + i * 52; col = DCY if y <= 2010 else MIB; h = 190 * S[y]["runs"] / 540 * ease(p * 1.5 - i * 0.03); hot = y == 2013
@@ -117,7 +117,7 @@ def f8(p=1.0):                                                           # face-
     for y in range(960): t = y / 960; d.line([(0, y), (W, y)], fill=(0, int(60 + 30 * (1 - t)), int(190 - 50 * t)))
     for y in range(960, H): t = (y - 960) / 960; d.line([(0, y), (W, y)], fill=(int(210 - 50 * t), int(45 - 20 * t), int(55 - 20 * t)))
     d.polygon([(0, 905), (W, 800), (W, 1010), (0, 1115)], fill=NAVY); pill(c, "THE RECORD BEHIND THE RETURN", (36, 200), 32)
-    face_c(c, 800, 560, 230, IMG("rohit_arms_crossed_mi"), (120, 20, 470, 370), (255, 255, 255)); put(c, IMG("hardik_mi_hand_on_head"), (40, 1130, 480, 1590), 22, (255, 255, 255), 5, 0.36, 0.5)
+    face_c(c, 800, 560, 230, IMG("rohit_arms_crossed_mi"), (120, 20, 470, 370), (255, 255, 255)); put(c, IMG("hardik_mi"), (40, 1130, 480, 1590), 22, (255, 255, 255), 5, 0.36, 0.5)
     T.txt(c, "2014 TO 2023", (40, 300), BEB(60), (200, 225, 255), "lt", 6); score(c, (40, 370), str(int(a["W"] * ease(p * 1.6))), str(int(a["L"] * ease(p * 1.6))), 210, "l"); T.txt(c, f'{a["win_pct"]:.0f}% / PLAYOFFS {a["playoffs"]} OF 10', (44, 600), BEB(54), GOLD, "lt", 4)
     T.txt(c, "2024 TO 2026", (1040, 1130), BEB(60), (255, 215, 215), "rt", 6); score(c, (1040, 1200), str(int(b["W"] * ease(p * 1.6 - .15))), str(int(b["L"] * ease(p * 1.6 - .15))), 210, "r"); T.txt(c, f'{b["win_pct"]:.0f}% / PLAYOFFS {b["playoffs"]} OF 3', (1036, 1430), BEB(54), GOLD, "rt", 4)
     strip(c, 1650); return _save(c, "G8_faceoff.png")
@@ -130,7 +130,7 @@ def card_base():
 def f9():
     c, d, x0, y0, x1, y1 = card_base(); put(c, IMG("rohit_arms_crossed_mi"), (x0 + 50, y0 + 60, x1 - 50, y0 + 790), 30, None, 0, 0.5, 0.2)
     deva(c, "मुंबईचा राजा", (540, y1 - 135), 100, GOLD); T.txt(c, "ROHIT SHARMA", (540, y1 - 50), BEB(70), WHITE, "mm", 6)
-    for i, (v, l) in enumerate((("7,046", "RUNS"), ("303", "SIXES"), ("6", "TITLES"))): T.txt(c, v, (x0 + 160 + i * 240, y1 - 250), BEB(70), GOLD, "mm", 2); T.txt(c, l, (x0 + 160 + i * 240, y1 - 205), INT(20), MUTED, "mm", 4)
+    for i, (v, l) in enumerate((("7,329", "RUNS"), ("324", "SIXES"), ("6", "TITLES"))): T.txt(c, v, (x0 + 160 + i * 240, y1 - 250), BEB(70), GOLD, "mm", 2); T.txt(c, l, (x0 + 160 + i * 240, y1 - 205), INT(20), MUTED, "mm", 4)
     strip(c, 1580); return _save(c, "G9_card_front.png")
 
 

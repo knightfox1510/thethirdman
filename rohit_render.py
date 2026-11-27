@@ -1,7 +1,7 @@
 """Silent render of the 'Mumbai cha Raja' Rohit Sharma video from the approved G frames (rohit_final2.py): 1080x1920, 30 fps, NO audio stream (the voice-over and music come later, from ElevenLabs, only if MI announce).
 Motion: every frame builds on in staggered bands over a blurred ghost of itself, slow zoom, a flash and quick crossfade at each cut; the ring, the 2013 bars and the 538, the face-off scores and the chant's waveform animate for real.
 Output: deliver/rohit_mumbai_cha_raja/Channel_Ep03_Mumbai_cha_Raja_Short_9x16_IG.mp4 (+ cover from the opening frame, no episode number on screen).   python3 rohit_render.py [--preview]"""
-import os, subprocess, sys, math
+import os, subprocess, sys, math, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from PIL import Image, ImageFilter, ImageEnhance
@@ -13,6 +13,8 @@ ease = R.ease
 # (name, seconds, kind, function): 'band' = static still built on band by band; 'live' = the function itself animates (p = progress, t = seconds)
 SCENES = [("cold open", 7, "band", R.f1), ("chant", 7, "live_t", R.f2), ("ring", 9, "live_p", R.f3), ("deccan to mumbai", 9, "band", R.f4), ("2013 ribbon", 9, "live_p", R.f5), ("six titles", 9, "band", R.f6),
           ("the reign", 8, "band", R.f7), ("face-off", 9, "live_p", R.f8), ("card front", 7, "band", R.f9), ("card back", 8, "band", R.f10), ("records", 9, "band", R.f11), ("close", 8, "band", R.f12)]
+if os.path.exists(f"{ROOT}/out/rohit_vo/durs.json") and not PREVIEW:
+    _d = json.load(open(f"{ROOT}/out/rohit_vo/durs.json")); SCENES = [(n, _d[i], k, f) for i, (n, _, k, f) in enumerate(SCENES)]      # scene length follows the voice-over
 if PREVIEW: SCENES = [(n, 2.0, k, f) for n, _, k, f in SCENES]
 
 
