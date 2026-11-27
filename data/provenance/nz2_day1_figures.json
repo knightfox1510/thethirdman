@@ -1,0 +1,2511 @@
+{
+ "day": {
+  "balls": 510,
+  "runs": 246,
+  "wkts": 5,
+  "rr": 2.89,
+  "dot_pct": 78.2,
+  "fours": 26,
+  "ctl2_pct": 22.0,
+  "left_pct": 27.1
+ },
+ "sessions": {
+  "S1": {
+   "balls": 156,
+   "runs": 77,
+   "wkts": 1,
+   "rr": 2.96,
+   "dot_pct": 77.6,
+   "fours": 7,
+   "ctl2_pct": 21.8,
+   "left_pct": 28.8
+  },
+  "S2": {
+   "balls": 144,
+   "runs": 54,
+   "wkts": 3,
+   "rr": 2.25,
+   "dot_pct": 85.4,
+   "fours": 5,
+   "ctl2_pct": 28.5,
+   "left_pct": 31.9
+  },
+  "S3": {
+   "balls": 210,
+   "runs": 115,
+   "wkts": 1,
+   "rr": 3.29,
+   "dot_pct": 73.8,
+   "fours": 14,
+   "ctl2_pct": 17.6,
+   "left_pct": 22.4
+  }
+ },
+ "first10": {
+  "balls": 60,
+  "runs": 26,
+  "wkts": 0,
+  "rr": 2.6,
+  "dot_pct": 80.0,
+  "fours": 1,
+  "ctl2_pct": 20.0,
+  "left_pct": 35.0
+ },
+ "overs11_40": {
+  "balls": 180,
+  "runs": 80,
+  "wkts": 1,
+  "rr": 2.67,
+  "dot_pct": 81.1,
+  "fours": 10,
+  "ctl2_pct": 25.6,
+  "left_pct": 30.0
+ },
+ "collapse_41_44": {
+  "balls": 24,
+  "runs": 4,
+  "wkts": 3,
+  "rr": 1.0,
+  "dot_pct": 91.7,
+  "fours": 0,
+  "ctl2_pct": 20.8,
+  "left_pct": 45.8
+ },
+ "overs45_70": {
+  "balls": 156,
+  "runs": 92,
+  "wkts": 1,
+  "rr": 3.54,
+  "dot_pct": 75.0,
+  "fours": 11,
+  "ctl2_pct": 20.5,
+  "left_pct": 17.3
+ },
+ "last15": {
+  "balls": 90,
+  "runs": 44,
+  "wkts": 0,
+  "rr": 2.93,
+  "dot_pct": 73.3,
+  "fours": 4,
+  "ctl2_pct": 18.9,
+  "left_pct": 27.8
+ },
+ "new_ball_81_85": {
+  "balls": 30,
+  "runs": 9,
+  "wkts": 0,
+  "rr": 1.8,
+  "dot_pct": 83.3,
+  "fours": 0,
+  "ctl2_pct": 26.7,
+  "left_pct": 36.7
+ },
+ "old_ball": {
+  "balls": 480,
+  "runs": 237,
+  "wkts": 5,
+  "rr": 2.96,
+  "dot_pct": 77.9,
+  "fours": 26,
+  "ctl2_pct": 21.7,
+  "left_pct": 26.5
+ },
+ "bowlers": {
+  "A Kamboj": {
+   "balls": 102,
+   "runs": 56,
+   "wkts": 1,
+   "rr": 3.29,
+   "dot_pct": 77.5,
+   "fours": 7,
+   "ctl2_pct": 17.6,
+   "left_pct": 27.5,
+   "overs": 17.0,
+   "maidens": 5,
+   "len_pct": {
+    "GOOD_LENGTH": 43.1,
+    "FULL": 28.4,
+    "SHORT_OF_A_GOOD_LENGTH": 24.5,
+    "SHORT": 2.9,
+    "FULL_TOSS": 1.0
+   },
+   "line_pct": {
+    "OUTSIDE_OFFSTUMP": 54.9,
+    "ON_THE_STUMPS": 32.4,
+    "DOWN_LEG": 9.8,
+    "WIDE_OUTSIDE_OFFSTUMP": 2.9
+   },
+   "kph_avg": 132.1,
+   "kph_n": 15,
+   "kph_max": 136,
+   "full_or_good_pct": 71.6,
+   "short_pct": 27.5
+  },
+  "Akash Deep": {
+   "balls": 126,
+   "runs": 52,
+   "wkts": 2,
+   "rr": 2.48,
+   "dot_pct": 80.2,
+   "fours": 7,
+   "ctl2_pct": 27.0,
+   "left_pct": 29.4,
+   "overs": 21.0,
+   "maidens": 6,
+   "len_pct": {
+    "GOOD_LENGTH": 51.6,
+    "SHORT_OF_A_GOOD_LENGTH": 25.4,
+    "FULL": 21.4,
+    "SHORT": 0.8,
+    "FULL_TOSS": 0.8
+   },
+   "line_pct": {
+    "OUTSIDE_OFFSTUMP": 74.6,
+    "ON_THE_STUMPS": 18.3,
+    "DOWN_LEG": 4.8,
+    "WIDE_OUTSIDE_OFFSTUMP": 2.4
+   },
+   "kph_avg": 137.1,
+   "kph_n": 20,
+   "kph_max": 140,
+   "full_or_good_pct": 73.0,
+   "short_pct": 26.2
+  },
+  "Gurnoor Brar": {
+   "balls": 114,
+   "runs": 52,
+   "wkts": 1,
+   "rr": 2.74,
+   "dot_pct": 80.7,
+   "fours": 6,
+   "ctl2_pct": 21.9,
+   "left_pct": 32.5,
+   "overs": 19.0,
+   "maidens": 4,
+   "len_pct": {
+    "GOOD_LENGTH": 34.2,
+    "SHORT_OF_A_GOOD_LENGTH": 29.8,
+    "FULL": 21.9,
+    "SHORT": 12.3,
+    "YORKER": 1.8
+   },
+   "line_pct": {
+    "OUTSIDE_OFFSTUMP": 69.3,
+    "ON_THE_STUMPS": 21.9,
+    "DOWN_LEG": 7.0,
+    "WIDE_OUTSIDE_OFFSTUMP": 1.8
+   },
+   "kph_avg": 137.7,
+   "kph_n": 36,
+   "kph_max": 142,
+   "full_or_good_pct": 57.9,
+   "short_pct": 42.1
+  },
+  "JJ Bumrah": {
+   "balls": 114,
+   "runs": 37,
+   "wkts": 0,
+   "rr": 1.95,
+   "dot_pct": 84.2,
+   "fours": 2,
+   "ctl2_pct": 22.8,
+   "left_pct": 28.9,
+   "overs": 19.0,
+   "maidens": 4,
+   "len_pct": {
+    "GOOD_LENGTH": 47.4,
+    "FULL": 30.7,
+    "SHORT_OF_A_GOOD_LENGTH": 21.1,
+    "SHORT": 0.9
+   },
+   "line_pct": {
+    "OUTSIDE_OFFSTUMP": 75.4,
+    "ON_THE_STUMPS": 14.0,
+    "WIDE_OUTSIDE_OFFSTUMP": 6.1,
+    "DOWN_LEG": 4.4
+   },
+   "kph_avg": 132.9,
+   "kph_n": 46,
+   "kph_max": 140,
+   "full_or_good_pct": 78.1,
+   "short_pct": 21.9
+  },
+  "Washington Sundar": {
+   "balls": 54,
+   "runs": 36,
+   "wkts": 1,
+   "rr": 4.0,
+   "dot_pct": 64.8,
+   "fours": 4,
+   "ctl2_pct": 16.7,
+   "left_pct": 5.6,
+   "overs": 9.0,
+   "maidens": 1,
+   "len_pct": {
+    "GOOD_LENGTH": 55.6,
+    "FULL": 40.7,
+    "SHORT_OF_A_GOOD_LENGTH": 3.7
+   },
+   "line_pct": {
+    "OUTSIDE_OFFSTUMP": 51.9,
+    "ON_THE_STUMPS": 42.6,
+    "DOWN_LEG": 3.7,
+    "WIDE_OUTSIDE_OFFSTUMP": 1.9
+   },
+   "kph_avg": null,
+   "kph_n": 0,
+   "kph_max": null,
+   "full_or_good_pct": 96.3,
+   "short_pct": 3.7
+  }
+ },
+ "batters": {
+  "DJ Mitchell": {
+   "balls": 71,
+   "runs": 31,
+   "wkts": 1,
+   "rr": 3.55,
+   "dot_pct": 73.2,
+   "fours": 4,
+   "ctl2_pct": 18.3,
+   "left_pct": 18.3,
+   "sr": 43.7,
+   "shots": {
+    "DEFENDED": 31,
+    "LEFT_ALONE": 13,
+    "PUSH": 7,
+    "FLICK": 5,
+    "PULL": 4,
+    "LEG_GLANCE": 3,
+    "ON_DRIVE": 3,
+    "COVER_DRIVE": 2
+   },
+   "attacking_pct": 38.0,
+   "runs_per_attacking": 1.0,
+   "by_len": {
+    "FULL": {
+     "balls": 24,
+     "runs": 12,
+     "ctl2": 2
+    },
+    "GOOD_LENGTH": {
+     "balls": 26,
+     "runs": 5,
+     "ctl2": 5
+    },
+    "SHORT": {
+     "balls": 4,
+     "runs": 2,
+     "ctl2": 2
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 16,
+     "runs": 12,
+     "ctl2": 4
+    },
+    "YORKER": {
+     "balls": 1,
+     "runs": 0,
+     "ctl2": 0
+    }
+   },
+   "zones": {
+    "1": 5,
+    "2": 4,
+    "3": 4,
+    "4": 2,
+    "6": 4,
+    "7": 4,
+    "8": 8
+   }
+  },
+  "DP Conway": {
+   "balls": 79,
+   "runs": 31,
+   "wkts": 1,
+   "rr": 2.35,
+   "dot_pct": 81.0,
+   "fours": 4,
+   "ctl2_pct": 22.8,
+   "left_pct": 31.6,
+   "sr": 39.2,
+   "shots": {
+    "DEFENDED": 31,
+    "LEFT_ALONE": 25,
+    "COVER_DRIVE": 5,
+    "PUSH": 4,
+    "ON_DRIVE": 4,
+    "FLICK": 4,
+    "STEERED": 2,
+    "SQUARE_DRIVE": 2
+   },
+   "attacking_pct": 29.1,
+   "runs_per_attacking": 1.26,
+   "by_len": {
+    "FULL": {
+     "balls": 27,
+     "runs": 26,
+     "ctl2": 5
+    },
+    "GOOD_LENGTH": {
+     "balls": 34,
+     "runs": 4,
+     "ctl2": 7
+    },
+    "SHORT": {
+     "balls": 2,
+     "runs": 0,
+     "ctl2": 0
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 16,
+     "runs": 1,
+     "ctl2": 6
+    }
+   },
+   "zones": {
+    "1": 4,
+    "2": 3,
+    "3": 7,
+    "4": 8,
+    "5": 2,
+    "6": 3,
+    "7": 1,
+    "8": 3
+   }
+  },
+  "GD Phillips": {
+   "balls": 64,
+   "runs": 36,
+   "wkts": 0,
+   "rr": 3.75,
+   "dot_pct": 73.4,
+   "fours": 5,
+   "ctl2_pct": 20.3,
+   "left_pct": 25.0,
+   "sr": 56.2,
+   "shots": {
+    "DEFENDED": 18,
+    "LEFT_ALONE": 16,
+    "PUSH": 7,
+    "FLICK": 6,
+    "CUT_SHOT": 4,
+    "PULL": 3,
+    "DAB": 3,
+    "COVER_DRIVE": 2
+   },
+   "attacking_pct": 46.9,
+   "runs_per_attacking": 1.2,
+   "by_len": {
+    "FULL": {
+     "balls": 14,
+     "runs": 10,
+     "ctl2": 2
+    },
+    "GOOD_LENGTH": {
+     "balls": 33,
+     "runs": 11,
+     "ctl2": 6
+    },
+    "SHORT": {
+     "balls": 4,
+     "runs": 0,
+     "ctl2": 1
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 13,
+     "runs": 15,
+     "ctl2": 4
+    }
+   },
+   "zones": {
+    "1": 4,
+    "2": 5,
+    "3": 7,
+    "4": 2,
+    "6": 9,
+    "7": 5,
+    "8": 4
+   }
+  },
+  "HM Nicholls": {
+   "balls": 46,
+   "runs": 16,
+   "wkts": 1,
+   "rr": 2.09,
+   "dot_pct": 82.6,
+   "fours": 1,
+   "ctl2_pct": 23.9,
+   "left_pct": 34.8,
+   "sr": 34.8,
+   "shots": {
+    "LEFT_ALONE": 16,
+    "DEFENDED": 10,
+    "PUSH": 6,
+    "ON_DRIVE": 5,
+    "FLICK": 3,
+    "CUT_SHOT": 3,
+    "PULL": 2,
+    "COVER_DRIVE": 1
+   },
+   "attacking_pct": 43.5,
+   "runs_per_attacking": 0.7,
+   "by_len": {
+    "FULL": {
+     "balls": 6,
+     "runs": 5,
+     "ctl2": 1
+    },
+    "GOOD_LENGTH": {
+     "balls": 16,
+     "runs": 3,
+     "ctl2": 3
+    },
+    "SHORT": {
+     "balls": 5,
+     "runs": 0,
+     "ctl2": 0
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 19,
+     "runs": 8,
+     "ctl2": 7
+    }
+   },
+   "zones": {
+    "4": 6,
+    "6": 3,
+    "7": 6,
+    "8": 1
+   }
+  },
+  "R Ravindra": {
+   "balls": 9,
+   "runs": 0,
+   "wkts": 1,
+   "rr": 0.0,
+   "dot_pct": 100.0,
+   "fours": 0,
+   "ctl2_pct": 11.1,
+   "left_pct": 55.6,
+   "sr": 0.0,
+   "shots": {
+    "LEFT_ALONE": 5,
+    "DEFENDED": 4
+   },
+   "attacking_pct": 0.0,
+   "runs_per_attacking": 0.0,
+   "by_len": {
+    "FULL": {
+     "balls": 1,
+     "runs": 0,
+     "ctl2": 0
+    },
+    "GOOD_LENGTH": {
+     "balls": 4,
+     "runs": 0,
+     "ctl2": 1
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 4,
+     "runs": 0,
+     "ctl2": 0
+    }
+   },
+   "zones": {}
+  },
+  "TA Blundell": {
+   "balls": 116,
+   "runs": 53,
+   "wkts": 0,
+   "rr": 2.79,
+   "dot_pct": 76.7,
+   "fours": 6,
+   "ctl2_pct": 21.6,
+   "left_pct": 19.8,
+   "sr": 45.7,
+   "shots": {
+    "DEFENDED": 49,
+    "LEFT_ALONE": 23,
+    "FLICK": 11,
+    "PUSH": 8,
+    "CUT_SHOT": 6,
+    "ON_DRIVE": 4,
+    "DAB": 4,
+    "LEG_GLANCE": 3
+   },
+   "attacking_pct": 37.9,
+   "runs_per_attacking": 0.98,
+   "by_len": {
+    "FULL": {
+     "balls": 25,
+     "runs": 10,
+     "ctl2": 5
+    },
+    "FULL_TOSS": {
+     "balls": 2,
+     "runs": 2,
+     "ctl2": 0
+    },
+    "GOOD_LENGTH": {
+     "balls": 63,
+     "runs": 15,
+     "ctl2": 14
+    },
+    "SHORT": {
+     "balls": 1,
+     "runs": 0,
+     "ctl2": 0
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 24,
+     "runs": 26,
+     "ctl2": 6
+    },
+    "YORKER": {
+     "balls": 1,
+     "runs": 0,
+     "ctl2": 0
+    }
+   },
+   "zones": {
+    "1": 7,
+    "2": 7,
+    "3": 6,
+    "4": 5,
+    "6": 10,
+    "7": 9,
+    "8": 9
+   }
+  },
+  "TWM Latham": {
+   "balls": 125,
+   "runs": 59,
+   "wkts": 1,
+   "rr": 3.02,
+   "dot_pct": 80.0,
+   "fours": 6,
+   "ctl2_pct": 24.8,
+   "left_pct": 32.0,
+   "sr": 47.2,
+   "shots": {
+    "LEFT_ALONE": 40,
+    "DEFENDED": 36,
+    "FLICK": 19,
+    "COVER_DRIVE": 11,
+    "ON_DRIVE": 8,
+    "SQUARE_DRIVE": 3,
+    "LEG_GLANCE": 3,
+    "STEERED": 2
+   },
+   "attacking_pct": 39.2,
+   "runs_per_attacking": 1.16,
+   "by_len": {
+    "FULL": {
+     "balls": 41,
+     "runs": 39,
+     "ctl2": 6
+    },
+    "GOOD_LENGTH": {
+     "balls": 56,
+     "runs": 14,
+     "ctl2": 20
+    },
+    "SHORT": {
+     "balls": 3,
+     "runs": 0,
+     "ctl2": 0
+    },
+    "SHORT_OF_A_GOOD_LENGTH": {
+     "balls": 25,
+     "runs": 6,
+     "ctl2": 5
+    }
+   },
+   "zones": {
+    "1": 10,
+    "2": 8,
+    "3": 4,
+    "4": 3,
+    "5": 9,
+    "6": 14,
+    "7": 3,
+    "8": 8
+   }
+  }
+ },
+ "grid": {
+  "DOWN_LEG|FULL": {
+   "balls": 6,
+   "runs": 8,
+   "ctl2": 5,
+   "wkts": 0
+  },
+  "DOWN_LEG|FULL_TOSS": {
+   "balls": 1,
+   "runs": 2,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "DOWN_LEG|GOOD_LENGTH": {
+   "balls": 9,
+   "runs": 3,
+   "ctl2": 5,
+   "wkts": 0
+  },
+  "DOWN_LEG|SHORT": {
+   "balls": 4,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "DOWN_LEG|SHORT_OF_A_GOOD_LENGTH": {
+   "balls": 11,
+   "runs": 10,
+   "ctl2": 6,
+   "wkts": 1
+  },
+  "ON_THE_STUMPS|FULL": {
+   "balls": 40,
+   "runs": 41,
+   "ctl2": 5,
+   "wkts": 0
+  },
+  "ON_THE_STUMPS|FULL_TOSS": {
+   "balls": 1,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "ON_THE_STUMPS|GOOD_LENGTH": {
+   "balls": 53,
+   "runs": 15,
+   "ctl2": 15,
+   "wkts": 1
+  },
+  "ON_THE_STUMPS|SHORT": {
+   "balls": 6,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "ON_THE_STUMPS|SHORT_OF_A_GOOD_LENGTH": {
+   "balls": 19,
+   "runs": 2,
+   "ctl2": 4,
+   "wkts": 0
+  },
+  "ON_THE_STUMPS|YORKER": {
+   "balls": 1,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "OUTSIDE_OFFSTUMP|FULL": {
+   "balls": 84,
+   "runs": 49,
+   "ctl2": 10,
+   "wkts": 0
+  },
+  "OUTSIDE_OFFSTUMP|GOOD_LENGTH": {
+   "balls": 168,
+   "runs": 39,
+   "ctl2": 36,
+   "wkts": 3
+  },
+  "OUTSIDE_OFFSTUMP|SHORT": {
+   "balls": 9,
+   "runs": 6,
+   "ctl2": 3,
+   "wkts": 0
+  },
+  "OUTSIDE_OFFSTUMP|SHORT_OF_A_GOOD_LENGTH": {
+   "balls": 81,
+   "runs": 48,
+   "ctl2": 22,
+   "wkts": 0
+  },
+  "OUTSIDE_OFFSTUMP|YORKER": {
+   "balls": 1,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "WIDE_OUTSIDE_OFFSTUMP|FULL": {
+   "balls": 8,
+   "runs": 8,
+   "ctl2": 1,
+   "wkts": 0
+  },
+  "WIDE_OUTSIDE_OFFSTUMP|GOOD_LENGTH": {
+   "balls": 2,
+   "runs": 0,
+   "ctl2": 0,
+   "wkts": 0
+  },
+  "WIDE_OUTSIDE_OFFSTUMP|SHORT_OF_A_GOOD_LENGTH": {
+   "balls": 6,
+   "runs": 8,
+   "ctl2": 0,
+   "wkts": 0
+  }
+ },
+ "length_mix": {
+  "GOOD_LENGTH": 45.5,
+  "FULL": 27.1,
+  "SHORT_OF_A_GOOD_LENGTH": 22.9,
+  "SHORT": 3.7,
+  "FULL_TOSS": 0.4,
+  "YORKER": 0.4
+ },
+ "line_mix": {
+  "OUTSIDE_OFFSTUMP": 67.3,
+  "ON_THE_STUMPS": 23.5,
+  "DOWN_LEG": 6.1,
+  "WIDE_OUTSIDE_OFFSTUMP": 3.1
+ },
+ "by_length": {
+  "FULL": {
+   "balls": 138,
+   "runs": 106,
+   "rr": 4.61,
+   "ctl2_pct": 15.2,
+   "wkts": 0,
+   "dot_pct": 68.8
+  },
+  "FULL_TOSS": {
+   "balls": 2,
+   "runs": 2,
+   "rr": 6.0,
+   "ctl2_pct": 0.0,
+   "wkts": 0,
+   "dot_pct": 50.0
+  },
+  "GOOD_LENGTH": {
+   "balls": 232,
+   "runs": 57,
+   "rr": 1.47,
+   "ctl2_pct": 24.1,
+   "wkts": 4,
+   "dot_pct": 83.6
+  },
+  "SHORT": {
+   "balls": 19,
+   "runs": 6,
+   "rr": 1.89,
+   "ctl2_pct": 15.8,
+   "wkts": 0,
+   "dot_pct": 84.2
+  },
+  "SHORT_OF_A_GOOD_LENGTH": {
+   "balls": 117,
+   "runs": 68,
+   "rr": 3.49,
+   "ctl2_pct": 27.4,
+   "wkts": 1,
+   "dot_pct": 77.8
+  },
+  "YORKER": {
+   "balls": 2,
+   "runs": 0,
+   "rr": 0.0,
+   "ctl2_pct": 0.0,
+   "wkts": 0,
+   "dot_pct": 100.0
+  }
+ },
+ "by_line": {
+  "DOWN_LEG": {
+   "balls": 31,
+   "runs": 23,
+   "rr": 4.45,
+   "ctl2_pct": 51.6,
+   "wkts": 1
+  },
+  "ON_THE_STUMPS": {
+   "balls": 120,
+   "runs": 58,
+   "rr": 2.9,
+   "ctl2_pct": 20.0,
+   "wkts": 1
+  },
+  "OUTSIDE_OFFSTUMP": {
+   "balls": 343,
+   "runs": 142,
+   "rr": 2.48,
+   "ctl2_pct": 20.7,
+   "wkts": 3
+  },
+  "WIDE_OUTSIDE_OFFSTUMP": {
+   "balls": 16,
+   "runs": 16,
+   "rr": 6.0,
+   "ctl2_pct": 6.2,
+   "wkts": 0
+  }
+ },
+ "shots_all": {
+  "COVER_DRIVE": {
+   "n": 23,
+   "runs": 32,
+   "ctl2": 10
+  },
+  "CUT_SHOT": {
+   "n": 14,
+   "runs": 16,
+   "ctl2": 4
+  },
+  "DAB": {
+   "n": 8,
+   "runs": 8,
+   "ctl2": 0
+  },
+  "DEFENDED": {
+   "n": 179,
+   "runs": 20,
+   "ctl2": 51
+  },
+  "FLICK": {
+   "n": 48,
+   "runs": 33,
+   "ctl2": 23
+  },
+  "HOOK": {
+   "n": 1,
+   "runs": 1,
+   "ctl2": 1
+  },
+  "LEFT_ALONE": {
+   "n": 138,
+   "runs": 0,
+   "ctl2": 3
+  },
+  "LEG_GLANCE": {
+   "n": 12,
+   "runs": 12,
+   "ctl2": 8
+  },
+  "ON_DRIVE": {
+   "n": 25,
+   "runs": 34,
+   "ctl2": 2
+  },
+  "PULL": {
+   "n": 11,
+   "runs": 19,
+   "ctl2": 7
+  },
+  "PUSH": {
+   "n": 34,
+   "runs": 17,
+   "ctl2": 2
+  },
+  "SLOG_SHOT": {
+   "n": 1,
+   "runs": 4,
+   "ctl2": 0
+  },
+  "SQUARE_DRIVE": {
+   "n": 8,
+   "runs": 17,
+   "ctl2": 0
+  },
+  "STEERED": {
+   "n": 7,
+   "runs": 11,
+   "ctl2": 1
+  },
+  "STRAIGHT_DRIVE": {
+   "n": 1,
+   "runs": 2,
+   "ctl2": 0
+  }
+ },
+ "wickets": [
+  {
+   "over": 25.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "DP Conway",
+   "dis": 3.0,
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "score": 77,
+   "text": "Brar traps him in front last ball before lunch and it's given! It's a late review from Conway. Scramble-seam delivery outside off, goes past the inside edge and hits on the back pad. And that's three reds, with the ball crashing into top of leg! India get their first breakthrough on the stroke of lunch! Change of angle works for Brar, who's picked up his maiden Test wicket"
+  },
+  {
+   "over": 41.3,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "dis": 1.0,
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "score": 110,
+   "text": "And they've finally drawn the edge from Latham! Akash Deep nails it on a length close to off, forcing Latham to play. The ball straightens off the pitch and takes the edge, and India have their second. Akash Deep was threatening in the last couple of overs, and gets his rewards. A very fine knock from Latham comes to an end"
+  },
+  {
+   "over": 42.1,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "dis": 1.0,
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "score": 110,
+   "text": "Two quick wickets, and this is a soft one! Short ball around leg and Nicholls looks to swivel and pull. He can't keep it down, and neither can he get enough height on it and ends up offering a simple chance at deep backward square leg."
+  },
+  {
+   "over": 43.6,
+   "bowler": "Akash Deep",
+   "bat": "R Ravindra",
+   "dis": 1.0,
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "score": 110,
+   "text": "Edged behind and another one falls! Suddenly, it's all happening! Pitched on a full length close to off, similar to the one to Latham, forcing Ravindra to play at it, and it seams away to take the edge. Pant does the rest and Akash Deep picks up his second and India their fourth. New Zealand have just lost three wickets for no runs added on, in the space of 16 deliveries!"
+  },
+  {
+   "over": 64.4,
+   "bowler": "Washington Sundar",
+   "bat": "DJ Mitchell",
+   "dis": 1.0,
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "score": 184,
+   "text": "Taken at backward short leg! Mitchell hangs his head. Turn and bounce for the spinner. The batter thought he had it cover, going back, preparing to turn the ball around the corner. But that little bit of mischief off the surface does him in and he literally puts his head in his hands, realising what he's done, realising he's put his team back in trouble. Excellent bowling and excellent field placement too"
+  }
+ ],
+ "fours": [
+  {
+   "over": 7.1,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "FLICK",
+   "zone": 6
+  },
+  {
+   "over": 13.3,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "WIDE_OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "zone": 3
+  },
+  {
+   "over": 16.2,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "ON_DRIVE",
+   "zone": 4
+  },
+  {
+   "over": 18.2,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "WIDE_OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "SQUARE_DRIVE",
+   "zone": 1
+  },
+  {
+   "over": 19.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "zone": 8
+  },
+  {
+   "over": 20.5,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "zone": 6
+  },
+  {
+   "over": 23.1,
+   "bowler": "Gurnoor Brar",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "ON_DRIVE",
+   "zone": 4
+  },
+  {
+   "over": 26.4,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "SQUARE_DRIVE",
+   "zone": 2
+  },
+  {
+   "over": 27.3,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "zone": 1
+  },
+  {
+   "over": 35.6,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "SQUARE_DRIVE",
+   "zone": 2
+  },
+  {
+   "over": 36.2,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "zone": 7
+  },
+  {
+   "over": 44.2,
+   "bowler": "A Kamboj",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "zone": 8
+  },
+  {
+   "over": 55.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "zone": 1
+  },
+  {
+   "over": 58.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "DEFENDED",
+   "zone": 8
+  },
+  {
+   "over": 59.4,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "LEG_GLANCE",
+   "zone": 1
+  },
+  {
+   "over": 60.4,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "ON_DRIVE",
+   "zone": 4
+  },
+  {
+   "over": 60.5,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "WIDE_OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "COVER_DRIVE",
+   "zone": 6
+  },
+  {
+   "over": 61.2,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "WIDE_OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "zone": 7
+  },
+  {
+   "over": 61.5,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "COVER_DRIVE",
+   "zone": 8
+  },
+  {
+   "over": 63.6,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "zone": 7
+  },
+  {
+   "over": 66.6,
+   "bowler": "Washington Sundar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "zone": 1
+  },
+  {
+   "over": 69.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "zone": 2
+  },
+  {
+   "over": 70.2,
+   "bowler": "Washington Sundar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "SLOG_SHOT",
+   "zone": 3
+  },
+  {
+   "over": 73.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "STEERED",
+   "zone": 8
+  },
+  {
+   "over": 76.5,
+   "bowler": "A Kamboj",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "zone": 2
+  },
+  {
+   "over": 78.5,
+   "bowler": "A Kamboj",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "zone": 6
+  }
+ ],
+ "maidens_total": 20,
+ "best_over": "8",
+ "best_over_runs": 11,
+ "n_ctl2": 112,
+ "chance_rows": [
+  {
+   "over": 0.5,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Given out lbw but Latham reviews. He's falling over as he plays the flick, clearly not quite ready for the ball to be so full, and to move into him. Big question is though, will it hit leg stump? Sonic technology says no inside edge. Ball-tracking proves Latham's doubts were well founded. The ball pitched outside leg stump so not out is the call."
+  },
+  {
+   "over": 1.2,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Play and miss at 132kph. Kamboj finds the perfect length, a little fuller than his first delivery, drawing Conway forward, forcing him to defend and beating him with movement"
+  },
+  {
+   "over": 1.6,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Goes for the on the up drive and is lucky to survive. Conway wants to put Kamboj off the length he's settled into. he's stepping down the pitch. He's going for a big shot. The away movement foils all his plans"
+  },
+  {
+   "over": 2.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 1,
+   "text": "Neat clip past short leg. India keeping the stumps in play and looking for lbw. Latham, with a little wristwork, has gone past McCullum's Test tally"
+  },
+  {
+   "over": 2.4,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "SQUARE_DRIVE",
+   "ctl": 1,
+   "text": "Around the wicket now and Latham is playing with hands slightly in front of the body, gets a bit of an outside edge as the ball wanders behind square on the off side"
+  },
+  {
+   "over": 4.1,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Sharp swing into the left-hander and Latham is no match for it. The line starts out well outside off. But then it homes into the batter's pads with pure venom."
+  },
+  {
+   "over": 4.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Rippah. A diet of big booming inswingers now gives away to the one that pitches in line with the stumps and goes the other way and Latham is feeling for it. Open face. Tentative feet. This is serious stuff."
+  },
+  {
+   "over": 5.1,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Leading edge but falls safely in front of cover. Latham senses more runs with the ball short and angled into him and that makes him go into the shot a little too early"
+  },
+  {
+   "over": 5.4,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 1,
+   "text": "That's half-volley adjacent and Latham drives straight to cover. Misses out"
+  },
+  {
+   "over": 6.1,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "WIDE_OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Flirts with it outside off and is beaten. Full. Wide. Latham sees dollar signs and goes for the booming drive. Away movement beats the edge"
+  },
+  {
+   "over": 6.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "So good. The angle from around the wicket is forcing Latham to think about playing more than leaving. The length keeps drawing him forward. The seam movement away keeps beating the edge. So good."
+  },
+  {
+   "over": 7.3,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Inside edge and it wanders away to deep fine. Conway is caught in his crease because of Kamboj hitting an in-between length and getting seam movement into him"
+  },
+  {
+   "over": 8.5,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Appeal for caught behind but no interest from the umpire. The back of a length ball outside off skids into the left-hander, catching him on the hop. Goes past the inside edge, takes the thigh pad through"
+  },
+  {
+   "over": 8.6,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "138kph and that extra pace might be bothering the batter. Conway is once again feeling for the ball, hands reaching in front of his body. Beaten on the outside edge this time as a good length ball cuts away off the pitch"
+  },
+  {
+   "over": 9.2,
+   "bowler": "JJ Bumrah",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Play and miss. Conway has been lured to play a wide ball because it is pitched up. Bumrah felt there was a noise as it passed the bat."
+  },
+  {
+   "over": 10.2,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Nips in off the seam with Latham trying to block. Beats the inside edge. \"Yes, yes, yes, yes\" is the call as they take the leg bye"
+  },
+  {
+   "over": 10.4,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Outside edge but it goes down and past second slip. Conway keeps flirting outside his off stump and getting away with it"
+  },
+  {
+   "over": 12.2,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Looks to drag the short ball into the leg side but is unable to and wears it on the thigh"
+  },
+  {
+   "over": 12.6,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Inside edge to deep square leg. Hands on heads time for Akash Deep as he gets a full ball to swing in really late and a heck of a lot."
+  },
+  {
+   "over": 13.2,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "ON_THE_STUMPS",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Length ball around leg, Conway looks to fend and the ball hits him on his left elbow and the ball dribbles through to the keeper"
+  },
+  {
+   "over": 14.1,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh my, KL Rahul has dropped it! Length ball around middle and leg draws a thick edge as Conway brings his bat down and plays down the wrong line. It flies to Rahul at second slip and he tries to take it to his left and the ball bounces out of his hands!"
+  },
+  {
+   "over": 14.2,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Now a big lbw appeal is not given, and India don't review. This is on a length around off and swinging into Latham, who is beaten on the inside edge. Hits above the knee roll on the front pad"
+  },
+  {
+   "over": 14.3,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Length ball around leg, 138kph, he misses his flick and the ball drops down off his pads"
+  },
+  {
+   "over": 14.6,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Inswinger goes down leg. Maiden over"
+  },
+  {
+   "over": 16.1,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Back of length down leg, gloved down to the leg side"
+  },
+  {
+   "over": 16.6,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEFT_ALONE",
+   "ctl": 2,
+   "text": "On a length outside off, Conway caught in two minds as he tries to shoulder arms late but the ball pings into his bat and goes towards the cordon"
+  },
+  {
+   "over": 18.3,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "138kph full ball jags in from outside off and Conway has a tough time with this one. Brings his bat down but is beaten and the ball pops to his left off his pads"
+  },
+  {
+   "over": 18.5,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Back of length delivery around leg, Conway looks to fend and misses and is hit on the right thigh"
+  },
+  {
+   "over": 18.6,
+   "bowler": "Akash Deep",
+   "bat": "DP Conway",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "On a length around leg, Conway cops another blow on his right thigh, with the ball rolling towards square leg"
+  },
+  {
+   "over": 19.1,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "On a length outside leg, 138kph, Latham misses his flick and the ball goes off the pads to the leg side"
+  },
+  {
+   "over": 19.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, beaten on the outside edge! 139kph delivery shoots up off a length and goes past the bat. And well, Brar has overstepped again"
+  },
+  {
+   "over": 19.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "SHORT",
+   "shot": "LEFT_ALONE",
+   "ctl": 1,
+   "text": "Oh, beaten on the outside edge! 139kph delivery shoots up off a length and goes past the bat. And well, Brar has overstepped again"
+  },
+  {
+   "over": 20.1,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Starts by sliding a full ball down leg"
+  },
+  {
+   "over": 20.5,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 1,
+   "text": "Neatly put away in the gap! This is a full ball around middle and leg and Latham just clips it through the gap at midwicket"
+  },
+  {
+   "over": 21.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Full ball goes down leg as Latham tries to whip it away"
+  },
+  {
+   "over": 22.5,
+   "bowler": "A Kamboj",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Some appeals for lbw as Kamboj raps Latham on the pads, going past his inside edge. Length ball jagged in from outside off. Could have been doing too much"
+  },
+  {
+   "over": 23.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Slides a full one down the leg side"
+  },
+  {
+   "over": 24.3,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Length ball angled in from outside off and it hits high on the back thigh and settles between Conway's legs momentarily before dropping onto the ground"
+  },
+  {
+   "over": 24.5,
+   "bowler": "A Kamboj",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Length ball angled in from outside off, Conway looks to fend and misses and the ball pops to the off side off his pads"
+  },
+  {
+   "over": 25.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "DP Conway",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Brar traps him in front last ball before lunch and it's given! It's a late review from Conway. Scramble-seam delivery outside off, goes past the inside edge and hits on the back pad. And that's three reds, with the ball crashing into top of leg! India get their first breakthrough on the stroke of lunch! Change of angle works for Brar, who's picked up his maiden Test wicket"
+  },
+  {
+   "over": 26.2,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "ON_DRIVE",
+   "ctl": 2,
+   "text": "Chases after one outside off and is beaten. Latham tends to be a little tighter than this but the length being a touch fuller tempts him into playing away from the body"
+  },
+  {
+   "over": 26.6,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beats him with a 135kph peach. Hits the deck. Gets the ball to seam away from the angle. Of course that angle into the left-hander is what forces Latham to play and he's lucky not to nick off"
+  },
+  {
+   "over": 27.1,
+   "bowler": "Gurnoor Brar",
+   "bat": "HM Nicholls",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Tucks it off his pads down to deep fine"
+  },
+  {
+   "over": 27.3,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "That's fifty for the NZ captain, gets there in fortunate fashion with an outside edge slithering away through the hands of second slip. Bounced in front of Rahul this time as he dives to his left"
+  },
+  {
+   "over": 28.2,
+   "bowler": "JJ Bumrah",
+   "bat": "HM Nicholls",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beats him with a 137kph rippah. The good thing from Nicholls' perspective is he didn't follow the ball. Played for his inside edge and didn't mind being beaten. Still seam movement on offer"
+  },
+  {
+   "over": 28.5,
+   "bowler": "JJ Bumrah",
+   "bat": "HM Nicholls",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "137kph catches Nicholls on the move and secures his inside edge down to deep fine. A little fuller in length denying the batter time to react to the ball off the pitch"
+  },
+  {
+   "over": 29.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beats the outside edge at 141kph. Latham keeping to his crease against a short ball that straightens against the angle past his bat"
+  },
+  {
+   "over": 29.3,
+   "bowler": "Gurnoor Brar",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "ON_DRIVE",
+   "ctl": 2,
+   "text": "Appeal for lbw but umpire Reiffel doesn't move. Might be an edge. Brar bowls the surprise full ball and Latham is done by it. His feet are rooted. He isn't ready for it and is scrambling to meet it with a straight bat. Two sounds. But is it bat and pad or pad and pad? Sonic suggests its the latter in which case, it is a really really good shout"
+  },
+  {
+   "over": 30.1,
+   "bowler": "JJ Bumrah",
+   "bat": "HM Nicholls",
+   "line": "ON_THE_STUMPS",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "ctl": 2,
+   "text": "Over the wicket and the angle has Nicholls flaying at a back of a length ball outside off. He's beaten"
+  },
+  {
+   "over": 31.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "HM Nicholls",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "ctl": 2,
+   "text": "It looks like they've asked Brar to go full on enforcer. Goes short again and has Nicholls looking awkward as he forces the ball towards point"
+  },
+  {
+   "over": 32.2,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Beats him outside off. Shortish delivery at 135kph. Holding its line which becomes too much for Latham with his back foot drive"
+  },
+  {
+   "over": 32.5,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "135kph good length ball outside off, Latham pushes to mid-off."
+  },
+  {
+   "over": 33.1,
+   "bowler": "Akash Deep",
+   "bat": "HM Nicholls",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "138kph climbs up off back of a length and beats Nicholls as he attempts to flick the ball away"
+  },
+  {
+   "over": 33.3,
+   "bowler": "Akash Deep",
+   "bat": "HM Nicholls",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "LEFT_ALONE",
+   "ctl": 1,
+   "text": "Lets the ball go, it pitches and nips back and he gets struck on the pad. Appeal for lbw. Not out. Height is a problem"
+  },
+  {
+   "over": 34.1,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Defends with soft hands and the 133kph delivery secures a bit of an outside edge past point. Latham did well for his part as well, defensive discplines on show"
+  },
+  {
+   "over": 34.2,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Blocks the pitched up delivery at 135kph in front of fourth stump"
+  },
+  {
+   "over": 34.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "133kph and gets sharp bounce as it nips into Latham. He is surprised by the pace off the pitch and wears it on the body, beaten on the inside edge"
+  },
+  {
+   "over": 35.6,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "SQUARE_DRIVE",
+   "ctl": 1,
+   "text": "Through the gap at point. Latham barely touches the ball, which is full and angled across him, just gives it direction and that's enough"
+  },
+  {
+   "over": 36.1,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "PUSH",
+   "ctl": 2,
+   "text": "Back of a length on off stump, defends"
+  },
+  {
+   "over": 36.5,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "ON_THE_STUMPS",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "ctl": 2,
+   "text": "135kph back of a length on off stump, cutting in off the pitch. A bit of extra bounce puts Nicholls in a tangle as he gets an inside edge onto the body"
+  },
+  {
+   "over": 37.2,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Blocks a back of a length ball at 136kph towards point"
+  },
+  {
+   "over": 37.3,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Looks to clip it off middle stump but doesn't get bat on it. That's a miss."
+  },
+  {
+   "over": 37.4,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Oooh, falls short of cover running in. A chance very much against the play as Latham goes for the pull shot, gets a top edge that then deflects off the helmet and goes into the off side. Jaiswal tried as hard as he could but he was never getting there"
+  },
+  {
+   "over": 38.3,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Play and miss and the ball deflects off Pant's glove straight to first slip"
+  },
+  {
+   "over": 38.5,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Blocks a 134kph back of a length ball nipping away off the pitch towards point"
+  },
+  {
+   "over": 39.4,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beats him! On a length outside off and it holds its line as Latham pushes defensively. The ball goes past the outside edge"
+  },
+  {
+   "over": 41.3,
+   "bowler": "Akash Deep",
+   "bat": "TWM Latham",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "And they've finally drawn the edge from Latham! Akash Deep nails it on a length close to off, forcing Latham to play. The ball straightens off the pitch and takes the edge, and India have their second. Akash Deep was threatening in the last couple of overs, and gets his rewards. A very fine knock from Latham comes to an end"
+  },
+  {
+   "over": 41.6,
+   "bowler": "Akash Deep",
+   "bat": "R Ravindra",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 1,
+   "text": "Back of length outside off, Ravindra drops it square on the off side"
+  },
+  {
+   "over": 42.1,
+   "bowler": "A Kamboj",
+   "bat": "HM Nicholls",
+   "line": "DOWN_LEG",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Two quick wickets, and this is a soft one! Short ball around leg and Nicholls looks to swivel and pull. He can't keep it down, and neither can he get enough height on it and ends up offering a simple chance at deep backward square leg."
+  },
+  {
+   "over": 42.2,
+   "bowler": "A Kamboj",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beaten first ball! 135kph, full outside off and it swings away past the outside edge as Mitchell is drawn into the forward defensive"
+  },
+  {
+   "over": 42.6,
+   "bowler": "A Kamboj",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "PUSH",
+   "ctl": 2,
+   "text": "On a length close to off, blocked towards midwicket"
+  },
+  {
+   "over": 43.6,
+   "bowler": "Akash Deep",
+   "bat": "R Ravindra",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Edged behind and another one falls! Suddenly, it's all happening! Pitched on a full length close to off, similar to the one to Latham, forcing Ravindra to play at it, and it seams away to take the edge. Pant does the rest and Akash Deep picks up his second and India their fourth. New Zealand have just lost three wickets for no runs added on, in the space of 16 deliveries!"
+  },
+  {
+   "over": 44.2,
+   "bowler": "A Kamboj",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Streaky four! Blundell fends with soft hands and gets an outside edge that runs past the cordon"
+  },
+  {
+   "over": 44.4,
+   "bowler": "A Kamboj",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Big shout, and it's not given. Pant isn't convinced so they won't send it up. This was full outside off and Blundell had stepped out of his crease as he missed his flick. It was going down leg, in all likelihood"
+  },
+  {
+   "over": 45.1,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Back of length delivery angled into him, goes past the inside edge and hits Mitchell on the rib cage"
+  },
+  {
+   "over": 45.5,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 1,
+   "text": "Full ball outside off, he fends with soft hands and gets an inside edge that runs to gully"
+  },
+  {
+   "over": 46.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, that's a peach! Full outside off, 135kph, swinging and seaming away past the outside edge and goes just past the off stump!"
+  },
+  {
+   "over": 46.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Fends at this length ball outside off and gets an inside edge past leg stump for a couple of runs"
+  },
+  {
+   "over": 47.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Full outside off, 130kph, it nips away past the outside edge as Blundell pushes forward in defence"
+  },
+  {
+   "over": 47.4,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "On a length outside off, 128kph, and it goes past the outside edge again as Blundell presses forward to defend. Seamed away a bit, even if Bumrah is struggling to get his speeds up"
+  },
+  {
+   "over": 47.5,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Big shouts for lbw again, not given. Gill checks with Bumrah about impact being in line, and on height and sends it up! Angled in from outside off, and it goes well past the inside edge and hits high on the back leg in front of off stump. And that's shown to be going above the stumps. Blundell survives"
+  },
+  {
+   "over": 48.1,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Length ball angling down leg, beats the inside edge and goes off his thigh pad past a diving Pant for four leg byes"
+  },
+  {
+   "over": 48.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Full around off, Mitchell jams his bat down to keep it out"
+  },
+  {
+   "over": 48.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Short ball angled into him, Mitchell swivels to pull but miscues it to long leg"
+  },
+  {
+   "over": 49.5,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, just past the edge! 128kph, but foxes Blundell nonetheless. On a length outside off and it angles in and seams away past the forward defensive shot"
+  },
+  {
+   "over": 50.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Top edge lands safely with midwicket tracking back. India have been determined about attacking Mitchell on his body. He'd been conscious of not being drawn into them. But now he goes for the hook and doesn't control it at all. Brar's height and his pace both work in his favour to deny the batter good connection"
+  },
+  {
+   "over": 52.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "136kph back of a length and angled into the right-hander. Blundell goes for the leg glance, doesn't connect"
+  },
+  {
+   "over": 54.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Goes on the big pull shot but he's a little too late on it, mis-hits it back down into his own feet, which prompts whoops from the Indian close-in fielders"
+  },
+  {
+   "over": 54.3,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT",
+   "shot": "LEFT_ALONE",
+   "ctl": 1,
+   "text": "Bouncer outside off at 142kph, Mitchell drops his wrists"
+  },
+  {
+   "over": 55.1,
+   "bowler": "JJ Bumrah",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT",
+   "shot": "HOOK",
+   "ctl": 2,
+   "text": "134kph is that a catch? Was there a glove through to Pant? Yep, big deflection as Mitchell goes for the hook shot again when faced with a bouncer and the ball evades the diving wicketkeeper. The ball caught the webbing but didn't stick. Very tough that."
+  },
+  {
+   "over": 55.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Inside edge past the keeper, Pant had no chance this time. Sharp, unexpected inward movement from Bumrah, all off the pitch. Blundell isn't ready for it. He ends up defending just the angle in, doesn't account for the seam"
+  },
+  {
+   "over": 55.5,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "There's the one that goes away. He's hidden it. He's waited for it. Then after producing the biiiiig inswinger, he makes this one hits the deck and straighten, beating Blundell's outside edge"
+  },
+  {
+   "over": 58.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEFT_ALONE",
+   "ctl": 2,
+   "text": "Wears it right in the chest! Blundell might have been expecting to drop the wrists and leave the ball but the ball has other ideas, pitching on off stump and seaming in and following him"
+  },
+  {
+   "over": 58.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Outside edge but there's only two slips. Brar makes his emotions about that very clear. Though even if there had been extra cover in the cordon, Mitchell played with soft hands and the ball barely rose up"
+  },
+  {
+   "over": 59.6,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 1,
+   "text": "Bit of an inside edge as Mitchell defends his off stump. Single to deep square leg"
+  },
+  {
+   "over": 61.5,
+   "bowler": "Akash Deep",
+   "bat": "DJ Mitchell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "COVER_DRIVE",
+   "ctl": 2,
+   "text": "Outside edge but no third slip. That would've been gobbled up by third slip. That cut shot must have made him loose. He's gone hard-handed at a ball in the off stump corridor, in the corridor of uncertainty and is lucky to still be out there"
+  },
+  {
+   "over": 62.2,
+   "bowler": "Washington Sundar",
+   "bat": "DJ Mitchell",
+   "line": "DOWN_LEG",
+   "length": "FULL",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Slithers away past Mitchell's thigh on the leg side and past the keeper as well."
+  },
+  {
+   "over": 63.1,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Appeal for lbw as Blundell is stuck in his crease and plays around his front pad. No interest from the umpire because it is both high and going down leg"
+  },
+  {
+   "over": 63.4,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Beats the inside edge with Blundell rooted to his crease. Akash hits the deck hard and gets extreme seam movement from well outside off stump"
+  },
+  {
+   "over": 64.4,
+   "bowler": "Washington Sundar",
+   "bat": "DJ Mitchell",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Taken at backward short leg! Mitchell hangs his head. Turn and bounce for the spinner. The batter thought he had it cover, going back, preparing to turn the ball around the corner. But that little bit of mischief off the surface does him in and he literally puts his head in his hands, realising what he's done, realising he's put his team back in trouble. Excellent bowling and excellent field placement too"
+  },
+  {
+   "over": 64.5,
+   "bowler": "Washington Sundar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "FULL",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Takes the liberty of tossing it up outside off like an old-fashioned offspinner to the new batter. Dips. Grips. Turns past the inside edge and hits the front pad"
+  },
+  {
+   "over": 65.2,
+   "bowler": "Akash Deep",
+   "bat": "GD Phillips",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Angled into the pads, Phillips works it towards square leg"
+  },
+  {
+   "over": 65.6,
+   "bowler": "Akash Deep",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Vicious bounce! Phillips is hurting from that ball climbing on him from out of nowhere. His right glove is off and his thumb is barking. A ball just back of a length hurtles up, clearing the bat and balloning off the bottom hand towards gully. Doesn't carry. We need to reassess the conditions. It's tough out there."
+  },
+  {
+   "over": 66.6,
+   "bowler": "Washington Sundar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Dragged a bit short and Phillips rocks back to pull. Just gets some bat on it and manages to get it past the leg slip fielder for a boundary"
+  },
+  {
+   "over": 67.5,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "CUT_SHOT",
+   "ctl": 2,
+   "text": "On a length outside off, swerving away a touch and Blundell pushes at it in vain. Beaten on the outside edge. He was late on that"
+  },
+  {
+   "over": 68.4,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Tossed up in the blockhole around off, squeezed back to the bowler"
+  },
+  {
+   "over": 69.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT",
+   "shot": "PULL",
+   "ctl": 2,
+   "text": "Oh, a leapig Pant can't stop this! Sharp bouncer on off and Phillips swings and Pant leaps and think he just got a glove on it. Runs away for four. Given byes, although it looked like Phillips got an edge or glove on it"
+  },
+  {
+   "over": 70.6,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Full outside off, Blundell looks to whip it down the ground but mistimes it and the ball rolls in front, not even reaching the bowler"
+  },
+  {
+   "over": 71.5,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEFT_ALONE",
+   "ctl": 2,
+   "text": "Ouch, that's hit him! Length ball shoots up off the surface as Phillips looks to get out of the way and it hits him on the lower back"
+  },
+  {
+   "over": 72.1,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "On a length outside off and spinning in, he parries it down on the leg side"
+  },
+  {
+   "over": 73.1,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, goes through him! Fuller side of length outside off and it nips back in to go between bat and pad. But it goes over the stumps and Phillips can count himself lucky there"
+  },
+  {
+   "over": 73.3,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Length ball goes down the leg side"
+  },
+  {
+   "over": 73.4,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "STEERED",
+   "ctl": 2,
+   "text": "Edge goes wide of second slip! This is back of length outside off and Phillips pokes at it. The outside edge flies wide of the diving fielder"
+  },
+  {
+   "over": 75.2,
+   "bowler": "Gurnoor Brar",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Full outside off, he looks to fend and gets an inside edge onto his pads"
+  },
+  {
+   "over": 75.6,
+   "bowler": "Gurnoor Brar",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "LEFT_ALONE",
+   "ctl": 1,
+   "text": "Back of length delivery outside off angles in and holds its line to beat the outside edge as Blundell looks to fend on the back foot"
+  },
+  {
+   "over": 79.5,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "FULL",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Full ball and this hits him on the pads. Washington goes up in appeal but it's ignored"
+  },
+  {
+   "over": 79.6,
+   "bowler": "Washington Sundar",
+   "bat": "TA Blundell",
+   "line": "DOWN_LEG",
+   "length": "GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Tucks this easily behind square leg for a single"
+  },
+  {
+   "over": 80.1,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Full ball angled in from outside off, blocked on the front foot"
+  },
+  {
+   "over": 81.1,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, this swings in prodigiously! Pitches on a length outside off and comes in as Blundell blocks watchfully"
+  },
+  {
+   "over": 82.1,
+   "bowler": "Akash Deep",
+   "bat": "GD Phillips",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Length ball slanted across him, goes off the pads to square leg as it goes past the inside edge"
+  },
+  {
+   "over": 82.5,
+   "bowler": "Akash Deep",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Full on off, some late swing away. Phillips brings his bat down, soft hands and open face, and deflects it to gully"
+  },
+  {
+   "over": 83.1,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "SHORT_OF_A_GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, just short of gully! Length ball around off straightens and squares Blundell up and shoots off the leading edge as Blundell closes the bat face early. Just bounces short of the fielder"
+  },
+  {
+   "over": 83.3,
+   "bowler": "JJ Bumrah",
+   "bat": "TA Blundell",
+   "line": "ON_THE_STUMPS",
+   "length": "GOOD_LENGTH",
+   "shot": "LEG_GLANCE",
+   "ctl": 2,
+   "text": "Full ball clips the pads on its way down the leg side. Nice stop by Pant"
+  },
+  {
+   "over": 84.1,
+   "bowler": "Akash Deep",
+   "bat": "TA Blundell",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "DEFENDED",
+   "ctl": 2,
+   "text": "Oh, beauty from Akash Deep! Pitches this up in the channel, forcing the batter to play, and gets it to swing away past the outside edge"
+  },
+  {
+   "over": 84.4,
+   "bowler": "Akash Deep",
+   "bat": "GD Phillips",
+   "line": "OUTSIDE_OFFSTUMP",
+   "length": "GOOD_LENGTH",
+   "shot": "FLICK",
+   "ctl": 2,
+   "text": "Length ball around off, fended to midwicket"
+  }
+ ],
+ "fow": [
+  [
+   1,
+   "DP Conway",
+   77,
+   25.6
+  ],
+  [
+   2,
+   "TWM Latham",
+   110,
+   41.3
+  ],
+  [
+   3,
+   "HM Nicholls",
+   110,
+   42.1
+  ],
+  [
+   4,
+   "R Ravindra",
+   110,
+   43.6
+  ],
+  [
+   5,
+   "DJ Mitchell",
+   184,
+   64.4
+  ]
+ ]
+}

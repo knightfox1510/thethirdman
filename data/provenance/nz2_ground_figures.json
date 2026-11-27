@@ -1,0 +1,1021 @@
+{
+ "hagley": [
+  {
+   "date": "2014-12-26",
+   "teams": [
+    "New Zealand",
+    "Sri Lanka"
+   ],
+   "toss": "Sri Lanka field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 8
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     441,
+     10,
+     85.8
+    ],
+    [
+     "Sri Lanka",
+     138,
+     10,
+     42.7
+    ],
+    [
+     "Sri Lanka",
+     407,
+     10,
+     154.0
+    ],
+    [
+     "New Zealand",
+     107,
+     2,
+     30.7
+    ]
+   ]
+  },
+  {
+   "date": "2016-02-20",
+   "teams": [
+    "New Zealand",
+    "Australia"
+   ],
+   "toss": "Australia field",
+   "winner": "Australia",
+   "by": {
+    "wickets": 7
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     370,
+     10,
+     65.7
+    ],
+    [
+     "Australia",
+     505,
+     10,
+     153.2
+    ],
+    [
+     "New Zealand",
+     335,
+     10,
+     111.2
+    ],
+    [
+     "Australia",
+     201,
+     3,
+     54.0
+    ]
+   ]
+  },
+  {
+   "date": "2016-11-17",
+   "teams": [
+    "New Zealand",
+    "Pakistan"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 8
+   },
+   "result": null,
+   "inns": [
+    [
+     "Pakistan",
+     133,
+     10,
+     55.8
+    ],
+    [
+     "New Zealand",
+     200,
+     10,
+     59.8
+    ],
+    [
+     "Pakistan",
+     171,
+     10,
+     78.7
+    ],
+    [
+     "New Zealand",
+     108,
+     2,
+     31.5
+    ]
+   ]
+  },
+  {
+   "date": "2017-01-20",
+   "teams": [
+    "New Zealand",
+    "Bangladesh"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 9
+   },
+   "result": null,
+   "inns": [
+    [
+     "Bangladesh",
+     289,
+     10,
+     84.5
+    ],
+    [
+     "New Zealand",
+     354,
+     10,
+     92.7
+    ],
+    [
+     "Bangladesh",
+     173,
+     10,
+     52.8
+    ],
+    [
+     "New Zealand",
+     111,
+     1,
+     18.7
+    ]
+   ]
+  },
+  {
+   "date": "2018-03-30",
+   "teams": [
+    "England",
+    "New Zealand"
+   ],
+   "toss": "New Zealand field",
+   "winner": null,
+   "by": null,
+   "result": "draw",
+   "inns": [
+    [
+     "England",
+     307,
+     10,
+     96.8
+    ],
+    [
+     "New Zealand",
+     278,
+     10,
+     93.5
+    ],
+    [
+     "England",
+     352,
+     9,
+     106.7
+    ],
+    [
+     "New Zealand",
+     256,
+     8,
+     124.7
+    ]
+   ]
+  },
+  {
+   "date": "2018-12-26",
+   "teams": [
+    "New Zealand",
+    "Sri Lanka"
+   ],
+   "toss": "Sri Lanka field",
+   "winner": "New Zealand",
+   "by": {
+    "runs": 423
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     178,
+     10,
+     50.0
+    ],
+    [
+     "Sri Lanka",
+     104,
+     10,
+     41.0
+    ],
+    [
+     "New Zealand",
+     585,
+     4,
+     153.0
+    ],
+    [
+     "Sri Lanka",
+     236,
+     10,
+     106.3
+    ]
+   ]
+  },
+  {
+   "date": "2020-02-29",
+   "teams": [
+    "New Zealand",
+    "India"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 7
+   },
+   "result": null,
+   "inns": [
+    [
+     "India",
+     242,
+     10,
+     63.0
+    ],
+    [
+     "New Zealand",
+     235,
+     10,
+     73.2
+    ],
+    [
+     "India",
+     124,
+     10,
+     46.0
+    ],
+    [
+     "New Zealand",
+     132,
+     3,
+     36.0
+    ]
+   ]
+  },
+  {
+   "date": "2021-01-03",
+   "teams": [
+    "Pakistan",
+    "New Zealand"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "innings": 1,
+    "runs": 176
+   },
+   "result": null,
+   "inns": [
+    [
+     "Pakistan",
+     297,
+     10,
+     83.8
+    ],
+    [
+     "New Zealand",
+     659,
+     6,
+     158.8
+    ],
+    [
+     "Pakistan",
+     186,
+     10,
+     81.7
+    ]
+   ]
+  },
+  {
+   "date": "2022-01-09",
+   "teams": [
+    "New Zealand",
+    "Bangladesh"
+   ],
+   "toss": "Bangladesh field",
+   "winner": "New Zealand",
+   "by": {
+    "innings": 1,
+    "runs": 117
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     521,
+     6,
+     128.8
+    ],
+    [
+     "Bangladesh",
+     126,
+     10,
+     41.3
+    ],
+    [
+     "Bangladesh",
+     278,
+     10,
+     79.5
+    ]
+   ]
+  },
+  {
+   "date": "2022-02-17",
+   "teams": [
+    "South Africa",
+    "New Zealand"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "innings": 1,
+    "runs": 276
+   },
+   "result": null,
+   "inns": [
+    [
+     "South Africa",
+     95,
+     10,
+     49.3
+    ],
+    [
+     "New Zealand",
+     482,
+     10,
+     117.8
+    ],
+    [
+     "South Africa",
+     111,
+     10,
+     41.7
+    ]
+   ]
+  },
+  {
+   "date": "2022-02-25",
+   "teams": [
+    "South Africa",
+    "New Zealand"
+   ],
+   "toss": "South Africa bat",
+   "winner": "South Africa",
+   "by": {
+    "runs": 198
+   },
+   "result": null,
+   "inns": [
+    [
+     "South Africa",
+     364,
+     10,
+     133.0
+    ],
+    [
+     "New Zealand",
+     293,
+     10,
+     80.0
+    ],
+    [
+     "South Africa",
+     354,
+     9,
+     100.0
+    ],
+    [
+     "New Zealand",
+     227,
+     10,
+     93.8
+    ]
+   ]
+  },
+  {
+   "date": "2023-03-09",
+   "teams": [
+    "Sri Lanka",
+    "New Zealand"
+   ],
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 2
+   },
+   "result": null,
+   "inns": [
+    [
+     "Sri Lanka",
+     355,
+     10,
+     92.7
+    ],
+    [
+     "New Zealand",
+     373,
+     10,
+     107.5
+    ],
+    [
+     "Sri Lanka",
+     302,
+     10,
+     105.5
+    ],
+    [
+     "New Zealand",
+     285,
+     8,
+     70.0
+    ]
+   ]
+  },
+  {
+   "date": "2024-03-08",
+   "teams": [
+    "New Zealand",
+    "Australia"
+   ],
+   "toss": "Australia field",
+   "winner": "Australia",
+   "by": {
+    "wickets": 3
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     162,
+     10,
+     45.3
+    ],
+    [
+     "Australia",
+     256,
+     10,
+     68.0
+    ],
+    [
+     "New Zealand",
+     372,
+     10,
+     108.3
+    ],
+    [
+     "Australia",
+     281,
+     7,
+     65.0
+    ]
+   ]
+  },
+  {
+   "date": "2024-11-28",
+   "teams": [
+    "New Zealand",
+    "England"
+   ],
+   "toss": "England field",
+   "winner": "England",
+   "by": {
+    "wickets": 8
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     348,
+     10,
+     91.0
+    ],
+    [
+     "England",
+     499,
+     10,
+     103.0
+    ],
+    [
+     "New Zealand",
+     254,
+     10,
+     74.2
+    ],
+    [
+     "England",
+     104,
+     2,
+     12.7
+    ]
+   ]
+  },
+  {
+   "date": "2025-12-02",
+   "teams": [
+    "New Zealand",
+    "West Indies"
+   ],
+   "toss": "West Indies field",
+   "winner": null,
+   "by": null,
+   "result": "draw",
+   "inns": [
+    [
+     "New Zealand",
+     231,
+     10,
+     70.5
+    ],
+    [
+     "West Indies",
+     167,
+     10,
+     75.7
+    ],
+    [
+     "New Zealand",
+     466,
+     8,
+     109.0
+    ],
+    [
+     "West Indies",
+     457,
+     6,
+     163.5
+    ]
+   ]
+  }
+ ],
+ "hagley_n": 15,
+ "hagley_first_inn_avg": 288.9,
+ "hagley_first_inn_runs": [
+  441,
+  370,
+  133,
+  289,
+  307,
+  178,
+  242,
+  297,
+  521,
+  95,
+  364,
+  355,
+  162,
+  348,
+  231
+ ],
+ "first_inn_after_85": [
+  [
+   439,
+   8
+  ],
+  [
+   278,
+   8
+  ],
+  [
+   332,
+   1
+  ],
+  [
+   232,
+   3
+  ],
+  [
+   336,
+   8
+  ],
+  [
+   325,
+   9
+  ]
+ ],
+ "after85_avg": [
+  323.7,
+  6.17
+ ],
+ "toss": {
+  "field": 14,
+  "bat": 1
+ },
+ "toss_winner_won": 10,
+ "bat_first_wins": 4,
+ "draws": 2,
+ "decided": 13,
+ "hagley_dismissals": {
+  "bowled": 70,
+  "caught": 357,
+  "run out": 7,
+  "lbw": 52,
+  "retired hurt": 1,
+  "caught and bowled": 7
+ },
+ "hagley_rpo": 3.39,
+ "hagley_runs_per_wkt": 32.3,
+ "nz_all": {
+  "n": 83,
+  "rpo": 3.29,
+  "runs_per_wkt": 33.4
+ },
+ "india_in_nz": [
+  {
+   "date": "2009-03-18",
+   "venue": "Seddon Park, Hamilton",
+   "toss": "India field",
+   "winner": "India",
+   "by": {
+    "wickets": 10
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     279,
+     10
+    ],
+    [
+     "India",
+     520,
+     10
+    ],
+    [
+     "New Zealand",
+     279,
+     10
+    ],
+    [
+     "India",
+     39,
+     0
+    ]
+   ]
+  },
+  {
+   "date": "2009-03-26",
+   "venue": "McLean Park, Napier",
+   "toss": "New Zealand bat",
+   "winner": null,
+   "by": null,
+   "result": "draw",
+   "inns": [
+    [
+     "New Zealand",
+     619,
+     9
+    ],
+    [
+     "India",
+     305,
+     10
+    ],
+    [
+     "India",
+     476,
+     4
+    ]
+   ]
+  },
+  {
+   "date": "2009-04-03",
+   "venue": "Basin Reserve, Wellington",
+   "toss": "New Zealand field",
+   "winner": null,
+   "by": null,
+   "result": "draw",
+   "inns": [
+    [
+     "India",
+     379,
+     10
+    ],
+    [
+     "New Zealand",
+     197,
+     10
+    ],
+    [
+     "India",
+     434,
+     7
+    ],
+    [
+     "New Zealand",
+     281,
+     8
+    ]
+   ]
+  },
+  {
+   "date": "2014-02-06",
+   "venue": "Eden Park, Auckland",
+   "toss": "India field",
+   "winner": "New Zealand",
+   "by": {
+    "runs": 40
+   },
+   "result": null,
+   "inns": [
+    [
+     "New Zealand",
+     503,
+     10
+    ],
+    [
+     "India",
+     202,
+     10
+    ],
+    [
+     "New Zealand",
+     105,
+     10
+    ],
+    [
+     "India",
+     366,
+     10
+    ]
+   ]
+  },
+  {
+   "date": "2014-02-14",
+   "venue": "Basin Reserve, Wellington",
+   "toss": "India field",
+   "winner": null,
+   "by": null,
+   "result": "draw",
+   "inns": [
+    [
+     "New Zealand",
+     192,
+     10
+    ],
+    [
+     "India",
+     438,
+     10
+    ],
+    [
+     "New Zealand",
+     680,
+     8
+    ],
+    [
+     "India",
+     166,
+     3
+    ]
+   ]
+  },
+  {
+   "date": "2020-02-21",
+   "venue": "Basin Reserve, Wellington",
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 10
+   },
+   "result": null,
+   "inns": [
+    [
+     "India",
+     165,
+     10
+    ],
+    [
+     "New Zealand",
+     348,
+     10
+    ],
+    [
+     "India",
+     191,
+     10
+    ],
+    [
+     "New Zealand",
+     9,
+     0
+    ]
+   ]
+  },
+  {
+   "date": "2020-02-29",
+   "venue": "Hagley Oval, Christchurch",
+   "toss": "New Zealand field",
+   "winner": "New Zealand",
+   "by": {
+    "wickets": 7
+   },
+   "result": null,
+   "inns": [
+    [
+     "India",
+     242,
+     10
+    ],
+    [
+     "New Zealand",
+     235,
+     10
+    ],
+    [
+     "India",
+     124,
+     10
+    ],
+    [
+     "New Zealand",
+     132,
+     3
+    ]
+   ]
+  }
+ ],
+ "india_nz_record": {
+  "n": 7,
+  "nz_wins": 3,
+  "india_wins": 1,
+  "draws": 3
+ },
+ "hagley_players": {
+  "TWM Latham": {
+   "inns": 27,
+   "runs": 1299,
+   "outs": 26,
+   "avg": 50.0,
+   "balls": 2588
+  },
+  "DP Conway": {
+   "inns": 10,
+   "runs": 335,
+   "outs": 10,
+   "avg": 33.5,
+   "balls": 700
+  },
+  "HM Nicholls": {
+   "inns": 17,
+   "runs": 662,
+   "outs": 15,
+   "avg": 44.1,
+   "balls": 1121
+  },
+  "TA Blundell": {
+   "inns": 14,
+   "runs": 391,
+   "outs": 13,
+   "avg": 30.1,
+   "balls": 698
+  },
+  "DJ Mitchell": {
+   "inns": 11,
+   "runs": 553,
+   "outs": 10,
+   "avg": 55.3,
+   "balls": 979
+  },
+  "GD Phillips": {
+   "inns": 4,
+   "runs": 95,
+   "outs": 3,
+   "avg": 31.7,
+   "balls": 173
+  },
+  "R Ravindra": {
+   "inns": 6,
+   "runs": 323,
+   "outs": 6,
+   "avg": 53.8,
+   "balls": 440
+  },
+  "JJ Bumrah": {
+   "inns": 2,
+   "runs": 14,
+   "outs": 1,
+   "avg": 14.0,
+   "balls": 19
+  },
+  "RR Pant": {
+   "inns": 2,
+   "runs": 16,
+   "outs": 2,
+   "avg": 8.0,
+   "balls": 28
+  },
+  "V Kohli": {
+   "inns": 2,
+   "runs": 17,
+   "outs": 2,
+   "avg": 8.5,
+   "balls": 45
+  },
+  "MJ Henry": {
+   "inns": 13,
+   "runs": 301,
+   "outs": 12,
+   "avg": 25.1,
+   "balls": 360
+  },
+  "KA Jamieson": {
+   "inns": 6,
+   "runs": 123,
+   "outs": 4,
+   "avg": 30.8,
+   "balls": 164
+  },
+  "MJ Santner": {
+   "inns": 1,
+   "runs": 29,
+   "outs": 1,
+   "avg": 29.0,
+   "balls": 61
+  },
+  "KS Williamson": {
+   "inns": 22,
+   "runs": 979,
+   "outs": 20,
+   "avg": 49.0,
+   "balls": 1830
+  }
+ },
+ "hagley_bowlers": {
+  "DJ Mitchell": {
+   "balls": 192,
+   "runs": 80,
+   "wkts": 1,
+   "avg": 80.0,
+   "econ": 2.5
+  },
+  "GD Phillips": {
+   "balls": 156,
+   "runs": 76,
+   "wkts": 1,
+   "avg": 76.0,
+   "econ": 2.92
+  },
+  "R Ravindra": {
+   "balls": 135,
+   "runs": 69,
+   "wkts": 0,
+   "avg": null,
+   "econ": 3.07
+  },
+  "JJ Bumrah": {
+   "balls": 210,
+   "runs": 101,
+   "wkts": 5,
+   "avg": 20.2,
+   "econ": 2.89
+  },
+  "V Kohli": {
+   "balls": 6,
+   "runs": 4,
+   "wkts": 0,
+   "avg": null,
+   "econ": 4.0
+  },
+  "MJ Henry": {
+   "balls": 1878,
+   "runs": 933,
+   "wkts": 40,
+   "avg": 23.3,
+   "econ": 2.98
+  },
+  "KA Jamieson": {
+   "balls": 930,
+   "runs": 492,
+   "wkts": 28,
+   "avg": 17.6,
+   "econ": 3.17
+  },
+  "KS Williamson": {
+   "balls": 66,
+   "runs": 34,
+   "wkts": 2,
+   "avg": 17.0,
+   "econ": 3.09
+  }
+ }
+}
