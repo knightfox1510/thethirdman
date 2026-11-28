@@ -1,21 +1,13 @@
 {
- "synced": "2026-11-27",
- "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa); 22 Nov: AP/Sitka Sentinel (day three stumps 486/4), Tribune/ANI + Outlook (day four lunch 629/6), Sky Sports + Cricinfo (1st T20I result, 2nd T20I 24 Nov Carrara), myKhel (Santner out); 23 Nov: Dawn/AFP + Outlook (720/9d record, NZ 119/2 day-four stumps), Tribune/AP (day five lunch NZ 157/4), Khaleej Times (Sooryavanshi youngest T20 captain); 24 Nov: Cricinfo match report + Cricket Times (1st Test drawn, NZ 239/5, Nicholls POTM), WION (MI captaincy report, unconfirmed); 25 Nov: Revsportz/Yahoo (Gill: XI unchanged), ETV Bharat (Tickner out, Fisher in), ABC + Cricinfo (2nd T20I result), Daily Star (auction longlist, shortlists 1 Dec); 26 Nov: Yahoo/The Cricket News (2nd Test 11 am local, Santner out, Fisher in, Hagley record), Wisden match page (3rd T20I at the Gabba), CricTracker (MI captaincy tease 25 Nov); 27 Nov: AP/ABC (toss: India bowl, Brar debuts for Prasidh, NZ unchanged), Outlook live + Nation Press (NZ 77/1 lunch day one), Khel Now + IANS (MI captain reveal 27 Nov 5:45 pm IST)",
+ "synced": "2026-11-28",
+ "source": "ESPN fixtures (espn.com.au/cricket/scores/series/24286), ICC (India Test squad, 17 Oct), match reports 13 Nov, IPL dates from league news (newsbytesapp, khelnow); 15 Nov: Tribune 5th ODI preview, Outlook (Pant), newsbytes (retention 17 Nov); 16 Nov: 1news + Outlook 5th ODI reports, newsbytes (Pant travel), Wisden (Aus v Eng ODIs); 17 Nov: Wisden match page (Hobart ODI time), Republic World (Hardik/Arshdeep trade, 11 Nov), Newcastle Herald (NZ Test squad); 18 Nov: Yahoo/Willow (retention lists, purses), Oneindia (releases, Dhoni), crictoday (Gill, four seamers), Wisden match page (Hobart ODI upcoming); 19 Nov: ABC/AP (toss, XIs), Asianet (lunch day one), Asianet (auction 16 Dec Goa), Outlook (Vizag 1st ODI), Sportsdigest (Aus v Eng 1-1); 20 Nov: AP/WRAL (day two lunch), ICC (day one report), khelnow (session times; India ODI dates), Sky Sports (Hobart ODI result, Aus v Eng T20I dates); 21 Nov: Tribune/ANI (day three lunch), ABC/AP + Geo (day two close: NZ 368, India 159/1), MCG (1st T20I today), Oneindia (auction 16 Dec Goa); 22 Nov: AP/Sitka Sentinel (day three stumps 486/4), Tribune/ANI + Outlook (day four lunch 629/6), Sky Sports + Cricinfo (1st T20I result, 2nd T20I 24 Nov Carrara), myKhel (Santner out); 23 Nov: Dawn/AFP + Outlook (720/9d record, NZ 119/2 day-four stumps), Tribune/AP (day five lunch NZ 157/4), Khaleej Times (Sooryavanshi youngest T20 captain); 24 Nov: Cricinfo match report + Cricket Times (1st Test drawn, NZ 239/5, Nicholls POTM), WION (MI captaincy report, unconfirmed); 25 Nov: Revsportz/Yahoo (Gill: XI unchanged), ETV Bharat (Tickner out, Fisher in), ABC + Cricinfo (2nd T20I result), Daily Star (auction longlist, shortlists 1 Dec); 26 Nov: Yahoo/The Cricket News (2nd Test 11 am local, Santner out, Fisher in, Hagley record), Wisden match page (3rd T20I at the Gabba), CricTracker (MI captaincy tease 25 Nov); 27 Nov: AP/ABC (toss: India bowl, Brar debuts for Prasidh, NZ unchanged), Outlook live + Nation Press (NZ 77/1 lunch day one), Khel Now + IANS (MI captain reveal 27 Nov 5:45 pm IST); 28 Nov: The Hindu via Khanlist + Outlook live (day two lunch NZ 330/8, Akash Deep 4/84, Bumrah 0/44), Arab News/AFP + myKhel (Rohit named MI captain 27 Nov), CricTracker (3rd T20I: Aus 108, Overton 5/12, Eng win by 7 wkts DLS, lead 2-1, two to play)",
  "items": [
-  {
-   "date": "2026-11-24",
-   "event": "2nd T20I",
-   "teams": "Australia v England",
-   "venue": "Carrara (Gold Coast)",
-   "status": "England won by 8 wickets (188/2 chasing 185; Donald 85 off 32); series 1-1",
-   "format": "news"
-  },
   {
    "date": "2026-11-27",
    "event": "2nd Test (27 Nov–1 Dec)",
    "teams": "NZ v India",
    "venue": "Christchurch (Hagley Oval)",
-   "status": "In progress: India won toss, bowled; Gurnoor Brar debut (for Prasidh); NZ 77/1 at lunch day one (Conway lbw Brar 31); series decider (0-0)",
+   "status": "In progress: NZ 246/5 at stumps day one; NZ 330/8 at lunch day two (Blundell 80*); Akash Deep 4/84, Bumrah 0/44; India yet to bat; series decider (0-0)",
    "format": "replay"
   },
   {
@@ -23,7 +15,7 @@
    "event": "3rd T20I",
    "teams": "Australia v England",
    "venue": "Brisbane (Gabba)",
-   "status": "Played 27 Nov (series was 1-1); result to confirm",
+   "status": "England won by 7 wickets (DLS; Aus 108 all out, lowest home T20I total; Overton 5/12); England lead 2-1, two to play (dates to confirm)",
    "format": "news"
   },
   {
@@ -31,7 +23,7 @@
    "event": "MI IPL 2027 captain announcement",
    "teams": "IPL (Mumbai Indians)",
    "venue": "5:45 pm IST",
-   "status": "Today; Rohit Sharma widely reported, not yet official",
+   "status": "Done: Rohit Sharma named captain (Pollard head coach); vice-captain not confirmed",
    "format": "news"
   },
   {
